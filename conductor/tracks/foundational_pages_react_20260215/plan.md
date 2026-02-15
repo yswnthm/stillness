@@ -2,10 +2,10 @@
 
 This plan outlines the steps to develop the **About**, **Corporate**, and **Reserve** pages in React, focusing on high-fidelity design with simplified structures for future WordPress migration.
 
-## Phase 1: Routing and Scaffolding
+## Phase 1: Routing and Scaffolding [checkpoint: 1638253]
 - [x] Task: Configure routing for `/about`, `/corporate`, and `/reserve` in `App.tsx`. [fb3d830]
 - [x] Task: Create page skeleton components for `AboutPage`, `CorporatePage`, and `ReservePage`. [fb3d830]
-- [~] Task: Conductor - User Manual Verification 'Phase 1: Routing and Scaffolding' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Routing and Scaffolding' (Protocol in workflow.md)
 
 ## Phase 2: About Page Development
 - [ ] Task: Implement `BrandStory` and `Timeline` components with simple Flexbox layouts.
