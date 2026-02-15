@@ -1,0 +1,144 @@
+{
+    "content": [
+        {
+            "id": "footer_force_full",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "gap": "no",
+                "background_background": "classic",
+                "background_color": "#0E1B30",
+                "padding": {
+                    "unit": "px",
+                    "top": "100",
+                    "right": "0",
+                    "bottom": "40",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "flex_direction": "column",
+                "flex_align_items": "center"
+            },
+            "elements": [
+                {
+                    "id": "footer_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": { "unit": "px", "size": 1200 },
+                        "flex_direction": "column"
+                    },
+                    "elements": [
+                        {
+                            "id": "footer_grid",
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_justify_content": "space-between",
+                                "flex_wrap": "wrap",
+                                "flex_gap": { "unit": "px", "size": 40, "isLinked": true }
+                            },
+                            "elements": [
+                                {
+                                    "id": "f_brand",
+                                    "elType": "container",
+                                    "settings": { "width": { "unit": "%", "size": "30" }, "width_tablet": { "unit": "%", "size": "100" } },
+                                    "elements": [
+                                        {
+                                            "id": "f_logo",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "title": "Stillness.",
+                                                "typography_typography": "custom",
+                                                "typography_font_family": "Cormorant Garamond",
+                                                "typography_font_size": { "unit": "px", "size": 32 },
+                                                "title_color": "#F7F0EC",
+                                                "margin": { "unit": "px", "bottom": "20", "isLinked": false }
+                                            },
+                                            "widgetType": "heading"
+                                        },
+                                        {
+                                            "id": "f_desc",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "editor": "<p style=\"color: rgba(164, 178, 186, 0.6); font-size: 14px; line-height: 1.6; font-family: 'Lato', sans-serif;\">A sanctuary for the modern mind. Restoring balance through sensory reduction and nervous system regulation.</p>"
+                                            },
+                                            "widgetType": "text-editor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "f_col_explore",
+                                    "elType": "container",
+                                    "settings": { "width": { "unit": "%", "size": "20" }, "width_mobile": { "unit": "%", "size": "50" } },
+                                    "elements": [
+                                        {
+                                            "id": "f_h1",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "title": "Explore",
+                                                "header_size": "h4",
+                                                "title_color": "#688F9D",
+                                                "typography_font_size": { "unit": "px", "size": 13 },
+                                                "typography_text_transform": "uppercase",
+                                                "typography_letter_spacing": { "unit": "em", "size": 0.2 },
+                                                "margin": { "unit": "px", "bottom": "24", "isLinked": false }
+                                            },
+                                            "widgetType": "heading"
+                                        },
+                                        {
+                                            "id": "f_l1",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "icon_list": [
+                                                    { "text": "Philosophy", "_id": "l1" },
+                                                    { "text": "Experience", "_id": "l2" },
+                                                    { "text": "Shop", "_id": "l3" },
+                                                    { "text": "Journal", "_id": "l4" }
+                                                ],
+                                                "text_color": "rgba(164, 178, 186, 0.8)",
+                                                "typography_font_size": { "unit": "px", "size": 14 }
+                                            },
+                                            "widgetType": "icon-list"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f_bottom",
+                            "elType": "container",
+                            "settings": {
+                                "margin": { "unit": "px", "top": "80", "isLinked": false },
+                                "padding": { "unit": "px", "top": "32", "isLinked": false },
+                                "border_style": "solid",
+                                "border_width": { "unit": "px", "top": "1", "isLinked": false },
+                                "border_color": "rgba(255, 255, 255, 0.05)"
+                            },
+                            "elements": [
+                                {
+                                    "id": "f_copy",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "title": "\u00a9 2026 Stillness Wellness Co. All rights reserved.",
+                                        "align": "center",
+                                        "title_color": "rgba(164, 178, 186, 0.3)",
+                                        "typography_font_size": { "unit": "px", "size": 11 },
+                                        "typography_text_transform": "uppercase",
+                                        "typography_letter_spacing": { "unit": "em", "size": 0.1 }
+                                    },
+                                    "widgetType": "heading"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Footer Edge-to-Edge",
+    "type": "section"
+}

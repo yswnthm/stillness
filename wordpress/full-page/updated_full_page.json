@@ -1,0 +1,2595 @@
+
+[
+    {
+        "id": "hero_section",
+        "elType": "container",
+        "settings": {
+            "content_width": "full",
+            "gap": "no",
+            "height": "min-height",
+            "min_height": {
+                "unit": "vh",
+                "size": 100
+            },
+            "flex_direction": "column",
+            "flex_justify_content": "center",
+            "flex_align_items": "center",
+            "background_background": "classic",
+            "background_image": {
+                "url": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=2070&auto=format&fit=crop",
+                "id": "",
+                "source": "url"
+            },
+            "background_overlay_background": "gradient",
+            "background_overlay_color": "rgba(14, 27, 48, 0.4)",
+            "background_overlay_color_b": "rgba(14, 27, 48, 0.8)",
+            "background_overlay_gradient_angle": {
+                "unit": "deg",
+                "size": 180
+            },
+            "pa_condition_repeater": [],
+            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+            "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+            {
+                "id": "hero_content",
+                "elType": "container",
+                "settings": {
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 800
+                    },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "text_align": "center",
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "hero_heading",
+                        "elType": "widget",
+                        "settings": {
+                            "title": "Find Your <br/> <span style="font-style: italic;">Stillness</span>",
+                            "header_size": "h1",
+                            "align": "center",
+                            "typography_typography": "custom",
+                            "typography_font_family": "serif",
+                            "typography_font_size": {
+                                "unit": "px",
+                                "size": 80
+                            },
+                            "typography_line_height": {
+                                "unit": "em",
+                                "size": 1.1
+                            },
+                            "title_color": "#F7F0EC",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "24",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "heading"
+                    },
+                    {
+                        "id": "hero_subheading",
+                        "elType": "widget",
+                        "settings": {
+                            "editor": "<p style="text-align: center; color: rgba(217, 232, 235, 0.9); font-size: 20px; font-weight: 300;">Your sanctuary for deep relaxation and inner harmony.<br>Come back to yourself.</p>",
+                            "align": "center",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "40",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "text-editor"
+                    },
+                    {
+                        "id": "hero_button",
+                        "elType": "widget",
+                        "settings": {
+                            "text": "Begin Your Journey",
+                            "link": {
+                                "url": "#intro"
+                            },
+                            "align": "center",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                                "unit": "px",
+                                "size": 14
+                            },
+                            "typography_font_weight": "400",
+                            "typography_letter_spacing": {
+                                "unit": "em",
+                                "size": 0.2
+                            },
+                            "typography_text_transform": "uppercase",
+                            "text_color": "#F7F0EC",
+                            "background_color": "rgba(247, 240, 236, 0.1)",
+                            "border_style": "solid",
+                            "border_width": {
+                                "unit": "px",
+                                "top": "1",
+                                "right": "1",
+                                "bottom": "1",
+                                "left": "1",
+                                "isLinked": true
+                            },
+                            "border_color": "rgba(247, 240, 236, 0.3)",
+                            "border_radius": {
+                                "unit": "px",
+                                "top": "50",
+                                "right": "50",
+                                "bottom": "50",
+                                "left": "50",
+                                "isLinked": true
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "16",
+                                "right": "40",
+                                "bottom": "16",
+                                "left": "40",
+                                "isLinked": false
+                            },
+                            "hover_background_color": "#F7F0EC",
+                            "hover_color": "#0E1B30",
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "button"
+                    }
+                ],
+                "isInner": true
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "intro_section",
+        "elType": "container",
+        "settings": {
+            "boxed_width": {
+                "unit": "px",
+                "size": 1200
+            },
+            "flex_gap": {
+                "unit": "px",
+                "size": 40,
+                "column": "40",
+                "row": "40",
+                "isLinked": true
+            },
+            "flex_direction": "row",
+            "flex_wrap": "wrap",
+            "flex_justify_content": "center",
+            "flex_align_items": "center",
+            "background_background": "classic",
+            "background_color": "#F7F0EC",
+            "padding": {
+                "unit": "px",
+                "top": "100",
+                "right": "20",
+                "bottom": "100",
+                "left": "20",
+                "isLinked": false
+            },
+            "pa_condition_repeater": [],
+            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+            "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+            {
+                "id": "intro_col_left",
+                "elType": "container",
+                "settings": {
+                    "content_width": "full",
+                    "width": {
+                        "unit": "%",
+                        "size": "46"
+                    },
+                    "flex_direction": "column",
+                    "flex_justify_content": "center",
+                    "flex_align_items": "center",
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "intro_image",
+                        "elType": "widget",
+                        "settings": {
+                            "image": {
+                                "url": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=1000&auto=format&fit=crop",
+                                "id": "",
+                                "source": "url"
+                            },
+                            "image_size": "full",
+                            "border_radius": {
+                                "unit": "px",
+                                "top": "300",
+                                "right": "300",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "image"
+                    },
+                    {
+                        "id": "intro_quote_box",
+                        "elType": "widget",
+                        "settings": {
+                            "_position": "absolute",
+                            "_offset_orientation_h": "right",
+                            "_offset_x": {
+                                "unit": "px",
+                                "size": -20
+                            },
+                            "_offset_orientation_v": "bottom",
+                            "_offset_y": {
+                                "unit": "px",
+                                "size": -20
+                            },
+                            "background_background": "classic",
+                            "background_color": "#FFFFFF",
+                            "padding": {
+                                "unit": "px",
+                                "top": "30",
+                                "right": "30",
+                                "bottom": "30",
+                                "left": "30",
+                                "isLinked": true
+                            },
+                            "border_radius": {
+                                "unit": "px",
+                                "top": "24",
+                                "right": "0",
+                                "bottom": "0",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "box_shadow": {
+                                "horizontal": 0,
+                                "vertical": 4,
+                                "blur": 15,
+                                "spread": 0,
+                                "color": "rgba(0,0,0,0.1)"
+                            },
+                            "editor": "<p style="font-family: serif; font-style: italic; color: #0E1B30; font-size: 18px;">"We built this space not to escape life, but to find the strength to return to it."</p>",
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "text-editor"
+                    }
+                ],
+                "isInner": true
+            },
+            {
+                "id": "intro_col_right",
+                "elType": "container",
+                "settings": {
+                    "content_width": "full",
+                    "width": {
+                        "unit": "%",
+                        "size": "46"
+                    },
+                    "flex_direction": "column",
+                    "flex_align_items": "flex-start",
+                    "padding": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "40",
+                        "isLinked": false
+                    },
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "intro_kicker",
+                        "elType": "widget",
+                        "settings": {
+                            "title": "Our Philosophy",
+                            "header_size": "span",
+                            "align": "left",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                                "unit": "px",
+                                "size": 14
+                            },
+                            "typography_font_weight": "700",
+                            "typography_letter_spacing": {
+                                "unit": "em",
+                                "size": 0.2
+                            },
+                            "typography_text_transform": "uppercase",
+                            "title_color": "#688F9D",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "32",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "heading"
+                    },
+                    {
+                        "id": "intro_heading",
+                        "elType": "widget",
+                        "settings": {
+                            "title": "Rest is a biological <br/>necessity, not a luxury.",
+                            "align": "left",
+                            "typography_typography": "custom",
+                            "typography_font_family": "serif",
+                            "typography_font_size": {
+                                "unit": "px",
+                                "size": 48
+                            },
+                            "typography_line_height": {
+                                "unit": "em",
+                                "size": 1.1
+                            },
+                            "title_color": "#0E1B30",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "32",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "heading"
+                    },
+                    {
+                        "id": "intro_text_1",
+                        "elType": "widget",
+                        "settings": {
+                            "editor": "<p style="text-align: left;">In a world that demands constant output, Stillness is an invitation to pause. Founded by Elena Corves after her own journey through burnout, our sanctuary is designed around the principles of sensory reduction and nervous system regulation.</p>",
+                            "align": "left",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                                "unit": "px",
+                                "size": 18
+                            },
+                            "typography_font_weight": "300",
+                            "typography_line_height": {
+                                "unit": "em",
+                                "size": 1.6
+                            },
+                            "text_color": "#0E1B30",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "24",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "text-editor"
+                    },
+                    {
+                        "id": "intro_text_2",
+                        "elType": "widget",
+                        "settings": {
+                            "editor": "<p style="text-align: left;">Here, the water holds you so you don't have to hold yourself. We strip away the noise\u2014gravity, light, sound, expectations\u2014leaving only the spaciousness you need to exhale.</p>",
+                            "align": "left",
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                                "unit": "px",
+                                "size": 18
+                            },
+                            "typography_font_weight": "300",
+                            "typography_line_height": {
+                                "unit": "em",
+                                "size": 1.6
+                            },
+                            "text_color": "#0E1B30",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "32",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "text-editor"
+                    },
+                    {
+                        "id": "intro_button",
+                        "elType": "widget",
+                        "settings": {
+                            "text": "Read the full story",
+                            "link": {
+                                "url": "#"
+                            },
+                            "typography_typography": "custom",
+                            "typography_font_size": {
+                                "unit": "px",
+                                "size": 12
+                            },
+                            "typography_font_weight": "700",
+                            "typography_letter_spacing": {
+                                "unit": "em",
+                                "size": 0.1
+                            },
+                            "typography_text_transform": "uppercase",
+                            "text_color": "#0E1B30",
+                            "background_color": "transparent",
+                            "button_text_color": "#0E1B30",
+                            "icon": {
+                                "value": "fas fa-long-arrow-alt-right",
+                                "library": "fa-solid"
+                            },
+                            "icon_align": "right",
+                            "icon_indent": {
+                                "unit": "px",
+                                "size": 10
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "button"
+                    }
+                ],
+                "isInner": true
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "heal_section",
+        "elType": "container",
+        "settings": {
+            "flex_direction": "column",
+            "background_background": "gradient",
+            "background_color": "#F7F0EC",
+            "background_color_b": "#FFFFFF",
+            "background_gradient_angle": {
+                "unit": "deg",
+                "size": 180
+            },
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "20",
+                "bottom": "80",
+                "left": "20",
+                "isLinked": false
+            },
+            "pa_condition_repeater": [],
+            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+            "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+            {
+                "id": "heal_header",
+                "elType": "container",
+                "settings": {
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 800
+                    },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "text_align": "center",
+                    "margin": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "60",
+                        "left": "0",
+                        "isLinked": false
+                    },
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "heal_title",
+                        "elType": "widget",
+                        "settings": {
+                            "title": "Curated Calm",
+                            "typography_typography": "custom",
+                            "typography_font_family": "serif",
+                            "typography_font_size": {
+                                "unit": "px",
+                                "size": 48
+                            },
+                            "title_color": "#0E1B30",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "24",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "heading"
+                    },
+                    {
+                        "id": "heal_desc",
+                        "elType": "widget",
+                        "settings": {
+                            "editor": "<p style="text-align: center; color: rgba(14, 27, 48, 0.6); font-size: 18px; font-weight: 300;">Beyond the water. A holistic ecosystem for your nervous system.</p>",
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "text-editor"
+                    }
+                ],
+                "isInner": true
+            },
+            {
+                "id": "heal_grid",
+                "elType": "container",
+                "settings": {
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 1200
+                    },
+                    "flex_direction": "row",
+                    "flex_wrap": "nowrap",
+                    "flex_gap": {
+                        "unit": "px",
+                        "size": 24,
+                        "column": "24",
+                        "row": "24",
+                        "isLinked": true
+                    },
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "habit_1",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": 25
+                            },
+                            "_flex_basis": {
+                                "unit": "%",
+                                "size": 25
+                            },
+                            "flex_grow": 1,
+                            "border_radius": {
+                                "unit": "px",
+                                "top": "24",
+                                "right": "24",
+                                "bottom": "24",
+                                "left": "24",
+                                "isLinked": true
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "40",
+                                "right": "32",
+                                "bottom": "40",
+                                "left": "32",
+                                "isLinked": false
+                            },
+                            "flex_direction": "column",
+                            "flex_align_items": "flex-start",
+                            "flex_justify_content": "flex-start",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "12",
+                                "bottom": "0",
+                                "left": "12",
+                                "isLinked": false
+                            },
+                            "background_background": "classic",
+                            "background_color": "#D9E8EB",
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [
+                            {
+                                "id": "icon_1",
+                                "elType": "widget",
+                                "settings": {
+                                    "icon": {
+                                        "value": "fas fa-water",
+                                        "library": "fa-solid"
+                                    },
+                                    "view": "stacked",
+                                    "primary_color": "rgba(14, 27, 48, 0.05)",
+                                    "secondary_color": "#0E1B30",
+                                    "margin": {
+                                        "unit": "px",
+                                        "top": "0",
+                                        "right": "0",
+                                        "bottom": "24",
+                                        "left": "0",
+                                        "isLinked": false
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "icon"
+                            },
+                            {
+                                "id": "title_1",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "Float Therapy",
+                                    "header_size": "h3",
+                                    "title_color": "#0E1B30",
+                                    "typography_typography": "custom",
+                                    "typography_font_family": "serif",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 20
+                                    },
+                                    "margin": {
+                                        "unit": "px",
+                                        "top": "0",
+                                        "right": "0",
+                                        "bottom": "12",
+                                        "left": "0",
+                                        "isLinked": false
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "desc_1",
+                                "elType": "widget",
+                                "settings": {
+                                    "editor": "<p style="color: rgba(14, 27, 48, 0.6); font-size: 15px; line-height: 1.6;">Zero-gravity sensory relief to decompress the spine and silence the mind.</p>",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "text-editor"
+                            }
+                        ],
+                        "isInner": true
+                    },
+                    {
+                        "id": "habit_2",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": 25
+                            },
+                            "_flex_basis": {
+                                "unit": "%",
+                                "size": 25
+                            },
+                            "flex_grow": 1,
+                            "border_radius": {
+                                "unit": "px",
+                                "top": "24",
+                                "right": "24",
+                                "bottom": "24",
+                                "left": "24",
+                                "isLinked": true
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "40",
+                                "right": "32",
+                                "bottom": "40",
+                                "left": "32",
+                                "isLinked": false
+                            },
+                            "flex_direction": "column",
+                            "flex_align_items": "flex-start",
+                            "flex_justify_content": "flex-start",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "12",
+                                "bottom": "0",
+                                "left": "12",
+                                "isLinked": false
+                            },
+                            "background_background": "classic",
+                            "background_color": "#D9E8EB",
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [
+                            {
+                                "id": "icon_2",
+                                "elType": "widget",
+                                "settings": {
+                                    "icon": {
+                                        "value": "fas fa-wind",
+                                        "library": "fa-solid"
+                                    },
+                                    "view": "stacked",
+                                    "primary_color": "rgba(14, 27, 48, 0.05)",
+                                    "secondary_color": "#0E1B30",
+                                    "margin": {
+                                        "unit": "px",
+                                        "top": "0",
+                                        "right": "0",
+                                        "bottom": "24",
+                                        "left": "0",
+                                        "isLinked": false
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "icon"
+                            },
+                            {
+                                "id": "title_2",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "Breathwork",
+                                    "header_size": "h3",
+                                    "title_color": "#0E1B30",
+                                    "typography_typography": "custom",
+                                    "typography_font_family": "serif",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 20
+                                    },
+                                    "margin": {
+                                        "unit": "px",
+                                        "top": "0",
+                                        "right": "0",
+                                        "bottom": "12",
+                                        "left": "0",
+                                        "isLinked": false
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "desc_2",
+                                "elType": "widget",
+                                "settings": {
+                                    "editor": "<p style="color: rgba(14, 27, 48, 0.6); font-size: 15px; line-height: 1.6;">Guided pranayama sessions to shift from fight-or-flight to rest-and-digest.</p>",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "text-editor"
+                            }
+                        ],
+                        "isInner": true
+                    },
+                    {
+                        "id": "habit_3",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": 25
+                            },
+                            "_flex_basis": {
+                                "unit": "%",
+                                "size": 25
+                            },
+                            "flex_grow": 1,
+                            "border_radius": {
+                                "unit": "px",
+                                "top": "24",
+                                "right": "24",
+                                "bottom": "24",
+                                "left": "24",
+                                "isLinked": true
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "40",
+                                "right": "32",
+                                "bottom": "40",
+                                "left": "32",
+                                "isLinked": false
+                            },
+                            "flex_direction": "column",
+                            "flex_align_items": "flex-start",
+                            "flex_justify_content": "flex-start",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "12",
+                                "bottom": "0",
+                                "left": "12",
+                                "isLinked": false
+                            },
+                            "background_background": "classic",
+                            "background_color": "#D9E8EB",
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [
+                            {
+                                "id": "icon_3",
+                                "elType": "widget",
+                                "settings": {
+                                    "icon": {
+                                        "value": "fas fa-music",
+                                        "library": "fa-solid"
+                                    },
+                                    "view": "stacked",
+                                    "primary_color": "rgba(14, 27, 48, 0.05)",
+                                    "secondary_color": "#0E1B30",
+                                    "margin": {
+                                        "unit": "px",
+                                        "top": "0",
+                                        "right": "0",
+                                        "bottom": "24",
+                                        "left": "0",
+                                        "isLinked": false
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "icon"
+                            },
+                            {
+                                "id": "title_3",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "Sound Healing",
+                                    "header_size": "h3",
+                                    "title_color": "#0E1B30",
+                                    "typography_typography": "custom",
+                                    "typography_font_family": "serif",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 20
+                                    },
+                                    "margin": {
+                                        "unit": "px",
+                                        "top": "0",
+                                        "right": "0",
+                                        "bottom": "12",
+                                        "left": "0",
+                                        "isLinked": false
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "desc_3",
+                                "elType": "widget",
+                                "settings": {
+                                    "editor": "<p style="color: rgba(14, 27, 48, 0.6); font-size: 15px; line-height: 1.6;">Vibrational therapy using crystal bowls to synchronize brainwave states.</p>",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "text-editor"
+                            }
+                        ],
+                        "isInner": true
+                    },
+                    {
+                        "id": "habit_4",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": 25
+                            },
+                            "_flex_basis": {
+                                "unit": "%",
+                                "size": 25
+                            },
+                            "flex_grow": 1,
+                            "border_radius": {
+                                "unit": "px",
+                                "top": "24",
+                                "right": "24",
+                                "bottom": "24",
+                                "left": "24",
+                                "isLinked": true
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "40",
+                                "right": "32",
+                                "bottom": "40",
+                                "left": "32",
+                                "isLinked": false
+                            },
+                            "flex_direction": "column",
+                            "flex_align_items": "flex-start",
+                            "flex_justify_content": "flex-start",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "12",
+                                "bottom": "0",
+                                "left": "12",
+                                "isLinked": false
+                            },
+                            "background_background": "classic",
+                            "background_color": "#D9E8EB",
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [
+                            {
+                                "id": "icon_4",
+                                "elType": "widget",
+                                "settings": {
+                                    "icon": {
+                                        "value": "fas fa-brain",
+                                        "library": "fa-solid"
+                                    },
+                                    "view": "stacked",
+                                    "primary_color": "rgba(14, 27, 48, 0.05)",
+                                    "secondary_color": "#0E1B30",
+                                    "margin": {
+                                        "unit": "px",
+                                        "top": "0",
+                                        "right": "0",
+                                        "bottom": "24",
+                                        "left": "0",
+                                        "isLinked": false
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "icon"
+                            },
+                            {
+                                "id": "title_4",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "Integration",
+                                    "header_size": "h3",
+                                    "title_color": "#0E1B30",
+                                    "typography_typography": "custom",
+                                    "typography_font_family": "serif",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 20
+                                    },
+                                    "margin": {
+                                        "unit": "px",
+                                        "top": "0",
+                                        "right": "0",
+                                        "bottom": "12",
+                                        "left": "0",
+                                        "isLinked": false
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "desc_4",
+                                "elType": "widget",
+                                "settings": {
+                                    "editor": "<p style="color: rgba(14, 27, 48, 0.6); font-size: 15px; line-height: 1.6;">Post-float journaling and tea rituals to anchor your calm before leaving.</p>",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "text-editor"
+                            }
+                        ],
+                        "isInner": true
+                    }
+                ],
+                "isInner": true
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "corporate_section",
+        "elType": "container",
+        "settings": {
+            "padding": {
+                "unit": "px",
+                "top": "100",
+                "right": "20",
+                "bottom": "100",
+                "left": "20",
+                "isLinked": false
+            },
+            "background_color": "rgba(217, 232, 235, 0.3)",
+            "pa_condition_repeater": [],
+            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+            "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+            {
+                "id": "corp_container",
+                "elType": "container",
+                "settings": {
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 1200
+                    },
+                    "flex_direction": "row",
+                    "flex_align_items": "center",
+                    "flex_gap": {
+                        "unit": "px",
+                        "size": 64,
+                        "column": "64",
+                        "row": "64",
+                        "isLinked": true
+                    },
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "corp_content",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": "46"
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [
+                            {
+                                "id": "corp_kicker",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "For Teams",
+                                    "header_size": "span",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 12
+                                    },
+                                    "align": "left",
+                                    "typography_font_weight": "700",
+                                    "typography_text_transform": "uppercase",
+                                    "title_color": "rgba(14, 27, 48, 0.5)",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "corp_title",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "Bring Stillness to <br/>the Workplace",
+                                    "typography_font_family": "serif",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 48
+                                    },
+                                    "align": "left",
+                                    "title_color": "#0E1B30",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "corp_desc",
+                                "elType": "widget",
+                                "settings": {
+                                    "editor": "<p style="text-align: left;">Burnout is the silent killer of creativity. Our corporate programs are designed to reset your team's collective nervous system, fostering clarity, empathy, and sustainable productivity.</p>",
+                                    "align": "left",
+                                    "text_color": "#0E1B30",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "text-editor"
+                            },
+                            {
+                                "id": "corp_stats",
+                                "elType": "container",
+                                "settings": {
+                                    "flex_direction": "row",
+                                    "flex_wrap": "wrap",
+                                    "padding": {
+                                        "unit": "px",
+                                        "top": "32",
+                                        "right": "0",
+                                        "bottom": "0",
+                                        "left": "0",
+                                        "isLinked": false
+                                    },
+                                    "border_style": "solid",
+                                    "border_width": {
+                                        "unit": "px",
+                                        "top": "1",
+                                        "right": "0",
+                                        "bottom": "0",
+                                        "left": "0",
+                                        "isLinked": false
+                                    },
+                                    "border_color": "rgba(14, 27, 48, 0.1)",
+                                    "align": "left",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [
+                                    {
+                                        "id": "stat_2",
+                                        "elType": "container",
+                                        "settings": {
+                                            "width": {
+                                                "unit": "%",
+                                                "size": "33"
+                                            },
+                                            "pa_condition_repeater": [],
+                                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                            "premium_tooltip_position": "top,bottom",
+                                            "content_width": "full",
+                                            "flex_align_items": "flex-start"
+                                        },
+                                        "elements": [
+                                            {
+                                                "id": "stat_val_2",
+                                                "elType": "widget",
+                                                "settings": {
+                                                    "title": "50%",
+                                                    "align": "left",
+                                                    "title_color": "#688F9D",
+                                                    "header_size": "h3",
+                                                    "typography_font_family": "serif",
+                                                    "typography_font_size": {
+                                                        "unit": "px",
+                                                        "size": 36
+                                                    },
+                                                    "pa_condition_repeater": [],
+                                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                                    "premium_tooltip_position": "top,bottom"
+                                                },
+                                                "elements": [],
+                                                "widgetType": "heading"
+                                            },
+                                            {
+                                                "id": "stat_lbl_2",
+                                                "elType": "widget",
+                                                "settings": {
+                                                    "title": "Improvement in focus",
+                                                    "align": "left",
+                                                    "header_size": "div",
+                                                    "typography_font_size": {
+                                                        "unit": "px",
+                                                        "size": 10
+                                                    },
+                                                    "typography_text_transform": "uppercase",
+                                                    "title_color": "rgba(14, 27, 48, 0.6)",
+                                                    "pa_condition_repeater": [],
+                                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                                    "premium_tooltip_position": "top,bottom"
+                                                },
+                                                "elements": [],
+                                                "widgetType": "heading"
+                                            }
+                                        ],
+                                        "isInner": true
+                                    },
+                                    {
+                                        "id": "stat_1",
+                                        "elType": "container",
+                                        "settings": {
+                                            "width": {
+                                                "unit": "%",
+                                                "size": "33"
+                                            },
+                                            "pa_condition_repeater": [],
+                                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                            "premium_tooltip_position": "top,bottom",
+                                            "flex_align_items": "flex-start"
+                                        },
+                                        "elements": [
+                                            {
+                                                "id": "stat_val_1",
+                                                "elType": "widget",
+                                                "settings": {
+                                                    "title": "40%",
+                                                    "align": "left",
+                                                    "title_color": "#688F9D",
+                                                    "header_size": "h3",
+                                                    "typography_font_family": "serif",
+                                                    "typography_font_size": {
+                                                        "unit": "px",
+                                                        "size": 36
+                                                    },
+                                                    "pa_condition_repeater": [],
+                                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                                    "premium_tooltip_position": "top,bottom"
+                                                },
+                                                "elements": [],
+                                                "widgetType": "heading"
+                                            },
+                                            {
+                                                "id": "stat_lbl_1",
+                                                "elType": "widget",
+                                                "settings": {
+                                                    "title": "Reduction in stress",
+                                                    "align": "left",
+                                                    "header_size": "div",
+                                                    "typography_font_size": {
+                                                        "unit": "px",
+                                                        "size": 10
+                                                    },
+                                                    "typography_text_transform": "uppercase",
+                                                    "title_color": "rgba(14, 27, 48, 0.6)",
+                                                    "pa_condition_repeater": [],
+                                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                                    "premium_tooltip_position": "top,bottom"
+                                                },
+                                                "elements": [],
+                                                "widgetType": "heading"
+                                            }
+                                        ],
+                                        "isInner": true
+                                    },
+                                    {
+                                        "id": "stat_3",
+                                        "elType": "container",
+                                        "settings": {
+                                            "width": {
+                                                "unit": "%",
+                                                "size": "33"
+                                            },
+                                            "pa_condition_repeater": [],
+                                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                            "premium_tooltip_position": "top,bottom",
+                                            "content_width": "full"
+                                        },
+                                        "elements": [
+                                            {
+                                                "id": "stat_val_3",
+                                                "elType": "widget",
+                                                "settings": {
+                                                    "title": "2x",
+                                                    "align": "left",
+                                                    "title_color": "#688F9D",
+                                                    "header_size": "h3",
+                                                    "typography_font_family": "serif",
+                                                    "typography_font_size": {
+                                                        "unit": "px",
+                                                        "size": 36
+                                                    },
+                                                    "pa_condition_repeater": [],
+                                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                                    "premium_tooltip_position": "top,bottom"
+                                                },
+                                                "elements": [],
+                                                "widgetType": "heading"
+                                            },
+                                            {
+                                                "id": "stat_lbl_3",
+                                                "elType": "widget",
+                                                "settings": {
+                                                    "title": "Better sleep quality",
+                                                    "align": "left",
+                                                    "header_size": "div",
+                                                    "typography_font_size": {
+                                                        "unit": "px",
+                                                        "size": 10
+                                                    },
+                                                    "typography_text_transform": "uppercase",
+                                                    "title_color": "rgba(14, 27, 48, 0.6)",
+                                                    "pa_condition_repeater": [],
+                                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                                    "premium_tooltip_position": "top,bottom"
+                                                },
+                                                "elements": [],
+                                                "widgetType": "heading"
+                                            }
+                                        ],
+                                        "isInner": true
+                                    }
+                                ],
+                                "isInner": true
+                            },
+                            {
+                                "id": "corp_btn",
+                                "elType": "widget",
+                                "settings": {
+                                    "text": "Inquire for Teams",
+                                    "link": {
+                                        "url": "#"
+                                    },
+                                    "background_color": "transparent",
+                                    "text_color": "#0E1B30",
+                                    "border_style": "solid",
+                                    "border_width": {
+                                        "unit": "px",
+                                        "top": "1",
+                                        "right": "1",
+                                        "bottom": "1",
+                                        "left": "1",
+                                        "isLinked": true
+                                    },
+                                    "border_color": "#0E1B30",
+                                    "border_radius": {
+                                        "unit": "px",
+                                        "top": "50",
+                                        "right": "50",
+                                        "bottom": "50",
+                                        "left": "50",
+                                        "isLinked": true
+                                    },
+                                    "padding": {
+                                        "unit": "px",
+                                        "top": "12",
+                                        "right": "32",
+                                        "bottom": "12",
+                                        "left": "32",
+                                        "isLinked": false
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "button"
+                            }
+                        ],
+                        "isInner": true
+                    },
+                    {
+                        "id": "corp_image",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": "46"
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [
+                            {
+                                "id": "img_corp",
+                                "elType": "widget",
+                                "settings": {
+                                    "image": {
+                                        "url": "https://wearestillness.com/wp-content/uploads/2026/01/person-conducting-reiki-therapy-1.jpg",
+                                        "id": 4392,
+                                        "alt": "",
+                                        "source": "library",
+                                        "size": ""
+                                    },
+                                    "image_size": "full",
+                                    "border_radius": {
+                                        "unit": "px",
+                                        "top": "16",
+                                        "right": "16",
+                                        "bottom": "16",
+                                        "left": "16",
+                                        "isLinked": true
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "image"
+                            }
+                        ],
+                        "isInner": true
+                    }
+                ],
+                "isInner": true
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "teaser_section",
+        "elType": "container",
+        "settings": {
+            "background_background": "classic",
+            "_element_id": "teaser_section",
+            "background_color": "#0E1B30",
+            "padding": {
+                "unit": "px",
+                "top": "128",
+                "right": "20",
+                "bottom": "128",
+                "left": "20",
+                "isLinked": false
+            },
+            "pa_condition_repeater": [],
+            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+            "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+            {
+                "id": "teaser_styles",
+                "elType": "widget",
+                "settings": {
+                    "html": "<style>#teaser_section { position: relative; overflow: hidden; } #teaser_section::before { content: ''; position: absolute; top: 0; left: 25%; width: 384px; height: 384px; background: #1D3152; border-radius: 50%; filter: blur(128px); opacity: 0.4; animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite; z-index: 0; pointer-events: none; } #teaser_section::after { content: ''; position: absolute; bottom: 0; right: 25%; width: 500px; height: 500px; background: #688F9D; border-radius: 50%; filter: blur(150px); opacity: 0.2; animation: pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite; animation-delay: 4s; z-index: 0; pointer-events: none; } @keyframes pulse { 0%, 100% { opacity: 0.4; transform: scale(1); } 50% { opacity: 0.6; transform: scale(1.1); } } #teaser_form_box { backdrop-filter: blur(12px) !important; -webkit-backdrop-filter: blur(12px) !important; z-index: 10; position: relative; border: 1px solid rgba(255, 255, 255, 0.05) !important; } .teaser-btn { width: 100% !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; padding: 12px 32px !important; background-color: #688F9D !important; color: #F7F0EC !important; border: none !important; border-radius: 9999px !important; cursor: pointer !important; margin-top: 8px !important; font-family: "Lato", sans-serif !important; font-size: 14px !important; line-height: 20px !important; text-transform: uppercase !important; letter-spacing: 0.05em !important; transition: all 0.7s ease-out !important; } .teaser-btn:hover { background-color: rgba(104, 143, 157, 0.8) !important; transform: scale(1.05) !important; }</style>"
+                },
+                "elements": [],
+                "widgetType": "html"
+            },
+            {
+                "id": "teaser_inner",
+                "elType": "container",
+                "settings": {
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 1280
+                    },
+                    "flex_direction": "row",
+                    "flex_justify_content": "space-between",
+                    "flex_align_items": "center",
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "teaser_text",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": "50"
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [
+                            {
+                                "id": "teaser_pill",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "Coming 2026",
+                                    "header_size": "div",
+                                    "title_color": "#688F9D",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 12
+                                    },
+                                    "typography_text_transform": "uppercase",
+                                    "border_style": "solid",
+                                    "border_width": {
+                                        "unit": "px",
+                                        "top": "1",
+                                        "right": "1",
+                                        "bottom": "1",
+                                        "left": "1",
+                                        "isLinked": true
+                                    },
+                                    "border_color": "rgba(104, 143, 157, 0.3)",
+                                    "padding": {
+                                        "unit": "px",
+                                        "top": "4",
+                                        "right": "12",
+                                        "bottom": "4",
+                                        "left": "12",
+                                        "isLinked": false
+                                    },
+                                    "width": "inline",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "teaser_head",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "The Depths <br/> Expansion",
+                                    "title_color": "#F7F0EC",
+                                    "typography_font_family": "serif",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 60
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "teaser_p",
+                                "elType": "widget",
+                                "settings": {
+                                    "editor": "<p style="color: #A4B2BA;">We are breaking ground on three new immersion chambers designed for extended theta-state therapy. Be the first to experience the new stillness.</p>",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "text-editor"
+                            },
+                            {
+                                "id": "teaser_stats",
+                                "elType": "widget",
+                                "settings": {
+                                    "html": "<div style="display: flex; gap: 16px; align-items: flex-end; margin-top: 32px;"><div style="text-align: center;"><span style="display: block; font-family: serif; font-size: 30px; color: #F7F0EC; line-height: 1;">04</span><span style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #A4B2BA;">Chambers</span></div><div style="font-family: serif; font-size: 24px; color: rgba(164, 178, 186, 0.3); padding-bottom: 8px;">:</div><div style="text-align: center;"><span style="display: block; font-family: serif; font-size: 30px; color: #F7F0EC; line-height: 1;">12</span><span style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #A4B2BA;">Rituals</span></div><div style="font-family: serif; font-size: 24px; color: rgba(164, 178, 186, 0.3); padding-bottom: 8px;">:</div><div style="text-align: center;"><span style="display: block; font-family: serif; font-size: 30px; color: #F7F0EC; line-height: 1;">\u221e</span><span style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #A4B2BA;">Stillness</span></div></div>"
+                                },
+                                "elements": [],
+                                "widgetType": "html"
+                            }
+                        ],
+                        "isInner": true
+                    },
+                    {
+                        "id": "teaser_form_box",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": "42"
+                            },
+                            "background_color": "rgba(29, 49, 82, 0.3)",
+                            "border_radius": {
+                                "unit": "px",
+                                "top": "24",
+                                "right": "24",
+                                "bottom": "24",
+                                "left": "24",
+                                "isLinked": true
+                            },
+                            "padding": {
+                                "unit": "px",
+                                "top": "48",
+                                "right": "48",
+                                "bottom": "48",
+                                "left": "48",
+                                "isLinked": true
+                            },
+                            "border_width": {
+                                "unit": "px",
+                                "top": "1",
+                                "right": "1",
+                                "bottom": "1",
+                                "left": "1",
+                                "isLinked": true
+                            },
+                            "border_color": "rgba(255, 255, 255, 0.05)",
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_position": "top,bottom",
+                            "_element_id": "teaser_form_box"
+                        },
+                        "elements": [
+                            {
+                                "id": "form_title",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "Join the Waitlist",
+                                    "header_size": "h3",
+                                    "title_color": "#F7F0EC",
+                                    "typography_font_family": "serif",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "form_sub",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "Secure early access.",
+                                    "header_size": "div",
+                                    "title_color": "#A4B2BA",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 14
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "form_html",
+                                "elType": "widget",
+                                "settings": {
+                                    "html": "<div style="display: flex; flex-direction: column; gap: 16px;"><input type='email' placeholder='Email Address' style='width: 100%; padding: 12px; background: rgba(14, 27, 48, 0.5); border: 1px solid rgba(14, 27, 48, 0.5); color: #F7F0EC; border-radius: 8px; outline: none;'><select style='width: 100%; padding: 12px; background: rgba(14, 27, 48, 0.5); border: 1px solid rgba(14, 27, 48, 0.5); color: #F7F0EC; border-radius: 8px; outline: none; appearance: none;'><option style='color: black;'>Interested in...</option><option style='color: black;'>Floating Membership</option><option style='color: black;'>Private Events</option><option style='color: black;'>General News</option></select><button class='teaser-btn'>Reserve My Spot</button></div>",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "html"
+                            }
+                        ],
+                        "isInner": true
+                    }
+                ],
+                "isInner": true
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "shop_section",
+        "elType": "container",
+        "settings": {
+            "background_color": "#F7F0EC",
+            "padding": {
+                "unit": "px",
+                "top": "100",
+                "right": "20",
+                "bottom": "100",
+                "left": "20",
+                "isLinked": false
+            },
+            "pa_condition_repeater": [],
+            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+            "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+            {
+                "id": "shop_header",
+                "elType": "container",
+                "settings": {
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 1200
+                    },
+                    "flex_direction": "row",
+                    "flex_justify_content": "space-between",
+                    "flex_align_items": "flex-end",
+                    "margin": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "60",
+                        "left": "0",
+                        "isLinked": false
+                    },
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "shop_titles",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": "70"
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [
+                            {
+                                "id": "shop_h2",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "Bring The Ritual Home",
+                                    "typography_font_family": "serif",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 48
+                                    },
+                                    "title_color": "#0E1B30",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "shop_p",
+                                "elType": "widget",
+                                "settings": {
+                                    "editor": "<p style="color: rgba(14, 27, 48, 0.6);">Tools and elements to maintain your nervous system regulation between sessions.</p>",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "text-editor"
+                            }
+                        ],
+                        "isInner": true
+                    },
+                    {
+                        "id": "shop_link",
+                        "elType": "widget",
+                        "settings": {
+                            "title": "View All",
+                            "header_size": "div",
+                            "title_color": "#0E1B30",
+                            "typography_font_size": {
+                                "unit": "px",
+                                "size": 12
+                            },
+                            "typography_text_transform": "uppercase",
+                            "typography_letter_spacing": {
+                                "unit": "em",
+                                "size": 0.2
+                            },
+                            "icon": {
+                                "value": "fas fa-arrow-right",
+                                "library": "fa-solid"
+                            },
+                            "icon_align": "right",
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "heading"
+                    }
+                ],
+                "isInner": true
+            },
+            {
+                "id": "shop_grid",
+                "elType": "container",
+                "settings": {
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 1200
+                    },
+                    "flex_direction": "row",
+                    "flex_gap": {
+                        "unit": "px",
+                        "size": 40,
+                        "column": "40",
+                        "row": "40",
+                        "isLinked": true
+                    },
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "prod_1",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": "33.33"
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [
+                            {
+                                "id": "img_p1",
+                                "elType": "widget",
+                                "settings": {
+                                    "image": {
+                                        "url": "https://picsum.photos/400/500?random=101",
+                                        "id": ""
+                                    },
+                                    "image_size": "full",
+                                    "border_radius": {
+                                        "unit": "px",
+                                        "top": "16",
+                                        "right": "16",
+                                        "bottom": "16",
+                                        "left": "16",
+                                        "isLinked": true
+                                    },
+                                    "margin": {
+                                        "unit": "px",
+                                        "top": "0",
+                                        "right": "0",
+                                        "bottom": "24",
+                                        "left": "0",
+                                        "isLinked": false
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "image"
+                            },
+                            {
+                                "id": "name_p1",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "Deep Rest Bath Oil",
+                                    "header_size": "h3",
+                                    "typography_font_family": "serif",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 20
+                                    },
+                                    "title_color": "#0E1B30",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "desc_p1",
+                                "elType": "widget",
+                                "settings": {
+                                    "editor": "<p style="color: rgba(14, 27, 48, 0.5); font-size: 14px;">Lavender & Vetiver blend.</p>",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "text-editor"
+                            },
+                            {
+                                "id": "price_p1",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "$45",
+                                    "header_size": "div",
+                                    "title_color": "#0E1B30",
+                                    "typography_font_weight": "500",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            }
+                        ],
+                        "isInner": true
+                    }
+                ],
+                "isInner": true
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "stories_section",
+        "elType": "container",
+        "settings": {
+            "background_color": "#FFFFFF",
+            "padding": {
+                "unit": "px",
+                "top": "100",
+                "right": "20",
+                "bottom": "100",
+                "left": "20",
+                "isLinked": false
+            },
+            "pa_condition_repeater": [],
+            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+            "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+            {
+                "id": "stories_header",
+                "elType": "container",
+                "settings": {
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 800
+                    },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "text_align": "center",
+                    "margin": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "60",
+                        "left": "0",
+                        "isLinked": false
+                    },
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "stories_kicker",
+                        "elType": "widget",
+                        "settings": {
+                            "title": "The Journal",
+                            "header_size": "span",
+                            "typography_font_size": {
+                                "unit": "px",
+                                "size": 12
+                            },
+                            "typography_font_weight": "700",
+                            "typography_text_transform": "uppercase",
+                            "title_color": "#688F9D",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "12",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "heading"
+                    },
+                    {
+                        "id": "stories_title",
+                        "elType": "widget",
+                        "settings": {
+                            "title": "Reflections on Stillness",
+                            "typography_font_family": "serif",
+                            "typography_font_size": {
+                                "unit": "px",
+                                "size": 48
+                            },
+                            "title_color": "#0E1B30",
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "heading"
+                    }
+                ],
+                "isInner": true
+            },
+            {
+                "id": "stories_grid",
+                "elType": "container",
+                "settings": {
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 1200
+                    },
+                    "flex_direction": "row",
+                    "flex_gap": {
+                        "unit": "px",
+                        "size": 40,
+                        "column": "40",
+                        "row": "40",
+                        "isLinked": true
+                    },
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "art_1",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": "33.33"
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [
+                            {
+                                "id": "img_a1",
+                                "elType": "widget",
+                                "settings": {
+                                    "image": {
+                                        "url": "https://picsum.photos/800/600?random=201",
+                                        "id": ""
+                                    },
+                                    "image_size": "full",
+                                    "border_radius": {
+                                        "unit": "px",
+                                        "top": "12",
+                                        "right": "12",
+                                        "bottom": "12",
+                                        "left": "12",
+                                        "isLinked": true
+                                    },
+                                    "margin": {
+                                        "unit": "px",
+                                        "top": "0",
+                                        "right": "0",
+                                        "bottom": "24",
+                                        "left": "0",
+                                        "isLinked": false
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "image"
+                            }
+                        ],
+                        "isInner": true
+                    }
+                ],
+                "isInner": true
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "testimonials_section",
+        "elType": "container",
+        "settings": {
+            "background_color": "rgba(196, 187, 180, 0.1)",
+            "padding": {
+                "unit": "px",
+                "top": "120",
+                "right": "20",
+                "bottom": "120",
+                "left": "20",
+                "isLinked": false
+            },
+            "pa_condition_repeater": [],
+            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+            "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+            {
+                "id": "test_container",
+                "elType": "container",
+                "settings": {
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 900
+                    },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "text_align": "center",
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "quote_icon",
+                        "elType": "widget",
+                        "settings": {
+                            "icon": {
+                                "value": "fas fa-quote-left",
+                                "library": "fa-solid"
+                            },
+                            "primary_color": "rgba(14, 27, 48, 0.1)",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "32",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "icon"
+                    },
+                    {
+                        "id": "test_carousel",
+                        "elType": "widget",
+                        "settings": {
+                            "slides": [
+                                {
+                                    "content": "<p style="font-family: serif; font-style: italic; font-size: 36px; color: #0E1B30; line-height: 1.4;">"I didn't realize how loud my mind was until I stepped into the silence. It was a returning to myself I didn't know I needed."</p><div style='margin-top: 32px;'><p style='font-family: "Lato", sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #0E1B30; font-size: 14px;'>Elena R.</p><p style='font-family: "Lato", sans-serif; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(14, 27, 48, 0.5); font-size: 12px; margin-top: 4px;'>Architect</p></div>",
+                                    "_id": "slide1"
+                                },
+                                {
+                                    "content": "<p style="font-family: serif; font-style: italic; font-size: 36px; color: #0E1B30; line-height: 1.4;">"The weightlessness is profound. For an hour, I wasn't a CEO, a mother, or a planner. I was just... being."</p><div style='margin-top: 32px;'><p style='font-family: "Lato", sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #0E1B30; font-size: 14px;'>Sarah J.</p><p style='font-family: "Lato", sans-serif; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(14, 27, 48, 0.5); font-size: 12px; margin-top: 4px;'>Founder</p></div>",
+                                    "_id": "slide2"
+                                },
+                                {
+                                    "content": "<p style="font-family: serif; font-style: italic; font-size: 36px; color: #0E1B30; line-height: 1.4;">"Stillness taught me that rest isn't a luxury. It's the foundation of everything I do."</p><div style='margin-top: 32px;'><p style='font-family: "Lato", sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #0E1B30; font-size: 14px;'>Marcus T.</p><p style='font-family: "Lato", sans-serif; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(14, 27, 48, 0.5); font-size: 12px; margin-top: 4px;'>Creative Director</p></div>",
+                                    "_id": "slide3"
+                                }
+                            ],
+                            "skin": "default",
+                            "show_arrows": "yes",
+                            "show_pagination": "yes",
+                            "autoplay": "yes",
+                            "pause_on_hover": "yes",
+                            "pause_on_interaction": "yes",
+                            "autoplay_speed": 5000,
+                            "infinite": "yes",
+                            "transition": "slide",
+                            "transition_speed": 500
+                        },
+                        "elements": [],
+                        "widgetType": "testimonial-carousel"
+                    }
+                ],
+                "isInner": true
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "newsletter_section",
+        "elType": "container",
+        "settings": {
+            "background_color": "rgba(104, 143, 157, 0.05)",
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "20",
+                "bottom": "80",
+                "left": "20",
+                "isLinked": false
+            },
+            "border_style": "solid",
+            "border_width": {
+                "unit": "px",
+                "top": "1",
+                "right": "0",
+                "bottom": "0",
+                "left": "0",
+                "isLinked": false
+            },
+            "border_color": "rgba(104, 143, 157, 0.1)",
+            "pa_condition_repeater": [],
+            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+            "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+            {
+                "id": "news_container",
+                "elType": "container",
+                "settings": {
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 600
+                    },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "text_align": "center",
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "news_title",
+                        "elType": "widget",
+                        "settings": {
+                            "title": "Join Our Community",
+                            "typography_font_family": "serif",
+                            "typography_font_size": {
+                                "unit": "px",
+                                "size": 32
+                            },
+                            "title_color": "#0E1B30",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "16",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "heading"
+                    },
+                    {
+                        "id": "news_desc",
+                        "elType": "widget",
+                        "settings": {
+                            "editor": "<p style="color: rgba(14, 27, 48, 0.6);">Receive monthly rituals, reflections, and early access.</p>",
+                            "margin": {
+                                "unit": "px",
+                                "top": "0",
+                                "right": "0",
+                                "bottom": "32",
+                                "left": "0",
+                                "isLinked": false
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "text-editor"
+                    },
+                    {
+                        "id": "news_form",
+                        "elType": "widget",
+                        "settings": {
+                            "html": "<div style="display: flex; gap: 16px;"><input type='email' placeholder='Your email address' style='flex-grow: 1; padding: 12px 24px; border-radius: 99px; border: 1px solid rgba(14, 27, 48, 0.1); background: #FFFFFF; outline: none;'><button style='padding: 12px 32px; border-radius: 99px; background: #0E1B30; color: #F7F0EC; border: none; cursor: pointer; text-transform: uppercase; font-size: 14px; letter-spacing: 1px;'>Subscribe</button></div>",
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "html"
+                    }
+                ],
+                "isInner": true
+            }
+        ],
+        "isInner": false
+    },
+    {
+        "id": "footer_section",
+        "elType": "container",
+        "settings": {
+            "background_color": "#0E1B30",
+            "padding": {
+                "unit": "px",
+                "top": "80",
+                "right": "20",
+                "bottom": "40",
+                "left": "20",
+                "isLinked": false
+            },
+            "pa_condition_repeater": [],
+            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+            "premium_tooltip_position": "top,bottom"
+        },
+        "elements": [
+            {
+                "id": "footer_grid",
+                "elType": "container",
+                "settings": {
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 1200
+                    },
+                    "flex_direction": "row",
+                    "flex_justify_content": "space-between",
+                    "flex_align_items": "flex-start",
+                    "flex_gap": {
+                        "unit": "px",
+                        "size": 40,
+                        "column": "40",
+                        "row": "40",
+                        "isLinked": true
+                    },
+                    "margin": {
+                        "unit": "px",
+                        "top": "0",
+                        "right": "0",
+                        "bottom": "60",
+                        "left": "0",
+                        "isLinked": false
+                    },
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "footer_brand",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": "30"
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [
+                            {
+                                "id": "foot_logo",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "Stillness.",
+                                    "header_size": "h3",
+                                    "typography_font_family": "serif",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 32
+                                    },
+                                    "title_color": "#F7F0EC",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "foot_desc",
+                                "elType": "widget",
+                                "settings": {
+                                    "editor": "<p style="color: rgba(164, 178, 186, 0.6); font-size: 14px; line-height: 1.6;">A sanctuary for the modern mind. Restoring balance through sensory reduction and nervous system regulation.</p>",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "text-editor"
+                            }
+                        ],
+                        "isInner": true
+                    },
+                    {
+                        "id": "footer_col1",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": "20"
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [
+                            {
+                                "id": "foot_h1",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "Explore",
+                                    "header_size": "h4",
+                                    "title_color": "#688F9D",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 14
+                                    },
+                                    "typography_text_transform": "uppercase",
+                                    "typography_letter_spacing": {
+                                        "unit": "em",
+                                        "size": 0.2
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "foot_list1",
+                                "elType": "widget",
+                                "settings": {
+                                    "icon_list": [
+                                        { "text": "Our Philosophy", "_id": "link1" },
+                                        { "text": "The Experience", "_id": "link2" },
+                                        { "text": "Shop", "_id": "link3" },
+                                        { "text": "Journal", "_id": "link4" },
+                                        { "text": "Gift Cards", "_id": "link5" }
+                                    ],
+                                    "text_color": "rgba(164, 178, 186, 0.8)",
+                                    "icon_color": "#688F9D",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "icon-list"
+                            }
+                        ],
+                        "isInner": true
+                    },
+                    {
+                        "id": "footer_col2",
+                        "elType": "container",
+                        "settings": {
+                            "width": {
+                                "unit": "%",
+                                "size": "20"
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [
+                            {
+                                "id": "foot_h2",
+                                "elType": "widget",
+                                "settings": {
+                                    "title": "Legal",
+                                    "header_size": "h4",
+                                    "title_color": "#688F9D",
+                                    "typography_font_size": {
+                                        "unit": "px",
+                                        "size": 14
+                                    },
+                                    "typography_text_transform": "uppercase",
+                                    "typography_letter_spacing": {
+                                        "unit": "em",
+                                        "size": 0.2
+                                    },
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "heading"
+                            },
+                            {
+                                "id": "foot_list2",
+                                "elType": "widget",
+                                "settings": {
+                                    "icon_list": [
+                                        { "text": "Privacy Policy", "_id": "legal1" },
+                                        { "text": "Terms of Service", "_id": "legal2" },
+                                        { "text": "Waiver", "_id": "legal3" },
+                                        { "text": "Accessibility", "_id": "legal4" }
+                                    ],
+                                    "text_color": "rgba(164, 178, 186, 0.8)",
+                                    "icon_color": "#688F9D",
+                                    "pa_condition_repeater": [],
+                                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                                    "premium_tooltip_position": "top,bottom"
+                                },
+                                "elements": [],
+                                "widgetType": "icon-list"
+                            }
+                        ],
+                        "isInner": true
+                    }
+                ],
+                "isInner": true
+            },
+            {
+                "id": "footer_bottom",
+                "elType": "container",
+                "settings": {
+                    "boxed_width": {
+                        "unit": "px",
+                        "size": 1200
+                    },
+                    "border_style": "solid",
+                    "border_width": {
+                        "unit": "px",
+                        "top": "1",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "isLinked": false
+                    },
+                    "border_color": "rgba(255, 255, 255, 0.1)",
+                    "padding": {
+                        "unit": "px",
+                        "top": "32",
+                        "right": "0",
+                        "bottom": "0",
+                        "left": "0",
+                        "isLinked": false
+                    },
+                    "pa_condition_repeater": [],
+                    "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                    "premium_tooltip_position": "top,bottom"
+                },
+                "elements": [
+                    {
+                        "id": "copy",
+                        "elType": "widget",
+                        "settings": {
+                            "title": "\u00a9 2026 Stillness Wellness Co. All rights reserved. Designed for Deep Rest.",
+                            "header_size": "div",
+                            "title_color": "rgba(164, 178, 186, 0.4)",
+                            "typography_font_size": {
+                                "unit": "px",
+                                "size": 12
+                            },
+                            "pa_condition_repeater": [],
+                            "premium_tooltip_text": "Hi, I'm a global tooltip.",
+                            "premium_tooltip_position": "top,bottom"
+                        },
+                        "elements": [],
+                        "widgetType": "heading"
+                    }
+                ],
+                "isInner": true
+            }
+        ],
+        "isInner": false
+    }
+]

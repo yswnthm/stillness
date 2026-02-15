@@ -6,17 +6,19 @@
 - [x] Task: Define global Elementor styles (fonts/colors) based on React `constants.ts` and CSS.
 - [x] Task: Conductor - User Manual Verification 'Preparation & Scaffolding' (Protocol in workflow.md)
 
-## Phase 2: High-Impact Sections (Hero & Intro)
-- [~] Task: Migrate Hero section (HTML/CSS and Elementor widgets).
-- [ ] Task: Migrate Intro & Heal sections.
-- [ ] Task: Implement custom entrance animations to mirror Framer Motion effects.
+## Phase 2: User-Requested Section Templates [checkpoint: pending]
+- [x] Task: Generate Newsletter CTA template (template-newsletter.json).
+- [x] Task: Generate Testimonials template (template-testimonials.json).
+- [x] Task: Generate Footer template (template-footer.json).
+- [x] Task: User manually imported and verified templates in Elementor.
 - [ ] Task: Conductor - User Manual Verification 'High-Impact Sections' (Protocol in workflow.md)
 
-## Phase 3: Content & Grid Migration
-- [ ] Task: Recreate Corporate Wellness section.
-- [ ] Task: Recreate Testimonials & Stories sections.
-- [ ] Task: Recreate Shop Preview section.
-- [ ] Task: Conductor - User Manual Verification 'Content & Grid Migration' (Protocol in workflow.md)
+## Phase 3: Remaining Sections
+- [ ] Task: Migrate Hero section (HTML/CSS and Elementor widgets).
+- [ ] Task: Migrate Intro & Heal sections.
+- [ ] Task: Recreate Stories section.
+- [x] Task: Recreate Corporate Wellness section. (Already Migrated by User)
+- [x] Task: Recreate Shop Preview section. (Already Migrated by User)
 
 ## Phase 4: Finalization & Sync
 - [ ] Task: Recreate Newsletter & Footer.
