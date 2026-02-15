@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section } from './Section';
 import { Button } from './Button';
+import { Link } from 'react-router-dom';
 import { CORPORATE_STATS } from '../constants';
 import { motion } from 'framer-motion';
 
@@ -37,7 +38,9 @@ export const CorporateWellness: React.FC = () => {
           </div>
 
           <div className="pt-4">
-            <Button variant="outline">Inquire for Teams</Button>
+            <Link to="/corporate">
+              <Button variant="outline">Inquire for Teams</Button>
+            </Link>
           </div>
         </motion.div>
 

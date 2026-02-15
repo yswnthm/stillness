@@ -1,11 +1,11 @@
 import { NavItem, Testimonial, Product, Article, Stat } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Philosophy', href: '#intro' },
-  { label: 'Heal', href: '#heal' },
-  { label: 'Corporate', href: '#corporate' },
-  { label: 'Journal', href: '#stories' },
-  { label: 'Waitlist', href: '#waitlist' },
+  { label: 'Philosophy', href: '/#intro' },
+  { label: 'Heal', href: '/#heal' },
+  { label: 'Corporate', href: '/corporate' },
+  { label: 'About', href: '/about' },
+  { label: 'Journal', href: '/#stories' },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

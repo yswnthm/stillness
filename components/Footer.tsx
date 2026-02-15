@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Instagram, Twitter, Facebook, MapPin, Mail, Phone } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -9,7 +10,7 @@ export const Footer: React.FC = () => {
           
           {/* Brand */}
           <div className="space-y-6">
-            <a href="#" className="text-3xl font-serif">Stillness.</a>
+            <Link to="/" className="text-3xl font-serif">Stillness.</Link>
             <p className="text-wave/60 text-sm font-light leading-relaxed max-w-xs">
               A sanctuary for the modern mind. Restoring balance through sensory reduction and nervous system regulation.
             </p>
@@ -24,13 +25,14 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest text-seafoam mb-6">Explore</h4>
             <ul className="space-y-3">
-              <li><a href="#intro" className="text-wave/80 hover:text-cream text-sm transition-colors">Our Philosophy</a></li>
-              <li><a href="#heal" className="text-wave/80 hover:text-cream text-sm transition-colors">The Experience</a></li>
-              <li><a href="#shop" className="text-wave/80 hover:text-cream text-sm transition-colors">Shop</a></li>
-              <li><a href="#stories" className="text-wave/80 hover:text-cream text-sm transition-colors">Journal</a></li>
-              <li><a href="#" className="text-wave/80 hover:text-cream text-sm transition-colors">Gift Cards</a></li>
+              <li><Link to="/#intro" className="text-wave/80 hover:text-cream text-sm transition-colors">Our Philosophy</Link></li>
+              <li><Link to="/#heal" className="text-wave/80 hover:text-cream text-sm transition-colors">The Experience</Link></li>
+              <li><Link to="/about" className="text-wave/80 hover:text-cream text-sm transition-colors">About Us</Link></li>
+              <li><Link to="/corporate" className="text-wave/80 hover:text-cream text-sm transition-colors">Corporate Wellness</Link></li>
+              <li><Link to="/#stories" className="text-wave/80 hover:text-cream text-sm transition-colors">Journal</Link></li>
             </ul>
           </div>
+
 
           {/* Contact */}
           <div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { NAV_ITEMS } from '../constants';
 
 export const Header: React.FC = () => {
@@ -22,24 +23,24 @@ export const Header: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className={`text-2xl md:text-3xl font-serif tracking-tight z-50 transition-colors duration-500 ${mobileMenuOpen ? 'text-stone' : 'text-stone'}`}>
+        <Link to="/" className={`text-2xl md:text-3xl font-serif tracking-tight z-50 transition-colors duration-500 ${mobileMenuOpen ? 'text-stone' : 'text-stone'}`}>
           Stillness.
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8 lg:space-x-12">
           {NAV_ITEMS.map((item) => (
-            <a 
+            <Link 
               key={item.label}
-              href={item.href}
+              to={item.href}
               className="text-stone hover:text-seafoam transition-colors duration-300 text-sm tracking-widest uppercase font-sans"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a href="#book" className="px-6 py-2 border border-stone rounded-full text-stone text-xs uppercase tracking-widest hover:bg-stone hover:text-cream transition-all duration-500">
+          <Link to="/reserve" className="px-6 py-2 border border-stone rounded-full text-stone text-xs uppercase tracking-widest hover:bg-stone hover:text-cream transition-all duration-500">
             Book
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Toggle */}
@@ -53,22 +54,22 @@ export const Header: React.FC = () => {
         {/* Mobile Nav Overlay */}
         <div className={`fixed inset-0 bg-cream z-40 flex flex-col items-center justify-center space-y-8 transition-opacity duration-500 ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
            {NAV_ITEMS.map((item) => (
-            <a 
+            <Link 
               key={item.label}
-              href={item.href}
+              to={item.href}
               onClick={() => setMobileMenuOpen(false)}
               className="text-2xl font-serif text-stone hover:text-seafoam transition-colors"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-           <a 
-            href="#book"
+           <Link 
+            to="/reserve"
             onClick={() => setMobileMenuOpen(false)}
             className="px-8 py-3 border border-stone rounded-full text-stone text-sm uppercase tracking-widest"
            >
              Book Session
-           </a>
+           </Link>
         </div>
       </div>
     </header>

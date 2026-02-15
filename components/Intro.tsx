@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section } from './Section';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export const Intro: React.FC = () => {
   return (
@@ -56,10 +57,10 @@ export const Intro: React.FC = () => {
           </div>
           
           <div className="pt-4">
-             <button className="group flex items-center gap-2 text-stone hover:text-seafoam transition-colors duration-300 uppercase text-xs tracking-widest font-bold">
+             <Link to="/about" className="group flex items-center gap-2 text-stone hover:text-seafoam transition-colors duration-300 uppercase text-xs tracking-widest font-bold">
                Read the full story
                <span className="w-8 h-[1px] bg-stone group-hover:bg-seafoam transition-colors duration-300"></span>
-             </button>
+             </Link>
           </div>
         </motion.div>
       </div>
