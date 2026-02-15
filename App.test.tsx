@@ -20,7 +20,7 @@ describe('App Routing', () => {
         <App />
       </MemoryRouter>
     );
-    expect(screen.getByText(/About Page/i)).toBeInTheDocument();
+    expect(screen.getByText(/Our Story/i)).toBeInTheDocument();
   });
 
   it('renders corporate page when navigating to /corporate', () => {
@@ -29,7 +29,7 @@ describe('App Routing', () => {
         <App />
       </MemoryRouter>
     );
-    expect(screen.getByText(/Corporate Page/i)).toBeInTheDocument();
+    expect(screen.getByText(/Stillness for Business/i)).toBeInTheDocument();
   });
 
   it('renders reserve page when navigating to /reserve', () => {
@@ -38,6 +38,6 @@ describe('App Routing', () => {
         <App />
       </MemoryRouter>
     );
-    expect(screen.getByText(/Reserve Page/i)).toBeInTheDocument();
+    expect(screen.getByText(/Secure Your Space/i)).toBeInTheDocument();
   });
 });
