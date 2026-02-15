@@ -39,7 +39,7 @@ export const BrandStory: React.FC = () => {
         >
           <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
             <img 
-              src="https://images.unsplash.com/photo-1544161515-4ad6ce17906e?q=80&w=2070&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1544367563-12123d896889?q=80&w=2070&auto=format&fit=crop" 
               alt="Serene spa environment" 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
             />
