@@ -6,12 +6,12 @@
 - [x] Task: Define global Elementor styles (fonts/colors) based on React `constants.ts` and CSS.
 - [x] Task: Conductor - User Manual Verification 'Preparation & Scaffolding' (Protocol in workflow.md)
 
-## Phase 2: User-Requested Section Templates [checkpoint: pending]
+## Phase 2: User-Requested Section Templates [checkpoint: 07ac6d8]
 - [x] Task: Generate Newsletter CTA template (template-newsletter.json).
 - [x] Task: Generate Testimonials template (template-testimonials.json).
 - [x] Task: Generate Footer template (template-footer.json).
 - [x] Task: User manually imported and verified templates in Elementor.
-- [ ] Task: Conductor - User Manual Verification 'High-Impact Sections' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'High-Impact Sections' (Protocol in workflow.md)
 
 ## Phase 3: Remaining Sections
 - [ ] Task: Migrate Hero section (HTML/CSS and Elementor widgets).
