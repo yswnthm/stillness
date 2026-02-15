@@ -16,7 +16,7 @@
 ## Phase 3: Remaining Sections
 - [x] Task: Migrate Hero section (HTML/CSS and Elementor widgets). fba58da
 - [x] Task: Migrate Intro & Heal sections. 42b25ee
-- [~] Task: Recreate Stories section.
+- [x] Task: Recreate Stories section. a568ce6
 - [x] Task: Recreate Corporate Wellness section. (Already Migrated by User)
 - [x] Task: Recreate Shop Preview section. (Already Migrated by User)
 
