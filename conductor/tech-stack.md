@@ -10,6 +10,7 @@
 - **Platform:** WordPress (Latest Stable)
 - **Page Builder:** Elementor (Pro recommended for custom widgets/templates)
 - **Control Interface:** WP-CLI (used for programmatic page/template scaffolding)
+- **Booking:** Calendly (Embedded via HTML/Shortcode)
 - **Migration Workspace:** `wordpress/` directory in the project root for storing migration assets and scripts.
 
 ## Migration Tools & Utilities

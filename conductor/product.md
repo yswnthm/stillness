@@ -20,3 +20,6 @@ The primary objective is to faithfully recreate the "stillness" wellness website
 - Stories & Testimonials
 - Shop Preview
 - Newsletter & Footer
+- About Us (Full Page)
+- Corporate Wellness (Detailed Page with Inquiry Form)
+- Reservations (High-Fidelity UI with Calendly Integration Plan)
