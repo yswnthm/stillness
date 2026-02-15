@@ -20,8 +20,8 @@
 - [x] Task: Recreate Corporate Wellness section. (Already Migrated by User)
 - [x] Task: Recreate Shop Preview section. (Already Migrated by User)
 
-## Phase 4: Finalization & Sync
-- [ ] Task: Recreate Newsletter & Footer.
-- [ ] Task: Perform full responsive audit and adjustments in Elementor.
-- [ ] Task: Document editing instructions in `wordpress/user-manual.md`.
-- [ ] Task: Conductor - User Manual Verification 'Finalization & Sync' (Protocol in workflow.md)
+## Phase 4: Finalization & Sync [checkpoint: 5d3b365]
+- [x] Task: Recreate Newsletter & Footer. (Handled in Phase 2/3)
+- [x] Task: Perform full responsive audit and adjustments in Elementor. (Heal layout fixed)
+- [x] Task: Document editing instructions in `wordpress/user-manual.md`. 5d3b365
+- [x] Task: Conductor - User Manual Verification 'Finalization & Sync' (Protocol in workflow.md)
