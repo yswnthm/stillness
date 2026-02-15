@@ -1,0 +1,30 @@
+{
+    "content": [
+        {
+            "id": "hero_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "height": "min-height",
+                "custom_height": { "unit": "vh", "size": 100 },
+                "background_background": "classic",
+                "background_color": "#0E1B30",
+                "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+            },
+            "elements": [
+                {
+                    "id": "hero_html",
+                    "elType": "widget",
+                    "settings": {
+                        "html": "<div class='stillness-hero'><div class='stillness-hero-bg'><img src='https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=2070&auto=format&fit=crop' alt='Calm deep water ripples' /><div class='stillness-hero-overlay'></div></div><div class='stillness-hero-content'><div class='stillness-hero-text-wrap'><h1 class='stillness-hero-title'>Find Your <br/> <span class='italic'>Stillness</span></h1><p class='stillness-hero-subtitle'>Your sanctuary for deep relaxation and inner harmony. Come back to yourself.</p><div class='stillness-hero-cta-wrap'><a href='#intro' class='stillness-hero-cta'>Begin Your Journey</a></div></div><div class='stillness-hero-scroll'><svg class='stillness-bounce' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg></div></div></div><style>.stillness-hero { position: relative; height: 100vh; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; color: #F7F0EC; }.stillness-hero-bg { position: absolute; inset: 0; z-index: 0; }.stillness-hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }.stillness-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(14, 27, 48, 0.4) 0%, transparent 50%, rgba(14, 27, 48, 0.8) 100%); }.stillness-hero-content { position: relative; z-index: 10; text-align: center; padding: 0 20px; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }.stillness-hero-text-wrap { max-width: 900px; opacity: 0; transform: translateY(30px); animation: stillnessFadeUp 1.5s ease-out forwards; }.stillness-hero-title { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; margin-bottom: 24px; line-height: 1.1; letter-spacing: -0.02em; }.stillness-hero-title .italic { font-style: italic; }@media (max-width: 768px) { .stillness-hero-title { font-size: 3.5rem; } }.stillness-hero-subtitle { font-family: 'Lato', sans-serif; font-size: 1.25rem; font-weight: 300; color: rgba(217, 232, 235, 0.9); max-width: 500px; margin: 0 auto 40px; line-height: 1.6; letter-spacing: 0.05em; }.stillness-hero-cta { display: inline-block; padding: 16px 40px; background: rgba(247, 240, 236, 0.1); backdrop-filter: blur(4px); border: 1px solid rgba(247, 240, 236, 0.3); border-radius: 50px; color: #F7F0EC; text-transform: uppercase; text-decoration: none; font-size: 14px; letter-spacing: 0.2em; transition: all 0.7s ease; }.stillness-hero-cta:hover { background-color: #F7F0EC; color: #0E1B30; transform: scale(1.05); }.stillness-hero-scroll { position: absolute; bottom: 48px; left: 50%; transform: translateX(-50%); color: rgba(247, 240, 236, 0.5); opacity: 0; animation: stillnessFadeIn 1s ease-out 1.5s forwards; }.stillness-bounce { animation: stillnessBounce 2s infinite; }@keyframes stillnessFadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }@keyframes stillnessFadeIn { from { opacity: 0; } to { opacity: 1; } }@keyframes stillnessBounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-10px);} 60% {transform: translateY(-5px);} }</style>"
+                    },
+                    "widgetType": "html"
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Hero Section",
+    "type": "section"
+}
