@@ -3,8 +3,10 @@ import { describe, it, expect } from 'vitest';
 import { BookingUI } from './BookingUI';
 
 describe('BookingUI Component', () => {
-  it('renders calendly integration placeholder', () => {
+  it('renders high-fidelity booking interface', () => {
     render(<BookingUI />);
-    expect(screen.getByText(/Calendly Integration/i)).toBeInTheDocument();
+    expect(screen.getByText(/Select a Date/i)).toBeInTheDocument();
+    expect(screen.getByText(/Available Times/i)).toBeInTheDocument();
+    expect(screen.getByText(/Confirm Reservation/i)).toBeInTheDocument();
   });
 });
