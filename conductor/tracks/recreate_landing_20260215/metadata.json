@@ -1,0 +1,8 @@
+{
+  "track_id": "recreate_landing_20260215",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-02-15T12:00:00Z",
+  "updated_at": "2026-02-15T12:00:00Z",
+  "description": "Recreate the 'stillness' landing page design in the WordPress duplicate1-page using Elementor and WP-CLI, ensuring design parity with the React project."
+}
