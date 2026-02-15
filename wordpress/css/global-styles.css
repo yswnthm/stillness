@@ -1,0 +1,37 @@
+/* Stillness Global Styles Migration to WordPress */
+
+:root {
+  --wp--custom--color--stone: #0E1B30;
+  --wp--custom--color--midnight: #1D3152;
+  --wp--custom--color--seafoam: #688F9D;
+  --wp--custom--color--breeze: #D9E8EB;
+  --wp--custom--color--wave: #A4B2BA;
+  --wp--custom--color--sand: #C4BBB4;
+  --wp--custom--color--cream: #F7F0EC;
+  
+  --wp--custom--font-family--serif: "Cormorant Garamond", serif;
+  --wp--custom--font-family--sans: "Lato", sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F0EC; 
+}
+::-webkit-scrollbar-thumb {
+  background: #C4BBB4; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #688F9D; 
+}
+
+/* Base Utility for Elementor custom HTML blocks */
+.bg-cream { background-color: var(--wp--custom--color--cream); }
+.bg-stone { background-color: var(--wp--custom--color--stone); }
+.text-stone { color: var(--wp--custom--color--stone); }
+.text-seafoam { color: var(--wp--custom--color--seafoam); }
+.font-serif { font-family: var(--wp--custom--font-family--serif); }
+.font-sans { font-family: var(--wp--custom--font-family--sans); }

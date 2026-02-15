@@ -1,9 +1,10 @@
 # Implementation Plan - Recreate Landing Page in WordPress
 
 ## Phase 1: Preparation & Scaffolding
-- [ ] Task: Verify WordPress environment and `duplicate1-page` existence via WP-CLI.
-- [ ] Task: Setup `wordpress/` directory structure for assets and scripts.
-- [ ] Task: Define global Elementor styles (fonts/colors) based on React `constants.ts` and CSS.
+- [x] Task: Verify WordPress environment and `duplicate1-page` existence via WP-CLI. (Post ID: 4493)
+- [~] Task: Setup `wordpress/` directory structure for assets and scripts.
+- [x] Task: Setup `wordpress/` directory structure for assets and scripts.
+- [x] Task: Define global Elementor styles (fonts/colors) based on React `constants.ts` and CSS.
 - [ ] Task: Conductor - User Manual Verification 'Preparation & Scaffolding' (Protocol in workflow.md)
 
 ## Phase 2: High-Impact Sections (Hero & Intro)
