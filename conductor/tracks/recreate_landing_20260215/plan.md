@@ -14,8 +14,8 @@
 - [x] Task: Conductor - User Manual Verification 'High-Impact Sections' (Protocol in workflow.md)
 
 ## Phase 3: Remaining Sections
-- [ ] Task: Migrate Hero section (HTML/CSS and Elementor widgets).
-- [ ] Task: Migrate Intro & Heal sections.
+- [x] Task: Migrate Hero section (HTML/CSS and Elementor widgets). fba58da
+- [~] Task: Migrate Intro & Heal sections.
 - [ ] Task: Recreate Stories section.
 - [x] Task: Recreate Corporate Wellness section. (Already Migrated by User)
 - [x] Task: Recreate Shop Preview section. (Already Migrated by User)
