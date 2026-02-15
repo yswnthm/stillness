@@ -13,7 +13,7 @@
 - [x] Task: User manually imported and verified templates in Elementor.
 - [x] Task: Conductor - User Manual Verification 'High-Impact Sections' (Protocol in workflow.md)
 
-## Phase 3: Remaining Sections
+## Phase 3: Remaining Sections [checkpoint: a603c22]
 - [x] Task: Migrate Hero section (HTML/CSS and Elementor widgets). fba58da
 - [x] Task: Migrate Intro & Heal sections. 42b25ee
 - [x] Task: Recreate Stories section. a568ce6
