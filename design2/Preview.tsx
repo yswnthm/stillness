@@ -8,7 +8,8 @@ import { Newsletter } from './Newsletter';
 
 export const Design2Preview: React.FC = () => {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen relative">
+      <div className="noise-overlay" />
       <Hero />
       <Intro />
       <Services />
