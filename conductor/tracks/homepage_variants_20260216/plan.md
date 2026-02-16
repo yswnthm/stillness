@@ -9,7 +9,7 @@
 - [x] Task: Write failing tests for Design 1's isolated components. 302810e
 - [x] Task: Implement full self-contained Hero, Intro, and Services for Design 1. 22324a4
 - [x] Task: Implement full self-contained Stories, Testimonials, and Newsletter for Design 1. 22324a4
-- [~] Task: Refine "Luxury but Fun" micro-interactions specific to Design 1.
+- [x] Task: Refine "Luxury but Fun" micro-interactions specific to Design 1. 806cc7a
 - [~] Task: Conductor - User Manual Verification 'Design 1 - Light & Airy' (Protocol in workflow.md)
 
 ## Phase 3: Design 2 - Earth Tone (Unique Palette)
