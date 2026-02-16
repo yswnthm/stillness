@@ -20,8 +20,20 @@ export const Services: React.FC = () => {
                 backgroundColor: "rgba(255, 255, 255, 0.05)",
                 borderColor: "rgba(255, 255, 255, 0.2)"
               }}
+              animate={{
+                boxShadow: [
+                  `0 0 40px ${s.glow}`,
+                  `0 0 60px ${s.glow}`,
+                  `0 0 40px ${s.glow}`
+                ]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: i * 0.5
+              }}
               className="p-12 rounded-[3rem] border border-white/5 transition-all duration-700 cursor-pointer group"
-              style={{ boxShadow: `0 0 40px ${s.glow}` }}
             >
               <h3 className="text-white font-serif text-3xl mb-6 group-hover:text-seafoam transition-colors">
                 {s.title}
