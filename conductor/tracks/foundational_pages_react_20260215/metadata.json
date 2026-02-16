@@ -1,8 +1,0 @@
-{
-  "track_id": "foundational_pages_react_20260215",
-  "type": "feature",
-  "status": "new",
-  "created_at": "2026-02-15T10:00:00Z",
-  "updated_at": "2026-02-15T10:00:00Z",
-  "description": "Create About, Corporate, and Reserve pages in React with a focus on portability for future WordPress migration."
-}
