@@ -5,12 +5,12 @@
 - [x] Task: Set up isolated asset directories within each design folder (e.g., `design1/assets/`, etc.). 25581af
 - [x] Task: Conductor - User Manual Verification 'Scaffolding & Isolated Asset Setup' (Protocol in workflow.md) ce4b1f5
 
-## Phase 2: Design 1 - Light & Airy (Original Palette)
+## Phase 2: Design 1 - Light & Airy (Original Palette) [checkpoint: 893b80e]
 - [x] Task: Write failing tests for Design 1's isolated components. 302810e
 - [x] Task: Implement full self-contained Hero, Intro, and Services for Design 1. 22324a4
 - [x] Task: Implement full self-contained Stories, Testimonials, and Newsletter for Design 1. 22324a4
 - [x] Task: Refine "Luxury but Fun" micro-interactions specific to Design 1. 806cc7a
-- [~] Task: Conductor - User Manual Verification 'Design 1 - Light & Airy' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Design 1 - Light & Airy' (Protocol in workflow.md) 893b80e
 
 ## Phase 3: Design 2 - Earth Tone (Unique Palette)
 - [ ] Task: Write failing tests for Design 2's unique palette and isolated structure.
