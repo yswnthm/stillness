@@ -20,9 +20,9 @@
 
 ## Phase 4: Design 3 - Modern Editorial (Original Palette)
 - [x] Task: Write failing tests for Design 3's asymmetric editorial layout. 3ed8a05
-- [~] Task: Implement all sections within `design3/` using bold serif typography and high-fashion compositions.
-- [ ] Task: Add isolated dynamic scrolling effects specific to the Design 3 "fun" element.
-- [ ] Task: Conductor - User Manual Verification 'Design 3 - Modern Editorial' (Protocol in workflow.md)
+- [x] Task: Implement all sections within `design3/` using bold serif typography and high-fashion compositions. 1cbd88a
+- [~] Task: Add isolated dynamic scrolling effects specific to the Design 3 "fun" element.
+- [~] Task: Conductor - User Manual Verification 'Design 3 - Modern Editorial' (Protocol in workflow.md)
 
 ## Phase 5: Design 4 - Soft Glow (Original Palette)
 - [ ] Task: Write failing tests for Design 4's glowing UI components and mesh gradients.
