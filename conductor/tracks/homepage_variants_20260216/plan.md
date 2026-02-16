@@ -7,10 +7,10 @@
 
 ## Phase 2: Design 1 - Light & Airy (Original Palette)
 - [x] Task: Write failing tests for Design 1's isolated components. 302810e
-- [~] Task: Implement full self-contained Hero, Intro, and Services for Design 1.
-- [ ] Task: Implement full self-contained Stories, Testimonials, and Newsletter for Design 1.
-- [ ] Task: Refine "Luxury but Fun" micro-interactions specific to Design 1.
-- [ ] Task: Conductor - User Manual Verification 'Design 1 - Light & Airy' (Protocol in workflow.md)
+- [x] Task: Implement full self-contained Hero, Intro, and Services for Design 1. 22324a4
+- [x] Task: Implement full self-contained Stories, Testimonials, and Newsletter for Design 1. 22324a4
+- [~] Task: Refine "Luxury but Fun" micro-interactions specific to Design 1.
+- [~] Task: Conductor - User Manual Verification 'Design 1 - Light & Airy' (Protocol in workflow.md)
 
 ## Phase 3: Design 2 - Earth Tone (Unique Palette)
 - [ ] Task: Write failing tests for Design 2's unique palette and isolated structure.
