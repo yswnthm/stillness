@@ -25,8 +25,8 @@
 - [x] Task: Conductor - User Manual Verification 'Design 3 - Modern Editorial' (Protocol in workflow.md) 2f5e508
 
 ## Phase 5: Design 4 - Soft Glow (Original Palette)
-- [ ] Task: Write failing tests for Design 4's glowing UI components and mesh gradients.
-- [ ] Task: Implement all sections within `design4/` with "Tech-Luxe" transitions and approachable shapes.
+- [x] Task: Write failing tests for Design 4's glowing UI components and mesh gradients. cfcc8c8
+- [~] Task: Implement all sections within `design4/` with "Tech-Luxe" transitions and approachable shapes.
 - [ ] Task: Finalize isolated animations for the "Soft Glow" aesthetic.
 - [ ] Task: Conductor - User Manual Verification 'Design 4 - Soft Glow' (Protocol in workflow.md)
 
