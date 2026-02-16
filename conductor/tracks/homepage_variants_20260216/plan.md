@@ -14,9 +14,9 @@
 
 ## Phase 3: Design 2 - Earth Tone (Unique Palette)
 - [x] Task: Write failing tests for Design 2's unique palette and isolated structure. 2947bc8
-- [~] Task: Implement all sections (Hero to Newsletter) within `design2/` using terracotta/sage palette.
-- [ ] Task: Apply "Organic Luxury" textures and playful layout adjustments unique to Design 2.
-- [ ] Task: Conductor - User Manual Verification 'Design 2 - Earth Tone' (Protocol in workflow.md)
+- [x] Task: Implement all sections (Hero to Newsletter) within `design2/` using terracotta/sage palette. a3c0ec6
+- [~] Task: Apply "Organic Luxury" textures and playful layout adjustments unique to Design 2.
+- [~] Task: Conductor - User Manual Verification 'Design 2 - Earth Tone' (Protocol in workflow.md)
 
 ## Phase 4: Design 3 - Modern Editorial (Original Palette)
 - [ ] Task: Write failing tests for Design 3's asymmetric editorial layout.
