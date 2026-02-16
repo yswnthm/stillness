@@ -32,15 +32,19 @@ export const Hero: React.FC = () => {
           <span className="text-xs uppercase tracking-[0.4em] text-seafoam font-sans mb-6 block">
             Welcome to Silence
           </span>
-          <h1 className="text-6xl md:text-8xl font-serif text-stone mb-8 leading-none font-light italic">
+          <motion.h1 
+            whileHover={{ scale: 1.02, rotate: -0.5 }}
+            className="text-6xl md:text-8xl font-serif text-stone mb-8 leading-none font-light italic cursor-default select-none"
+          >
             Stillness
-          </h1>
+          </motion.h1>
           <p className="text-stone/60 max-w-md mx-auto font-sans font-light tracking-wide text-lg leading-relaxed mb-12">
             A minimalist sanctuary designed for the modern mind to exhale and expand.
           </p>
           
           <motion.button
-            whileHover={{ y: -2 }}
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.98 }}
             className="px-12 py-4 bg-transparent border border-stone/20 text-stone text-xs uppercase tracking-[0.3em] hover:bg-stone hover:text-cream transition-colors duration-500 rounded-sm"
           >
             Explore the Void

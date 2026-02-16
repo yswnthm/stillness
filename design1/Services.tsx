@@ -29,6 +29,7 @@ export const Services: React.FC = () => {
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -5 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group"
