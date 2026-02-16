@@ -24,11 +24,11 @@
 - [x] Task: Add isolated dynamic scrolling effects specific to the Design 3 "fun" element. f37868c
 - [x] Task: Conductor - User Manual Verification 'Design 3 - Modern Editorial' (Protocol in workflow.md) 2f5e508
 
-## Phase 5: Design 4 - Soft Glow (Original Palette)
+## Phase 5: Design 4 - Soft Glow (Original Palette) [checkpoint: da1fbe7]
 - [x] Task: Write failing tests for Design 4's glowing UI components and mesh gradients. cfcc8c8
 - [x] Task: Implement all sections within `design4/` with "Tech-Luxe" transitions and approachable shapes. 6f7db31
 - [x] Task: Finalize isolated animations for the "Soft Glow" aesthetic. 6d83557
-- [~] Task: Conductor - User Manual Verification 'Design 4 - Soft Glow' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Design 4 - Soft Glow' (Protocol in workflow.md) da1fbe7
 
 ## Phase 6: Integration & Accessibility
 - [ ] Task: Configure the main app entry to point to or allow selection of these 4 independent variants.
