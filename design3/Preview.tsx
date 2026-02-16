@@ -1,0 +1,22 @@
+import React from 'react';
+import { Hero } from './Hero';
+import { Intro } from './Intro';
+import { Services } from './Services';
+import { Stories } from './Stories';
+import { Testimonials } from './Testimonials';
+import { Newsletter } from './Newsletter';
+
+export const Design3Preview: React.FC = () => {
+  return (
+    <div className="bg-stone min-h-screen">
+      <Hero />
+      <Intro />
+      <Services />
+      <Stories />
+      <Testimonials />
+      <Newsletter />
+    </div>
+  );
+};
+
+export default Design3Preview;

@@ -8,6 +8,7 @@ import { CorporatePage } from './pages/CorporatePage';
 import { ReservePage } from './pages/ReservePage';
 import Design1Preview from './design1/Preview';
 import Design2Preview from './design2/Preview';
+import Design3Preview from './design3/Preview';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/reserve" element={<ReservePage />} />
           <Route path="/design1" element={<Design1Preview />} />
           <Route path="/design2" element={<Design2Preview />} />
+          <Route path="/design3" element={<Design3Preview />} />
         </Routes>
       </main>
       <Footer />
