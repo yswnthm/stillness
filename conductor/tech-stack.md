@@ -3,7 +3,8 @@
 ## Source Environment (React)
 - **Framework:** React 19 (TypeScript)
 - **Build Tool:** Vite
-- **Styling & Animation:** Framer Motion, Lucide React
+- **Styling & Animation:** Framer Motion, Lucide React, Custom SVG Noise Textures
+- **Color Palettes:** Original "Stillness" palette + unique "Earth Tone" palette (Terracotta, Sage, Clay)
 - **Purpose:** Serves as the primary design and functional reference for the migration.
 
 ## Target Environment (WordPress)
