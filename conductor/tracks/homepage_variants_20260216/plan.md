@@ -26,9 +26,9 @@
 
 ## Phase 5: Design 4 - Soft Glow (Original Palette)
 - [x] Task: Write failing tests for Design 4's glowing UI components and mesh gradients. cfcc8c8
-- [~] Task: Implement all sections within `design4/` with "Tech-Luxe" transitions and approachable shapes.
-- [ ] Task: Finalize isolated animations for the "Soft Glow" aesthetic.
-- [ ] Task: Conductor - User Manual Verification 'Design 4 - Soft Glow' (Protocol in workflow.md)
+- [x] Task: Implement all sections within `design4/` with "Tech-Luxe" transitions and approachable shapes. 6f7db31
+- [~] Task: Finalize isolated animations for the "Soft Glow" aesthetic.
+- [~] Task: Conductor - User Manual Verification 'Design 4 - Soft Glow' (Protocol in workflow.md)
 
 ## Phase 6: Integration & Accessibility
 - [ ] Task: Configure the main app entry to point to or allow selection of these 4 independent variants.
