@@ -18,4 +18,11 @@ describe('Project Scaffolding', () => {
       expect(exists).toBe(true);
     });
   });
+
+  it('should have an assets directory in each design directory', () => {
+    designs.forEach(design => {
+      const exists = fs.existsSync(path.resolve(process.cwd(), design, 'assets'));
+      expect(exists).toBe(true);
+    });
+  });
 });
