@@ -1,30 +1,41 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const Hero: React.FC = () => {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -150]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+
   return (
-    <section className="design3-hero relative h-screen w-full bg-stone flex items-center justify-center overflow-hidden" role="banner">
+    <section ref={containerRef} className="design3-hero relative h-screen w-full bg-stone flex items-center justify-center overflow-hidden" role="banner">
       {/* Editorial Layout: Large Text behind image */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <motion.div style={{ y: y1 }} className="absolute inset-0 flex items-center justify-center">
         <h1 className="text-[20vw] font-serif text-cream/5 uppercase leading-none tracking-tighter select-none">
           Stillness
         </h1>
-      </div>
+      </motion.div>
 
       <div className="relative z-10 w-full max-w-7xl px-6 grid grid-cols-1 md:grid-cols-12 gap-0 items-center">
         <motion.div 
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
+          style={{ y: y2 }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
           className="md:col-span-5 md:col-start-2 z-20"
         >
-          <div className="bg-sand p-1 aspect-[3/4] overflow-hidden shadow-2xl">
+          <motion.div style={{ scale }} className="bg-sand p-1 aspect-[3/4] overflow-hidden shadow-2xl">
             <img 
               src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1999&auto=format&fit=crop" 
               alt="Model in peaceful pose" 
               className="w-full h-full object-cover grayscale contrast-125"
             />
-          </div>
+          </motion.div>
         </motion.div>
 
         <motion.div 
