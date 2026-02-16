@@ -31,6 +31,6 @@
 - [x] Task: Conductor - User Manual Verification 'Design 4 - Soft Glow' (Protocol in workflow.md) da1fbe7
 
 ## Phase 6: Integration & Accessibility
-- [ ] Task: Configure the main app entry to point to or allow selection of these 4 independent variants.
-- [ ] Task: Final cross-variant audit for mobile responsiveness and "Luxury but Fun" feel.
-- [ ] Task: Conductor - User Manual Verification 'Integration & Accessibility' (Protocol in workflow.md)
+- [x] Task: Configure the main app entry to point to or allow selection of these 4 independent variants. 34f3893
+- [~] Task: Final cross-variant audit for mobile responsiveness and "Luxury but Fun" feel.
+- [~] Task: Conductor - User Manual Verification 'Integration & Accessibility' (Protocol in workflow.md)
