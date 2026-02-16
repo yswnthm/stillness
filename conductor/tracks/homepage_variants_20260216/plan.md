@@ -12,11 +12,11 @@
 - [x] Task: Refine "Luxury but Fun" micro-interactions specific to Design 1. 806cc7a
 - [x] Task: Conductor - User Manual Verification 'Design 1 - Light & Airy' (Protocol in workflow.md) 893b80e
 
-## Phase 3: Design 2 - Earth Tone (Unique Palette)
+## Phase 3: Design 2 - Earth Tone (Unique Palette) [checkpoint: 662bd5b]
 - [x] Task: Write failing tests for Design 2's unique palette and isolated structure. 2947bc8
 - [x] Task: Implement all sections (Hero to Newsletter) within `design2/` using terracotta/sage palette. a3c0ec6
 - [x] Task: Apply "Organic Luxury" textures and playful layout adjustments unique to Design 2. 8b4d48f
-- [~] Task: Conductor - User Manual Verification 'Design 2 - Earth Tone' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Design 2 - Earth Tone' (Protocol in workflow.md) 662bd5b
 
 ## Phase 4: Design 3 - Modern Editorial (Original Palette)
 - [ ] Task: Write failing tests for Design 3's asymmetric editorial layout.
