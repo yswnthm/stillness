@@ -1,9 +1,9 @@
 # Implementation Plan: Homepage Design Variants (`homepage_variants_20260216`)
 
-## Phase 1: Scaffolding & Isolated Asset Setup
+## Phase 1: Scaffolding & Isolated Asset Setup [checkpoint: ce4b1f5]
 - [x] Task: Scaffold directory structure for `design1/`, `design2/`, `design3/`, and `design4/`. 9d77176
 - [x] Task: Set up isolated asset directories within each design folder (e.g., `design1/assets/`, etc.). 25581af
-- [~] Task: Conductor - User Manual Verification 'Scaffolding & Isolated Asset Setup' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Scaffolding & Isolated Asset Setup' (Protocol in workflow.md) ce4b1f5
 
 ## Phase 2: Design 1 - Light & Airy (Original Palette)
 - [ ] Task: Write failing tests for Design 1's isolated components.
