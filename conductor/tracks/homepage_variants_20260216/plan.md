@@ -13,8 +13,8 @@
 - [x] Task: Conductor - User Manual Verification 'Design 1 - Light & Airy' (Protocol in workflow.md) 893b80e
 
 ## Phase 3: Design 2 - Earth Tone (Unique Palette)
-- [ ] Task: Write failing tests for Design 2's unique palette and isolated structure.
-- [ ] Task: Implement all sections (Hero to Newsletter) within `design2/` using terracotta/sage palette.
+- [x] Task: Write failing tests for Design 2's unique palette and isolated structure. 2947bc8
+- [~] Task: Implement all sections (Hero to Newsletter) within `design2/` using terracotta/sage palette.
 - [ ] Task: Apply "Organic Luxury" textures and playful layout adjustments unique to Design 2.
 - [ ] Task: Conductor - User Manual Verification 'Design 2 - Earth Tone' (Protocol in workflow.md)
 
