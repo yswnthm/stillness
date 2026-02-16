@@ -6,6 +6,7 @@ import { LandingPage } from './pages/LandingPage';
 import { AboutPage } from './pages/AboutPage';
 import { CorporatePage } from './pages/CorporatePage';
 import { ReservePage } from './pages/ReservePage';
+import Design1Preview from './design1/Preview';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/corporate" element={<CorporatePage />} />
           <Route path="/reserve" element={<ReservePage />} />
+          <Route path="/design1" element={<Design1Preview />} />
         </Routes>
       </main>
       <Footer />
