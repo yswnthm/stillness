@@ -30,7 +30,7 @@
 - [x] Task: Finalize isolated animations for the "Soft Glow" aesthetic. 6d83557
 - [x] Task: Conductor - User Manual Verification 'Design 4 - Soft Glow' (Protocol in workflow.md) da1fbe7
 
-## Phase 6: Integration & Accessibility
+## Phase 6: Integration & Accessibility [checkpoint: 830f3ea]
 - [x] Task: Configure the main app entry to point to or allow selection of these 4 independent variants. 34f3893
 - [x] Task: Final cross-variant audit for mobile responsiveness and "Luxury but Fun" feel. f97d694
-- [~] Task: Conductor - User Manual Verification 'Integration & Accessibility' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Integration & Accessibility' (Protocol in workflow.md) 830f3ea
