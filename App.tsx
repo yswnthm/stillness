@@ -9,6 +9,7 @@ import { ReservePage } from './pages/ReservePage';
 import Design1Preview from './design1/Preview';
 import Design2Preview from './design2/Preview';
 import Design3Preview from './design3/Preview';
+import Design4Preview from './design4/Preview';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/design1" element={<Design1Preview />} />
           <Route path="/design2" element={<Design2Preview />} />
           <Route path="/design3" element={<Design3Preview />} />
+          <Route path="/design4" element={<Design4Preview />} />
         </Routes>
       </main>
       <Footer />
