@@ -46,7 +46,7 @@ export const Heal: React.FC = () => {
             transition={{ delay: index * 0.1, duration: 0.8 }}
             className="group p-8 rounded-3xl bg-cream border border-stone/5 hover:border-seafoam/30 hover:shadow-xl hover:shadow-seafoam/5 transition-all duration-500 cursor-pointer"
           >
-            <div className="w-12 h-12 rounded-full bg-stone/5 text-stone group-hover:bg-seafoam group-hover:text-white flex items-center justify-center mb-6 transition-colors duration-500">
+            <div className="w-12 h-12 rounded-full border border-seafoam text-seafoam group-hover:bg-seafoam group-hover:text-white flex items-center justify-center mb-6 transition-colors duration-500">
               {habit.icon}
             </div>
             <h3 className="text-xl font-serif text-stone mb-3">{habit.title}</h3>
