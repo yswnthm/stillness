@@ -22,8 +22,8 @@ export const Hero: React.FC = () => {
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="max-w-4xl"
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-cream mb-6 tracking-tight leading-tight">
-            Find Your <br/> <span className="italic">Stillness</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-cream mb-6 tracking-tight leading-tight">
+            Find Your <span className="italic">Stillness</span>
           </h1>
           <p className="text-lg md:text-xl text-breeze/90 max-w-lg mx-auto font-sans font-light tracking-wide mb-10 leading-relaxed">
             Your sanctuary for deep relaxation and inner harmony.
