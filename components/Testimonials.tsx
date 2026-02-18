@@ -16,9 +16,9 @@ export const Testimonials: React.FC = () => {
   };
 
   return (
-    <Section id="testimonials" className="bg-sand/10">
+    <Section id="testimonials" className="bg-seafoam">
       <div className="max-w-4xl mx-auto text-center relative">
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-12 text-stone/10">
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-12 text-white/10">
           <Quote size={80} fill="currentColor" />
         </div>
 
@@ -32,14 +32,14 @@ export const Testimonials: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="px-4"
             >
-              <p className="text-2xl md:text-3xl lg:text-4xl font-serif text-stone italic leading-relaxed mb-8">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-serif text-white italic leading-relaxed mb-8">
                 "{TESTIMONIALS[activeIndex].quote}"
               </p>
               <div>
-                <p className="font-sans font-bold text-sm tracking-widest text-stone uppercase">
+                <p className="font-sans font-bold text-sm tracking-widest text-white uppercase">
                   {TESTIMONIALS[activeIndex].author}
                 </p>
-                <p className="font-sans text-xs text-stone/50 uppercase tracking-widest mt-1">
+                <p className="font-sans text-xs text-white/60 uppercase tracking-widest mt-1">
                   {TESTIMONIALS[activeIndex].location}
                 </p>
               </div>
@@ -50,7 +50,7 @@ export const Testimonials: React.FC = () => {
         <div className="flex justify-center items-center gap-8 mt-12">
           <button
             onClick={prevTestimonial}
-            className="p-3 rounded-full border border-stone/20 text-stone/50 hover:text-stone hover:border-stone transition-colors"
+            className="p-3 rounded-full border border-white/20 text-white/50 hover:text-white hover:border-white transition-colors"
           >
             <ArrowLeft size={20} />
           </button>
@@ -60,14 +60,14 @@ export const Testimonials: React.FC = () => {
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === activeIndex ? 'bg-stone w-8' : 'bg-stone/20 hover:bg-stone/40'}`}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === activeIndex ? 'bg-white w-8' : 'bg-white/20 hover:bg-white/40'}`}
               />
             ))}
           </div>
 
           <button
             onClick={nextTestimonial}
-            className="p-3 rounded-full border border-stone/20 text-stone/50 hover:text-stone hover:border-stone transition-colors"
+            className="p-3 rounded-full border border-white/20 text-white/50 hover:text-white hover:border-white transition-colors"
           >
             <ArrowRight size={20} />
           </button>
