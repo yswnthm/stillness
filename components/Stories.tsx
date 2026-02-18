@@ -7,13 +7,13 @@ export const Stories: React.FC = () => {
   return (
     <Section id="stories" className="bg-white">
       <div className="mb-16 text-center">
-        <span className="text-seafoam text-xs font-bold uppercase tracking-widest mb-3 block">The Journal</span>
+        <span className="text-seafoam text-sm font-bold uppercase tracking-[0.2em] mb-3 block">The Journal</span>
         <h2 className="text-4xl md:text-5xl font-serif text-stone">Reflections on Stillness</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {ARTICLES.map((article, index) => (
-          <motion.article 
+          <motion.article
             key={article.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -22,9 +22,9 @@ export const Stories: React.FC = () => {
             className="flex flex-col h-full group cursor-pointer"
           >
             <div className="aspect-[3/2] overflow-hidden rounded-xl mb-6">
-              <img 
-                src={article.image} 
-                alt={article.title} 
+              <img
+                src={article.image}
+                alt={article.title}
                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
             </div>

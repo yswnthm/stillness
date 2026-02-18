@@ -18,7 +18,7 @@ export const CorporateWellness: React.FC = () => {
           transition={{ duration: 1 }}
         >
           <div>
-            <span className="text-seafoam text-xs font-bold tracking-widest uppercase mb-2 block">For Teams</span>
+            <span className="text-seafoam text-sm font-bold tracking-[0.2em] uppercase mb-2 block">For Teams</span>
             <h2 className="text-3xl md:text-5xl font-serif text-stone mb-6 leading-tight">
               Bring Stillness to <br />the Workplace
             </h2>
