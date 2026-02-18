@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
     <footer className="bg-stone text-cream pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-24 mb-16">
-          
+
           {/* Brand */}
           <div className="space-y-6">
             <Link to="/" className="text-3xl font-serif">Stillness.</Link>
@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-wave/80 text-sm">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>1240 Sanctuary Blvd, Suite 100<br/>Austin, TX 78704</span>
+                <span>1240 Sanctuary Blvd, Suite 100<br />Austin, TX 78704</span>
               </li>
               <li className="flex items-center gap-3 text-wave/80 text-sm">
                 <Mail size={16} />

@@ -16,10 +16,9 @@ export const Header: React.FC = () => {
   }, []);
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        isScrolled ? 'bg-cream/90 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-8'
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${isScrolled ? 'bg-cream/90 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-8'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
@@ -30,7 +29,7 @@ export const Header: React.FC = () => {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8 lg:space-x-12">
           {NAV_ITEMS.map((item) => (
-            <Link 
+            <Link
               key={item.label}
               to={item.href}
               className="text-stone hover:text-seafoam transition-colors duration-300 text-sm tracking-widest uppercase font-sans"
@@ -44,7 +43,7 @@ export const Header: React.FC = () => {
         </nav>
 
         {/* Mobile Toggle */}
-        <button 
+        <button
           className="md:hidden z-50 text-stone focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -53,8 +52,8 @@ export const Header: React.FC = () => {
 
         {/* Mobile Nav Overlay */}
         <div className={`fixed inset-0 bg-cream z-40 flex flex-col items-center justify-center space-y-8 transition-opacity duration-500 ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-           {NAV_ITEMS.map((item) => (
-            <Link 
+          {NAV_ITEMS.map((item) => (
+            <Link
               key={item.label}
               to={item.href}
               onClick={() => setMobileMenuOpen(false)}
@@ -63,13 +62,13 @@ export const Header: React.FC = () => {
               {item.label}
             </Link>
           ))}
-           <Link 
+          <Link
             to="/reserve"
             onClick={() => setMobileMenuOpen(false)}
             className="px-8 py-3 border border-stone rounded-full text-stone text-sm uppercase tracking-widest"
-           >
-             Book Session
-           </Link>
+          >
+            Book Session
+          </Link>
         </div>
       </div>
     </header>

@@ -40,7 +40,7 @@ export const Intro: React.FC = () => {
           className="flex flex-col space-y-8"
         >
           <span className="text-seafoam text-sm uppercase tracking-[0.2em] font-bold">Our Philosophy</span>
-          <h2 className="text-4xl md:text-5xl font-serif text-stone leading-tight">
+          <h2 className="text-4xl md:text-5xl font-serif text-midnight leading-tight">
             Rest is a biological <br />necessity, not a luxury.
           </h2>
           <div className="space-y-6 text-stone/80 text-lg font-light leading-relaxed">
@@ -57,9 +57,9 @@ export const Intro: React.FC = () => {
           </div>
 
           <div className="pt-4">
-            <Link to="/about" className="group flex items-center gap-2 text-stone hover:text-seafoam transition-colors duration-300 uppercase text-xs tracking-widest font-bold">
+            <Link to="/about" className="group flex items-center gap-2 text-midnight hover:text-seafoam transition-colors duration-300 uppercase text-xs tracking-widest font-bold">
               Read the full story
-              <span className="w-8 h-[1px] bg-stone group-hover:bg-seafoam transition-colors duration-300"></span>
+              <span className="w-8 h-[1px] bg-midnight group-hover:bg-seafoam transition-colors duration-300"></span>
             </Link>
           </div>
         </motion.div>
