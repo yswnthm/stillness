@@ -21,7 +21,7 @@ export const Testimonials: React.FC = () => {
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-12 text-stone/10">
           <Quote size={80} fill="currentColor" />
         </div>
-        
+
         <div className="h-[300px] md:h-[250px] flex items-center justify-center relative">
           <AnimatePresence mode="wait">
             <motion.div
@@ -48,13 +48,13 @@ export const Testimonials: React.FC = () => {
         </div>
 
         <div className="flex justify-center items-center gap-8 mt-12">
-          <button 
+          <button
             onClick={prevTestimonial}
             className="p-3 rounded-full border border-stone/20 text-stone/50 hover:text-stone hover:border-stone transition-colors"
           >
             <ArrowLeft size={20} />
           </button>
-          
+
           <div className="flex gap-2">
             {TESTIMONIALS.map((_, idx) => (
               <button
@@ -65,7 +65,7 @@ export const Testimonials: React.FC = () => {
             ))}
           </div>
 
-          <button 
+          <button
             onClick={nextTestimonial}
             className="p-3 rounded-full border border-stone/20 text-stone/50 hover:text-stone hover:border-stone transition-colors"
           >

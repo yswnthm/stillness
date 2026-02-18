@@ -7,9 +7,9 @@ export const Hero: React.FC = () => {
     <section className="relative h-screen w-full overflow-hidden bg-stone">
       {/* Background visual - Using a high quality water texture placeholder */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=2070&auto=format&fit=crop" 
-          alt="Calm deep water ripples" 
+        <img
+          src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=2070&auto=format&fit=crop"
+          alt="Calm deep water ripples"
           className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-stone/40 via-transparent to-stone/80" />
@@ -29,13 +29,13 @@ export const Hero: React.FC = () => {
             Your sanctuary for deep relaxation and inner harmony.
             Come back to yourself.
           </p>
-          
+
           <motion.div
-             whileHover={{ scale: 1.05 }}
-             transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5 }}
           >
-            <a 
-              href="#intro" 
+            <a
+              href="#intro"
               className="inline-block px-10 py-4 bg-cream/10 backdrop-blur-sm border border-cream/30 rounded-full text-cream uppercase tracking-widest text-xs md:text-sm hover:bg-cream hover:text-stone transition-all duration-700"
             >
               Begin Your Journey
@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
