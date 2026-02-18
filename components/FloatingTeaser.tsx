@@ -57,11 +57,11 @@ export const FloatingTeaser: React.FC = () => {
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full bg-cream/10 border border-cream/30 backdrop-blur-sm text-cream placeholder:text-cream/50 px-4 py-3 rounded-lg focus:outline-none focus:border-cream transition-colors"
+                className="w-full bg-cream/[0.03] border border-cream/10 backdrop-blur-sm text-cream/60 placeholder:text-cream/20 px-4 py-3 rounded-lg focus:outline-none focus:border-cream/30 transition-colors"
               />
             </div>
             <div>
-              <select className="w-full bg-cream/10 border border-cream/30 backdrop-blur-sm text-cream/70 px-4 py-3 rounded-lg focus:outline-none focus:border-cream transition-colors appearance-none">
+              <select className="w-full bg-cream/[0.03] border border-cream/10 backdrop-blur-sm text-cream/40 px-4 py-3 rounded-lg focus:outline-none focus:border-cream/30 transition-colors appearance-none">
                 <option>Interested in...</option>
                 <option>Floating Membership</option>
                 <option>Private Events</option>
