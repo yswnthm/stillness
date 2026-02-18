@@ -23,9 +23,9 @@ export const ShopPreview: React.FC = () => {
         {PRODUCTS.map((product) => (
           <div key={product.id} className="group cursor-pointer">
             <div className="relative aspect-[3/4] overflow-hidden rounded-2xl mb-6 bg-sand/20">
-              <img 
-                src={product.image} 
-                alt={product.name} 
+              <img
+                src={product.image}
+                alt={product.name}
                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
               />
               <div className="absolute inset-0 bg-stone/0 group-hover:bg-stone/5 transition-colors duration-500" />
@@ -40,14 +40,14 @@ export const ShopPreview: React.FC = () => {
                 <h3 className="text-xl font-serif text-stone mb-1 group-hover:text-seafoam transition-colors">{product.name}</h3>
                 <p className="text-sm text-stone/50">{product.description}</p>
               </div>
-              <span className="text-stone font-medium">{product.price}</span>
+              <span className="text-seafoam font-medium group-hover:text-stone transition-colors duration-300">{product.price}</span>
             </div>
           </div>
         ))}
       </div>
 
       <div className="mt-12 text-center md:hidden">
-         <Button variant="outline">View Shop</Button>
+        <Button variant="outline">View Shop</Button>
       </div>
     </Section>
   );
