@@ -39,7 +39,7 @@ export const CorporateWellness: React.FC = () => {
 
           <div className="pt-4">
             <Link to="/corporate">
-              <Button variant="outline">Inquire for Teams</Button>
+              <Button variant="seafoam">Inquire for Teams</Button>
             </Link>
           </div>
         </motion.div>

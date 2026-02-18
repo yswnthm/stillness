@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline' | 'text' | 'seafoam' | 'midnight' | 'breeze' | 'wave';
+  variant?: 'primary' | 'secondary' | 'outline' | 'text' | 'seafoam' | 'midnight' | 'breeze' | 'wave' | 'seafoam-outline';
   children: React.ReactNode;
   fullWidth?: boolean;
 }
@@ -21,6 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
     outline: "border border-stone text-stone hover:bg-stone hover:text-cream hover:border-transparent transition-colors duration-500",
     text: "bg-transparent text-stone hover:text-seafoam px-0 underline-offset-4 hover:underline decoration-1",
     seafoam: "bg-seafoam text-white hover:bg-stone hover:scale-105 shadow-md hover:shadow-lg focus:ring-seafoam",
+    "seafoam-outline": "border border-seafoam text-seafoam hover:bg-stone hover:text-cream hover:border-transparent transition-colors duration-500",
     midnight: "bg-midnight text-cream hover:bg-stone hover:scale-105 shadow-md hover:shadow-lg focus:ring-midnight",
     breeze: "bg-breeze text-stone hover:bg-seafoam hover:text-white hover:scale-105 shadow-sm focus:ring-breeze",
     wave: "bg-wave text-white hover:bg-stone hover:scale-105 shadow-sm focus:ring-wave",
