@@ -57,18 +57,18 @@ export const FloatingTeaser: React.FC = () => {
               <input
                 type="email"
                 placeholder="Email Address"
-                className="w-full bg-stone/50 border border-stone/50 text-cream placeholder-stone/60 px-4 py-3 rounded-lg focus:outline-none focus:border-seafoam transition-colors"
+                className="w-full bg-cream/10 border border-cream/30 backdrop-blur-sm text-cream placeholder:text-cream/50 px-4 py-3 rounded-lg focus:outline-none focus:border-cream transition-colors"
               />
             </div>
             <div>
-              <select className="w-full bg-stone/50 border border-stone/50 text-cream/60 px-4 py-3 rounded-lg focus:outline-none focus:border-seafoam transition-colors appearance-none">
+              <select className="w-full bg-cream/10 border border-cream/30 backdrop-blur-sm text-cream/70 px-4 py-3 rounded-lg focus:outline-none focus:border-cream transition-colors appearance-none">
                 <option>Interested in...</option>
                 <option>Floating Membership</option>
                 <option>Private Events</option>
                 <option>General News</option>
               </select>
             </div>
-            <Button fullWidth className="mt-2 bg-seafoam text-white hover:bg-seafoam/80 border-none">
+            <Button fullWidth variant="glass" className="mt-2">
               Reserve My Spot
             </Button>
           </form>

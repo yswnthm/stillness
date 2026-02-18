@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline' | 'text' | 'seafoam' | 'midnight' | 'breeze' | 'wave' | 'seafoam-outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'text' | 'seafoam' | 'midnight' | 'breeze' | 'wave' | 'seafoam-outline' | 'glass';
   children: React.ReactNode;
   fullWidth?: boolean;
 }
@@ -25,6 +25,7 @@ export const Button: React.FC<ButtonProps> = ({
     midnight: "bg-midnight text-cream hover:bg-stone hover:scale-105 shadow-md hover:shadow-lg focus:ring-midnight",
     breeze: "bg-breeze text-stone hover:bg-seafoam hover:text-white hover:scale-105 shadow-sm focus:ring-breeze",
     wave: "bg-wave text-white hover:bg-stone hover:scale-105 shadow-sm focus:ring-wave",
+    glass: "bg-cream/10 backdrop-blur-sm border border-cream/30 text-cream hover:bg-cream hover:text-stone hover:scale-105 shadow-sm hover:shadow-lg focus:ring-cream",
   };
 
   const widthClass = fullWidth ? "w-full" : "";
