@@ -30,7 +30,7 @@ export const ShopPreview: React.FC = () => {
               />
               <div className="absolute inset-0 bg-stone/0 group-hover:bg-stone/5 transition-colors duration-500" />
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                <button className="bg-white text-stone px-4 py-2 rounded-full text-xs uppercase tracking-widest shadow-lg">
+                <button className="bg-seafoam text-white px-4 py-2 rounded-full text-xs uppercase tracking-widest shadow-lg">
                   Quick Add
                 </button>
               </div>

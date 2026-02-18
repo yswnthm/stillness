@@ -17,9 +17,9 @@ export const Newsletter: React.FC = () => {
             placeholder="Your email address"
             className="flex-grow px-6 py-3 bg-white border-none rounded-full text-stone placeholder-stone/40 focus:ring-2 focus:ring-seafoam/50 outline-none shadow-sm"
           />
-          <Button variant="midnight" className="whitespace-nowrap">
+          <button className="inline-block px-8 py-3 bg-seafoam/20 backdrop-blur-md border border-seafoam/40 rounded-full text-seafoam uppercase tracking-widest text-xs shadow-md hover:bg-midnight hover:text-cream hover:border-midnight hover:shadow-lg transition-all duration-700 whitespace-nowrap">
             Subscribe
-          </Button>
+          </button>
         </form>
         <p className="mt-4 text-[10px] text-stone/40 uppercase tracking-widest">
           We respect your inbox. Unsubscribe at any time.
