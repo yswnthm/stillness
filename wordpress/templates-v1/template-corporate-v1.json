@@ -1,0 +1,48 @@
+{
+    "content": [
+        {
+            "id": "corporate_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "rgba(217, 232, 235, 0.3)",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "corporate_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "corp_layout_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='corp-grid'><div class='corp-text-col'><span class='corp-label'>For Teams</span><h2>Bring Stillness to <br>the Workplace</h2><p class='corp-desc'>Burnout is the silent killer of creativity. Our corporate programs are designed to reset your team's collective nervous system, fostering clarity, empathy, and sustainable productivity.</p><div class='corp-stats'><div class='stat-item'><p class='stat-num'>40%</p><p class='stat-label'>Reduction in stress biomarkers after one float</p></div><div class='stat-item'><p class='stat-num'>50%</p><p class='stat-label'>Improvement in creative problem solving</p></div><div class='stat-item'><p class='stat-num'>2x</p><p class='stat-label'>Better sleep quality reported by teams</p></div></div><div class='corp-btn-wrap'><a href='/corporate' class='corp-btn'>Inquire for Teams</a></div></div><div class='corp-img-col'><div class='corp-img-wrap'><img src='https://images.unsplash.com/photo-1544367563-12123d896889?q=80&w=2070&auto=format&fit=crop' alt='Team retreat setting' /></div></div></div><style>.corp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; } @media (max-width: 768px) { .corp-grid { grid-template-columns: 1fr; gap: 48px; } } .corp-text-col { display: flex; flex-direction: column; gap: 24px; } .corp-label { font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: #688F9D; } .corp-text-col h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: #0E1B30; margin: 0; line-height: 1.2; } .corp-desc { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 18px; line-height: 1.6; color: rgba(14, 27, 48, 0.7); margin: 0; } .corp-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-top: 32px; border-top: 1px solid rgba(14, 27, 48, 0.1); } .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: #688F9D; margin: 0 0 8px; } .stat-label { font-family: 'Lato', sans-serif; font-size: 10px; text-transform: uppercase; color: rgba(14, 27, 48, 0.6); line-height: 1.4; margin: 0; letter-spacing: 0.5px; } .corp-btn { display: inline-block; padding: 16px 48px; background: #688F9D; color: #FFFFFF; font-family: 'Lato', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; border-radius: 99px; transition: all 0.3s ease; border: 1px solid #688F9D; } .corp-btn:hover { background: #0E1B30; border-color: #0E1B30; } .corp-img-wrap { width: 100%; aspect-ratio: 16/9; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); } .corp-img-wrap img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: filter 1s ease; } .corp-img-wrap:hover img { filter: grayscale(0%); }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Corporate Wellness V1",
+    "type": "section"
+}

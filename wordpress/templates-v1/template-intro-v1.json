@@ -1,0 +1,48 @@
+{
+    "content": [
+        {
+            "id": "intro_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "intro_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "intro_layout_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='intro-grid'><div class='intro-img-col'><div class='intro-img-wrap'><img src='https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=1000&auto=format&fit=crop' alt='Founder in contemplation' /><div class='intro-overlay'></div></div><div class='intro-quote hidden-mobile'><p>\"We built this space not to escape life, but to find the strength to return to it.\"</p></div></div><div class='intro-text-col'><span class='intro-label'>Our Philosophy</span><h2>Rest is a biological <br>necessity, not a luxury.</h2><div class='intro-body'><p>In a world that demands constant output, Stillness is an invitation to pause. Founded by Elena Corves after her own journey through burnout, our sanctuary is designed around the principles of sensory reduction and nervous system regulation.</p><p>Here, the water holds you so you don't have to hold yourself. We strip away the noise—gravity, light, sound, expectations—leaving only the spaciousness you need to exhale.</p></div><div class='intro-link-wrap'><a href='/about' class='intro-link'>Read the full story <span class='intro-line'></span></a></div></div></div><style>.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; } @media (max-width: 768px) { .intro-grid { grid-template-columns: 1fr; gap: 48px; } .hidden-mobile { display: none !important; } } .intro-img-col { position: relative; } .intro-img-wrap { position: relative; aspect-ratio: 4/5; overflow: hidden; border-top-left-radius: 10rem; border-top-right-radius: 10rem; border-bottom-right-radius: 16px; border-bottom-left-radius: 16px; } .intro-img-wrap img { width: 100%; height: 100%; object-fit: cover; } .intro-overlay { position: absolute; inset: 0; background: rgba(14, 27, 48, 0.1); mix-blend-mode: multiply; } .intro-quote { position: absolute; bottom: -24px; right: -24px; background: #FFFFFF; padding: 32px; border-top-left-radius: 24px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); max-width: 280px; } .intro-quote p { font-family: 'Cormorant Garamond', serif; font-style: italic; color: #0E1B30; font-size: 18px; margin: 0; line-height: 1.5; } .intro-text-col { display: flex; flex-direction: column; gap: 32px; } .intro-label { font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: #688F9D; } .intro-text-col h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; line-height: 1.2; color: #1D3152; margin: 0; } .intro-body p { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 18px; line-height: 1.8; color: rgba(14, 27, 48, 0.8); margin: 0 0 24px; } .intro-body p:last-child { margin-bottom: 0; } .intro-link { display: inline-flex; align-items: center; gap: 12px; color: #1D3152; text-decoration: none; text-transform: uppercase; font-size: 12px; font-weight: 700; letter-spacing: 2px; font-family: 'Lato', sans-serif; transition: color 0.3s ease; } .intro-link:hover { color: #688F9D; } .intro-line { display: inline-block; width: 32px; height: 1px; background: currentColor; transition: width 0.3s ease; } .intro-link:hover .intro-line { width: 48px; }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Intro Section V1",
+    "type": "section"
+}

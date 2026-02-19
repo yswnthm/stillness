@@ -1,0 +1,50 @@
+{
+    "content": [
+        {
+            "id": "teaser_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#1D3152",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "overflow": "hidden",
+                "position": "relative"
+            },
+            "elements": [
+                {
+                    "id": "teaser_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "teaser_layout_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='teaser-blob blob-1'></div><div class='teaser-blob blob-2'></div><div class='teaser-grid'><div class='teaser-text-col'><div class='teaser-badge'>Coming 2026</div><h2>The Depths <br>Expansion</h2><p class='teaser-desc'>We are breaking ground on three new immersion chambers designed for extended theta-state therapy. Be the first to experience the new stillness.</p><div class='teaser-stats'><div class='t-stat'><span class='t-num'>04</span><span class='t-lbl'>Chambers</span></div><div class='t-sep'>:</div><div class='t-stat'><span class='t-num'>12</span><span class='t-lbl'>Rituals</span></div><div class='t-sep'>:</div><div class='t-stat'><span class='t-num'>&infin;</span><span class='t-lbl'>Stillness</span></div></div></div><div class='teaser-form-col'><div class='teaser-form-card'><h3>Join the Waitlist</h3><p>Secure early access to the expansion.</p><form><div class='f-group'><input type='email' placeholder='Email Address' /></div><div class='f-group'><select><option>Interested in...</option><option>Floating Membership</option><option>Private Events</option><option>General News</option></select></div><button class='teaser-submit'>Reserve My Spot</button></form></div></div></div><style>.teaser-blob { position: absolute; border-radius: 9999px; pointer-events: none; } .blob-1 { top: 0; left: 25%; width: 384px; height: 384px; background: #1D3152; filter: blur(128px); opacity: 0.4; } .blob-2 { bottom: 0; right: 25%; width: 500px; height: 500px; background: #688F9D; filter: blur(150px); opacity: 0.2; } .teaser-grid { position: relative; z-index: 10; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; } @media (max-width: 768px) { .teaser-grid { grid-template-columns: 1fr; gap: 48px; } } .teaser-text-col { display: flex; flex-direction: column; gap: 32px; } .teaser-badge { display: inline-block; padding: 4px 12px; border: 1px solid rgba(104, 143, 157, 0.3); border-radius: 99px; color: #688F9D; font-family: 'Lato', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; width: fit-content; } .teaser-text-col h2 { font-family: 'Cormorant Garamond', serif; font-size: 60px; line-height: 1; color: #F7F0EC; margin: 0; } .teaser-desc { font-family: 'Lato', sans-serif; font-size: 18px; line-height: 1.6; color: #A4B2BA; margin: 0; max-width: 450px; } .teaser-stats { display: flex; gap: 16px; align-items: flex-end; } .t-stat { text-align: center; } .t-num { display: block; font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #F7F0EC; } .t-lbl { font-family: 'Lato', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #A4B2BA; } .t-sep { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: rgba(164,178,186,0.3); padding-bottom: 8px; } .teaser-form-card { background: rgba(29, 49, 82, 0.3); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 48px; } .teaser-form-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #F7F0EC; margin: 0 0 8px; } .teaser-form-card > p { font-family: 'Lato', sans-serif; font-size: 14px; color: #A4B2BA; margin: 0 0 24px; } .f-group { margin-bottom: 16px; } .f-group input, .f-group select { width: 100%; box-sizing: border-box; background: rgba(247,240,236,0.03); border: 1px solid rgba(247,240,236,0.1); border-radius: 8px; padding: 12px 16px; font-family: 'Lato', sans-serif; font-size: 14px; color: rgba(247,240,236,0.6); outline: none; transition: border-color 0.3s ease; } .f-group input:focus, .f-group select:focus { border-color: rgba(247,240,236,0.3); } .f-group select { appearance: none; } .teaser-submit { display: block; width: 100%; padding: 12px; background: rgba(247,240,236,0.1); backdrop-filter: blur(4px); border: 1px solid rgba(247,240,236,0.3); border-radius: 99px; color: #F7F0EC; font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.3s ease; } .teaser-submit:hover { background: #F7F0EC; color: #0E1B30; }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Floating Teaser V1",
+    "type": "section"
+}

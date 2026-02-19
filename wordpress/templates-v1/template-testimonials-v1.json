@@ -1,0 +1,96 @@
+{
+    "content": [
+        {
+            "id": "testimonials_force_full",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "gap": "no",
+                "background_background": "classic",
+                "background_color": "#688F9D",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "0",
+                    "bottom": "120",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "flex_direction": "column",
+                "flex_align_items": "center"
+            },
+            "elements": [
+                {
+                    "id": "test_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 800
+                        },
+                        "flex_direction": "column",
+                        "flex_align_items": "center"
+                    },
+                    "elements": [
+                        {
+                            "id": "q_i",
+                            "elType": "widget",
+                            "settings": {
+                                "icon": {
+                                    "value": "fas fa-quote-left",
+                                    "library": "fa-solid"
+                                },
+                                "primary_color": "rgba(255, 255, 255, 0.1)",
+                                "size": {
+                                    "unit": "px",
+                                    "size": 80
+                                },
+                                "align": "center",
+                                "margin": {
+                                    "unit": "px",
+                                    "bottom": "0",
+                                    "isLinked": false
+                                },
+                                "css_classes": "quote-icon"
+                            },
+                            "widgetType": "icon"
+                        },
+                        {
+                            "id": "t_c",
+                            "elType": "widget",
+                            "settings": {
+                                "slides": [
+                                    {
+                                        "content": "<p style=\"font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 32px; color: #FFFFFF; line-height: 1.6;\">\"I didn't realize how loud my mind was until I stepped into the silence. It was a returning to myself I didn't know I needed.\"</p><div style='margin-top: 32px;'><p style='font-family: \"Lato\", sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; font-size: 14px;'>Elena R.</p><p style='font-family: \"Lato\", sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.6); margin-top: 4px;'>Architect</p></div>",
+                                        "_id": "s1"
+                                    },
+                                    {
+                                        "content": "<p style=\"font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 32px; color: #FFFFFF; line-height: 1.6;\">\"The weightlessness is profound. For an hour, I wasn't a CEO, a mother, or a planner. I was just... being.\"</p><div style='margin-top: 32px;'><p style='font-family: \"Lato\", sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; font-size: 14px;'>Sarah J.</p><p style='font-family: \"Lato\", sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.6); margin-top: 4px;'>Founder</p></div>",
+                                        "_id": "s2"
+                                    },
+                                    {
+                                        "content": "<p style=\"font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 32px; color: #FFFFFF; line-height: 1.6;\">\"Stillness taught me that rest isn't a luxury. It's the foundation of everything I do.\"</p><div style='margin-top: 32px;'><p style='font-family: \"Lato\", sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; font-size: 14px;'>Marcus T.</p><p style='font-family: \"Lato\", sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255, 255, 255, 0.6); margin-top: 4px;'>Creative Director</p></div>",
+                                        "_id": "s3"
+                                    }
+                                ],
+                                "skin": "default",
+                                "show_arrows": "yes",
+                                "show_pagination": "yes",
+                                "autoplay": "yes",
+                                "arrows_color": "rgba(255, 255, 255, 0.5)",
+                                "pagination_color": "rgba(255, 255, 255, 0.5)",
+                                "pagination_active_color": "#FFFFFF"
+                            },
+                            "widgetType": "testimonial-carousel"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Testimonials V1",
+    "type": "section"
+}

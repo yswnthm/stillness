@@ -1,0 +1,128 @@
+{
+    "content": [
+        {
+            "id": "shop_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "shop_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        },
+                        "flex_direction": "column"
+                    },
+                    "elements": [
+                        {
+                            "id": "shop_header",
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_justify_content": "space-between",
+                                "flex_align_items": "flex-end",
+                                "margin": {
+                                    "unit": "px",
+                                    "bottom": "64",
+                                    "isLinked": false
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "id": "shop_title_col",
+                                    "elType": "container",
+                                    "settings": {
+                                        "width": {
+                                            "unit": "%",
+                                            "size": "65"
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "shop_h2",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "title": "Bring The Ritual Home",
+                                                "typography_typography": "custom",
+                                                "typography_font_family": "Cormorant Garamond",
+                                                "typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 48
+                                                },
+                                                "title_color": "#0E1B30",
+                                                "margin": {
+                                                    "unit": "px",
+                                                    "bottom": "16",
+                                                    "isLinked": false
+                                                }
+                                            },
+                                            "widgetType": "heading"
+                                        },
+                                        {
+                                            "id": "shop_p",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "editor": "<p style=\"font-family: 'Lato', sans-serif; font-size: 16px; color: rgba(14, 27, 48, 0.6); max-width: 450px;\">Tools and elements to maintain your nervous system regulation between sessions.</p>"
+                                            },
+                                            "widgetType": "text-editor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "shop_link_col",
+                                    "elType": "container",
+                                    "settings": {
+                                        "width": {
+                                            "unit": "%",
+                                            "size": "30"
+                                        },
+                                        "flex_align_items": "flex-end",
+                                        "flex_justify_content": "flex-end"
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "shop_view_all_fixed",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "html": "<div class='shop-view-all-wrapper hidden-mobile'><div style='text-align: right;'><a href='#all-products' class='shop-view-all-link'>View All <i class='fas fa-arrow-right'></i></a></div></div><style>.shop-view-all-link { display: inline-flex; align-items: center; gap: 12px; font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: #0E1B30; text-decoration: none; transition: color 0.3s ease; } .shop-view-all-link:hover { color: #688F9D; } .shop-view-all-link i { transition: transform 0.3s ease; } .shop-view-all-link:hover i { transform: translateX(4px); } @media (max-width: 767px) { .hidden-mobile { display: none; } }</style>"
+                                            },
+                                            "widgetType": "html"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "shop_grid",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='shop-grid'><div class='product-card'><div class='prod-img'><img src='https://picsum.photos/400/500?random=101' alt='Deep Rest Bath Oil' /><div class='quick-add'><button>Quick Add</button></div></div><div class='prod-info'><div><h3>Deep Rest Bath Oil</h3><p>Lavender & Vetiver blend for evening rituals.</p></div><span class='price'>$45</span></div></div><div class='product-card'><div class='prod-img'><img src='https://picsum.photos/400/500?random=102' alt='Ceramic Incense Holder' /><div class='quick-add'><button>Quick Add</button></div></div><div class='prod-info'><div><h3>Ceramic Incense Holder</h3><p>Hand-thrown stoneware from Japan.</p></div><span class='price'>$32</span></div></div><div class='product-card'><div class='prod-img'><img src='https://picsum.photos/400/500?random=103' alt='Grounding Weighted Eye Mask' /><div class='quick-add'><button>Quick Add</button></div></div><div class='prod-info'><div><h3>Grounding Weighted Eye Mask</h3><p>Organic silk with flaxseed filling.</p></div><span class='price'>$58</span></div></div></div><div class='mobile-btn-wrap'><a href='#all-products' class='mobile-btn'>View Shop</a></div><style>.shop-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; } @media (max-width: 768px) { .shop-grid { grid-template-columns: 1fr; gap: 32px; } .hidden-mobile { display: none !important; } }.product-card { cursor: pointer; group: true; }.prod-img { position: relative; aspect-ratio: 3/4; overflow: hidden; border-radius: 16px; margin-bottom: 24px; background: rgba(196, 187, 180, 0.2); }.prod-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s ease-out; }.product-card:hover .prod-img img { transform: scale(1.05); }.quick-add { position: absolute; bottom: 16px; right: 16px; opacity: 0; transform: translateY(16px); transition: all 0.5s ease; }.product-card:hover .quick-add { opacity: 1; transform: translateY(0); }.quick-add button { background: #688F9D; color: #fff; border: none; padding: 8px 16px; border-radius: 99px; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }.prod-info { display: flex; justify-content: space-between; align-items: flex-start; }.prod-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #0E1B30; margin: 0 0 4px; transition: color 0.3s ease; }.product-card:hover .prod-info h3 { color: #688F9D; }.prod-info p { font-family: 'Lato', sans-serif; font-size: 14px; color: rgba(14, 27, 48, 0.5); margin: 0; }.price { font-family: 'Lato', sans-serif; font-weight: 700; color: #688F9D; transition: color 0.3s ease; }.product-card:hover .price { color: #0E1B30; }.mobile-btn-wrap { display: none; text-align: center; margin-top: 48px; } @media (max-width: 768px) { .mobile-btn-wrap { display: block; } }.mobile-btn { display: inline-block; padding: 12px 32px; border: 1px solid rgba(14, 27, 48, 0.2); border-radius: 99px; color: #0E1B30; text-decoration: none; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Shop Preview V1",
+    "type": "section"
+}

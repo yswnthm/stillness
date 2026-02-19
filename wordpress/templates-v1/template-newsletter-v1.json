@@ -1,0 +1,92 @@
+{
+    "content": [
+        {
+            "id": "newsletter_force_full",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "gap": "no",
+                "background_background": "classic",
+                "background_color": "rgba(44, 122, 123, 0.05)",
+                "border_style": "solid",
+                "border_width": {
+                    "unit": "px",
+                    "top": "1",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "border_color": "rgba(44, 122, 123, 0.1)",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "0",
+                    "bottom": "120",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "flex_direction": "column",
+                "flex_align_items": "center"
+            },
+            "elements": [
+                {
+                    "id": "news_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 800
+                        },
+                        "flex_direction": "column",
+                        "flex_align_items": "center"
+                    },
+                    "elements": [
+                        {
+                            "id": "n_t",
+                            "elType": "widget",
+                            "settings": {
+                                "title": "Join Our Community",
+                                "align": "center",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Cormorant Garamond",
+                                "typography_font_size": {
+                                    "unit": "px",
+                                    "size": 42
+                                },
+                                "title_color": "#0E1B30"
+                            },
+                            "widgetType": "heading"
+                        },
+                        {
+                            "id": "n_d",
+                            "elType": "widget",
+                            "settings": {
+                                "editor": "<p style=\"text-align: center; color: rgba(14, 27, 48, 0.6); font-size: 18px; margin-top: 10px; font-family: 'Lato', sans-serif; font-weight: 300;\">Receive monthly rituals, reflections, and early access to new experiences directly to your inbox. No noise, just stillness.</p>",
+                                "margin": {
+                                    "unit": "px",
+                                    "bottom": "40",
+                                    "isLinked": false
+                                }
+                            },
+                            "widgetType": "text-editor"
+                        },
+                        {
+                            "id": "n_f",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='newsletter-form'><input type='email' placeholder='Your email address' /><button>Subscribe</button></div><p class='disclaimer'>We respect your inbox. Unsubscribe at any time.</p><style>.newsletter-form { max-width: 500px; margin: 0 auto; background: #FFFFFF; border-radius: 99px; padding: 6px; display: flex; align-items: center; border: 1px solid rgba(44, 122, 123, 0.1); box-shadow: 0 4px 6px rgba(0,0,0,0.02); } .newsletter-form input { flex-grow: 1; background: transparent; border: none; outline: none; padding: 12px 24px; font-family: 'Lato', sans-serif; font-size: 16px; color: #0E1B30; } .newsletter-form input::placeholder { color: rgba(14, 27, 48, 0.4); } .newsletter-form button { background: rgba(44, 122, 123, 0.2); backdrop-filter: blur(4px); color: #2C7A7B; border: 1px solid rgba(44, 122, 123, 0.4); border-radius: 99px; padding: 12px 32px; font-family: 'Lato', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; cursor: pointer; transition: all 0.7s ease; } .newsletter-form button:hover { background: #0E1B30; color: #F7F0EC; border-color: #0E1B30; } .disclaimer { text-align: center; color: rgba(14, 27, 48, 0.4); font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-top: 24px; font-family: 'Lato', sans-serif; }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Newsletter V1",
+    "type": "section"
+}

@@ -1,0 +1,117 @@
+{
+    "content": [
+        {
+            "id": "stories_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "stories_header",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 800
+                        },
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "margin": {
+                            "unit": "px",
+                            "bottom": "80",
+                            "isLinked": false
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "stories_label",
+                            "elType": "widget",
+                            "settings": {
+                                "title": "The Journal",
+                                "align": "center",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Lato",
+                                "typography_font_size": {
+                                    "unit": "px",
+                                    "size": 14
+                                },
+                                "typography_font_weight": "700",
+                                "typography_text_transform": "uppercase",
+                                "typography_letter_spacing": {
+                                    "unit": "px",
+                                    "size": 3
+                                },
+                                "title_color": "#688F9D",
+                                "margin": {
+                                    "unit": "px",
+                                    "bottom": "12",
+                                    "isLinked": false
+                                }
+                            },
+                            "widgetType": "heading"
+                        },
+                        {
+                            "id": "stories_h2",
+                            "elType": "widget",
+                            "settings": {
+                                "title": "Reflections on Stillness",
+                                "align": "center",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Cormorant Garamond",
+                                "typography_font_size": {
+                                    "unit": "px",
+                                    "size": 48
+                                },
+                                "title_color": "#0E1B30"
+                            },
+                            "widgetType": "heading"
+                        }
+                    ]
+                },
+                {
+                    "id": "stories_grid",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        },
+                        "flex_direction": "row",
+                        "flex_gap": {
+                            "unit": "px",
+                            "size": 40
+                        },
+                        "flex_wrap": "wrap"
+                    },
+                    "elements": [
+                        {
+                            "id": "stories_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div style='display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; width: 100%;'><div class='article-card'><div class='img-wrap'><img src='https://picsum.photos/800/600?random=201' alt='The Science of Doing Nothing'></div><div class='meta'><span class='cat'>Wellness Science</span><span class='sep'>•</span><span class='time'>5 min read</span></div><h3>The Science of Doing Nothing</h3><p>Why your nervous system craves absence of input in a hyper-connected world.</p><a href='#' class='read-more'>Read Article</a></div><div class='article-card'><div class='img-wrap'><img src='https://picsum.photos/800/600?random=202' alt='Water Memory & Healing'></div><div class='meta'><span class='cat'>Floating</span><span class='sep'>•</span><span class='time'>4 min read</span></div><h3>Water Memory & Healing</h3><p>Exploring the therapeutic benefits of buoyancy and sensory deprivation.</p><a href='#' class='read-more'>Read Article</a></div><div class='article-card'><div class='img-wrap'><img src='https://picsum.photos/800/600?random=203' alt='Rituals for Morning Calm'></div><div class='meta'><span class='cat'>Daily Practice</span><span class='sep'>•</span><span class='time'>3 min read</span></div><h3>Rituals for Morning Calm</h3><p>Three simple practices to ground yourself before the screen lights up.</p><a href='#' class='read-more'>Read Article</a></div></div><style>@media (max-width: 900px) { div[style*='grid-template-columns'] { grid-template-columns: 1fr !important; gap: 48px !important; } } .article-card { display: flex; flex-direction: column; cursor: pointer; height: 100%; }.img-wrap { aspect-ratio: 3/2; overflow: hidden; border-radius: 12px; margin-bottom: 24px; }.img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s ease-out; }.article-card:hover .img-wrap img { transform: scale(1.05); }.meta { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }.cat { font-family: 'Lato', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #688F9D; }.sep { font-size: 12px; color: rgba(14, 27, 48, 0.2); }.time { font-family: 'Lato', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: rgba(14, 27, 48, 0.4); }.article-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #0E1B30; margin-bottom: 12px; line-height: 1.2; transition: color 0.3s ease; }.article-card:hover h3 { color: #688F9D; }.article-card p { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 16px; color: rgba(14, 27, 48, 0.6); line-height: 1.6; margin-bottom: 24px; flex-grow: 1; }.read-more { font-family: 'Lato', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #0E1B30; text-decoration: none; border-bottom: 1px solid rgba(14, 27, 48, 0.2); padding-bottom: 2px; align-self: flex-start; transition: all 0.3s ease; }.article-card:hover .read-more { color: #688F9D; border-color: #688F9D; }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Stories Section V1",
+    "type": "section"
+}

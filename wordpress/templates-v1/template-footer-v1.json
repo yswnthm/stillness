@@ -1,0 +1,429 @@
+{
+    "content": [
+        {
+            "id": "footer_force_full",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "gap": "no",
+                "background_background": "classic",
+                "background_color": "#0E1B30",
+                "padding": {
+                    "unit": "px",
+                    "top": "80",
+                    "right": "0",
+                    "bottom": "40",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "flex_direction": "column",
+                "flex_align_items": "center"
+            },
+            "elements": [
+                {
+                    "id": "footer_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1200
+                        },
+                        "flex_direction": "column"
+                    },
+                    "elements": [
+                        {
+                            "id": "footer_grid",
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_justify_content": "space-between",
+                                "flex_wrap": "wrap",
+                                "flex_gap": {
+                                    "unit": "px",
+                                    "size": 40,
+                                    "isLinked": true
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "id": "f_brand",
+                                    "elType": "container",
+                                    "settings": {
+                                        "width": {
+                                            "unit": "%",
+                                            "size": "30"
+                                        },
+                                        "width_tablet": {
+                                            "unit": "%",
+                                            "size": "100"
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "f_logo",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "title": "Stillness.",
+                                                "typography_typography": "custom",
+                                                "typography_font_family": "Cormorant Garamond",
+                                                "typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 32
+                                                },
+                                                "title_color": "#F7F0EC",
+                                                "margin": {
+                                                    "unit": "px",
+                                                    "bottom": "20",
+                                                    "isLinked": false
+                                                }
+                                            },
+                                            "widgetType": "heading"
+                                        },
+                                        {
+                                            "id": "f_desc",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "editor": "<p style=\"color: rgba(164, 178, 186, 0.6); font-size: 14px; line-height: 1.6; font-family: 'Lato', sans-serif;\">A sanctuary for the modern mind. Restoring balance through sensory reduction and nervous system regulation.</p>"
+                                            },
+                                            "widgetType": "text-editor"
+                                        },
+                                        {
+                                            "id": "f_socials",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "html": "<div style='display: flex; gap: 16px; margin-top: 24px;'><a href='#' style='color: rgba(164, 178, 186, 0.6); transition: color 0.3s ease;'><i class='fab fa-instagram' style='font-size: 20px;'></i></a><a href='#' style='color: rgba(164, 178, 186, 0.6); transition: color 0.3s ease;'><i class='fab fa-twitter' style='font-size: 20px;'></i></a><a href='#' style='color: rgba(164, 178, 186, 0.6); transition: color 0.3s ease;'><i class='fab fa-facebook' style='font-size: 20px;'></i></a></div>"
+                                            },
+                                            "widgetType": "html"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "f_col_explore",
+                                    "elType": "container",
+                                    "settings": {
+                                        "width": {
+                                            "unit": "%",
+                                            "size": "20"
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": "50"
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "f_h_exp",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "title": "Explore",
+                                                "header_size": "h4",
+                                                "title_color": "#688F9D",
+                                                "typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 12
+                                                },
+                                                "typography_text_transform": "uppercase",
+                                                "typography_letter_spacing": {
+                                                    "unit": "em",
+                                                    "size": 0.2
+                                                },
+                                                "margin": {
+                                                    "unit": "px",
+                                                    "bottom": "24",
+                                                    "isLinked": false
+                                                }
+                                            },
+                                            "widgetType": "heading"
+                                        },
+                                        {
+                                            "id": "f_l_exp",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "icon_list": [
+                                                    {
+                                                        "text": "Our Philosophy",
+                                                        "link": {
+                                                            "url": "/#intro"
+                                                        },
+                                                        "_id": "l1"
+                                                    },
+                                                    {
+                                                        "text": "The Experience",
+                                                        "link": {
+                                                            "url": "/#heal"
+                                                        },
+                                                        "_id": "l2"
+                                                    },
+                                                    {
+                                                        "text": "About Us",
+                                                        "link": {
+                                                            "url": "/about"
+                                                        },
+                                                        "_id": "l3"
+                                                    },
+                                                    {
+                                                        "text": "Corporate Wellness",
+                                                        "link": {
+                                                            "url": "/corporate"
+                                                        },
+                                                        "_id": "l4"
+                                                    },
+                                                    {
+                                                        "text": "Journal",
+                                                        "link": {
+                                                            "url": "/#stories"
+                                                        },
+                                                        "_id": "l5"
+                                                    }
+                                                ],
+                                                "text_color": "rgba(164, 178, 186, 0.8)",
+                                                "typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 14
+                                                }
+                                            },
+                                            "widgetType": "icon-list"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "f_col_visit",
+                                    "elType": "container",
+                                    "settings": {
+                                        "width": {
+                                            "unit": "%",
+                                            "size": "25"
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": "50"
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "f_h_vis",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "title": "Visit Us",
+                                                "header_size": "h4",
+                                                "title_color": "#688F9D",
+                                                "typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 12
+                                                },
+                                                "typography_text_transform": "uppercase",
+                                                "typography_letter_spacing": {
+                                                    "unit": "em",
+                                                    "size": 0.2
+                                                },
+                                                "margin": {
+                                                    "unit": "px",
+                                                    "bottom": "24",
+                                                    "isLinked": false
+                                                }
+                                            },
+                                            "widgetType": "heading"
+                                        },
+                                        {
+                                            "id": "f_l_vis",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "icon_list": [
+                                                    {
+                                                        "text": "1240 Sanctuary Blvd, Suite 100 Austin, TX 78704",
+                                                        "icon": {
+                                                            "value": "fas fa-map-marker-alt",
+                                                            "library": "fa-solid"
+                                                        },
+                                                        "_id": "v1"
+                                                    },
+                                                    {
+                                                        "text": "hello@stillness.com",
+                                                        "link": {
+                                                            "url": "mailto:hello@stillness.com"
+                                                        },
+                                                        "icon": {
+                                                            "value": "fas fa-envelope",
+                                                            "library": "fa-solid"
+                                                        },
+                                                        "_id": "v2"
+                                                    },
+                                                    {
+                                                        "text": "(512) 555-0123",
+                                                        "icon": {
+                                                            "value": "fas fa-phone",
+                                                            "library": "fa-solid"
+                                                        },
+                                                        "_id": "v3"
+                                                    }
+                                                ],
+                                                "text_color": "rgba(164, 178, 186, 0.8)",
+                                                "typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 14
+                                                },
+                                                "icon_color": "rgba(164, 178, 186, 0.8)"
+                                            },
+                                            "widgetType": "icon-list"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "f_col_legal",
+                                    "elType": "container",
+                                    "settings": {
+                                        "width": {
+                                            "unit": "%",
+                                            "size": "20"
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": "50"
+                                        }
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "f_h_leg",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "title": "Legal",
+                                                "header_size": "h4",
+                                                "title_color": "#688F9D",
+                                                "typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 12
+                                                },
+                                                "typography_text_transform": "uppercase",
+                                                "typography_letter_spacing": {
+                                                    "unit": "em",
+                                                    "size": 0.2
+                                                },
+                                                "margin": {
+                                                    "unit": "px",
+                                                    "bottom": "24",
+                                                    "isLinked": false
+                                                }
+                                            },
+                                            "widgetType": "heading"
+                                        },
+                                        {
+                                            "id": "f_l_leg",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "icon_list": [
+                                                    {
+                                                        "text": "Privacy Policy",
+                                                        "link": {
+                                                            "url": "#"
+                                                        },
+                                                        "_id": "lg1"
+                                                    },
+                                                    {
+                                                        "text": "Terms of Service",
+                                                        "link": {
+                                                            "url": "#"
+                                                        },
+                                                        "_id": "lg2"
+                                                    },
+                                                    {
+                                                        "text": "Waiver",
+                                                        "link": {
+                                                            "url": "#"
+                                                        },
+                                                        "_id": "lg3"
+                                                    },
+                                                    {
+                                                        "text": "Accessibility",
+                                                        "link": {
+                                                            "url": "#"
+                                                        },
+                                                        "_id": "lg4"
+                                                    }
+                                                ],
+                                                "text_color": "rgba(164, 178, 186, 0.8)",
+                                                "typography_font_size": {
+                                                    "unit": "px",
+                                                    "size": 14
+                                                }
+                                            },
+                                            "widgetType": "icon-list"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f_bottom",
+                            "elType": "container",
+                            "settings": {
+                                "margin": {
+                                    "unit": "px",
+                                    "top": "80",
+                                    "isLinked": false
+                                },
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "32",
+                                    "isLinked": false
+                                },
+                                "border_style": "solid",
+                                "border_width": {
+                                    "unit": "px",
+                                    "top": "1",
+                                    "isLinked": false
+                                },
+                                "border_color": "rgba(255, 255, 255, 0.05)",
+                                "flex_direction": "row",
+                                "flex_justify_content": "space-between"
+                            },
+                            "elements": [
+                                {
+                                    "id": "f_copy",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "title": "\u00a9 2026 Stillness Wellness Co. All rights reserved.",
+                                        "title_color": "rgba(164, 178, 186, 0.3)",
+                                        "typography_font_size": {
+                                            "unit": "px",
+                                            "size": 11
+                                        },
+                                        "typography_text_transform": "uppercase",
+                                        "typography_letter_spacing": {
+                                            "unit": "em",
+                                            "size": 0.1
+                                        }
+                                    },
+                                    "widgetType": "heading"
+                                },
+                                {
+                                    "id": "f_credit",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "title": "Designed for Deep Rest.",
+                                        "title_color": "rgba(164, 178, 186, 0.3)",
+                                        "typography_font_size": {
+                                            "unit": "px",
+                                            "size": 11
+                                        },
+                                        "typography_letter_spacing": {
+                                            "unit": "em",
+                                            "size": 0.1
+                                        },
+                                        "align": "right"
+                                    },
+                                    "widgetType": "heading"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Footer V1",
+    "type": "section"
+}
