@@ -12,20 +12,20 @@ export const ReservePage: React.FC = () => {
       <div className="pt-32 pb-20 text-center">
         <div className="max-w-4xl mx-auto px-6">
           <span className="text-seafoam text-sm uppercase tracking-[0.3em] font-bold mb-6 block">Reservations</span>
-          <h1 className="text-4xl md:text-7xl font-serif text-stone mb-8">Secure Your Space.</h1>
-          <p className="text-stone/60 text-xl font-light max-w-xl mx-auto">
+          <h1 className="text-4xl md:text-7xl font-serif text-midnightsea mb-8">Secure Your Space.</h1>
+          <p className="text-midnightsea/60 text-xl font-light max-w-xl mx-auto">
             Book your session and begin the journey back to yourself.
           </p>
         </div>
       </div>
-      
+
       <div className="pb-24">
         <BookingUI />
       </div>
 
       <ReservationInstructions />
-      
-      <section className="py-24 bg-stone text-cream text-center">
+
+      <section className="py-24 bg-midnightsea text-cream text-center">
         <div className="max-w-2xl mx-auto px-6">
           <h2 className="text-3xl font-serif mb-6">Need assistance?</h2>
           <p className="text-breeze/60 mb-8">Our concierge is available daily from 9am to 8pm to help you curate your perfect experience.</p>

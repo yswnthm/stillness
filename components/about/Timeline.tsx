@@ -28,11 +28,11 @@ export const Timeline: React.FC = () => {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <h3 className="text-2xl md:text-4xl font-serif text-stone mb-16 text-center">Our Journey</h3>
-        
+        <h3 className="text-2xl md:text-4xl font-serif text-midnightsea mb-16 text-center">Our Journey</h3>
+
         <div className="flex flex-col space-y-12">
           {milestones.map((milestone, index) => (
-            <motion.div 
+            <motion.div
               key={milestone.year}
               className="flex flex-col md:flex-row gap-6 md:gap-12 items-start"
               initial={{ opacity: 0, y: 20 }}
@@ -43,9 +43,9 @@ export const Timeline: React.FC = () => {
               <div className="md:w-32 flex-shrink-0">
                 <span className="text-4xl font-serif text-seafoam">{milestone.year}</span>
               </div>
-              <div className="flex-grow pb-12 border-b border-stone/10 last:border-0">
-                <h4 className="text-xl font-bold text-stone mb-3 uppercase tracking-widest">{milestone.title}</h4>
-                <p className="text-stone/60 text-lg font-light leading-relaxed max-w-2xl">
+              <div className="flex-grow pb-12 border-b border-midnightsea/10 last:border-0">
+                <h4 className="text-xl font-bold text-midnightsea mb-3 uppercase tracking-widest">{milestone.title}</h4>
+                <p className="text-midnightsea/60 text-lg font-light leading-relaxed max-w-2xl">
                   {milestone.description}
                 </p>
               </div>
