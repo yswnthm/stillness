@@ -21,7 +21,7 @@ const steps = [
 
 export const ReservationInstructions: React.FC = () => {
   return (
-    <section className="py-20 bg-cream">
+    <section className="py-20 bg-midnightsea">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {steps.map((s, i) => (
@@ -32,9 +32,9 @@ export const ReservationInstructions: React.FC = () => {
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
             >
-              <span className="text-5xl font-serif text-seafoam/20 block mb-4">{s.step}</span>
-              <h4 className="text-xl font-serif text-stone mb-3">{s.title}</h4>
-              <p className="text-stone/60 text-sm leading-relaxed">{s.desc}</p>
+              <span className="text-5xl font-serif text-seafoam/30 block mb-4">{s.step}</span>
+              <h4 className="text-xl font-serif text-cream mb-3">{s.title}</h4>
+              <p className="text-cream/70 text-sm leading-relaxed">{s.desc}</p>
             </motion.div>
           ))}
         </div>
