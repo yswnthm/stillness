@@ -39,9 +39,11 @@ export const ServiceList: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.8 }}
               viewport={{ once: true }}
-              className="p-8 rounded-3xl border border-midnightsea/10 hover:border-seafoam/40 transition-all duration-500"
+              className="group p-8 rounded-3xl bg-cream border border-stone/5 hover:border-seafoam/30 hover:shadow-xl hover:shadow-seafoam/5 transition-all duration-500 cursor-pointer"
             >
-              <div className="text-seafoam mb-6">{service.icon}</div>
+              <div className="w-12 h-12 rounded-full border border-seafoam text-seafoam group-hover:bg-seafoam group-hover:text-white flex items-center justify-center mb-6 transition-colors duration-500">
+                {service.icon}
+              </div>
               <h3 className="text-xl font-serif text-midnightsea mb-4">{service.title}</h3>
               <p className="text-midnightsea/60 leading-relaxed">{service.description}</p>
             </motion.div>

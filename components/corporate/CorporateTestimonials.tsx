@@ -16,7 +16,7 @@ const testimonials = [
 
 export const CorporateTestimonials: React.FC = () => {
   return (
-    <section className="py-20 bg-cream">
+    <section className="py-20 bg-seafoam">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {testimonials.map((t, i) => (
@@ -30,7 +30,7 @@ export const CorporateTestimonials: React.FC = () => {
             >
               <p className="text-xl font-serif text-stone mb-8 italic">"{t.quote}"</p>
               <div>
-                <p className="font-bold text-stone uppercase tracking-widest text-xs">{t.author}</p>
+                <p className="font-bold text-seafoam uppercase tracking-widest text-xs">{t.author}</p>
                 <p className="text-stone/50 text-xs">{t.role}</p>
               </div>
             </motion.div>

@@ -19,7 +19,7 @@ export const InquiryForm: React.FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto bg-cream p-8 md:p-12 rounded-3xl shadow-sm border border-stone/5">
+    <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto bg-breeze p-8 md:p-12 rounded-3xl shadow-sm border border-stone/5">
       <div className="grid grid-cols-1 gap-6">
         <input 
           type="text" 
@@ -39,7 +39,7 @@ export const InquiryForm: React.FC = () => {
           className="w-full px-6 py-4 bg-white rounded-2xl border border-stone/10 focus:outline-none focus:border-seafoam transition-colors"
         ></textarea>
       </div>
-      <Button type="submit" fullWidth>Send Inquiry</Button>
+      <Button type="submit" fullWidth variant="submit">Send Inquiry</Button>
     </form>
   );
 };
