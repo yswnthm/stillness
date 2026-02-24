@@ -49,7 +49,7 @@ export const ServiceList: React.FC = () => {
                 <img
                   src={service.bgImage}
                   alt=""
-                  className="card-bg-image w-full h-full object-cover opacity-50 transition-transform duration-500 ease-out group-hover:scale-110"
+                  className="card-bg-image w-full h-full object-cover opacity-70 transition-transform duration-500 ease-out group-hover:scale-110"
                   loading="lazy"
                 />
               </div>
