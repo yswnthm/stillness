@@ -4,5 +4,9 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: WordPress Homepage Staging - Component Templates (v1)**
-*Link: [./tracks/homepage_staging_v1/](./tracks/homepage_staging_v1/)*
+(No active tracks)
+
+---
+
+- [ ] **Track: Corporate Page Theming and Interaction Update**
+*Link: [./tracks/corporate_theming_update_20260224/](./tracks/corporate_theming_update_20260224/)*
