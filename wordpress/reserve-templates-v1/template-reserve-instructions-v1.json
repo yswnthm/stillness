@@ -1,0 +1,41 @@
+{
+    "version": "0.4",
+    "title": "Reserve - Instructions",
+    "type": "section",
+    "content": [
+        {
+            "id": "reserve-instructions-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "boxed",
+                "boxed_width": {
+                    "unit": "px",
+                    "size": 1140
+                },
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "bottom": "120",
+                    "right": "40",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF"
+            },
+            "elements": [
+                {
+                    "id": "reserve-instructions-html",
+                    "elType": "widget",
+                    "widgetType": "html",
+                    "settings": {
+                        "html": "<div class=\"instructions-grid\">\n  <div class=\"instruction-step\">\n    <span class=\"step-number\">01</span>\n    <h4 class=\"step-title\">Choose Your Ritual</h4>\n    <p class=\"step-desc\">Select between Float Therapy, Breathwork, or a combined session.</p>\n  </div>\n  \n  <div class=\"instruction-step\">\n    <span class=\"step-number\">02</span>\n    <h4 class=\"step-title\">Select Time</h4>\n    <p class=\"step-desc\">Pick a date and time that allows you at least 30 minutes of buffer before and after.</p>\n  </div>\n  \n  <div class=\"instruction-step\">\n    <span class=\"step-number\">03</span>\n    <h4 class=\"step-title\">Arrival</h4>\n    <p class=\"step-desc\">Arrive 15 minutes early. We'll provide everything you need—robes, towels, and silence.</p>\n  </div>\n</div>\n\n<style>\n.instructions-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 3rem;\n  width: 100%;\n}\n\n.instruction-step {\n  display: flex;\n  flex-direction: column;\n}\n\n.step-number {\n  font-family: 'Cormorant Garamond', serif;\n  font-size: 48px;\n  color: #688F9D;\n  display: block;\n  margin-bottom: 1rem;\n}\n\n.step-title {\n  font-family: 'Cormorant Garamond', serif;\n  font-size: 20px;\n  color: #0E1B30;\n  margin: 0 0 0.75rem 0;\n  font-weight: 400;\n}\n\n.step-desc {\n  font-family: 'Lato', sans-serif;\n  font-size: 14px;\n  line-height: 1.8;\n  color: rgba(14, 27, 48, 0.6);\n  margin: 0;\n}\n\n@media (max-width: 768px) {\n  .instructions-grid {\n    grid-template-columns: 1fr;\n    gap: 2.5rem;\n  }\n}\n</style>"
+                    }
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}

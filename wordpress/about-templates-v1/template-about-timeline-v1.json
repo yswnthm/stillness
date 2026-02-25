@@ -1,0 +1,66 @@
+{
+    "version": "0.4",
+    "title": "About - Timeline",
+    "type": "section",
+    "content": [
+        {
+            "id": "timeline-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "boxed",
+                "boxed_width": {
+                    "unit": "px",
+                    "size": 1140
+                },
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "bottom": "120",
+                    "right": "40",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF"
+            },
+            "elements": [
+                {
+                    "id": "timeline-heading",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                        "title": "Our Journey",
+                        "align": "center",
+                        "title_color": "#1D3152",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Cormorant Garamond",
+                        "typography_font_size": {
+                            "unit": "px",
+                            "size": 40
+                        },
+                        "typography_font_weight": "400",
+                        "margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "bottom": "64",
+                            "right": "0",
+                            "left": "0",
+                            "isLinked": false
+                        }
+                    }
+                },
+                {
+                    "id": "timeline-html",
+                    "elType": "widget",
+                    "widgetType": "html",
+                    "settings": {
+                        "html": "<div class=\"timeline-container\">\n  <div class=\"timeline-item\">\n    <div class=\"timeline-year\">2022</div>\n    <div class=\"timeline-content\">\n      <h4 class=\"timeline-title\">The Seed</h4>\n      <p class=\"timeline-desc\">Elena Corves opens the first Stillness studio with two float tanks and a vision for urban silence.</p>\n    </div>\n  </div>\n  <div class=\"timeline-item\">\n    <div class=\"timeline-year\">2023</div>\n    <div class=\"timeline-content\">\n      <h4 class=\"timeline-title\">Expansion</h4>\n      <p class=\"timeline-desc\">We introduced guided breathwork and sound healing rituals to complement the float experience.</p>\n    </div>\n  </div>\n  <div class=\"timeline-item\">\n    <div class=\"timeline-year\">2024</div>\n    <div class=\"timeline-content\">\n      <h4 class=\"timeline-title\">Community</h4>\n      <p class=\"timeline-desc\">Stillness grows to three locations, becoming a cornerstone for mental wellness in the city.</p>\n    </div>\n  </div>\n  <div class=\"timeline-item\">\n    <div class=\"timeline-year\">2025</div>\n    <div class=\"timeline-content timeline-last\">\n      <h4 class=\"timeline-title\">The Future</h4>\n      <p class=\"timeline-desc\">Launching our corporate wellness programs to bring stillness to the workspace.</p>\n    </div>\n  </div>\n</div>\n\n<style>\n.timeline-container {\n  display: flex;\n  flex-direction: column;\n  gap: 3rem;\n  width: 100%;\n}\n\n.timeline-item {\n  display: flex;\n  flex-direction: row;\n  gap: 3rem;\n  align-items: flex-start;\n}\n\n.timeline-year {\n  flex-shrink: 0;\n  width: 128px;\n  font-family: 'Cormorant Garamond', serif;\n  font-size: 36px;\n  color: #688F9D;\n}\n\n.timeline-content {\n  flex-grow: 1;\n  padding-bottom: 3rem;\n  border-bottom: 1px solid rgba(29, 49, 82, 0.1);\n}\n\n.timeline-last {\n  border-bottom: none;\n  padding-bottom: 0;\n}\n\n.timeline-title {\n  font-family: 'Lato', sans-serif;\n  font-weight: 700;\n  font-size: 20px;\n  color: #1D3152;\n  margin-bottom: 0.75rem;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n}\n\n.timeline-desc {\n  font-family: 'Lato', sans-serif;\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 1.8;\n  color: rgba(29, 49, 82, 0.6);\n  max-width: 42rem;\n  margin: 0;\n}\n\n@media (max-width: 768px) {\n  .timeline-item {\n    flex-direction: column;\n    gap: 1.5rem;\n  }\n  .timeline-year {\n    width: auto;\n  }\n  .timeline-content {\n    padding-bottom: 2rem;\n  }\n}\n</style>"
+                    }
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}

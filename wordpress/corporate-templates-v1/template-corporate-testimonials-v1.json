@@ -1,0 +1,41 @@
+{
+    "version": "0.4",
+    "title": "Corporate - Testimonials",
+    "type": "section",
+    "content": [
+        {
+            "id": "corporate-testimonials-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "boxed",
+                "boxed_width": {
+                    "unit": "px",
+                    "size": 1140
+                },
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "bottom": "120",
+                    "right": "40",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#688F9D"
+            },
+            "elements": [
+                {
+                    "id": "corporate-testimonials-html",
+                    "elType": "widget",
+                    "widgetType": "html",
+                    "settings": {
+                        "html": "<div class=\"corporate-testimonials-grid\">\n  <div class=\"corporate-testimonial\">\n    <p class=\"corporate-testimonial-quote\">\"Stillness has become an essential part of our quarterly planning cycle. The clarity it provides is unmatched.\"</p>\n    <div class=\"corporate-testimonial-author\">\n      <p class=\"corporate-testimonial-name\">JAMES CHEN</p>\n      <p class=\"corporate-testimonial-role\">VP of Product, TechStream</p>\n    </div>\n  </div>\n  \n  <div class=\"corporate-testimonial\">\n    <p class=\"corporate-testimonial-quote\">\"Our team's stress levels dropped visibly after introducing the Friday Float program. It's a game changer for culture.\"</p>\n    <div class=\"corporate-testimonial-author\">\n      <p class=\"corporate-testimonial-name\">SARAH MILLER</p>\n      <p class=\"corporate-testimonial-role\">People Operations, FlowState</p>\n    </div>\n  </div>\n</div>\n\n<style>\n.corporate-testimonials-grid {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 3rem;\n  width: 100%;\n}\n\n.corporate-testimonial {\n  background-color: #FFFFFF;\n  padding: 2.5rem;\n  border-radius: 24px;\n}\n\n.corporate-testimonial-quote {\n  font-family: 'Cormorant Garamond', serif;\n  font-size: 20px;\n  color: #0E1B30;\n  font-style: italic;\n  margin-bottom: 2rem;\n  line-height: 1.6;\n}\n\n.corporate-testimonial-name {\n  font-family: 'Lato', sans-serif;\n  font-size: 12px;\n  color: #688F9D;\n  font-weight: 700;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  margin: 0 0 0.25rem 0;\n}\n\n.corporate-testimonial-role {\n  font-family: 'Lato', sans-serif;\n  font-size: 12px;\n  color: rgba(14, 27, 48, 0.5);\n  margin: 0;\n}\n\n@media (max-width: 768px) {\n  .corporate-testimonials-grid {\n    grid-template-columns: 1fr;\n    gap: 2rem;\n  }\n}\n</style>"
+                    }
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}

@@ -1,0 +1,80 @@
+{
+    "version": "0.4",
+    "title": "Corporate - Logos",
+    "type": "section",
+    "content": [
+        {
+            "id": "corporate-logos-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "boxed",
+                "boxed_width": {
+                    "unit": "px",
+                    "size": 1140
+                },
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "padding": {
+                    "unit": "px",
+                    "top": "60",
+                    "bottom": "60",
+                    "right": "40",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "border_border": "solid",
+                "border_width": {
+                    "top": "1",
+                    "bottom": "1",
+                    "left": "0",
+                    "right": "0",
+                    "isLinked": false
+                },
+                "border_color": "rgba(29, 49, 82, 0.05)"
+            },
+            "elements": [
+                {
+                    "id": "logos-label",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                        "title": "TRUSTED BY FORWARD-THINKING TEAMS",
+                        "align": "center",
+                        "title_color": "#688F9D",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                            "unit": "px",
+                            "size": 10
+                        },
+                        "typography_font_weight": "700",
+                        "typography_text_transform": "uppercase",
+                        "typography_letter_spacing": {
+                            "unit": "px",
+                            "size": 3
+                        },
+                        "margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "bottom": "40",
+                            "right": "0",
+                            "left": "0",
+                            "isLinked": false
+                        }
+                    }
+                },
+                {
+                    "id": "logos-html",
+                    "elType": "widget",
+                    "widgetType": "html",
+                    "settings": {
+                        "html": "<div class=\"logos-container\">\n  <span class=\"logo logo-techstream\">TECHSTREAM</span>\n  <span class=\"logo logo-flowstate\">FlowState</span>\n  <span class=\"logo logo-vantage\"><i>VANTAGE</i></span>\n  <span class=\"logo logo-lumina\">LUMINA</span>\n</div>\n\n<style>\n.logos-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  align-items: center;\n  gap: 6rem;\n  opacity: 0.3;\n  filter: grayscale(100%);\n}\n\n.logo {\n  font-size: 24px;\n  color: #1D3152;\n}\n\n.logo-techstream {\n  font-family: 'Lato', sans-serif;\n  font-weight: 700;\n  letter-spacing: -0.05em;\n}\n\n.logo-flowstate {\n  font-family: 'Cormorant Garamond', serif;\n}\n\n.logo-vantage {\n  font-family: 'Lato', sans-serif;\n  font-weight: 900;\n}\n\n.logo-lumina {\n  font-family: 'Cormorant Garamond', serif;\n  letter-spacing: 0.1em;\n}\n\n@media (max-width: 768px) {\n  .logos-container {\n    gap: 3rem;\n  }\n}\n</style>"
+                    }
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}

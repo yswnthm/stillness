@@ -1,0 +1,126 @@
+{
+    "version": "0.4",
+    "title": "Reserve - Contact",
+    "type": "section",
+    "content": [
+        {
+            "id": "reserve-contact-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "boxed",
+                "boxed_width": {
+                    "unit": "px",
+                    "size": 672
+                },
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "padding": {
+                    "unit": "px",
+                    "top": "96",
+                    "bottom": "96",
+                    "right": "24",
+                    "left": "24",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#688F9D"
+            },
+            "elements": [
+                {
+                    "id": "reserve-contact-heading",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                        "title": "Need assistance?",
+                        "align": "center",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Cormorant Garamond",
+                        "typography_font_size": {
+                            "unit": "px",
+                            "size": 72
+                        },
+                        "typography_font_weight": "400",
+                        "title_color": "#F7F0EC",
+                        "margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "bottom": "24",
+                            "right": "0",
+                            "left": "0",
+                            "isLinked": false
+                        }
+                    }
+                },
+                {
+                    "id": "reserve-contact-text",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                        "editor": "<p>Our concierge is available daily from 9am to 8pm to help you curate your perfect experience.</p>",
+                        "align": "center",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                            "unit": "px",
+                            "size": 16
+                        },
+                        "text_color": "rgba(247, 240, 236, 0.6)",
+                        "margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "bottom": "32",
+                            "right": "0",
+                            "left": "0",
+                            "isLinked": false
+                        }
+                    }
+                },
+                {
+                    "id": "reserve-contact-link",
+                    "elType": "widget",
+                    "widgetType": "button",
+                    "settings": {
+                        "text": "Call Us: (512) 555-0123",
+                        "link": {
+                            "url": "tel:5125550123"
+                        },
+                        "align": "center",
+                        "button_text_color": "#F7F0EC",
+                        "background_color": "transparent",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                            "unit": "px",
+                            "size": 16
+                        },
+                        "typography_font_weight": "700",
+                        "typography_text_transform": "uppercase",
+                        "typography_letter_spacing": {
+                            "unit": "px",
+                            "size": 2
+                        },
+                        "border_border": "solid",
+                        "border_width": {
+                            "unit": "px",
+                            "top": "0",
+                            "bottom": "2",
+                            "right": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "border_color": "#F7F0EC",
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "bottom": "8",
+                            "right": "0",
+                            "left": "0",
+                            "isLinked": false
+                        }
+                    }
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}
