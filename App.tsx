@@ -11,6 +11,7 @@ import { ProductPage } from './pages/ProductPage';
 import { SacredOfferingsPage } from './pages/SacredOfferingsPage';
 import { CuratedCalmPage } from './pages/CuratedCalmPage';
 import { StillnessHabitPage } from './pages/StillnessHabitPage';
+import { BlogPage } from './pages/BlogPage';
 import Design1Preview from './design1/Preview';
 import Design2Preview from './design2/Preview';
 import Design3Preview from './design3/Preview';
@@ -32,6 +33,7 @@ function App() {
           <Route path="/offerings" element={<SacredOfferingsPage />} />
           <Route path="/curated-calm" element={<CuratedCalmPage />} />
           <Route path="/habit" element={<StillnessHabitPage />} />
+          <Route path="/journal" element={<BlogPage />} />
           <Route path="/design1" element={<Design1Preview />} />
           <Route path="/design2" element={<Design2Preview />} />
           <Route path="/design3" element={<Design3Preview />} />

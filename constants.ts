@@ -7,7 +7,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Offerings', href: '/offerings' },
   { label: 'Shop', href: '/shop' },
   { label: 'About', href: '/about' },
-  { label: 'Journal', href: '/#stories' },
+  { label: 'Journal', href: '/journal' },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
