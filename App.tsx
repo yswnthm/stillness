@@ -6,6 +6,7 @@ import { LandingPage } from './pages/LandingPage';
 import { AboutPage } from './pages/AboutPage';
 import { CorporatePage } from './pages/CorporatePage';
 import { ReservePage } from './pages/ReservePage';
+import { ShopPage } from './pages/ShopPage';
 import Design1Preview from './design1/Preview';
 import Design2Preview from './design2/Preview';
 import Design3Preview from './design3/Preview';
@@ -22,6 +23,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/corporate" element={<CorporatePage />} />
           <Route path="/reserve" element={<ReservePage />} />
+          <Route path="/shop" element={<ShopPage />} />
           <Route path="/design1" element={<Design1Preview />} />
           <Route path="/design2" element={<Design2Preview />} />
           <Route path="/design3" element={<Design3Preview />} />
