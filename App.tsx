@@ -8,6 +8,9 @@ import { CorporatePage } from './pages/CorporatePage';
 import { ReservePage } from './pages/ReservePage';
 import { ShopPage } from './pages/ShopPage';
 import { ProductPage } from './pages/ProductPage';
+import { SacredOfferingsPage } from './pages/SacredOfferingsPage';
+import { CuratedCalmPage } from './pages/CuratedCalmPage';
+import { StillnessHabitPage } from './pages/StillnessHabitPage';
 import Design1Preview from './design1/Preview';
 import Design2Preview from './design2/Preview';
 import Design3Preview from './design3/Preview';
@@ -26,6 +29,9 @@ function App() {
           <Route path="/reserve" element={<ReservePage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/offerings" element={<SacredOfferingsPage />} />
+          <Route path="/curated-calm" element={<CuratedCalmPage />} />
+          <Route path="/habit" element={<StillnessHabitPage />} />
           <Route path="/design1" element={<Design1Preview />} />
           <Route path="/design2" element={<Design2Preview />} />
           <Route path="/design3" element={<Design3Preview />} />
