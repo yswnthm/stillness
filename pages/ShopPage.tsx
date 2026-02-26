@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Leaf, Filter, ChevronDown, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CATEGORIES = ['All', 'Ritual Kits', 'Essentials', 'Subscriptions'];
 
@@ -102,8 +103,8 @@ export const ShopPage = () => {
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
                                 className={`whitespace-nowrap text-sm tracking-widest uppercase transition-colors duration-300 ${activeCategory === category
-                                        ? 'text-seafoam font-semibold'
-                                        : 'text-stone/50 hover:text-stone'
+                                    ? 'text-seafoam font-semibold'
+                                    : 'text-stone/50 hover:text-stone'
                                     }`}
                             >
                                 {category}
@@ -118,7 +119,7 @@ export const ShopPage = () => {
                 {/* Product Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
                     {filteredProducts.map((product) => (
-                        <div key={product.id} className="group cursor-pointer flex flex-col">
+                        <Link to={`/product/${product.id}`} key={product.id} className="group cursor-pointer flex flex-col">
                             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl mb-6 bg-sand/20">
                                 {product.tag && (
                                     <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-sm text-stone px-3 py-1 rounded-full text-xs uppercase tracking-wider font-medium">
@@ -132,7 +133,10 @@ export const ShopPage = () => {
                                 />
                                 <div className="absolute inset-0 bg-stone/0 group-hover:bg-stone/10 transition-colors duration-500" />
                                 <div className="absolute bottom-6 left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                                    <button className="bg-seafoam text-white px-8 py-3 rounded-full text-sm uppercase tracking-widest shadow-lg hover:bg-seafoam/90 transition-colors">
+                                    <button
+                                        onClick={(e) => { e.preventDefault(); /* Add to cart logic */ }}
+                                        className="bg-seafoam text-white px-8 py-3 rounded-full text-sm uppercase tracking-widest shadow-lg hover:bg-seafoam/90 transition-colors"
+                                    >
                                         Add to Cart
                                     </button>
                                 </div>
@@ -147,7 +151,7 @@ export const ShopPage = () => {
                                     View Details <ArrowRight size={14} />
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </main>

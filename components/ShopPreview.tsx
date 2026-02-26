@@ -3,6 +3,7 @@ import { Section } from './Section';
 import { PRODUCTS } from '../constants';
 import { Button } from './Button';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const ShopPreview: React.FC = () => {
   return (
@@ -14,14 +15,14 @@ export const ShopPreview: React.FC = () => {
             Tools and elements to maintain your nervous system regulation between sessions.
           </p>
         </div>
-        <a href="#all-products" className="hidden md:flex items-center gap-2 text-stone text-sm uppercase tracking-widest hover:text-seafoam transition-colors mt-4 md:mt-0">
+        <Link to="/shop" className="hidden md:flex items-center gap-2 text-stone text-sm uppercase tracking-widest hover:text-seafoam transition-colors mt-4 md:mt-0">
           View All <ArrowRight size={16} />
-        </a>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
         {PRODUCTS.map((product) => (
-          <div key={product.id} className="group cursor-pointer">
+          <Link to={`/product/${product.id}`} key={product.id} className="group cursor-pointer block">
             <div className="relative aspect-[3/4] overflow-hidden rounded-2xl mb-6 bg-sand/20">
               <img
                 src={product.image}
@@ -30,7 +31,10 @@ export const ShopPreview: React.FC = () => {
               />
               <div className="absolute inset-0 bg-stone/0 group-hover:bg-stone/5 transition-colors duration-500" />
               <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                <button className="bg-seafoam text-white px-4 py-2 rounded-full text-xs uppercase tracking-widest shadow-lg">
+                <button
+                  onClick={(e) => e.preventDefault()}
+                  className="bg-seafoam text-white px-4 py-2 rounded-full text-xs uppercase tracking-widest shadow-lg"
+                >
                   Quick Add
                 </button>
               </div>
@@ -42,12 +46,14 @@ export const ShopPreview: React.FC = () => {
               </div>
               <span className="text-seafoam font-medium group-hover:text-stone transition-colors duration-300">{product.price}</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
       <div className="mt-12 text-center md:hidden">
-        <Button variant="outline">View Shop</Button>
+        <Link to="/shop">
+          <Button variant="outline">View Shop</Button>
+        </Link>
       </div>
     </Section>
   );
