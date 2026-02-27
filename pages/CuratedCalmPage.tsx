@@ -76,16 +76,7 @@ export const CuratedCalmPage = () => {
                 `}
             </style>
 
-            {/* Back Navigation */}
-            <div className="fixed top-8 left-8 z-50">
-                <Link
-                    to="/offerings"
-                    className="group flex items-center gap-3 py-2 px-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all duration-500"
-                >
-                    <ArrowLeft size={16} className="text-stone group-hover:-translate-x-1 transition-transform" />
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-stone font-medium">All Offerings</span>
-                </Link>
-            </div>
+
 
             {/* Hero Section */}
             <section className="relative h-screen flex items-center justify-center bg-midnightsea overflow-hidden">
