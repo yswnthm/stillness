@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Clock } from 'lucide-react';
+import { ArrowRight, BookOpen, Clock, ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const ARTICLES = [
     {
@@ -80,19 +81,41 @@ export const BlogPage = () => {
     return (
         <div className="min-h-screen bg-cream">
             {/* Hero Section */}
-            <section className="relative h-[50vh] min-h-[400px] flex items-end justify-center pb-16 overflow-hidden">
-                <div className="absolute inset-0 z-0 bg-stone">
+            <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-stone">
+                <div className="absolute inset-0 z-0">
                     <img
                         src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?q=80&w=2000&auto=format&fit=crop"
                         alt="The Journal"
-                        className="w-full h-full object-cover opacity-40"
+                        className="w-full h-full object-cover opacity-60"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-b from-stone/40 via-transparent to-stone/80" />
                 </div>
-                <div className="relative z-10 text-center px-6 mt-20">
-                    <span className="block text-seafoam text-sm tracking-widest uppercase mb-4">The Journal</span>
-                    <h1 className="text-5xl md:text-7xl font-serif text-cream">Notes on Stillness</h1>
-                    <p className="text-cream/70 mt-4 font-light max-w-lg mx-auto">Thoughts on healing, ritual, and the profound art of coming home to yourself.</p>
+
+                <div className="relative z-10 text-center px-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.5, ease: "easeOut" }}
+                        className="max-w-4xl mx-auto"
+                    >
+                        <span className="block text-seafoam text-sm tracking-widest uppercase mb-4">The Journal</span>
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-cream mb-6 tracking-tight leading-tight">
+                            Notes on <span className="italic">Stillness</span>
+                        </h1>
+                        <p className="text-cream/80 mt-4 font-light max-w-lg mx-auto text-lg md:text-xl leading-relaxed">
+                            Thoughts on healing, ritual, and the profound art of coming home to yourself.
+                        </p>
+                    </motion.div>
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.5, duration: 1 }}
+                    className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+                >
+                    <ChevronDown className="text-cream/50 animate-bounce w-8 h-8 font-light" />
+                </motion.div>
             </section>
 
             {/* Featured Article */}
@@ -136,8 +159,8 @@ export const BlogPage = () => {
                             key={cat}
                             onClick={() => setActiveCategory(cat)}
                             className={`flex-shrink-0 px-5 py-2 rounded-full text-xs tracking-widest uppercase transition-all duration-300 ${activeCategory === cat
-                                    ? 'bg-stone text-cream'
-                                    : 'bg-transparent text-stone/60 hover:text-stone hover:bg-stone/10'
+                                ? 'bg-stone text-cream'
+                                : 'bg-transparent text-stone/60 hover:text-stone hover:bg-stone/10'
                                 }`}
                         >
                             {cat}

@@ -1,0 +1,48 @@
+{
+    "content": [
+        {
+            "id": "brand_story_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "brand_story_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "brand_story_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='brand-story-grid'>\n  <div class='brand-story-text'>\n    <h2>You don't have to keep carrying it.<br />We started outside. The real work began inside.</h2>\n    <div class='story-desc'>\n      <p>Stillness is a wellness experience company based in Greater Vancouver. We create real, felt experiences that help people slow down, heal, and come back to themselves.</p>\n      <p>In summer 2024, we launched with floating sound healing sessions in the Greater Vancouver area. The water. The open air. The quiet. It was the beginning of something.</p>\n      <p>When the seasons changed, we moved indoors &mdash; and discovered that the container we'd been creating outside translated into something deeper when brought into an intimate, intentional space. We began offering sound journeys, breathwork, yoga, and guided meditation. And people kept showing up.</p>\n      <p>Not just for wellness. But because something in them needed to be heard.</p>\n    </div>\n  </div>\n  <div class='brand-story-img'>\n    <img src='https://images.unsplash.com/photo-1544367563-12123d896889?q=80&w=2070&auto=format&fit=crop' alt='Serene spa environment' />\n  </div>\n</div>\n<style>\n.brand-story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }\n@media (max-width: 768px) { .brand-story-grid { grid-template-columns: 1fr; gap: 48px; } }\n.brand-story-text h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: #0E1B30; margin: 0 0 32px; line-height: 1.2; }\n@media (max-width: 768px) { .brand-story-text h2 { font-size: 36px; } }\n.story-desc { display: flex; flex-direction: column; gap: 24px; font-family: 'Lato', sans-serif; font-size: 18px; font-weight: 300; line-height: 1.6; color: rgba(14, 27, 48, 0.7); }\n.story-desc p { margin: 0; }\n.brand-story-img { width: 100%; aspect-ratio: 4/3; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }\n.brand-story-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: filter 1s ease; }\n.brand-story-img:hover img { filter: grayscale(0%); }\n</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness About - Brand Story V2",
+    "type": "section"
+}

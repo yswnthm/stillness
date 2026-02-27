@@ -1,0 +1,48 @@
+{
+    "content": [
+        {
+            "id": "timeline_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "timeline_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "timeline_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='timeline-wrap'>\n  <h3 class='timeline-header'>Our Journey</h3>\n  <div class='timeline-list'>\n    <div class='timeline-item'>\n      <div class='time-year'>Why</div>\n      <div class='time-content'>\n        <h4>Most of what we carry started young.</h4>\n        <p>In working with adults, a pattern became clear. Most of the pain people are processing in their 30s and 40s has roots in childhood &mdash; in things they were never given language for.</p>\n      </div>\n    </div>\n    <div class='timeline-item'>\n      <div class='time-year'>Decks</div>\n      <div class='time-content'>\n        <h4>Affirmation Decks</h4>\n        <p>Simple, visual affirmations designed for children aged 4&ndash;12. Beautiful, gentle, and genuinely fun to use &mdash; alone or with a parent.</p>\n      </div>\n    </div>\n    <div class='timeline-item'>\n      <div class='time-year'>Talks</div>\n      <div class='time-content'>\n        <h4>Conversation Decks</h4>\n        <p>Cards that open real conversations between kids and the adults who love them. About feelings, fears, and what it means to be okay.</p>\n      </div>\n    </div>\n    <div class='timeline-item last'>\n      <div class='time-year'>Reason</div>\n      <div class='time-content'>\n        <h4>Why we built them</h4>\n        <p>Not as a product line. As a response to what we kept seeing in our adult sessions. Every card is built with intention &mdash; and with the child's inner world in mind.</p>\n      </div>\n    </div>\n  </div>\n</div>\n<style>\n.timeline-wrap { width: 100%; }\n.timeline-header { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: #1D3152; text-align: center; margin: 0 0 64px; }\n@media (max-width: 768px) { .timeline-header { font-size: 32px; } }\n.timeline-list { display: flex; flex-direction: column; gap: 48px; }\n.timeline-item { display: flex; gap: 48px; align-items: flex-start; }\n@media (max-width: 768px) { .timeline-item { flex-direction: column; gap: 24px; } }\n.time-year { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: #688F9D; width: 128px; flex-shrink: 0; }\n.time-content { flex-grow: 1; padding-bottom: 48px; border-bottom: 1px solid rgba(14, 27, 48, 0.1); }\n.timeline-item.last .time-content { border-bottom: none; padding-bottom: 0; }\n.time-content h4 { font-family: 'Lato', sans-serif; font-size: 20px; font-weight: 700; color: #0E1B30; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 12px; }\n.time-content p { font-family: 'Lato', sans-serif; font-size: 18px; font-weight: 300; line-height: 1.6; color: rgba(14, 27, 48, 0.6); margin: 0; max-width: 600px; }\n</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness About - Timeline V2",
+    "type": "section"
+}
