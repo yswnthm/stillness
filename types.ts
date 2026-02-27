@@ -25,6 +25,9 @@ export interface Article {
   category: string;
   image: string;
   readTime: string;
+  date: string;
+  featured: boolean;
+  content: string;
 }
 
 export interface Stat {
