@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sessions & Offerings — Stillness Curated Retreats</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sage: #4A6741;
+    --sage-mid: #6B8F62;
+    --sage-light: #C8D8C4;
+    --sage-pale: #EFF4EE;
+    --warm: #B8956A;
+    --warm-light: #E8D5BC;
+    --warm-pale: #FAF3EA;
+    --cream: #FAF7F2;
+    --ink: #1E1E1A;
+    --ink-soft: #3D3D38;
+    --mist: #8A8A84;
+    --mist-light: #DEDED9;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.5rem 4rem;
+    background: rgba(250, 247, 242, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(74, 103, 65, 0.12);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem; font-weight: 400;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--sage); text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-soft); text-decoration: none; transition: color 0.3s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--sage); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 55vh;
+    background: var(--sage);
+    display: flex; flex-direction: column;
+    justify-content: flex-end;
+    padding: 8rem 4rem 5rem;
+    position: relative; overflow: hidden;
+    padding-top: calc(80px + 5rem);
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 80% 20%, rgba(184,149,106,0.22) 0%, transparent 55%),
+      radial-gradient(ellipse at 10% 80%, rgba(200,216,196,0.12) 0%, transparent 50%);
+  }
+  .hero-ring {
+    position: absolute; border-radius: 50%; border: 1px solid rgba(200,216,196,0.18);
+  }
+  .hero-ring-1 { width: 36rem; height: 36rem; top: -10rem; right: -8rem; }
+  .hero-ring-2 { width: 22rem; height: 22rem; top: -4rem; right: 2rem; border-color: rgba(184,149,106,0.2); }
+
+  .hero-eyebrow {
+    font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--sage-light); margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 1rem; position: relative; z-index: 1;
+  }
+  .hero-eyebrow::before { content: ''; width: 2.5rem; height: 1px; background: var(--warm-light); display: block; }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 6vw, 6rem);
+    font-weight: 300; line-height: 1.0;
+    color: var(--cream); position: relative; z-index: 1;
+    max-width: 22ch; margin-bottom: 2rem;
+  }
+  .hero-title em { font-style: italic; color: var(--warm-light); }
+
+  .hero-sub {
+    font-size: 0.95rem; line-height: 1.8;
+    color: rgba(250,247,242,0.7); max-width: 44rem;
+    position: relative; z-index: 1;
+  }
+
+  /* ── FILTER BAR ── */
+  .filter-bar {
+    background: var(--cream);
+    border-bottom: 1px solid var(--mist-light);
+    padding: 0 4rem;
+    display: flex; align-items: center; gap: 0;
+    position: sticky; top: 73px; z-index: 90;
+    overflow-x: auto;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .filter-btn {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--mist); background: none; border: none;
+    padding: 1.2rem 1.6rem; cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s; white-space: nowrap;
+  }
+  .filter-btn:hover { color: var(--ink-soft); }
+  .filter-btn.active { color: var(--sage); border-bottom-color: var(--sage); }
+
+  /* ── INTRO TEXT ── */
+  .intro {
+    padding: 5rem 4rem 3rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .intro-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 2.5vw, 2.6rem); font-weight: 300;
+    line-height: 1.25; color: var(--ink);
+  }
+  .intro-title em { font-style: italic; color: var(--sage); }
+  .intro-body { font-size: 0.93rem; line-height: 1.9; color: var(--ink-soft); padding-top: 0.5rem; }
+
+  /* ── OFFERINGS GRID ── */
+  .offerings-section {
+    padding: 2rem 4rem 6rem;
+    max-width: 1200px; margin: 0 auto;
+  }
+
+  .offerings-grid {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+
+  /* ── OFFERING CARD ── */
+  .offering-card {
+    display: grid;
+    grid-template-columns: 3.5fr 1fr;
+    background: var(--cream);
+    border: 1px solid var(--mist-light);
+    transition: border-color 0.3s;
+    opacity: 0; transform: translateY(24px);
+    animation: riseUp 0.65s forwards;
+    position: relative; overflow: hidden;
+  }
+  .offering-card:nth-child(1) { animation-delay: 0.05s; }
+  .offering-card:nth-child(2) { animation-delay: 0.15s; }
+  .offering-card:nth-child(3) { animation-delay: 0.25s; }
+  .offering-card:nth-child(4) { animation-delay: 0.35s; }
+  .offering-card:nth-child(5) { animation-delay: 0.45s; }
+  .offering-card:nth-child(6) { animation-delay: 0.55s; }
+  .offering-card:hover { border-color: var(--sage-light); }
+
+  /* accent line on hover */
+  .offering-card::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: var(--warm);
+    transform: scaleY(0); transform-origin: bottom;
+    transition: transform 0.4s ease;
+  }
+  .offering-card:hover::before { transform: scaleY(1); }
+
+  @keyframes riseUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card-main {
+    padding: 2.8rem 3rem 2.8rem 2.8rem;
+    border-right: 1px solid var(--mist-light);
+  }
+
+  .card-header {
+    display: flex; align-items: flex-start;
+    justify-content: space-between; gap: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .card-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem; font-weight: 300;
+    color: var(--mist); letter-spacing: 0.1em;
+    flex-shrink: 0; padding-top: 0.4rem;
+  }
+
+  .card-title-block { flex: 1; }
+
+  .card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 2.2vw, 2rem);
+    font-weight: 400; line-height: 1.15;
+    color: var(--ink); margin-bottom: 0.3rem;
+  }
+  .card-title em { font-style: italic; color: var(--sage); }
+
+  .card-subtitle {
+    font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--warm); margin-bottom: 0;
+  }
+
+  .card-body {
+    font-size: 0.92rem; line-height: 1.85; color: var(--ink-soft);
+    max-width: 56rem; padding-left: calc(2rem + 1.5rem);
+    margin-bottom: 1.6rem;
+  }
+
+  .card-tags {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+    padding-left: calc(2rem + 1.5rem);
+  }
+  .tag {
+    font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border: 1px solid var(--mist-light);
+    color: var(--ink-soft); border-radius: 0;
+  }
+  .tag-audience {
+    background: var(--sage-pale);
+    border-color: var(--sage-light);
+    color: var(--sage);
+  }
+
+  /* combo badge */
+  .combo-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--warm); background: var(--warm-pale);
+    border: 1px solid var(--warm-light);
+    padding: 0.35rem 0.9rem;
+  }
+  .combo-badge::before {
+    content: '◈';
+    font-size: 0.6rem;
+  }
+
+  .card-aside {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 2rem 1.5rem; gap: 1.8rem;
+    text-align: center;
+  }
+
+  .card-icon {
+    width: 3.2rem; height: 3.2rem;
+    border-radius: 50%;
+    background: var(--sage-pale);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .card-icon svg { width: 1.4rem; height: 1.4rem; stroke: var(--sage); fill: none; stroke-width: 1.5; }
+
+  .card-cta {
+    display: inline-block;
+    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--cream); background: var(--sage);
+    border: 1px solid var(--sage);
+    padding: 0.75rem 1.2rem;
+    text-decoration: none; transition: all 0.3s; width: 100%;
+    text-align: center;
+  }
+  .card-cta:hover { background: transparent; color: var(--sage); }
+
+  /* ── COMBO SESSIONS SECTION ── */
+  .combo-section {
+    background: var(--sage);
+    padding: 6rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  .combo-section::before {
+    content: '';
+    position: absolute; top: -10rem; right: -10rem;
+    width: 40rem; height: 40rem; border-radius: 50%;
+    border: 1px solid rgba(200,216,196,0.15);
+  }
+  .combo-inner { max-width: 1200px; margin: 0 auto; }
+
+  .combo-header {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+    margin-bottom: 4rem; align-items: end;
+  }
+  .combo-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 300;
+    line-height: 1.2; color: var(--cream);
+  }
+  .combo-title em { font-style: italic; color: var(--warm-light); }
+  .combo-desc {
+    font-size: 0.93rem; line-height: 1.85;
+    color: rgba(250,247,242,0.72);
+  }
+
+  .combo-cards {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px;
+    background: rgba(200,216,196,0.15);
+  }
+  .combo-card {
+    background: rgba(30,30,26,0.55);
+    backdrop-filter: blur(8px);
+    padding: 2.2rem 2rem;
+    transition: background 0.3s;
+    position: relative;
+  }
+  .combo-card:hover { background: rgba(30,30,26,0.7); }
+
+  .combo-card-plus {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem; font-weight: 300;
+    color: var(--warm-light); opacity: 0.5;
+    line-height: 1; margin-bottom: 1rem;
+  }
+  .combo-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-weight: 400;
+    color: var(--cream); margin-bottom: 0.6rem; line-height: 1.2;
+  }
+  .combo-card-body {
+    font-size: 0.85rem; line-height: 1.8;
+    color: rgba(250,247,242,0.65);
+  }
+
+  /* ── CORPORATE HIGHLIGHT ── */
+  .corporate {
+    display: grid; grid-template-columns: 1fr 1fr;
+    min-height: 42vh;
+  }
+  .corporate-visual {
+    background: var(--ink);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .corporate-visual-inner {
+    width: 100%; height: 100%; min-height: 28rem;
+    background:
+      radial-gradient(ellipse at 30% 70%, rgba(74,103,65,0.55) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 20%, rgba(184,149,106,0.35) 0%, transparent 50%),
+      linear-gradient(160deg, #111a0f 0%, #0a0d09 100%);
+    display: flex; align-items: center; justify-content: center; padding: 3rem;
+  }
+  .corporate-visual-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-style: italic; font-weight: 300;
+    color: rgba(250,247,242,0.75); text-align: center; line-height: 1.65;
+    max-width: 22rem;
+  }
+  .corporate-content {
+    padding: 5rem 4rem; display: flex; flex-direction: column; justify-content: center;
+    background: var(--warm-pale);
+  }
+  .section-eyebrow {
+    font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--warm); display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;
+  }
+  .section-eyebrow::after { content: ''; width: 2.5rem; height: 1px; background: var(--warm-light); display: block; }
+
+  .corporate-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem); font-weight: 300;
+    line-height: 1.2; color: var(--ink); margin-bottom: 1.5rem;
+  }
+  .corporate-title em { font-style: italic; color: var(--sage); }
+  .corporate-body { font-size: 0.92rem; line-height: 1.85; color: var(--ink-soft); margin-bottom: 1rem; max-width: 32rem; }
+
+  .benefit-list { display: flex; flex-direction: column; gap: 0.65rem; margin: 1.8rem 0 2.2rem; }
+  .benefit-item {
+    display: flex; align-items: flex-start; gap: 0.9rem;
+    font-size: 0.88rem; line-height: 1.6; color: var(--ink-soft);
+  }
+  .benefit-item::before {
+    content: '';
+    width: 0.35rem; height: 0.35rem; border-radius: 50%;
+    background: var(--warm); flex-shrink: 0; margin-top: 0.5rem;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    padding: 1rem 2.2rem; text-decoration: none;
+    background: var(--sage); color: var(--cream);
+    border: 1px solid var(--sage); transition: all 0.3s;
+  }
+  .btn-primary:hover { background: transparent; color: var(--sage); }
+
+  /* ── CLOSING ── */
+  .closing {
+    padding: 8rem 4rem; text-align: center;
+    background: var(--cream);
+  }
+  .closing-line { width: 1px; height: 4rem; background: linear-gradient(to bottom, transparent, var(--warm)); margin: 0 auto 3rem; }
+  .closing-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 4rem); font-weight: 300;
+    line-height: 1.15; color: var(--ink);
+    max-width: 30rem; margin: 0 auto 1.5rem;
+  }
+  .closing-title em { font-style: italic; color: var(--sage); }
+  .closing-body { font-size: 0.93rem; line-height: 1.9; color: var(--ink-soft); max-width: 28rem; margin: 0 auto 3rem; }
+  .btn-ghost {
+    display: inline-block;
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    padding: 1rem 2.2rem; text-decoration: none;
+    background: transparent; color: var(--ink-soft);
+    border: 1px solid var(--sage-light); transition: all 0.3s; margin-left: 1rem;
+  }
+  .btn-ghost:hover { border-color: var(--sage); color: var(--sage); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink); padding: 3rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cream); }
+  .footer-tagline { font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; font-style: italic; color: rgba(184,149,106,0.7); }
+  .footer-text { font-size: 0.72rem; color: rgba(250,247,242,0.4); letter-spacing: 0.08em; }
+
+  /* ── FADE IN ── */
+  .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1.2rem 2rem; }
+    .nav-links { display: none; }
+    .filter-bar { padding: 0 1.5rem; top: 65px; }
+    .hero { padding: 7rem 2rem 4rem; }
+    .intro { grid-template-columns: 1fr; padding: 4rem 2rem 2rem; gap: 1.5rem; }
+    .offerings-section { padding: 2rem 2rem 5rem; }
+    .offering-card { grid-template-columns: 1fr; }
+    .card-aside { flex-direction: row; justify-content: space-between; border-top: 1px solid var(--mist-light); border-right: none; padding: 1.5rem 2rem; }
+    .card-body, .card-tags { padding-left: 0; }
+    .card-main { padding: 2rem; }
+    .combo-section { padding: 5rem 2rem; }
+    .combo-header { grid-template-columns: 1fr; gap: 1.5rem; }
+    .combo-cards { grid-template-columns: 1fr; }
+    .corporate { grid-template-columns: 1fr; }
+    .corporate-visual-inner { min-height: 18rem; }
+    .corporate-content { padding: 4rem 2rem; }
+    .closing { padding: 6rem 2rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2.5rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Stillness</a>
+  <ul class="nav-links">
+    <li><a href="#">Sessions</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Journal</a></li>
+    <li><a href="#">Book</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-ring hero-ring-1"></div>
+  <div class="hero-ring hero-ring-2"></div>
+  <div class="hero-eyebrow">Sessions & Offerings</div>
+  <h1 class="hero-title">Every session is<br><em>felt,</em> not just attended.</h1>
+  <p class="hero-sub">We don't offer classes. We create experiences — designed around what your body, mind, and nervous system actually need. No experience required. Just willingness to show up.</p>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterCards('all', this)">All Sessions</button>
+  <button class="filter-btn" onclick="filterCards('sound', this)">Sound</button>
+  <button class="filter-btn" onclick="filterCards('breathwork', this)">Breathwork</button>
+  <button class="filter-btn" onclick="filterCards('movement', this)">Movement</button>
+  <button class="filter-btn" onclick="filterCards('float', this)">Floating</button>
+  <button class="filter-btn" onclick="filterCards('corporate', this)">Corporate</button>
+  <button class="filter-btn" onclick="filterCards('mindfulness', this)">Mindfulness</button>
+</div>
+
+<!-- INTRO -->
+<div class="intro">
+  <h2 class="intro-title">One modality is powerful.<br><em>Two together</em> is transformative.</h2>
+  <p class="intro-body">Each offering below stands on its own — but many of our sessions weave modalities together intentionally. Sound and breathwork. Floating and meditation. Movement and stillness. We'll always let you know when a session combines approaches, so you can choose what feels right for where you are.</p>
+</div>
+
+<!-- OFFERINGS -->
+<section class="offerings-section">
+  <div class="offerings-grid">
+
+    <!-- 1. Sound Healing & Vocal Yoga -->
+    <div class="offering-card" data-category="sound">
+      <div class="card-main">
+        <div class="card-header">
+          <div class="card-num">01</div>
+          <div class="card-title-block">
+            <h3 class="card-title">Sound Healing &<br><em>Vocal Yoga</em></h3>
+            <div class="card-subtitle">Sound · Voice · Vibration</div>
+          </div>
+        </div>
+        <p class="card-body">Lie back and let sound move through you. This session combines therapeutic sound healing — using bowls, chimes, and instruments chosen for their effect on the nervous system — with the power of your own voice. Vocal yoga invites you to hum, tone, and breathe sound outward. No singing ability required. This isn't performance. It's release.</p>
+        <p class="card-body">Most people leave quieter than they arrived. Some feel things they've been sitting with for months finally loosen.</p>
+        <div class="card-tags">
+          <span class="tag tag-audience">Beginners welcome</span>
+          <span class="tag tag-audience">Burnt-out professionals</span>
+          <span class="tag tag-audience">Spiritual seekers</span>
+          <span class="tag">No experience needed</span>
+        </div>
+      </div>
+      <div class="card-aside">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+        </div>
+        <a href="#" class="card-cta">See Upcoming Dates</a>
+      </div>
+    </div>
+
+    <!-- 2. Breathwork -->
+    <div class="offering-card" data-category="breathwork">
+      <div class="card-main">
+        <div class="card-header">
+          <div class="card-num">02</div>
+          <div class="card-title-block">
+            <h3 class="card-title">Breathwork</h3>
+            <div class="card-subtitle">Breath · Nervous System · Release</div>
+          </div>
+        </div>
+        <p class="card-body">Your breath is one of the most direct ways to change how you feel — and most of us have never been taught to use it. In these guided sessions, you'll move through intentional breathing patterns designed to regulate your nervous system, clear what's stuck, and create a felt shift in your body and mind.</p>
+        <p class="card-body">Led by our certified breathwork facilitator, these sessions are held with care and without pressure. You already know how to breathe. We'll just help you do it differently.</p>
+        <div class="card-tags">
+          <span class="tag tag-audience">Moms & parents</span>
+          <span class="tag tag-audience">Burnt-out professionals</span>
+          <span class="tag tag-audience">Beginners welcome</span>
+          <span class="combo-badge">Pairs with Sound Journey</span>
+          <span class="combo-badge">Pairs with Floating</span>
+        </div>
+      </div>
+      <div class="card-aside">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12s1.5-3 4-3 4 3 4 3-1.5 3-4 3-4-3-4-3z"/></svg>
+        </div>
+        <a href="#" class="card-cta">See Upcoming Dates</a>
+      </div>
+    </div>
+
+    <!-- 3. Floating Sound Sessions -->
+    <div class="offering-card" data-category="float">
+      <div class="card-main">
+        <div class="card-header">
+          <div class="card-num">03</div>
+          <div class="card-title-block">
+            <h3 class="card-title">Floating<br><em>Sound Sessions</em></h3>
+            <div class="card-subtitle">Water · Sound · Stillness</div>
+          </div>
+        </div>
+        <p class="card-body">Where Stillness began. Our floating sound sessions take place outdoors on the water — the same experience that started it all in summer 2024. You float while sound moves through the air and the water around you. It's difficult to put into words. The combination of buoyancy, nature, and intentional sound creates something that a studio simply cannot replicate.</p>
+        <p class="card-body">Seasonal availability. When these sessions run, they fill quickly.</p>
+        <div class="card-tags">
+          <span class="tag tag-audience">Couples</span>
+          <span class="tag tag-audience">Spiritual seekers</span>
+          <span class="tag tag-audience">Beginners welcome</span>
+          <span class="combo-badge">Pairs with Breathwork</span>
+          <span class="combo-badge">Pairs with Meditation</span>
+        </div>
+      </div>
+      <div class="card-aside">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 12h20M2 17c2-2 4-3 6-3s4 1 6 3 4 3 6 3"/><path d="M12 3v6M9 6l3-3 3 3"/></svg>
+        </div>
+        <a href="#" class="card-cta">See Upcoming Dates</a>
+      </div>
+    </div>
+
+    <!-- 4. Mindfulness & Meditation -->
+    <div class="offering-card" data-category="mindfulness">
+      <div class="card-main">
+        <div class="card-header">
+          <div class="card-num">04</div>
+          <div class="card-title-block">
+            <h3 class="card-title">Mindfulness &<br><em>Meditation</em></h3>
+            <div class="card-subtitle">Mind · Presence · Grounding</div>
+          </div>
+        </div>
+        <p class="card-body">Not the kind where you try not to think — and feel like you're failing the whole time. These are guided sessions, walked through step by step, that help you settle into the present moment without fighting it. Think of it as learning to sit with yourself, with someone beside you who knows the way.</p>
+        <p class="card-body">We offer standalone meditation sessions and mindfulness experiences that can be combined with movement or sound for a fuller session.</p>
+        <div class="card-tags">
+          <span class="tag tag-audience">Moms & parents</span>
+          <span class="tag tag-audience">Beginners welcome</span>
+          <span class="tag tag-audience">Burnt-out professionals</span>
+          <span class="combo-badge">Pairs with Sound Journey</span>
+          <span class="combo-badge">Pairs with Floating</span>
+        </div>
+      </div>
+      <div class="card-aside">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <a href="#" class="card-cta">See Upcoming Dates</a>
+      </div>
+    </div>
+
+    <!-- 5. Yoga -->
+    <div class="offering-card" data-category="movement">
+      <div class="card-main">
+        <div class="card-header">
+          <div class="card-num">05</div>
+          <div class="card-title-block">
+            <h3 class="card-title">Mindful<br><em>Movement & Yoga</em></h3>
+            <div class="card-subtitle">Body · Breath · Awareness</div>
+          </div>
+        </div>
+        <p class="card-body">Movement as medicine. Our yoga sessions are slow, accessible, and led with the same intention as every other Stillness offering — to help you come back into your body, not push it to its limits. You don't need to be flexible. You don't need to have practiced before. You just need to show up.</p>
+        <p class="card-body">Sessions focus on breath-body connection, nervous system regulation, and the kind of presence that stays with you after you leave the mat.</p>
+        <div class="card-tags">
+          <span class="tag tag-audience">Beginners welcome</span>
+          <span class="tag tag-audience">Moms & parents</span>
+          <span class="tag tag-audience">Couples</span>
+          <span class="combo-badge">Pairs with Breathwork</span>
+          <span class="combo-badge">Pairs with Meditation</span>
+        </div>
+      </div>
+      <div class="card-aside">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M12 7v5l-3 3M12 12l3 3M8.5 10.5L6 14M15.5 10.5L18 14"/></svg>
+        </div>
+        <a href="#" class="card-cta">See Upcoming Dates</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMBINATION SESSIONS -->
+<section class="combo-section">
+  <div class="combo-inner">
+    <div class="combo-header">
+      <h2 class="combo-title">Sessions that<br><em>weave together.</em></h2>
+      <p class="combo-desc">Some of our most powerful offerings combine two modalities intentionally. These aren't layered by accident — each pairing is chosen because the combination creates something neither can achieve alone. We'll always name what's in each session so you know what to expect.</p>
+    </div>
+    <div class="combo-cards">
+      <div class="combo-card">
+        <div class="combo-card-plus">◈</div>
+        <div class="combo-card-title">Sound Journey + Breathwork</div>
+        <div class="combo-card-body">Breathwork primes your nervous system to receive. Sound then moves through a body that's already open. The result is a depth of release that a single modality rarely reaches on its own.</div>
+      </div>
+      <div class="combo-card">
+        <div class="combo-card-plus">◈</div>
+        <div class="combo-card-title">Floating + Breathwork</div>
+        <div class="combo-card-body">Water removes the weight of the body. Breathwork clears the noise of the mind. Together they create conditions for a stillness that's nearly impossible to access in daily life.</div>
+      </div>
+      <div class="combo-card">
+        <div class="combo-card-plus">◈</div>
+        <div class="combo-card-title">Meditation + Sound</div>
+        <div class="combo-card-body">Guided meditation leads you in, and sound holds you there. For those who find silence difficult to sit in, this combination offers a gentle way to stay present without fighting your own mind.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORPORATE -->
+<section class="corporate" id="corporate">
+  <div class="corporate-visual">
+    <div class="corporate-visual-inner">
+      <div class="corporate-visual-text">
+        "The best thing you can do for your team's performance is teach them how to actually rest."
+      </div>
+    </div>
+  </div>
+  <div class="corporate-content fade-up">
+    <div class="section-eyebrow">Corporate Sessions</div>
+    <h2 class="corporate-title">Wellness that works<br><em>for teams.</em></h2>
+    <p class="corporate-body">Your team doesn't need another workshop about productivity. They need permission to slow down — and an experience that actually delivers it.</p>
+    <p class="corporate-body">We design and facilitate bespoke wellness sessions for companies and teams of all sizes. Sound journeys, breathwork, guided meditation, or a combination — tailored to your team's needs, delivered at your venue or ours.</p>
+    <div class="benefit-list">
+      <div class="benefit-item">Fully facilitated — no prep needed from your side</div>
+      <div class="benefit-item">Customised to your team size and context</div>
+      <div class="benefit-item">Available as one-off events or recurring programs</div>
+      <div class="benefit-item">On-site at your office or at our Vancouver space</div>
+      <div class="benefit-item">Ideal for offsites, team retreats, and wellness days</div>
+    </div>
+    <a href="#" class="btn-primary">Inquire About Corporate Sessions</a>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="closing-line"></div>
+  <h2 class="closing-title">Not sure<br>where to <em>start?</em></h2>
+  <p class="closing-body">That's completely okay. Most people who find Stillness don't know exactly what they need — they just know they need something. Reach out and we'll help you find the right session.</p>
+  <div>
+    <a href="#" class="btn-primary">See All Upcoming Dates</a>
+    <a href="#" class="btn-ghost">Get in Touch</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Stillness</div>
+  <div class="footer-tagline">Real experiences. No fluff.</div>
+  <div class="footer-text">Stillness Curated Retreats INC · Vancouver, BC</div>
+</footer>
+
+<script>
+  // Filter
+  function filterCards(category, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.offering-card').forEach(card => {
+      if (category === 'all' || card.dataset.category === category) {
+        card.style.display = 'grid';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Scroll fade
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

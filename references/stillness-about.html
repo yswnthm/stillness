@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Stillness Curated Retreats</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sage: #4A6741;
+    --sage-mid: #6B8F62;
+    --sage-light: #C8D8C4;
+    --sage-pale: #EFF4EE;
+    --warm: #B8956A;
+    --warm-light: #E8D5BC;
+    --cream: #FAF7F2;
+    --ink: #1E1E1A;
+    --ink-soft: #3D3D38;
+    --mist: #8A8A84;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.5rem 4rem;
+    background: rgba(250, 247, 242, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(74, 103, 65, 0.12);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--sage); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    padding-top: 80px;
+  }
+
+  .hero-left {
+    background: var(--sage);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5rem 4rem 5rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 30% 60%, rgba(184,149,106,0.18) 0%, transparent 60%);
+  }
+
+  .hero-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--sage-light);
+    margin-bottom: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hero-label::before {
+    content: '';
+    display: block;
+    width: 2.5rem;
+    height: 1px;
+    background: var(--warm-light);
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--cream);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2.5rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--warm-light);
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(250,247,242,0.75);
+    max-width: 30rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* decorative circle */
+  .hero-circle {
+    position: absolute;
+    bottom: -6rem;
+    right: -6rem;
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    border: 1px solid rgba(200, 216, 196, 0.2);
+    z-index: 0;
+  }
+  .hero-circle-2 {
+    position: absolute;
+    bottom: -3rem;
+    right: -3rem;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    border: 1px solid rgba(184,149,106,0.25);
+    z-index: 0;
+  }
+
+  .hero-right {
+    background: var(--sage-pale);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5rem 5rem 5rem 4rem;
+    position: relative;
+  }
+
+  .hero-stat-block {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    max-width: 28rem;
+  }
+
+  .stat-item {
+    border-left: 2px solid var(--warm);
+    padding-left: 1.5rem;
+    opacity: 0;
+    transform: translateX(20px);
+    animation: slideIn 0.7s forwards;
+  }
+  .stat-item:nth-child(1) { animation-delay: 0.4s; }
+  .stat-item:nth-child(2) { animation-delay: 0.6s; }
+  .stat-item:nth-child(3) { animation-delay: 0.8s; }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--sage);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mist);
+    margin-top: 0.3rem;
+  }
+  .stat-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-top: 0.6rem;
+  }
+
+  @keyframes slideIn {
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  /* ── STORY SECTION ── */
+  .story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 80vh;
+  }
+
+  .story-text {
+    padding: 7rem 5rem 7rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--warm);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .section-eyebrow::after {
+    content: '';
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: var(--warm-light);
+    max-width: 3rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 2rem;
+  }
+  .section-title em { font-style: italic; color: var(--sage); }
+
+  .section-body {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    margin-bottom: 1.2rem;
+    max-width: 36rem;
+  }
+
+  .story-visual {
+    background: var(--ink);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .story-visual-inner {
+    width: 100%;
+    height: 100%;
+    background:
+      radial-gradient(ellipse at 20% 80%, rgba(74,103,65,0.6) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(184,149,106,0.4) 0%, transparent 50%),
+      linear-gradient(135deg, #1a2318 0%, #0d1a0b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .story-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(250,247,242,0.85);
+    text-align: center;
+    line-height: 1.6;
+    padding: 3rem;
+    max-width: 26rem;
+    position: relative;
+  }
+  .story-quote::before, .story-quote::after {
+    content: '"';
+    font-size: 5rem;
+    color: rgba(184,149,106,0.25);
+    font-family: 'Cormorant Garamond', serif;
+    position: absolute;
+    line-height: 1;
+  }
+  .story-quote::before { top: 1rem; left: 1.5rem; }
+  .story-quote::after { content: '"'; bottom: 0rem; right: 1.5rem; }
+
+  /* ── FOUNDER SECTION ── */
+  .founder {
+    background: var(--sage-pale);
+    padding: 7rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+    align-items: start;
+  }
+
+  .founder-aside {
+    position: sticky;
+    top: 7rem;
+  }
+
+  .founder-tag {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: var(--sage);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .founder-tag svg { width: 2rem; height: 2rem; fill: none; stroke: var(--cream); stroke-width: 1.5; }
+
+  .founder-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+  .founder-role {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--mist);
+    margin-bottom: 2rem;
+  }
+
+  .founder-credentials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .credential {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+  .credential::before {
+    content: '';
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: var(--warm);
+    flex-shrink: 0;
+  }
+
+  .founder-content {}
+
+  .founder-pullquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--sage);
+    border-left: 3px solid var(--warm);
+    padding-left: 1.8rem;
+    margin-bottom: 3rem;
+  }
+
+  /* ── WHY SECTION ── */
+  .why {
+    padding: 7rem 4rem;
+    background: var(--cream);
+    max-width: 100%;
+  }
+
+  .why-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .why-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 5rem;
+    align-items: end;
+  }
+
+  .why-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: var(--sage-light);
+    border: 1.5px solid var(--sage-light);
+  }
+
+  .why-card {
+    background: var(--cream);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: background 0.3s;
+  }
+  .why-card:hover {
+    background: var(--sage-pale);
+  }
+
+  .why-card-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--sage-light);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .why-card-title {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+  }
+  .why-card-desc {
+    font-size: 0.87rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+  }
+
+  /* ── CHILDREN SECTION ── */
+  .children-section {
+    background: var(--sage);
+    padding: 7rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .children-section::before {
+    content: '';
+    position: absolute;
+    top: -8rem; right: -8rem;
+    width: 30rem; height: 30rem;
+    border-radius: 50%;
+    border: 1px solid rgba(200,216,196,0.2);
+  }
+
+  .children-text .section-eyebrow { color: var(--warm-light); }
+  .children-text .section-eyebrow::after { background: rgba(232,213,188,0.3); }
+  .children-text .section-title { color: var(--cream); }
+  .children-text .section-title em { color: var(--warm-light); }
+  .children-text .section-body { color: rgba(250,247,242,0.78); }
+
+  .children-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .child-card {
+    background: rgba(250,247,242,0.1);
+    border: 1px solid rgba(200,216,196,0.25);
+    padding: 1.5rem 1.8rem;
+    backdrop-filter: blur(6px);
+    transition: background 0.3s;
+  }
+  .child-card:hover { background: rgba(250,247,242,0.16); }
+  .child-card-title {
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--warm-light);
+    margin-bottom: 0.5rem;
+  }
+  .child-card-text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: rgba(250,247,242,0.8);
+  }
+
+  /* ── CLOSING ── */
+  .closing {
+    padding: 9rem 4rem;
+    text-align: center;
+    background: var(--cream);
+    position: relative;
+  }
+
+  .closing-ring {
+    width: 1px;
+    height: 5rem;
+    background: linear-gradient(to bottom, transparent, var(--warm));
+    margin: 0 auto 3rem;
+  }
+
+  .closing-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--ink);
+    max-width: 36rem;
+    margin: 0 auto 2.5rem;
+  }
+  .closing-title em { font-style: italic; color: var(--sage); }
+
+  .closing-body {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    max-width: 30rem;
+    margin: 0 auto 3.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-primary {
+    background: var(--sage);
+    color: var(--cream);
+    border: 1px solid var(--sage);
+  }
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--sage);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink-soft);
+    border: 1px solid var(--sage-light);
+    margin-left: 1rem;
+  }
+  .btn-ghost:hover {
+    border-color: var(--sage);
+    color: var(--sage);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    padding: 3rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+  .footer-text {
+    font-size: 0.72rem;
+    color: rgba(250,247,242,0.4);
+    letter-spacing: 0.08em;
+  }
+  .footer-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: rgba(184,149,106,0.7);
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 1.2rem 2rem; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 6rem 2rem 4rem; min-height: 55vh; }
+    .hero-right { padding: 4rem 2rem; }
+    .story { grid-template-columns: 1fr; }
+    .story-visual { min-height: 18rem; }
+    .founder { grid-template-columns: 1fr; gap: 2.5rem; padding: 5rem 2rem; }
+    .founder-aside { position: static; }
+    .why { padding: 5rem 2rem; }
+    .why-header { grid-template-columns: 1fr; }
+    .why-cards { grid-template-columns: 1fr 1fr; }
+    .children-section { grid-template-columns: 1fr; padding: 5rem 2rem; }
+    .closing { padding: 6rem 2rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2.5rem 2rem; }
+    .story-text { padding: 4rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Stillness</a>
+  <ul class="nav-links">
+    <li><a href="#">Sessions</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Journal</a></li>
+    <li><a href="#">Book</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-label">About Stillness</div>
+    <h1 class="hero-title">You don't have to<br>keep <em>carrying it.</em></h1>
+    <p class="hero-sub">Stillness is a wellness experience company based in Greater Vancouver. We create real, felt experiences that help people slow down, heal, and come back to themselves.</p>
+    <div class="hero-circle"></div>
+    <div class="hero-circle-2"></div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stat-block">
+      <div class="stat-item">
+        <div class="stat-num">2024</div>
+        <div class="stat-label">Founded</div>
+        <div class="stat-desc">We started outdoors, with floating sound healing sessions on the water.</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">6+</div>
+        <div class="stat-label">Offerings</div>
+        <div class="stat-desc">Sound journeys, breathwork, yoga, meditation, digital products, and tools for children.</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">All of us.</div>
+        <div class="stat-label">Who this is for</div>
+        <div class="stat-desc">Adults carrying old wounds. Parents wanting better for their kids. Anyone ready to feel something again.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <div class="story-text">
+    <div class="section-eyebrow">Our Story</div>
+    <h2 class="section-title">We started <em>outside.</em><br>The real work began inside.</h2>
+    <p class="section-body">In summer 2024, we launched with floating sound healing sessions in the Greater Vancouver area. The water. The open air. The quiet. It was the beginning of something.</p>
+    <p class="section-body">When the seasons changed, we moved indoors — and discovered that the container we'd been creating outside translated into something deeper when brought into an intimate, intentional space. We began offering sound journeys, breathwork, yoga, and guided meditation. And people kept showing up.</p>
+    <p class="section-body">Not just for wellness. But because something in them needed to be heard.</p>
+  </div>
+  <div class="story-visual">
+    <div class="story-visual-inner">
+      <div class="story-quote">
+        We didn't set out to build a healing company. We set out to create a moment of rest.<br>The healing found us.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder">
+  <div class="founder-aside fade-up">
+    <div class="founder-tag">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+    </div>
+    <div class="founder-name">Our Founder</div>
+    <div class="founder-role">Host · Sound Healing Facilitator · Breathwork Facilitator</div>
+    <div class="founder-credentials">
+      <div class="credential">Certified Sound Healing Facilitator</div>
+      <div class="credential">Certified Breathwork Facilitator</div>
+      <div class="credential">Greater Vancouver, BC</div>
+      <div class="credential">Running sessions since Summer 2024</div>
+    </div>
+  </div>
+
+  <div class="founder-content fade-up">
+    <div class="founder-pullquote">
+      I started as a host. I ended up becoming a facilitator — not because I planned to, but because I couldn't stop learning.
+    </div>
+    <p class="section-body">I built Stillness because I needed it. I was drawn to sound healing and breathwork the way most people are — quietly, almost accidentally, through a door I wasn't sure I was ready to open.</p>
+    <p class="section-body">In running sessions for others, I kept seeing the same thing. People were in their 30s and 40s, carrying things that clearly started much earlier. Things that had never been given a name. Things no one had ever helped them put down.</p>
+    <p class="section-body">That observation is why Stillness is more than just a session company. It's why we built tools for children. Because the earlier we learn to name what we feel, the less we spend decades trying to unlearn it.</p>
+    <p class="section-body">Stillness is honest work. It's not perfect. It's not finished. But it's real — and it keeps growing.</p>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="why-inner">
+    <div class="why-header">
+      <div>
+        <div class="section-eyebrow">Our Approach</div>
+        <h2 class="section-title">What makes<br>Stillness <em>different</em></h2>
+      </div>
+      <p class="section-body" style="align-self:end;">We don't offer classes. We offer experiences. There's a difference — and you'll feel it the moment you walk in.</p>
+    </div>
+
+    <div class="why-cards">
+      <div class="why-card fade-up">
+        <div class="why-card-num">01</div>
+        <div class="why-card-title">Experiential, not educational</div>
+        <div class="why-card-desc">You don't leave knowing more. You leave feeling different. Every session is designed to create a real, physical shift — not just a mental one.</div>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-card-num">02</div>
+        <div class="why-card-title">Led by someone in it</div>
+        <div class="why-card-desc">Our founder isn't teaching from a textbook. She's facilitating from lived experience. That's not a marketing line. You'll feel it in the room.</div>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-card-num">03</div>
+        <div class="why-card-title">Honest, not mystical</div>
+        <div class="why-card-desc">We skip the jargon. No toxic positivity. No pressure to "transform." Just a real space where you can slow down and feel what's actually there.</div>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-card-num">04</div>
+        <div class="why-card-title">Rooted in community</div>
+        <div class="why-card-desc">We're a Vancouver company. Our sessions are intimate. Our community is real. We're not a platform — we're a place.</div>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-card-num">05</div>
+        <div class="why-card-title">A safe container</div>
+        <div class="why-card-desc">Everything we create is designed to help you feel held. You don't need to be ready. You just need to show up.</div>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-card-num">06</div>
+        <div class="why-card-title">Generational thinking</div>
+        <div class="why-card-desc">We work with adults. And we build tools for children. Because healing is more powerful when it starts early.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHILDREN -->
+<section class="children-section">
+  <div class="children-text fade-up">
+    <div class="section-eyebrow">For the Next Generation</div>
+    <h2 class="section-title">Most of what we carry<br><em>started young.</em></h2>
+    <p class="section-body">In working with adults, a pattern became clear. Most of the pain people are processing in their 30s and 40s has roots in childhood — in things they were never given language for, feelings that were never named, moments that were never tended to.</p>
+    <p class="section-body">So we built something for children. Our affirmation and conversation decks are designed to give kids simple, powerful tools to understand what they're feeling — and to start building an inner life that will carry them through everything.</p>
+    <p class="section-body">Because the earlier we start, the less we have to undo.</p>
+  </div>
+  <div class="children-cards fade-up">
+    <div class="child-card">
+      <div class="child-card-title">Affirmation Decks</div>
+      <div class="child-card-text">Simple, visual affirmations designed for children aged 4–12. Beautiful, gentle, and genuinely fun to use — alone or with a parent.</div>
+    </div>
+    <div class="child-card">
+      <div class="child-card-title">Conversation Decks</div>
+      <div class="child-card-text">Cards that open real conversations between kids and the adults who love them. About feelings, fears, and what it means to be okay.</div>
+    </div>
+    <div class="child-card">
+      <div class="child-card-title">Why we built them</div>
+      <div class="child-card-text">Not as a product line. As a response to what we kept seeing in our adult sessions. Every card is built with intention — and with the child's inner world in mind.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="closing-ring"></div>
+  <h2 class="closing-title">Healing isn't a destination.<br>But you have to <em>start somewhere.</em></h2>
+  <p class="closing-body">Stillness exists because healing is real work — and everyone deserves a place to do it. Whether you're just curious or you've been waiting a long time, you're welcome here.</p>
+  <div>
+    <a href="#" class="btn btn-primary">See Our Sessions</a>
+    <a href="#" class="btn btn-ghost">Browse Products</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Stillness</div>
+  <div class="footer-tagline">Real experiences. No fluff.</div>
+  <div class="footer-text">Stillness Curated Retreats INC · Vancouver, BC</div>
+</footer>
+
+<script>
+  // Fade-up on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -3,24 +3,24 @@ import { motion } from 'framer-motion';
 
 const milestones = [
   {
-    year: "2022",
-    title: "The Seed",
-    description: "Elena Corves opens the first Stillness studio with two float tanks and a vision for urban silence."
+    year: "Why",
+    title: "Most of what we carry started young.",
+    description: "In working with adults, a pattern became clear. Most of the pain people are processing in their 30s and 40s has roots in childhood — in things they were never given language for."
   },
   {
-    year: "2023",
-    title: "Expansion",
-    description: "We introduced guided breathwork and sound healing rituals to complement the float experience."
+    year: "Decks",
+    title: "Affirmation Decks",
+    description: "Simple, visual affirmations designed for children aged 4–12. Beautiful, gentle, and genuinely fun to use — alone or with a parent."
   },
   {
-    year: "2024",
-    title: "Community",
-    description: "Stillness grows to three locations, becoming a cornerstone for mental wellness in the city."
+    year: "Talks",
+    title: "Conversation Decks",
+    description: "Cards that open real conversations between kids and the adults who love them. About feelings, fears, and what it means to be okay."
   },
   {
-    year: "2025",
-    title: "The Future",
-    description: "Launching our corporate wellness programs to bring stillness to the workspace."
+    year: "Reason",
+    title: "Why we built them",
+    description: "Not as a product line. As a response to what we kept seeing in our adult sessions. Every card is built with intention — and with the child's inner world in mind."
   }
 ];
 

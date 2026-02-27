@@ -3,18 +3,18 @@ import { motion } from 'framer-motion';
 
 const team = [
   {
-    name: "Elena Corves",
-    role: "Founder & Creative Director",
+    name: "Our Founder",
+    role: "Host · Sound Healing Facilitator · Breathwork Facilitator",
     image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    name: "Dr. Julian Vance",
-    role: "Director of Wellness Science",
+    name: "The Origin",
+    role: "I built Stillness because I needed it.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    name: "Maya Sterling",
-    role: "Lead Sound Practitioner",
+    name: "The Purpose",
+    role: "It's why we built tools for children. To not spend decades unlearning.",
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop"
   }
 ];

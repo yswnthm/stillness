@@ -12,20 +12,22 @@ export const BrandStory: React.FC = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-5xl font-serif text-midnightsea mb-8">Our Story</h2>
+          <h2 className="text-3xl md:text-5xl font-serif text-midnightsea mb-8">
+            You don't have to keep carrying it.<br />
+            We started outside. The real work began inside.
+          </h2>
           <div className="space-y-6 text-midnightsea/70 text-lg font-light leading-relaxed">
             <p>
-              Stillness was born from a simple realization: that in our hyper-connected world,
-              silence is the ultimate luxury.
+              Stillness is a wellness experience company based in Greater Vancouver. We create real, felt experiences that help people slow down, heal, and come back to themselves.
             </p>
             <p>
-              Founded in 2022 by Elena Corves, Stillness began as a small boutique float studio
-              dedicated to the art of doing nothing. Elena's own experience with chronic stress
-              led her to discover the profound healing power of sensory deprivation.
+              In summer 2024, we launched with floating sound healing sessions in the Greater Vancouver area. The water. The open air. The quiet. It was the beginning of something.
             </p>
             <p>
-              What started as a single float tank has evolved into a holistic sanctuary
-              where thousands have rediscovered the spaciousness of their own minds.
+              When the seasons changed, we moved indoors — and discovered that the container we'd been creating outside translated into something deeper when brought into an intimate, intentional space. We began offering sound journeys, breathwork, yoga, and guided meditation. And people kept showing up.
+            </p>
+            <p>
+              Not just for wellness. But because something in them needed to be heard.
             </p>
           </div>
         </motion.div>

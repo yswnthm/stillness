@@ -3,6 +3,7 @@ import { BrandStory } from '../components/about/BrandStory';
 import { Timeline } from '../components/about/Timeline';
 import { MissionStatement } from '../components/about/MissionStatement';
 import { TeamGrid } from '../components/about/TeamGrid';
+import { ApproachSection } from '../components/about/ApproachSection';
 
 export const AboutPage: React.FC = () => {
   useEffect(() => {
@@ -17,6 +18,7 @@ export const AboutPage: React.FC = () => {
         <MissionStatement />
         <Timeline />
         <TeamGrid />
+        <ApproachSection />
       </div>
     </div>
   );

@@ -1,0 +1,49 @@
+{
+    "version": "0.4",
+    "title": "About - Approach",
+    "type": "section",
+    "content": [
+        {
+            "id": "approach-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "boxed",
+                "boxed_width": {
+                    "unit": "px",
+                    "size": 1140
+                },
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "bottom": "120",
+                    "right": "40",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#F7F0EC"
+            },
+            "elements": [
+                {
+                    "id": "approach-intro",
+                    "elType": "widget",
+                    "widgetType": "html",
+                    "settings": {
+                        "html": "<div class=\"approach-header\">\n  <div class=\"approach-heading-wrapper\">\n    <span class=\"approach-label\">OUR APPROACH</span>\n    <h2 class=\"approach-title\">What makes<br /><span style=\"font-style: italic;\">Stillness different</span></h2>\n  </div>\n  <div class=\"approach-desc-wrapper\">\n    <p class=\"approach-desc\">We don't offer classes. We offer experiences. There's a difference \u2014 and you'll feel it the moment you walk in.</p>\n  </div>\n</div>\n\n<style>\n.approach-header {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 4rem;\n  margin-bottom: 5rem;\n  align-items: flex-end;\n  width: 100%;\n}\n.approach-label {\n  font-family: 'Lato', sans-serif;\n  font-weight: 700;\n  font-size: 14px;\n  color: #688F9D;\n  text-transform: uppercase;\n  letter-spacing: 0.3em;\n  display: block;\n  margin-bottom: 1.5rem;\n}\n.approach-title {\n  font-family: 'Cormorant Garamond', serif;\n  font-size: 56px;\n  line-height: 1.1;\n  color: #1D3152;\n  margin: 0;\n  font-weight: 400;\n}\n.approach-desc {\n  font-family: 'Lato', sans-serif;\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 1.8;\n  color: rgba(29, 49, 82, 0.7);\n  margin: 0;\n}\n@media (max-width: 768px) {\n  .approach-header {\n    grid-template-columns: 1fr;\n    gap: 2rem;\n  }\n}\n</style>"
+                    }
+                },
+                {
+                    "id": "approach-grid",
+                    "elType": "widget",
+                    "widgetType": "html",
+                    "settings": {
+                        "html": "<div class=\"approach-grid\">\n  <div class=\"approach-card\">\n    <div class=\"approach-num\">01</div>\n    <h3 class=\"approach-card-title\">Experiential, not educational</h3>\n    <p class=\"approach-card-desc\">You don't leave knowing more. You leave feeling different. Every session is designed to create a real, physical shift \u2014 not just a mental one.</p>\n  </div>\n  <div class=\"approach-card\">\n    <div class=\"approach-num\">02</div>\n    <h3 class=\"approach-card-title\">Led by someone in it</h3>\n    <p class=\"approach-card-desc\">Our founder isn't teaching from a textbook. She's facilitating from lived experience. That's not a marketing line. You'll feel it in the room.</p>\n  </div>\n  <div class=\"approach-card\">\n    <div class=\"approach-num\">03</div>\n    <h3 class=\"approach-card-title\">Honest, not mystical</h3>\n    <p class=\"approach-card-desc\">We skip the jargon. No toxic positivity. No pressure to \"transform.\" Just a real space where you can slow down and feel what's actually there.</p>\n  </div>\n  <div class=\"approach-card\">\n    <div class=\"approach-num\">04</div>\n    <h3 class=\"approach-card-title\">Rooted in community</h3>\n    <p class=\"approach-card-desc\">We're a Vancouver company. Our sessions are intimate. Our community is real. We're not a platform \u2014 we're a place.</p>\n  </div>\n  <div class=\"approach-card\">\n    <div class=\"approach-num\">05</div>\n    <h3 class=\"approach-card-title\">A safe container</h3>\n    <p class=\"approach-card-desc\">Everything we create is designed to help you feel held. You don't need to be ready. You just need to show up.</p>\n  </div>\n  <div class=\"approach-card\">\n    <div class=\"approach-num\">06</div>\n    <h3 class=\"approach-card-title\">Generational thinking</h3>\n    <p class=\"approach-card-desc\">We work with adults. And we build tools for children. Because healing is more powerful when it starts early.</p>\n  </div>\n</div>\n\n<style>\n.approach-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 1.5px;\n  background-color: rgba(104, 143, 157, 0.2);\n  border: 1.5px solid rgba(104, 143, 157, 0.2);\n  width: 100%;\n}\n.approach-card {\n  background-color: #FFFFFF;\n  padding: 3rem;\n  transition: background-color 0.5s ease;\n  display: flex;\n  flex-direction: column;\n}\n.approach-card:hover {\n  background-color: #D9E8EB;\n}\n.approach-num {\n  font-family: 'Cormorant Garamond', serif;\n  font-size: 64px;\n  font-weight: 300;\n  color: rgba(104, 143, 157, 0.4);\n  line-height: 1;\n  margin-bottom: 1.5rem;\n}\n.approach-card-title {\n  font-family: 'Lato', sans-serif;\n  font-weight: 700;\n  font-size: 14px;\n  text-transform: uppercase;\n  letter-spacing: 0.1em;\n  color: #1D3152;\n  margin-bottom: 1rem;\n}\n.approach-card-desc {\n  font-family: 'Lato', sans-serif;\n  font-weight: 300;\n  font-size: 15px;\n  line-height: 1.6;\n  color: rgba(29, 49, 82, 0.7);\n  margin: 0;\n}\n@media (max-width: 1024px) {\n  .approach-grid {\n    grid-template-columns: repeat(2, 1fr);\n  }\n}\n@media (max-width: 640px) {\n  .approach-grid {\n    grid-template-columns: 1fr;\n  }\n}\n</style>"
+                    }
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}

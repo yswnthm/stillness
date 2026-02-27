@@ -1,0 +1,127 @@
+{
+    "version": "0.4",
+    "title": "About - Mission Statement",
+    "type": "section",
+    "content": [
+        {
+            "id": "mission-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "boxed",
+                "boxed_width": {
+                    "unit": "px",
+                    "size": 900
+                },
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "bottom": "120",
+                    "right": "40",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#1D3152"
+            },
+            "elements": [
+                {
+                    "id": "mission-label",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                        "title": "OUR MISSION",
+                        "align": "center",
+                        "title_color": "#688F9D",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                            "unit": "px",
+                            "size": 14
+                        },
+                        "typography_font_weight": "700",
+                        "typography_text_transform": "uppercase",
+                        "typography_letter_spacing": {
+                            "unit": "px",
+                            "size": 3
+                        },
+                        "margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "bottom": "32",
+                            "right": "0",
+                            "left": "0",
+                            "isLinked": false
+                        }
+                    }
+                },
+                {
+                    "id": "mission-heading",
+                    "elType": "widget",
+                    "widgetType": "heading",
+                    "settings": {
+                        "title": "Healing isn't a destination.<br />But you have to <span style=\"font-style: italic;\">start somewhere.</span>",
+                        "align": "center",
+                        "title_color": "#F7F0EC",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Cormorant Garamond",
+                        "typography_font_size": {
+                            "unit": "px",
+                            "size": 60
+                        },
+                        "typography_font_weight": "400",
+                        "typography_line_height": {
+                            "unit": "em",
+                            "size": 1.1
+                        },
+                        "margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "bottom": "40",
+                            "right": "0",
+                            "left": "0",
+                            "isLinked": false
+                        }
+                    }
+                },
+                {
+                    "id": "mission-divider",
+                    "elType": "widget",
+                    "widgetType": "divider",
+                    "settings": {
+                        "style": "solid",
+                        "weight": {
+                            "unit": "px",
+                            "size": 1
+                        },
+                        "width": {
+                            "unit": "px",
+                            "size": 96
+                        },
+                        "color": "rgba(247, 240, 236, 0.3)",
+                        "align": "center",
+                        "margin": {
+                            "unit": "px",
+                            "top": "0",
+                            "bottom": "40",
+                            "right": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "gap": 0
+                    }
+                },
+                {
+                    "id": "mission-text",
+                    "elType": "widget",
+                    "widgetType": "text-editor",
+                    "settings": {
+                        "editor": "<p style=\"text-align: center; font-family: 'Lato', sans-serif; font-weight: 300; font-size: 24px; line-height: 1.6; color: rgba(217, 232, 235, 0.7); max-width: 672px; margin: 0 auto;\">Stillness exists because healing is real work \u2014 and everyone deserves a place to do it. Whether you're just curious or you've been waiting a long time, you're welcome here.</p>"
+                    }
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}
