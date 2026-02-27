@@ -6,12 +6,12 @@
             "settings": {
                 "content_width": "full",
                 "background_background": "classic",
-                "background_color": "rgba(217, 232, 235, 0.3)",
+                "background_color": "#D9E8EB",
                 "padding": {
                     "unit": "px",
-                    "top": "120",
+                    "top": "80",
                     "right": "40",
-                    "bottom": "120",
+                    "bottom": "80",
                     "left": "40",
                     "isLinked": false
                 }
@@ -24,7 +24,7 @@
                         "content_width": "boxed",
                         "boxed_width": {
                             "unit": "px",
-                            "size": 1140
+                            "size": 1280
                         }
                     },
                     "elements": [
@@ -32,7 +32,7 @@
                             "id": "team_grid_html",
                             "elType": "widget",
                             "settings": {
-                                "html": "<div class='team-wrap'>\n  <h3 class='team-header'>Leadership</h3>\n  <div class='team-grid'>\n    <div class='team-card'>\n      <div class='team-img'><img src='https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=1000&auto=format&fit=crop' alt='Our Founder' /></div>\n      <h4>Our Founder</h4>\n      <p>Host &middot; Sound Healing Facilitator &middot; Breathwork Facilitator</p>\n    </div>\n    <div class='team-card'>\n      <div class='team-img'><img src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop' alt='The Origin' /></div>\n      <h4>The Origin</h4>\n      <p>I built Stillness because I needed it.</p>\n    </div>\n    <div class='team-card'>\n      <div class='team-img'><img src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop' alt='The Purpose' /></div>\n      <h4>The Purpose</h4>\n      <p>It's why we built tools for children. To not spend decades unlearning.</p>\n    </div>\n  </div>\n</div>\n<style>\n.team-wrap { width: 100%; }\n.team-header { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: #1D3152; text-align: center; margin: 0 0 64px; }\n@media (max-width: 768px) { .team-header { font-size: 32px; } }\n.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }\n@media (max-width: 1024px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }\n@media (max-width: 640px) { .team-grid { grid-template-columns: 1fr; } }\n.team-card { display: flex; flex-direction: column; }\n.team-img { width: 100%; aspect-ratio: 4/5; border-radius: 16px; overflow: hidden; margin-bottom: 24px; }\n.team-img img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: all 0.7s ease; transform: scale(1); }\n.team-card:hover .team-img img { filter: grayscale(0%); transform: scale(1.05); }\n.team-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #1D3152; margin: 0 0 4px; }\n.team-card p { font-family: 'Lato', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #688F9D; margin: 0; }\n</style>"
+                                "html": "<div class='team-wrap'>\n  <h3 class='team-header'>Leadership</h3>\n  <div class='team-grid'>\n    <div class='team-card'>\n      <div class='team-img'><img src='https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?q=80&w=1000&auto=format&fit=crop' alt='Our Founder' /></div>\n      <h4>Our Founder</h4>\n      <p>Host &middot; Sound Healing Facilitator &middot; Breathwork Facilitator</p>\n    </div>\n    <div class='team-card'>\n      <div class='team-img'><img src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop' alt='The Origin' /></div>\n      <h4>The Origin</h4>\n      <p>I built Stillness because I needed it.</p>\n    </div>\n    <div class='team-card'>\n      <div class='team-img'><img src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop' alt='The Purpose' /></div>\n      <h4>The Purpose</h4>\n      <p>It's why we built tools for children. To not spend decades unlearning.</p>\n    </div>\n  </div>\n</div>\n<style>\n.team-wrap { width: 100%; max-width: 1280px; margin: 0 auto; }\n.team-header {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 36px !important;\n    font-weight: 300 !important;\n    color: #1D3152 !important;\n    text-align: center;\n    margin: 0 0 64px !important;\n}\n.team-grid {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 48px;\n}\n@media (max-width: 1024px) {\n    .team-grid { grid-template-columns: repeat(2, 1fr); }\n}\n@media (max-width: 640px) {\n    .team-grid { grid-template-columns: 1fr; }\n}\n.team-card { display: flex; flex-direction: column; cursor: pointer; }\n.team-img {\n    width: 100%;\n    aspect-ratio: 4/5 !important;\n    border-radius: 16px !important;\n    overflow: hidden;\n    margin-bottom: 24px !important;\n}\n.team-img img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    filter: grayscale(100%);\n    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);\n    display: block;\n}\n.team-card:hover .team-img img {\n    filter: grayscale(0%);\n    transform: scale(1.05);\n}\n.team-card h4 {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 20px !important;\n    font-weight: 400 !important;\n    color: #1D3152 !important;\n    margin: 0 0 4px !important;\n}\n.team-card p {\n    font-family: 'Lato', sans-serif !important;\n    font-size: 14px !important;\n    font-weight: 700 !important;\n    text-transform: uppercase !important;\n    letter-spacing: 0.1em !important;\n    color: #688F9D !important;\n    margin: 0 !important;\n}\n</style>"
                             },
                             "widgetType": "html"
                         }

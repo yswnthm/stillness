@@ -1,0 +1,49 @@
+{
+    "content": [
+        {
+            "id": "shop_dynamic_grid_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "boxed",
+                "boxed_width": {
+                    "unit": "px",
+                    "size": 1140
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "flex_direction": "column",
+                "css_classes": "stillness-dynamic-grid-container"
+            },
+            "elements": [
+                {
+                    "id": "shop_dynamic_filter_html",
+                    "elType": "widget",
+                    "settings": {
+                        "html": "<div class='shop-controls'><div class='shop-categories'><a href='?' class='active'>All</a><a href='?product_cat=stillness'>Stillness</a></div><button class='shop-filter-btn'><i class='fas fa-filter'></i> Filter & Sort <i class='fas fa-chevron-down'></i></button></div><style>.shop-controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 48px; border-bottom: 1px solid rgba(14, 27, 48, 0.1); padding-bottom: 24px; position: relative; } .shop-categories { display: flex; gap: 32px; overflow-x: auto; scrollbar-width: none; } .shop-categories a { text-decoration: none; font-family: 'Lato', sans-serif; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: rgba(14, 27, 48, 0.5); transition: color 0.3s ease; white-space: nowrap; } .shop-categories a.active { color: #688F9D; font-weight: 700; } .shop-categories a:hover { color: #0E1B30; } .shop-filter-btn { background: none; border: none; font-family: 'Lato', sans-serif; font-size: 14px; color: rgba(14, 27, 48, 0.7); display: flex; align-items: center; gap: 8px; cursor: pointer; transition: color 0.3s ease; } .shop-filter-btn:hover { color: #0E1B30; } .shop-filter-btn i { font-size: 12px; transition: transform 0.3s ease; } .shop-filter-btn:hover .fa-chevron-down { transform: translateY(2px); } @media (max-width: 768px) { .shop-filter-btn { display: none; } .shop-controls { margin-bottom: 32px; } }/* Skinning standard WooCommerce output */ .stillness-dynamic-grid-container ul.products { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 48px 32px !important; list-style: none !important; padding: 0 !important; margin: 0 !important; } .stillness-dynamic-grid-container ul.products::before, .stillness-dynamic-grid-container ul.products::after { content: none !important; } @media (max-width: 1024px) { .stillness-dynamic-grid-container ul.products { grid-template-columns: 1fr 1fr !important; } } @media (max-width: 768px) { .stillness-dynamic-grid-container ul.products { grid-template-columns: 1fr !important; gap: 48px !important; } }.stillness-dynamic-grid-container li.product { display: flex !important; flex-direction: column !important; width: 100% !important; float: none !important; margin: 0 !important; position: relative !important; cursor: pointer; list-style-type: none !important; }.stillness-dynamic-grid-container li.product a.woocommerce-LoopProduct-link { display: flex !important; flex-direction: column !important; text-decoration: none !important; color: inherit !important; }.stillness-dynamic-grid-container li.product img { width: 100% !important; aspect-ratio: 4/5 !important; object-fit: cover !important; border-radius: 16px !important; transition: transform 1s ease-out !important; margin-bottom: 24px !important; background: rgba(196, 187, 180, 0.2) !important; }.stillness-dynamic-grid-container li.product:hover img { transform: scale(1.05) !important; }.stillness-dynamic-grid-container li.product .woocommerce-loop-product__title { font-family: 'Cormorant Garamond', serif !important; font-size: 22px !important; color: #0E1B30 !important; margin: 0 0 8px 0 !important; line-height: 1.2 !important; transition: color 0.3s ease !important; order: 1; }.stillness-dynamic-grid-container li.product:hover .woocommerce-loop-product__title { color: #688F9D !important; }.stillness-dynamic-grid-container li.product .price { font-family: 'Lato', sans-serif !important; font-weight: 700 !important; color: #0E1B30 !important; font-size: 16px !important; margin-bottom: 16px !important; order: 2; display: block !important; }.stillness-dynamic-grid-container li.product .price del { font-weight: 300 !important; opacity: 0.5 !important; margin-right: 8px !important; }.stillness-dynamic-grid-container li.product .price ins { text-decoration: none !important; color: #688F9D !important; }.stillness-dynamic-grid-container li.product .button.add_to_cart_button { position: absolute !important; top: 70% !important; left: 50% !important; transform: translate(-50%, 0) !important; background: #688F9D !important; color: #FFFFFF !important; padding: 12px 32px !important; border-radius: 99px !important; font-family: 'Lato', sans-serif !important; font-size: 12px !important; text-transform: uppercase !important; letter-spacing: 2px !important; opacity: 0 !important; visibility: hidden; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important; z-index: 20 !important; width: auto !important; height: auto !important; line-height: 1 !important; border: none !important; }.stillness-dynamic-grid-container li.product:hover .button.add_to_cart_button { opacity: 1 !important; visibility: visible !important; transform: translate(-50%, -20px) !important; }.stillness-dynamic-grid-container .woocommerce-placeholder { display: none !important; }</style>"
+                    },
+                    "widgetType": "html"
+                },
+                {
+                    "id": "shop_woocommerce_grid_shortcode",
+                    "elType": "widget",
+                    "settings": {
+                        "shortcode": "[products limit='6' columns='3' orderby='date' order='DESC']"
+                    },
+                    "widgetType": "shortcode"
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Shop Dynamic Grid (WooCommerce) V1",
+    "type": "section"
+}

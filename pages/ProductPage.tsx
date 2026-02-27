@@ -106,7 +106,7 @@ export const ProductPage = () => {
                     <div className="w-full lg:w-1/2 pt-4">
                         <h1 className="text-4xl md:text-5xl font-serif text-stone mb-4">{PRODUCT.name}</h1>
                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
-                            <span className="text-2xl text-stone">{PRODUCT.price}</span>
+                            <span className="text-2xl text-seafoam">{PRODUCT.price}</span>
                             <div className="flex items-center gap-1 text-sm text-stone/70">
                                 <div className="flex text-seafoam">
                                     {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
@@ -241,7 +241,7 @@ export const ProductPage = () => {
                                     <div className="absolute inset-0 bg-stone/0 group-hover:bg-stone/5 transition-colors duration-300" />
                                 </div>
                                 <h3 className="text-lg font-serif text-stone group-hover:text-seafoam transition-colors mb-1">{product.name}</h3>
-                                <span className="text-stone/70 text-sm">{product.price}</span>
+                                <span className="text-seafoam text-sm">{product.price}</span>
                             </Link>
                         ))}
                     </div>

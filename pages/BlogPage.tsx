@@ -97,7 +97,7 @@ export const BlogPage = () => {
                             key={cat}
                             onClick={() => setActiveCategory(cat)}
                             className={`flex-shrink-0 px-5 py-2 rounded-full text-xs tracking-widest uppercase transition-all duration-300 ${activeCategory === cat
-                                ? 'bg-stone text-cream'
+                                ? 'bg-seafoam text-white shadow-md shadow-seafoam/20'
                                 : 'bg-transparent text-stone/60 hover:text-stone hover:bg-stone/10'
                                 }`}
                         >
@@ -132,19 +132,19 @@ export const BlogPage = () => {
                             </Link>
                             {/* Newsletter CTA injected after 2nd article */}
                             {index === 1 && (
-                                <div className="md:col-span-2 lg:col-span-3 my-4 bg-stone rounded-3xl p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8">
+                                <div className="md:col-span-2 lg:col-span-3 my-4 bg-seafoam rounded-3xl p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl shadow-seafoam/10">
                                     <div>
-                                        <BookOpen className="text-seafoam w-10 h-10 mb-4" />
-                                        <h3 className="text-2xl font-serif text-cream mb-2">Stillness, delivered.</h3>
-                                        <p className="text-cream/70 font-light max-w-md">New essays on healing, ritual, and presence, written for the quiet hours. Join the readers who begin their week with a little more ease.</p>
+                                        <BookOpen className="text-white w-10 h-10 mb-4 opacity-80" />
+                                        <h3 className="text-2xl font-serif text-white mb-2">Stillness, delivered.</h3>
+                                        <p className="text-white/80 font-light max-w-md">New essays on healing, ritual, and presence, written for the quiet hours. Join the readers who begin their week with a little more ease.</p>
                                     </div>
                                     <form className="w-full md:w-auto flex flex-col sm:flex-row gap-3 min-w-[320px]" onSubmit={(e) => e.preventDefault()}>
                                         <input
                                             type="email"
                                             placeholder="your@email.com"
-                                            className="flex-1 bg-cream/10 border border-cream/20 text-cream placeholder:text-cream/40 rounded-full px-6 py-3 text-sm focus:outline-none focus:border-seafoam"
+                                            className="flex-1 bg-white/10 border border-white/20 text-white placeholder:text-white/60 rounded-full px-6 py-3 text-sm focus:outline-none focus:border-white/40"
                                         />
-                                        <button type="submit" className="bg-cream text-stone rounded-full px-6 py-3 text-xs uppercase tracking-widest flex-shrink-0 hover:bg-seafoam hover:text-white transition-all duration-300">
+                                        <button type="submit" className="bg-white text-seafoam rounded-full px-6 py-3 text-xs uppercase tracking-widest flex-shrink-0 hover:bg-stone hover:text-white transition-all duration-300">
                                             Subscribe
                                         </button>
                                     </form>

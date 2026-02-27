@@ -1,0 +1,73 @@
+{
+    "content": [
+        {
+            "id": "product_related_section_dynamic",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                },
+                "css_classes": "stillness-dynamic-related-container"
+            },
+            "elements": [
+                {
+                    "id": "product_related_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1440
+                        },
+                        "padding": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "40",
+                            "bottom": "120",
+                            "left": "40",
+                            "isLinked": false
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "product_related_title_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='related-header'><h2 class='related-title'>Pairs well with...</h2></div><style>.related-header { margin-bottom: 40px; } .related-title { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: #0E1B30; margin: 0; font-weight: 400; }</style>"
+                            },
+                            "widgetType": "html"
+                        },
+                        {
+                            "id": "product_related_woocommerce_shortcode",
+                            "elType": "widget",
+                            "settings": {
+                                "shortcode": "[related_products limit='4' columns='4']"
+                            },
+                            "widgetType": "shortcode"
+                        },
+                        {
+                            "id": "product_related_styled_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<style> /* Skinning standard WooCommerce 'Related Products' output */ \n.stillness-dynamic-related-container ul.products { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 32px !important; list-style: none !important; padding: 0 !important; margin: 0 !important; }\n.stillness-dynamic-related-container ul.products::before, .stillness-dynamic-related-container ul.products::after { content: none !important; }\n@media (max-width: 1024px) { .stillness-dynamic-related-container ul.products { grid-template-columns: repeat(2, 1fr) !important; gap: 24px !important; } }\n@media (max-width: 640px) { .stillness-dynamic-related-container ul.products { grid-template-columns: 1fr !important; gap: 32px !important; } }\n.stillness-dynamic-related-container li.product { display: flex !important; flex-direction: column !important; width: 100% !important; float: none !important; margin: 0 !important; cursor: pointer; list-style-type: none !important; }\n.stillness-dynamic-related-container li.product a.woocommerce-LoopProduct-link { display: flex !important; flex-direction: column !important; text-decoration: none !important; color: inherit !important; }\n.stillness-dynamic-related-container li.product img { width: 100% !important; aspect-ratio: 4/5 !important; object-fit: cover !important; border-radius: 12px !important; transition: transform 0.7s ease-out !important; margin-bottom: 16px !important; background: rgba(196, 187, 180, 0.2) !important; }\n.stillness-dynamic-related-container li.product:hover img { transform: scale(1.05) !important; }\n.stillness-dynamic-related-container li.product .woocommerce-loop-product__title { font-family: 'Cormorant Garamond', serif !important; font-size: 20px !important; color: #0E1B30 !important; margin: 0 0 4px 0 !important; font-weight: 400 !important; transition: color 0.3s ease !important; order: 1; }\n.stillness-dynamic-related-container li.product:hover .woocommerce-loop-product__title { color: #688F9D !important; }\n.stillness-dynamic-related-container li.product .price { font-family: 'Lato', sans-serif !important; color: rgba(14,27,48,0.7) !important; font-size: 14px !important; order: 2; display: block !important; }\n.stillness-dynamic-related-container li.product .button,  .stillness-dynamic-related-container li.product .added_to_cart { display: none !important; /* Hide 'Add to cart' buttons on the related grid per design */ }\n</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Product Related Dynamic V1",
+    "type": "section"
+}

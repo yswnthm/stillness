@@ -1,0 +1,55 @@
+{
+    "content": [
+        {
+            "id": "product_reviews_section_dynamic",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                },
+                "css_classes": "stillness-dynamic-reviews-container"
+            },
+            "elements": [
+                {
+                    "id": "product_reviews_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1440
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "product_reviews_html_wrapper",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='reviews-section-wrapper'>\n    <div class='reviews-header-custom'>\n        <h2 class='reviews-title-custom'>Community Notes</h2>\n    </div>\n    <div class='woocommerce-reviews-inject'>\n        <!-- Native Woo Elementor widget will sit here or below this HTML -->\n    </div>\n</div>\n<style>\n/* Wrapper styling to mimic the white card look */\n.stillness-dynamic-reviews-container {\n    max-width: 1440px;\n    margin: 0 auto 120px;\n    padding: 64px;\n    background: #FFFFFF;\n    border-radius: 24px;\n    border: 1px solid rgba(14,27,48,0.05);\n    box-sizing: border-box;\n}\n@media (max-width: 768px) { \n    .stillness-dynamic-reviews-container {\n        padding: 48px 24px; \n        border-radius: 16px; \n        margin: 0 24px 64px; \n    }\n}\n\n.reviews-header-custom {\n    padding-bottom: 32px;\n    border-bottom: 1px solid rgba(14,27,48,0.1);\n    margin-bottom: 48px;\n}\n.reviews-title-custom {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 36px;\n    color: #0E1B30;\n    margin: 0;\n    font-weight: 400;\n}\n\n/* Hide navigation tabs to only show reviews */\n.stillness-dynamic-reviews-container ul.wc-tabs {\n    display: none !important;\n}\n/* Ensure the reviews panel is always visible */\n.stillness-dynamic-reviews-container .woocommerce-Tabs-panel--reviews {\n    display: block !important;\n}\n\n/* Skinning Native WooCommerce Reviews Tab/Output */\n.stillness-dynamic-reviews-container #reviews h2, \n.stillness-dynamic-reviews-container .woocommerce-Reviews-title {\n    display: none !important; /* Hide default native title as we use our custom one */\n}\n\n.stillness-dynamic-reviews-container #comments ol.commentlist {\n    padding: 0;\n    margin: 0;\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 48px;\n    list-style: none;\n}\n@media (max-width: 768px) {\n    .stillness-dynamic-reviews-container #comments ol.commentlist {\n        grid-template-columns: 1fr;\n        gap: 32px;\n    }\n}\n\n.stillness-dynamic-reviews-container #comments ol.commentlist li .comment_container {\n    display: flex;\n    flex-direction: column;\n    gap: 16px;\n}\n\n/* Hide avatar */\n.stillness-dynamic-reviews-container #comments ol.commentlist li img.avatar {\n    display: none;\n}\n\n/* Skin Stars */\n.stillness-dynamic-reviews-container .star-rating {\n    color: #688F9D !important;\n    font-size: 14px;\n    letter-spacing: 2px;\n    width: 5.4em;\n}\n.stillness-dynamic-reviews-container .star-rating span::before {\n    color: #688F9D !important;\n}\n\n/* Skin Review Text */\n.stillness-dynamic-reviews-container #comments ol.commentlist li .description p {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 20px !important;\n    line-height: 1.6 !important;\n    color: rgba(14,27,48,0.8) !important;\n    margin: 0 !important;\n    font-style: italic !important;\n}\n\n/* Skin Author Name */\n.stillness-dynamic-reviews-container #comments ol.commentlist li .meta {\n    font-family: 'Lato', sans-serif !important;\n    font-size: 14px !important;\n    text-transform: uppercase !important;\n    letter-spacing: 2px !important;\n    color: rgba(14,27,48,0.5) !important;\n    font-weight: 700 !important;\n    margin: 0;\n}\n.stillness-dynamic-reviews-container #comments ol.commentlist li .meta time {\n    display: none; /* Hide date to match design */\n}\n.stillness-dynamic-reviews-container #comments ol.commentlist li .meta strong.woocommerce-review__author::before {\n     content: '— ';\n}\n\n/* Review Form Skinning */\n.stillness-dynamic-reviews-container #review_form_wrapper {\n    margin-top: 64px;\n    padding-top: 48px;\n    border-top: 1px solid rgba(14,27,48,0.1);\n}\n.stillness-dynamic-reviews-container #reply-title {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 28px;\n    color: #0E1B30;\n    margin-bottom: 24px;\n}\n.stillness-dynamic-reviews-container .comment-form label {\n    font-family: 'Lato', sans-serif;\n    font-size: 12px;\n    text-transform: uppercase;\n    letter-spacing: 2px;\n    color: rgba(14,27,48,0.8);\n}\n.stillness-dynamic-reviews-container .comment-form input[type=\"text\"],\n.stillness-dynamic-reviews-container .comment-form input[type=\"email\"],\n.stillness-dynamic-reviews-container .comment-form textarea {\n    width: 100%;\n    padding: 16px;\n    border: 1px solid rgba(14,27,48,0.2);\n    border-radius: 8px;\n    margin-top: 8px;\n    font-family: 'Lato', sans-serif;\n    font-size: 16px;\n    outline: none;\n    transition: border-color 0.3s;\n}\n.stillness-dynamic-reviews-container .comment-form input:focus,\n.stillness-dynamic-reviews-container .comment-form textarea:focus {\n    border-color: #688F9D;\n}\n.stillness-dynamic-reviews-container .comment-form .submit {\n    background: #688F9D;\n    color: #FFFFFF;\n    border: none;\n    padding: 16px 40px;\n    border-radius: 99px;\n    font-family: 'Lato', sans-serif;\n    font-size: 14px;\n    text-transform: uppercase;\n    letter-spacing: 2px;\n    font-weight: 700;\n    cursor: pointer;\n    margin-top: 24px;\n    transition: background 0.3s;\n}\n.stillness-dynamic-reviews-container .comment-form .submit:hover {\n    background: #0E1B30;\n}\n</style>"
+                            },
+                            "widgetType": "html"
+                        },
+                        {
+                            "id": "product_reviews_woocommerce_widget",
+                            "elType": "widget",
+                            "settings": {},
+                            "widgetType": "woocommerce-product-data-tabs"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Product Reviews Dynamic V1",
+    "type": "section"
+}

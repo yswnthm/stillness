@@ -1,0 +1,40 @@
+{
+    "content": [
+        {
+            "id": "shop_marquee_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#0E1B30",
+                "padding": {
+                    "unit": "px",
+                    "top": "12",
+                    "right": "0",
+                    "bottom": "12",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "margin": {
+                    "unit": "px",
+                    "bottom": "64",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "shop_marquee_html",
+                    "elType": "widget",
+                    "settings": {
+                        "html": "<div class='shop-marquee-container'><div class='shop-marquee-content'><span>✦ Sustainable packaging</span><span>✦ Free shipping over $100</span><span>✦ Artisan crafted</span><span>✦ Consciously sourced</span><span>✦ Sustainable packaging</span><span>✦ Free shipping over $100</span><span>✦ Artisan crafted</span><span>✦ Consciously sourced</span><span>✦ Sustainable packaging</span><span>✦ Free shipping over $100</span><span>✦ Artisan crafted</span><span>✦ Consciously sourced</span></div></div><style>.shop-marquee-container { overflow: hidden; white-space: nowrap; width: 100%; position: relative; } .shop-marquee-content { display: inline-flex; gap: 48px; animation: shop-marquee-scroll 30s linear infinite; } .shop-marquee-content span { font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 400; text-transform: uppercase; letter-spacing: 3px; color: #FFFFFF; } @keyframes shop-marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }</style>"
+                    },
+                    "widgetType": "html"
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Shop Marquee V1",
+    "type": "section"
+}

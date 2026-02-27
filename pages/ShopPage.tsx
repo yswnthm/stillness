@@ -67,14 +67,14 @@ export const ShopPage = () => {
         <div className="pt-32 pb-24 min-h-screen bg-cream">
             {/* Hero Section */}
             <section className="px-6 md:px-12 max-w-7xl mx-auto mb-20 text-center">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-stone mb-6">Tools for your stillness practice.</h1>
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-stone mb-6">Tools for your <span className="italic">stillness</span> practice.</h1>
                 <p className="text-lg text-stone/70 max-w-2xl mx-auto">
                     Thoughtfully curated essentials to support your journey inward, designed with sustainability and quiet beauty in mind.
                 </p>
             </section>
 
             {/* Value Proposition Bar */}
-            <div className="bg-stone text-cream py-3 overflow-hidden whitespace-nowrap mb-16 relative">
+            <div className="bg-seafoam text-cream py-3 overflow-hidden whitespace-nowrap mb-16 relative">
                 <div className="animate-marquee flex gap-12 text-sm tracking-widest uppercase">
                     <span>✦ Sustainable packaging</span>
                     <span>✦ Free shipping over $100</span>
@@ -104,7 +104,7 @@ export const ShopPage = () => {
                                 onClick={() => setActiveCategory(category)}
                                 className={`whitespace-nowrap text-sm tracking-widest uppercase transition-colors duration-300 ${activeCategory === category
                                     ? 'text-seafoam font-semibold'
-                                    : 'text-stone/50 hover:text-stone'
+                                    : 'text-stone/50 hover:text-seafoam'
                                     }`}
                             >
                                 {category}
@@ -144,7 +144,7 @@ export const ShopPage = () => {
                             <div className="flex-grow flex flex-col">
                                 <div className="flex justify-between items-start mb-2">
                                     <h3 className="text-xl font-serif text-stone group-hover:text-seafoam transition-colors">{product.name}</h3>
-                                    <span className="text-stone font-medium ml-4 shrink-0">{product.price}</span>
+                                    <span className="text-seafoam font-medium ml-4 shrink-0">{product.price}</span>
                                 </div>
                                 <p className="text-sm text-stone/60 leading-relaxed mb-4">{product.description}</p>
                                 <div className="mt-auto hidden md:flex items-center gap-2 text-xs uppercase tracking-widest text-seafoam opacity-0 group-hover:opacity-100 transition-opacity duration-300">

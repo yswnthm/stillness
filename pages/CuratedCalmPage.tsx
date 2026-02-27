@@ -245,7 +245,7 @@ export const CuratedCalmPage = () => {
                                 </div>
 
                                 <div className="mt-12 flex flex-col md:flex-row gap-6 pt-12 border-t border-stone/5">
-                                    <Link to="/reserve" className="flex-1 bg-stone text-cream text-center py-5 rounded-full text-xs uppercase tracking-widest hover:bg-midnightsea transition-all shadow-lg">
+                                    <Link to="/reserve" className="flex-1 bg-seafoam text-white text-center py-5 rounded-full text-xs uppercase tracking-widest hover:bg-stone transition-all shadow-lg shadow-seafoam/20">
                                         Enroll Now
                                     </Link>
                                     <Link to="/contact" className="flex-1 border border-stone/20 text-stone text-center py-5 rounded-full text-xs uppercase tracking-widest hover:bg-stone/5 transition-all">
@@ -255,14 +255,14 @@ export const CuratedCalmPage = () => {
                             </div>
                         </div>
                         <div className="w-full lg:w-1/3 reveal reveal-delay-2 flex flex-col">
-                            <div className="bg-midnightsea text-cream p-12 md:p-16 rounded-[4rem] shadow-2xl flex flex-col justify-center items-center text-center h-full relative overflow-hidden group">
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-seafoam/10 rounded-full -translate-y-1/2 translate-x-1/2 animate-breathe" />
-                                <Leaf className="text-seafoam mb-8 opacity-60 group-hover:rotate-12 transition-transform duration-700" size={48} />
+                            <div className="bg-seafoam text-white p-12 md:p-16 rounded-[4rem] shadow-xl shadow-seafoam/20 flex flex-col justify-center items-center text-center h-full relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 animate-breathe" />
+                                <Leaf className="text-white mb-8 opacity-80 group-hover:rotate-12 transition-transform duration-700" size={48} />
                                 <h4 className="text-2xl font-serif mb-6">Limited Availability</h4>
-                                <p className="text-cream/60 leading-relaxed text-sm">
+                                <p className="text-white/80 leading-relaxed text-sm">
                                     Due to the highly personalized, time-intensive nature of this offering, Curated Calm memberships are **strictly capped at 8 individuals** per year.
                                 </p>
-                                <div className="mt-10 px-6 py-3 rounded-full border border-white/10 text-[10px] uppercase tracking-[0.3em] font-light">
+                                <div className="mt-10 px-6 py-3 rounded-full border border-white/30 text-[10px] uppercase tracking-[0.3em] font-light">
                                     Currently: 3 Spots Remaining
                                 </div>
                             </div>

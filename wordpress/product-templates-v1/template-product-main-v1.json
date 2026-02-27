@@ -1,0 +1,172 @@
+{
+    "content": [
+        {
+            "id": "product_main_section_dynamic",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                },
+                "css_classes": "stillness-dynamic-product-main"
+            },
+            "elements": [
+                {
+                    "id": "product_main_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1440
+                        },
+                        "padding": {
+                            "unit": "px",
+                            "top": "120",
+                            "right": "40",
+                            "bottom": "120",
+                            "left": "40",
+                            "isLinked": false
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "product_breadcrumbs",
+                            "elType": "widget",
+                            "settings": {},
+                            "widgetType": "woocommerce-breadcrumb"
+                        },
+                        {
+                            "id": "product_layout_wrapper",
+                            "elType": "container",
+                            "settings": {
+                                "content_width": "full",
+                                "flex_direction": "row",
+                                "flex_wrap": "wrap",
+                                "flex_justify_content": "space-between",
+                                "css_classes": "product-main-grid-container"
+                            },
+                            "elements": [
+                                {
+                                    "id": "product_left_col",
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "width": {
+                                            "unit": "%",
+                                            "size": 45,
+                                            "sizes": {
+                                                "tablet": 100,
+                                                "mobile": 100
+                                            }
+                                        },
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "product-gallery-sticky"
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "product_images",
+                                            "elType": "widget",
+                                            "settings": {},
+                                            "widgetType": "woocommerce-product-images"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "product_right_col",
+                                    "elType": "container",
+                                    "settings": {
+                                        "content_width": "full",
+                                        "width": {
+                                            "unit": "%",
+                                            "size": 50,
+                                            "sizes": {
+                                                "tablet": 100,
+                                                "mobile": 100
+                                            }
+                                        },
+                                        "padding": {
+                                            "unit": "px",
+                                            "top": "0",
+                                            "right": "0",
+                                            "bottom": "0",
+                                            "left": "0",
+                                            "isLinked": true
+                                        },
+                                        "css_classes": "product-details-content"
+                                    },
+                                    "elements": [
+                                        {
+                                            "id": "product_title",
+                                            "elType": "widget",
+                                            "settings": {
+                                                "title_tag": "h1"
+                                            },
+                                            "widgetType": "theme-post-title"
+                                        },
+                                        {
+                                            "id": "product_price",
+                                            "elType": "widget",
+                                            "settings": {},
+                                            "widgetType": "woocommerce-product-price"
+                                        },
+                                        {
+                                            "id": "product_rating",
+                                            "elType": "widget",
+                                            "settings": {},
+                                            "widgetType": "woocommerce-product-rating"
+                                        },
+                                        {
+                                            "id": "product_excerpt",
+                                            "elType": "widget",
+                                            "settings": {},
+                                            "widgetType": "woocommerce-product-short-description"
+                                        },
+                                        {
+                                            "id": "product_add_to_cart",
+                                            "elType": "widget",
+                                            "settings": {},
+                                            "widgetType": "woocommerce-product-add-to-cart"
+                                        },
+                                        {
+                                            "id": "product_meta",
+                                            "elType": "widget",
+                                            "settings": {},
+                                            "widgetType": "woocommerce-product-meta"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "product_main_styles",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<style>\n/* Global specific layout overrides */\n.product-main-grid-container { gap: 5%; }\n@media (max-width: 1024px) { .product-main-grid-container { flex-direction: column; gap: 48px; } }\n\n/* Breadcrumbs */\n.stillness-dynamic-product-main .woocommerce-breadcrumb {\n    font-family: 'Lato', sans-serif;\n    font-size: 12px;\n    text-transform: uppercase;\n    letter-spacing: 2px;\n    color: rgba(14,27,48,0.5);\n    margin-bottom: 32px;\n}\n.stillness-dynamic-product-main .woocommerce-breadcrumb a {\n    color: inherit;\n    text-decoration: none;\n    transition: color 0.3s;\n}\n.stillness-dynamic-product-main .woocommerce-breadcrumb a:hover {\n    color: #0E1B30;\n}\n\n/* ----- GALLERY SKINNING ----- */\n.product-gallery-sticky {\n    position: sticky;\n    top: 120px;\n    align-self: flex-start;\n}\n@media (max-width: 1024px) {\n    .product-gallery-sticky {\n        position: static;\n    }\n}\n/* Woo Gallery Flex layout to mimic UI (thumbnails on left) */\n.product-gallery-sticky .woocommerce-product-gallery {\n    display: flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 16px;\n    opacity: 1 !important; /* Force visibility sometimes WooCommerce hides it initially */\n}\n@media (max-width: 1024px) {\n    .product-gallery-sticky .woocommerce-product-gallery {\n        flex-direction: column-reverse;\n    }\n}\n/* Wrapper for the main image */\n.product-gallery-sticky .woocommerce-product-gallery__wrapper {\n    width: 100%;\n    aspect-ratio: 4/5;\n    border-radius: 16px;\n    overflow: hidden;\n    background: rgba(196,187,180,0.2);\n}\n.product-gallery-sticky .woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image:first-child img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n}\n/* Thumbnails wrapper */\n.product-gallery-sticky .flex-control-nav.flex-control-thumbs {\n    display: flex;\n    flex-direction: column;\n    gap: 16px;\n    width: 80px;\n    flex-shrink: 0;\n    padding: 0;\n    margin: 0;\n    list-style: none;\n}\n@media (max-width: 1024px) {\n    .product-gallery-sticky .flex-control-nav.flex-control-thumbs {\n        flex-direction: row;\n        width: 100%;\n        overflow-x: auto;\n        scrollbar-width: none;\n    }\n}\n.product-gallery-sticky .flex-control-nav.flex-control-thumbs li {\n    width: 100% !important; \n    float: none !important;\n}\n.product-gallery-sticky .flex-control-nav.flex-control-thumbs li img {\n    aspect-ratio: 1/1;\n    border-radius: 8px;\n    border: 2px solid transparent;\n    cursor: pointer;\n    transition: all 0.3s ease;\n    opacity: 0.6;\n    object-fit: cover;\n}\n.product-gallery-sticky .flex-control-nav.flex-control-thumbs li img.flex-active, \n.product-gallery-sticky .flex-control-nav.flex-control-thumbs li img:hover {\n    border-color: #688F9D;\n    opacity: 1;\n}\n\n/* ----- DETAILS SKINNING ----- */\n.product-details-content .product_title {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 48px;\n    color: #0E1B30;\n    margin: 0 0 16px;\n    line-height: 1.1;\n}\n.product-details-content .price {\n    font-family: 'Lato', sans-serif;\n    font-size: 24px;\n    color: #0E1B30;\n    margin-bottom: 32px;\n    display: block;\n}\n.product-details-content .woocommerce-product-rating {\n    display: flex;\n    align-items: center;\n    gap: 8px;\n    font-family: 'Lato', sans-serif;\n    font-size: 14px;\n    color: rgba(14,27,48,0.7);\n    margin-bottom: 32px;\n}\n.product-details-content .woocommerce-product-rating .star-rating {\n    color: #688F9D;\n    font-size: 12px;\n    letter-spacing: 2px;\n    width: 5.4em;\n}\n.product-details-content .woocommerce-product-rating .star-rating span::before {\n     color: #688F9D;\n}\n.product-details-content .woocommerce-product-details__short-description {\n    font-family: 'Lato', sans-serif;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 1.8;\n    color: rgba(14,27,48,0.7);\n    margin-bottom: 40px;\n}\n\n/* ----- ADD TO CART SKINNING ----- */\n.product-details-content form.cart {\n    display: flex;\n    gap: 16px;\n    margin-bottom: 48px;\n    flex-wrap: wrap;\n}\n/* Quantity */\n.product-details-content form.cart .quantity {\n    display: inline-flex;\n    align-items: center;\n    border: 1px solid rgba(14,27,48,0.2);\n    border-radius: 99px;\n    padding: 4px;\n    height: 56px;\n}\n.product-details-content form.cart .quantity input.qty {\n    width: 48px;\n    text-align: center;\n    font-family: 'Lato', sans-serif;\n    font-size: 16px;\n    color: #0E1B30;\n    border: none;\n    background: transparent;\n    line-height: 48px;\n    -moz-appearance: textfield;\n}\n.product-details-content form.cart .quantity input.qty::-webkit-outer-spin-button,\n.product-details-content form.cart .quantity input.qty::-webkit-inner-spin-button {\n    -webkit-appearance: none;\n    margin: 0;\n}\n/* Main Cart Button */\n.product-details-content form.cart button.single_add_to_cart_button {\n    flex: 1;\n    height: 56px;\n    background: #688F9D;\n    color: #FFFFFF;\n    border: none;\n    border-radius: 99px;\n    font-family: 'Lato', sans-serif;\n    font-size: 14px;\n    text-transform: uppercase;\n    letter-spacing: 2px;\n    font-weight: 700;\n    cursor: pointer;\n    transition: background 0.3s;\n    box-shadow: 0 10px 30px rgba(104,143,157,0.2);\n}\n.product-details-content form.cart button.single_add_to_cart_button:hover {\n    background: #0E1B30;\n}\n\n/* ----- META SKINNING ----- */\n.product-details-content .product_meta {\n    border-top: 1px solid rgba(14,27,48,0.1);\n    padding-top: 24px;\n    font-family: 'Lato', sans-serif;\n    font-size: 12px;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: rgba(14,27,48,0.5);\n    display: flex;\n    flex-direction: column;\n    gap: 8px;\n}\n.product-details-content .product_meta a {\n    color: #688F9D;\n    text-decoration: none;\n}\n.product-details-content .product_meta a:hover {\n    color: #0E1B30;\n}\n</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Product Main Dynamic V2",
+    "type": "section"
+}
