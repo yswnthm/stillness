@@ -1,0 +1,74 @@
+{
+    "content": [
+        {
+            "id": "corp_services_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "services_intro_container",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        },
+                        "margin": {
+                            "unit": "px",
+                            "bottom": "80",
+                            "isLinked": false
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "services_intro_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='services-intro-grid'><h2>One modality is powerful.<br><span class='italic'>Two together</span> is transformative.</h2><p>Each offering below stands on its own — but many of our sessions weave modalities together intentionally. Sound and breathwork. Floating and meditation. Movement and stillness. We'll always let you know when a session combines approaches, so you can choose what feels right for where you are.</p></div><style>.services-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; } .services-intro-grid h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: #1D3152; line-height: 1.1; margin: 0; } .services-intro-grid .italic { font-style: italic; color: #688F9D; } .services-intro-grid p { font-family: 'Lato', sans-serif; font-size: 18px; line-height: 1.6; color: rgba(29, 49, 82, 0.7); margin: 0; padding-top: 8px; } @media (max-width: 768px) { .services-intro-grid { grid-template-columns: 1fr; gap: 32px; } }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                },
+                {
+                    "id": "services_grid_container",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "services_main_grid_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='offerings-list'><div class='offering-item'><div class='offering-main'><div class='offering-head'><span class='offering-id'>01</span><div class='offering-title-wrap'><h3>Sound Healing & <span class='italic'>Vocal Yoga</span></h3><p class='offering-subtitle'>Sound · Voice · Vibration</p></div></div><div class='offering-body'><p>Lie back and let sound move through you. This session combines therapeutic sound healing — using bowls, chimes, and instruments chosen for their effect on the nervous system — with the power of your own voice.</p><div class='tag-wrap'><span class='tag'>Beginners welcome</span><span class='tag'>Burnt-out professionals</span><span class='tag special'>No experience needed</span></div></div></div><div class='offering-side'><div class='icon-circle'><i class='fas fa-music'></i></div><a href='/reserve' class='offering-btn'>See Upcoming Dates</a></div></div><div class='offering-item'><div class='offering-main'><div class='offering-head'><span class='offering-id'>02</span><div class='offering-title-wrap'><h3>Breathwork</h3><p class='offering-subtitle'>Breath · Nervous System · Release</p></div></div><div class='offering-body'><p>Your breath is one of the most direct ways to change how you feel. In these guided sessions, you'll move through intentional breathing patterns designed to regulate your nervous system and create a felt shift.</p><div class='tag-wrap'><span class='tag'>Moms & parents</span><span class='tag'>Burnt-out professionals</span><span class='tag combo'>◈ Pairs with Sound</span></div></div></div><div class='offering-side'><div class='icon-circle'><i class='fas fa-wind'></i></div><a href='/reserve' class='offering-btn'>See Upcoming Dates</a></div></div><div class='offering-item'><div class='offering-main'><div class='offering-head'><span class='offering-id'>03</span><div class='offering-title-wrap'><h3>Floating <span class='italic'>Sound Sessions</span></h3><p class='offering-subtitle'>Water · Sound · Stillness</p></div></div><div class='offering-body'><p>Where Stillness began. Our floating sound sessions take place outdoors on the water. You float while sound moves through the air and the water around you, creating a combination of buoyancy and nature.</p><div class='tag-wrap'><span class='tag'>Couples</span><span class='tag'>Spiritual seekers</span><span class='tag combo'>◈ Pairs with Breathwork</span></div></div></div><div class='offering-side'><div class='icon-circle'><i class='fas fa-tint'></i></div><a href='/reserve' class='offering-btn'>See Upcoming Dates</a></div></div></div><style>.offerings-list { display: flex; flex-direction: column; gap: 1px; background: rgba(29, 49, 82, 0.1); border: 1px solid rgba(29, 49, 82, 0.1); } .offering-item { display: grid; grid-template-columns: 1fr 250px; background: #FFFFFF; position: relative; overflow: hidden; } .offering-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: #C4BBB4; transform: scaleY(0); transition: transform 0.5s ease; transform-origin: bottom; } .offering-item:hover::before { transform: scaleY(1); } .offering-main { padding: 48px; border-right: 1px solid rgba(29, 49, 82, 0.1); } .offering-head { display: flex; gap: 32px; align-items: flex-start; margin-bottom: 24px; } .offering-id { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: rgba(29, 49, 82, 0.3); padding-top: 6px; } .offering-title-wrap h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #1D3152; margin: 0 0 8px; } .offering-title-wrap .italic { font-style: italic; color: #688F9D; } .offering-subtitle { font-family: 'Lato', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #C4BBB4; margin: 0; } .offering-body { padding-left: 64px; } .offering-body p { font-family: 'Lato', sans-serif; font-size: 16px; line-height: 1.6; color: rgba(29, 49, 82, 0.7); margin-bottom: 24px; } .tag-wrap { display: flex; flex-wrap: wrap; gap: 8px; } .tag { padding: 6px 12px; font-family: 'Lato', sans-serif; font-size: 9px; text-transform: uppercase; letter-spacing: 1px; color: #688F9D; background: rgba(104, 143, 157, 0.05); border: 1px solid rgba(104, 143, 157, 0.2); } .tag.special { color: rgba(29, 49, 82, 0.6); background: transparent; border-color: rgba(29, 49, 82, 0.1); } .tag.combo { color: #C4BBB4; background: rgba(196, 187, 180, 0.1); border-color: rgba(196, 187, 180, 0.3); font-weight: 700; } .offering-side { padding: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; background: rgba(29, 49, 82, 0.02); } .icon-circle { width: 64px; height: 64px; border-radius: 99px; background: rgba(104, 143, 157, 0.1); display: flex; align-items: center; justify-content: center; color: #688F9D; font-size: 24px; } .offering-btn { width: 100%; text-align: center; padding: 16px; background: #688F9D; color: #FFFFFF; font-family: 'Lato', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; border: 1px solid #688F9D; transition: all 0.3s ease; } .offering-btn:hover { background: transparent; color: #688F9D; } @media (max-width: 768px) { .offering-item { grid-template-columns: 1fr; } .offering-main { border-right: none; border-bottom: 1px solid rgba(29, 49, 82, 0.1); padding: 32px; } .offering-body { padding-left: 0; } .offering-head { gap: 16px; } .offering-side { padding: 32px; } }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Corporate Services V2",
+    "type": "section"
+}

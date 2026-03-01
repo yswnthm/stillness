@@ -1,0 +1,46 @@
+{
+    "content": [
+        {
+            "id": "sacred_rituals_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "padding": {
+                    "unit": "px",
+                    "top": "160",
+                    "right": "24",
+                    "bottom": "160",
+                    "left": "24",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "sacred_rituals_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "sacred_rituals_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='rituals-wrap reveal'><div class='rituals-label'>The Sensory Path</div><div class='rituals-grid'><div class='ritual-item group'><div class='ritual-icon'><i class='fas fa-water'></i></div><h4 class='ritual-title'>Immersion</h4><p class='ritual-desc'>Weightless release</p></div><div class='ritual-item group'><div class='ritual-icon'><i class='fas fa-sparkles'></i></div><h4 class='ritual-title'>Frequency</h4><p class='ritual-desc'>Sound as healing</p></div><div class='ritual-item group'><div class='ritual-icon'><i class='fas fa-wind'></i></div><h4 class='ritual-title'>Breath</h4><p class='ritual-desc'>The primary tool</p></div><div class='ritual-item group'><div class='ritual-icon'><i class='fas fa-sun'></i></div><h4 class='ritual-title'>Ritual</h4><p class='ritual-desc'>Sacred habit</p></div></div></div><style>.rituals-wrap { padding: 160px 48px; background: rgba(217, 232, 235, 0.3); border-radius: 5rem; text-align: center; margin-bottom: 240px; }.rituals-label { text-transform: uppercase; letter-spacing: 0.4em; font-size: 10px; color: #688F9D; margin-bottom: 96px; font-weight: 700; font-family: 'Lato', sans-serif; }.rituals-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 64px; }@media (max-width: 1023px) { .rituals-grid { grid-template-columns: repeat(2, 1fr); gap: 48px; } }@media (max-width: 480px) { .rituals-grid { grid-template-columns: 1fr; } }.ritual-item { display: flex; flex-direction: column; align-items: center; }.ritual-icon { width: 80px; height: 80px; border: 1px solid rgba(14, 27, 48, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; background: #FFFFFF; color: #688F9D; font-size: 24px; margin-bottom: 32px; transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }.ritual-item:hover .ritual-icon { transform: scale(1.1); border-color: #688F9D; }.ritual-icon i { transition: transform 0.7s ease; }.ritual-item:hover .ritual-icon i { transform: rotate(12deg); }.ritual-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #0E1B30; margin-bottom: 8px; font-weight: 500; }.ritual-desc { text-transform: uppercase; letter-spacing: 0.2em; font-size: 10px; color: rgba(14, 27, 48, 0.4); font-weight: 700; font-family: 'Lato', sans-serif; }.reveal { opacity: 0; transform: translateY(30px); animation: revealFadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }@keyframes revealFadeUp { to { opacity: 1; transform: translateY(0); } }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Sacred Rituals Grid V2",
+    "type": "section"
+}

@@ -1,0 +1,46 @@
+{
+    "content": [
+        {
+            "id": "sacred_offering_calm_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "padding": {
+                    "unit": "px",
+                    "top": "160",
+                    "right": "24",
+                    "bottom": "160",
+                    "left": "24",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "sacred_offering_calm_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1280
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "sacred_offering_calm_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='offering-item'><div class='offering-grid'><div class='offering-img-col reveal'><div class='offering-img-wrap shadow-2xl'><img src='https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1600&auto=format&fit=crop' alt='Curated Calm' /><div class='img-overlay'></div></div></div><div class='offering-card-col reveal reveal-delay-1'><div class='offering-card shadow-premium'><div class='offering-icon-bg'><i class='fas fa-leaf'></i></div><span class='offering-label'>Membership I</span><h3 class='offering-title'>Curated Calm</h3><p class='offering-desc'>A bespoke journey of 12 private in-home wellness sessions, evolving with your needs over the course of a year. Because the deepest calm is the one you don't have to chase.</p><div class='offering-features'> <div class='feature-item'><span class='dot'></span> 11 Private In-Home Sessions</div><div class='feature-item'><span class='dot'></span> 1 Floating Sound Bath Experience</div><div class='feature-item'><span class='dot'></span> Priority & Flexible Scheduling</div><div class='feature-item'><span class='dot'></span> Premium Stillness Tools Provided</div><div class='feature-item'><span class='dot'></span> Optional Guest Access ($99)</div></div><div class='offering-pricing'><div class='price-label'>Investment</div><div class='price-value'>$3,333 <span class='price-unit'>CAD / Year</span></div><div class='price-sub'>or $297 / month</div></div><div class='offering-footer'><a href='/curated-calm' class='offering-btn'><div class='btn-icon'><i class='fas fa-arrow-right'></i></div><span>Enter Sanctuary</span></a></div></div></div></div></div><style>.offering-item { position: relative; margin-bottom: 240px; }.offering-grid { display: grid; grid-template-columns: 1.5fr 1fr; align-items: center; }@media (max-width: 1023px) { .offering-grid { grid-template-columns: 1fr; } }.offering-img-col { position: relative; z-index: 1; }.offering-img-wrap { aspect-ratio: 16/10; border-radius: 3rem; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); position: relative; }.offering-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }.offering-img-wrap:hover img { transform: scale(1.05); }.img-overlay { position: absolute; inset: 0; background: rgba(14, 27, 48, 0.1); }.offering-card-col { position: relative; z-index: 10; margin-left: -96px; }@media (max-width: 1023px) { .offering-card-col { margin-left: 0; margin-top: 48px; } }.offering-card { background: #FFFFFF; padding: 40px 40px 40px 40px; border-radius: 3rem; border: 1px solid rgba(14, 27, 48, 0.05); box-shadow: 0 50px 100px -20px rgba(0,0,0,0.12); position: relative; transition: all 0.5s ease; min-height: 500px; display: flex; flex-direction: column; justify-content: center; }@media (min-width: 1024px) { .offering-card { padding: 56px; } }.offering-icon-bg { position: absolute; top: 40px; right: 40px; font-size: 100px; color: #0E1B30; opacity: 0.1; transition: opacity 0.5s ease; pointer-events: none; }.offering-card:hover .offering-icon-bg { opacity: 0.2; }.offering-label { display: block; color: #688F9D; letter-spacing: 0.2em; text-transform: uppercase; font-size: 12px; margin-bottom: 16px; font-family: 'Lato', sans-serif; font-weight: 700; }.offering-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); color: #0E1B30; margin-bottom: 24px; font-weight: 500; }.offering-desc { font-family: 'Lato', sans-serif; color: rgba(14, 27, 48, 0.6); font-size: 14px; line-height: 1.625; margin-bottom: 32px; font-weight: 300; }.offering-features { margin-bottom: 40px; display: flex; flex-direction: column; gap: 16px; }.feature-item { display: flex; align-items: center; gap: 12px; color: rgba(14, 27, 48, 0.8); font-size: 12px; font-family: 'Lato', sans-serif; letter-spacing: 0.05em; }.dot { width: 6px; height: 6px; background: #688F9D; border-radius: 50%; }.offering-pricing { padding: 24px; background: rgba(217, 232, 235, 0.3); border: 1px solid rgba(104, 143, 157, 0.1); border-radius: 1rem; margin-bottom: 40px; }.price-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: #688F9D; margin-bottom: 4px; font-weight: 700; }.price-value { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #0E1B30; }.price-unit { font-family: 'Lato', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(14, 27, 48, 0.4); margin-left: 8px; }.price-sub { font-size: 12px; color: rgba(14, 27, 48, 0.4); margin-top: 4px; }.offering-btn { display: inline-flex; align-items: center; gap: 16px; text-decoration: none; color: #0E1B30; align-self: flex-start; }.btn-icon { width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(14, 27, 48, 0.2); display: flex; align-items: center; justify-content: center; transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }.offering-btn:hover .btn-icon { background: #0E1B30; color: #FFFFFF; }.offering-btn span { font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; font-family: 'Lato', sans-serif; border-bottom: 1px solid transparent; transition: all 0.5s ease; padding-bottom: 4px; }.offering-btn:hover span { border-color: #0E1B30; }.reveal { opacity: 0; transform: translateY(30px); animation: revealFadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }.reveal-delay-1 { animation-delay: 0.2s; }@keyframes revealFadeUp { to { opacity: 1; transform: translateY(0); } }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Sacred Offering Calm V2",
+    "type": "section"
+}

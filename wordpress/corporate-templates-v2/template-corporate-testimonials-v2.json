@@ -1,0 +1,51 @@
+{
+    "content": [
+        {
+            "id": "corp_test_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#688F9D",
+                "padding": {
+                    "unit": "px",
+                    "top": "80",
+                    "bottom": "80",
+                    "left": "40",
+                    "right": "40",
+                    "isLinked": false
+                },
+                "flex_direction": "column",
+                "flex_align_items": "center"
+            },
+            "elements": [
+                {
+                    "id": "corp_test_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        },
+                        "flex_direction": "column"
+                    },
+                    "elements": [
+                        {
+                            "id": "corp_test_grid",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='test-grid'><div class='test-card'><p class='quote'>"Stillness has become an essential part of our quarterly planning cycle. The clarity it provides is unmatched."</p><div class='author-wrap'><p class='author'>James Chen</p><p class='role'>VP of Product, TechStream</p></div></div><div class='test-card'><p class='quote'>"Our team's stress levels dropped visibly after introducing the Friday Float program. It's a game changer for culture."</p><div class='author-wrap'><p class='author'>Sarah Miller</p><p class='role'>People Operations, FlowState</p></div></div></div><style>.test-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; } .test-card { background: #FFFFFF; padding: 40px; border-radius: 24px; display: flex; flex-direction: column; justify-content: space-between; height: 100%; } .quote { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: #0E1B30; margin-bottom: 32px; line-height: 1.5; } .author { font-family: 'Lato', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #688F9D; font-size: 12px; margin-bottom: 4px; } .role { font-family: 'Lato', sans-serif; font-size: 12px; color: rgba(14, 27, 48, 0.5); } @media (max-width: 768px) { .test-grid { grid-template-columns: 1fr; } }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Corporate Testimonials V2",
+    "type": "section"
+}
