@@ -26,10 +26,10 @@ export const Footer: React.FC = () => {
             <h4 className="text-xs font-bold uppercase tracking-widest text-seafoam mb-6">Explore</h4>
             <ul className="space-y-3">
               <li><Link to="/#intro" className="text-wave/80 hover:text-cream text-sm transition-colors">Our Philosophy</Link></li>
-              <li><Link to="/#heal" className="text-wave/80 hover:text-cream text-sm transition-colors">The Experience</Link></li>
+              <li><Link to="/offerings" className="text-wave/80 hover:text-cream text-sm transition-colors">Sacred Offerings</Link></li>
+              <li><Link to="/shop" className="text-wave/80 hover:text-cream text-sm transition-colors">Shop</Link></li>
+              <li><Link to="/journal" className="text-wave/80 hover:text-cream text-sm transition-colors">Journal</Link></li>
               <li><Link to="/about" className="text-wave/80 hover:text-cream text-sm transition-colors">About Us</Link></li>
-              <li><Link to="/corporate" className="text-wave/80 hover:text-cream text-sm transition-colors">Corporate Wellness</Link></li>
-              <li><Link to="/#stories" className="text-wave/80 hover:text-cream text-sm transition-colors">Journal</Link></li>
             </ul>
           </div>
 

@@ -150,30 +150,30 @@
                                                         "_id": "l1"
                                                     },
                                                     {
-                                                        "text": "The Experience",
+                                                        "text": "Sacred Offerings",
                                                         "link": {
-                                                            "url": "/#heal"
+                                                            "url": "/offerings"
                                                         },
                                                         "_id": "l2"
+                                                    },
+                                                    {
+                                                        "text": "Shop",
+                                                        "link": {
+                                                            "url": "/shop"
+                                                        },
+                                                        "_id": "l3"
+                                                    },
+                                                    {
+                                                        "text": "Journal",
+                                                        "link": {
+                                                            "url": "/journal"
+                                                        },
+                                                        "_id": "l4"
                                                     },
                                                     {
                                                         "text": "About Us",
                                                         "link": {
                                                             "url": "/about"
-                                                        },
-                                                        "_id": "l3"
-                                                    },
-                                                    {
-                                                        "text": "Corporate Wellness",
-                                                        "link": {
-                                                            "url": "/corporate"
-                                                        },
-                                                        "_id": "l4"
-                                                    },
-                                                    {
-                                                        "text": "Journal",
-                                                        "link": {
-                                                            "url": "/#stories"
                                                         },
                                                         "_id": "l5"
                                                     }

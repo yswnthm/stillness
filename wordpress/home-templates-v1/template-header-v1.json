@@ -1,0 +1,42 @@
+{
+    "content": [
+        {
+            "id": "header_container",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "gap": "no",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "0",
+                    "left": "0",
+                    "isLinked": true
+                },
+                "z_index": 9999,
+                "background_background": "classic",
+                "background_color": "rgba(255,255,255,0)",
+                "_position": "absolute",
+                "width": {
+                    "unit": "%",
+                    "size": 100
+                }
+            },
+            "elements": [
+                {
+                    "id": "header_html",
+                    "elType": "widget",
+                    "settings": {
+                        "html": "<header id='stillness-header' class='header-root'>\n    <div class='header-inner'>\n        <a href='/' class='header-logo'>Stillness.</a>\n        \n        <nav class='desktop-nav'>\n            <a href='/#intro' class='nav-link'>Philosophy</a>\n            <a href='/offerings' class='nav-link'>Sacred Offerings</a>\n            <a href='/shop' class='nav-link'>Shop</a>\n            <a href='/journal' class='nav-link'>Journal</a>\n            <a href='/about' class='nav-link'>About</a>\n            <a href='/reserve' class='book-btn'>Book</a>\n        </nav>\n\n        <button id='mobile-toggle' class='mobile-toggle'>\n            <span class='bar'></span>\n            <span class='bar'></span>\n            <span class='bar'></span>\n        </button>\n    </div>\n\n    <div id='mobile-menu' class='mobile-menu'>\n        <a href='/#intro' class='mobile-nav-link'>Philosophy</a>\n        <a href='/offerings' class='mobile-nav-link'>Sacred Offerings</a>\n        <a href='/shop' class='mobile-nav-link'>Shop</a>\n        <a href='/journal' class='mobile-nav-link'>Journal</a>\n        <a href='/about' class='mobile-nav-link'>About</a>\n        <a href='/reserve' class='mobile-book-btn'>Book Session</a>\n    </div>\n</header>\n\n<style>\n/* NUCLEAR TRANSPARENCY: Kill any theme-level white backgrounds on the header wrapper */\n.elementor-location-header,\nheader[data-elementor-type=\"header\"],\n.elementor-edit-area-active [data-elementor-type=\"header\"] {\n    background: transparent !important;\n    position: absolute !important;\n    top: 0 !important;\n    left: 0 !important;\n    width: 100% !important;\n    z-index: 9999 !important;\n    border: none !important;\n    box-shadow: none !important;\n}\n\n/* Ensure the site content doesn't get pushed down */\nbody.elementor-header-active #stillness-header {\n    position: fixed !important;\n}\n\n:root {\n    --stone: #0E1B30;\n    --seafoam: #688F9D;\n    --cream: #FFFFFF;\n    --header-height: 90px;\n}\n\n#stillness-header {\n    width: 100%;\n    height: var(--header-height);\n    display: flex;\n    align-items: center;\n    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);\n    background: transparent !important;\n    position: fixed !important;\n    top: 0;\n    left: 0;\n    z-index: 9999;\n}\n\n/* Text Colors - Default to WHITE for the Hero overlay look */\n#stillness-header.header-root .header-logo,\n#stillness-header.header-root .nav-link {\n    color: var(--cream);\n}\n\n#stillness-header.header-root .mobile-toggle .bar {\n    background: var(--cream);\n}\n\n#stillness-header.header-root .book-btn {\n    color: var(--cream);\n    border-color: var(--cream);\n}\n\n/* Adjust for SCROLLED state */\n#stillness-header.is-scrolled {\n    background: rgba(255, 255, 255, 0.95) !important;\n    backdrop-filter: blur(15px);\n    -webkit-backdrop-filter: blur(15px);\n    height: 75px;\n    border-bottom: 1px solid rgba(14, 27, 48, 0.05);\n}\n\n#stillness-header.is-scrolled .header-logo,\n#stillness-header.is-scrolled .nav-link {\n    color: var(--stone) !important;\n}\n\n#stillness-header.is-scrolled .mobile-toggle .bar {\n    background: var(--stone) !important;\n}\n\n#stillness-header.is-scrolled .book-btn {\n    color: var(--stone) !important;\n    border-color: var(--stone) !important;\n}\n\n/* Adjust for LIGHT pages when NOT scrolled */\nbody:not(.home) #stillness-header:not(.is-scrolled) .header-logo,\nbody:not(.home) #stillness-header:not(.is-scrolled) .nav-link,\nbody:not(.home) #stillness-header:not(.is-scrolled) .book-btn {\n    color: var(--stone);\n    border-color: var(--stone);\n}\n\nbody:not(.home) #stillness-header:not(.is-scrolled) .mobile-toggle .bar {\n    background: var(--stone);\n}\n\n.header-inner {\n    max-width: 1400px;\n    width: 100%;\n    margin: 0 auto;\n    padding: 0 60px;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n}\n\n.header-logo {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 32px;\n    font-weight: 500;\n    text-decoration: none;\n    letter-spacing: -0.01em;\n}\n\n.desktop-nav {\n    display: flex;\n    align-items: center;\n    gap: 45px;\n}\n\n.nav-link {\n    font-family: 'Lato', sans-serif;\n    font-size: 11px;\n    text-transform: uppercase;\n    letter-spacing: 0.18em;\n    text-decoration: none;\n    transition: color 0.3s ease;\n}\n\n.nav-link:hover { color: var(--seafoam) !important; }\n\n.book-btn {\n    font-family: 'Lato', sans-serif;\n    font-size: 11px;\n    text-transform: uppercase;\n    letter-spacing: 0.18em;\n    padding: 11px 30px;\n    border: 1px solid;\n    border-radius: 100px;\n    transition: all 0.4s ease;\n}\n\n.mobile-toggle {\n    display: none;\n    background: none;\n    border: none;\n    position: relative;\n    width: 30px;\n    height: 30px;\n}\n\n.mobile-toggle .bar {\n    display: block;\n    width: 100%;\n    height: 1px;\n    margin: 8px 0;\n    transition: 0.4s;\n}\n\n@media (max-width: 768px) {\n    .header-inner { padding: 0 24px; }\n    .desktop-nav { display: none; }\n    .mobile-toggle { display: block; }\n    .header-logo { font-size: 26px; }\n}\n\n/* Support for WP Admin Bar */\n.admin-bar #stillness-header { top: 32px !important; }\n@media (max-width: 782px) { .admin-bar #stillness-header { top: 46px !important; } }\n</style>\n\n<script>\n(function() {\n    const header = document.getElementById('stillness-header');\n    const toggle = document.getElementById('mobile-toggle');\n\n    if (header) {\n        function handleScroll() {\n            if (window.scrollY > 50) {\n                header.classList.add('is-scrolled');\n            } else {\n                header.classList.remove('is-scrolled');\n            }\n        }\n\n        window.addEventListener('scroll', handleScroll, { passive: true });\n        handleScroll();\n\n        // Set initial state based on page type\n        if (window.location.pathname === '/' || window.location.pathname.includes('home')) {\n            document.body.classList.add('home');\n        }\n    }\n})();\n</script>"
+                    },
+                    "widgetType": "html"
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Header V2 (Overlay)",
+    "type": "section"
+}
