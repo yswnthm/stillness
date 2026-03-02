@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '../Button';
+import { Button } from '../common/Button';
 
 export const InquiryForm: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -21,20 +21,20 @@ export const InquiryForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto bg-breeze p-8 md:p-12 rounded-3xl shadow-sm border border-stone/5">
       <div className="grid grid-cols-1 gap-6">
-        <input 
-          type="text" 
-          placeholder="Company Name" 
-          required 
+        <input
+          type="text"
+          placeholder="Company Name"
+          required
           className="w-full px-6 py-4 bg-white rounded-full border border-stone/10 focus:outline-none focus:border-seafoam transition-colors"
         />
-        <input 
-          type="email" 
-          placeholder="Work Email" 
-          required 
+        <input
+          type="email"
+          placeholder="Work Email"
+          required
           className="w-full px-6 py-4 bg-white rounded-full border border-stone/10 focus:outline-none focus:border-seafoam transition-colors"
         />
-        <textarea 
-          placeholder="Tell us about your team's needs..." 
+        <textarea
+          placeholder="Tell us about your team's needs..."
           rows={4}
           className="w-full px-6 py-4 bg-white rounded-2xl border border-stone/10 focus:outline-none focus:border-seafoam transition-colors"
         ></textarea>

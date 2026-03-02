@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Section } from './Section';
-import { TESTIMONIALS } from '../constants';
+import { Section } from '../common/Section';
+import { TESTIMONIALS } from '../../constants';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Quote, ArrowLeft, ArrowRight } from 'lucide-react';
 

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Section } from './Section';
-import { Button } from './Button';
+import { Section } from '../common/Section';
 
 export const Newsletter: React.FC = () => {
   return (

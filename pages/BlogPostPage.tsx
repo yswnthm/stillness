@@ -6,7 +6,7 @@ import { ARTICLES } from '../constants';
 
 import ReactMarkdown from 'react-markdown';
 
-export const BlogPostPage = () => {
+export const BlogPostPage: React.FC = () => {
     const { id } = useParams();
     const article = ARTICLES.find(a => a.id === Number(id));
 

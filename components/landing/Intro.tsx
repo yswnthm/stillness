@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section } from './Section';
+import { Section } from '../common/Section';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 

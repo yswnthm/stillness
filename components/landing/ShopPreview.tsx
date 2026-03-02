@@ -1,7 +1,7 @@
 import React from 'react';
-import { Section } from './Section';
-import { PRODUCTS } from '../constants';
-import { Button } from './Button';
+import { Section } from '../common/Section';
+import { PRODUCTS } from '../../constants';
+import { Button } from '../common/Button';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Clock, ChevronDown } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { BlogHero } from '../components/blog/BlogHero';
+import { FeaturedArticle } from '../components/blog/FeaturedArticle';
+import { CategoryFilters } from '../components/blog/CategoryFilters';
+import { ArticleCard } from '../components/blog/ArticleCard';
+import { NewsletterCTA } from '../components/blog/NewsletterCTA';
 import { ARTICLES } from '../constants';
 
 const CATEGORIES = ['All', 'Wellness', 'Meditation', 'Ritual', 'Breathwork', 'Corporate'];
 
-export const BlogPage = () => {
+export const BlogPage: React.FC = () => {
     const [activeCategory, setActiveCategory] = React.useState('All');
 
     useEffect(() => {
@@ -18,142 +20,34 @@ export const BlogPage = () => {
 
     return (
         <div className="min-h-screen bg-cream">
-            {/* Hero Section */}
-            <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-stone">
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?q=80&w=2000&auto=format&fit=crop"
-                        alt="The Journal"
-                        className="w-full h-full object-cover opacity-60"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-stone/40 via-transparent to-stone/80" />
-                </div>
+            <main>
+                <BlogHero />
 
-                <div className="relative z-10 text-center px-6">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.5, ease: "easeOut" }}
-                        className="max-w-4xl mx-auto"
-                    >
-                        <span className="block text-seafoam text-sm tracking-widest uppercase mb-4">The Journal</span>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-cream mb-6 tracking-tight leading-tight">
-                            Notes on <span className="italic">Stillness</span>
-                        </h1>
-                        <p className="text-cream/80 mt-4 font-light max-w-lg mx-auto text-lg md:text-xl leading-relaxed">
-                            Thoughts on healing, ritual, and the profound art of coming home to yourself.
-                        </p>
-                    </motion.div>
-                </div>
+                {/* Featured Article */}
+                {featuredArticle && <FeaturedArticle article={featuredArticle} />}
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1.5, duration: 1 }}
-                    className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
-                >
-                    <ChevronDown className="text-cream/50 animate-bounce w-8 h-8 font-light" />
-                </motion.div>
-            </section>
+                {/* Category Filters */}
+                <CategoryFilters
+                    categories={CATEGORIES}
+                    activeCategory={activeCategory}
+                    onCategoryChange={setActiveCategory}
+                />
 
-            {/* Featured Article */}
-            {featuredArticle && (
+                {/* Article Grid */}
                 <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-                    <Link to={`/journal/${featuredArticle.id}`} className="group grid md:grid-cols-2 gap-10 items-center">
-                        <div className="aspect-video md:aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
-                            <img
-                                src={featuredArticle.image}
-                                alt={featuredArticle.title}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            />
-                        </div>
-                        <div>
-                            <span className="text-seafoam text-xs tracking-widest uppercase">{featuredArticle.category}</span>
-                            <h2 className="text-3xl md:text-4xl font-serif text-stone my-4 group-hover:text-seafoam transition-colors leading-snug">
-                                {featuredArticle.title}
-                            </h2>
-                            <p className="text-stone/60 leading-relaxed mb-6">{featuredArticle.excerpt}</p>
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-3 text-xs text-stone/50">
-                                    <Clock size={14} />
-                                    <span>{featuredArticle.readTime}</span>
-                                    <span>&middot;</span>
-                                    <span>{featuredArticle.date}</span>
-                                </div>
-                                <span className="inline-flex items-center gap-2 text-stone text-sm group-hover:text-seafoam transition-colors">
-                                    Read <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                                </span>
-                            </div>
-                        </div>
-                    </Link>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        {filteredArticles.map((article, index) => (
+                            <React.Fragment key={article.id}>
+                                <ArticleCard article={article} />
+                                {/* Newsletter CTA injected after 2nd article */}
+                                {index === 1 && <NewsletterCTA />}
+                            </React.Fragment>
+                        ))}
+                    </div>
                 </section>
-            )}
-
-            {/* Category Filters */}
-            <div className="sticky top-16 z-20 bg-cream/90 backdrop-blur-md border-y border-stone/10 py-4 px-6">
-                <div className="max-w-7xl mx-auto flex items-center gap-3 overflow-x-auto no-scrollbar">
-                    {CATEGORIES.map(cat => (
-                        <button
-                            key={cat}
-                            onClick={() => setActiveCategory(cat)}
-                            className={`flex-shrink-0 px-5 py-2 rounded-full text-xs tracking-widest uppercase transition-all duration-300 ${activeCategory === cat
-                                ? 'bg-seafoam text-white shadow-md shadow-seafoam/20'
-                                : 'bg-transparent text-stone/60 hover:text-stone hover:bg-stone/10'
-                                }`}
-                        >
-                            {cat}
-                        </button>
-                    ))}
-                </div>
-            </div>
-
-            {/* Article Grid */}
-            <main className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {filteredArticles.map((article, index) => (
-                        <React.Fragment key={article.id}>
-                            <Link to={`/journal/${article.id}`} className="group flex flex-col">
-                                <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-6 shadow-md">
-                                    <img
-                                        src={article.image}
-                                        alt={article.title}
-                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                                    />
-                                </div>
-                                <span className="text-seafoam text-xs tracking-widest uppercase mb-3">{article.category}</span>
-                                <h3 className="text-xl font-serif text-stone mb-3 group-hover:text-seafoam transition-colors leading-snug">{article.title}</h3>
-                                <p className="text-stone/60 text-sm leading-relaxed flex-1 mb-4">{article.excerpt}</p>
-                                <div className="flex items-center gap-3 text-xs text-stone/40">
-                                    <Clock size={12} />
-                                    <span>{article.readTime}</span>
-                                    <span>&middot;</span>
-                                    <span>{article.date}</span>
-                                </div>
-                            </Link>
-                            {/* Newsletter CTA injected after 2nd article */}
-                            {index === 1 && (
-                                <div className="md:col-span-2 lg:col-span-3 my-4 bg-seafoam rounded-3xl p-10 md:p-14 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl shadow-seafoam/10">
-                                    <div>
-                                        <BookOpen className="text-white w-10 h-10 mb-4 opacity-80" />
-                                        <h3 className="text-2xl font-serif text-white mb-2">Stillness, delivered.</h3>
-                                        <p className="text-white/80 font-light max-w-md">New essays on healing, ritual, and presence, written for the quiet hours. Join the readers who begin their week with a little more ease.</p>
-                                    </div>
-                                    <form className="w-full md:w-auto flex flex-col sm:flex-row gap-3 min-w-[320px]" onSubmit={(e) => e.preventDefault()}>
-                                        <input
-                                            type="email"
-                                            placeholder="your@email.com"
-                                            className="flex-1 bg-white/10 border border-white/20 text-white placeholder:text-white/60 rounded-full px-6 py-3 text-sm focus:outline-none focus:border-white/40"
-                                        />
-                                        <button type="submit" className="bg-white text-seafoam rounded-full px-6 py-3 text-xs uppercase tracking-widest flex-shrink-0 hover:bg-stone hover:text-white transition-all duration-300">
-                                            Subscribe
-                                        </button>
-                                    </form>
-                                </div>
-                            )}
-                        </React.Fragment>
-                    ))}
-                </div>
             </main>
         </div>
     );
 };
+
+export default BlogPage;

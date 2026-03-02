@@ -1,8 +1,8 @@
 import React from 'react';
-import { Section } from './Section';
-import { Button } from './Button';
+import { Section } from '../common/Section';
+import { Button } from '../common/Button';
 import { Link } from 'react-router-dom';
-import { CORPORATE_STATS } from '../constants';
+import { CORPORATE_STATS } from '../../constants';
 import { motion } from 'framer-motion';
 
 export const CorporateWellness: React.FC = () => {

@@ -11,15 +11,18 @@ export const AboutPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-cream">
-      {/* Hero spacing handled by BrandStory padding or a small spacer if needed */}
-      <div className="pt-20">
-        <BrandStory />
-        <MissionStatement />
-        <Timeline />
-        <TeamGrid />
-        <ApproachSection />
-      </div>
+    <div className="min-h-screen bg-cream">
+      <main>
+        <div className="pt-20">
+          <BrandStory />
+          <MissionStatement />
+          <Timeline />
+          <TeamGrid />
+          <ApproachSection />
+        </div>
+      </main>
     </div>
   );
 };
+
+export default AboutPage;

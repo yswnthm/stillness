@@ -1,6 +1,6 @@
 import React from 'react';
-import { Section } from './Section';
-import { ARTICLES } from '../constants';
+import { Section } from '../common/Section';
+import { ARTICLES } from '../../constants';
 import { motion } from 'framer-motion';
 
 export const Stories: React.FC = () => {
