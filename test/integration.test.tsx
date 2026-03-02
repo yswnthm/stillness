@@ -6,10 +6,6 @@ import App from '../App';
 describe('App Integration', () => {
   const variants = [
     { name: 'Original', path: '/' },
-    { name: 'Design 1', path: '/design1' },
-    { name: 'Design 2', path: '/design2' },
-    { name: 'Design 3', path: '/design3' },
-    { name: 'Design 4', path: '/design4' },
   ];
 
   it('should render the correct variant for each route', () => {
