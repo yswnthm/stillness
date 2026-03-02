@@ -1,0 +1,37 @@
+{
+  "content": [
+    {
+      "id": "sacred_cta_section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "position": "relative",
+        "overflow": "hidden"
+      },
+      "elements": [
+        {
+          "id": "sacred_cta_html",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class='sca-wrapper'><div class='sca-bg'></div><div class='sca-container sca-reveal'><h2 class='sca-title'>Your practice<br>awaits.</h2><p class='sca-desc'>\"The quietest voice is often the most important.\"</p><div class='sca-links'><a href='/about' class='sca-link'>Our Philosophy</a><a href='#memberships' class='sca-btn'>View Offerings</a><a href='/contact' class='sca-link'>Inquire</a></div></div></div><style>.sca-wrapper { position: relative; padding: 240px 0; background: #FFFFFF; font-family: 'Lato', sans-serif; text-align: center; overflow: hidden; } .sca-bg { position: absolute; inset: 0; background: rgba(217, 232, 235, 0.2); animation: sca-breathe 8s ease-in-out infinite; z-index: 0; pointer-events: none; } .sca-container { max-width: 672px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 10; } .sca-title { font-family: 'Cormorant Garamond', serif; font-size: 72px; line-height: 1.1; font-weight: 400; color: #1D3152; margin: 0 0 48px; transition: font-size 0.3s ease; } .sca-desc { font-style: italic; color: rgba(29, 49, 82, 0.6); margin: 0 0 64px; font-weight: 300; font-family: 'Cormorant Garamond', serif; font-size: 24px; } .sca-links { display: flex; align-items: center; justify-content: center; gap: 32px; } .sca-link { display: inline-flex; align-items: center; gap: 8px; color: #1D3152; text-decoration: none !important; font-size: 14px; letter-spacing: 1px; transition: all 0.3s ease; border-bottom: 1px solid transparent; } .sca-link:hover { color: #688F9D !important; border-bottom-color: #688F9D; } .sca-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 16px; padding: 20px 48px; text-decoration: none !important; overflow: hidden; border-radius: 99px; outline: none; border: 1px solid #1D3152; background: #1D3152; color: #FFFFFF !important; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; transition: all 0.5s ease; box-shadow: 0 10px 20px -5px rgba(29, 49, 82, 0.2); } .sca-btn:hover { background: #FFFFFF !important; color: #1D3152 !important; transform: translateY(-2px); box-shadow: 0 15px 30px -10px rgba(29, 49, 82, 0.15); } @keyframes sca-breathe { 0%, 100% { transform: scale(1); opacity: 0.3; } 50% { transform: scale(1.1); opacity: 0.5; } } .sca-reveal { opacity: 0; transform: translateY(30px); animation: sca-fade-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; } @keyframes sca-fade-up { to { opacity: 1; transform: translateY(0); } } @media (max-width: 992px) { .sca-title { font-size: 60px; } } @media (max-width: 768px) { .sca-title { font-size: 48px; } .sca-links { flex-direction: column; gap: 24px; } .sca-wrapper { padding: 120px 0; } }</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Sacred CTA V1",
+  "type": "section"
+}

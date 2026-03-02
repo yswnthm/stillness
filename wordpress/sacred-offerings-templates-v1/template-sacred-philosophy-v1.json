@@ -1,0 +1,50 @@
+{
+  "content": [
+    {
+      "id": "sacred_philosophy_section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "40",
+          "bottom": "120",
+          "left": "40",
+          "isLinked": false
+        },
+        "position": "relative",
+        "overflow": "hidden"
+      },
+      "elements": [
+        {
+          "id": "sacred_philosophy_inner",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1140
+            }
+          },
+          "elements": [
+            {
+              "id": "sacred_philosophy_html",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class='sph-bg-grid'></div><div class='sph-grid'><div class='sph-text-col sph-reveal'><div class='sph-icon'><i class='fas fa-wind'></i></div><h2 class='sph-title'>Why we practice<br><span class='sph-accent'>doing nothing.</span></h2><p class='sph-desc'>Stillness isn't the absence of motion; it's the concentration of clarity. We live in an age that commodifies our attention, leaving us fragmented and fatigued.</p><p class='sph-desc'>Our offerings are designed as architectural interventions for the nervous system\u2014spaces where the debris of modern life can finally settle.</p></div><div class='sph-img-col sph-reveal sph-delay-1'><div class='sph-img-wrap'><img src='https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=1200&auto=format&fit=crop' alt='Philosophy' /></div><div class='sph-blob'></div></div></div><style>.sph-bg-grid { position: absolute; inset: 0; background-image: radial-gradient(#688F9D 0.5px, transparent 0.5px); background-size: 40px 40px; opacity: 0.1; z-index: 0; pointer-events: none; } .sph-grid { position: relative; z-index: 10; display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: center; font-family: 'Lato', sans-serif; } .sph-icon { width: 80px; height: 96px; border: 1px solid rgba(14, 27, 48, 0.1); border-radius: 99px; display: flex; align-items: center; justify-content: center; margin-bottom: 48px; background: rgba(217, 232, 235, 0.3); color: #688F9D; font-size: 32px; } .sph-title { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: #1D3152; margin: 0 0 32px; font-weight: 400; line-height: 1.1; transition: font-size 0.3s ease; } .sph-accent { color: #688F9D; } .sph-desc { color: rgba(14, 27, 48, 0.6); line-height: 1.8; margin: 0 0 24px; font-size: 16px; font-weight: 300; } .sph-img-col { position: relative; } .sph-img-wrap { position: relative; aspect-ratio: 4/5; border-radius: 32px; overflow: hidden; z-index: 2; } .sph-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 4s ease; } .sph-img-wrap:hover img { transform: scale(1.1); } .sph-blob { position: absolute; bottom: -32px; left: -32px; width: 192px; height: 192px; background: #688F9D; border-radius: 24px; z-index: 1; } .sph-reveal { opacity: 0; transform: translateY(30px); animation: sph-fade-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; } .sph-delay-1 { animation-delay: 0.4s; } @keyframes sph-fade-up { to { opacity: 1; transform: translateY(0); } } @media (max-width: 992px) { .sph-grid { grid-template-columns: 1fr; gap: 64px; } } @media (max-width: 767px) { .sph-title { font-size: 36px; } .sph-icon { margin-bottom: 32px; width: 64px; height: 80px; font-size: 24px; } }</style>"
+              },
+              "widgetType": "html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Sacred Philosophy V1",
+  "type": "section"
+}

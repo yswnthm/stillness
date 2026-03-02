@@ -7,13 +7,7 @@
             "id": "corporate-services-wrapper",
             "elType": "container",
             "settings": {
-                "content_width": "boxed",
-                "boxed_width": {
-                    "unit": "px",
-                    "size": 1140
-                },
-                "flex_direction": "column",
-                "flex_align_items": "center",
+                "content_width": "full",
                 "padding": {
                     "unit": "px",
                     "top": "120",
@@ -27,53 +21,51 @@
             },
             "elements": [
                 {
-                    "id": "services-heading",
-                    "elType": "widget",
-                    "widgetType": "heading",
+                    "id": "services-header-inner",
+                    "elType": "container",
                     "settings": {
-                        "title": "Our Programs",
-                        "align": "center",
-                        "title_color": "#1D3152",
-                        "typography_typography": "custom",
-                        "typography_font_family": "Cormorant Garamond",
-                        "typography_font_size": {
+                        "content_width": "boxed",
+                        "boxed_width": {
                             "unit": "px",
-                            "size": 48
+                            "size": 1140
                         },
-                        "typography_font_weight": "400",
                         "margin": {
                             "unit": "px",
-                            "top": "0",
-                            "bottom": "24",
-                            "right": "0",
-                            "left": "0",
+                            "bottom": "80",
                             "isLinked": false
                         }
-                    }
+                    },
+                    "elements": [
+                        {
+                            "id": "services-intro-html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='services-intro-grid'><h2>One modality is powerful.<br><span class='italic'>Two together</span> is transformative.</h2><p>Each offering below stands on its own — but many of our sessions weave modalities together intentionally. Sound and breathwork. Floating and meditation. Movement and stillness. We'll always let you know when a session combines approaches, so you can choose what feels right for where you are.</p></div><style>.services-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; } .services-intro-grid h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; color: #1D3152; line-height: 1.1; margin: 0; } .services-intro-grid .italic { font-style: italic; color: #688F9D; } .services-intro-grid p { font-family: 'Lato', sans-serif; font-size: 18px; line-height: 1.6; color: rgba(29, 49, 82, 0.7); margin: 0; padding-top: 8px; } @media (max-width: 768px) { .services-intro-grid { grid-template-columns: 1fr; gap: 32px; } }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
                 },
                 {
-                    "id": "services-text",
-                    "elType": "widget",
-                    "widgetType": "text-editor",
+                    "id": "services-grid-inner",
+                    "elType": "container",
                     "settings": {
-                        "editor": "<p style=\"text-align: center; font-family: 'Lato', sans-serif; font-weight: 300; font-size: 18px; line-height: 1.6; color: rgba(29, 49, 82, 0.6); max-width: 672px; margin: 0 auto;\">Modular wellness solutions that integrate seamlessly into the modern work day.</p>",
-                        "margin": {
+                        "content_width": "boxed",
+                        "boxed_width": {
                             "unit": "px",
-                            "top": "0",
-                            "bottom": "64",
-                            "right": "0",
-                            "left": "0",
-                            "isLinked": false
+                            "size": 1140
                         }
-                    }
-                },
-                {
-                    "id": "services-grid-html",
-                    "elType": "widget",
-                    "widgetType": "html",
-                    "settings": {
-                        "html": "<div class=\"services-grid\">\n  <div class=\"service-card\">\n    <div class=\"service-bg\">\n      <img src=\"https://picsum.photos/seed/corporate1/800/600\" alt=\"Team Float Rituals\" />\n    </div>\n    <div class=\"service-content\">\n      <div class=\"service-icon\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"></path><circle cx=\"9\" cy=\"7\" r=\"4\"></circle><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"></path><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"></path></svg>\n      </div>\n      <h3 class=\"service-title\">Team Float Rituals</h3>\n      <p class=\"service-desc\">Structured decompression sessions for small teams to reset together.</p>\n    </div>\n  </div>\n  \n  <div class=\"service-card\">\n    <div class=\"service-bg\">\n      <img src=\"https://picsum.photos/seed/corporate2/800/600\" alt=\"Executive Retreats\" />\n    </div>\n    <div class=\"service-content\">\n      <div class=\"service-icon\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\"></rect><path d=\"M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\"></path></svg>\n      </div>\n      <h3 class=\"service-title\">Executive Retreats</h3>\n      <p class=\"service-desc\">Multi-day deep rest intensives for leadership teams in high-stress environments.</p>\n    </div>\n  </div>\n  \n  <div class=\"service-card\">\n    <div class=\"service-bg\">\n      <img src=\"https://picsum.photos/seed/corporate3/800/600\" alt=\"Performance Workshops\" />\n    </div>\n    <div class=\"service-content\">\n      <div class=\"service-icon\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"13 2 3 14 12 14 11 22 21 10 12 10 13 2\"></polygon></svg>\n      </div>\n      <h3 class=\"service-title\">Performance Workshops</h3>\n      <p class=\"service-desc\">Breathwork and sound healing optimized for focus and creative flow.</p>\n    </div>\n  </div>\n</div>\n\n<style>\n.services-grid {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  gap: 3rem;\n  width: 100%;\n}\n\n.service-card {\n  position: relative;\n  padding: 2rem;\n  border-radius: 24px;\n  background-color: #F7F0EC;\n  border: 1px solid rgba(14, 27, 48, 0.05);\n  overflow: hidden;\n  cursor: pointer;\n  transition: all 0.5s ease;\n}\n\n.service-card:hover {\n  border-color: rgba(104, 143, 157, 0.3);\n  box-shadow: 0 20px 25px -5px rgba(104, 143, 157, 0.05), 0 10px 10px -5px rgba(104, 143, 157, 0.02);\n}\n\n.service-bg {\n  position: absolute;\n  inset: 0;\n  border-radius: 24px;\n  overflow: hidden;\n  pointer-events: none;\n}\n\n.service-bg img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  opacity: 0.4;\n  transition: transform 0.5s ease-out;\n}\n\n.service-card:hover .service-bg img {\n  transform: scale(1.1);\n}\n\n.service-content {\n  position: relative;\n  z-index: 10;\n}\n\n.service-icon {\n  width: 48px;\n  height: 48px;\n  border-radius: 50%;\n  border: 1px solid #688F9D;\n  color: #688F9D;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-bottom: 1.5rem;\n  transition: all 0.5s ease;\n}\n\n.service-card:hover .service-icon {\n  background-color: #688F9D;\n  color: #FFFFFF;\n}\n\n.service-icon svg {\n  width: 24px;\n  height: 24px;\n}\n\n.service-title {\n  font-family: 'Cormorant Garamond', serif;\n  font-size: 20px;\n  color: #1D3152;\n  margin-bottom: 1rem;\n  font-weight: 400;\n}\n\n.service-desc {\n  font-family: 'Lato', sans-serif;\n  font-weight: 300;\n  font-size: 16px;\n  line-height: 1.6;\n  color: rgba(29, 49, 82, 0.6);\n  margin: 0;\n}\n\n@media (max-width: 1024px) {\n  .services-grid {\n    grid-template-columns: 1fr;\n    gap: 2rem;\n  }\n}\n</style>"
-                    }
+                    },
+                    "elements": [
+                        {
+                            "id": "services-main-list-html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='offerings-list'><!-- Item 01 --><div class='offering-item'><div class='offering-main'><div class='offering-head'><span class='offering-id'>01</span><div class='offering-title-wrap'><h3>Sound Healing & <span class='italic'>Vocal Yoga</span></h3><p class='offering-subtitle'>Sound · Voice · Vibration</p></div></div><div class='offering-body'><p>Lie back and let sound move through you. This session combines therapeutic sound healing — using bowls, chimes, and instruments chosen for their effect on the nervous system — with the power of your own voice.</p><div class='tag-wrap'><span class='tag'>Beginners welcome</span><span class='tag'>Burnt-out professionals</span><span class='tag special'>No experience needed</span></div></div></div><div class='offering-side'><div class='icon-circle'><i class='fas fa-music'></i></div><a href='/reserve' class='offering-btn'>See Upcoming Dates</a></div></div><!-- Item 02 --><div class='offering-item'><div class='offering-main'><div class='offering-head'><span class='offering-id'>02</span><div class='offering-title-wrap'><h3>Breathwork</h3><p class='offering-subtitle'>Breath · Nervous System · Release</p></div></div><div class='offering-body'><p>Your breath is one of the most direct ways to change how you feel. In these guided sessions, you'll move through intentional breathing patterns designed to regulate your nervous system and create a felt shift.</p><div class='tag-wrap'><span class='tag'>Moms & parents</span><span class='tag'>Burnt-out professionals</span><span class='tag combo'>◈ Pairs with Sound</span></div></div></div><div class='offering-side'><div class='icon-circle'><i class='fas fa-wind'></i></div><a href='/reserve' class='offering-btn'>See Upcoming Dates</a></div></div><!-- Item 03 --><div class='offering-item'><div class='offering-main'><div class='offering-head'><span class='offering-id'>03</span><div class='offering-title-wrap'><h3>Floating <span class='italic'>Sound Sessions</span></h3><p class='offering-subtitle'>Water · Sound · Stillness</p></div></div><div class='offering-body'><p>Where Stillness began. Our floating sound sessions take place outdoors on the water. You float while sound moves through the air and the water around you, creating a combination of buoyancy and nature.</p><div class='tag-wrap'><span class='tag'>Couples</span><span class='tag'>Spiritual seekers</span><span class='tag combo'>◈ Pairs with Breathwork</span></div></div></div><div class='offering-side'><div class='icon-circle'><i class='fas fa-tint'></i></div><a href='/reserve' class='offering-btn'>See Upcoming Dates</a></div></div><!-- Item 04 --><div class='offering-item'><div class='offering-main'><div class='offering-head'><span class='offering-id'>04</span><div class='offering-title-wrap'><h3>Mindfulness & <span class='italic'>Meditation</span></h3><p class='offering-subtitle'>Mind · Presence · Grounding</p></div></div><div class='offering-body'><p>Guided sessions that help you settle into the present moment without fighting it. Think of it as learning to sit with yourself, with someone beside you who knows the way.</p><div class='tag-wrap'><span class='tag'>Moms & parents</span><span class='tag'>Beginners welcome</span><span class='tag combo'>◈ Pairs with Sound</span></div></div></div><div class='offering-side'><div class='icon-circle'><i class='fas fa-eye'></i></div><a href='/reserve' class='offering-btn'>See Upcoming Dates</a></div></div><!-- Item 05 --><div class='offering-item'><div class='offering-main'><div class='offering-head'><span class='offering-id'>05</span><div class='offering-title-wrap'><h3>Mindful <span class='italic'>Movement & Yoga</span></h3><p class='offering-subtitle'>Body · Breath · Awareness</p></div></div><div class='offering-body'><p>Movement as medicine. Our yoga sessions are slow, accessible, and led with the intention to help you come back into your body, focusing on breath-body connection and regulation.</p><div class='tag-wrap'><span class='tag'>Beginners welcome</span><span class='tag'>Moms & parents</span><span class='tag combo'>◈ Pairs with Breathwork</span></div></div></div><div class='offering-side'><div class='icon-circle'><i class='fas fa-heartbeat'></i></div><a href='/reserve' class='offering-btn'>See Upcoming Dates</a></div></div></div><style>.offerings-list { display: flex; flex-direction: column; gap: 1px; background: rgba(29, 49, 82, 0.1); border: 1px solid rgba(29, 49, 82, 0.1); } .offering-item { display: grid; grid-template-columns: 1fr 250px; background: #FFFFFF; position: relative; overflow: hidden; } .offering-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: #C4BBB4; transform: scaleY(0); transition: transform 0.5s ease; transform-origin: bottom; } .offering-item:hover::before { transform: scaleY(1); } .offering-main { padding: 48px; border-right: 1px solid rgba(29, 49, 82, 0.1); } .offering-head { display: flex; gap: 32px; align-items: flex-start; margin-bottom: 24px; } .offering-id { font-family: 'Cormorant Garamond', serif; font-size: 14px; color: rgba(29, 49, 82, 0.3); padding-top: 6px; } .offering-title-wrap h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #1D3152; margin: 0 0 8px; } .offering-title-wrap .italic { font-style: italic; color: #688F9D; } .offering-subtitle { font-family: 'Lato', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #C4BBB4; margin: 0; } .offering-body { padding-left: 64px; } .offering-body p { font-family: 'Lato', sans-serif; font-size: 16px; line-height: 1.6; color: rgba(29, 49, 82, 0.7); margin-bottom: 24px; } .tag-wrap { display: flex; flex-wrap: wrap; gap: 8px; } .tag { padding: 6px 12px; font-family: 'Lato', sans-serif; font-size: 9px; text-transform: uppercase; letter-spacing: 1px; color: #688F9D; background: rgba(104, 143, 157, 0.05); border: 1px solid rgba(104, 143, 157, 0.2); } .tag.special { color: rgba(29, 49, 82, 0.6); background: transparent; border-color: rgba(29, 49, 82, 0.1); } .tag.combo { color: #C4BBB4; background: rgba(196, 187, 180, 0.1); border-color: rgba(196, 187, 180, 0.3); font-weight: 700; } .offering-side { padding: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; background: rgba(29, 49, 82, 0.02); } .icon-circle { width: 64px; height: 64px; border-radius: 99px; background: rgba(104, 143, 157, 0.1); display: flex; align-items: center; justify-content: center; color: #688F9D; font-size: 24px; } .offering-btn { width: 100%; text-align: center; padding: 16px; background: #688F9D; color: #FFFFFF; font-family: 'Lato', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; border: 1px solid #688F9D; transition: all 0.3s ease; } .offering-btn:hover { background: transparent; color: #688F9D; } @media (max-width: 768px) { .offering-item { grid-template-columns: 1fr; } .offering-main { border-right: none; border-bottom: 1px solid rgba(29, 49, 82, 0.1); padding: 32px; } .offering-body { padding-left: 0; } .offering-head { gap: 16px; } .offering-side { padding: 32px; } }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
                 }
             ]
         }

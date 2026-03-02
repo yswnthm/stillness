@@ -1,79 +1,74 @@
 {
     "version": "0.4",
-    "title": "Corporate - Inquiry Form",
+    "title": "Corporate - Minimal Inquiry Form",
     "type": "section",
     "content": [
         {
-            "id": "corporate-inquiry-wrapper",
+            "id": "corp_inquiry_minimal",
             "elType": "container",
             "settings": {
-                "content_width": "boxed",
-                "boxed_width": {
-                    "unit": "px",
-                    "size": 1140
-                },
-                "flex_direction": "column",
-                "flex_align_items": "center",
-                "padding": {
-                    "unit": "px",
-                    "top": "120",
-                    "bottom": "120",
-                    "right": "40",
-                    "left": "40",
-                    "isLinked": false
-                },
+                "content_width": "full",
+                "padding": { "unit": "px", "top": "160", "bottom": "160", "right": "40", "left": "40", "isLinked": false },
                 "background_background": "classic",
-                "background_color": "#FFFFFF"
+                "background_color": "#FFFFFF",
+                "flex_direction": "column",
+                "flex_align_items": "center"
             },
             "elements": [
                 {
-                    "id": "inquiry-heading",
-                    "elType": "widget",
-                    "widgetType": "heading",
+                    "id": "inquiry_header_min",
+                    "elType": "container",
                     "settings": {
-                        "title": "Start a Conversation",
-                        "align": "center",
-                        "title_color": "#1D3152",
-                        "typography_typography": "custom",
-                        "typography_font_family": "Cormorant Garamond",
-                        "typography_font_size": {
-                            "unit": "px",
-                            "size": 48
+                        "content_width": "boxed",
+                        "boxed_width": { "unit": "px", "size": 800 },
+                        "flex_direction": "column",
+                        "flex_align_items": "center",
+                        "margin": { "unit": "px", "bottom": "64", "isLinked": false }
+                    },
+                    "elements": [
+                        {
+                            "id": "inquiry_h2_min",
+                            "elType": "widget",
+                            "widgetType": "heading",
+                            "settings": {
+                                "title": "Start a Conversation.",
+                                "align": "center",
+                                "title_color": "#1D3152",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Cormorant Garamond",
+                                "typography_font_size": { "unit": "px", "size": 56 },
+                                "typography_font_weight": "300",
+                                "margin": { "unit": "px", "bottom": "24", "isLinked": false }
+                            }
                         },
-                        "typography_font_weight": "400",
-                        "margin": {
-                            "unit": "px",
-                            "top": "0",
-                            "bottom": "24",
-                            "right": "0",
-                            "left": "0",
-                            "isLinked": false
+                        {
+                            "id": "inquiry_p_min",
+                            "elType": "widget",
+                            "widgetType": "text-editor",
+                            "settings": {
+                                "editor": "<p style=\"text-align: center; font-family: 'Lato', sans-serif; font-size: 18px; color: rgba(29, 49, 82, 0.5); font-weight: 300; max-width: 500px; margin: 0 auto;\">Custom programs tailored to your organization's unique rhythm.</p>"
+                            }
                         }
-                    }
+                    ]
                 },
                 {
-                    "id": "inquiry-text",
-                    "elType": "widget",
-                    "widgetType": "text-editor",
+                    "id": "inquiry_form_wrap_min",
+                    "elType": "container",
                     "settings": {
-                        "editor": "<p style=\"text-align: center; font-family: 'Lato', sans-serif; font-weight: 300; font-size: 18px; line-height: 1.6; color: rgba(29, 49, 82, 0.6); max-width: 672px; margin: 0 auto;\">Custom programs tailored to your organization's unique rhythm.</p>",
-                        "margin": {
-                            "unit": "px",
-                            "top": "0",
-                            "bottom": "64",
-                            "right": "0",
-                            "left": "0",
-                            "isLinked": false
+                        "width": { "unit": "px", "size": 600 },
+                        "content_width": "full",
+                        "flex_align_self": "center"
+                    },
+                    "elements": [
+                        {
+                            "id": "inquiry_metform_min_css",
+                            "elType": "widget",
+                            "widgetType": "shortcode",
+                            "settings": {
+                                "shortcode": "<div class='stillness-minimal-form'>[metform form_id=\"4938\"]</div><style>/* 1. Force Pure Vertical Layout */ .stillness-minimal-form .row, .stillness-minimal-form .mf-row { display: flex !important; flex-direction: column !important; margin: 0 !important; gap: 24px !important; } .stillness-minimal-form [class*='col-'] { width: 100% !important; max-width: 100% !important; flex: 1 1 100% !important; padding: 0 !important; margin: 0 !important; } /* 2. Hide Titles, Labels, and MetForm Bloat */ .stillness-minimal-form h2, .stillness-minimal-form h3, .stillness-minimal-form label, .stillness-minimal-form .mf-section-title, .stillness-minimal-form .mf-input-label { display: none !important; } /* 3. Ultra-Minimal Inputs */ .stillness-minimal-form input:not([type='submit']), .stillness-minimal-form textarea, .stillness-minimal-form .mf-input { width: 100% !important; padding: 16px 0 !important; border: none !important; border-bottom: 1px solid rgba(29, 49, 82, 0.15) !important; background: transparent !important; font-family: 'Lato', sans-serif !important; font-size: 16px !important; color: #1D3152 !important; box-sizing: border-box !important; border-radius: 0 !important; outline: none !important; transition: border-color 0.4s ease !important; } /* 4. Textarea setup */ .stillness-minimal-form textarea { min-height: 120px !important; resize: none !important; } /* Focus states */ .stillness-minimal-form input:focus, .stillness-minimal-form textarea:focus { border-bottom-color: #688F9D !important; } .stillness-minimal-form input::placeholder, .stillness-minimal-form textarea::placeholder { color: rgba(29, 49, 82, 0.4) !important; font-weight: 300 !important; } /* 5. Elegant Submit Button */ .stillness-minimal-form .mf-btn-wraper { text-align: center !important; margin-top: 32px !important; } .stillness-minimal-form button[type='submit'], .stillness-minimal-form .metform-btn-submit { display: inline-block !important; background: #1D3152 !important; color: #FFFFFF !important; border: none !important; padding: 18px 48px !important; border-radius: 9999px !important; font-family: 'Lato', sans-serif !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 2px !important; font-size: 11px !important; cursor: pointer !important; transition: all 0.4s ease !important; } .stillness-minimal-form button[type='submit']:hover, .stillness-minimal-form .metform-btn-submit:hover { background: #688F9D !important; transform: translateY(-2px); }</style>"
+                            }
                         }
-                    }
-                },
-                {
-                    "id": "inquiry-html",
-                    "elType": "widget",
-                    "widgetType": "html",
-                    "settings": {
-                        "html": "<div class=\"inquiry-form\">\n  <input type=\"text\" class=\"inquiry-field\" placeholder=\"Company Name\" required />\n  <input type=\"email\" class=\"inquiry-field\" placeholder=\"Work Email\" required />\n  <textarea class=\"inquiry-field textarea-field\" placeholder=\"Tell us about your team's needs...\" rows=\"4\"></textarea>\n  <button type=\"button\" class=\"inquiry-button\">SEND INQUIRY</button>\n</div>\n\n<style>\n.inquiry-form {\n  max-width: 576px;\n  margin: 0 auto;\n  background-color: rgba(217, 232, 235, 0.5);\n  padding: 3rem 4rem;\n  border-radius: 24px;\n  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);\n  border: 1px solid rgba(14, 27, 48, 0.05);\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 1.5rem;\n  width: 100%;\n  box-sizing: border-box;\n}\n\n.inquiry-field {\n  width: 100%;\n  padding: 1rem 1.5rem;\n  background-color: #FFFFFF;\n  border-radius: 9999px;\n  border: 1px solid rgba(14, 27, 48, 0.1);\n  font-family: 'Lato', sans-serif;\n  font-size: 16px;\n  color: #0E1B30;\n  outline: none;\n  transition: border-color 0.3s ease;\n  box-sizing: border-box;\n}\n\n.textarea-field {\n  border-radius: 16px;\n  resize: vertical;\n}\n\n.inquiry-field:focus {\n  border-color: #688F9D;\n}\n\n.inquiry-button {\n  width: 100%;\n  padding: 1rem 2rem;\n  background-color: #1D3152;\n  color: #F7F0EC;\n  border: none;\n  border-radius: 9999px;\n  font-family: 'Lato', sans-serif;\n  font-weight: 700;\n  font-size: 11px;\n  letter-spacing: 0.25em;\n  text-transform: uppercase;\n  cursor: pointer;\n  transition: all 0.3s ease;\n  margin-top: 0.5rem;\n  box-sizing: border-box;\n}\n\n.inquiry-button:hover {\n  background-color: #0E1B30;\n  transform: translateY(-2px);\n  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);\n}\n\n@media (max-width: 768px) {\n  .inquiry-form {\n    padding: 2rem;\n  }\n}\n</style>"
-                    }
+                    ]
                 }
             ]
         }
