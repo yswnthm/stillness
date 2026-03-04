@@ -1,0 +1,47 @@
+<script>
+/**
+ * Stillness Header — Scroll & Mobile Behaviour
+ *
+ * HOW TO ADD THIS TO WORDPRESS:
+ *   Elementor (Pro) → Custom Code → Add New
+ *   Location: Body End
+ *   Condition: Entire Website
+ *   Title: Stillness Header Script
+ */
+(function () {
+    const header = document.getElementById('stillness-header');
+    const toggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (!header) return;
+
+    /* ── Scroll Detection ── */
+    function onScroll() {
+        header.classList.toggle('is-scrolled', window.scrollY > 50);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // run immediately on load
+
+    /* ── Home Page Detection ── */
+    if (
+        window.location.pathname === '/' ||
+        window.location.pathname === '/home' ||
+        document.body.classList.contains('home')
+    ) {
+        document.body.classList.add('home');
+    }
+
+    /* ── Mobile Menu Toggle ── */
+    if (toggle && mobileMenu) {
+        toggle.addEventListener('click', function () {
+            mobileMenu.classList.toggle('is-open');
+        });
+        // Close on any nav link click
+        mobileMenu.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                mobileMenu.classList.remove('is-open');
+            });
+        });
+    }
+})();
+</script>
