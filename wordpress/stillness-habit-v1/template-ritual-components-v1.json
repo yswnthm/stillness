@@ -1,0 +1,48 @@
+{
+  "content": [
+    {
+      "id": "section_ritual",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#0E1B30",
+        "padding": {
+          "unit": "px",
+          "top": "160",
+          "right": "24",
+          "bottom": "160",
+          "left": "24",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "inner_ritual",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1280
+            }
+          },
+          "elements": [
+            {
+              "id": "widget_ritual",
+              "elType": "widget",
+              "settings": {
+                "html": " <div class='components-wrap'>   <div class='components-bg-decor'></div>   <div class='components-header sh-reveal'>     <span class='components-label'>Inside The Container</span>     <h2 class='components-title'>30 Days of Guided Immersion</h2>   </div>   <div class='components-grid'>     <div class='components-card sh-reveal sh-delay-1'>       <div class='card-icon-wrap'>         <i class='fas fa-sun'></i>       </div>       <h3 class='card-title'>Daily Live Zoom Sessions</h3>       <p class='card-desc'>30 days of live, facilitated practice at dawn. Show up exactly as you are. No recordings to fall behind on\u2014just the raw, human experience of breathing together every single morning.</p>     </div>     <div class='components-card sh-reveal sh-delay-2'>       <div class='card-icon-wrap'>         <i class='fas fa-wind'></i>       </div>       <h3 class='card-title'>Somatic Regulation</h3>       <p class='card-desc'>Integrative techniques to discharge stress from the nervous system before the sit. We use the breath to anchor the body in safety, making the silence an invitation rather than a chore.</p>     </div>     <div class='components-card sh-reveal sh-delay-3'>       <div class='card-icon-wrap'>         <i class='fas fa-users'></i>       </div>       <h3 class='card-title'>Accountability Circle</h3>       <p class='card-desc'>An intimate cohort of maximum 15 seekers. This isn't a broadcast; it's a conversation. Share reflections, challenges, and breakthroughs in a safety-first container.</p>     </div>     <div class='components-card sh-reveal sh-delay-4'>       <div class='card-icon-wrap'>         <i class='fas fa-magic'></i>       </div>       <h3 class='card-title'>The Habit Toolkit</h3>       <p class='card-desc'>A curated digital library of integration resources, including morning rituals, evening wind-downs, and the science of maintaining presence beyond the 30-day container.</p>     </div>   </div> </div>  <style> .components-wrap { position: relative; width: 100%; } .components-bg-decor { position: absolute; bottom: -160px; left: -24px; width: 50%; height: calc(100% + 320px); background: rgba(255, 255, 255, 0.03); transform: skewX(-12deg) translateX(-25%); z-index: 0; pointer-events: none; } .components-header { position: relative; z-index: 10; text-align: center; margin-bottom: 128px; } .components-label { color: #688F9D; letter-spacing: 0.4em; text-transform: uppercase; font-size: 10px; margin-bottom: 24px; font-weight: 700; font-family: 'Lato', sans-serif; display: block; } .components-title { font-family: 'Cormorant Garamond', serif !important; font-size: 64px; font-weight: 400 !important; color: #FFFFFF !important; line-height: 1.2; margin: 0; } @media (max-width: 768px) { .components-title { font-size: 36px; } }  .components-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; position: relative; z-index: 10; } @media (min-width: 1024px) { .components-grid { gap: 48px; } } @media (max-width: 768px) { .components-grid { grid-template-columns: 1fr; } }  .components-card { background: rgba(14, 27, 48, 0.3); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 48px; padding: 48px; transition: all 0.5s ease; flex: 1; display: flex; flex-direction: column; } @media (min-width: 1024px) { .components-card { padding: 56px; } } .components-card:hover { background: rgba(255, 255, 255, 0.05); border-color: rgba(104, 143, 157, 0.2); }  .card-icon-wrap { width: 80px; height: 80px; border-radius: 50%; background: #0E1B30; border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 40px; transition: all 0.5s ease; } .components-card:hover .card-icon-wrap { transform: scale(1.1); border-color: rgba(104, 143, 157, 0.3); } .card-icon-wrap i { color: #688F9D; font-size: 32px; }  .card-title { font-family: 'Cormorant Garamond', serif !important; font-size: 28px; color: #FFFFFF !important; margin-bottom: 24px; font-weight: 400 !important; } .card-desc { font-family: 'Lato', sans-serif !important; font-size: 18px; font-weight: 300 !important; color: rgba(255, 255, 255, 0.7) !important; line-height: 1.8; margin: 0; }  .sh-reveal { opacity: 0; transform: translateY(20px); animation: sh-fade-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; } .sh-delay-1 { animation-delay: 0.2s; } .sh-delay-2 { animation-delay: 0.4s; } .sh-delay-3 { animation-delay: 0.6s; } .sh-delay-4 { animation-delay: 0.8s; } @keyframes sh-fade-up { to { opacity: 1; transform: translateY(0); } } </style> "
+              },
+              "widgetType": "html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Stillness Ritual Components Section V1",
+  "type": "section"
+}

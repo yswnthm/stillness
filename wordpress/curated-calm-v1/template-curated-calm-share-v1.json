@@ -1,0 +1,28 @@
+{
+    "content": [
+        {
+            "id": "cc_share",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": { "unit": "px", "top": "120", "right": "0", "bottom": "120", "left": "0", "isLinked": false }
+            },
+            "elements": [
+                {
+                    "id": "share_html",
+                    "elType": "widget",
+                    "settings": {
+                        "html": "<div class='cc-share-section cc-reveal'>\n    <div class='cc-share-icon-wrapper'>\n        <svg viewBox='0 0 24 24' width='48' height='48' stroke='#688F9D' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='8' r='6'></circle><path d='M15.477 12.89 17 22l-5-3-5 3 1.523-9.11'></path></svg>\n    </div>\n    <h2 class='cc-share-title'>Share The Stillness</h2>\n    <p class='cc-share-text'>\n        Healing is profoundly powerful when shared. Invite a partner, friend, or family member to join any of your in-home sessions for a nominal addition of <span class='cc-highlight'>$99 per guest</span>.\n    </p>\n</div>\n\n<style>\n.cc-share-section {\n    max-width: 800px;\n    margin: 0 auto;\n    text-align: center;\n    padding: 0 40px;\n}\n\n.cc-share-icon-wrapper {\n    width: 120px;\n    height: 120px;\n    margin: 0 auto 48px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    background: #D9E8EB !important;\n    border-radius: 50% !important;\n    box-shadow: inset 0 0 0 1px rgba(104, 143, 157, 0.1);\n}\n\n.cc-share-icon-wrapper svg {\n    width: 48px !important;\n    height: 48px !important;\n}\n\n.cc-share-title {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 48px !important;\n    color: #0E1B30 !important;\n    margin-bottom: 32px;\n    font-weight: 400 !important;\n}\n\n.cc-share-text {\n    font-family: 'Lato', sans-serif !important;\n    font-size: 18px !important;\n    line-height: 1.8 !important;\n    color: rgba(14, 27, 48, 0.6) !important;\n    font-weight: 300 !important;\n}\n\n.cc-highlight {\n    color: #0E1B30 !important;\n    font-weight: 500 !important;\n}\n\n/* Animations */\n.cc-reveal {\n    opacity: 0;\n    transform: translateY(30px);\n    animation: cc-fade-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;\n}\n\n@keyframes cc-fade-up {\n    to { opacity: 1; transform: translateY(0); }\n}\n\n@media (max-width: 768px) {\n    .cc-share-title { font-size: 32px !important; }\n    .cc-share-text { font-size: 16px !important; }\n    .cc-share-icon-wrapper {\n        width: 100px;\n        height: 100px;\n    }\n}\n</style>"
+                    },
+                    "widgetType": "html"
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Share The Stillness",
+    "type": "section"
+}

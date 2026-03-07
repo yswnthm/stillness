@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page Copywriting Variations | Stillness</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+        :root {
+            --background: #0a0a0a;
+            --surface: #121212;
+            --surfaceHighlight: #1e1e1e;
+            --border: #333333;
+            --textMain: #f5f5f5;
+            --textMuted: #a3a3a3;
+            --accent: #f97316;
+            --accentHover: #ea580c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--background);
+            color: var(--textMuted);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .document-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .document-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        .header {
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--textMain);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .header .meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--textMuted);
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--textMain);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .component-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent);
+            margin-left: auto;
+            border: 1px solid var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .variations-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .variation-card {
+            background: var(--surfaceHighlight);
+            border: 1px solid var(--border);
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .variation-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .variation-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-group {
+            margin-bottom: 0.5rem;
+        }
+
+        .label {
+            font-size: 0.65rem;
+            color: var(--textMuted);
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .copy-title {
+            color: var(--textMain);
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .copy-body {
+            font-size: 0.9rem;
+            color: var(--textMuted);
+        }
+
+        .word-count {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--textMuted);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 8px;
+            margin-top: auto;
+            border-radius: 2px;
+            display: inline-block;
+        }
+
+        .stat-item {
+            border-left: 2px solid var(--accent);
+            padding-left: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            border-left: 2px solid var(--border);
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .variations-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            .variations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .document-container {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+                padding: 0;
+            }
+
+            .document-container {
+                border: none;
+                width: 100%;
+                max-width: none;
+                background: white;
+                padding: 0;
+            }
+
+            .variation-card {
+                background: white;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+            }
+
+            .copy-title,
+            h1,
+            h2,
+            .variation-label {
+                color: black !important;
+            }
+
+            .document-container::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="document-container">
+        <header class="header">
+            <h1>Home Page Copywriting</h1>
+            <div class="meta">
+                <span>SOLICATE DESIGN SYSTEM — STILLNESS RITUALS</span>
+                <span> | 2026 EDITION</span>
+            </div>
+        </header>
+
+        <!-- 1. HERO SECTION -->
+        <section>
+            <h2>1. Hero Section <span class="component-tag">HeroSection.tsx</span></h2>
+            <div class="variations-grid">
+                <!-- V1 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <div class="content-group">
+                        <span class="label">Title</span>
+                        <div class="copy-title">Awaken Your Essence</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Subtext</span>
+                        <p class="copy-body">A sacred space for internal quiet and cosmic resonance. Return to your
+                            light.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Button</span>
+                        <div class="copy-title">Enter The Void</div>
+                    </div>
+                    <span class="word-count">Targets: 3 / 13 / 3 words</span>
+                </div>
+                <!-- V2 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <div class="content-group">
+                        <span class="label">Title</span>
+                        <div class="copy-title">Achieve Total Rest</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Subtext</span>
+                        <p class="copy-body">A modern retreat for complete recovery and mental clarity. Reset your daily
+                            life.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Button</span>
+                        <div class="copy-title">Book Your Session</div>
+                    </div>
+                    <span class="word-count">Targets: 3 / 13 / 3 words</span>
+                </div>
+                <!-- V3 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <div class="content-group">
+                        <span class="label">Title</span>
+                        <div class="copy-title">Regulate Your System</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Subtext</span>
+                        <p class="copy-body">A targeted environment for neural downregulation and lymphatic drainage.
+                            Optimize your biological state.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Button</span>
+                        <div class="copy-title">Start Neural Reset</div>
+                    </div>
+                    <span class="word-count">Targets: 3 / 13 / 3 words</span>
+                </div>
+                <!-- V4 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <div class="content-group">
+                        <span class="label">Title</span>
+                        <div class="copy-title">Find Your Stillness</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Subtext</span>
+                        <p class="copy-body">Your sanctuary for deep relaxation and inner harmony. Come back to
+                            yourself.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Button</span>
+                        <div class="copy-title">Begin Your Journey</div>
+                    </div>
+                    <span class="word-count">Targets: 3 / 13 / 3 words</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. INTRO SECTION -->
+        <section>
+            <h2>2. Our Philosophy <span class="component-tag">FeaturesSection.tsx</span></h2>
+            <div class="variations-grid">
+                <!-- V1 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <div class="content-group">
+                        <span class="label">Tagline</span>
+                        <div class="copy-title" style="font-size: 0.9rem;">Heart Essence</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">Quiet is a soulful requirement, not a dream.</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Body</span>
+                        <p class="copy-body">Amid a life that ignores inner needs, Stillness becomes a portal to soul.
+                            Created by Elena Corves following her deep trek through darkness, this temple is built upon
+                            the truth of silent depth and sacred spirit alignment.</p>
+                        <p class="copy-body" style="margin-top: 0.5rem;">Now, the ocean loves you so you can finally
+                            love yourself. We remove the weights—worry, fear, pain, demands—offering only the infinite
+                            sky you seek for truth.</p>
+                    </div>
+                    <span class="word-count">Body Word Count: 36 + 29</span>
+                </div>
+                <!-- V2 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <div class="content-group">
+                        <span class="label">Tagline</span>
+                        <div class="copy-title" style="font-size: 0.9rem;">Core Value</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">Health is a critical priority, not a choice.</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Body</span>
+                        <p class="copy-body">In a market that prizes endless work, Stillness offers a place to stop.
+                            Started by Elena Corves following her personal fight with fatigue, our center is focused on
+                            the goals of stress relief and body balance maintenance.</p>
+                        <p class="copy-body" style="margin-top: 0.5rem;">Today, the salt supports you so you don't need
+                            to support yourself. We block the input—chaos, glare, talk, pressure—giving only the quiet
+                            zone you want for focus.</p>
+                    </div>
+                    <span class="word-count">Body Word Count: 36 + 29</span>
+                </div>
+                <!-- V3 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <div class="content-group">
+                        <span class="label">Tagline</span>
+                        <div class="copy-title" style="font-size: 0.9rem;">Bio Framework</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">Homeostasis is a physiological mandate, not a option.</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Body</span>
+                        <p class="copy-body">In a city that triggers chronic stress, Stillness acts as a neural buffer.
+                            Developed by Elena Corves using her clinical research into exhaustion, this lab is
+                            engineered around the metrics of stimuli deprivation and parasympathetic branch activation.
+                        </p>
+                        <p class="copy-body" style="margin-top: 0.5rem;">Thus, the density lifts you so you don't have
+                            to lift yourself. We negate the load—weight, photons, hertz, stimuli—leaving only the mental
+                            bandwidth you require to recover.</p>
+                    </div>
+                    <span class="word-count">Body Word Count: 36 + 29</span>
+                </div>
+                <!-- V4 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <div class="content-group">
+                        <span class="label">Tagline</span>
+                        <div class="copy-title" style="font-size: 0.9rem;">Our Philosophy</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">Rest is a biological necessity, not a luxury.</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Body</span>
+                        <p class="copy-body">In a world that demands constant output, Stillness is an invitation to
+                            pause. Founded by Elena Corves after her own journey through burnout, our sanctuary is
+                            designed around the principles of sensory reduction and nervous system regulation.</p>
+                        <p class="copy-body" style="margin-top: 0.5rem;">Here, the water holds you so you don't have to
+                            hold yourself. We strip away the noise—gravity, light, sound, expectations—leaving only the
+                            spaciousness you need to exhale.</p>
+                    </div>
+                    <span class="word-count">Body Word Count: 36 + 29</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. HEAL SECTION -->
+        <section>
+            <h2>3. Curated Calm <span class="component-tag">OfferingsSection.tsx</span></h2>
+            <div class="variations-grid">
+                <!-- V1 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <div class="content-group">
+                        <span class="label">Main Heading</span>
+                        <div class="copy-title">Infinite Peace</div>
+                        <p class="copy-body">Within the heart. A divine connection for your eternal soul.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Offerings</span>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Celestial Drift:</strong>
+                            Weightless spirit flight to release the body and open the heart.</div>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Life-Breath:</strong> Ancient
+                            spirit winds to move from worldly fear to cosmic love.</div>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Star Songs:</strong> Golden
+                            frequencies using holy bells to align your inner light.</div>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Grounding:</strong> After-drift
+                            prayer and rose water to hold your light before walking.</div>
+                    </div>
+                </div>
+                <!-- V2 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <div class="content-group">
+                        <span class="label">Main Heading</span>
+                        <div class="copy-title">Total Refresh</div>
+                        <p class="copy-body">Outside the tank. A full package for your mental health.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Offerings</span>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Gravity Rest:</strong> Salty water
+                            bath to relax the back and quiet the head.</div>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Breathing:</strong> Simple lung
+                            exercises to move from high stress to deep relax.</div>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Audio Relief:</strong> Sonic music
+                            using glass tools to calm your daily thoughts.</div>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Reflection:</strong> Calm note
+                            writing and hot tea to keep your mood before exiting.</div>
+                    </div>
+                </div>
+                <!-- V3 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <div class="content-group">
+                        <span class="label">Main Heading</span>
+                        <div class="copy-title">Neural Protocol</div>
+                        <p class="copy-body">Supplemental modalities. A comprehensive stack for your cortisol levels.
+                        </p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Offerings</span>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Float Modality:</strong> Isothermal
+                            saline saturation to unload the spine and pause the brain.</div>
+                        <div class="stat-item"><strong style="color:var(--textMain)">CO2-Reg:</strong> Monitored gas
+                            exchange to shift from sympathetic to vagal tone.</div>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Frequency Resonation:</strong>
+                            Acoustic tuning using sonic tools to entrain the cortical loops.</div>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Consolidation:</strong>
+                            Neuro-plasticity charting and tonic intake to fix your state before discharge.</div>
+                    </div>
+                </div>
+                <!-- V4 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <div class="content-group">
+                        <span class="label">Main Heading</span>
+                        <div class="copy-title">Curated Calm</div>
+                        <p class="copy-body">Beyond the water. A holistic ecosystem for your nervous system.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Offerings</span>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Float Therapy:</strong>
+                            Zero-gravity sensory relief to decompress the spine and silence the mind.</div>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Breathwork:</strong> Guided
+                            pranayama sessions to shift from fight-or-flight to rest-and-digest.</div>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Sound Healing:</strong> Vibrational
+                            therapy using crystal bowls to synchronize brainwave states.</div>
+                        <div class="stat-item"><strong style="color:var(--textMain)">Integration:</strong> Post-float
+                            journaling and tea rituals to anchor your calm before leaving.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CORPORATE SECTION -->
+        <section>
+            <h2>4. Corporate Wellness <span class="component-tag">CorporateSection.tsx</span></h2>
+            <div class="variations-grid">
+                <!-- V1 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">Invite Stillness to the Office</div>
+                        <p class="copy-body">Chaos is the loud thief of wonder. Our sacred circles are crafted to heal
+                            your tribe's shared energy field, inspiring vision, love, and eternal creative flow.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Stats</span>
+                        <div class="stat-item">Softening of heavy hearts after one swim</div>
+                        <div class="stat-item">Expansion in divine spirit dreams</div>
+                        <div class="stat-item">Deep night rest found by souls</div>
+                    </div>
+                    <span class="word-count">Body Word Count: 28</span>
+                </div>
+                <!-- V2 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">Add Stillness to the Company</div>
+                        <p class="copy-body">Fatigue is the main cause of errors. Our group offers are made to fix your
+                            workers' common mental health, growing focus, kindness, and long-term team output.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Stats</span>
+                        <div class="stat-item">Decrease in cortisol levels for every employee</div>
+                        <div class="stat-item">Rise in smart work habits</div>
+                        <div class="stat-item">Improved work life balance for all</div>
+                    </div>
+                    <span class="word-count">Body Word Count: 28</span>
+                </div>
+                <!-- V3 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">Implement Stillness to the Infrastructure</div>
+                        <p class="copy-body">Cortisol is the primary inhibitor of cognition. Our enterprise protocols
+                            are calibrated to recalibrate your group's aggregate neural load, optimizing logic,
+                            cognition, and peak performance duration.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Stats</span>
+                        <div class="stat-item">Attenuation of inflammatory markers post float therapy</div>
+                        <div class="stat-item">Boost in divergent neural thinking</div>
+                        <div class="stat-item">Enhanced REM sleep cycles per person</div>
+                    </div>
+                    <span class="word-count">Body Word Count: 28</span>
+                </div>
+                <!-- V4 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">Bring Stillness to the Workplace</div>
+                        <p class="copy-body">Burnout is the silent killer of creativity. Our corporate programs are
+                            designed to reset your team's collective nervous system, fostering clarity, empathy, and
+                            sustainable productivity.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Stats</span>
+                        <div class="stat-item">Reduction in stress biomarkers after one float</div>
+                        <div class="stat-item">Improvement in creative problem solving</div>
+                        <div class="stat-item">Better sleep quality reported by teams</div>
+                    </div>
+                    <span class="word-count">Body Word Count: 28</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FLOATING TEASER SECTION -->
+        <section>
+            <h2>5. The Depths Expansion <span class="component-tag">FloatingTeaser.tsx</span></h2>
+            <div class="variations-grid">
+                <!-- V1 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">The Ocean Calling</div>
+                        <p class="copy-body">We are opening doors to four vast ritual spaces crafted for deep
+                            dream-state magic. Be the soul to enter the next peace.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Form</span>
+                        <div class="copy-title" style="font-size: 0.9rem;">Enter the Light</div>
+                        <p class="copy-body">Gain early entry to the temple.</p>
+                    </div>
+                    <span class="word-count">Body: 23 words</span>
+                </div>
+                <!-- V2 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">The New Rooms</div>
+                        <p class="copy-body">We are building out with three extra float tanks made for long quiet-time
+                            sessions. Be the user to try the latest rest.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Form</span>
+                        <div class="copy-title" style="font-size: 0.9rem;">Sign the List</div>
+                        <p class="copy-body">Get early info on the launch.</p>
+                    </div>
+                    <span class="word-count">Body: 23 words</span>
+                </div>
+                <!-- V3 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">The Habitat Expansion</div>
+                        <p class="copy-body">We are adding capacity with three specialized isolation units engineered
+                            for maximized neuro-plasticity cycles. Be the patient to test the upgraded state.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Form</span>
+                        <div class="copy-title" style="font-size: 0.9rem;">Register the Database</div>
+                        <p class="copy-body">Ensure beta access to the modules.</p>
+                    </div>
+                    <span class="word-count">Body: 23 words</span>
+                </div>
+                <!-- V4 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">The Depths Expansion</div>
+                        <p class="copy-body">We are breaking ground on three new immersion chambers designed for
+                            extended theta-state therapy. Be the first to experience the new stillness.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Form</span>
+                        <div class="copy-title" style="font-size: 0.9rem;">Join the Waitlist</div>
+                        <p class="copy-body">Secure early access to the expansion.</p>
+                    </div>
+                    <span class="word-count">Body: 23 words</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SHOP PREVIEW SECTION -->
+        <section>
+            <h2>6. Shop Preview <span class="component-tag">ShopPreview.tsx</span></h2>
+            <div class="variations-grid">
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <div class="copy-title">Take The Light Home</div>
+                    <p class="copy-body">Items and charms to keep your sacred spirit alignment within your temple.</p>
+                </div>
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <div class="copy-title">Buy The Kit Home</div>
+                    <p class="copy-body">Goods and aids to help your mental stress levels during the week.</p>
+                </div>
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <div class="copy-title">Extend The Protocol Home</div>
+                    <p class="copy-body">Equipment and supplements to sustain your physiological homeostasis outside the
+                        clinical environment.</p>
+                </div>
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <div class="copy-title">Bring The Ritual Home</div>
+                    <p class="copy-body">Tools and elements to maintain your nervous system regulation between sessions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. STORIES SECTION -->
+        <section>
+            <h2>7. The Journal <span class="component-tag">StoriesSection.tsx</span></h2>
+            <div class="variations-grid">
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <span class="label">Tagline: The Oracle</span>
+                    <div class="copy-title">Whispers from Within</div>
+                </div>
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <span class="label">Tagline: The Blog</span>
+                    <div class="copy-title">Tips for Peace</div>
+                </div>
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <span class="label">Tagline: The Archive</span>
+                    <div class="copy-title">Data on Resting</div>
+                </div>
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <span class="label">Tagline: The Journal</span>
+                    <div class="copy-title">Reflections on Stillness</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. TESTIMONIALS SECTION -->
+        <section>
+            <h2>8. Testimonials <span class="component-tag">TestimonialsSection.tsx</span></h2>
+            <div class="variations-grid">
+                <!-- V1 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <p class="copy-body testimonial-text">"I never knew how heavy my heart felt until I floated in the
+                        grace. It was a blooming of soul I never thought to seek."</p>
+                    <p class="copy-body testimonial-text">"The lightness is divine. For a moment, I wasn't a worker, a
+                        human, or a body. I was just... light."</p>
+                    <p class="copy-body testimonial-text">"Stillness showed me that peace isn't a gift. It's the heart
+                        of everything I am."</p>
+                </div>
+                <!-- V2 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <p class="copy-body testimonial-text">"I had no idea how stressed my brain was until I tried the
+                        quiet. It was a break for my head I really truly wanted."</p>
+                    <p class="copy-body testimonial-text">"The water help is great. For an hour, I wasn't a boss, a
+                        parent, or a driver. I was just... calm."</p>
+                    <p class="copy-body testimonial-text">"Stillness proved that sleep isn't a perk. It's the basis of
+                        all my daily work."</p>
+                </div>
+                <!-- V3 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <p class="copy-body testimonial-text">"I failed to observe how high my hertz was until I isolated
+                        the senses. It was a recalibration of ego I hadn't yet clinically quantified."</p>
+                    <p class="copy-body testimonial-text">"The buoyancy is extreme. For an hour, I wasn't a lead, a
+                        parent, or a pilot. I was just... off."</p>
+                    <p class="copy-body testimonial-text">"Stillness verified that rest isn't a variable. It's the
+                        constant of all human output."</p>
+                </div>
+                <!-- V4 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <p class="copy-body testimonial-text">"I didn't realize how loud my mind was until I stepped into
+                        the silence. It was a returning to myself I didn't know I needed."</p>
+                    <p class="copy-body testimonial-text">"The weightlessness is profound. For an hour, I wasn't a CEO,
+                        a mother, or a planner. I was just... being."</p>
+                    <p class="copy-body testimonial-text">"Stillness taught me that rest isn't a luxury. It's the
+                        foundation of everything I do."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. NEWSLETTER SECTION -->
+        <section style="margin-bottom: 4rem;">
+            <h2>9. Newsletter <span class="component-tag">NewsletterSection.tsx</span></h2>
+            <div class="variations-grid">
+                <!-- V1 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <div class="copy-title">Enter Our Circle</div>
+                    <p class="copy-body">Accept sacred poems, visions, and early calls to holy events directly to your
+                        soul. No ego, only light.</p>
+                    <span class="label" style="margin-top: auto;">We love your peace. Leave us when needed.</span>
+                </div>
+                <!-- V2 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <div class="copy-title">Join Our List</div>
+                    <p class="copy-body">Get weekly tips, news, and early deals on new bookings sent to your mail. No
+                        spam, only help.</p>
+                    <span class="label" style="margin-top: auto;">We hate junk mail. Quit at any point.</span>
+                </div>
+                <!-- V3 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <div class="copy-title">Join Our Network</div>
+                    <p class="copy-body">Monitor research updates, abstracts, and beta access to clinical trials sent to
+                        your terminal. No junk, just data.</p>
+                    <span class="label" style="margin-top: auto;">We protect your data. Opt out when desired.</span>
+                </div>
+                <!-- V4 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <div class="copy-title">Join Our Community</div>
+                    <p class="copy-body">Receive monthly rituals, reflections, and early access to new experiences
+                        directly to your inbox. No noise, just stillness.</p>
+                    <span class="label" style="margin-top: auto;">We respect your inbox. Unsubscribe at any time.</span>
+                </div>
+            </div>
+        </section>
+
+        <footer
+            style="text-align: center; border-top: 1px solid var(--border); padding-top: 2rem; color: var(--textMuted); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;">
+            <p>© 2026 SOLICATE WORKS. PROPRIETARY STRATEGY DOCUMENT.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

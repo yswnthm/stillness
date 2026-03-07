@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stillness Habit Copywriting Variations | Stillness</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+        :root {
+            --background: #0a0a0a;
+            --surface: #121212;
+            --surfaceHighlight: #1e1e1e;
+            --border: #333333;
+            --textMain: #f5f5f5;
+            --textMuted: #a3a3a3;
+            --accent: #f97316;
+            --accentHover: #ea580c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--background);
+            color: var(--textMuted);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .document-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .document-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        .header {
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--textMain);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .header .meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--textMuted);
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--textMain);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .component-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent);
+            margin-left: auto;
+            border: 1px solid var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .variations-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .variation-card {
+            background: var(--surfaceHighlight);
+            border: 1px solid var(--border);
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .variation-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .variation-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-group {
+            margin-bottom: 0.5rem;
+        }
+
+        .label {
+            font-size: 0.65rem;
+            color: var(--textMuted);
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .copy-title {
+            color: var(--textMain);
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .copy-body {
+            font-size: 0.9rem;
+            color: var(--textMuted);
+        }
+
+        @media screen and (max-width: 1024px) {
+            .variations-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            .variations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .document-container {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+                padding: 0;
+            }
+
+            .document-container {
+                border: none;
+                width: 100%;
+                max-width: none;
+                background: white;
+                padding: 0;
+            }
+
+            .variation-card {
+                background: white;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+            }
+
+            .copy-title,
+            h1,
+            h2,
+            .variation-label {
+                color: black !important;
+            }
+
+            .document-container::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="document-container">
+        <header class="header">
+            <h1>Stillness Habit Copywriting</h1>
+            <div class="meta">
+                <span>SOLICATE DESIGN SYSTEM — STILLNESS RITUALS</span>
+                <span> | PERSISTENT PRACTICE</span>
+            </div>
+        </header>
+
+        <!-- 1. HERO SECTION -->
+        <section>
+            <h2>1. Habit Hero <span class="component-tag">HabitHero.tsx</span></h2>
+            <div class="variations-grid">
+                <!-- V1 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <div class="content-group">
+                        <span class="label">Title</span>
+                        <div class="copy-title">Presence</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Body</span>
+                        <p class="copy-body">The 30-Day Immersion. A collective journey of returning to the self, one
+                            breath at a time.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Quote</span>
+                        <p class="copy-body" style="font-style: italic;">"The habit of stillness is the beginning of all
+                            wisdom."</p>
+                    </div>
+                </div>
+                <!-- V2 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <div class="content-group">
+                        <span class="label">Title</span>
+                        <div class="copy-title">30-Day Presence Training</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Body</span>
+                        <p class="copy-body">Join our monthly cohort for a structured 30-day program designed to build a
+                            lasting mindfulness practice.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Quote</span>
+                        <p class="copy-body" style="font-style: italic;">"Consistency in quiet moments leads to clarity
+                            in active ones."</p>
+                    </div>
+                </div>
+                <!-- V3 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <div class="content-group">
+                        <span class="label">Title</span>
+                        <div class="copy-title">Neuro-Cognitive Immersion</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Body</span>
+                        <p class="copy-body">A 30-day evidence-based protocol for habit formation, focusing on
+                            neuroplasticity and the stabilization of daily ritual.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Quote</span>
+                        <p class="copy-body" style="font-style: italic;">"Neural pathways for calm are strengthened
+                            through repetitive somatic engagement."</p>
+                    </div>
+                </div>
+                <!-- V4 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <div class="content-group">
+                        <span class="label">Title</span>
+                        <div class="copy-title">Presence</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Body</span>
+                        <p class="copy-body">The 30-Day Immersion. A collective journey of returning to the self, one
+                            breath at a time.</p>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Quote</span>
+                        <p class="copy-body" style="font-style: italic;">"The habit of stillness is the beginning of all
+                            wisdom."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. NEUROSCIENCE -->
+        <section style="margin-bottom: 4rem;">
+            <h2>2. Neuroscience <span class="component-tag">NeuroScience.tsx</span></h2>
+            <div class="variations-grid">
+                <!-- V1 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">The Architecture of Change</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Body</span>
+                        <p class="copy-body">We do not just teach you to sit; we help you rewire the pathways of your
+                            peace. Through gentle repetition, your body learns that safety isn't a goal—it's home.</p>
+                    </div>
+                </div>
+                <!-- V2 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">How Radical Change Happens</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Body</span>
+                        <p class="copy-body">Our program focuses on practical brain training. By practicing specific
+                            regulation techniques daily, you build the mental resilience required to handle high-stress
+                            environments without burnout.</p>
+                    </div>
+                </div>
+                <!-- V3 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">Neuroplasticity and Somatic Safety</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Body</span>
+                        <p class="copy-body">We utilize principles of neuro-rewiring to interrupt chronic stress cycles.
+                            This protocol establishes somatic safety by modulating the autonomic nervous system through
+                            consistent, time-gated regulation exercises.</p>
+                    </div>
+                </div>
+                <!-- V4 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">The Science of Stillness</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Body</span>
+                        <p class="copy-body">We don't just teach you to sit still; we help you rewire your brain for
+                            calm. Through consistent practice, you move from chronic stress to somatic safety.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer
+            style="text-align: center; border-top: 1px solid var(--border); padding-top: 2rem; color: var(--textMuted); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;">
+            <p>© 2026 SOLICATE WORKS. PROPRIETARY STRATEGY DOCUMENT.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

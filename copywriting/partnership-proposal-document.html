@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnership Proposal — Mugiwara Team x Solicate</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+        :root {
+            --background: #0a0a0a;
+            --surface: #121212;
+            --surfaceHighlight: #1e1e1e;
+            --border: #333333;
+            --textMain: #f5f5f5;
+            --textMuted: #a3a3a3;
+            --accent: #f97316;
+            --accentHover: #ea580c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--background);
+            color: var(--textMuted);
+            line-height: 1.7;
+            padding: 3rem 1.5rem;
+        }
+
+        .document-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .document-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        .header {
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--textMain);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .header .meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--textMuted);
+        }
+
+        .header .meta span {
+            margin-right: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--textMain);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--textMain);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        strong {
+            color: var(--textMain);
+            font-weight: 600;
+        }
+
+        .card {
+            background: var(--surfaceHighlight);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--textMuted);
+        }
+
+        .step {
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            border-left: 2px solid var(--border);
+        }
+
+        .step:hover {
+            border-left-color: var(--accent);
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: var(--textMain);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--border);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        li strong {
+            color: var(--textMain);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+        }
+
+        th {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--textMain);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: var(--surfaceHighlight);
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.875rem;
+        }
+
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .signature {
+            margin-top: 2rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+                color: black;
+            }
+
+            .document-container {
+                border: none;
+                padding: 2rem;
+            }
+
+            .document-container::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+
+            .document-container {
+                padding: 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="document-container">
+        <div class="header">
+            <h1>Partnership Proposal</h1>
+            <div class="meta">
+                <span>Mugiwara Team × Solicate</span>
+                <span>26 February 2026</span>
+            </div>
+        </div>
+
+        <h2>Partnership Structure</h2>
+        <p>We're proposing a referral partnership. You introduce clients who need websites. We handle the build. You get paid.</p>
+        <p>Simple and clean.</p>
+
+        <h2>Commission Model</h2>
+        <div class="card">
+            <p><strong>How it works:</strong></p>
+            <p>You make the introduction. We take it from there — sales call, client management, delivery. You get a flat commission for every closed deal.</p>
+        </div>
+
+        <p><strong>Your cut:</strong> <span class="highlight">15-20%</span> of total project value</p>
+
+        <div class="card">
+            <p><strong>Example:</strong></p>
+            <ul>
+                <li><strong>Project value:</strong> ₹50,000</li>
+                <li><strong>Your commission:</strong> ₹7,500 - ₹10,000</li>
+                <li><strong>Your effort:</strong> One introduction</li>
+            </ul>
+        </div>
+
+        <p><strong>Why this works:</strong></p>
+        <p>Pure passive income. You connect us with a client who already trusts you. We close the deal. You get paid without doing extra work.</p>
+
+        <h3>Stay in the loop</h3>
+        <p>You want transparency with your clients? No problem.</p>
+        <p>We'll keep you copied on all proposals and project updates. You'll know exactly what we're charging, what we're building, and where things stand. Some partners like to stay hands-on, some prefer to step back after the intro — we work either way.</p>
+
+        <h2>How We Work Together</h2>
+
+        <div class="step">
+            <span class="step-title">Step 1: Introduction</span>
+            <p>You connect us with a client who needs a website. Simple message, WhatsApp group, or email works.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-title">Step 2: Initial Call (You Lead)</span>
+            <p>You hop on a call with the client first. You know them best — they trust you.</p>
+            <p>We'll share a simple checklist of what to ask and what to look for. Nothing fancy. Just enough to understand their needs and spot any red flags early.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-title">Step 3: Handoff</span>
+            <p>You introduce us on the call or via message. We take it from there — discovery, proposal, building, delivery.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-title">Step 4: Build</span>
+            <p>We handle everything. You don't need to manage anything.</p>
+        </div>
+
+        <div class="step">
+            <span class="step-title">Step 5: Payment & Commission</span>
+            <p>Client pays. We transfer your commission within 48 hours.</p>
+        </div>
+
+        <p><strong>You stay in the loop:</strong></p>
+        <p>We'll copy you on all proposals and project updates. You'll know exactly what we're charging and where things stand. Full transparency.</p>
+
+        <h2>What We Build</h2>
+        <ul>
+            <li>Portfolio websites for video-heavy brands</li>
+            <li>Landing pages for coaches and creators</li>
+            <li>Full-stack web applications</li>
+            <li>Custom interactive experiences optimized for video content</li>
+        </ul>
+
+        <p><strong>Typical project range:</strong> ₹10,000 - ₹3,00,000+</p>
+        <p><strong>Timeline:</strong> 2-6 weeks depending on scope</p>
+
+        <h2>What You Get</h2>
+        <ul>
+            <li><strong>Dedicated partner manager</strong> (Yeswanth, founder)</li>
+            <li><strong>Transparent pricing</strong> (you see every quote)</li>
+            <li><strong>Fast commission payouts</strong> (within 48 hours of client payment)</li>
+            <li><strong>No client management overhead</strong> (we handle everything)</li>
+            <li><strong>Long-term relationship building</strong> (we retain clients, you keep earning from retainers)</li>
+        </ul>
+
+        <h2>Next Steps</h2>
+        <p>Let me know if this works for you.</p>
+        <p>Once you confirm, I'll send over a simple one-page agreement. Then we're ready to start.</p>
+
+        <div class="footer">
+            <p><strong>Questions?</strong></p>
+            <p>Drop them here. Happy to clarify anything.</p>
+        </div>
+
+        <div class="signature">
+            <p>Best,</p>
+            <p>Yeswanth</p>
+            <p>Founder, Solicate</p>
+        </div>
+    </div>
+</body>
+</html>

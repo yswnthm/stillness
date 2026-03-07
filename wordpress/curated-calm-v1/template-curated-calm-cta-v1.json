@@ -1,0 +1,29 @@
+{
+    "content": [
+        {
+            "id": "cc_cta",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true },
+                "overflow": "hidden"
+            },
+            "elements": [
+                {
+                    "id": "cta_html",
+                    "elType": "widget",
+                    "settings": {
+                        "html": "<div class='cc-cta-wrapper'>\n    <div class='cc-cta-breathe-bg'></div>\n    <div class='cc-cta-content cc-reveal'>\n        <h2 class='cc-cta-title'>Your sanctuary<br>reclaimed.</h2>\n        <p class='cc-cta-text'>\"The world will wait. Your peace will not.\"</p>\n        <div class='cc-cta-links'>\n            <a href='/about' class='cc-cta-link'>Our Way</a>\n            <a href='/offerings' class='cc-cta-link'>Other Rituals</a>\n        </div>\n    </div>\n</div>\n\n<style>\n.cc-cta-wrapper {\n    position: relative;\n    width: 100%;\n    min-height: 600px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    overflow: hidden;\n    background-color: #FFFFFF;\n    text-align: center;\n}\n\n.cc-cta-breathe-bg {\n    position: absolute;\n    inset: 0;\n    background: #D9E8EB;\n    opacity: 0.3;\n    animation: cc-cta-breathe 10s ease-in-out infinite;\n    z-index: 1;\n}\n\n.cc-cta-content {\n    position: relative;\n    z-index: 10;\n    max-width: 800px;\n    padding: 0 40px;\n}\n\n.cc-cta-title {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 80px !important;\n    color: #0E1B30 !important;\n    line-height: 1.1 !important;\n    margin: 0 0 48px;\n    font-weight: 400 !important;\n}\n\n.cc-cta-text {\n    font-family: 'Lato', sans-serif !important;\n    font-size: 20px !important;\n    font-style: italic !important;\n    color: rgba(14, 27, 48, 0.6) !important;\n    margin-bottom: 64px;\n    font-weight: 300;\n}\n\n.cc-cta-links {\n    display: flex;\n    justify-content: center;\n    gap: 48px;\n}\n\n.cc-cta-link {\n    font-family: 'Lato', sans-serif !important;\n    font-size: 14px !important;\n    text-transform: uppercase !important;\n    letter-spacing: 0.3em !important;\n    color: rgba(14, 27, 48, 0.4) !important;\n    text-decoration: none !important;\n    border-bottom: 1px solid rgba(14, 27, 48, 0.1);\n    padding-bottom: 8px;\n    transition: all 0.3s ease;\n}\n\n.cc-cta-link:hover {\n    color: #0E1B30 !important;\n    border-color: #0E1B30;\n}\n\n/* Animations */\n@keyframes cc-cta-breathe {\n    0%, 100% { transform: scale(1); opacity: 0.2; }\n    50% { transform: scale(1.1); opacity: 0.3; }\n}\n\n.cc-reveal {\n    opacity: 0;\n    transform: translateY(30px);\n    animation: cc-fade-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;\n}\n\n@keyframes cc-fade-up {\n    to { opacity: 1; transform: translateY(0); }\n}\n\n@media (max-width: 768px) {\n    .cc-cta-wrapper { min-height: 500px; }\n    .cc-cta-title { font-size: 48px !important; }\n    .cc-cta-text { font-size: 18px !important; }\n    .cc-cta-link { font-size: 12px !important; }\n    .cc-cta-links { gap: 24px; }\n}\n</style>"
+                    },
+                    "widgetType": "html"
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Curated Calm CTA",
+    "type": "section"
+}

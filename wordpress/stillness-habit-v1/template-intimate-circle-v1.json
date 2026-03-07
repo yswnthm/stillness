@@ -1,0 +1,48 @@
+{
+  "content": [
+    {
+      "id": "section_intimate",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "rgba(217, 232, 235, 0.3)",
+        "padding": {
+          "unit": "px",
+          "top": "160",
+          "right": "24",
+          "bottom": "160",
+          "left": "24",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "inner_intimate",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1024
+            }
+          },
+          "elements": [
+            {
+              "id": "widget_intimate",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class='circle-wrap'><div class='circle-bg-decor'></div><div class='circle-content sh-reveal'><div class='circle-icon-wrap'><i class='fas fa-users'></i></div><h2 class='circle-title'>Quality over Quantity</h2><p class='circle-body'>The Stillness Habit is a deep-dive transmission. To maintain the integrity of the energetic field and ensure every participant receives direct guidance, cohorts are <strong>strictly limited to 15 individuals</strong>. This ensures an intimate, high-resonance experience for everyone involved.</p><div class='circle-badge'><div class='badge-dot'></div><span>Next Cohort: March 1st - March 30th</span></div></div></div><style>.circle-wrap { position: relative; width: 100%; text-align: center; }.circle-bg-decor { position: absolute; top: 0; right: 0; width: 384px; height: 384px; background: rgba(255, 255, 255, 0.4); border-radius: 50%; filter: blur(48px); transform: translate(50%, -50%); pointer-events: none; }.circle-content { position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center; }.circle-icon-wrap { width: 96px; height: 96px; border: 1px solid rgba(104, 143, 157, 0.2); border-radius: 50%; background: rgba(255, 255, 255, 0.5); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; margin-bottom: 48px; }.circle-icon-wrap i { color: #688F9D; font-size: 40px; }.circle-title { font-family: 'Cormorant Garamond', serif !important; font-size: 64px; font-weight: 400 !important; color: #0E1B30 !important; margin-bottom: 40px; }@media (max-width: 768px) { .circle-title { font-size: 36px; } }.circle-body { font-family: 'Lato', sans-serif !important; font-size: 20px; font-weight: 300 !important; color: rgba(14, 27, 48, 0.7); line-height: 1.8; max-width: 768px; margin: 0 auto 64px; }@media (max-width: 768px) { .circle-body { font-size: 18px; } }.circle-badge { display: inline-flex; align-items: center; gap: 24px; padding: 20px 40px; border-radius: 9999px; background: rgba(255, 255, 255, 0.4); border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }.circle-badge span { font-size: 12px; text-transform: uppercase; letter-spacing: 0.3em; font-weight: 700; color: #0E1B30 !important; font-family: 'Lato', sans-serif; }.badge-dot { width: 8px; height: 8px; border-radius: 50%; background: #688F9D; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }@keyframes pulse { 50% { opacity: .5; } }.sh-reveal { opacity: 0; transform: translateY(20px); animation: sh-fade-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }@keyframes sh-fade-up { to { opacity: 1; transform: translateY(0); } }</style>"
+              },
+              "widgetType": "html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Stillness Intimate Circle Section V1",
+  "type": "section"
+}

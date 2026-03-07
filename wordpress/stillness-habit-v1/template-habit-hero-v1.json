@@ -1,0 +1,40 @@
+{
+  "content": [
+    {
+      "id": "section_habit",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#0E1B30",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "height": "min-height",
+        "custom_height": {
+          "unit": "vh",
+          "size": 100
+        }
+      },
+      "elements": [
+        {
+          "id": "widget_habit",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class='sh-wrapper'>  <div class='sh-bg'>    <img src='https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2000&auto=format&fit=crop' alt='Meditation Hero' />  </div>  <div class='sh-blob sh-blob-1'></div>  <div class='sh-blob sh-blob-2'></div>    <div class='sh-content'>    <div class='sh-reveal'>      <span class='sh-label'>Sacred Habit II</span>    </div>    <h1 class='sh-title sh-reveal sh-delay-1'>The 30-Day<br><span class='italic light'>Presence</span></h1>    <p class='sh-desc sh-reveal sh-delay-2'>\"Consistency is the highest form of self-love. We build the foundation, together.\"</p>        <div class='sh-reveal sh-delay-3'>      <a href='#methodology' class='sh-btn'>        <span class='sh-btn-bg'></span>        <span class='sh-btn-text'>View Cohort Details</span>        <i class='fas fa-arrow-right sh-btn-icon'></i>      </a>    </div>  </div></div><style>.sh-wrapper { position: relative; width: 100%; overflow: hidden; height: 100vh; min-height: 800px; display: flex; align-items: center; justify-content: center; background-color: #0E1B30; color: #FFFFFF !important; }.sh-bg { position: absolute; inset: 0; opacity: 0.5; pointer-events: none; }.sh-bg img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) brightness(50%); }.sh-blob { position: absolute; border-radius: 9999px; pointer-events: none; }.sh-blob-1 { top: 25%; left: 40px; width: 256px; height: 256px; background: rgba(104, 143, 157, 0.2); filter: blur(64px); animation: sh-breathe 8s ease-in-out infinite; }.sh-blob-2 { bottom: 25%; right: 40px; width: 384px; height: 384px; background: rgba(217, 232, 235, 0.1); filter: blur(64px); animation: sh-breathe 8s ease-in-out infinite 2s; }.sh-content { position: relative; z-index: 10; text-align: center; padding: 0 24px; max-width: 800px; margin: 0 auto; }.sh-label { display: inline-block; color: #688F9D !important; letter-spacing: 0.3em; text-transform: uppercase; font-size: 12px; margin-bottom: 32px; font-weight: 700; font-family: 'Lato', sans-serif !important; }.sh-title { font-family: 'Cormorant Garamond', serif !important; font-size: 96px !important; line-height: 0.9 !important; color: #FFFFFF !important; margin: 0 0 32px; font-weight: 400; letter-spacing: -0.02em; }.sh-title .italic { font-style: italic; }.sh-title .light { font-weight: 300; }.sh-desc { font-family: 'Lato', sans-serif !important; color: rgba(255, 255, 255, 0.6) !important; max-width: 600px; margin: 0 auto 48px; font-weight: 300; line-height: 1.6; font-size: 18px; font-style: italic; }.sh-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 16px; padding: 20px 40px; text-decoration: none !important; overflow: hidden; border-radius: 99px; outline: none; transition: all 0.5s ease; color: #FFFFFF !important; font-family: 'Lato', sans-serif !important; border: 1px solid rgba(255, 255, 255, 0.2); }.sh-btn:hover { color: #0E1B30 !important; text-decoration: none !important; border-color: transparent; }.sh-btn:focus, .sh-btn:active { outline: none; box-shadow: none; }.sh-btn-bg { position: absolute; inset: 0; border-radius: 99px; transition: all 0.5s ease; background: transparent; }.sh-btn:hover .sh-btn-bg { transform: scale(1.05); background: #FFFFFF; }.sh-btn-text { position: relative; z-index: 1; color: #FFFFFF !important; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; transition: color 0.5s ease; }.sh-btn:hover .sh-btn-text { color: #0E1B30 !important; }.sh-btn-icon { position: relative; z-index: 1; color: #688F9D !important; font-size: 14px; transition: all 0.5s ease; }.sh-btn:hover .sh-btn-icon { transform: translateX(8px); color: #0E1B30 !important; }@keyframes sh-breathe { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.1); opacity: 1; } }.sh-reveal { opacity: 0; transform: translateY(30px); animation: sh-fade-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }.sh-delay-1 { animation-delay: 0.2s; }.sh-delay-2 { animation-delay: 0.4s; }.sh-delay-3 { animation-delay: 0.6s; }@keyframes sh-fade-up { to { opacity: 1; transform: translateY(0); } }@media (min-width: 1025px) { .sh-title { font-size: 128px !important; line-height: 0.9 !important; } }@media (max-width: 767px) { .sh-title { font-size: 60px !important; } }</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Stillness Habit Hero Section V1",
+  "type": "section"
+}

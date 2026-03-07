@@ -1,0 +1,48 @@
+{
+  "content": [
+    {
+      "id": "section_neuroscience",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "padding": {
+          "unit": "px",
+          "top": "160",
+          "right": "24",
+          "bottom": "160",
+          "left": "24",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "inner_neuroscience",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1280
+            }
+          },
+          "elements": [
+            {
+              "id": "widget_neuroscience",
+              "elType": "widget",
+              "settings": {
+                "html": " <div class='neuro-grid'>   <div class='neuro-text-col sh-reveal sh-delay-2'>     <span class='neuro-label'>The Science of Presence</span>     <h2 class='neuro-title'>Rewire for<br><span class='italic text-seafoam'>unshakeable</span> calm.</h2>     <p class='neuro-body'>Resistance to meditation isn't a personality flaw\u2014it's a physiological response of a nervous system that hasn't found its rhythm. Modern life demands constant external attention, leaving the brain stuck in 'scanning' mode.</p>     <p class='neuro-body'>Our 30-day container is built on the principle of social regulation. By sitting together in a live, daily ritual, we bypass the isolation that makes habit formation difficult. We don't just teach you to sit; we create the environmental and communal conditions that make stillness the path of least resistance.</p>     <p class='neuro-body'>Through consistent repetition and somatic preparation, we move the body from a state of hyper-vigilance into a state of deep, restorative safety. This is how a temporary practice becomes a lifelong architecture.</p>          <div class='neuro-features'>       <div class='neuro-feature'>         <div class='feature-icon-wrap'>           <i class='fas fa-brain feature-icon'></i>         </div>         <div class='feature-content'>           <span class='feature-title'>Neuro-Rewiring</span>           <p class='feature-text'>30 DAYS IS THE THRESHOLD FOR TRUE PLASTIC CHANGE.</p>         </div>       </div>       <div class='neuro-feature'>         <div class='feature-icon-wrap'>           <i class='fas fa-heartbeat feature-icon'></i>         </div>         <div class='feature-content'>           <span class='feature-title'>Somatic Safety</span>           <p class='feature-text'>MOVING THE BODY INTO REGULATION BEFORE SILENCE.</p>         </div>       </div>     </div>   </div>    <div class='neuro-img-col'>     <div class='neuro-img-wrap sh-reveal curtain-reveal'>       <img src='https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?q=80&w=1200&auto=format&fit=crop' alt='Soma Practice' />     </div>     <div class='neuro-blob blob-seafoam sh-reveal sh-delay-2'></div>     <div class='neuro-blob blob-breathe animate-breathe'></div>   </div> </div>  <style> .neuro-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 120px; align-items: center; position: relative; z-index: 10; } @media (max-width: 1024px) {    .neuro-grid { grid-template-columns: 1fr; gap: 64px; }    .neuro-text-col { order: 2; }   .neuro-img-col { order: 1; margin-bottom: 40px; } }  .neuro-img-col { position: relative; } .neuro-img-wrap { aspect-ratio: 3/4; border-radius: 56px; overflow: hidden; box-shadow: 0 32px 64px -16px rgba(0,0,0,0.15); z-index: 2; position: relative; } .neuro-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 4s ease; } .neuro-img-wrap:hover img { transform: scale(1.1); }  .neuro-blob { position: absolute; z-index: -1; pointer-events: none; } .blob-seafoam { top: -48px; left: -48px; width: 224px; height: 224px; background: rgba(104, 143, 157, 0.1); border-radius: 48px; } .blob-breathe { bottom: -32px; right: -32px; width: 160px; height: 160px; background: rgba(217, 232, 235, 0.2); border-radius: 50%; filter: blur(32px); }  .neuro-text-col { display: flex; flex-direction: column; text-align: left; } .neuro-label { color: #688F9D; letter-spacing: 0.3em; text-transform: uppercase; font-size: 10px; margin-bottom: 24px; font-weight: 700; font-family: 'Lato', sans-serif; } .neuro-title { font-family: 'Cormorant Garamond', serif !important; font-size: 48px; font-weight: 400 !important; margin-bottom: 40px; line-height: 1.2; color: #0E1B30 !important; } @media (min-width: 768px) { .neuro-title { font-size: 56px; } } .neuro-title .italic { font-style: italic; } .text-seafoam { color: #688F9D !important; }  .neuro-body { font-family: 'Lato', sans-serif !important; font-size: 18px; font-weight: 300 !important; color: rgba(14, 27, 48, 0.6); margin-bottom: 32px; line-height: 1.8; } .neuro-body:last-of-type { margin-bottom: 48px; }  .neuro-features { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; border-top: 1px solid rgba(14, 27, 48, 0.05); padding-top: 48px; } @media (max-width: 768px) { .neuro-features { grid-template-columns: 1fr; } } .neuro-feature { display: flex; align-items: flex-start; gap: 16px; } .feature-icon-wrap { width: 40px; height: 40px; border-radius: 50%; background: rgba(217, 232, 235, 0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0; } .feature-icon { color: #688F9D; font-size: 18px; } .feature-content { display: flex; flex-direction: column; gap: 4px; } .feature-title { font-family: 'Cormorant Garamond', serif !important; font-size: 20px; color: #0E1B30 !important; font-weight: 500; } .feature-text { color: rgba(14, 27, 48, 0.5); font-size: 10px; line-height: 1.6; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; font-family: 'Lato', sans-serif; }  .sh-reveal { opacity: 0; transform: translateY(20px); animation: sh-fade-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; } .sh-delay-2 { animation-delay: 0.4s; } @keyframes sh-fade-up { to { opacity: 1; transform: translateY(0); } }  .curtain-reveal { position: relative; overflow: hidden; } .curtain-reveal::after { content: ''; position: absolute; inset: 0; background: #FFFFFF; transform-origin: bottom; animation: sh-curtain 1.5s cubic-bezier(0.7, 0, 0.3, 1) forwards; } @keyframes sh-curtain { to { transform: scaleY(0); } } @keyframes animate-breathe { 0%, 100% { transform: scale(1); opacity: 0.4; } 50% { transform: scale(1.1); opacity: 0.7; } } </style> "
+              },
+              "widgetType": "html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Stillness NeuroScience Section V1",
+  "type": "section"
+}

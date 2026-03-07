@@ -61,6 +61,70 @@ Every Elementor JSON template has this top-level shape:
 
 ---
 
+## Critical Insight: Font Enforcement & Loading
+
+> [!IMPORTANT]
+> **Elementor Global Fonts will often override custom CSS in HTML widgets.** To ensure 100% fidelity, you must follow these two rules:
+
+1. **Mandatory `!important`:** Always append `!important` to `font-family` declarations in custom `<style>` blocks.
+2. **Font Enqueueing:** Google Fonts used in custom HTML widgets will **NOT** load unless they are "active" on the page via a native Elementor widget. 
+   - *Workaround:* If a font isn't rendering, drag a native "Heading" widget into the section (or footer), set it to the required font, and set its layout to `Display: None`.
+
+```css
+/* Example of mandatory enforcement */
+.my-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 400 !important;
+}
+```
+
+---
+
+## Atmospheric & Animation Tokens
+
+Newer "Sacred" templates utilize specific CSS-only animations to mimic Framer Motion behavior:
+
+### 1. The "Breathe" Animation
+Used for blobs and background overlays to create a living, organic feel.
+
+```css
+@keyframes sca-breathe {
+    0%, 100% { transform: scale(1); opacity: 0.2; }
+    50% { transform: scale(1.1); opacity: 0.3; }
+}
+```
+
+### 2. The "Reveal" Pattern
+Standardized reveal classes for staggered entrance animations.
+
+```css
+.sh-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: sh-fade-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+.sh-delay-1 { animation-delay: 0.2s; }
+.sh-delay-2 { animation-delay: 0.4s; }
+
+@keyframes sh-fade-up {
+    to { opacity: 1; transform: translateY(0); }
+}
+```
+
+---
+
+## Icons: SVG vs. Font Awesome
+
+| Icon Type | Implementation | Usage |
+|-----------|----------------|-------|
+| **UI Icons** | Font Awesome (`<i>` tags) | Arrows, close buttons, standard UI controls. |
+| **Brand Icons** | Inline `<svg>` | Leaf, Moon, Wind, or custom shapes that require precision scaling/masking. |
+
+> [!TIP]
+> Use **Inline SVGs** for brand elements to avoid "Font Awesome Pro" dependency issues and to ensure icons inherit CSS `currentColor` properly.
+
+---
+
 ## Critical Insight: Multi-Column Layouts
 
 > [!CAUTION]

@@ -1,0 +1,52 @@
+{
+  "content": [
+    {
+      "id": "section_habit",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#0E1B30",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "inner_habit",
+          "elType": "container",
+          "settings": {
+            "content_width": "full",
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            }
+          },
+          "elements": [
+            {
+              "id": "widget_habit",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class='cta-wrap'><div class='cta-bg-decor animate-breathe'></div><div class='cta-content sh-reveal'><h2 class='cta-title'>One month.<br><span class='italic text-seafoam'>One life.</span></h2><p class='cta-quote'>\"The practice is for you. The results are for everyone.\"</p><div class='cta-links'><a href='/about' class='cta-link'>Our Philosophy</a><a href='/offerings' class='cta-link'>All Rituals</a></div></div></div><style>.cta-wrap { position: relative; width: 100%; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 160px 24px; box-sizing: border-box; overflow: hidden; }.cta-bg-decor { position: absolute; inset: 0; background: rgba(104, 143, 157, 0.1); z-index: 0; pointer-events: none; }.cta-content { position: relative; z-index: 10; max-width: 672px; margin: 0 auto; }.cta-title { font-family: 'Cormorant Garamond', serif !important; font-size: 72px; font-weight: 400 !important; color: #FFFFFF !important; margin-bottom: 48px; line-height: 1.1; }@media (max-width: 768px) { .cta-title { font-size: 48px; } }.cta-title .italic { font-style: italic; }.text-seafoam { color: #688F9D; }.cta-quote { font-family: 'Lato', sans-serif !important; font-size: 20px; font-weight: 300 !important; font-style: italic; color: rgba(255, 255, 255, 0.7) !important; margin-bottom: 64px; }.cta-links { display: flex; justify-content: center; gap: 64px; align-items: center; }@media (max-width: 768px) { .cta-links { gap: 32px; flex-direction: column; } }.cta-link { font-family: 'Lato', sans-serif !important; font-size: 10px; text-transform: uppercase; letter-spacing: 0.4em; color: rgba(255, 255, 255, 0.7) !important; text-decoration: none !important; font-weight: 700; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 12px; transition: color 0.3s ease, border-color 0.3s ease; }.cta-link:hover { color: #FFFFFF !important; border-color: #FFFFFF !important; }.sh-reveal { opacity: 0; transform: translateY(20px); animation: sh-fade-up 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }@keyframes sh-fade-up { to { opacity: 1; transform: translateY(0); } }@keyframes animate-breathe { 0%, 100% { transform: scale(1); opacity: 0.4; } 50% { transform: scale(1.1); opacity: 0.7; } }</style>"
+              },
+              "widgetType": "html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Stillness Habit CTA Section V1",
+  "type": "section"
+}

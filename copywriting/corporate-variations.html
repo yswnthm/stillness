@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Wellness Copywriting Variations | Stillness</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+        :root {
+            --background: #0a0a0a;
+            --surface: #121212;
+            --surfaceHighlight: #1e1e1e;
+            --border: #333333;
+            --textMain: #f5f5f5;
+            --textMuted: #a3a3a3;
+            --accent: #f97316;
+            --accentHover: #ea580c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--background);
+            color: var(--textMuted);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .document-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .document-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        }
+
+        .header {
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--textMain);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .header .meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            color: var(--textMuted);
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--textMain);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h2::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .component-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent);
+            margin-left: auto;
+            border: 1px solid var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .variations-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .variation-card {
+            background: var(--surfaceHighlight);
+            border: 1px solid var(--border);
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .variation-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .variation-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-group {
+            margin-bottom: 0.5rem;
+        }
+
+        .label {
+            font-size: 0.65rem;
+            color: var(--textMuted);
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+            display: block;
+        }
+
+        .copy-title {
+            color: var(--textMain);
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .copy-body {
+            font-size: 0.9rem;
+            color: var(--textMuted);
+        }
+
+        .word-count {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--textMuted);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 8px;
+            margin-top: auto;
+            border-radius: 2px;
+            display: inline-block;
+        }
+
+        .stat-item {
+            border-left: 2px solid var(--accent);
+            padding-left: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            border-left: 2px solid var(--border);
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .variations-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            .variations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .document-container {
+                padding: 1rem;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+                padding: 0;
+            }
+
+            .document-container {
+                border: none;
+                width: 100%;
+                max-width: none;
+                background: white;
+                padding: 0;
+            }
+
+            .variation-card {
+                background: white;
+                border: 1px solid #ddd;
+                page-break-inside: avoid;
+            }
+
+            .copy-title,
+            h1,
+            h2,
+            .variation-label {
+                color: black !important;
+            }
+
+            .document-container::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="document-container">
+        <header class="header">
+            <h1>Corporate Wellness Copywriting</h1>
+            <div class="meta">
+                <span>SOLICATE DESIGN SYSTEM — STILLNESS RITUALS</span>
+                <span> | CORPORATE STRATEGY</span>
+            </div>
+        </header>
+
+        <!-- 1. HERO SECTION -->
+        <section>
+            <h2>1. Hero Section <span class="component-tag">CorporateHero.tsx</span></h2>
+            <div class="variations-grid">
+                <!-- V1 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <div class="content-group">
+                        <span class="label">Tagline</span>
+                        <div class="copy-title" style="font-size: 0.9rem;">Stillness for the Soul of Business</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Title</span>
+                        <div class="copy-title">Align Your Collective Spirit with Silent Depth.</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Description</span>
+                        <p class="copy-body">Move from the chaos of noise to the clarity of light. Our sacred protocols
+                            help groups return to their essence and create from a place of peace.</p>
+                    </div>
+                </div>
+                <!-- V2 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <div class="content-group">
+                        <span class="label">Tagline</span>
+                        <div class="copy-title" style="font-size: 0.9rem;">Stillness for Modern Business</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Title</span>
+                        <div class="copy-title">Optimize Professional Output with Effective Rest.</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Description</span>
+                        <p class="copy-body">Stop the cycle of burnout and start the flow of work. Our simple systems
+                            help teams recover fast and produce better results every day.</p>
+                    </div>
+                </div>
+                <!-- V3 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <div class="content-group">
+                        <span class="label">Tagline</span>
+                        <div class="copy-title" style="font-size: 0.9rem;">Neural Regulation for Enterprise</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Title</span>
+                        <div class="copy-title">Nervous System Regulation for High-Performing Teams.</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Description</span>
+                        <p class="copy-body">Shift from neural burnout to cognitive brilliance. Our
+                            scientifically-backed protocols help teams recover faster and create deeper using vagal tone
+                            optimization.</p>
+                    </div>
+                </div>
+                <!-- V4 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <div class="content-group">
+                        <span class="label">Tagline</span>
+                        <div class="copy-title" style="font-size: 0.9rem;">Stillness for Business</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Title</span>
+                        <div class="copy-title">Deep Restoration for Modern Professional Teams.</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Description</span>
+                        <p class="copy-body">Shift from burnout to brilliance. Our scientifically-backed protocols help
+                            teams recover faster and create deeper with intentional restoration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SERVICES INTRO -->
+        <section>
+            <h2>2. Service Philosophy <span class="component-tag">ServiceList.tsx</span></h2>
+            <div class="variations-grid">
+                <!-- V1 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">One breath is a start. Two souls together is a miracle.</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Description</span>
+                        <p class="copy-body">Every gift stands as its own light — but our sessions often weave paths
+                            together. Sound and spirit. Flux and peace. Movement and grace.</p>
+                    </div>
+                </div>
+                <!-- V2 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">One tool is good. Two tools together is great.</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Description</span>
+                        <p class="copy-body">Every service works on its own — but our plans often use many ways at once.
+                            Sound and breath. Water and mind. Body and rest.</p>
+                    </div>
+                </div>
+                <!-- V3 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">One modality is significant. Combined stimuli are neuro-transformative.
+                        </div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Description</span>
+                        <p class="copy-body">Each protocol operates independently — but our workflows integrate multiple
+                            variables. Audio-haptic and respiratory. Saturation and cognitive. Somatic and stasis.</p>
+                    </div>
+                </div>
+                <!-- V4 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <div class="content-group">
+                        <span class="label">Heading</span>
+                        <div class="copy-title">One modality is powerful. Two together is transformative.</div>
+                    </div>
+                    <div class="content-group">
+                        <span class="label">Description</span>
+                        <p class="copy-body">Each offering below stands on its own — but many of our sessions weave
+                            modalities together intentionally. Sound and breathwork. Floating and meditation. Movement
+                            and stillness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. TESTIMONIALS -->
+        <section>
+            <h2>3. Corporate Testimonials <span class="component-tag">CorporateTestimonials.tsx</span></h2>
+            <div class="variations-grid">
+                <!-- V1 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <p class="copy-body testimonial-text">"Stillness is our anchor during high-pressure seasons. It
+                        brings our people back to center with grace."</p>
+                    <p class="copy-body testimonial-text">"Our team’s tension dissolved after our first Friday Float. It
+                        is a vital breath for our culture."</p>
+                </div>
+                <!-- V2 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <p class="copy-body testimonial-text">"A critical investment in our team's mental clarity. The ROI
+                        on focus and energy is undeniable."</p>
+                    <p class="copy-body testimonial-text">"The most effective wellness program we've implemented.
+                        Employee engagement and morale have improved significantly."</p>
+                </div>
+                <!-- V3 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <p class="copy-body testimonial-text">"Measurable improvements in decision-making and cognitive
+                        endurance. This protocol effectively mitigates physiological burnout."</p>
+                    <p class="copy-body testimonial-text">"We observed a significant decrease in cortisol indicators
+                        post-float. It is a robust tool for organizational stress management."</p>
+                </div>
+                <!-- V4 -->
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <p class="copy-body testimonial-text">"Stillness has become an essential part of our quarterly
+                        planning cycle. The clarity it provides is unmatched."</p>
+                    <p class="copy-body testimonial-text">"Our team's stress levels dropped visibly after introducing
+                        the Friday Float program. It's a game changer for culture."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CTA SECTION -->
+        <section style="margin-bottom: 4rem;">
+            <h2>4. Call to Action <span class="component-tag">CorporateCTA.tsx</span></h2>
+            <div class="variations-grid">
+                <div class="variation-card">
+                    <span class="variation-label">Variation 1: Poetic</span>
+                    <div class="copy-title">Listen To Stillness</div>
+                    <p class="copy-body">Bespoke experiences woven to mirror your collective energy.</p>
+                </div>
+                <div class="variation-card">
+                    <span class="variation-label">Variation 2: Direct</span>
+                    <div class="copy-title">Connect With Us</div>
+                    <p class="copy-body">Professional packages designed specifically for your office's needs.</p>
+                </div>
+                <div class="variation-card">
+                    <span class="variation-label">Variation 3: Scientific</span>
+                    <div class="copy-title">Initiate Protocol Design</div>
+                    <p class="copy-body">Scalable wellness frameworks customized for your organizational architecture.
+                    </p>
+                </div>
+                <div class="variation-card">
+                    <span class="variation-label">Variation 4: Original</span>
+                    <div class="copy-title">Start a Conversation</div>
+                    <p class="copy-body">Custom programs tailored to your organization's unique rhythm.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer
+            style="text-align: center; border-top: 1px solid var(--border); padding-top: 2rem; color: var(--textMuted); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;">
+            <p>© 2026 SOLICATE WORKS. PROPRIETARY STRATEGY DOCUMENT.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
