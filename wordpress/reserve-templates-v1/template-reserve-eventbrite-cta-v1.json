@@ -1,0 +1,50 @@
+{
+    "content": [
+        {
+            "id": "reserve_eventbrite_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#ffffff",
+                "padding": {
+                    "unit": "px",
+                    "top": "80",
+                    "right": "20",
+                    "bottom": "80",
+                    "left": "20",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "eventbrite_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 900
+                        },
+                        "flex_direction": "column",
+                        "flex_align_items": "center"
+                    },
+                    "elements": [
+                        {
+                            "id": "eventbrite_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='eb-container'><div class='eb-card'><div class='eb-icon'><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M19 4v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z\"/><line x1=\"12\" y1=\"18\" x2=\"12\" y2=\"18\"/><path d=\"m9 11 3 3 6-6\"/></svg></div><span class='eb-badge'>Booking Portal</span><h2>Secure Your Journey</h2><p class='eb-desc'>All reservations for our immersion chambers and guided rituals are managed securely through our Eventbrite partner portal.<br><br>Select your desired date, experience, and time to confirm your space.</p><a href='https://www.eventbrite.ca/o/stillness-co-78867564303' target='_blank' rel='noopener noreferrer' class='eb-button'>Continue to Eventbrite &rarr;</a></div></div><style>.eb-container { width: 100%; display: flex; justify-content: center; } .eb-card { background: #FFFFFF; border: 1px solid rgba(14, 27, 48, 0.05); border-radius: 32px; padding: 64px 40px; text-align: center; max-width: 600px; box-shadow: 0 20px 40px rgba(0,0,0,0.03); display: flex; flex-direction: column; align-items: center; } .eb-icon { width: 48px; height: 48px; border-radius: 50%; background: rgba(44, 122, 123, 0.1); color: #2C7A7B; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; } .eb-badge { display: inline-block; font-family: 'Lato', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #A4B2BA; margin-bottom: 16px; } .eb-card h2 { font-family: 'Cormorant Garamond', serif; font-size: 42px; color: #0E1B30; margin: 0 0 24px; line-height: 1.1; } .eb-desc { font-family: 'Lato', sans-serif; font-size: 16px; color: rgba(14, 27, 48, 0.6); line-height: 1.6; margin: 0 0 40px; } .eb-button { display: inline-flex; align-items: center; justify-content: center; background: #0E1B30; color: #FFFFFF; text-decoration: none !important; padding: 16px 40px; border-radius: 99px; font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; transition: all 0.4s ease; box-shadow: 0 10px 20px rgba(14, 27, 48, 0.2); } .eb-button:hover { background: #FFFFFF; color: #1D3152 !important; text-decoration: none !important; box-shadow: 0 12px 24px rgba(29, 49, 82, 0.15); transform: translateY(-2px); border: 1px solid #1D3152; }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Reserve Eventbrite CTA V1",
+    "type": "section"
+}

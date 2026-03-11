@@ -18,10 +18,18 @@
             },
             "elements": [
                 {
-                    "id": "blog_categories_html",
+                    "id": "blog_categories_shortcode",
                     "elType": "widget",
                     "settings": {
-                        "html": "<div class='blog-cat-wrapper'><div class='blog-cat-container'><a href='#' class='blog-cat-btn active'>All</a><a href='#' class='blog-cat-btn'>Wellness Science</a><a href='#' class='blog-cat-btn'>Floating</a><a href='#' class='blog-cat-btn'>Mindfulness</a><a href='#' class='blog-cat-btn'>Daily Practice</a><a href='#' class='blog-cat-btn'>Retreats</a></div></div><style>.blog-cat-wrapper { border-top: 1px solid rgba(14, 27, 48, 0.1); border-bottom: 1px solid rgba(14, 27, 48, 0.1); padding: 16px 24px; position: sticky; top: 64px; z-index: 20; background-color: #FFFFFF; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); } .blog-cat-container { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 12px; overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none; } .blog-cat-container::-webkit-scrollbar { display: none; } .blog-cat-btn { flex-shrink: 0; padding: 8px 20px; border-radius: 9999px; font-family: 'Lato', sans-serif !important; font-size: 12px !important; font-weight: 700 !important; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none; transition: all 0.3s ease; } .blog-cat-btn.active { background-color: #688F9D; color: #FFFFFF !important; box-shadow: 0 4px 6px -1px rgba(104, 143, 157, 0.2), 0 2px 4px -1px rgba(104, 143, 157, 0.1); } .blog-cat-btn:not(.active) { background-color: transparent; color: rgba(14, 27, 48, 0.6) !important; } .blog-cat-btn:not(.active):hover { color: #0E1B30 !important; background-color: rgba(14, 27, 48, 0.1); }</style>"
+                        "shortcode": "[stillness_blog_categories]"
+                    },
+                    "widgetType": "shortcode"
+                },
+                {
+                    "id": "blog_categories_css",
+                    "elType": "widget",
+                    "settings": {
+                        "html": "<style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap'); .blog-cat-wrapper { border-top: 1px solid rgba(14, 27, 48, 0.1); border-bottom: 1px solid rgba(14, 27, 48, 0.1); padding: 16px 24px; position: sticky; top: 64px; z-index: 20; background-color: #FFFFFF; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); } .blog-cat-container { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 12px; overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none; } .blog-cat-container::-webkit-scrollbar { display: none; } .blog-cat-btn { flex-shrink: 0; padding: 8px 20px; border-radius: 9999px; font-family: 'Lato', sans-serif !important; font-size: 12px !important; font-weight: 700 !important; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none; transition: all 0.3s ease; } .blog-cat-btn.active { background-color: #688F9D; color: #FFFFFF !important; box-shadow: 0 4px 6px -1px rgba(104, 143, 157, 0.2), 0 2px 4px -1px rgba(104, 143, 157, 0.1); } .blog-cat-btn:not(.active) { background-color: transparent; color: rgba(14, 27, 48, 0.6) !important; } .blog-cat-btn:not(.active):hover { color: #0E1B30 !important; background-color: rgba(14, 27, 48, 0.1); }</style>"
                     },
                     "widgetType": "html"
                 }

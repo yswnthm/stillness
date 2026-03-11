@@ -47,3 +47,32 @@ This document contains 4 variations for each copywriting section of the Blog pag
 ### Variation 4: Original
 - **Title**: Why We Built Canada's First Floating Bath (7 words)
 - **Body**: The story of how a decade of burnout, restlessness, and an obsessive curiosity about the nervous system led to the most profound and unconventional healing space in the country. (31 words)
+
+---
+
+## Section: Newsletter CTA
+**Component**: `NewsletterCTA.tsx`
+
+### Variation 1: Poetic
+- **Heading**: Stillness, delivered.
+- **Body**: New essays on healing, ritual, and presence, written for the quiet hours. Join the readers who begin their week with a little more ease.
+- **Placeholder**: your@email.com
+- **Button**: Subscribe
+
+### Variation 2: Direct
+- **Heading**: Get our newsletter.
+- **Body**: Practical essays on wellness, habits, and relaxation to help you start your week right. Join our community of readers today.
+- **Placeholder**: enter email address
+- **Button**: Sign Up
+
+### Variation 3: Scientific
+- **Heading**: Research & Insights Delivered.
+- **Body**: Periodic publications concerning neuro-somatic regulation, environmental design, and stress recovery. Subscribe to receive our latest clinical observations and protocols.
+- **Placeholder**: email@address.com
+- **Button**: Subscribe Now
+
+### Variation 4: Original
+- **Heading**: Stillness, delivered.
+- **Body**: New essays on healing, ritual, and presence, written for the quiet hours. Join the readers who begin their week with a little more ease.
+- **Placeholder**: your@email.com
+- **Button**: Subscribe

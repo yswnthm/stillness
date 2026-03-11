@@ -1,0 +1,52 @@
+{
+    "content": [
+        {
+            "id": "explore_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#1D3152",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "overflow": "hidden",
+                "position": "relative"
+            },
+            "elements": [
+                {
+                    "id": "explore_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        },
+                        "flex_direction": "column",
+                        "flex_align_items": "center"
+                    },
+                    "elements": [
+                        {
+                            "id": "explore_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='explore-blob blob-1'></div><div class='explore-blob blob-2'></div><div class='explore-header'><div class='explore-badge'>Discover</div><h2>Explore Stillness</h2><p class='explore-desc'>Journey deeper into our sanctuary and offerings.</p></div><div class='explore-grid'><a href='/about' class='explore-card'><div class='ec-content'><h3>Our Sanctuary</h3><p>Discover the space and the philosophy behind Stillness.</p></div><div class='ec-arrow'>&rarr;</div></a><a href='/sacred-offerings' class='explore-card'><div class='ec-content'><h3>Sacred Offerings</h3><p>Explore our curated rituals and massage therapies.</p></div><div class='ec-arrow'>&rarr;</div></a><a href='/stillness-habit' class='explore-card'><div class='ec-content'><h3>The Stillness Habit</h3><p>Build a daily practice with our mindful toolkits.</p></div><div class='ec-arrow'>&rarr;</div></a><a href='/corporate' class='explore-card'><div class='ec-content'><h3>Corporate Wellness</h3><p>Bring balance and clarity to your organization.</p></div><div class='ec-arrow'>&rarr;</div></a></div><style>.explore-blob { position: absolute; border-radius: 9999px; pointer-events: none; z-index: 0; } .blob-1 { top: -10%; left: 10%; width: 400px; height: 400px; background: #688F9D; filter: blur(150px); opacity: 0.15; } .blob-2 { bottom: -10%; right: 10%; width: 500px; height: 500px; background: #2C7A7B; filter: blur(150px); opacity: 0.15; } .explore-header { position: relative; z-index: 10; text-align: center; margin-bottom: 64px; } .explore-badge { display: inline-block; padding: 4px 12px; border: 1px solid rgba(104, 143, 157, 0.3); border-radius: 99px; color: #688F9D; font-family: 'Lato', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; } .explore-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 56px; line-height: 1.1; color: #FFFFFF; margin: 0 0 16px; } .explore-desc { font-family: 'Lato', sans-serif; font-size: 18px; color: #A4B2BA; max-width: 600px; margin: 0 auto; line-height: 1.6; } .explore-grid { position: relative; z-index: 10; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; width: 100%; } @media (max-width: 768px) { .explore-grid { grid-template-columns: 1fr; } } .explore-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 24px; padding: 40px; text-decoration: none; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; transition: all 0.4s ease; overflow: hidden; position: relative; } .explore-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom right, rgba(255,255,255,0.05), transparent); opacity: 0; transition: opacity 0.4s ease; } .explore-card:hover { transform: translateY(-4px); background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.15); box-shadow: 0 20px 40px rgba(0,0,0,0.2); } .explore-card:hover::before { opacity: 1; } .ec-content { position: relative; z-index: 2; } .ec-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #FFFFFF; margin: 0 0 8px; transition: color 0.3s ease; } .ec-content p { font-family: 'Lato', sans-serif; font-size: 15px; color: #A4B2BA; margin: 0; line-height: 1.5; } .ec-arrow { position: relative; z-index: 2; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: #FFFFFF; font-size: 20px; transition: all 0.3s ease; flex-shrink: 0; } .explore-card:hover .ec-arrow { background: #FFFFFF; color: #1D3152; border-color: #FFFFFF; transform: translateX(8px); }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Explore Grid V1",
+    "type": "section"
+}

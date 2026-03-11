@@ -1,0 +1,49 @@
+{
+    "content": [
+        {
+            "id": "reserve_etiquette_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#1D3152",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "etiquette_inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        },
+                        "flex_direction": "column"
+                    },
+                    "elements": [
+                        {
+                            "id": "etiquette_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='etiq-header'><h2>Sanctuary<br>Etiquette</h2><p>Preparation begins before you enter the waters.</p></div><div class='etiq-grid'><div class='etiq-item'><div class='etiq-num'>01</div><div class='etiq-content'><h3>The Arrival</h3><p>We kindly ask that you arrive at least 15 minutes prior to your scheduled time. This allows you a moment to decompress in our lounge and transition slowly from the busy world outside into a state of rest.</p></div></div><div class='etiq-item'><div class='etiq-num'>02</div><div class='etiq-content'><h3>The Silence</h3><p>Our sanctuary is a designated quiet zone designed to support deep inward reflection for all guests. Please maintain silence in all shared areas, including hallways, lounges, and changing rooms.</p></div></div><div class='etiq-item'><div class='etiq-num'>03</div><div class='etiq-content'><h3>The Disconnect</h3><p>To foster genuine presence and protect the privacy and peace of others, we require that all mobile phones and digital devices be stored securely in your locker upon arrival.</p></div></div></div><style> .etiq-header { text-align: center; margin-bottom: 80px; } .etiq-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 56px; color: #FFFFFF; line-height: 1.1; margin: 0 0 16px; } .etiq-header p { font-family: 'Lato', sans-serif; font-size: 16px; color: #A4B2BA; letter-spacing: 1px; text-transform: uppercase; margin: 0; } .etiq-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; } @media (max-width: 992px) { .etiq-grid { grid-template-columns: 1fr; gap: 48px; } } .etiq-item { position: relative; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); } .etiq-num { position: absolute; top: -18px; left: 0; font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #688F9D; line-height: 1; background: #1D3152; padding-right: 16px; } .etiq-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #FFFFFF; margin: 0 0 16px; } .etiq-content p { font-family: 'Lato', sans-serif; font-size: 16px; color: #A4B2BA; line-height: 1.6; margin: 0; } </style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Sanctuary Etiquette V1",
+    "type": "section"
+}
