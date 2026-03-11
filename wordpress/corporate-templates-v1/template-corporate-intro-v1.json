@@ -1,0 +1,48 @@
+{
+    "version": "0.4",
+    "title": "Corporate - Intro V1",
+    "type": "section",
+    "content": [
+        {
+            "id": "corporate-intro-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "padding": {
+                    "unit": "px",
+                    "top": "140",
+                    "bottom": "140",
+                    "right": "40",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#0B1526"
+            },
+            "elements": [
+                {
+                    "id": "intro-fluid-inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1200
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "intro-fluid-html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='corporate-intro-fluid'><div class='fluid-text-col'><div class='fluid-label-wrap'><span class='fluid-line'></span><span class='fluid-label'>Corporate Wellness</span></div><h2 class='fluid-headline'>Your team is tired in a way that a <span class='italic'>day off won't fix.</span></h2><div class='fluid-body'><p>High-performing teams carry pressure that accumulates quietly — in meetings, in deadlines, in the space between what's said and what's felt. Stillness brings evidence-based sound healing and breathwork directly to your workplace.</p><p>Real relief. Real results. No yoga mats required.</p></div><div class='fluid-btn-wrap'><a href='/reserve' class='btn-fluid-primary'>Inquire Now</a><a href='#packages' class='btn-fluid-outline'>See Packages</a></div></div><div class='fluid-image-col'><div class='fluid-img-mask'><img src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1471&auto=format&fit=crop' alt='Corporate Wellness' class='fluid-img'></div><div class='fluid-accent-circle'></div></div></div><style>.corporate-intro-fluid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 100px; align-items: center; } .fluid-text-col { display: flex; flex-direction: column; gap: 32px; } .fluid-label-wrap { display: flex; align-items: center; gap: 20px; } .fluid-line { width: 40px; height: 1px; background: #688F9D; opacity: 0.6; } .fluid-label { font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; color: #688F9D; } .fluid-headline { font-family: 'Cormorant Garamond', serif !important; font-size: 64px !important; line-height: 1.1 !important; color: #FFFFFF !important; margin: 0; font-weight: 400; letter-spacing: -0.01em; } .fluid-headline .italic { font-family: 'Cormorant Garamond', serif !important; font-style: italic !important; color: #688F9D !important; font-weight: 400 !important; } .fluid-body { display: flex; flex-direction: column; gap: 24px; } .fluid-body p { font-family: 'Lato', sans-serif !important; font-weight: 300 !important; font-size: 18px !important; line-height: 1.8 !important; color: rgba(255, 255, 255, 0.7) !important; margin: 0; } .fluid-btn-wrap { display: flex; gap: 24px; padding-top: 10px; } .btn-fluid-primary { background: #688F9D; color: #FFFFFF; padding: 18px 48px; border-radius: 100px; font-family: 'Lato', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-decoration: none; text-transform: uppercase; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); border: 1px solid #688F9D; } .btn-fluid-outline { background: transparent; color: #FFFFFF; padding: 18px 48px; border-radius: 100px; font-family: 'Lato', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-decoration: none; text-transform: uppercase; border: 1px solid rgba(255, 255, 255, 0.15); transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); } .btn-fluid-primary:hover { background: #FFFFFF; border-color: #FFFFFF; color: #0B1526; transform: translateY(-4px); box-shadow: 0 10px 30px rgba(104, 143, 157, 0.2); } .btn-fluid-outline:hover { border-color: #FFFFFF; background: rgba(255, 255, 255, 0.05); transform: translateY(-4px); } .fluid-image-col { position: relative; } .fluid-img-mask { position: relative; width: 100%; aspect-ratio: 0.85; border-top-left-radius: 200px; border-top-right-radius: 200px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; overflow: hidden; z-index: 2; box-shadow: 0 30px 60px rgba(0,0,0,0.3); } .fluid-img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; } .fluid-img-mask:hover .fluid-img { transform: scale(1.1); } .fluid-accent-circle { position: absolute; top: -30px; right: -30px; width: 120px; height: 120px; border: 1px solid rgba(104, 143, 157, 0.2); border-radius: 50%; z-index: 1; pointer-events: none; } @media (max-width: 1024px) { .corporate-intro-fluid { grid-template-columns: 1fr; gap: 80px; text-align: center; } .fluid-text-col { align-items: center; max-width: 700px; margin: 0 auto; } .fluid-label-wrap { justify-content: center; } .fluid-btn-wrap { justify-content: center; } .fluid-img-mask { max-width: 500px; margin: 0 auto; } } @media (max-width: 768px) { .fluid-headline { font-size: 42px !important; } .fluid-btn-wrap { flex-direction: column; width: 100%; max-width: 300px; } .btn-fluid-primary, .btn-fluid-outline { width: 100%; box-sizing: border-box; } }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}

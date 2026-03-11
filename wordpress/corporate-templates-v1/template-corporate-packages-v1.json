@@ -1,0 +1,80 @@
+{
+    "version": "0.4",
+    "title": "Corporate - Packages V1",
+    "type": "section",
+    "content": [
+        {
+            "id": "corporate-packages-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "bottom": "140",
+                    "right": "0",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#F8F5F2"
+            },
+            "elements": [
+                {
+                    "id": "packages-header-block",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "full",
+                        "background_background": "classic",
+                        "background_color": "#0B1526",
+                        "padding": {
+                            "unit": "px",
+                            "top": "120",
+                            "bottom": "140",
+                            "right": "40",
+                            "left": "40",
+                            "isLinked": false
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "packages-intro-html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='packages-intro-content'><div class='pi-left'><div class='pi-badge-wrap'><span class='pi-badge-line'></span><span class='pi-badge-label'>Our Packages</span></div><h2 class='pi-headline'>Three ways to bring<br><span class='italic'>Stillness to your team.</span></h2></div><div class='pi-right'><p class='pi-description'>Every package is fully facilitated by our certified team. We bring everything your people need to just show up — and leave different.</p></div></div><style>.packages-intro-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: flex-end; max-width: 1200px; margin: 0 auto; } .pi-badge-wrap { display: flex; align-items: center; gap: 20px; margin-bottom: 24px; } .pi-badge-line { width: 40px; height: 1px; background: #688F9D; } .pi-badge-label { font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; color: #688F9D; } .pi-headline { font-family: 'Cormorant Garamond', serif !important; font-size: 64px !important; line-height: 1.1 !important; color: #FFFFFF !important; margin: 0; font-weight: 400; } .pi-headline .italic { font-style: italic !important; color: #688F9D !important; } .pi-description { font-family: 'Lato', sans-serif !important; font-size: 18px !important; line-height: 1.8 !important; color: rgba(255, 255, 255, 0.6) !important; margin: 0; font-weight: 300; max-width: 450px; } @media (max-width: 1024px) { .packages-intro-content { grid-template-columns: 1fr; gap: 40px; text-align: left; } .pi-description { max-width: 100%; } } @media (max-width: 768px) { .pi-headline { font-size: 42px !important; } }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                },
+                {
+                    "id": "packages-grid-container",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1200
+                        },
+                        "margin": {
+                            "unit": "px",
+                            "top": "-80",
+                            "isLinked": false
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "packages-cards-html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='packages-grid'><!-- Package 1 --><div class='package-card'><div class='pc-tag'>One-time · Team Session</div><h3 class='pc-title'>The Reset</h3><p class='pc-intro'>A single, powerful session to give your team a genuine exhale. Ideal for high-pressure periods, off-sites, or on-site.</p><ul class='pc-features'><li>60 or 90-minute facilitated session</li><li>Sound healing journey with singing bowls</li><li>Guided breathwork and grounding</li><li>On-site at your location in Vancouver</li><li>Up to 25 participants</li><li>All equipment provided</li><li>Post-session debrief on request</li></ul><div class='pc-footer'><div class='pc-price'>$170<span class='unit'>/ person</span></div><a href='/reserve' class='pc-btn'>Inquire Now</a></div></div><!-- Package 2 --><div class='package-card featured'><div class='pc-tag'>Ongoing · Monthly</div><h3 class='pc-title'>The Practice</h3><p class='pc-intro'>A recurring monthly session that builds genuine nervous system resilience over time. The most impactful investment.</p><ul class='pc-features'><li>Monthly sessions (12-session commitment)</li><li>Rotating formats — sound, breath, meditation</li><li>Evolves with your team's needs</li><li>On-site at your location</li><li>Up to 30 participants per session</li><li>Dedicated facilitator — consistent presence</li><li>Quarterly check-ins with team lead</li><li>Priority booking and scheduling</li></ul><div class='pc-footer'><div class='pc-price'>$150<span class='unit'>/ person</span></div><a href='/reserve' class='pc-btn featured-btn'>Inquire Now</a></div></div><!-- Package 3 --><div class='package-card'><div class='pc-tag'>Immersive · Half-Day</div><h3 class='pc-title'>The Retreat</h3><p class='pc-intro'>A half-day immersive experience for teams who need more than an hour. Deeper. Slower. Designed for leadership teams.</p><ul class='pc-features'><li>4-5 hour curated experience</li><li>Sound journey + breathwork + meditation</li><li>Optional journaling & reflection</li><li>On-site or at a curated venue</li><li>Up to 20 participants</li><li>Fully customised for your team</li><li>Catering & venue coordination</li></ul><div class='pc-footer'><div class='pc-price'>Custom</div><a href='/reserve' class='pc-btn'>Inquire Now</a></div></div></div><style>.packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; } .package-card { background: #FFFFFF; border: 1px solid rgba(14, 27, 48, 0.05); border-radius: 24px; padding: 48px 40px; display: flex; flex-direction: column; transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); box-shadow: 0 10px 40px rgba(0,0,0,0.03); } .package-card:hover { transform: translateY(-12px); box-shadow: 0 40px 80px rgba(11, 21, 38, 0.08); border-color: rgba(104, 143, 157, 0.2); } .package-card.featured { border-color: #688F9D; background: #FFFFFF; position: relative; } .pc-tag { font-family: 'Lato', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: #688F9D; margin-bottom: 20px; } .pc-title { font-family: 'Cormorant Garamond', serif !important; font-size: 32px !important; color: #1D3152 !important; margin: 0 0 16px; font-weight: 400; } .pc-intro { font-family: 'Lato', sans-serif !important; font-size: 15px !important; line-height: 1.6 !important; color: rgba(29, 49, 82, 0.6) !important; margin-bottom: 32px; min-height: 60px; } .pc-features { list-style: none; padding: 0; margin: 0 0 40px; display: flex; flex-direction: column; gap: 14px; flex-grow: 1; } .pc-features li { font-family: 'Lato', sans-serif; font-size: 14px; color: #1D3152; position: relative; padding-left: 24px; line-height: 1.4; font-weight: 300; } .pc-features li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: #688F9D; opacity: 0.6; } .pc-footer { margin-top: auto; display: flex; flex-direction: column; gap: 24px; padding-top: 32px; border-top: 1px solid rgba(14, 27, 48, 0.05); } .pc-price { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: #1D3152; } .pc-price .unit { font-family: 'Lato', sans-serif; font-size: 13px; color: rgba(29, 49, 82, 0.5); font-weight: 400; letter-spacing: 1px; margin-left: 4px; } .pc-btn { display: inline-flex; align-items: center; justify-content: center; padding: 16px 32px; background: transparent; border: 1px solid rgba(104, 143, 157, 0.3); border-radius: 100px; color: #688F9D; font-family: 'Lato', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; transition: all 0.4s ease; } .pc-btn:hover { background: #688F9D; color: #FFFFFF; transform: scale(1.05); } .featured-btn { background: #688F9D; color: #FFFFFF; border-color: #688F9D; } .featured-btn:hover { background: #1D3152; border-color: #1D3152; } @media (max-width: 1100px) { .packages-grid { grid-template-columns: 1fr; gap: 32px; max-width: 500px; margin: 0 auto; } .package-card { padding: 40px; } } @media (max-width: 768px) { .package-card { padding: 32px; } }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}

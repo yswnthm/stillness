@@ -1,0 +1,48 @@
+{
+    "content": [
+        {
+            "id": "intro_section_v2",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FCF6F2",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "intro_inner_v2",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1140
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "intro_v2_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='intro-v2-grid'><div class='intro-v2-offer-col'><div class='intro-v2-label-wrap'><span class='intro-v2-line'></span><span class='intro-v2-label'>WHAT WE OFFER</span></div><h2 class='intro-v2-headline'>Experiences designed<br>to <em>meet you</em> where you are.</h2></div><div class='intro-v2-text-col'><div class='intro-v2-body'><p>Every session at Stillness is built around one intention: creating the conditions where your nervous system can finally exhale. No performance. No pressure. Just a real room, real sound, and real presence.</p></div></div></div><style>.intro-v2-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 80px; align-items: flex-start; } @media (max-width: 991px) { .intro-v2-grid { grid-template-columns: 1fr; gap: 48px; } } .intro-v2-offer-col { display: flex; flex-direction: column; gap: 32px; } .intro-v2-label-wrap { display: flex; align-items: center; gap: 16px; } .intro-v2-line { width: 40px; height: 1px; background: #688F9D; opacity: 0.6; } .intro-v2-label { font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: #688F9D; } .intro-v2-headline { font-family: 'Cormorant Garamond', serif; font-size: 64px; line-height: 1.1; color: #1D3152; margin: 0; font-weight: 400; } .intro-v2-headline em { font-family: 'Cormorant Garamond', serif; font-style: italic; color: #688F9D; font-weight: 400; } .intro-v2-text-col { padding-top: 60px; } @media (max-width: 991px) { .intro-v2-text-col { padding-top: 0; } } .intro-v2-body p { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 20px; line-height: 1.8; color: rgba(14, 27, 48, 0.8); margin: 0; }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Intro Section V2",
+    "type": "section"
+}

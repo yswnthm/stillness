@@ -1,0 +1,35 @@
+{
+    "content": [
+        {
+            "id": "ribbon_section",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#D9E8EB",
+                "padding": {
+                    "unit": "px",
+                    "top": "15",
+                    "right": "0",
+                    "bottom": "15",
+                    "left": "0",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "ribbon_html",
+                    "elType": "widget",
+                    "settings": {
+                        "html": "<div class='stillness-ribbon'><div class='stillness-ribbon-content'><span>SOUND HEALING</span><span class='dot'></span><span>BREATHWORK</span><span class='dot'></span><span>MEDITATION</span><span class='dot'></span><span>CORPORATE WELLNESS</span><span class='dot'></span><span>DIGITAL PRODUCTS</span><span class='dot'></span><span>CHILDREN'S TOOLS</span></div></div><style>.stillness-ribbon { width: 100%; display: flex; justify-content: center; align-items: center; background-color: #D9E8EB; overflow: hidden; }.stillness-ribbon-content { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 10px 20px; opacity: 0; animation: stillnessRibbonFadeIn 1.5s ease-out forwards; }.stillness-ribbon-content span { font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 300; color: #5B7B87; text-transform: uppercase; letter-spacing: 0.25em; white-space: nowrap; }.stillness-ribbon-content .dot { display: inline-block; width: 4px; height: 4px; background-color: #688F9D; border-radius: 50%; opacity: 0.6; }@media (max-width: 1024px) { .stillness-ribbon-content { gap: 15px; } .stillness-ribbon-content span { font-size: 11px; letter-spacing: 0.2em; } }@media (max-width: 768px) { .stillness-ribbon-content { gap: 10px; padding: 15px; justify-content: center; } .stillness-ribbon-content .dot { display: none; } .stillness-ribbon-content span { font-size: 10px; letter-spacing: 0.15em; } }@keyframes stillnessRibbonFadeIn { from { opacity: 0; } to { opacity: 1; } }</style>"
+                    },
+                    "widgetType": "html"
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Ribbon Section V1",
+    "type": "section"
+}

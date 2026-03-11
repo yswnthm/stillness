@@ -1,0 +1,48 @@
+{
+    "version": "0.4",
+    "title": "Corporate - Flow V1",
+    "type": "section",
+    "content": [
+        {
+            "id": "corporate-flow-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "bottom": "120",
+                    "right": "40",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#F8F5F2"
+            },
+            "elements": [
+                {
+                    "id": "flow-inner-container",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1200
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "flow-html-content",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='corporate-flow-v1'><div class='flow-header'><div class='flow-badge-wrap'><span class='flow-badge-line'></span><span class='flow-badge-label'>The Process</span></div><h2 class='flow-headline'>Simple to set up.<br><span class='italic'>Felt for days after.</span></h2></div><div class='flow-grid-container'><div class='flow-connector-line'></div><div class='flow-steps-grid'><div class='flow-step'><div class='step-marker-wrap'><div class='step-marker'>01</div></div><h3 class='step-title'>You reach out</h3><p class='step-desc'>Fill out the inquiry form below. Tell us about your team, your goals, and what you’re noticing. We read every submission personally.</p></div><div class='flow-step'><div class='step-marker-wrap'><div class='step-marker'>02</div></div><h3 class='step-title'>We connect</h3><p class='step-desc'>A short call with Kkomal to understand your team’s specific needs and design the right experience. No pressure, no sales script.</p></div><div class='flow-step'><div class='step-marker-wrap'><div class='step-marker'>03</div></div><h3 class='step-title'>We take care of everything</h3><p class='step-desc'>We handle logistics, equipment, and setup. Your team just shows up — no preparation or prior experience needed.</p></div><div class='flow-step'><div class='step-marker-wrap'><div class='step-marker'>04</div></div><h3 class='step-title'>Your team exhales</h3><p class='step-desc'>A real session. Real sound. Real presence. The kind of rest that reaches somewhere a day off never does.</p></div></div></div></div><style>.corporate-flow-v1 { display: flex; flex-direction: column; gap: 80px; } .flow-header { display: flex; flex-direction: column; gap: 24px; } .flow-badge-wrap { display: flex; align-items: center; gap: 20px; } .flow-badge-line { width: 40px; height: 1px; background: #688F9D; opacity: 0.6; } .flow-badge-label { font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 4px; color: #688F9D; } .flow-headline { font-family: 'Cormorant Garamond', serif !important; font-size: 64px !important; line-height: 1.1 !important; color: #1D3152 !important; margin: 0; font-weight: 400; letter-spacing: -0.01em; } .flow-headline .italic { color: #688F9D !important; font-style: italic !important; } .flow-grid-container { position: relative; width: 100%; padding-top: 20px; } .flow-connector-line { position: absolute; top: 40px; left: 0; right: 0; height: 1px; background: rgba(104, 143, 157, 0.15); z-index: 1; } .flow-steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; position: relative; z-index: 2; } .flow-step { display: flex; flex-direction: column; gap: 24px; } .step-marker-wrap { width: 100%; display: flex; justify-content: flex-start; } .step-marker { width: 80px; height: 80px; border-radius: 50%; border: 1px solid rgba(104, 143, 157, 0.2); background: #F8F5F2; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #688F9D; transition: all 0.5s ease; } .flow-step:hover .step-marker { background: #688F9D; color: #FFFFFF; border-color: #688F9D; transform: scale(1.1); box-shadow: 0 10px 30px rgba(104, 143, 157, 0.2); } .step-title { font-family: 'Cormorant Garamond', serif !important; font-size: 28px !important; line-height: 1.2 !important; color: #1D3152 !important; margin: 0; font-weight: 400; } .step-desc { font-family: 'Lato', sans-serif !important; font-size: 16px !important; line-height: 1.7 !important; color: rgba(29, 49, 82, 0.6) !important; margin: 0; font-weight: 300; } @media (max-width: 1024px) { .flow-steps-grid { grid-template-columns: repeat(2, 1fr); gap: 60px; } .flow-connector-line { display: none; } } @media (max-width: 768px) { .flow-steps-grid { grid-template-columns: 1fr; gap: 48px; } .flow-headline { font-size: 42px !important; } .step-marker { width: 60px; height: 60px; font-size: 18px; } }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}

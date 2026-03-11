@@ -1,0 +1,48 @@
+{
+    "content": [
+        {
+            "id": "heal_section_v2",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                }
+            },
+            "elements": [
+                {
+                    "id": "heal_grid_container",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1400
+                        }
+                    },
+                    "elements": [
+                        {
+                            "id": "heal_grid_html",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='heal-grid-wrapper'><div class='heal-card'><div class='icon-wrap'><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-music'><path d='M9 18V5l12-2v13'/><circle cx='6' cy='18' r='3'/><circle cx='18' cy='16' r='3'/></svg></div><h3>Sound Journeys</h3><p>An immersive experience using singing bowls, chimes, and resonant instruments to guide your nervous system into deep rest and release.</p></div><div class='heal-card'><div class='icon-wrap'><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-wind'><path d='M17.7 7.7A7.1 7.1 0 1 1 5 8c0 .3 0 .6.1.9a2.5 2.5 0 0 1 3.2 3.2 7.1 7.1 0 1 1 5.9 5.9 2.5 2.5 0 0 1-3.2-3.2c-.3-.1-.6-.1-.9-.1a7.1 7.1 0 1 1 7.8-7.8Z'/></svg></div><h3>Breathwork</h3><p>Guided breathwork sessions that use your breath as the tool for stress release, emotional processing, and nervous system regulation.</p></div><div class='heal-card'><div class='icon-wrap'><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-waves'><path d='M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1'/><path d='M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1'/><path d='M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1'/></svg></div><h3>Floating Sound Journeys</h3><p>Our original offering — sound healing on the water. An experience unlike anything else. Available seasonally in the Greater Vancouver area.</p></div><div class='heal-card'><div class='icon-wrap'><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-briefcase'><rect width='20' height='14' x='2' y='7' rx='2' ry='2'/><path d='M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'/></svg></div><h3>Corporate Wellness</h3><p>Bring Stillness to your team. Sessions designed for workplaces — for teams that are burnt out, overstretched, and ready for something real.</p></div><div class='heal-card'><div class='icon-wrap'><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-sparkles'><path d='m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L12 3Z'/><path d='M5 3v4'/><path d='M19 17v4'/><path d='M3 5h4'/><path d='M17 19h4'/></svg></div><h3>Meditation and Yoga</h3><p>Guided meditation and gentle yoga woven into curated retreat experiences. Grounded, honest, and built around what your body actually needs.</p></div><div class='heal-card'><div class='icon-wrap'><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-users'><path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M22 21v-2a4 4 0 0 0-3-3.87'/><path d='M16 3.13a4 4 0 0 1 0 7.75'/></svg></div><h3>The Stillness Circle</h3><p>A small, ongoing membership circle — monthly online sessions for people who want consistent support and a community that gets it.</p></div></div><style>.heal-grid-wrapper { display: flex !important; flex-wrap: nowrap !important; gap: 12px; width: 100%; justify-content: space-between; } .heal-card { flex: 1; min-width: 0; background: #FFFFFF; border: 1px solid rgba(14, 27, 48, 0.05); padding: 40px 24px; border-radius: 24px; transition: all 0.5s ease; cursor: pointer; display: flex; flex-direction: column; align-items: flex-start; } @media (max-width: 1024px) { .heal-grid-wrapper { flex-wrap: wrap !important; } .heal-card { flex: 0 0 calc(33.333% - 14px); padding: 30px 24px; } } @media (max-width: 767px) { .heal-card { flex: 0 0 100%; } } .heal-card:hover { border-color: rgba(104, 143, 157, 0.3); box-shadow: 0 20px 40px rgba(104, 143, 157, 0.05); transform: translateY(-5px); } .icon-wrap { width: 48px; height: 48px; border-radius: 50%; border: 1px solid #688F9D; color: #688F9D; background: transparent; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; transition: all 0.5s ease; flex-shrink: 0; } .heal-card:hover .icon-wrap { background: #688F9D; color: #FFFFFF; } .heal-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #0E1B30; margin-bottom: 12px; line-height: 1.2; font-weight: 600; } .heal-card p { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 13px; color: rgba(14, 27, 48, 0.6); line-height: 1.5; margin: 0; transition: color 0.5s ease; } .heal-card:hover p { color: rgba(14, 27, 48, 0.8); }</style>"
+                            },
+                            "widgetType": "html"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": [],
+    "version": "0.4",
+    "title": "Stillness Heal Section V2",
+    "type": "section"
+}
