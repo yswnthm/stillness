@@ -1,4 +1,7 @@
 {
+    "version": "0.4",
+    "title": "Shop Dynamic Grid (WooCommerce) V1",
+    "type": "section",
     "content": [
         {
             "id": "shop_dynamic_grid_section",
@@ -42,8 +45,5 @@
             ]
         }
     ],
-    "page_settings": [],
-    "version": "0.4",
-    "title": "Shop Dynamic Grid (WooCommerce) V1",
-    "type": "section"
+    "page_settings": []
 }

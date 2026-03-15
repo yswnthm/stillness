@@ -1,0 +1,111 @@
+{
+    "version": "0.4",
+    "title": "Stillness Editorial Ritual Section V1",
+    "type": "section",
+    "content": [
+        {
+            "id": "editorial-ritual-section-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": {
+                    "unit": "px",
+                    "top": "160",
+                    "right": "40",
+                    "bottom": "160",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "css_classes": "stillness-editorial-ritual-section"
+            },
+            "elements": [
+                {
+                    "id": "editorial-ritual-inner-container",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1200
+                        },
+                        "flex_direction": "row",
+                        "flex_gap": {
+                            "unit": "px",
+                            "size": 120
+                        },
+                        "flex_align_items": "center"
+                    },
+                    "elements": [
+                        {
+                            "id": "ritual-text-column-wrap",
+                            "elType": "container",
+                            "settings": {
+                                "width": {
+                                    "unit": "%",
+                                    "size": 50
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "id": "ritual-label-html-widget-v1",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "html": "<div class='editorial-label-wrap'><span class='editorial-line'></span><span class='editorial-label'>The Ritual</span></div>"
+                                    },
+                                    "widgetType": "html"
+                                },
+                                {
+                                    "id": "dynamic-ritual-headline-widget",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "title": "A deeper state of <span class='italic'>being.</span>",
+                                        "header_size": "h2"
+                                    },
+                                    "widgetType": "heading"
+                                },
+                                {
+                                    "id": "dynamic-ritual-post-content-widget",
+                                    "elType": "widget",
+                                    "settings": {},
+                                    "widgetType": "theme-post-content"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ritual-img-column-wrap",
+                            "elType": "container",
+                            "settings": {
+                                "width": {
+                                    "unit": "%",
+                                    "size": 45
+                                },
+                                "css_classes": "ritual-img-col"
+                            },
+                            "elements": [
+                                {
+                                    "id": "ritual-img-html-mask-widget",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "html": "<div class='ritual-img-mask'><img src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1000' alt='Stillness Ritual' /><div class='ritual-overlay'></div></div><div class='ritual-accent-circle'></div>"
+                                    },
+                                    "widgetType": "html"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "ritual-styles-html-block",
+                    "elType": "widget",
+                    "settings": {
+                        "html": "<style>\n.stillness-editorial-ritual-section h2 {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 56px !important;\n    line-height: 1.1 !important;\n    color: #0E1B30 !important;\n    margin: 0 0 40px !important;\n    font-weight: 400 !important;\n    letter-spacing: -0.01em !important;\n}\n\n.stillness-editorial-ritual-section h2 .italic {\n    font-style: italic !important;\n    color: #688F9D !important;\n}\n\n.stillness-editorial-ritual-section .elementor-widget-theme-post-content {\n    font-family: 'Lato', sans-serif !important;\n    font-weight: 300 !important;\n    font-size: 18px !important;\n    line-height: 1.8 !important;\n    color: rgba(14, 27, 48, 0.7) !important;\n}\n\n.stillness-editorial-ritual-section .ritual-img-mask {\n    position: relative;\n    width: 100%;\n    aspect-ratio: 0.85;\n    border-top-left-radius: 200px;\n    border-top-right-radius: 200px;\n    border-bottom-left-radius: 20px;\n    border-bottom-right-radius: 20px;\n    overflow: hidden;\n    z-index: 2;\n    box-shadow: 0 40px 80px rgba(14, 27, 48, 0.1);\n}\n\n.stillness-editorial-ritual-section .ritual-img-mask img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n    transition: transform 1.2s ease;\n}\n\n.stillness-editorial-ritual-section .ritual-img-mask:hover img {\n    transform: scale(1.1);\n}\n\n.stillness-editorial-ritual-section .ritual-accent-circle {\n    position: absolute;\n    bottom: -40px;\n    right: -40px;\n    width: 140px;\n    height: 140px;\n    border: 1px solid rgba(104, 143, 157, 0.2);\n    border-radius: 50%;\n    z-index: 1;\n    pointer-events: none;\n}\n\n.editorial-label-wrap {\n    display: flex;\n    align-items: center;\n    gap: 20px;\n    margin-bottom: 24px;\n}\n\n.editorial-line {\n    width: 40px;\n    height: 1px;\n    background: #688F9D;\n    opacity: 0.6;\n}\n\n.editorial-label {\n    font-family: 'Lato', sans-serif;\n    font-size: 13px;\n    font-weight: 700;\n    text-transform: uppercase;\n    letter-spacing: 4px;\n    color: #688F9D;\n}\n</style>"
+                    },
+                    "widgetType": "html"
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}

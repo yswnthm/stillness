@@ -1,0 +1,119 @@
+{
+    "version": "0.4",
+    "title": "Stillness Product Minimal Dynamic V1",
+    "type": "section",
+    "content": [
+        {
+            "id": "minimal-dynamic-product-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "padding": {
+                    "unit": "px",
+                    "top": "80",
+                    "bottom": "120",
+                    "right": "40",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "css_classes": "stillness-minimal-dynamic-product"
+            },
+            "elements": [
+                {
+                    "id": "minimal-dynamic-product-inner",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1200
+                        },
+                        "flex_direction": "row",
+                        "flex_wrap": "wrap",
+                        "flex_justify_content": "space-between",
+                        "css_classes": "minimal-dynamic-grid"
+                    },
+                    "elements": [
+                        {
+                            "id": "minimal-dynamic-left",
+                            "elType": "container",
+                            "settings": {
+                                "width": {
+                                    "unit": "%",
+                                    "size": 50,
+                                    "sizes": {
+                                        "tablet": 100,
+                                        "mobile": 100
+                                    }
+                                },
+                                "css_classes": "minimal-dynamic-gallery"
+                            },
+                            "elements": [
+                                {
+                                    "id": "minimal-dynamic-images",
+                                    "elType": "widget",
+                                    "settings": {},
+                                    "widgetType": "woocommerce-product-images"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "minimal-dynamic-right",
+                            "elType": "container",
+                            "settings": {
+                                "width": {
+                                    "unit": "%",
+                                    "size": 42,
+                                    "sizes": {
+                                        "tablet": 100,
+                                        "mobile": 100
+                                    }
+                                },
+                                "css_classes": "minimal-dynamic-details"
+                            },
+                            "elements": [
+                                {
+                                    "id": "minimal-dynamic-title",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "title_tag": "h1"
+                                    },
+                                    "widgetType": "theme-post-title"
+                                },
+                                {
+                                    "id": "minimal-dynamic-price",
+                                    "elType": "widget",
+                                    "settings": {},
+                                    "widgetType": "woocommerce-product-price"
+                                },
+                                {
+                                    "id": "minimal-dynamic-excerpt",
+                                    "elType": "widget",
+                                    "settings": {},
+                                    "widgetType": "woocommerce-product-short-description"
+                                },
+                                {
+                                    "id": "minimal-dynamic-cart",
+                                    "elType": "widget",
+                                    "settings": {},
+                                    "widgetType": "woocommerce-product-add-to-cart"
+                                },
+                                {
+                                    "id": "minimal-dynamic-styles",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "html": "<style>\n/* Global Container */\n.minimal-dynamic-grid {\n    display: flex !important;\n    flex-direction: row !important;\n    flex-wrap: nowrap !important;\n    gap: 60px !important;\n    align-items: flex-start !important;\n}\n\n@media (max-width: 1024px) {\n    .minimal-dynamic-grid {\n        flex-direction: column !important;\n        gap: 40px !important;\n    }\n    .minimal-dynamic-gallery, .minimal-dynamic-details {\n        width: 100% !important;\n    }\n}\n\n/* ----- GALLERY SKINNING ----- */\n.minimal-dynamic-gallery {\n    position: sticky;\n    top: 120px;\n    flex: 0 0 55% !important;\n    max-width: 55% !important;\n}\n\n.minimal-dynamic-gallery .woocommerce-product-gallery {\n    opacity: 1 !important;\n    width: 100% !important;\n}\n\n.minimal-dynamic-gallery .woocommerce-product-gallery__wrapper {\n    border-radius: 20px;\n    overflow: hidden;\n    background: #F8F5F2;\n    width: 100% !important;\n}\n\n.minimal-dynamic-gallery img {\n    width: 100% !important;\n    height: auto !important;\n    object-fit: cover;\n}\n\n.minimal-dynamic-gallery .flex-control-thumbs {\n    display: flex;\n    gap: 12px;\n    margin: 20px 0 0;\n    padding: 0;\n    list-style: none;\n}\n\n.minimal-dynamic-gallery .flex-control-thumbs li {\n    width: 100px !important;\n    float: none !important;\n    flex: 0 0 100px;\n}\n\n.minimal-dynamic-gallery .flex-control-thumbs img {\n    border-radius: 8px;\n    opacity: 0.6;\n    transition: 0.3s;\n    border: 1px solid transparent;\n}\n\n.minimal-dynamic-gallery .flex-control-thumbs img.flex-active, \n.minimal-dynamic-gallery .flex-control-thumbs img:hover {\n    opacity: 1;\n    border-color: #688F9D;\n}\n\n/* ----- DETAILS SKINNING ----- */\n.minimal-dynamic-details {\n    flex: 0 0 40% !important;\n    max-width: 40% !important;\n}\n\n.minimal-dynamic-details .product_title {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 56px !important;\n    color: #0E1B30 !important;\n    margin: 0 0 16px !important;\n    line-height: 1.1 !important;\n    font-weight: 400 !important;\n}\n\n.minimal-dynamic-details .price {\n    font-family: 'Lato', sans-serif !important;\n    font-size: 24px !important;\n    color: #1A1A1A !important;\n    margin-bottom: 24px !important;\n    display: block !important;\n    font-weight: 400 !important;\n}\n\n.minimal-dynamic-details .woocommerce-product-details__short-description {\n    font-family: 'Lato', sans-serif !important;\n    font-size: 16px !important;\n    line-height: 1.8 !important;\n    color: rgba(14,27,48,0.7) !important;\n    margin-bottom: 40px !important;\n    font-weight: 300 !important;\n}\n\n/* ----- CART BUTTON SKINNING ----- */\n.minimal-dynamic-details form.cart {\n    display: flex !important;\n    flex-direction: column !important;\n    gap: 20px !important;\n}\n\n.minimal-dynamic-details form.cart .quantity {\n    border: 1px solid rgba(14,27,48,0.1) !important;\n    border-radius: 100px !important;\n    padding: 0 20px !important;\n    height: 60px !important;\n    display: inline-flex !important;\n    align-items: center !important;\n}\n\n.minimal-dynamic-details form.cart .quantity input.qty {\n    border: none !important;\n    background: none !important;\n    font-family: 'Lato', sans-serif !important;\n    font-size: 16px !important;\n    color: #0E1B30 !important;\n    width: 50px !important;\n    text-align: center !important;\n}\n\n.minimal-dynamic-details button.single_add_to_cart_button {\n    height: 60px !important;\n    background: #688F9D !important;\n    color: #FFFFFF !important;\n    border-radius: 100px !important;\n    padding: 0 48px !important;\n    font-family: 'Lato', sans-serif !important;\n    font-size: 13px !important;\n    font-weight: 700 !important;\n    text-transform: uppercase !important;\n    letter-spacing: 2px !important;\n    border: none !important;\n    transition: all 0.4s ease !important;\n    box-shadow: 0 10px 30px rgba(104, 143, 157, 0.2) !important;\n}\n\n.minimal-dynamic-details button.single_add_to_cart_button:hover {\n    background: #0E1B30 !important;\n    transform: translateY(-2px) !important;\n}\n</style>"
+                                    },
+                                    "widgetType": "html"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}

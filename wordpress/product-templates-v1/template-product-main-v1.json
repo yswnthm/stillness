@@ -1,7 +1,10 @@
 {
+    "version": "0.4",
+    "title": "Stillness Editorial Product Main V1",
+    "type": "section",
     "content": [
         {
-            "id": "product_main_section_dynamic",
+            "id": "editorial-product-main-wrapper",
             "elType": "container",
             "settings": {
                 "content_width": "full",
@@ -9,65 +12,50 @@
                 "background_color": "#FFFFFF",
                 "padding": {
                     "unit": "px",
-                    "top": "0",
-                    "right": "0",
-                    "bottom": "0",
-                    "left": "0",
-                    "isLinked": true
+                    "top": "40",
+                    "right": "40",
+                    "bottom": "60",
+                    "left": "40",
+                    "isLinked": false
                 },
-                "css_classes": "stillness-dynamic-product-main"
+                "css_classes": "stillness-editorial-main-section"
             },
             "elements": [
                 {
-                    "id": "product_main_inner",
+                    "id": "editorial-product-grid-inner",
                     "elType": "container",
                     "settings": {
                         "content_width": "boxed",
                         "boxed_width": {
                             "unit": "px",
-                            "size": 1440
+                            "size": 1240
                         },
-                        "padding": {
+                        "flex_direction": "row",
+                        "flex_wrap": "nowrap",
+                        "flex_gap": {
                             "unit": "px",
-                            "top": "120",
-                            "right": "40",
-                            "bottom": "120",
-                            "left": "40",
-                            "isLinked": false
-                        }
+                            "size": 60
+                        },
+                        "flex_align_items": "flex-start",
+                        "css_classes": "editorial-product-grid"
                     },
                     "elements": [
                         {
-                            "id": "product_breadcrumbs",
-                            "elType": "widget",
-                            "settings": {},
-                            "widgetType": "woocommerce-breadcrumb"
-                        },
-                        {
-                            "id": "product_layout_wrapper",
+                            "id": "editorial-gallery-col-wrap",
                             "elType": "container",
                             "settings": {
-                                "content_width": "full",
-                                "flex_direction": "row",
-                                "flex_wrap": "wrap",
-                                "flex_justify_content": "space-between",
-                                "css_classes": "product-main-grid-container"
+                                "width": {
+                                    "unit": "%",
+                                    "size": 60
+                                },
+                                "css_classes": "editorial-gallery-col"
                             },
                             "elements": [
                                 {
-                                    "id": "product_left_col",
-                                    "elType": "container",
+                                    "id": "dynamic-product-images-widget",
+                                    "elType": "widget",
                                     "settings": {
-                                        "content_width": "full",
-                                        "width": {
-                                            "unit": "%",
-                                            "size": 45,
-                                            "sizes": {
-                                                "tablet": 100,
-                                                "mobile": 100
-                                            }
-                                        },
-                                        "padding": {
+                                        "_margin": {
                                             "unit": "px",
                                             "top": "0",
                                             "right": "0",
@@ -75,98 +63,78 @@
                                             "left": "0",
                                             "isLinked": true
                                         },
-                                        "css_classes": "product-gallery-sticky"
-                                    },
-                                    "elements": [
-                                        {
-                                            "id": "product_images",
-                                            "elType": "widget",
-                                            "settings": {},
-                                            "widgetType": "woocommerce-product-images"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "id": "product_right_col",
-                                    "elType": "container",
-                                    "settings": {
-                                        "content_width": "full",
-                                        "width": {
-                                            "unit": "%",
-                                            "size": 50,
-                                            "sizes": {
-                                                "tablet": 100,
-                                                "mobile": 100
-                                            }
-                                        },
-                                        "padding": {
+                                        "_padding": {
                                             "unit": "px",
                                             "top": "0",
                                             "right": "0",
                                             "bottom": "0",
                                             "left": "0",
                                             "isLinked": true
-                                        },
-                                        "css_classes": "product-details-content"
-                                    },
-                                    "elements": [
-                                        {
-                                            "id": "product_title",
-                                            "elType": "widget",
-                                            "settings": {
-                                                "title_tag": "h1"
-                                            },
-                                            "widgetType": "theme-post-title"
-                                        },
-                                        {
-                                            "id": "product_price",
-                                            "elType": "widget",
-                                            "settings": {},
-                                            "widgetType": "woocommerce-product-price"
-                                        },
-                                        {
-                                            "id": "product_rating",
-                                            "elType": "widget",
-                                            "settings": {},
-                                            "widgetType": "woocommerce-product-rating"
-                                        },
-                                        {
-                                            "id": "product_excerpt",
-                                            "elType": "widget",
-                                            "settings": {},
-                                            "widgetType": "woocommerce-product-short-description"
-                                        },
-                                        {
-                                            "id": "product_add_to_cart",
-                                            "elType": "widget",
-                                            "settings": {},
-                                            "widgetType": "woocommerce-product-add-to-cart"
-                                        },
-                                        {
-                                            "id": "product_meta",
-                                            "elType": "widget",
-                                            "settings": {},
-                                            "widgetType": "woocommerce-product-meta"
                                         }
-                                    ]
+                                    },
+                                    "widgetType": "woocommerce-product-images"
                                 }
                             ]
                         },
                         {
-                            "id": "product_main_styles",
-                            "elType": "widget",
+                            "id": "editorial-details-col-wrap",
+                            "elType": "container",
                             "settings": {
-                                "html": "<style>\n/* Global specific layout overrides */\n.product-main-grid-container { gap: 5%; }\n@media (max-width: 1024px) { .product-main-grid-container { flex-direction: column; gap: 48px; } }\n\n/* Breadcrumbs */\n.stillness-dynamic-product-main .woocommerce-breadcrumb {\n    font-family: 'Lato', sans-serif;\n    font-size: 12px;\n    text-transform: uppercase;\n    letter-spacing: 2px;\n    color: rgba(14,27,48,0.5);\n    margin-bottom: 32px;\n}\n.stillness-dynamic-product-main .woocommerce-breadcrumb a {\n    color: inherit;\n    text-decoration: none;\n    transition: color 0.3s;\n}\n.stillness-dynamic-product-main .woocommerce-breadcrumb a:hover {\n    color: #0E1B30;\n}\n\n/* ----- GALLERY SKINNING ----- */\n.product-gallery-sticky {\n    position: sticky;\n    top: 120px;\n    align-self: flex-start;\n}\n@media (max-width: 1024px) {\n    .product-gallery-sticky {\n        position: static;\n    }\n}\n/* Woo Gallery Flex layout to mimic UI (thumbnails on left) */\n.product-gallery-sticky .woocommerce-product-gallery {\n    display: flex;\n    flex-direction: row-reverse;\n    justify-content: flex-end;\n    gap: 16px;\n    opacity: 1 !important; /* Force visibility sometimes WooCommerce hides it initially */\n}\n@media (max-width: 1024px) {\n    .product-gallery-sticky .woocommerce-product-gallery {\n        flex-direction: column-reverse;\n    }\n}\n/* Wrapper for the main image */\n.product-gallery-sticky .woocommerce-product-gallery__wrapper {\n    width: 100%;\n    aspect-ratio: 4/5;\n    border-radius: 16px;\n    overflow: hidden;\n    background: rgba(196,187,180,0.2);\n}\n.product-gallery-sticky .woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image:first-child img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n}\n/* Thumbnails wrapper */\n.product-gallery-sticky .flex-control-nav.flex-control-thumbs {\n    display: flex;\n    flex-direction: column;\n    gap: 16px;\n    width: 80px;\n    flex-shrink: 0;\n    padding: 0;\n    margin: 0;\n    list-style: none;\n}\n@media (max-width: 1024px) {\n    .product-gallery-sticky .flex-control-nav.flex-control-thumbs {\n        flex-direction: row;\n        width: 100%;\n        overflow-x: auto;\n        scrollbar-width: none;\n    }\n}\n.product-gallery-sticky .flex-control-nav.flex-control-thumbs li {\n    width: 100% !important; \n    float: none !important;\n}\n.product-gallery-sticky .flex-control-nav.flex-control-thumbs li img {\n    aspect-ratio: 1/1;\n    border-radius: 8px;\n    border: 2px solid transparent;\n    cursor: pointer;\n    transition: all 0.3s ease;\n    opacity: 0.6;\n    object-fit: cover;\n}\n.product-gallery-sticky .flex-control-nav.flex-control-thumbs li img.flex-active, \n.product-gallery-sticky .flex-control-nav.flex-control-thumbs li img:hover {\n    border-color: #688F9D;\n    opacity: 1;\n}\n\n/* ----- DETAILS SKINNING ----- */\n.product-details-content .product_title {\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 48px;\n    color: #0E1B30;\n    margin: 0 0 16px;\n    line-height: 1.1;\n}\n.product-details-content .price {\n    font-family: 'Lato', sans-serif;\n    font-size: 24px;\n    color: #0E1B30;\n    margin-bottom: 32px;\n    display: block;\n}\n.product-details-content .woocommerce-product-rating {\n    display: flex;\n    align-items: center;\n    gap: 8px;\n    font-family: 'Lato', sans-serif;\n    font-size: 14px;\n    color: rgba(14,27,48,0.7);\n    margin-bottom: 32px;\n}\n.product-details-content .woocommerce-product-rating .star-rating {\n    color: #688F9D;\n    font-size: 12px;\n    letter-spacing: 2px;\n    width: 5.4em;\n}\n.product-details-content .woocommerce-product-rating .star-rating span::before {\n     color: #688F9D;\n}\n.product-details-content .woocommerce-product-details__short-description {\n    font-family: 'Lato', sans-serif;\n    font-weight: 300;\n    font-size: 16px;\n    line-height: 1.8;\n    color: rgba(14,27,48,0.7);\n    margin-bottom: 40px;\n}\n\n/* ----- ADD TO CART SKINNING ----- */\n.product-details-content form.cart {\n    display: flex;\n    gap: 16px;\n    margin-bottom: 48px;\n    flex-wrap: wrap;\n}\n/* Quantity */\n.product-details-content form.cart .quantity {\n    display: inline-flex;\n    align-items: center;\n    border: 1px solid rgba(14,27,48,0.2);\n    border-radius: 99px;\n    padding: 4px;\n    height: 56px;\n}\n.product-details-content form.cart .quantity input.qty {\n    width: 48px;\n    text-align: center;\n    font-family: 'Lato', sans-serif;\n    font-size: 16px;\n    color: #0E1B30;\n    border: none;\n    background: transparent;\n    line-height: 48px;\n    -moz-appearance: textfield;\n}\n.product-details-content form.cart .quantity input.qty::-webkit-outer-spin-button,\n.product-details-content form.cart .quantity input.qty::-webkit-inner-spin-button {\n    -webkit-appearance: none;\n    margin: 0;\n}\n/* Main Cart Button */\n.product-details-content form.cart button.single_add_to_cart_button {\n    flex: 1;\n    height: 56px;\n    background: #688F9D;\n    color: #FFFFFF;\n    border: none;\n    border-radius: 99px;\n    font-family: 'Lato', sans-serif;\n    font-size: 14px;\n    text-transform: uppercase;\n    letter-spacing: 2px;\n    font-weight: 700;\n    cursor: pointer;\n    transition: background 0.3s;\n    box-shadow: 0 10px 30px rgba(104,143,157,0.2);\n}\n.product-details-content form.cart button.single_add_to_cart_button:hover {\n    background: #0E1B30;\n}\n\n/* ----- META SKINNING ----- */\n.product-details-content .product_meta {\n    border-top: 1px solid rgba(14,27,48,0.1);\n    padding-top: 24px;\n    font-family: 'Lato', sans-serif;\n    font-size: 12px;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    color: rgba(14,27,48,0.5);\n    display: flex;\n    flex-direction: column;\n    gap: 8px;\n}\n.product-details-content .product_meta a {\n    color: #688F9D;\n    text-decoration: none;\n}\n.product-details-content .product_meta a:hover {\n    color: #0E1B30;\n}\n</style>"
+                                "width": {
+                                    "unit": "%",
+                                    "size": 38
+                                },
+                                "css_classes": "editorial-details-col"
                             },
-                            "widgetType": "html"
+                            "elements": [
+                                {
+                                    "id": "editorial-label-html-widget",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "html": "<div class='editorial-label-wrap'><span class='editorial-line'></span><span class='editorial-label'>Stillness Essentials</span></div>"
+                                    },
+                                    "widgetType": "html"
+                                },
+                                {
+                                    "id": "dynamic-product-title-widget",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "header_size": "h1"
+                                    },
+                                    "widgetType": "theme-post-title"
+                                },
+                                {
+                                    "id": "dynamic-product-price-widget",
+                                    "elType": "widget",
+                                    "settings": {},
+                                    "widgetType": "woocommerce-product-price"
+                                },
+                                {
+                                    "id": "dynamic-product-short-desc-widget",
+                                    "elType": "widget",
+                                    "settings": {},
+                                    "widgetType": "woocommerce-product-short-description"
+                                },
+                                {
+                                    "id": "dynamic-product-cart-widget",
+                                    "elType": "widget",
+                                    "settings": {},
+                                    "widgetType": "woocommerce-product-add-to-cart"
+                                },
+                                {
+                                    "id": "editorial-main-styles-widget",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "html": "<style>\n.editorial-product-grid {\n    display: flex !important;\n    flex-direction: row !important;\n    flex-wrap: nowrap !important;\n    gap: 60px !important;\n    align-items: flex-start !important;\n}\n\n@media (max-width: 1024px) {\n    .editorial-product-grid {\n        flex-direction: column !important;\n        gap: 40px !important;\n        text-align: center !important;\n        align-items: center !important;\n    }\n    .editorial-gallery-col, .editorial-details-col {\n        width: 100% !important;\n        max-width: 100% !important;\n    }\n}\n\n.editorial-gallery-col .woocommerce-product-gallery {\n    width: 100% !important;\n    aspect-ratio: 0.82 !important;\n    border-radius: 4px !important;\n    overflow: hidden !important;\n    background: transparent !important;\n    margin: 0 !important;\n    padding: 0 !important;\n}\n\n.editorial-gallery-col .woocommerce-product-gallery img {\n    width: 100% !important;\n    height: 100% !important;\n    object-fit: cover !important;\n}\n\n/* RESET ELEMENTOR WIDGET MARGINS */\n.editorial-details-col .elementor-widget {\n    margin-bottom: 0 !important;\n}\n\n.editorial-details-col .elementor-widget-theme-post-title h1 {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 48px !important;\n    line-height: 1.05 !important;\n    color: #0E1B30 !important;\n    font-weight: 400 !important;\n    margin: 0 0 12px !important;\n}\n\n.editorial-details-col .woocommerce-product-price .price {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 26px !important;\n    color: #688F9D !important;\n    font-style: italic !important;\n    margin: 0 0 20px !important;\n    display: block !important;\n}\n\n.editorial-details-col .woocommerce-product-details__short-description {\n    font-family: 'Lato', sans-serif !important;\n    font-weight: 300 !important;\n    font-size: 17px !important;\n    line-height: 1.6 !important;\n    color: rgba(14, 27, 48, 0.7) !important;\n    margin: 0 0 28px !important;\n}\n\n.editorial-details-col form.cart {\n    display: flex !important;\n    align-items: center !important;\n    gap: 16px !important;\n    margin: 0 !important;\n}\n\n.editorial-details-col .quantity {\n    background: #F9F9F9 !important;\n    border: 1px solid #E5E5E5 !important;\n    border-radius: 100px !important;\n    height: 50px !important;\n    display: inline-flex !important;\n    align-items: center !important;\n    padding: 0 16px !important;\n}\n\n.editorial-details-col button.single_add_to_cart_button {\n    background: #688F9D !important;\n    color: #FFFFFF !important;\n    padding: 0 32px !important;\n    height: 50px !important;\n    border-radius: 100px !important;\n    font-family: 'Lato', sans-serif !important;\n    font-size: 11px !important;\n    font-weight: 700 !important;\n    letter-spacing: 2px !important;\n    text-transform: uppercase !important;\n    border: none !important;\n}\n\n.editorial-label-wrap {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    margin-bottom: 8px !important;\n    padding-top: 0 !important;\n}\n\n.editorial-line {\n    width: 24px;\n    height: 1px;\n    background: #688F9D;\n    opacity: 0.6;\n}\n\n.editorial-label {\n    font-family: 'Lato', sans-serif;\n    font-size: 11px;\n    font-weight: 700;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    color: #688F9D;\n}\n</style>"
+                                },
+                                "widgetType": "html"
+                                }
+                            ]
                         }
                     ]
                 }
             ]
         }
     ],
-    "page_settings": [],
-    "version": "0.4",
-    "title": "Stillness Product Main Dynamic V2",
-    "type": "section"
+    "page_settings": []
 }

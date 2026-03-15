@@ -1,0 +1,36 @@
+{
+    "version": "0.4",
+    "title": "Stillness Editorial Product Marquee V1",
+    "type": "section",
+    "content": [
+        {
+            "id": "editorial-marquee-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#0B1526",
+                "padding": {
+                    "unit": "px",
+                    "top": "30",
+                    "bottom": "30",
+                    "right": "0",
+                    "left": "0",
+                    "isLinked": false
+                },
+                "css_classes": "stillness-editorial-marquee"
+            },
+            "elements": [
+                {
+                    "id": "marquee-html-widget",
+                    "elType": "widget",
+                    "settings": {
+                        "html": "<div class='editorial-marquee-track'><div class='marquee-content'><span>SUSTAINABLE PACKAGING</span><span class='separator'>\u2022</span><span>ARTISAN CRAFTED</span><span class='separator'>\u2022</span><span>CONSCIOUSLY SOURCED</span><span class='separator'>\u2022</span><span>SMALL BATCH PRODUCTION</span><span class='separator'>\u2022</span></div><div class='marquee-content' aria-hidden='true'><span>SUSTAINABLE PACKAGING</span><span class='separator'>\u2022</span><span>ARTISAN CRAFTED</span><span class='separator'>\u2022</span><span>CONSCIOUSLY SOURCED</span><span class='separator'>\u2022</span><span>SMALL BATCH PRODUCTION</span><span class='separator'>\u2022</span></div></div><style>.editorial-marquee-track { display: flex; overflow: hidden; white-space: nowrap; user-select: none; } .marquee-content { display: flex; align-items: center; animation: editorial-marquee-scroll 40s linear infinite; } .marquee-content span { font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 4px; color: #FFFFFF; padding: 0 40px; } .marquee-content .separator { color: #688F9D; opacity: 0.5; padding: 0; } @keyframes editorial-marquee-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }</style>"
+                    },
+                    "widgetType": "html"
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}

@@ -1,0 +1,115 @@
+{
+    "version": "0.4",
+    "title": "Stillness Editorial Benefits V1",
+    "type": "section",
+    "content": [
+        {
+            "id": "editorial-benefits-section-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "padding": {
+                    "unit": "px",
+                    "top": "120",
+                    "right": "40",
+                    "bottom": "120",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "css_classes": "stillness-editorial-benefits"
+            },
+            "elements": [
+                {
+                    "id": "editorial-benefits-inner-container",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 1100
+                        },
+                        "flex_direction": "row",
+                        "flex_justify_content": "space-between",
+                        "flex_align_items": "center"
+                    },
+                    "elements": [
+                        {
+                            "id": "benefit-item-1-wrap",
+                            "elType": "container",
+                            "settings": {
+                                "width": {
+                                    "unit": "%",
+                                    "size": 30
+                                },
+                                "css_classes": "benefit-item-editorial"
+                            },
+                            "elements": [
+                                {
+                                    "id": "benefit-1-html-widget",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "html": "<div class='benefit-card'><div class='benefit-icon-editorial'><svg viewBox='0 0 24 24' fill='none' stroke='#688F9D' stroke-width='1.5'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg></div><h4 class='benefit-title'>Thoughtfully <span class='italic'>sourced.</span></h4><p class='benefit-text'>Every element selected with intention for your well-being.</p></div>"
+                                    },
+                                    "widgetType": "html"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "benefit-item-2-wrap",
+                            "elType": "container",
+                            "settings": {
+                                "width": {
+                                    "unit": "%",
+                                    "size": 30
+                                },
+                                "css_classes": "benefit-item-editorial"
+                            },
+                            "elements": [
+                                {
+                                    "id": "benefit-2-html-widget",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "html": "<div class='benefit-card'><div class='benefit-icon-editorial'><svg viewBox='0 0 24 24' fill='none' stroke='#688F9D' stroke-width='1.5'><path d='M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78v0z'/></svg></div><h4 class='benefit-title'>Artisan <span class='italic'>crafted.</span></h4><p class='benefit-text'>Made by hands that value the process as much as the result.</p></div>"
+                                    },
+                                    "widgetType": "html"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "benefit-item-3-wrap",
+                            "elType": "container",
+                            "settings": {
+                                "width": {
+                                    "unit": "%",
+                                    "size": 30
+                                },
+                                "css_classes": "benefit-item-editorial"
+                            },
+                            "elements": [
+                                {
+                                    "id": "benefit-3-html-widget",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "html": "<div class='benefit-card'><div class='benefit-icon-editorial'><svg viewBox='0 0 24 24' fill='none' stroke='#688F9D' stroke-width='1.5'><circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2'/></svg></div><h4 class='benefit-title'>Small <span class='italic'>batches.</span></h4><p class='benefit-text'>Produced in limited quantities to ensure uncompromising quality.</p></div>"
+                                    },
+                                    "widgetType": "html"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "benefits-styles-html-block",
+                    "elType": "widget",
+                    "settings": {
+                        "html": "<style>\n.benefit-card {\n    text-align: center;\n    padding: 20px;\n}\n\n.benefit-icon-editorial {\n    width: 64px;\n    height: 64px;\n    margin: 0 auto 24px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border: 1px solid rgba(104, 143, 157, 0.3);\n    border-radius: 50%;\n    transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);\n}\n\n.benefit-card:hover .benefit-icon-editorial {\n    background: #688F9D;\n    border-color: #688F9D;\n    transform: rotate(15deg);\n}\n\n.benefit-card:hover .benefit-icon-editorial svg {\n    stroke: #FFFFFF;\n}\n\n.benefit-icon-editorial svg {\n    width: 28px;\n    height: 28px;\n    transition: 0.5s ease;\n}\n\n.benefit-title {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 28px !important;\n    color: #0E1B30 !important;\n    margin-bottom: 16px !important;\n    font-weight: 400 !important;\n}\n\n.benefit-title .italic {\n    font-style: italic !important;\n    color: #688F9D !important;\n}\n\n.benefit-text {\n    font-family: 'Lato', sans-serif !important;\n    font-size: 15px !important;\n    line-height: 1.6 !important;\n    color: rgba(14,27,48,0.6) !important;\n    font-weight: 300 !important;\n}\n\n@media (max-width: 1024px) {\n    .benefit-item-editorial { width: 100% !important; margin-bottom: 60px !important; }\n}\n</style>"
+                    },
+                    "widgetType": "html"
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}
