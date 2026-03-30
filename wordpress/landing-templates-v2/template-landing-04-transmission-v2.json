@@ -1,0 +1,38 @@
+{
+  "content": [
+    {
+      "id": "lp_v2_transmission",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "gap": {
+          "unit": "px",
+          "size": 0,
+          "sizes": []
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_v2_html_transmission",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"transmission\">\n  <img class=\"transmission-img\" src=\"\" alt=\"Komal holding an In This Little Life card\">\n  <div class=\"transmission-text reveal\">\n    <blockquote>\"What do I do that makes you feel really loved?\"</blockquote>\n    <p>I made these decks because I kept noticing the same thing — parents who love their children deeply, running out of moments to say the things that actually matter. And children carrying feelings they had no words for.</p>\n    <p>These aren't tools for perfect parenting. They're just a door. One card. One morning. One question asked honestly. That's the whole practice.</p>\n    <span class=\"transmission-byline\">Komal · Founder, Stillness</span>\n  </div>\n</section>\n<style>\n*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}\n:root{--stone:#0E1B30;--midnight:#1D3152;--seafoam:#688F9D;--wave:#A4B2BA;--breeze:#D9E8EB;--sand:#C4BBB4;--cream:#F7F0EC;--warm:#F2E8DF;}\n/* Force zero spacing on Elementor parent containers */\n.elementor-widget-container, .elementor-widget-html, .elementor-column-wrap, .elementor-widget-wrap { margin: 0 !important; padding: 0 !important; }\n.transmission{display:grid;grid-template-columns:1fr 1fr;align-items:center;margin:0 !important;}\n.transmission-img{width:100%;height:580px;object-fit:cover;object-position:center}\n.transmission-text{padding:5rem}\n.transmission-text blockquote{font-family:'Cormorant Garamond',serif !important;font-size:clamp(1.2rem,2vw,1.7rem);font-weight:300;font-style:italic;color:var(--stone);line-height:1.6;margin-bottom:2rem;border-left:2px solid var(--seafoam);padding-left:1.5rem}\n.transmission-text p{font-family:'Jost',sans-serif !important;font-size:0.9rem;line-height:1.9;color:rgba(14,27,48,0.65);margin-bottom:1.25rem}\n.transmission-byline{font-family:'Jost',sans-serif !important;font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--seafoam);margin-top:1.5rem;display:block}\n.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.7s ease,transform 0.7s ease}\n.reveal.visible{opacity:1;transform:translateY(0)}\n@media(max-width:768px){\n.transmission{grid-template-columns:1fr}\n.transmission-img{height:320px}\n.transmission-text{padding:3rem 1.5rem}\n}\n</style>\n<script>\nvar observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.08});\ndocument.querySelectorAll('.reveal').forEach(function(el){observer.observe(el)});\n</script>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Landing V2 — 04 Transmission",
+  "type": "section"
+}

@@ -1,0 +1,38 @@
+{
+  "content": [
+    {
+      "id": "lp_v2_cardmoment",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "gap": {
+          "unit": "px",
+          "size": 0,
+          "sizes": []
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_v2_html_cardmoment",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"card-moment\">\n  <div class=\"card-moment-text reveal\">\n    <p class=\"section-label\" style=\"text-align:left\">How to use them</p>\n    <h2>Simple enough to<br><em>actually do.</em></h2>\n    <div class=\"use-items\">\n      <div>\n        <span class=\"use-item-title\">One card at breakfast</span>\n        <p>Before phones, before school talk. Read it together or let your child read it alone.</p>\n      </div>\n      <div>\n        <span class=\"use-item-title\">In the car</span>\n        <p>Nobody has to make eye contact. Pull a card before you leave. The real answers come easier this way.</p>\n      </div>\n      <div>\n        <span class=\"use-item-title\">After lights are low</span>\n        <p>When a child is soft and open just before sleep. This is when the questions land deepest.</p>\n      </div>\n      <div>\n        <span class=\"use-item-title\">Answer honestly</span>\n        <p>Children know when they're being given the safe version. Give them the real one.</p>\n      </div>\n    </div>\n  </div>\n  <img class=\"card-moment-img\" src=\"\" alt=\"Holding a Mini Moments affirmation card\">\n</section>\n<style>\n*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}\n:root{--stone:#0E1B30;--midnight:#1D3152;--seafoam:#688F9D;--wave:#A4B2BA;--breeze:#D9E8EB;--sand:#C4BBB4;--cream:#F7F0EC;--warm:#F2E8DF;}\n/* Force zero spacing on Elementor parent containers */\n.elementor-widget-container, .elementor-widget-html, .elementor-column-wrap, .elementor-widget-wrap { margin: 0 !important; padding: 0 !important; }\n.card-moment{display:grid;grid-template-columns:1fr 1fr;align-items:center;background:var(--warm);margin:0 !important;}\n.card-moment-img{width:100%;height:600px;object-fit:cover;object-position:center top}\n.card-moment-text{padding:5rem}\n.card-moment-text .section-label{font-family:'Jost',sans-serif !important;font-size:0.63rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--seafoam);text-align:left;margin-bottom:1.25rem;display:block}\n.card-moment-text h2{font-family:'Cormorant Garamond',serif !important;font-size:clamp(1.6rem,3vw,2.8rem);font-weight:300;color:var(--stone);margin-bottom:2rem;line-height:1.2}\n.card-moment-text h2 em{font-style:italic;color:var(--seafoam)}\n.use-items{display:flex;flex-direction:column;gap:1.5rem}\n.use-item-title{font-family:'Jost',sans-serif !important;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--seafoam);display:block;margin-bottom:0.4rem}\n.use-items p{font-family:'Jost',sans-serif !important;font-size:0.86rem;line-height:1.85;color:rgba(14,27,48,0.65)}\n.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.7s ease,transform 0.7s ease}\n.reveal.visible{opacity:1;transform:translateY(0)}\n@media(max-width:768px){\n.card-moment{grid-template-columns:1fr}\n.card-moment-img{height:320px}\n.card-moment-text{padding:3rem 1.5rem}\n}\n</style>\n<script>\nvar observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.08});\ndocument.querySelectorAll('.reveal').forEach(function(el){observer.observe(el)});\n</script>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Landing V2 — 07 Card Moment",
+  "type": "section"
+}

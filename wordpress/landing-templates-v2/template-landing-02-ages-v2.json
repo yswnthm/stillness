@@ -1,0 +1,38 @@
+{
+  "content": [
+    {
+      "id": "lp_v2_ages",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "gap": {
+          "unit": "px",
+          "size": 0,
+          "sizes": []
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_v2_html_ages",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"ages-section\">\n  <p class=\"section-label\">The formative window</p>\n  <h2 class=\"section-title\">Find where your child is <em>right now.</em></h2>\n  <div class=\"ages-grid\">\n    <div class=\"age-card reveal\"><span class=\"age-num\">5</span><span class=\"age-desc\">Just starting to ask who they are</span></div>\n    <div class=\"age-card reveal\"><span class=\"age-num\">6</span><span class=\"age-desc\">Big feelings, small words for them</span></div>\n    <div class=\"age-card reveal\"><span class=\"age-num\">7</span><span class=\"age-desc\">Noticing how others see them</span></div>\n    <div class=\"age-card reveal\"><span class=\"age-num\">8</span><span class=\"age-desc\">Building a story about themselves</span></div>\n    <div class=\"age-card reveal\"><span class=\"age-num\">9</span><span class=\"age-desc\">Comparing, doubting, needing anchoring</span></div>\n    <div class=\"age-card reveal\"><span class=\"age-num\">10</span><span class=\"age-desc\">Identity forming faster now</span></div>\n    <div class=\"age-card reveal\"><span class=\"age-num\">11</span><span class=\"age-desc\">The edge of the window</span></div>\n  </div>\n</section>\n<style>\n*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}\n:root{--stone:#0E1B30;--midnight:#1D3152;--seafoam:#688F9D;--wave:#A4B2BA;--breeze:#D9E8EB;--sand:#C4BBB4;--cream:#F7F0EC;--warm:#F2E8DF;}\n/* Force zero spacing on Elementor parent containers */\n.elementor-widget-container, .elementor-widget-html, .elementor-column-wrap, .elementor-widget-wrap { margin: 0 !important; padding: 0 !important; }\n.ages-section{padding:6rem 4rem;background:var(--warm);margin:0 !important;}\n.section-label{font-family:'Jost',sans-serif !important;font-size:0.63rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--seafoam);text-align:center;margin-bottom:1.25rem;display:block}\n.section-title{font-family:'Cormorant Garamond',serif !important;font-size:clamp(1.6rem,3vw,2.8rem);font-weight:300;text-align:center;color:var(--stone);margin-bottom:4rem;line-height:1.2}\n.section-title em{font-style:italic;color:var(--seafoam)}\n.ages-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:0.75rem;max-width:860px;margin:0 auto}\n.age-card{background:var(--cream);padding:1.5rem 0.5rem;text-align:center;border:0.5px solid rgba(14,27,48,0.08);cursor:default;transition:all 0.35s}\n.age-card:hover{background:var(--stone);transform:translateY(-4px)}\n.age-card:hover .age-num{color:var(--breeze)}\n.age-card:hover .age-desc{color:var(--wave)}\n.age-num{font-family:'Cormorant Garamond',serif !important;font-size:2rem;font-weight:300;color:var(--stone);display:block;margin-bottom:0.4rem;transition:color 0.3s}\n.age-desc{font-family:'Jost',sans-serif !important;font-size:0.68rem;line-height:1.55;color:rgba(14,27,48,0.5);transition:color 0.3s}\n.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.7s ease,transform 0.7s ease}\n.reveal.visible{opacity:1;transform:translateY(0)}\n@media(max-width:1024px){\n.ages-section{padding:5rem 2rem}\n.ages-grid{grid-template-columns:repeat(4,1fr)}\n}\n@media(max-width:768px){\n.ages-section{padding:4rem 1.5rem}\n.ages-grid{grid-template-columns:repeat(3,1fr)}\n}\n@media(max-width:480px){\n.ages-section{padding:3rem 1rem}\n.ages-grid{grid-template-columns:repeat(2,1fr)}\n.age-card:last-child{grid-column:1 / -1;width:calc(50% - 0.375rem);margin:0 auto}\n}\n</style>\n<script>\nvar observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.08});\ndocument.querySelectorAll('.reveal').forEach(function(el){observer.observe(el)});\n</script>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Landing V2 — 02 Ages",
+  "type": "section"
+}

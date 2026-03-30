@@ -1,0 +1,35 @@
+{
+  "content": [
+    {
+      "id": "lp_f2025_sessions",
+      "elType": "container",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#0E1B30",
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_f2025_html_sessions",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"sessions-wrap\" id=\"sessions\">\n  <p class=\"section-label\">Summer 2025 Sessions</p>\n  <h2 class=\"section-title\">Eight evenings<br><em>on the water</em></h2>\n  <p class=\"sessions-intro\">Sessions run June through August, at golden hour. Each one is complete in itself. Come once. Come all summer. The water will be there.</p>\n  <div class=\"sessions-grid\">\n    <div class=\"session-card\">\n      <p class=\"s-month\">June</p>\n      <p class=\"s-name\">Session One</p>\n      <p class=\"s-desc\">The opening of summer. Longest days. The water is still learning its warmth.</p>\n      <p class=\"s-spots\"><span class=\"s-dot\"></span>20–25 spots · Date TBA</p>\n    </div>\n    <div class=\"session-card\">\n      <p class=\"s-month\">June</p>\n      <p class=\"s-name\">Session Two</p>\n      <p class=\"s-desc\">Midsummer's approach. Light lingers past eight. The bowls sound different in the long dusk.</p>\n      <p class=\"s-spots\"><span class=\"s-dot\"></span>20–25 spots · Date TBA</p>\n    </div>\n    <div class=\"session-card\">\n      <p class=\"s-month\">July</p>\n      <p class=\"s-name\">Session Three</p>\n      <p class=\"s-desc\">Full summer. The city exhales. The water is ready for you.</p>\n      <p class=\"s-spots\"><span class=\"s-dot\"></span>20–25 spots · Date TBA</p>\n    </div>\n    <div class=\"session-card\">\n      <p class=\"s-month\">July</p>\n      <p class=\"s-name\">Session Four</p>\n      <p class=\"s-desc\">Midsummer stillness. Everything is at its peak — including your need to rest.</p>\n      <p class=\"s-spots\"><span class=\"s-dot\"></span>20–25 spots · Date TBA</p>\n    </div>\n    <div class=\"session-card\">\n      <p class=\"s-month\">July</p>\n      <p class=\"s-name\">Session Five</p>\n      <p class=\"s-desc\">The heart of the season. Some people will have been here before. The water remembers.</p>\n      <p class=\"s-spots\"><span class=\"s-dot\"></span>20–25 spots · Date TBA</p>\n    </div>\n    <div class=\"session-card\">\n      <p class=\"s-month\">August</p>\n      <p class=\"s-name\">Session Six</p>\n      <p class=\"s-desc\">Summer in its fullness. These evenings are the ones people tell others about.</p>\n      <p class=\"s-spots\"><span class=\"s-dot\"></span>20–25 spots · Date TBA</p>\n    </div>\n    <div class=\"session-card\">\n      <p class=\"s-month\">August</p>\n      <p class=\"s-name\">Session Seven</p>\n      <p class=\"s-desc\">The light is beginning to shift. There is a softness to late August that nothing else holds.</p>\n      <p class=\"s-spots\"><span class=\"s-dot\"></span>20–25 spots · Date TBA</p>\n    </div>\n    <div class=\"session-card\">\n      <p class=\"s-month\">August</p>\n      <p class=\"s-name\">Session Eight — Closing</p>\n      <p class=\"s-desc\">The last evening on the water. A ritual of return. Summer's end held in sound.</p>\n      <p class=\"s-spots\"><span class=\"s-dot\"></span>20–25 spots · Date TBA</p>\n    </div>\n  </div>\n  <a href=\"#notify\" class=\"btn-p\">Tell me when sessions open</a>\n</section>\n\n<style>\n:root {\n  --stone:#0E1B30;--midnight:#1D3152;--seafoam:#688F9D;\n  --wave:#A4B2BA;--breeze:#D9E8EB;--sand:#C4BBB4;--cream:#F7F0EC;\n}\n\n.sessions-wrap {\n  background: var(--stone) !important;\n  padding: 8rem 4rem !important;\n  max-width: 920px !important;\n  margin: 0 auto !important;\n  text-align: center !important;\n}\n\n.sessions-intro {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: clamp(1.05rem, 2vw, 1.45rem) !important;\n  font-style: italic !important;\n  color: var(--wave) !important;\n  max-width: 560px !important;\n  margin: 0 auto 4.5rem !important;\n  line-height: 1.75 !important;\n}\n\n.sessions-grid {\n  display: grid !important;\n  grid-template-columns: repeat(2, 1fr) !important;\n  gap: 1.25rem !important;\n  margin-bottom: 3.5rem !important;\n  text-align: left !important;\n}\n\n.session-card {\n  border: 0.5px solid rgba(104, 143, 157, 0.18) !important;\n  padding: 1.75rem !important;\n  transition: all 0.35s ease !important;\n  position: relative !important;\n  overflow: hidden !important;\n}\n\n.session-card::after {\n  content: '';\n  position: absolute !important;\n  bottom: 0 !important;\n  left: 0 !important;\n  right: 0 !important;\n  height: 2px !important;\n  background: var(--seafoam) !important;\n  transform: scaleX(0) !important;\n  transition: transform 0.4s ease !important;\n  transform-origin: left !important;\n}\n\n.session-card:hover::after {\n  transform: scaleX(1) !important;\n}\n\n.session-card:hover {\n  border-color: rgba(104, 143, 157, 0.38) !important;\n}\n\n.s-month {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.62rem !important;\n  letter-spacing: 0.35em !important;\n  text-transform: uppercase !important;\n  color: var(--seafoam) !important;\n  margin-bottom: 0.6rem !important;\n}\n\n.s-name {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 1.4rem !important;\n  font-weight: 300 !important;\n  color: var(--cream) !important;\n  margin-bottom: 0.5rem !important;\n}\n\n.s-desc {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.83rem !important;\n  color: var(--wave) !important;\n  line-height: 1.7 !important;\n  margin-bottom: 1rem !important;\n}\n\n.s-spots {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.65rem !important;\n  letter-spacing: 0.2em !important;\n  text-transform: uppercase !important;\n  color: rgba(104, 143, 157, 0.7) !important;\n  display: flex !important;\n  align-items: center !important;\n  gap: 0.5rem !important;\n}\n\n.s-dot {\n  width: 5px !important;\n  height: 5px !important;\n  border-radius: 50% !important;\n  background: var(--seafoam) !important;\n  flex-shrink: 0 !important;\n}\n\n@media (max-width: 768px) {\n  .sessions-wrap { padding: 5rem 1.5rem !important; }\n  .sessions-grid {\n    grid-template-columns: 1fr !important;\n  }\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Floating Sound — 06 Sessions",
+  "type": "section"
+}

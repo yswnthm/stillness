@@ -1,0 +1,83 @@
+{
+    "version": "0.4",
+    "title": "Stillness Editorial Product Description V1",
+    "type": "section",
+    "content": [
+        {
+            "id": "editorial-desc-section-wrapper",
+            "elType": "container",
+            "settings": {
+                "content_width": "full",
+                "background_background": "classic",
+                "background_color": "#F9F8F6",
+                "padding": {
+                    "unit": "px",
+                    "top": "100",
+                    "right": "40",
+                    "bottom": "100",
+                    "left": "40",
+                    "isLinked": false
+                },
+                "css_classes": "stillness-editorial-product-desc"
+            },
+            "elements": [
+                {
+                    "id": "editorial-desc-inner-container",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "boxed",
+                        "boxed_width": {
+                            "unit": "px",
+                            "size": 860
+                        },
+                        "flex_direction": "column",
+                        "flex_align_items": "flex-start",
+                        "css_classes": "editorial-desc-inner"
+                    },
+                    "elements": [
+                        {
+                            "id": "editorial-desc-label-widget",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='editorial-label-wrap'><span class='editorial-line'></span><span class='editorial-label'>Product Details</span></div>"
+                            },
+                            "widgetType": "html"
+                        },
+                        {
+                            "id": "editorial-desc-headline-widget",
+                            "elType": "widget",
+                            "settings": {
+                                "title": "What's <span class='italic'>inside.</span>",
+                                "header_size": "h2"
+                            },
+                            "widgetType": "heading"
+                        },
+                        {
+                            "id": "editorial-desc-divider-widget",
+                            "elType": "widget",
+                            "settings": {
+                                "html": "<div class='editorial-desc-divider'></div>"
+                            },
+                            "widgetType": "html"
+                        },
+                        {
+                            "id": "dynamic-product-content-widget",
+                            "elType": "widget",
+                            "settings": {},
+                            "widgetType": "woocommerce-product-content"
+                        }
+                    ]
+                },
+                {
+                    "id": "editorial-desc-styles-widget",
+                    "elType": "widget",
+                    "settings": {
+                        "html": "<style>\n/* ─── SECTION WRAPPER ─── */\n.stillness-editorial-product-desc {\n    border-top: 1px solid rgba(14, 27, 48, 0.07);\n}\n\n/* ─── LABEL ─── */\n.stillness-editorial-product-desc .editorial-label-wrap {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    margin-bottom: 20px;\n}\n\n.stillness-editorial-product-desc .editorial-line {\n    width: 24px;\n    height: 1px;\n    background: #688F9D;\n    opacity: 0.6;\n}\n\n.stillness-editorial-product-desc .editorial-label {\n    font-family: 'Lato', sans-serif;\n    font-size: 11px;\n    font-weight: 700;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    color: #688F9D;\n}\n\n/* ─── HEADING ─── */\n.stillness-editorial-product-desc .elementor-widget-heading h2 {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 48px !important;\n    line-height: 1.1 !important;\n    color: #0E1B30 !important;\n    font-weight: 400 !important;\n    margin: 0 0 32px !important;\n}\n\n.stillness-editorial-product-desc .elementor-widget-heading h2 .italic {\n    font-style: italic !important;\n    color: #688F9D !important;\n}\n\n/* ─── DIVIDER ─── */\n.editorial-desc-divider {\n    width: 48px;\n    height: 1px;\n    background: #688F9D;\n    opacity: 0.4;\n    margin-bottom: 40px;\n}\n\n/* ─── CONTENT BODY ─── */\n.stillness-editorial-product-desc .woocommerce-product-details__short-description,\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content .woocommerce-Tabs-panel,\n.stillness-editorial-product-desc .woocommerce-product-details__short-description p,\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content p {\n    font-family: 'Lato', sans-serif !important;\n    font-weight: 300 !important;\n    font-size: 17px !important;\n    line-height: 1.8 !important;\n    color: rgba(14, 27, 48, 0.72) !important;\n    margin-bottom: 20px !important;\n}\n\n/* ─── HEADINGS INSIDE CONTENT ─── */\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content h2,\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content h3,\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content h4,\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content h5,\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content h6,\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content strong {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 22px !important;\n    font-weight: 600 !important;\n    color: #0E1B30 !important;\n    margin: 32px 0 12px !important;\n    letter-spacing: 0 !important;\n}\n\n/* ─── LISTS ─── */\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content ul,\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content ol {\n    padding-left: 0 !important;\n    list-style: none !important;\n    margin: 0 0 28px !important;\n}\n\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content ul li,\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content ol li {\n    font-family: 'Lato', sans-serif !important;\n    font-weight: 300 !important;\n    font-size: 17px !important;\n    line-height: 1.7 !important;\n    color: rgba(14, 27, 48, 0.72) !important;\n    padding: 12px 0 12px 28px !important;\n    border-bottom: 1px solid rgba(14, 27, 48, 0.07) !important;\n    position: relative !important;\n}\n\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content ul li::before {\n    content: '';\n    position: absolute;\n    left: 0;\n    top: 50%;\n    transform: translateY(-50%);\n    width: 6px;\n    height: 6px;\n    background: #688F9D;\n    border-radius: 50%;\n    opacity: 0.6;\n}\n\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content ol {\n    counter-reset: desc-counter;\n}\n\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content ol li {\n    counter-increment: desc-counter;\n}\n\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content ol li::before {\n    content: counter(desc-counter);\n    position: absolute;\n    left: 0;\n    top: 50%;\n    transform: translateY(-50%);\n    font-family: 'Cormorant Garamond', serif;\n    font-size: 15px;\n    font-weight: 600;\n    color: #688F9D;\n    opacity: 0.8;\n}\n\n/* ─── BOLD INLINE ─── */\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content li b,\n.stillness-editorial-product-desc .elementor-widget-woocommerce-product-content li strong {\n    font-family: 'Lato', sans-serif !important;\n    font-size: 17px !important;\n    font-weight: 600 !important;\n    color: #0E1B30 !important;\n    margin: 0 !important;\n}\n\n/* ─── RESPONSIVE ─── */\n@media (max-width: 1024px) {\n    .stillness-editorial-product-desc .elementor-widget-heading h2 {\n        font-size: 36px !important;\n    }\n    .editorial-desc-inner {\n        padding: 0 !important;\n    }\n}\n</style>"
+                    },
+                    "widgetType": "html"
+                }
+            ]
+        }
+    ],
+    "page_settings": []
+}

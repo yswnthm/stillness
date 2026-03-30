@@ -1,0 +1,49 @@
+{
+  "content": [
+    {
+      "id": "lp_for_section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#F2E8E0",
+        "padding": {
+          "unit": "px",
+          "top": "112",
+          "right": "40",
+          "bottom": "112",
+          "left": "40",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_for_inner",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1140
+            },
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "lp_for_html",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class='lp-for-header'><div class='lp-for-eyebrow'>Who they're for</div><h2 class='lp-for-title'>A gift for anyone<br>who loves a <em>child.</em></h2></div><div class='lp-for-grid'><div class='lp-for-card'><div class='lp-for-card-icon'><svg viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M23 21v-2a4 4 0 0 0-3-3.87'/><path d='M16 3.13a4 4 0 0 1 0 7.75'/></svg></div><div class='lp-for-card-title'>Parents &amp; caregivers</div><div class='lp-for-card-text'>For daily rituals — breakfast cards, bedtime questions, car ride conversations. Anyone who wants to be truly present before the window narrows.</div></div><div class='lp-for-card'><div class='lp-for-card-icon'><svg viewBox='0 0 24 24'><path d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'/></svg></div><div class='lp-for-card-title'>Gift buyers</div><div class='lp-for-card-text'>The most thoughtful gift for a birthday, baby shower, or any family with a child in the 5–11 window. Packaged and ready to give.</div></div><div class='lp-for-card'><div class='lp-for-card-icon'><svg viewBox='0 0 24 24'><path d='M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z'/><path d='M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'/></svg></div><div class='lp-for-card-title'>Educators</div><div class='lp-for-card-text'>Morning circles, counselling sessions, emotional literacy programs. For teachers who know a child's inner world is just as important as what they learn.</div></div></div><style>*,*::before,*::after{box-sizing:border-box}.lp-for-header{margin-bottom:4rem}.lp-for-eyebrow{font-family:'Lato',sans-serif !important;font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:#688F9D;margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}.lp-for-eyebrow::before{content:'';width:2rem;height:1px;background:#688F9D;display:block}.lp-for-title{font-family:'Cormorant Garamond',serif !important;font-size:2.4rem;font-weight:300;color:#0E1B30}.lp-for-title em{font-style:italic;color:#688F9D}.lp-for-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}.lp-for-card{padding:2rem 1.8rem;border-bottom:2px solid rgba(104,143,157,0.2)}.lp-for-card-icon{width:32px;height:32px;border:1px solid rgba(104,143,157,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem}.lp-for-card-icon svg{width:14px;height:14px;stroke:#688F9D;fill:none;stroke-width:1.6}.lp-for-card-title{font-family:'Cormorant Garamond',serif !important;font-size:1.1rem;font-weight:400;color:#0E1B30;margin-bottom:0.5rem}.lp-for-card-text{font-family:'Lato',sans-serif !important;font-size:0.86rem;line-height:1.78;color:#2a3d55}@media(max-width:960px){.lp-for-grid{grid-template-columns:1fr 1fr}}@media(max-width:540px){.lp-for-grid{grid-template-columns:1fr}}</style>"
+              },
+              "widgetType": "html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Landing — Who Is It For Section V1",
+  "type": "section"
+}

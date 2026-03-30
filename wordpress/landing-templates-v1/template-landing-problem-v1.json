@@ -1,0 +1,49 @@
+{
+  "content": [
+    {
+      "id": "lp_problem_section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "padding": {
+          "unit": "px",
+          "top": "112",
+          "right": "40",
+          "bottom": "112",
+          "left": "40",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_problem_inner",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1140
+            },
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "lp_problem_html",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class='lp-prob-header'><div><div class='lp-prob-eyebrow'>Why this matters</div><h2 class='lp-prob-headline'>Children feel everything.<br>Most are never taught<br>to <em>name it.</em></h2></div><div class='lp-prob-intro'><p>When a child can't find words for what they're feeling, the feeling becomes behaviour — anxiety, withdrawal, meltdowns, silence. Not because something is wrong with them. Because nobody gave them the language.</p><p>And parents who love deeply often run out of time to say the things that shape a child's sense of themselves. Not from lack of love — from lack of a moment.</p><p>These two decks solve different sides of the same problem.</p></div></div><div class='lp-prob-grid'><div class='lp-prob-card'><div class='lp-prob-num'>01</div><div class='lp-prob-title'>Children grow up <em>emotionally inarticulate</em></div><div class='lp-prob-text'>Not because they don't feel things — but because nobody gave them a vocabulary for it. Unnamed feelings become big behaviour.</div><div class='lp-prob-solve'>Mini Moments gives them the language</div></div><div class='lp-prob-card'><div class='lp-prob-num'>02</div><div class='lp-prob-title'>Parents run out of <em>moments to say it</em></div><div class='lp-prob-text'>The things a parent truly feels about their child go unsaid because nobody created the opening to say them.</div><div class='lp-prob-solve'>In This Little Life creates that opening</div></div><div class='lp-prob-card'><div class='lp-prob-num'>03</div><div class='lp-prob-title'>The window is <em>smaller than it feels</em></div><div class='lp-prob-text'>Ages 5–11. That's the season. The child who is 7 today will be 8 before you remember to start.</div><div class='lp-prob-solve'>Both decks. Right now.</div></div></div><style>*,*::before,*::after{box-sizing:border-box}.lp-prob-header{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-bottom:5rem}.lp-prob-eyebrow{font-family:'Lato',sans-serif !important;font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:#688F9D;margin-bottom:1.4rem;display:flex;align-items:center;gap:0.8rem}.lp-prob-eyebrow::before{content:'';width:2rem;height:1px;background:#688F9D;display:block}.lp-prob-headline{font-family:'Cormorant Garamond',serif !important;font-size:clamp(2.2rem,3.5vw,3.2rem);font-weight:300;color:#0E1B30;line-height:1.1}.lp-prob-headline em{font-style:italic;color:#688F9D}.lp-prob-intro{font-family:'Lato',sans-serif !important;font-size:0.97rem;line-height:1.9;color:#2a3d55;padding-top:0.4rem}.lp-prob-intro p{margin-bottom:1rem}.lp-prob-intro p:last-child{margin-bottom:0}.lp-prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}.lp-prob-card{padding:2rem 1.8rem;border-top:2px solid rgba(104,143,157,0.2);transition:border-color 0.3s}.lp-prob-card:hover{border-top-color:#688F9D}.lp-prob-num{font-family:'Cormorant Garamond',serif !important;font-size:0.8rem;color:rgba(104,143,157,0.4);letter-spacing:0.2em;margin-bottom:1rem}.lp-prob-title{font-family:'Cormorant Garamond',serif !important;font-size:1.2rem;font-weight:400;color:#0E1B30;margin-bottom:0.7rem;line-height:1.3}.lp-prob-title em{font-style:italic}.lp-prob-text{font-family:'Lato',sans-serif !important;font-size:0.86rem;line-height:1.78;color:#7a8f99}.lp-prob-solve{margin-top:1.2rem;font-family:'Lato',sans-serif !important;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:#688F9D;display:flex;align-items:center;gap:0.5rem}.lp-prob-solve::before{content:'↳';opacity:0.65}@media(max-width:960px){.lp-prob-header{grid-template-columns:1fr;gap:2rem}.lp-prob-grid{grid-template-columns:1fr}}</style>"
+              },
+              "widgetType": "html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Landing — Problem Section V1",
+  "type": "section"
+}

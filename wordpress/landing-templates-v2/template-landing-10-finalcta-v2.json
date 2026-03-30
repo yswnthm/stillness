@@ -1,0 +1,38 @@
+{
+  "content": [
+    {
+      "id": "lp_v2_finalcta",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "gap": {
+          "unit": "px",
+          "size": 0,
+          "sizes": []
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_v2_html_finalcta",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"final-cta\">\n  <h2>One card.<br><em>This morning.</em></h2>\n  <p>You don't need to overhaul anything. Just one card and a child in front of you.</p>\n  <div class=\"final-cards\">\n    <div class=\"final-card reveal\">\n      <span class=\"final-card-tag\">For children · Ages 5–11</span>\n      <h3>Mini Moments.</h3>\n      <span class=\"price\">$35 CAD</span>\n      <a href=\"https://stillnesscuratedretreats.com/?add-to-cart=3184\" class=\"btn-dark\" style=\"display:block;text-align:center\">Add to cart</a>\n    </div>\n    <div class=\"final-card reveal\">\n      <span class=\"final-card-tag\">For families · Ages 5–11</span>\n      <h3>In This Little Life.</h3>\n      <span class=\"price\">$35 CAD</span>\n      <a href=\"https://stillnesscuratedretreats.com/?add-to-cart=3189\" class=\"btn-dark\" style=\"display:block;text-align:center\">Add to cart</a>\n    </div>\n  </div>\n  <a href=\"https://stillnesscuratedretreats.com/?add-to-cart=3184,3189\" class=\"btn-dark\" style=\"padding:1.1rem 3rem\">Get the bundle — $59 · Save $11</a>\n  <span class=\"final-shipping\">Ships from Vancouver, BC · Canada & US · 3–5 business days</span>\n</section>\n<style>\n*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}\n:root{--stone:#0E1B30;--midnight:#1D3152;--seafoam:#688F9D;--wave:#A4B2BA;--breeze:#D9E8EB;--sand:#C4BBB4;--cream:#F7F0EC;--warm:#F2E8DF;}\n/* Force zero spacing on Elementor parent containers */\n.elementor-widget-container, .elementor-widget-html, .elementor-column-wrap, .elementor-widget-wrap { margin: 0 !important; padding: 0 !important; }\n.final-cta{padding:7rem 4rem;text-align:center;background:var(--warm);margin:0 !important;}\n.final-cta h2{font-family:'Cormorant Garamond',serif !important;font-size:clamp(2rem,4vw,4rem);font-weight:300;color:var(--stone);margin-bottom:1rem;line-height:1.05}\n.final-cta h2 em{font-style:italic;color:var(--seafoam)}\n.final-cta p{font-family:'Jost',sans-serif !important;font-size:0.88rem;color:rgba(14,27,48,0.6);max-width:420px;margin:0 auto 3rem;line-height:1.9}\n.final-cards{max-width:640px;margin:0 auto 2rem;display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}\n.final-card{background:var(--cream);padding:1.75rem;border:0.5px solid rgba(14,27,48,0.1);text-align:left}\n.final-card-tag{font-family:'Jost',sans-serif !important;font-size:0.58rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--seafoam);display:block;margin-bottom:0.6rem}\n.final-card h3{font-family:'Cormorant Garamond',serif !important;font-size:1.4rem;font-weight:300;color:var(--stone);margin-bottom:0.4rem}\n.final-card .price{font-family:'Cormorant Garamond',serif !important;font-size:1.6rem;color:var(--stone);display:block;margin-bottom:1rem}\n.final-shipping{font-family:'Jost',sans-serif !important;font-size:0.7rem;color:rgba(14,27,48,0.38);letter-spacing:0.1em;margin-top:1.25rem;display:block}\n.btn-dark{font-family:'Jost',sans-serif !important;font-size:0.7rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#F7F0EC !important;background:var(--stone);border:none;padding:1rem 2.2rem;cursor:pointer;transition:all 0.3s;text-decoration:none !important;display:inline-block}\n.btn-dark:link,.btn-dark:visited,.btn-dark:hover,.btn-dark:focus,.btn-dark:active{color:#F7F0EC !important;text-decoration:none !important}\n.btn-dark:hover{background:var(--midnight) !important;transform:translateY(-2px)}\n.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.7s ease,transform 0.7s ease}\n.reveal.visible{opacity:1;transform:translateY(0)}\n@media(max-width:768px){\n.final-cta{padding:5rem 1.5rem}\n.final-cards{grid-template-columns:1fr}\n}\n</style>\n<script>\nvar observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.08});\ndocument.querySelectorAll('.reveal').forEach(function(el){observer.observe(el)});\n</script>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Landing V2 — 10 Final CTA",
+  "type": "section"
+}

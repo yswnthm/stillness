@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Share It | Stillness</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            stone: '#0E1B30',
+            midnightsea: '#1D3152',
+            midnight: '#1D3152',
+            seafoam: '#688F9D',
+            breeze: '#D9E8EB',
+            wave: '#A4B2BA',
+            sand: '#C4BBB4',
+            cream: '#FFFFFF',
+            terracotta: '#C1785D',
+            sage: '#8A9A8A',
+            clay: '#D9C5B2',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Lato"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F7F0EC; }
+    ::-webkit-scrollbar-thumb { background: #C4BBB4; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #688F9D; }
+
+    .noise-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; opacity: 0.04; z-index: 9999;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+    
+    .hero-bg {
+        background-color: #ECE0D1;
+        background-image: url('https://images.unsplash.com/photo-1607344645866-009c320c62ab?q=80&w=2000&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: overlay;
+    }
+
+    .dot-pattern {
+      background-image: radial-gradient(#0E1B30 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+      opacity: 0.05;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .divider-line {
+      height: 1px;
+      background: rgba(14, 27, 48, 0.15);
+      flex: 1;
+    }
+
+    .arch-image {
+        border-radius: 20rem 20rem 2rem 2rem;
+    }
+  </style>
+</head>
+
+<body class="bg-[#FBF9F6] text-stone antialiased overflow-x-hidden selection:bg-seafoam selection:text-white relative font-sans">
+  <div class="noise-overlay"></div>
+
+  <!-- Header -->
+  <header class="absolute top-0 w-full z-50 flex items-center justify-between px-6 md:px-12 py-8 text-stone">
+    <a href="/" class="font-serif text-3xl font-medium tracking-wide">Stillness.</a>
+    <nav class="hidden md:flex items-center space-x-10 text-[0.7rem] font-bold tracking-[0.2em] text-stone">
+      <a href="#" class="hover:text-seafoam transition-colors uppercase">CORPORATE</a>
+      <a href="#" class="hover:text-seafoam transition-colors uppercase">SACRED OFFERINGS</a>
+      <a href="#" class="hover:text-seafoam transition-colors uppercase">SHOP</a>
+      <a href="#" class="hover:text-seafoam transition-colors uppercase">BLOG</a>
+      <a href="#" class="hover:text-seafoam transition-colors uppercase">ABOUT</a>
+      <a href="#" class="border border-stone px-8 py-3 rounded-full hover:bg-stone hover:text-white transition-all">BOOK</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex flex-col items-center justify-center text-center px-4 relative pt-20">
+      <div class="max-w-5xl mx-auto z-10 space-y-12">
+        <h1 class="font-serif text-6xl md:text-[6.5rem] text-midnightsea font-medium leading-[1.05]">
+          Loved It? <span class="text-seafoam border-b-2 border-seafoam/30 inline-block pb-2">Share</span> It.
+        </h1>
+        
+        <div class="text-lg md:text-xl text-stone max-w-3xl mx-auto space-y-8 font-light tracking-wide">
+          <p class="font-serif text-2xl md:text-[1.8rem] text-stone leading-snug">
+            If this little deck made a big difference, it's your turn to share the magic.
+          </p>
+          <p class="leading-relaxed opacity-90">
+            Whether it brought more calm to your mornings, sparked a beautiful bedtime ritual, or helped your child feel seen—thank you for welcoming this deck into your home.
+          </p>
+          <p class="leading-relaxed opacity-90 text-[1.1rem]">
+            We believe in the ripple effect of kindness. Pass it on:
+          </p>
+        </div>
+      </div>
+
+      <a href="#story" class="absolute bottom-16 w-14 h-14 rounded-full border border-stone/20 text-stone flex items-center justify-center hover:bg-seafoam hover:text-white transition-all bg-white/20 backdrop-blur-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- Tell Us Your Story -->
+    <section id="story" class="py-32 px-6 md:px-12 max-w-[85rem] mx-auto">
+      <div class="grid lg:grid-cols-[0.8fr_1.2fr] gap-0 rounded-[3rem] overflow-hidden border border-stone/10 bg-white shadow-2xl">
+        <div class="relative min-h-[400px]">
+          <img src="https://images.unsplash.com/photo-1543333995-a78ee9e53ac5?q=80&w=1200&auto=format&fit=crop" alt="Sharing a story" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-stone/20"></div>
+          <div class="absolute bottom-16 left-1/2 -translate-x-1/2 z-20">
+              <div class="bg-white px-8 py-5 rounded-3xl rounded-bl-none shadow-2xl relative">
+                  <p class="font-serif text-2xl text-stone italic">Thinking of you.</p>
+                  <div class="absolute -bottom-4 left-0 w-8 h-8 bg-white" style="clip-path: polygon(0 0, 0% 100%, 100% 0);"></div>
+              </div>
+          </div>
+        </div>
+        <div class="p-12 md:p-20 bg-[#FBF9F6]">
+            <h2 class="font-serif text-[3.8rem] text-midnightsea mb-6 text-center">Tell Us Your Story</h2>
+            <div class="flex items-center gap-6 max-w-[280px] mx-auto mb-12">
+                <span class="divider-line"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="text-stone/40"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
+                <span class="divider-line"></span>
+            </div>
+            <p class="text-xl leading-relaxed text-stone/70 font-light mb-12 text-center">
+                We'd love to hear how this deck has touched your family...
+            </p>
+            <form class="space-y-6">
+                <div class="space-y-2">
+                    <label class="block text-stone/70">Name</label>
+                    <input type="text" placeholder="Name" class="w-full bg-white border border-stone/20 px-6 py-4 rounded-xl focus:outline-none focus:border-seafoam transition-colors shadow-sm" />
+                </div>
+                <div class="space-y-2">
+                    <label class="block text-stone/70">Email</label>
+                    <input type="email" placeholder="Email" class="w-full bg-white border border-stone/20 px-6 py-4 rounded-xl focus:outline-none focus:border-seafoam transition-colors shadow-sm" />
+                </div>
+                <div class="space-y-2">
+                    <label class="block text-stone/70">Message</label>
+                    <textarea rows="4" placeholder="Message" class="w-full bg-white border border-stone/20 px-6 py-4 rounded-xl focus:outline-none focus:border-seafoam transition-colors shadow-sm resize-none"></textarea>
+                </div>
+                <div class="space-y-2">
+                    <label class="block text-stone/70">Upload (image/video)</label>
+                    <input type="file" accept="image/*,video/*" class="w-full bg-white border border-stone/20 px-4 py-3 rounded-xl focus:outline-none focus:border-seafoam transition-colors shadow-sm file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-stone/5 file:text-stone hover:file:bg-stone/10" />
+                    <p class="text-[0.95rem] text-stone/60 leading-relaxed mt-2 pt-2">You can write a note, send a photo, or even record a video message.</p>
+                </div>
+                <div class="pt-4 text-center md:text-left">
+                    <button type="button" class="w-full md:w-auto px-16 py-5 bg-[#6D919C] text-white rounded-xl uppercase tracking-[0.25em] text-[0.7rem] font-bold hover:bg-stone transition-all shadow-xl shadow-seafoam/20">
+                        Send Us Your Story
+                    </button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gift a Deck -->
+    <section id="gift" class="py-32 px-6 md:px-12 bg-[#F7F3F0]">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+        <div class="space-y-10 text-center md:text-left order-2 md:order-1">
+          <h2 class="font-serif text-5xl md:text-6xl text-midnightsea">Gift a Deck</h2>
+          
+          <div class="flex items-center gap-6 max-w-[280px] mx-auto md:mx-0">
+            <span class="divider-line"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="text-stone/40"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
+            <span class="divider-line"></span>
+          </div>
+
+          <p class="text-xl leading-relaxed text-stone/80 font-light max-w-sm">
+            Know a family who'd love this?<br/>
+            Send a deck to someone you love—shipped to you or directly to them, with an optional note.
+          </p>
+          <div class="pt-4">
+            <button class="px-12 py-5 bg-stone text-white rounded-xl hover:bg-seafoam transition-all uppercase tracking-[0.25em] text-[0.7rem] font-bold shadow-xl">
+              Send a Deck
+            </button>
+          </div>
+        </div>
+        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/3] order-1 md:order-2">
+          <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop" alt="The Deck" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Share with a Friend -->
+    <section class="py-40 px-6 relative overflow-hidden bg-white">
+        <div class="absolute inset-0 dot-pattern"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10 space-y-12">
+            <h2 class="font-serif text-5xl md:text-6xl text-midnightsea">Share with a Friend</h2>
+            
+            <div class="flex items-center gap-6 max-w-[280px] mx-auto">
+                <span class="divider-line"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="text-stone/40"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
+                <span class="divider-line"></span>
+            </div>
+
+            <p class="text-xl leading-relaxed text-stone/80 font-light max-w-2xl mx-auto">
+                Sometimes the best gifts are the ones we tell our friends about.
+                Copy the link below or tap to share it via text, email, or social.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-6 pt-8">
+              <button class="px-14 py-5 bg-white border border-stone text-stone hover:bg-stone hover:text-white transition-all uppercase tracking-[0.25em] text-[0.7rem] font-bold shadow-xl rounded-xl">
+                Copy Link
+              </button>
+              <button class="px-14 py-5 bg-white border border-stone text-stone hover:bg-stone hover:text-white transition-all uppercase tracking-[0.25em] text-[0.7rem] font-bold shadow-xl rounded-xl">
+                Share Via Email
+              </button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-stone text-cream pt-24 pb-16 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+      <div class="space-y-8">
+        <h2 class="font-serif text-5xl">Stillness.</h2>
+        <p class="text-stone-300/60 max-w-sm leading-relaxed text-[0.95rem]">
+          A sanctuary for the modern mind. Restoring balance through sensory reduction and nervous system regulation.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-[0.65rem] font-bold tracking-[0.2em] text-stone-400 uppercase mb-8">Explore</h3>
+          <ul class="space-y-5 text-[0.95rem] text-stone-200/80 font-light">
+            <li><a href="#" class="hover:text-seafoam transition-colors">Sacred Offerings</a></li>
+            <li><a href="#" class="hover:text-seafoam transition-colors">Shop</a></li>
+            <li><a href="#" class="hover:text-seafoam transition-colors">Blog</a></li>
+            <li><a href="#" class="hover:text-seafoam transition-colors">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-24 pt-10 border-t border-white/5 text-[0.7rem] text-stone-500 tracking-widest uppercase flex justify-between">
+        <p>&copy; 2024 Stillness. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -14,16 +14,42 @@
                     "left": "5%",
                     "isLinked": false
                 },
+                "padding_tablet": {
+                    "unit": "px",
+                    "top": "100",
+                    "right": "5%",
+                    "bottom": "100",
+                    "left": "5%",
+                    "isLinked": false
+                },
+                "padding_mobile": {
+                    "unit": "px",
+                    "top": "80",
+                    "right": "20",
+                    "bottom": "80",
+                    "left": "20",
+                    "isLinked": false
+                },
                 "content_width": "boxed",
                 "boxed_width": {
                     "unit": "px",
                     "size": 1300
                 },
                 "flex_direction": "row",
+                "flex_direction_tablet": "column",
+                "flex_direction_mobile": "column",
                 "flex_wrap": "nowrap",
                 "flex_align_items": "center",
                 "flex_gap": {
                     "column": "80",
+                    "row": "40"
+                },
+                "flex_gap_tablet": {
+                    "column": "60",
+                    "row": "60"
+                },
+                "flex_gap_mobile": {
+                    "column": "40",
                     "row": "40"
                 }
             },
@@ -37,11 +63,35 @@
                             "unit": "%",
                             "size": 48
                         },
+                        "width_tablet": {
+                            "unit": "%",
+                            "size": 100
+                        },
+                        "width_mobile": {
+                            "unit": "%",
+                            "size": 100
+                        },
                         "padding": {
                             "unit": "px",
                             "top": "0",
                             "right": "60",
                             "bottom": "0",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "padding_tablet": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "40",
+                            "left": "0",
+                            "isLinked": false
+                        },
+                        "padding_mobile": {
+                            "unit": "px",
+                            "top": "0",
+                            "right": "0",
+                            "bottom": "40",
                             "left": "0",
                             "isLinked": false
                         },
@@ -52,7 +102,9 @@
                             "id": "ts_subtitle",
                             "elType": "widget",
                             "settings": {
-                                "editor": "<p style=\"font-family: 'Lato', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(255,255,255,0.45); margin-bottom: 32px; display: flex; align-items: center;\"><span style=\"display: inline-block; width: 40px; height: 1px; background-color: rgba(255,255,255,0.25); margin-right: 20px;\"></span> WHAT PEOPLE SAY</p>"
+                                "align_tablet": "center",
+                                "align_mobile": "center",
+                                "editor": "<p style=\"font-family: 'Lato', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: rgba(255,255,255,0.45); margin-bottom: 32px; display: flex; align-items: center; justify-content: inherit;\"><span style=\"display: inline-block; width: 40px; height: 1px; background-color: rgba(255,255,255,0.25); margin-right: 20px;\"></span> WHAT PEOPLE SAY</p>"
                             },
                             "widgetType": "text-editor"
                         },
@@ -60,9 +112,52 @@
                             "id": "ts_title",
                             "elType": "widget",
                             "settings": {
-                                "editor": "<h2 style=\"font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 400; color: #FFFFFF; line-height: 1.1; margin-bottom: 60px; letter-spacing: -0.01em;\">They came<br>carrying something.<br>They left <span style=\"font-style: italic; opacity: 0.9;\">lighter.</span></h2>"
+                                "title": "They came<br>carrying something.<br>They left <span style=\"font-style: italic; opacity: 0.9;\">lighter.</span>",
+                                "header_size": "h2",
+                                "align_tablet": "center",
+                                "align_mobile": "center",
+                                "title_color": "#FFFFFF",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Cormorant Garamond",
+                                "typography_font_size": {
+                                    "unit": "px",
+                                    "size": 64
+                                },
+                                "typography_font_size_tablet": {
+                                    "unit": "px",
+                                    "size": 48
+                                },
+                                "typography_font_size_mobile": {
+                                    "unit": "px",
+                                    "size": 36
+                                },
+                                "typography_font_weight": "400",
+                                "typography_line_height": {
+                                    "unit": "em",
+                                    "size": 1.1
+                                },
+                                "typography_letter_spacing": {
+                                    "unit": "em",
+                                    "size": -0.01
+                                },
+                                "margin": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "60",
+                                    "left": "0",
+                                    "isLinked": false
+                                },
+                                "margin_tablet": {
+                                    "unit": "px",
+                                    "top": "0",
+                                    "right": "0",
+                                    "bottom": "40",
+                                    "left": "0",
+                                    "isLinked": false
+                                }
                             },
-                            "widgetType": "text-editor"
+                            "widgetType": "heading"
                         },
                         {
                             "id": "ts_divider",
@@ -84,11 +179,23 @@
                             "settings": {
                                 "container_type": "inner",
                                 "flex_direction": "row",
+                                "flex_direction_tablet": "row",
+                                "flex_direction_mobile": "row",
                                 "flex_wrap": "wrap",
                                 "flex_justify_content": "flex-start",
+                                "flex_justify_content_tablet": "center",
+                                "flex_justify_content_mobile": "center",
                                 "flex_gap": {
                                     "column": "60",
                                     "row": "40"
+                                },
+                                "flex_gap_tablet": {
+                                    "column": "40",
+                                    "row": "40"
+                                },
+                                "flex_gap_mobile": {
+                                    "column": "20",
+                                    "row": "30"
                                 }
                             },
                             "elements": [
@@ -99,6 +206,14 @@
                                         "width": {
                                             "unit": "%",
                                             "size": 45
+                                        },
+                                        "width_tablet": {
+                                            "unit": "%",
+                                            "size": 30
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 45
                                         }
                                     },
                                     "elements": [
@@ -106,6 +221,8 @@
                                             "id": "ts_s1_t",
                                             "elType": "widget",
                                             "settings": {
+                                                "align_tablet": "center",
+                                                "align_mobile": "center",
                                                 "editor": "<h3 style=\"font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 400; color: #FFFFFF; margin: 0 0 10px 0; line-height: 1;\">400+</h3><p style=\"font-family: 'Lato', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.4); margin: 0;\">GUESTS HELD</p>"
                                             },
                                             "widgetType": "text-editor"
@@ -119,6 +236,14 @@
                                         "width": {
                                             "unit": "%",
                                             "size": 45
+                                        },
+                                        "width_tablet": {
+                                            "unit": "%",
+                                            "size": 30
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 45
                                         }
                                     },
                                     "elements": [
@@ -126,6 +251,8 @@
                                             "id": "ts_s2_t",
                                             "elType": "widget",
                                             "settings": {
+                                                "align_tablet": "center",
+                                                "align_mobile": "center",
                                                 "editor": "<h3 style=\"font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 400; color: #FFFFFF; margin: 0 0 10px 0; line-height: 1;\">2024</h3><p style=\"font-family: 'Lato', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.4); margin: 0;\">SINCE SUMMER</p>"
                                             },
                                             "widgetType": "text-editor"
@@ -139,6 +266,14 @@
                                         "width": {
                                             "unit": "%",
                                             "size": 45
+                                        },
+                                        "width_tablet": {
+                                            "unit": "%",
+                                            "size": 30
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 45
                                         }
                                     },
                                     "elements": [
@@ -146,6 +281,8 @@
                                             "id": "ts_s3_t",
                                             "elType": "widget",
                                             "settings": {
+                                                "align_tablet": "center",
+                                                "align_mobile": "center",
                                                 "editor": "<h3 style=\"font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400; color: #FFFFFF; margin: 0 0 8px 0; line-height: 1;\">&infin;</h3><p style=\"font-family: 'Lato', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.4); margin: 0;\">STORIES THAT STAY WITH US</p>"
                                             },
                                             "widgetType": "text-editor"
@@ -159,6 +296,14 @@
                                         "width": {
                                             "unit": "%",
                                             "size": 45
+                                        },
+                                        "width_tablet": {
+                                            "unit": "%",
+                                            "size": 30
+                                        },
+                                        "width_mobile": {
+                                            "unit": "%",
+                                            "size": 45
                                         }
                                     },
                                     "elements": [
@@ -166,6 +311,8 @@
                                             "id": "ts_s4_t",
                                             "elType": "widget",
                                             "settings": {
+                                                "align_tablet": "center",
+                                                "align_mobile": "center",
                                                 "editor": "<h3 style=\"font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 400; color: #FFFFFF; margin: 0 0 10px 0; line-height: 1;\">Vancouver</h3><p style=\"font-family: 'Lato', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.4); margin: 0;\">WHERE WE CALL HOME</p>"
                                             },
                                             "widgetType": "text-editor"
@@ -185,10 +332,22 @@
                             "unit": "%",
                             "size": 52
                         },
+                        "width_tablet": {
+                            "unit": "%",
+                            "size": 100
+                        },
+                        "width_mobile": {
+                            "unit": "%",
+                            "size": 100
+                        },
                         "flex_direction": "column",
                         "flex_gap": {
                             "column": "24",
                             "row": "24"
+                        },
+                        "flex_gap_tablet": {
+                            "column": "20",
+                            "row": "20"
                         }
                     },
                     "elements": [
@@ -215,6 +374,22 @@
                                     "bottom": "56",
                                     "left": "56",
                                     "isLinked": true
+                                },
+                                "padding_tablet": {
+                                    "unit": "px",
+                                    "top": "40",
+                                    "right": "40",
+                                    "bottom": "40",
+                                    "left": "40",
+                                    "isLinked": true
+                                },
+                                "padding_mobile": {
+                                    "unit": "px",
+                                    "top": "32",
+                                    "right": "24",
+                                    "bottom": "32",
+                                    "left": "24",
+                                    "isLinked": true
                                 }
                             },
                             "elements": [
@@ -222,7 +397,25 @@
                                     "id": "ts_c1_q",
                                     "elType": "widget",
                                     "settings": {
-                                        "editor": "<p style=\"font-family: 'Cormorant Garamond', serif; font-size: 26px; font-style: italic; font-weight: 400; color: #FFFFFF; line-height: 1.5; margin: 0 0 32px 0; opacity: 0.95;\">\"I didn't expect to cry. I wasn't sad. Something just released. I drove home in silence and it was the best silence I've had in months.\"</p><p style=\"font-family: 'Lato', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255, 255, 255, 0.4); margin: 0; display: flex; align-items: center;\"><span style=\"display: inline-block; width: 12px; height: 1px; background-color: rgba(255,255,255,0.2); margin-right: 12px;\"></span> AFTER A SOUND JOURNEY SESSION</p>"
+                                        "title": "\"I didn't expect to cry. I wasn't sad. Something just released. I drove home in silence and it was the best silence I've had in months.\"",
+                                        "header_size": "p",
+                                        "title_color": "#FFFFFF",
+                                        "typography_typography": "custom",
+                                        "typography_font_family": "Cormorant Garamond",
+                                        "typography_font_style": "italic",
+                                        "typography_font_size": { "unit": "px", "size": 26 },
+                                        "typography_font_size_mobile": { "unit": "px", "size": 22 },
+                                        "typography_line_height": { "unit": "em", "size": 1.5 },
+                                        "typography_font_weight": "400",
+                                        "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "32", "left": "0", "isLinked": false }
+                                    },
+                                    "widgetType": "heading"
+                                },
+                                {
+                                    "id": "ts_c1_meta",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "editor": "<p style=\"font-family: 'Lato', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255, 255, 255, 0.4); margin: 0; display: flex; align-items: center;\"><span style=\"display: inline-block; width: 12px; height: 1px; background-color: rgba(255,255,255,0.2); margin-right: 12px;\"></span> AFTER A SOUND JOURNEY SESSION</p>"
                                     },
                                     "widgetType": "text-editor"
                                 }
@@ -251,6 +444,22 @@
                                     "bottom": "56",
                                     "left": "56",
                                     "isLinked": true
+                                },
+                                "padding_tablet": {
+                                    "unit": "px",
+                                    "top": "40",
+                                    "right": "40",
+                                    "bottom": "40",
+                                    "left": "40",
+                                    "isLinked": true
+                                },
+                                "padding_mobile": {
+                                    "unit": "px",
+                                    "top": "32",
+                                    "right": "24",
+                                    "bottom": "32",
+                                    "left": "24",
+                                    "isLinked": true
                                 }
                             },
                             "elements": [
@@ -258,7 +467,25 @@
                                     "id": "ts_c2_q",
                                     "elType": "widget",
                                     "settings": {
-                                        "editor": "<p style=\"font-family: 'Cormorant Garamond', serif; font-size: 26px; font-style: italic; font-weight: 400; color: #FFFFFF; line-height: 1.5; margin: 0 0 32px 0; opacity: 0.95;\">\"I'm not a spiritual person. I came because my wife asked me to. I don't know how to explain what happened but I'd come back.\"</p><p style=\"font-family: 'Lato', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255, 255, 255, 0.4); margin: 0; display: flex; align-items: center;\"><span style=\"display: inline-block; width: 12px; height: 1px; background-color: rgba(255,255,255,0.2); margin-right: 12px;\"></span> FIRST-TIME GUEST</p>"
+                                        "title": "\"I'm not a spiritual person. I came because my wife asked me to. I don't know how to explain what happened but I'd come back.\"",
+                                        "header_size": "p",
+                                        "title_color": "#FFFFFF",
+                                        "typography_typography": "custom",
+                                        "typography_font_family": "Cormorant Garamond",
+                                        "typography_font_style": "italic",
+                                        "typography_font_size": { "unit": "px", "size": 26 },
+                                        "typography_font_size_mobile": { "unit": "px", "size": 22 },
+                                        "typography_line_height": { "unit": "em", "size": 1.5 },
+                                        "typography_font_weight": "400",
+                                        "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "32", "left": "0", "isLinked": false }
+                                    },
+                                    "widgetType": "heading"
+                                },
+                                {
+                                    "id": "ts_c2_meta",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "editor": "<p style=\"font-family: 'Lato', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255, 255, 255, 0.4); margin: 0; display: flex; align-items: center;\"><span style=\"display: inline-block; width: 12px; height: 1px; background-color: rgba(255,255,255,0.2); margin-right: 12px;\"></span> FIRST-TIME GUEST</p>"
                                     },
                                     "widgetType": "text-editor"
                                 }
@@ -287,6 +514,22 @@
                                     "bottom": "56",
                                     "left": "56",
                                     "isLinked": true
+                                },
+                                "padding_tablet": {
+                                    "unit": "px",
+                                    "top": "40",
+                                    "right": "40",
+                                    "bottom": "40",
+                                    "left": "40",
+                                    "isLinked": true
+                                },
+                                "padding_mobile": {
+                                    "unit": "px",
+                                    "top": "32",
+                                    "right": "24",
+                                    "bottom": "32",
+                                    "left": "24",
+                                    "isLinked": true
                                 }
                             },
                             "elements": [
@@ -294,7 +537,25 @@
                                     "id": "ts_c3_q",
                                     "elType": "widget",
                                     "settings": {
-                                        "editor": "<p style=\"font-family: 'Cormorant Garamond', serif; font-size: 26px; font-style: italic; font-weight: 400; color: #FFFFFF; line-height: 1.5; margin: 0 0 32px 0; opacity: 0.95;\">\"I've been in therapy for four years and this reached somewhere therapy hasn't. I don't say that lightly.\"</p><p style=\"font-family: 'Lato', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255, 255, 255, 0.4); margin: 0; display: flex; align-items: center;\"><span style=\"display: inline-block; width: 12px; height: 1px; background-color: rgba(255,255,255,0.2); margin-right: 12px;\"></span> REGULAR ATTENDEE</p>"
+                                        "title": "\"I've been in therapy for four years and this reached somewhere therapy hasn't. I don't say that lightly.\"",
+                                        "header_size": "p",
+                                        "title_color": "#FFFFFF",
+                                        "typography_typography": "custom",
+                                        "typography_font_family": "Cormorant Garamond",
+                                        "typography_font_style": "italic",
+                                        "typography_font_size": { "unit": "px", "size": 26 },
+                                        "typography_font_size_mobile": { "unit": "px", "size": 22 },
+                                        "typography_line_height": { "unit": "em", "size": 1.5 },
+                                        "typography_font_weight": "400",
+                                        "margin": { "unit": "px", "top": "0", "right": "0", "bottom": "32", "left": "0", "isLinked": false }
+                                    },
+                                    "widgetType": "heading"
+                                },
+                                {
+                                    "id": "ts_c3_meta",
+                                    "elType": "widget",
+                                    "settings": {
+                                        "editor": "<p style=\"font-family: 'Lato', sans-serif; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: rgba(255, 255, 255, 0.4); margin: 0; display: flex; align-items: center;\"><span style=\"display: inline-block; width: 12px; height: 1px; background-color: rgba(255,255,255,0.2); margin-right: 12px;\"></span> REGULAR ATTENDEE</p>"
                                     },
                                     "widgetType": "text-editor"
                                 }

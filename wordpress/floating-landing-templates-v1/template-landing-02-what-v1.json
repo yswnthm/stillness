@@ -1,0 +1,35 @@
+{
+  "content": [
+    {
+      "id": "lp_f2025_what",
+      "elType": "container",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#0E1B30",
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_f2025_html_what",
+          "elType": "widget",
+          "settings": {
+            "html": "<section id=\"what\">\n  <div class=\"what-wrap\">\n    <div class=\"what-text\">\n      <h2>This isn't a wellness class.<br><em>It's a return.</em></h2>\n      <p>Imagine lying on open water as the sun sets over Vancouver. The city softens. Your body lets go. And then — sound. Crystal bowls. Frequencies that move through the water, through the mat, through you.</p>\n      <p>You don't need to do anything. You don't need to try. You just need to arrive, lie down, and let the water and sound do what they've always known how to do.</p>\n      <p>Last summer, 200 people floated with us. This summer, we're opening the water to more — without changing what makes it work. Each session stays small, held, intimate by design.</p>\n    </div>\n    <img class=\"facilitator-img\" src=\"\" alt=\"Komal holding space poolside during a floating sound bath\">\n  </div>\n</section>\n\n<style>\n:root {\n  --stone:#0E1B30;--midnight:#1D3152;--seafoam:#688F9D;\n  --wave:#A4B2BA;--breeze:#D9E8EB;--sand:#C4BBB4;--cream:#F7F0EC;\n}\n\n#what {\n  background: var(--stone) !important;\n  padding: 9rem 4rem !important;\n}\n\n.what-wrap {\n  max-width: 1100px !important;\n  margin: 0 auto !important;\n  display: grid !important;\n  grid-template-columns: 1fr 1fr !important;\n  gap: 7rem !important;\n  align-items: center !important;\n}\n\n.what-text h2 {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: clamp(2rem, 4vw, 3.4rem) !important;\n  font-weight: 300 !important;\n  line-height: 1.15 !important;\n  color: var(--cream) !important;\n  margin-bottom: 2rem !important;\n}\n\n.what-text h2 em {\n  font-style: italic !important;\n  color: var(--wave) !important;\n}\n\n.what-text p {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.95rem !important;\n  line-height: 1.9 !important;\n  color: var(--wave) !important;\n  margin-bottom: 1.4rem !important;\n}\n\n.facilitator-img {\n  width: 100% !important;\n  aspect-ratio: 3/4 !important;\n  object-fit: cover !important;\n  object-position: center top !important;\n  filter: brightness(0.9) !important;\n}\n\n@media (max-width: 768px) {\n  #what { padding: 5rem 1.5rem !important; }\n  .what-wrap {\n    grid-template-columns: 1fr !important;\n    gap: 3rem !important;\n  }\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Floating Sound — 02 What",
+  "type": "section"
+}

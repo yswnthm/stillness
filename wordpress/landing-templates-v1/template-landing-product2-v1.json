@@ -1,0 +1,48 @@
+{
+  "content": [
+    {
+      "id": "lp_pf2_section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#F2E8E0",
+        "padding": {
+          "unit": "px",
+          "top": "128",
+          "right": "40",
+          "bottom": "128",
+          "left": "40",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_pf2_inner",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1140
+            }
+          },
+          "elements": [
+            {
+              "id": "lp_pf2_html",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class='lp-pf2-grid' id='lp-in-this-little-life'><div class='lp-pf2-content'><div class='lp-pf2-eyebrow'>For families · Ages 5–11</div><h2 class='lp-pf2-name'>In This<br><em>Little Life.</em></h2><div class='lp-pf2-sub'>Gentle words for big feelings.</div><p class='lp-pf2-desc'>A deck of 40 gentle, soul-stirring questions designed to travel from your child's hands into your heart and back again. Each card invites your child to ask you something meaningful — and the answer you give becomes part of how they understand themselves. More than conversation. It's connection.</p><div class='lp-pf2-age'><div class='lp-pf2-age-text'>The things a parent says to a child between <strong>5 and 11</strong> become part of their inner voice. This deck creates the moment for you to say the ones that matter.</div></div><div class='lp-pf2-specs'><div class='lp-pf2-spec'><span class='lp-pf2-spec-k'>Includes</span><span class='lp-pf2-spec-v'>40 question cards</span></div><div class='lp-pf2-spec'><span class='lp-pf2-spec-k'>Card size</span><span class='lp-pf2-spec-v'>3.5 × 3.5 inches</span></div><div class='lp-pf2-spec'><span class='lp-pf2-spec-k'>Finish</span><span class='lp-pf2-spec-v'>Matte soft-touch coating</span></div><div class='lp-pf2-spec'><span class='lp-pf2-spec-k'>Packaging</span><span class='lp-pf2-spec-v'>Rigid tuck box</span></div><div class='lp-pf2-spec'><span class='lp-pf2-spec-k'>Ages</span><span class='lp-pf2-spec-v'>5–11</span></div><div class='lp-pf2-spec'><span class='lp-pf2-spec-k'>Ships from</span><span class='lp-pf2-spec-v'>Vancouver, BC · 3–5 days</span></div></div><div class='lp-pf2-atc-row'><div class='lp-qty2-wrap'><button class='lp-qty2-btn' onclick='lpChangeQty2(\"lpqty2\",-1)'>−</button><input class='lp-qty2-input' type='number' id='lpqty2' value='1' min='1' max='99'><button class='lp-qty2-btn' onclick='lpChangeQty2(\"lpqty2\",1)'>+</button></div><button class='lp-btn-atc2 lp-atc-light' onclick='lpAddToCart2(this)'>Add to Cart — $35 CAD</button></div><div class='lp-pf2-atc-note'>Secure checkout · Ships from Vancouver · Canada &amp; US</div></div><div class='lp-pf2-visual'><div class='lp-pf2-img'><img src='https://images.unsplash.com/photo-1511895426328-dc8714191011?q=80&w=900&auto=format&fit=crop' alt='In This Little Life card deck'></div><div class='lp-pf2-price-tag'><div class='lp-pft2-price'>$35</div><div class='lp-pft2-note'>CAD · Physical Deck</div></div></div></div><style>*,*::before,*::after{box-sizing:border-box}.lp-pf2-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}.lp-pf2-visual{position:relative}.lp-pf2-img{width:100%;aspect-ratio:3/4;overflow:hidden;border-radius:3px}.lp-pf2-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 7s ease}.lp-pf2-img:hover img{transform:scale(1.04)}.lp-pf2-price-tag{position:absolute;bottom:-1.2rem;right:-1.2rem;padding:1.2rem 1.5rem;border-radius:3px;text-align:center;background:#0E1B30}.lp-pft2-price{font-family:'Cormorant Garamond',serif !important;font-size:2rem;font-weight:300;line-height:1;color:#F7F0EC}.lp-pft2-note{font-family:'Lato',sans-serif !important;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:#7a8f99;margin-top:0.2rem}.lp-pf2-eyebrow{font-family:'Lato',sans-serif !important;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:#688F9D;margin-bottom:1.2rem;display:flex;align-items:center;gap:0.8rem}.lp-pf2-eyebrow::before{content:'';width:2rem;height:1px;background:#688F9D;display:block}.lp-pf2-name{font-family:'Cormorant Garamond',serif !important;font-size:clamp(2.8rem,4.5vw,4.2rem);font-weight:300;line-height:1.04;margin-bottom:0.5rem;color:#0E1B30}.lp-pf2-name em{font-style:italic;color:#688F9D}.lp-pf2-sub{font-family:'Cormorant Garamond',serif !important;font-size:1.05rem;font-style:italic;margin-bottom:1.8rem;color:#7a8f99}.lp-pf2-desc{font-family:'Lato',sans-serif !important;font-size:0.95rem;line-height:1.9;margin-bottom:2rem;color:#2a3d55}.lp-pf2-age{padding:1rem 1.3rem;border-left:2px solid #688F9D;margin-bottom:2rem;background:rgba(104,143,157,0.06)}.lp-pf2-age-text{font-family:'Cormorant Garamond',serif !important;font-size:0.95rem;font-style:italic;font-weight:300;line-height:1.55;color:#2a3d55}.lp-pf2-age-text strong{font-style:normal;font-weight:300;color:#688F9D}.lp-pf2-specs{display:flex;flex-direction:column;gap:0;margin-bottom:2.2rem}.lp-pf2-spec{display:flex;justify-content:space-between;align-items:baseline;padding:0.75rem 0;border-bottom:1px solid rgba(14,27,48,0.08)}.lp-pf2-spec:last-child{border-bottom:none}.lp-pf2-spec-k{font-family:'Lato',sans-serif !important;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:#7a8f99}.lp-pf2-spec-v{font-family:'Lato',sans-serif !important;font-size:0.88rem;text-align:right;color:#2a3d55}.lp-pf2-atc-row{display:flex;gap:0.8rem;align-items:stretch}.lp-qty2-wrap{display:flex;align-items:center;border-radius:2px;overflow:hidden;border:1px solid rgba(104,143,157,0.28);background:#FFFFFF}.lp-qty2-btn{width:36px;height:100%;background:none;border:none;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s;color:#7a8f99}.lp-qty2-btn:hover{background:#D9E8EB;color:#0E1B30}.lp-qty2-input{width:44px;text-align:center;border:none;background:transparent;font-family:'Cormorant Garamond',serif !important;font-size:1.15rem;-moz-appearance:textfield;padding:0;color:#0E1B30}.lp-qty2-input::-webkit-inner-spin-button,.lp-qty2-input::-webkit-outer-spin-button{-webkit-appearance:none}.lp-btn-atc2{flex:1;padding:1.05rem 1.6rem;border:none;border-radius:2px;cursor:pointer;font-family:'Lato',sans-serif !important;font-size:0.7rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;transition:background 0.3s,transform 0.2s;display:flex;align-items:center;justify-content:center}.lp-atc-light{background:#1D3152;color:#FFFFFF}.lp-atc-light:hover{background:#688F9D;transform:translateY(-1px)}.lp-btn-atc2.lp-added2{background:#688F9D !important;color:#FFFFFF !important}.lp-pf2-atc-note{font-family:'Lato',sans-serif !important;font-size:0.72rem;margin-top:0.7rem;text-align:center;color:#7a8f99}@media(max-width:960px){.lp-pf2-grid{grid-template-columns:1fr;gap:3rem}.lp-pf2-visual{order:-1}.lp-pf2-price-tag{bottom:-1rem;right:1rem}}</style><script>function lpChangeQty2(id,d){var i=document.getElementById(id);i.value=Math.max(1,(parseInt(i.value)||1)+d);}function lpAddToCart2(btn){var o=btn.innerHTML;btn.classList.add('lp-added2');btn.innerHTML='✓ Added';setTimeout(function(){btn.classList.remove('lp-added2');btn.innerHTML=o;},2500);}</script>"
+              },
+              "widgetType": "html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Landing — Product Feature 2 (In This Little Life Warm) V1",
+  "type": "section"
+}

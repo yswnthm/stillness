@@ -18,6 +18,22 @@
                     "left": "40",
                     "isLinked": false
                 },
+                "padding_mobile": {
+                    "unit": "px",
+                    "top": "24",
+                    "right": "20",
+                    "bottom": "48",
+                    "left": "20",
+                    "isLinked": false
+                },
+                "padding_tablet": {
+                    "unit": "px",
+                    "top": "32",
+                    "right": "30",
+                    "bottom": "48",
+                    "left": "30",
+                    "isLinked": false
+                },
                 "css_classes": "stillness-editorial-main-section"
             },
             "elements": [
@@ -31,12 +47,24 @@
                             "size": 1240
                         },
                         "flex_direction": "row",
+                        "flex_direction_tablet": "column",
+                        "flex_direction_mobile": "column",
                         "flex_wrap": "nowrap",
                         "flex_gap": {
                             "unit": "px",
                             "size": 60
                         },
+                        "flex_gap_mobile": {
+                            "unit": "px",
+                            "size": 28
+                        },
+                        "flex_gap_tablet": {
+                            "unit": "px",
+                            "size": 36
+                        },
                         "flex_align_items": "flex-start",
+                        "flex_align_items_tablet": "center",
+                        "flex_align_items_mobile": "flex-start",
                         "css_classes": "editorial-product-grid"
                     },
                     "elements": [
@@ -47,6 +75,14 @@
                                 "width": {
                                     "unit": "%",
                                     "size": 60
+                                },
+                                "width_tablet": {
+                                    "unit": "%",
+                                    "size": 100
+                                },
+                                "width_mobile": {
+                                    "unit": "%",
+                                    "size": 100
                                 },
                                 "css_classes": "editorial-gallery-col"
                             },
@@ -83,6 +119,14 @@
                                 "width": {
                                     "unit": "%",
                                     "size": 38
+                                },
+                                "width_tablet": {
+                                    "unit": "%",
+                                    "size": 100
+                                },
+                                "width_mobile": {
+                                    "unit": "%",
+                                    "size": 100
                                 },
                                 "css_classes": "editorial-details-col"
                             },
@@ -125,9 +169,9 @@
                                     "id": "editorial-main-styles-widget",
                                     "elType": "widget",
                                     "settings": {
-                                        "html": "<style>\n.editorial-product-grid {\n    display: flex !important;\n    flex-direction: row !important;\n    flex-wrap: nowrap !important;\n    gap: 60px !important;\n    align-items: flex-start !important;\n}\n\n@media (max-width: 1024px) {\n    .editorial-product-grid {\n        flex-direction: column !important;\n        gap: 40px !important;\n        text-align: center !important;\n        align-items: center !important;\n    }\n    .editorial-gallery-col, .editorial-details-col {\n        width: 100% !important;\n        max-width: 100% !important;\n    }\n}\n\n.editorial-gallery-col .woocommerce-product-gallery {\n    width: 100% !important;\n    aspect-ratio: 0.82 !important;\n    border-radius: 4px !important;\n    overflow: hidden !important;\n    background: transparent !important;\n    margin: 0 !important;\n    padding: 0 !important;\n}\n\n.editorial-gallery-col .woocommerce-product-gallery img {\n    width: 100% !important;\n    height: 100% !important;\n    object-fit: cover !important;\n}\n\n/* RESET ELEMENTOR WIDGET MARGINS */\n.editorial-details-col .elementor-widget {\n    margin-bottom: 0 !important;\n}\n\n.editorial-details-col .elementor-widget-theme-post-title h1 {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 48px !important;\n    line-height: 1.05 !important;\n    color: #0E1B30 !important;\n    font-weight: 400 !important;\n    margin: 0 0 12px !important;\n}\n\n.editorial-details-col .woocommerce-product-price .price {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 26px !important;\n    color: #688F9D !important;\n    font-style: italic !important;\n    margin: 0 0 20px !important;\n    display: block !important;\n}\n\n.editorial-details-col .woocommerce-product-details__short-description {\n    font-family: 'Lato', sans-serif !important;\n    font-weight: 300 !important;\n    font-size: 17px !important;\n    line-height: 1.6 !important;\n    color: rgba(14, 27, 48, 0.7) !important;\n    margin: 0 0 28px !important;\n}\n\n.editorial-details-col form.cart {\n    display: flex !important;\n    align-items: center !important;\n    gap: 16px !important;\n    margin: 0 !important;\n}\n\n.editorial-details-col .quantity {\n    background: #F9F9F9 !important;\n    border: 1px solid #E5E5E5 !important;\n    border-radius: 100px !important;\n    height: 50px !important;\n    display: inline-flex !important;\n    align-items: center !important;\n    padding: 0 16px !important;\n}\n\n.editorial-details-col button.single_add_to_cart_button {\n    background: #688F9D !important;\n    color: #FFFFFF !important;\n    padding: 0 32px !important;\n    height: 50px !important;\n    border-radius: 100px !important;\n    font-family: 'Lato', sans-serif !important;\n    font-size: 11px !important;\n    font-weight: 700 !important;\n    letter-spacing: 2px !important;\n    text-transform: uppercase !important;\n    border: none !important;\n}\n\n.editorial-label-wrap {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    margin-bottom: 8px !important;\n    padding-top: 0 !important;\n}\n\n.editorial-line {\n    width: 24px;\n    height: 1px;\n    background: #688F9D;\n    opacity: 0.6;\n}\n\n.editorial-label {\n    font-family: 'Lato', sans-serif;\n    font-size: 11px;\n    font-weight: 700;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    color: #688F9D;\n}\n</style>"
-                                },
-                                "widgetType": "html"
+                                        "html": "<style>\n/* ─── BASE LAYOUT ─── */\n#editorial-product-grid-inner.editorial-product-grid {\n    display: flex !important;\n    flex-direction: row !important;\n    flex-wrap: nowrap !important;\n    gap: 60px !important;\n    align-items: flex-start !important;\n}\n\n.editorial-gallery-col .woocommerce-product-gallery {\n    width: 100% !important;\n    background: transparent !important;\n    margin: 0 !important;\n    padding: 0 !important;\n    overflow: visible !important;\n}\n\n/* Kill zoom trigger */\n.editorial-gallery-col .woocommerce-product-gallery__trigger {\n    display: none !important;\n    position: absolute !important;\n    width: 0 !important;\n    height: 0 !important;\n}\n\n/* ─── MAIN SLIDER VIEWPORT ─── */\n/* No aspect-ratio here — FlexSlider JS controls height, don't override */\n.editorial-gallery-col .flex-viewport {\n    width: 100% !important;\n    margin: 0 !important;\n    padding: 0 !important;\n    border-radius: 4px !important;\n    overflow: hidden !important;\n    display: block !important;\n}\n\n/* Kill all internal slider margins */\n.editorial-gallery-col .woocommerce-product-gallery .woocommerce-product-gallery__wrapper {\n    margin: 0 !important;\n    padding: 0 !important;\n}\n\n.editorial-gallery-col .woocommerce-product-gallery .woocommerce-product-gallery__wrapper li {\n    margin: 0 !important;\n    padding: 0 !important;\n}\n\n.editorial-gallery-col .woocommerce-product-gallery .woocommerce-product-gallery__wrapper img {\n    width: 100% !important;\n    height: auto !important;\n    display: block !important;\n    object-fit: cover !important;\n}\n\n/* ─── THUMBNAIL STRIP ─── */\n/* margin-top: 10px gives the only gap needed */\n.editorial-gallery-col .woocommerce-product-gallery .flex-control-nav {\n    margin: 10px 0 0 !important;\n    padding: 0 !important;\n    width: 100% !important;\n    display: block !important;\n}\n\n.editorial-gallery-col .woocommerce-product-gallery .flex-control-thumbs {\n    display: flex !important;\n    flex-wrap: wrap !important;\n    gap: 6px !important;\n    margin: 0 !important;\n    padding: 0 !important;\n    list-style: none !important;\n    width: 100% !important;\n}\n\n.editorial-gallery-col .woocommerce-product-gallery .flex-control-thumbs li {\n    flex: 0 0 calc(20% - 5px) !important;\n    margin: 0 !important;\n    min-width: 0 !important;\n}\n\n.editorial-gallery-col .woocommerce-product-gallery .flex-control-thumbs li img {\n    width: 100% !important;\n    height: auto !important;\n    aspect-ratio: 1 !important;\n    object-fit: cover !important;\n    border-radius: 3px !important;\n    cursor: pointer !important;\n    opacity: 0.6 !important;\n    transition: opacity 0.2s ease !important;\n    border: 1.5px solid transparent !important;\n    display: block !important;\n}\n\n.editorial-gallery-col .woocommerce-product-gallery .flex-control-thumbs li img.flex-active,\n.editorial-gallery-col .woocommerce-product-gallery .flex-control-thumbs li img:hover {\n    opacity: 1 !important;\n    border-color: #688F9D !important;\n}\n\n/* ─── RESET ELEMENTOR WIDGET MARGINS ─── */\n.editorial-details-col .elementor-widget {\n    margin-bottom: 0 !important;\n}\n\n/* ─── TITLE ─── */\n.editorial-details-col .elementor-widget-theme-post-title h1 {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 48px !important;\n    line-height: 1.05 !important;\n    color: #0E1B30 !important;\n    font-weight: 400 !important;\n    margin: 0 0 12px !important;\n}\n\n/* ─── PRICE ─── */\n.editorial-details-col .woocommerce-product-price .price {\n    font-family: 'Cormorant Garamond', serif !important;\n    font-size: 26px !important;\n    color: #688F9D !important;\n    font-style: italic !important;\n    margin: 0 0 20px !important;\n    display: block !important;\n}\n\n/* ─── SHORT DESCRIPTION ─── */\n.editorial-details-col .woocommerce-product-details__short-description {\n    font-family: 'Lato', sans-serif !important;\n    font-weight: 300 !important;\n    font-size: 17px !important;\n    line-height: 1.65 !important;\n    color: rgba(14, 27, 48, 0.7) !important;\n    margin: 0 0 28px !important;\n}\n\n/* ─── CART ROW ─── */\n.editorial-details-col form.cart {\n    display: flex !important;\n    align-items: center !important;\n    gap: 16px !important;\n    margin: 0 !important;\n    flex-wrap: wrap !important;\n}\n\n.editorial-details-col .quantity {\n    background: #F9F9F9 !important;\n    border: 1px solid #E5E5E5 !important;\n    border-radius: 100px !important;\n    height: 50px !important;\n    display: inline-flex !important;\n    align-items: center !important;\n    padding: 0 16px !important;\n}\n\n.editorial-details-col button.single_add_to_cart_button {\n    background: #688F9D !important;\n    color: #FFFFFF !important;\n    padding: 0 32px !important;\n    height: 50px !important;\n    border-radius: 100px !important;\n    font-family: 'Lato', sans-serif !important;\n    font-size: 11px !important;\n    font-weight: 700 !important;\n    letter-spacing: 2px !important;\n    text-transform: uppercase !important;\n    border: none !important;\n    cursor: pointer !important;\n    transition: background 0.3s ease, transform 0.2s ease !important;\n}\n\n.editorial-details-col button.single_add_to_cart_button:hover {\n    background: #4f7280 !important;\n    transform: translateY(-1px) !important;\n}\n\n/* ─── LABEL ─── */\n.editorial-label-wrap {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    margin-bottom: 8px !important;\n    padding-top: 0 !important;\n}\n\n.editorial-line {\n    width: 24px;\n    height: 1px;\n    background: #688F9D;\n    opacity: 0.6;\n}\n\n.editorial-label {\n    font-family: 'Lato', sans-serif;\n    font-size: 11px;\n    font-weight: 700;\n    text-transform: uppercase;\n    letter-spacing: 3px;\n    color: #688F9D;\n}\n\n/* ═══════════════════════════════════════\n   LAPTOP  (1025px – 1440px)\n═══════════════════════════════════════ */\n@media (min-width: 1025px) and (max-width: 1440px) {\n    #editorial-product-grid-inner.editorial-product-grid {\n        gap: 48px !important;\n    }\n    .editorial-details-col .elementor-widget-theme-post-title h1 {\n        font-size: 40px !important;\n    }\n    .editorial-details-col .woocommerce-product-price .price {\n        font-size: 24px !important;\n    }\n    .editorial-details-col .woocommerce-product-details__short-description {\n        font-size: 16px !important;\n    }\n}\n\n/* ═══════════════════════════════════════\n   TABLET  (768px – 1024px)\n═══════════════════════════════════════ */\n@media (max-width: 1024px) {\n    #editorial-product-grid-inner.editorial-product-grid {\n        flex-direction: column !important;\n        gap: 40px !important;\n        align-items: center !important;\n        text-align: left !important;\n        display: flex !important;\n    }\n    #editorial-gallery-col-wrap.editorial-gallery-col,\n    #editorial-details-col-wrap.editorial-details-col {\n        width: 100% !important;\n        max-width: 600px !important;\n        min-width: 100% !important;\n    }\n    .editorial-gallery-col .flex-viewport {\n        max-height: 520px !important;\n        border-radius: 4px !important;\n    }\n    .editorial-details-col .elementor-widget-theme-post-title h1 {\n        font-size: 42px !important;\n    }\n    .editorial-details-col .woocommerce-product-price .price {\n        font-size: 24px !important;\n    }\n    .editorial-details-col .woocommerce-product-details__short-description {\n        font-size: 16px !important;\n    }\n    .editorial-details-col button.single_add_to_cart_button {\n        flex: 1 !important;\n    }\n}\n\n/* ═══════════════════════════════════════\n   PHONE  (≤767px)\n═══════════════════════════════════════ */\n@media (max-width: 767px) {\n    .stillness-editorial-main-section {\n        padding: 24px 20px 48px !important;\n    }\n    #editorial-product-grid-inner.editorial-product-grid {\n        flex-direction: column !important;\n        gap: 28px !important;\n        align-items: flex-start !important;\n        text-align: left !important;\n        display: flex !important;\n    }\n    #editorial-gallery-col-wrap.editorial-gallery-col,\n    #editorial-details-col-wrap.editorial-details-col {\n        width: 100% !important;\n        max-width: 100% !important;\n        min-width: 100% !important;\n    }\n    .editorial-gallery-col .flex-viewport {\n        border-radius: 8px !important;\n    }\n    .editorial-details-col .elementor-widget-theme-post-title h1 {\n        font-size: 32px !important;\n        line-height: 1.1 !important;\n        margin: 0 0 8px !important;\n    }\n    .editorial-details-col .woocommerce-product-price .price {\n        font-size: 22px !important;\n        margin: 0 0 16px !important;\n    }\n    .editorial-details-col .woocommerce-product-details__short-description {\n        font-size: 15px !important;\n        line-height: 1.6 !important;\n        margin: 0 0 20px !important;\n    }\n    .editorial-details-col form.cart {\n        flex-direction: row !important;\n        gap: 12px !important;\n    }\n    .editorial-details-col .quantity {\n        height: 46px !important;\n        padding: 0 14px !important;\n        flex-shrink: 0 !important;\n    }\n    .editorial-details-col button.single_add_to_cart_button {\n        height: 46px !important;\n        flex: 1 !important;\n        padding: 0 20px !important;\n        font-size: 10px !important;\n        letter-spacing: 1.5px !important;\n    }\n    .editorial-label {\n        font-size: 10px !important;\n        letter-spacing: 2px !important;\n    }\n}\n</style>"
+                                    },
+                                    "widgetType": "html"
                                 }
                             ]
                         }

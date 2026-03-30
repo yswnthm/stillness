@@ -1,0 +1,23 @@
+{
+  "content": [
+    {
+      "id": "lp_shareit_hero_v1",
+      "elType": "container",
+      "settings": { "content_width": "full" },
+      "elements": [
+        {
+          "id": "html_hero",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class=\"noise-overlay\"></div>\n<section class=\"hero-bg min-h-screen flex flex-col items-center justify-center text-center px-4 relative pt-20 bg-[#FBF9F6] text-stone antialiased font-sans\">\n  <div class=\"max-w-5xl mx-auto z-10 space-y-12\">\n    <h1 class=\"text-6xl md:text-[6.5rem] text-midnightsea font-medium leading-[1.05]\"\n        style=\"font-family: 'Cormorant Garamond', serif;\">\n      Loved It? <span class=\"text-seafoam border-b-2 border-seafoam/30 inline-block pb-2\">Share</span> It.\n    </h1>\n    \n    <div class=\"text-lg md:text-xl text-stone max-w-3xl mx-auto space-y-8 font-light tracking-wide\">\n      <p class=\"text-2xl md:text-[1.8rem] text-stone leading-snug\"\n         style=\"font-family: 'Cormorant Garamond', serif;\">\n        If this little deck made a big difference, it's your turn to share the magic.\n      </p>\n      <p class=\"leading-relaxed opacity-90\"\n         style=\"font-family: 'Lato', sans-serif;\">\n        Whether it brought more calm to your mornings, sparked a beautiful bedtime ritual, or helped your child feel seen—thank you for welcoming this deck into your home.\n      </p>\n      <p class=\"leading-relaxed opacity-90 text-[1.1rem]\"\n         style=\"font-family: 'Lato', sans-serif;\">\n        We believe in the ripple effect of kindness. Pass it on:\n      </p>\n    </div>\n  </div>\n\n  <a href=\"#story\" class=\"absolute bottom-16 w-14 h-14 rounded-full border border-stone/20 text-stone flex items-center justify-center hover:bg-seafoam hover:text-white transition-all bg-white/20 backdrop-blur-sm\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m6 9 6 6 6-6\"/></svg>\n  </a>\n</section>\n\n<script src=\"https://cdn.tailwindcss.com?plugins=typography\"></script>\n<script>\n  tailwind.config = {\n    theme: {\n      extend: {\n        colors: {\n          stone: '#0E1B30',\n          midnightsea: '#1D3152',\n          midnight: '#1D3152',\n          seafoam: '#688F9D',\n          breeze: '#D9E8EB',\n          wave: '#A4B2BA',\n          sand: '#C4BBB4',\n          cream: '#FFFFFF',\n          terracotta: '#C1785D',\n          sage: '#8A9A8A',\n          clay: '#D9C5B2',\n        }\n      }\n    }\n  }\n</script>\n<style>\n  ::-webkit-scrollbar { width: 8px; }\n  ::-webkit-scrollbar-track { background: #F7F0EC; }\n  ::-webkit-scrollbar-thumb { background: #C4BBB4; border-radius: 4px; }\n  ::-webkit-scrollbar-thumb:hover { background: #688F9D; }\n\n  .noise-overlay {\n    position: fixed; top: 0; left: 0; width: 100%; height: 100%;\n    pointer-events: none; opacity: 0.04; z-index: 9999;\n    background-image: url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\");\n  }\n  \n  .hero-bg {\n      background-color: #ECE0D1;\n      background-image: url('https://images.unsplash.com/photo-1607344645866-009c320c62ab?q=80&w=2000&auto=format&fit=crop');\n      background-size: cover;\n      background-position: center;\n      background-blend-mode: overlay;\n  }\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Share It — Hero",
+  "type": "section"
+}

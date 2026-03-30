@@ -1,0 +1,48 @@
+{
+  "content": [
+    {
+      "id": "lp_pf1_section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#0E1B30",
+        "padding": {
+          "unit": "px",
+          "top": "128",
+          "right": "40",
+          "bottom": "128",
+          "left": "40",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_pf1_inner",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1140
+            }
+          },
+          "elements": [
+            {
+              "id": "lp_pf1_html",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class='lp-pf-grid lp-pf-dark' id='lp-mini-moments'><div class='lp-pf-visual'><div class='lp-pf-img'><img src='https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=900&auto=format&fit=crop' alt='Mini Moments affirmation card deck'></div><div class='lp-pf-price-tag'><div class='lp-pft-price'>$35</div><div class='lp-pft-note'>CAD · Physical Deck</div></div></div><div class='lp-pf-content'><div class='lp-pf-eyebrow'>For children · Ages 5–11</div><h2 class='lp-pf-name'>Mini<br><em>Moments.</em></h2><div class='lp-pf-sub'>Little affirmations. Big feelings. One card at a time.</div><p class='lp-pf-desc'>A deck of 40 affirmations and matching action prompts designed to give children a daily language for how they feel — confidence, kindness, joy — in their own hands, in their own time. Not motivational. Not heavy. Just honest, grounded cards a child can hold and actually believe.</p><div class='lp-pf-age'><div class='lp-pf-age-text'>The emotional vocabulary a child builds between <strong>5 and 11</strong> shapes how they navigate feelings for the rest of their life. This is when it matters most to start.</div></div><div class='lp-pf-specs'><div class='lp-pf-spec'><span class='lp-pf-spec-k'>Includes</span><span class='lp-pf-spec-v'>40 cards — affirmation + action prompt</span></div><div class='lp-pf-spec'><span class='lp-pf-spec-k'>Card size</span><span class='lp-pf-spec-v'>3.5 × 5.5 inches</span></div><div class='lp-pf-spec'><span class='lp-pf-spec-k'>Finish</span><span class='lp-pf-spec-v'>Matte soft-touch coating</span></div><div class='lp-pf-spec'><span class='lp-pf-spec-k'>Packaging</span><span class='lp-pf-spec-v'>Rigid tuck box</span></div><div class='lp-pf-spec'><span class='lp-pf-spec-k'>Ages</span><span class='lp-pf-spec-v'>5–11</span></div><div class='lp-pf-spec'><span class='lp-pf-spec-k'>Ships from</span><span class='lp-pf-spec-v'>Vancouver, BC · 3–5 days</span></div></div><div class='lp-pf-atc-row'><div class='lp-qty-wrap'><button class='lp-qty-btn' onclick='lpChangeQty(\"lpqty1\",-1)'>−</button><input class='lp-qty-input' type='number' id='lpqty1' value='1' min='1' max='99'><button class='lp-qty-btn' onclick='lpChangeQty(\"lpqty1\",1)'>+</button></div><button class='lp-btn-atc lp-atc-dark' onclick='lpAddToCart(this)'>Add to Cart — $35 CAD</button></div><div class='lp-pf-atc-note'>Secure checkout · Ships from Vancouver · Canada &amp; US</div></div></div><style>*,*::before,*::after{box-sizing:border-box}.lp-pf-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}.lp-pf-visual{position:relative}.lp-pf-img{width:100%;aspect-ratio:3/4;overflow:hidden;border-radius:3px}.lp-pf-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 7s ease}.lp-pf-img:hover img{transform:scale(1.04)}.lp-pf-price-tag{position:absolute;bottom:-1.2rem;right:-1.2rem;padding:1.2rem 1.5rem;border-radius:3px;text-align:center;background:#F7F0EC}.lp-pft-price{font-family:'Cormorant Garamond',serif !important;font-size:2rem;font-weight:300;line-height:1;color:#0E1B30}.lp-pft-note{font-family:'Lato',sans-serif !important;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:#7a8f99;margin-top:0.2rem}.lp-pf-eyebrow{font-family:'Lato',sans-serif !important;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:#688F9D;margin-bottom:1.2rem;display:flex;align-items:center;gap:0.8rem}.lp-pf-eyebrow::before{content:'';width:2rem;height:1px;background:#688F9D;display:block}.lp-pf-name{font-family:'Cormorant Garamond',serif !important;font-size:clamp(2.8rem,4.5vw,4.2rem);font-weight:300;line-height:1.04;margin-bottom:0.5rem;color:#F7F0EC}.lp-pf-name em{font-style:italic;color:#D9E8EB}.lp-pf-sub{font-family:'Cormorant Garamond',serif !important;font-size:1.05rem;font-style:italic;margin-bottom:1.8rem;color:rgba(217,232,235,0.5)}.lp-pf-desc{font-family:'Lato',sans-serif !important;font-size:0.95rem;line-height:1.9;margin-bottom:2rem;color:rgba(217,232,235,0.62)}.lp-pf-age{padding:1rem 1.3rem;border-left:2px solid #688F9D;margin-bottom:2rem;background:rgba(104,143,157,0.1)}.lp-pf-age-text{font-family:'Cormorant Garamond',serif !important;font-size:0.95rem;font-style:italic;font-weight:300;line-height:1.55;color:rgba(217,232,235,0.75)}.lp-pf-age-text strong{font-style:normal;font-weight:300;color:#D9E8EB}.lp-pf-specs{display:flex;flex-direction:column;gap:0;margin-bottom:2.2rem}.lp-pf-spec{display:flex;justify-content:space-between;align-items:baseline;padding:0.75rem 0;border-bottom:1px solid rgba(104,143,157,0.12)}.lp-pf-spec:last-child{border-bottom:none}.lp-pf-spec-k{font-family:'Lato',sans-serif !important;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:#7a8f99}.lp-pf-spec-v{font-family:'Lato',sans-serif !important;font-size:0.88rem;text-align:right;color:rgba(217,232,235,0.65)}.lp-pf-atc-row{display:flex;gap:0.8rem;align-items:stretch}.lp-qty-wrap{display:flex;align-items:center;border-radius:2px;overflow:hidden;border:1px solid rgba(104,143,157,0.28);background:rgba(14,27,48,0.4)}.lp-qty-btn{width:36px;height:100%;background:none;border:none;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:background 0.2s;color:rgba(217,232,235,0.6)}.lp-qty-btn:hover{background:rgba(104,143,157,0.15);color:#D9E8EB}.lp-qty-input{width:44px;text-align:center;border:none;background:transparent;font-family:'Cormorant Garamond',serif !important;font-size:1.15rem;-moz-appearance:textfield;padding:0;color:#F7F0EC}.lp-qty-input::-webkit-inner-spin-button,.lp-qty-input::-webkit-outer-spin-button{-webkit-appearance:none}.lp-btn-atc{flex:1;padding:1.05rem 1.6rem;border:none;border-radius:2px;cursor:pointer;font-family:'Lato',sans-serif !important;font-size:0.7rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;transition:background 0.3s,transform 0.2s;display:flex;align-items:center;justify-content:center}.lp-atc-dark{background:#F7F0EC;color:#0E1B30}.lp-atc-dark:hover{background:#D9E8EB;transform:translateY(-1px)}.lp-btn-atc.lp-added{background:#688F9D !important;color:#FFFFFF !important}.lp-pf-atc-note{font-family:'Lato',sans-serif !important;font-size:0.72rem;margin-top:0.7rem;text-align:center;color:rgba(217,232,235,0.28)}@media(max-width:960px){.lp-pf-grid{grid-template-columns:1fr;gap:3rem}.lp-pf-price-tag{bottom:-1rem;right:1rem}}</style><script>function lpChangeQty(id,d){var i=document.getElementById(id);i.value=Math.max(1,(parseInt(i.value)||1)+d);}function lpAddToCart(btn){var o=btn.innerHTML;btn.classList.add('lp-added');btn.innerHTML='✓ Added';setTimeout(function(){btn.classList.remove('lp-added');btn.innerHTML=o;},2500);}</script>"
+              },
+              "widgetType": "html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Landing — Product Feature 1 (Mini Moments Dark) V1",
+  "type": "section"
+}

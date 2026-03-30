@@ -1,0 +1,38 @@
+{
+  "content": [
+    {
+      "id": "lp_v2_deck2",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "gap": {
+          "unit": "px",
+          "size": 0,
+          "sizes": []
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_v2_html_deck2",
+          "elType": "widget",
+          "settings": {
+            "html": "<hr class=\"deck-divider\">\n<div class=\"deck-block reverse\">\n  <div class=\"reveal\">\n    <img class=\"deck-img\" src=\"/mnt/user-data/uploads/Product_9.PNG\" alt=\"In This Little Life connection card deck\">\n  </div>\n  <div class=\"deck-text\">\n    <span class=\"deck-tag\">For families · Ages 5–11</span>\n    <div class=\"deck-price\">$35 <span style=\"font-size:1rem;opacity:0.45\">CAD</span></div>\n    <span class=\"deck-price-note\">Physical deck · Ships from Vancouver</span>\n    <h2>In This <em>Little Life.</em></h2>\n    <span class=\"deck-tagline\">Gentle words for big feelings.</span>\n    <p>40 questions your child asks you — and the answer you give becomes part of how they understand themselves. Pull a card in the car, at bedtime, or whenever a moment opens. No ritual required. Just honesty.</p>\n    <div class=\"deck-specs\">\n      <div class=\"spec-item\"><span class=\"spec-label\">Includes</span><span class=\"spec-val\">40 question cards</span></div>\n      <div class=\"spec-item\"><span class=\"spec-label\">Card size</span><span class=\"spec-val\">3.5 × 3.5 inches</span></div>\n      <div class=\"spec-item\"><span class=\"spec-label\">Finish</span><span class=\"spec-val\">Matte soft-touch</span></div>\n      <div class=\"spec-item\"><span class=\"spec-label\">Ships</span><span class=\"spec-val\">Canada & US · 3–5 days</span></div>\n    </div>\n    <a href=\"https://stillnesscuratedretreats.com/?add-to-cart=3189\" class=\"btn-dark\">Add to cart — $35 CAD</a>\n  </div>\n</div>\n<style>\n*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}\n:root{--stone:#0E1B30;--midnight:#1D3152;--seafoam:#688F9D;--wave:#A4B2BA;--breeze:#D9E8EB;--sand:#C4BBB4;--cream:#F7F0EC;--warm:#F2E8DF;}\n/* Force zero spacing on Elementor parent containers */\n.elementor-widget-container, .elementor-widget-html, .elementor-column-wrap, .elementor-widget-wrap { margin: 0 !important; padding: 0 !important; }\n.deck-divider{border:none;border-top:0.5px solid rgba(14,27,48,0.08);max-width:1100px;margin:0 auto}\n.deck-block{display:grid;grid-template-columns:1fr 1fr;align-items:center;max-width:1200px;margin:0 auto;padding:5rem 4rem;gap:6rem;margin:0 !important;}\n.deck-block.reverse{direction:rtl}\n.deck-block.reverse > *{direction:ltr}\n.deck-img{width:100%;object-fit:contain;filter:drop-shadow(0 16px 48px rgba(14,27,48,0.12))}\n.deck-tag{font-family:'Jost',sans-serif !important;display:inline-block;font-size:0.62rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--seafoam);background:rgba(104,143,157,0.1);padding:0.4rem 1rem;margin-bottom:1.25rem}\n.deck-price{font-family:'Cormorant Garamond',serif !important;font-size:2.2rem;font-weight:300;color:var(--stone);margin-bottom:0.2rem}\n.deck-price-note{font-family:'Jost',sans-serif !important;font-size:0.68rem;color:rgba(14,27,48,0.4);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1.25rem;display:block}\n.deck-text h2{font-family:'Cormorant Garamond',serif !important;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:300;color:var(--stone);margin-bottom:0.4rem;line-height:1.1}\n.deck-text h2 em{font-style:italic;color:var(--seafoam)}\n.deck-tagline{font-family:'Cormorant Garamond',serif !important;font-size:1rem;font-style:italic;color:var(--seafoam);margin-bottom:1.25rem;display:block}\n.deck-text p{font-family:'Jost',sans-serif !important;font-size:0.88rem;line-height:1.9;color:rgba(14,27,48,0.65);margin-bottom:1.75rem}\n.deck-specs{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;margin-bottom:1.75rem}\n.spec-item{padding:0.6rem 0.75rem;background:var(--warm);border-left:2px solid var(--breeze)}\n.spec-label{font-family:'Jost',sans-serif !important;font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--seafoam);display:block;margin-bottom:0.15rem}\n.spec-val{font-family:'Jost',sans-serif !important;font-size:0.8rem;color:var(--stone)}\n.btn-dark{font-family:'Jost',sans-serif !important;font-size:0.7rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#F7F0EC !important;background:var(--stone);border:none;padding:1rem 2.2rem;cursor:pointer;transition:all 0.3s;text-decoration:none !important;display:inline-block}\n.btn-dark:link,.btn-dark:visited,.btn-dark:hover,.btn-dark:focus,.btn-dark:active{color:#F7F0EC !important;text-decoration:none !important}\n.btn-dark:hover{background:var(--midnight) !important;transform:translateY(-2px)}\n.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.7s ease,transform 0.7s ease}\n.reveal.visible{opacity:1;transform:translateY(0)}\n@media(max-width:768px){\n.deck-block{grid-template-columns:1fr;direction:ltr;padding:4rem 1.5rem;gap:2.5rem}\n.deck-specs{grid-template-columns:1fr}\n}\n</style>\n<script>\nvar observer=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:0.08});\ndocument.querySelectorAll('.reveal').forEach(function(el){observer.observe(el)});\n</script>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Landing V2 — 06 Product 2 — In This Little Life",
+  "type": "section"
+}

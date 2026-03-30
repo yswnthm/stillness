@@ -1,0 +1,49 @@
+{
+  "content": [
+    {
+      "id": "lp_ages_section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#F7F0EC",
+        "padding": {
+          "unit": "px",
+          "top": "96",
+          "right": "40",
+          "bottom": "96",
+          "left": "40",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_ages_inner",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1140
+            },
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "lp_ages_html",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class='lp-ages-header'><div><div class='lp-section-eyebrow'>The formative years</div><h2 class='lp-ages-headline'>Every year of<br>this window <em>matters.</em></h2></div><div class='lp-ages-body'><p>Each age between 5 and 11 carries its own questions, its own fears, its own emerging sense of self. Hover over the age your child is now — then ask how many of those years are still ahead.</p><p>Both decks work at every age in this range. But they work best when you start.</p></div></div><div class='lp-age-row'><div class='lp-age-cell'><div class='lp-age-num'>5</div><div class='lp-age-label'>Age five</div><div class='lp-age-note'>Just starting to ask<br>who they are</div></div><div class='lp-age-cell'><div class='lp-age-num'>6</div><div class='lp-age-label'>Age six</div><div class='lp-age-note'>Big feelings, small<br>words for them</div></div><div class='lp-age-cell'><div class='lp-age-num'>7</div><div class='lp-age-label'>Age seven</div><div class='lp-age-note'>Noticing how others<br>see them</div></div><div class='lp-age-cell'><div class='lp-age-num'>8</div><div class='lp-age-label'>Age eight</div><div class='lp-age-note'>Building a story<br>about themselves</div></div><div class='lp-age-cell'><div class='lp-age-num'>9</div><div class='lp-age-label'>Age nine</div><div class='lp-age-note'>Comparing, doubting,<br>needing anchoring</div></div><div class='lp-age-cell'><div class='lp-age-num'>10</div><div class='lp-age-label'>Age ten</div><div class='lp-age-note'>Identity forming<br>faster now</div></div><div class='lp-age-cell'><div class='lp-age-num'>11</div><div class='lp-age-label'>Age eleven</div><div class='lp-age-note'>The edge of the<br>window</div></div></div><style>*,*::before,*::after{box-sizing:border-box}.lp-ages-header{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-bottom:5rem}.lp-section-eyebrow{font-family:'Lato',sans-serif !important;font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:#688F9D;margin-bottom:1.4rem;display:flex;align-items:center;gap:0.8rem}.lp-section-eyebrow::before{content:'';width:2rem;height:1px;background:#688F9D;display:block}.lp-ages-headline{font-family:'Cormorant Garamond',serif !important;font-size:clamp(2.2rem,3.5vw,3.2rem);font-weight:300;color:#0E1B30;line-height:1.1}.lp-ages-headline em{font-style:italic;color:#688F9D}.lp-ages-body{font-family:'Lato',sans-serif !important;font-size:0.95rem;line-height:1.9;color:#2a3d55}.lp-ages-body p{margin-bottom:1rem}.lp-ages-body p:last-child{margin-bottom:0}.lp-age-row{display:flex;border-top:1px solid rgba(104,143,157,0.15);border-bottom:1px solid rgba(104,143,157,0.15);overflow:hidden}.lp-age-cell{flex:1;padding:2.5rem 1rem;text-align:center;border-right:1px solid rgba(104,143,157,0.12);transition:background 0.4s;cursor:default}.lp-age-cell:last-child{border-right:none}.lp-age-cell:hover{background:rgba(104,143,157,0.05)}.lp-age-num{font-family:'Cormorant Garamond',serif !important;font-size:3.2rem;font-weight:300;color:#0E1B30;opacity:0.15;line-height:1;margin-bottom:0.5rem;transition:opacity 0.4s}.lp-age-cell:hover .lp-age-num{opacity:0.7}.lp-age-label{font-family:'Lato',sans-serif !important;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:#7a8f99}.lp-age-note{font-family:'Cormorant Garamond',serif !important;font-size:0.85rem;font-style:italic;color:#688F9D;margin-top:0.4rem;opacity:0;transition:opacity 0.4s;line-height:1.4;min-height:2.2rem}.lp-age-cell:hover .lp-age-note{opacity:1}@media(max-width:960px){.lp-ages-header{grid-template-columns:1fr;gap:2rem}.lp-age-row{flex-wrap:wrap}.lp-age-cell{min-width:33%}}@media(max-width:540px){.lp-age-cell{min-width:50%}}</style>"
+              },
+              "widgetType": "html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Landing — Age Numbers Section V1",
+  "type": "section"
+}

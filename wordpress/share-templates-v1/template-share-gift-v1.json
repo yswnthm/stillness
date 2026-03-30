@@ -1,0 +1,23 @@
+{
+  "content": [
+    {
+      "id": "lp_shareit_gift_v1",
+      "elType": "container",
+      "settings": { "content_width": "full" },
+      "elements": [
+        {
+          "id": "html_gift",
+          "elType": "widget",
+          "settings": {
+            "html": "<section id=\"gift\" class=\"py-32 px-6 md:px-12 bg-[#F7F3F0] text-stone antialiased font-sans\">\n  <div class=\"max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center\">\n    <div class=\"space-y-10 text-center md:text-left order-2 md:order-1\">\n      <h2 class=\"text-5xl md:text-6xl text-midnightsea\" style=\"font-family: 'Cormorant Garamond', serif;\">Gift a Deck</h2>\n      \n      <div class=\"flex items-center gap-6 max-w-[280px] mx-auto md:mx-0\">\n        <span class=\"divider-line\"></span>\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"text-stone/40\"><rect x=\"3\" y=\"8\" width=\"18\" height=\"4\" rx=\"1\"/><path d=\"M12 8v13\"/><path d=\"M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7\"/><path d=\"M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5\"/></svg>\n        <span class=\"divider-line\"></span>\n      </div>\n\n      <p class=\"text-xl leading-relaxed text-stone/80 font-light max-w-sm\" style=\"font-family: 'Lato', sans-serif;\">\n        Know a family who'd love this?<br/>\n        Send a deck to someone you love—shipped to you or directly to them, with an optional note.\n      </p>\n      <div class=\"pt-4\">\n        <button class=\"px-12 py-5 bg-stone text-white rounded-xl hover:bg-seafoam transition-all uppercase tracking-[0.25em] text-[0.7rem] font-bold shadow-xl\" style=\"font-family: 'Lato', sans-serif;\">\n          Send a Deck\n        </button>\n      </div>\n    </div>\n    <div class=\"rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/3] order-1 md:order-2\">\n      <img src=\"https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop\" alt=\"The Deck\" class=\"w-full h-full object-cover\" />\n    </div>\n  </div>\n</section>\n\n<script src=\"https://cdn.tailwindcss.com?plugins=typography\"></script>\n<script>\n  tailwind.config = {\n    theme: {\n      extend: {\n        colors: {\n          stone: '#0E1B30',\n          midnightsea: '#1D3152',\n          midnight: '#1D3152',\n          seafoam: '#688F9D',\n          breeze: '#D9E8EB',\n          wave: '#A4B2BA',\n          sand: '#C4BBB4',\n          cream: '#FFFFFF',\n          terracotta: '#C1785D',\n          sage: '#8A9A8A',\n          clay: '#D9C5B2',\n        }\n      }\n    }\n  }\n</script>\n<style>\n  ::-webkit-scrollbar { width: 8px; }\n  ::-webkit-scrollbar-track { background: #F7F0EC; }\n  ::-webkit-scrollbar-thumb { background: #C4BBB4; border-radius: 4px; }\n  ::-webkit-scrollbar-thumb:hover { background: #688F9D; }\n\n  .divider-line {\n    height: 1px;\n    background: rgba(14, 27, 48, 0.15);\n    flex: 1;\n  }\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Share It — Gift a Deck",
+  "type": "section"
+}

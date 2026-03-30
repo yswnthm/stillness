@@ -1,0 +1,35 @@
+{
+  "content": [
+    {
+      "id": "lp_f2025_pillars",
+      "elType": "container",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#0E1B30",
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_f2025_html_pillars",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"xp-section\">\n  <p class=\"section-label\">The experience</p>\n  <h2 class=\"section-title\">What the water<br><em>holds for you</em></h2>\n  <div class=\"pillars\">\n    <div class=\"pillar\">\n      <span class=\"pillar-num\">01</span>\n      <h3>Sound in the body</h3>\n      <p>Crystal bowls and frequencies that don't just enter through the ears — they move through the water, through the mat, into the tissue. You feel it before you think it.</p>\n    </div>\n    <div class=\"pillar\">\n      <span class=\"pillar-num\">02</span>\n      <h3>Water as medicine</h3>\n      <p>Open water changes the nervous system in ways a room cannot. The gentle movement, the open sky — your body knows it's safe to fully let go.</p>\n    </div>\n    <div class=\"pillar\">\n      <span class=\"pillar-num\">03</span>\n      <h3>Small by design</h3>\n      <p>Each session holds 20–25 people. Not because we can't scale — but because the experience only works when everyone is truly held. You will not be lost in a crowd.</p>\n    </div>\n  </div>\n</section>\n\n<style>\n:root {\n  --stone:#0E1B30;--midnight:#1D3152;--seafoam:#688F9D;\n  --wave:#A4B2BA;--breeze:#D9E8EB;--sand:#C4BBB4;--cream:#F7F0EC;\n}\n\n.xp-section {\n  background: rgba(29, 49, 82, 0.3) !important;\n  padding: 8rem 4rem !important;\n  border-top: 0.5px solid rgba(104, 143, 157, 0.15) !important;\n  border-bottom: 0.5px solid rgba(104, 143, 157, 0.15) !important;\n}\n\n.section-label {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.63rem !important;\n  letter-spacing: 0.42em !important;\n  text-transform: uppercase !important;\n  color: var(--seafoam) !important;\n  text-align: center !important;\n  margin-bottom: 1.25rem !important;\n}\n\n.section-title {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: clamp(2rem, 4vw, 3.2rem) !important;\n  font-weight: 300 !important;\n  text-align: center !important;\n  color: var(--cream) !important;\n  margin-bottom: 5rem !important;\n  line-height: 1.2 !important;\n}\n\n.section-title em {\n  font-style: italic !important;\n  color: var(--wave) !important;\n}\n\n.pillars {\n  max-width: 1000px !important;\n  margin: 0 auto !important;\n  display: grid !important;\n  grid-template-columns: repeat(3, 1fr) !important;\n  gap: 3rem !important;\n}\n\n.pillar {\n  text-align: center !important;\n  padding: 2.5rem 1.5rem !important;\n  border: 0.5px solid rgba(104, 143, 157, 0.18) !important;\n  transition: border-color 0.4s ease !important;\n}\n\n.pillar:hover {\n  border-color: rgba(104, 143, 157, 0.45) !important;\n}\n\n.pillar-num {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 2.5rem !important;\n  font-weight: 300 !important;\n  color: rgba(104, 143, 157, 0.3) !important;\n  display: block !important;\n  margin-bottom: 1rem !important;\n}\n\n.pillar h3 {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 1.35rem !important;\n  font-weight: 400 !important;\n  color: var(--cream) !important;\n  margin-bottom: 1rem !important;\n}\n\n.pillar p {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.86rem !important;\n  line-height: 1.9 !important;\n  color: var(--wave) !important;\n}\n\n@media (max-width: 768px) {\n  .xp-section { padding: 5rem 1.5rem !important; }\n  .pillars {\n    grid-template-columns: 1fr !important;\n    gap: 1.5rem !important;\n  }\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Floating Sound — 04 Pillars",
+  "type": "section"
+}

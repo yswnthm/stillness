@@ -1,0 +1,23 @@
+{
+  "content": [
+    {
+      "id": "lp_shareit_friend_v1",
+      "elType": "container",
+      "settings": { "content_width": "full" },
+      "elements": [
+        {
+          "id": "html_friend",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"py-40 px-6 relative overflow-hidden bg-white text-stone antialiased font-sans\">\n    <div class=\"absolute inset-0 dot-pattern\"></div>\n    <div class=\"max-w-4xl mx-auto text-center relative z-10 space-y-12\">\n        <h2 class=\"text-5xl md:text-6xl text-midnightsea\" style=\"font-family: 'Cormorant Garamond', serif;\">Share with a Friend</h2>\n        \n        <div class=\"flex items-center gap-6 max-w-[280px] mx-auto\">\n            <span class=\"divider-line\"></span>\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"text-stone/40\"><rect x=\"3\" y=\"8\" width=\"18\" height=\"4\" rx=\"1\"/><path d=\"M12 8v13\"/><path d=\"M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7\"/><path d=\"M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5\"/></svg>\n            <span class=\"divider-line\"></span>\n        </div>\n\n        <p class=\"text-xl leading-relaxed text-stone/80 font-light max-w-2xl mx-auto\" style=\"font-family: 'Lato', sans-serif;\">\n            Sometimes the best gifts are the ones we tell our friends about.\n            Copy the link below or tap to share it via text, email, or social.\n        </p>\n\n        <div class=\"flex flex-col sm:flex-row justify-center gap-6 pt-8\">\n          <button onclick=\"navigator.clipboard.writeText('https://stillnesscuratedretreats.com'); const old = this.innerText; this.innerText = 'Copied!'; setTimeout(() => this.innerText = old, 2000);\" class=\"px-14 py-5 bg-white border border-stone text-stone hover:bg-stone hover:text-white transition-all uppercase tracking-[0.25em] text-[0.7rem] font-bold shadow-xl rounded-xl\" style=\"font-family: 'Lato', sans-serif;\">\n            Copy Link\n          </button>\n          <button onclick=\"window.location.href='mailto:?subject=Found%20something%20beautiful&body=Hey,%20I%20came%20across%20this%20deck%20from%20Stillness%20and%20thought%20of%20you.%20They%20are%20tools%20for%20nervous%20system%20regulation%20and%20connection.%20Take%20a%20look:%20https://stillnesscuratedretreats.com';\" class=\"px-14 py-5 bg-white border border-stone text-stone hover:bg-stone hover:text-white transition-all uppercase tracking-[0.25em] text-[0.7rem] font-bold shadow-xl rounded-xl\" style=\"font-family: 'Lato', sans-serif;\">\n            Share Via Email\n          </button>\n        </div>\n    </div>\n</section>\n\n<script src=\"https://cdn.tailwindcss.com?plugins=typography\"></script>\n<script>\n  tailwind.config = {\n    theme: {\n      extend: {\n        colors: {\n          stone: '#0E1B30',\n          midnightsea: '#1D3152',\n          midnight: '#1D3152',\n          seafoam: '#688F9D',\n          breeze: '#D9E8EB',\n          wave: '#A4B2BA',\n          sand: '#C4BBB4',\n          cream: '#FFFFFF',\n          terracotta: '#C1785D',\n          sage: '#8A9A8A',\n          clay: '#D9C5B2',\n        }\n      }\n    }\n  }\n</script>\n<style>\n  ::-webkit-scrollbar { width: 8px; }\n  ::-webkit-scrollbar-track { background: #F7F0EC; }\n  ::-webkit-scrollbar-thumb { background: #C4BBB4; border-radius: 4px; }\n  ::-webkit-scrollbar-thumb:hover { background: #688F9D; }\n\n  .dot-pattern {\n    background-image: radial-gradient(#0E1B30 0.5px, transparent 0.5px);\n    background-size: 24px 24px;\n    opacity: 0.05;\n  }\n\n  .divider-line {\n    height: 1px;\n    background: rgba(14, 27, 48, 0.15);\n    flex: 1;\n  }\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Share It — Share with a Friend",
+  "type": "section"
+}

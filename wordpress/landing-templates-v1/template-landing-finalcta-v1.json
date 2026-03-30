@@ -1,0 +1,35 @@
+{
+  "content": [
+    {
+      "id": "lp_final_section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#0E1B30",
+        "padding": {
+          "unit": "px",
+          "top": "128",
+          "right": "40",
+          "bottom": "128",
+          "left": "40",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_final_html",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class='lp-final-wrap' id='lp-products'><div class='lp-final-eyebrow'>Begin here</div><h2 class='lp-final-title'>One card.<br>One <em>morning.</em><br>This age, right now.</h2><p class='lp-final-body'>You don't need to overhaul anything. Just one card and a child in front of you.</p><p class='lp-final-age-line'>They're <strong>exactly this age</strong> once.<br>This is the season for it.</p><div class='lp-final-products'><div class='lp-final-card'><div class='lp-final-card-tag'>For children · Ages 5–11</div><div class='lp-final-card-name'>Mini Moments.</div><div class='lp-final-card-price'>$35 CAD · 40 affirmation cards</div><button class='lp-btn-final' onclick='lpFinalCart(this)'>Add to Cart</button></div><div class='lp-final-card'><div class='lp-final-card-tag'>For families · Ages 5–11</div><div class='lp-final-card-name'>In This Little Life.</div><div class='lp-final-card-price'>$35 CAD · 40 question cards</div><button class='lp-btn-final' onclick='lpFinalCart(this)'>Add to Cart</button></div></div><div class='lp-final-shipping'>Ships from Vancouver, BC · Canada &amp; US · 3–5 business days</div></div><style>*,*::before,*::after{box-sizing:border-box}.lp-final-wrap{text-align:center;position:relative;overflow:hidden}.lp-final-wrap::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(104,143,157,0.08) 0%,transparent 65%);pointer-events:none}.lp-final-eyebrow{font-family:'Lato',sans-serif !important;font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:#688F9D;margin-bottom:2rem;display:flex;align-items:center;justify-content:center;gap:0.8rem;position:relative}.lp-final-eyebrow::before,.lp-final-eyebrow::after{content:'';width:2rem;height:1px;background:#688F9D;display:block}.lp-final-title{font-family:'Cormorant Garamond',serif !important;font-size:clamp(2.5rem,5vw,4.8rem);font-weight:300;color:#F7F0EC;line-height:1.06;margin-bottom:1.8rem;position:relative}.lp-final-title em{font-style:italic;color:#D9E8EB}.lp-final-body{font-family:'Lato',sans-serif !important;font-size:1rem;line-height:1.88;color:rgba(217,232,235,0.5);max-width:440px;margin:0 auto 1rem;position:relative}.lp-final-age-line{font-family:'Cormorant Garamond',serif !important;font-size:1.25rem;font-style:italic;font-weight:300;color:rgba(217,232,235,0.5);max-width:440px;margin:0 auto 3.5rem;line-height:1.5;position:relative}.lp-final-age-line strong{font-style:normal;color:#688F9D;font-weight:300}.lp-final-products{max-width:760px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;position:relative}.lp-final-card{background:rgba(29,49,82,0.5);border:1px solid rgba(104,143,157,0.18);border-radius:3px;padding:2rem;text-align:left;transition:border-color 0.3s}.lp-final-card:hover{border-color:rgba(104,143,157,0.38)}.lp-final-card-tag{font-family:'Lato',sans-serif !important;font-size:0.56rem;letter-spacing:0.2em;text-transform:uppercase;color:#688F9D;margin-bottom:0.6rem}.lp-final-card-name{font-family:'Cormorant Garamond',serif !important;font-size:1.4rem;font-style:italic;font-weight:300;color:#F7F0EC;margin-bottom:0.4rem}.lp-final-card-price{font-family:'Lato',sans-serif !important;font-size:0.8rem;color:#7a8f99;margin-bottom:1.4rem}.lp-btn-final{width:100%;padding:0.9rem;background:#F7F0EC;color:#0E1B30;border:none;border-radius:2px;cursor:pointer;font-family:'Lato',sans-serif !important;font-size:0.65rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;transition:background 0.3s}.lp-btn-final:hover{background:#D9E8EB}.lp-btn-final.lp-final-added{background:#688F9D !important;color:#FFFFFF !important}.lp-final-shipping{font-family:'Lato',sans-serif !important;font-size:0.72rem;letter-spacing:0.1em;color:rgba(217,232,235,0.2);margin-top:2rem;position:relative}@media(max-width:960px){.lp-final-products{grid-template-columns:1fr;max-width:380px}}</style><script>function lpFinalCart(btn){var o=btn.innerHTML;btn.classList.add('lp-final-added');btn.innerHTML='✓ Added';setTimeout(function(){btn.classList.remove('lp-final-added');btn.innerHTML=o;},2500);}</script>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Landing — Final CTA Section V1",
+  "type": "section"
+}

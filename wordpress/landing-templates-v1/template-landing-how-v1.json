@@ -1,0 +1,49 @@
+{
+  "content": [
+    {
+      "id": "lp_how_section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "padding": {
+          "unit": "px",
+          "top": "112",
+          "right": "40",
+          "bottom": "112",
+          "left": "40",
+          "isLinked": false
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_how_inner",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1140
+            },
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "lp_how_html",
+              "elType": "widget",
+              "settings": {
+                "html": "<div class='lp-how-header'><div class='lp-how-eyebrow'>How to use them</div><h2 class='lp-how-title'>Simple enough to <em>actually do.</em></h2></div><div class='lp-how-grid'><div class='lp-how-col'><div class='lp-how-product-label'>Mini Moments</div><div class='lp-how-item'><div class='lp-how-item-title'>One card at breakfast</div><div class='lp-how-item-text'>Before phones, before school talk. Read it together or let your child read it alone. That's the whole practice.</div></div><div class='lp-how-item'><div class='lp-how-item-title'>As a bedtime ritual</div><div class='lp-how-item-text'>Pull a card at the end of the day. Ask if it felt true. Ask if there was a moment when it was hard to believe.</div></div><div class='lp-how-item'><div class='lp-how-item-title'>Let your child lead</div><div class='lp-how-item-text'>Some children want to choose their own card each morning. Let them. The act of choosing is part of it.</div></div><div class='lp-how-item'><div class='lp-how-item-title'>For the hard days</div><div class='lp-how-item-text'>Keep a few visible. When a child is in a big feeling and can't find the words, sometimes the right card does it for them.</div></div></div><div class='lp-how-col'><div class='lp-how-product-label'>In This Little Life</div><div class='lp-how-item'><div class='lp-how-item-title'>In the car</div><div class='lp-how-item-text'>One of the best conversation environments. Nobody has to make eye contact. Pull a card before you leave.</div></div><div class='lp-how-item'><div class='lp-how-item-title'>After lights are low</div><div class='lp-how-item-text'>When a child is in that soft, open state just before sleep. This is when the real answers come.</div></div><div class='lp-how-item'><div class='lp-how-item-title'>No schedule needed</div><div class='lp-how-item-text'>Some families keep the deck visible and pull a card whenever a moment opens. No ritual required.</div></div><div class='lp-how-item'><div class='lp-how-item-title'>Answer honestly</div><div class='lp-how-item-text'>Children know when they're being given the safe version. The only instruction: give them the real one.</div></div></div></div><style>*,*::before,*::after{box-sizing:border-box}.lp-how-header{margin-bottom:4rem}.lp-how-eyebrow{font-family:'Lato',sans-serif !important;font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:#688F9D;margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}.lp-how-eyebrow::before{content:'';width:2rem;height:1px;background:#688F9D;display:block}.lp-how-title{font-family:'Cormorant Garamond',serif !important;font-size:2.4rem;font-weight:300;color:#0E1B30}.lp-how-title em{font-style:italic;color:#688F9D}.lp-how-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}.lp-how-product-label{font-family:'Lato',sans-serif !important;font-size:0.6rem;letter-spacing:0.28em;text-transform:uppercase;color:#688F9D;margin-bottom:1.4rem;display:flex;align-items:center;gap:0.7rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(104,143,157,0.15)}.lp-how-product-label::before{content:'';width:1.5rem;height:1px;background:#688F9D;display:block}.lp-how-item{padding:1.1rem 0;border-bottom:1px solid rgba(104,143,157,0.1)}.lp-how-item:last-child{border-bottom:none}.lp-how-item-title{font-family:'Cormorant Garamond',serif !important;font-size:1.05rem;font-weight:400;color:#0E1B30;margin-bottom:0.35rem}.lp-how-item-text{font-family:'Lato',sans-serif !important;font-size:0.85rem;line-height:1.78;color:#7a8f99}@media(max-width:960px){.lp-how-grid{grid-template-columns:1fr;gap:3rem}}</style>"
+              },
+              "widgetType": "html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Landing — How To Use Section V1",
+  "type": "section"
+}

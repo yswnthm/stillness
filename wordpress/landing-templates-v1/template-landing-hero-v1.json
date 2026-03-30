@@ -1,0 +1,35 @@
+{
+  "content": [
+    {
+      "id": "lp_hero_section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "background_background": "classic",
+        "background_color": "#0E1B30",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_hero_html",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class='lp-hero'><div class='lp-hero-left'><div class='lp-hero-eyebrow'>For the little ones</div><h1 class='lp-hero-headline'>Two decks.<br>One <em>intention.</em></h1><p class='lp-hero-body'>One deck for your child to know themselves. One for you to show them you do too. Each one complete on its own. Both part of the same practice.</p><div class='lp-age-pill'><div class='lp-age-pill-text'>Your child is <strong>exactly the right age for this</strong> — right now. That won't always be true.</div></div><div class='lp-hero-ctas'><a href='#lp-mini-moments' class='lp-btn-primary'>Mini Moments</a><a href='#lp-in-this-little-life' class='lp-btn-secondary'>In This Little Life</a></div></div><div class='lp-hero-right'><div class='lp-hero-img-top'><img src='https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1000&auto=format&fit=crop' alt='Mini Moments affirmation card deck'><div class='lp-hero-img-label'>Mini Moments · Affirmation Cards</div></div><div class='lp-hero-img-bottom'><img src='https://images.unsplash.com/photo-1511895426328-dc8714191011?q=80&w=1000&auto=format&fit=crop' alt='In This Little Life card deck'><div class='lp-hero-img-label'>In This Little Life · Connection Cards</div></div></div></div><style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}.lp-hero{min-height:92vh;display:grid;grid-template-columns:1fr 1fr}.lp-hero-left{background:#0E1B30;display:flex;flex-direction:column;justify-content:center;padding:6rem 5rem;position:relative;overflow:hidden}.lp-hero-left::before{content:'';position:absolute;top:-100px;right:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(104,143,157,0.1) 0%,transparent 65%);pointer-events:none}.lp-hero-eyebrow{font-family:'Lato',sans-serif !important;font-size:0.6rem;letter-spacing:0.32em;text-transform:uppercase;color:#688F9D;margin-bottom:1.8rem;display:flex;align-items:center;gap:0.8rem;opacity:0;animation:lpFadeUp 0.8s ease 0.1s forwards}.lp-hero-eyebrow::before{content:'';width:2rem;height:1px;background:#688F9D;display:block}.lp-hero-headline{font-family:'Cormorant Garamond',serif !important;font-size:clamp(3rem,5vw,5rem);font-weight:300;line-height:1.04;color:#F7F0EC;margin-bottom:2rem;opacity:0;animation:lpFadeUp 0.8s ease 0.2s forwards}.lp-hero-headline em{font-style:italic;color:#D9E8EB}.lp-hero-body{font-family:'Lato',sans-serif !important;font-size:0.97rem;line-height:1.9;color:rgba(217,232,235,0.62);max-width:370px;margin-bottom:2.4rem;opacity:0;animation:lpFadeUp 0.8s ease 0.3s forwards}.lp-age-pill{padding:1.1rem 1.3rem;background:rgba(104,143,157,0.1);border-left:2px solid #688F9D;margin-bottom:2rem;opacity:0;animation:lpFadeUp 0.8s ease 0.36s forwards}.lp-age-pill-text{font-family:'Cormorant Garamond',serif !important;font-size:1rem;font-style:italic;font-weight:300;color:rgba(217,232,235,0.8);line-height:1.55}.lp-age-pill-text strong{font-style:normal;color:#D9E8EB;font-weight:300}.lp-hero-ctas{display:flex;gap:1rem;opacity:0;animation:lpFadeUp 0.8s ease 0.44s forwards;flex-wrap:wrap}.lp-btn-primary,.lp-btn-secondary{display:inline-flex;align-items:center;justify-content:center;padding:1rem 1.8rem;border-radius:2px;font-family:'Lato',sans-serif !important;font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:background 0.3s,transform 0.2s;text-decoration:none;flex:1}.lp-btn-primary{background:#F7F0EC;color:#0E1B30;border:none}.lp-btn-primary:hover{background:#D9E8EB;transform:translateY(-1px)}.lp-btn-secondary{background:transparent;color:rgba(217,232,235,0.6);border:1px solid rgba(104,143,157,0.28)}.lp-btn-secondary:hover{border-color:rgba(104,143,157,0.5);color:#D9E8EB}.lp-hero-right{background:#F2E8E0;display:grid;grid-template-rows:1fr 1fr;overflow:hidden}.lp-hero-img-top,.lp-hero-img-bottom{overflow:hidden;position:relative}.lp-hero-img-top img,.lp-hero-img-bottom img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 7s ease}.lp-hero-img-top:hover img,.lp-hero-img-bottom:hover img{transform:scale(1.04)}.lp-hero-img-label{position:absolute;bottom:1rem;left:1.2rem;z-index:3;font-family:'Lato',sans-serif !important;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(247,240,236,0.75);background:rgba(14,27,48,0.35);backdrop-filter:blur(8px);padding:0.28rem 0.75rem;border-radius:2px}@keyframes lpFadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@media(max-width:960px){.lp-hero{grid-template-columns:1fr;min-height:auto}.lp-hero-left{padding:5rem 2.5rem 4rem}.lp-hero-right{height:65vw;grid-template-rows:1fr}.lp-hero-img-bottom{display:none}.lp-hero-ctas{flex-direction:column}.lp-btn-primary,.lp-btn-secondary{flex:none;width:100%}}</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Landing — Hero Section V1",
+  "type": "section"
+}

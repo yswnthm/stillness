@@ -1,0 +1,38 @@
+{
+  "content": [
+    {
+      "id": "lp_v2_shareit_share_with_a_friend",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "gap": {
+          "unit": "px",
+          "size": 0,
+          "sizes": []
+        }
+      },
+      "elements": [
+        {
+          "id": "lp_w_v2_sh_share_with_a_friend",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class='bg-[#FBF9F6] text-stone antialiased selection:bg-seafoam selection:text-white relative font-sans overflow-hidden'>\n<div class=\"noise-overlay\"></div>\n<section class=\"py-40 px-6 relative overflow-hidden bg-white\">\n        <div class=\"absolute inset-0 dot-pattern\"></div>\n        <div class=\"max-w-4xl mx-auto text-center relative z-10 space-y-12\">\n            <h2 class=\"font-serif text-5xl md:text-6xl text-midnightsea\">Share with a Friend</h2>\n            \n            <div class=\"flex items-center gap-6 max-w-[280px] mx-auto\">\n                <span class=\"divider-line\"></span>\n                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"text-stone/40\"><rect x=\"3\" y=\"8\" width=\"18\" height=\"4\" rx=\"1\"/><path d=\"M12 8v13\"/><path d=\"M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7\"/><path d=\"M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5\"/></svg>\n                <span class=\"divider-line\"></span>\n            </div>\n\n            <p class=\"text-xl leading-relaxed text-stone/80 font-light max-w-2xl mx-auto\">\n                Sometimes the best gifts are the ones we tell our friends about.\n                Copy the link below or tap to share it via text, email, or social.\n            </p>\n\n            <div class=\"flex flex-col sm:flex-row justify-center gap-6 pt-8\">\n              <button class=\"px-14 py-5 bg-white border border-stone text-stone hover:bg-stone hover:text-white transition-all uppercase tracking-[0.25em] text-[0.7rem] font-bold shadow-xl rounded-xl\">\n                Copy Link\n              </button>\n              <button class=\"px-14 py-5 bg-white border border-stone text-stone hover:bg-stone hover:text-white transition-all uppercase tracking-[0.25em] text-[0.7rem] font-bold shadow-xl rounded-xl\">\n                Share Via Email\n              </button>\n            </div>\n        </div>\n    </section>\n\n\n\n\n\n\n\n  </main>\n<script src=\"https://cdn.tailwindcss.com?plugins=typography\"></script>\n  <script>\n    tailwind.config = {\n      theme: {\n        extend: {\n          colors: {\n            stone: '#0E1B30',\n            midnightsea: '#1D3152',\n            midnight: '#1D3152',\n            seafoam: '#688F9D',\n            breeze: '#D9E8EB',\n            wave: '#A4B2BA',\n            sand: '#C4BBB4',\n            cream: '#FFFFFF',\n            terracotta: '#C1785D',\n            sage: '#8A9A8A',\n            clay: '#D9C5B2',\n          },\n          fontFamily: {\n            serif: ['\"Cormorant Garamond\"', 'serif'],\n            sans: ['\"Lato\"', 'sans-serif'],\n          }\n        }\n      }\n    }\n  </script>\n  <style>\n    /* Custom Scrollbar */\n    ::-webkit-scrollbar { width: 8px; }\n    ::-webkit-scrollbar-track { background: #F7F0EC; }\n    ::-webkit-scrollbar-thumb { background: #C4BBB4; border-radius: 4px; }\n    ::-webkit-scrollbar-thumb:hover { background: #688F9D; }\n\n    .noise-overlay {\n      position: fixed; top: 0; left: 0; width: 100%; height: 100%;\n      pointer-events: none; opacity: 0.04; z-index: 9999;\n      background-image: url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\");\n    }\n    \n    .hero-bg {\n        background-color: #ECE0D1;\n        background-image: url('https://images.unsplash.com/photo-1607344645866-009c320c62ab?q=80&w=2000&auto=format&fit=crop');\n        background-size: cover;\n        background-position: center;\n        background-blend-mode: overlay;\n    }\n\n    .dot-pattern {\n      background-image: radial-gradient(#0E1B30 0.5px, transparent 0.5px);\n      background-size: 24px 24px;\n      opacity: 0.05;\n    }\n\n    .glass {\n      background: rgba(255, 255, 255, 0.2);\n      backdrop-filter: blur(12px);\n      -webkit-backdrop-filter: blur(12px);\n      border: 1px solid rgba(255, 255, 255, 0.3);\n    }\n\n    .divider-line {\n      height: 1px;\n      background: rgba(14, 27, 48, 0.15);\n      flex: 1;\n    }\n\n    .arch-image {\n        border-radius: 20rem 20rem 2rem 2rem;\n    }\n  </style>\n</div>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Share It V2 — Share",
+  "type": "section"
+}
