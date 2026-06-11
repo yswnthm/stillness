@@ -1,0 +1,169 @@
+/* =========================================================
+   STILLNESS — SINGLE EVENT BOOKING PAGE
+   Scoped to: body.product_cat-events.single-product
+   DO NOT apply globally — retail shop safety
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
+
+/* --- HERO GALLERY (Full-bleed image with slowzoom) --- */
+body.product_cat-events .woocommerce-product-gallery {
+  width: 100% !important; max-width: 100% !important; margin: 0 !important;
+}
+body.product_cat-events .woocommerce-product-gallery__wrapper img {
+  width: 100% !important; max-height: 580px !important; object-fit: cover !important;
+  border-radius: 0 !important; animation: sp-slowzoom 16s ease forwards !important;
+}
+@keyframes sp-slowzoom {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1.0); }
+}
+body.product_cat-events .woocommerce-product-gallery__trigger,
+body.product_cat-events .flex-control-thumbs { display: none !important; }
+
+/* --- WARM BAND (rendered by PHP hook) --- */
+.stillness-warm-band {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  padding: 44px 0 !important;
+  background: #F0E4D0 !important;
+  border-top: 0.5px solid rgba(196,187,180,0.5) !important;
+  border-bottom: 0.5px solid rgba(196,187,180,0.5) !important;
+}
+.stillness-warm-item {
+  padding: 0 44px !important;
+  border-right: 0.5px solid rgba(196,149,90,0.25) !important;
+  display: flex !important; flex-direction: column !important; gap: 4px !important;
+}
+.stillness-warm-item:first-child { padding-left: 4rem !important; }
+.stillness-warm-item:last-child { border-right: none !important; }
+.stillness-warm-num {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 11px !important; color: #C4935A !important;
+  letter-spacing: 0.2em !important; font-weight: 500 !important;
+}
+.stillness-warm-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 20px !important; font-weight: 300 !important;
+  color: #0E1B30 !important; line-height: 1.3 !important;
+}
+.stillness-warm-body {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 12px !important; line-height: 1.6 !important;
+  color: #3D4F57 !important; letter-spacing: 0.02em !important;
+}
+
+/* --- PRODUCT TITLE --- */
+body.product_cat-events .product_title.entry-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: clamp(32px, 4vw, 52px) !important; font-weight: 300 !important;
+  color: #0E1B30 !important; line-height: 1.1 !important; margin-bottom: 16px !important;
+}
+
+/* --- PRICE --- */
+body.product_cat-events p.price {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 20px !important; font-weight: 400 !important;
+  color: #688F9D !important; margin-bottom: 24px !important;
+}
+
+/* --- SHORT DESCRIPTION (event meta — dates / duration / sanctuary) --- */
+body.product_cat-events .woocommerce-product-details__short-description {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 13px !important; line-height: 2 !important;
+  color: rgba(14,27,48,0.65) !important; margin-bottom: 32px !important;
+}
+body.product_cat-events .woocommerce-product-details__short-description p {
+  margin: 0 !important;
+}
+
+/* --- LONG DESCRIPTION (event narrative + pillars) --- */
+body.product_cat-events .woocommerce-Tabs-panel--description {
+  font-family: 'Jost', sans-serif !important;
+}
+body.product_cat-events .woocommerce-Tabs-panel--description p {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 14px !important; line-height: 1.95 !important; color: #3D4F57 !important;
+  margin-bottom: 1.2rem !important;
+}
+body.product_cat-events .woocommerce-Tabs-panel--description h2,
+body.product_cat-events .woocommerce-Tabs-panel--description h3 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 300 !important; color: #0E1B30 !important;
+  margin-top: 2rem !important; margin-bottom: 0.75rem !important;
+}
+
+/* --- BOOK TICKET BUTTON --- */
+body.product_cat-events .single_add_to_cart_button {
+  background: #0E1B30 !important; color: #F7F0EC !important;
+  border: none !important; border-radius: 2px !important;
+  padding: 16px 24px !important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: 10px !important; font-weight: 500 !important;
+  letter-spacing: 0.22em !important; text-transform: uppercase !important;
+  transition: all 0.3s ease !important;
+  line-height: normal !important;
+}
+body.product_cat-events .single_add_to_cart_button:hover {
+  background: #1D3152 !important; transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(14,27,48,0.1) !important;
+}
+
+/* --- SOLD OUT STATE --- */
+body.product_cat-events .stock.out-of-stock {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 9px !important; letter-spacing: 0.25em !important;
+  text-transform: uppercase !important; color: #A4B2BA !important;
+}
+
+/* --- STOCK AVAILABLE BADGE --- */
+body.product_cat-events .stock.in-stock {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 9px !important; letter-spacing: 0.2em !important;
+  text-transform: uppercase !important; color: #688F9D !important;
+}
+
+/* --- HIDE DEFAULT RETAIL ELEMENTS & STOCK TEXT --- */
+body.product_cat-events .product_meta,
+body.product_cat-events .woocommerce-tabs .tabs,
+body.product_cat-events .star-rating,
+body.product_cat-events .woocommerce-review-link { display: none !important; }
+
+/* Hide WooCommerce native availability text since we use custom stock badges */
+body.product_cat-events .se-card-form .stock,
+body.product_cat-events .se-card-form .in-stock,
+body.product_cat-events .se-card-form .out-of-stock,
+body.product_cat-events .se-card-form .availability,
+body.product_cat-events p.stock { display: none !important; }
+
+/* Show the description tab panel but without the tab navigation */
+body.product_cat-events .woocommerce-tabs .woocommerce-Tabs-panel--description {
+  display: block !important;
+  border: none !important; padding: 0 !important;
+  margin-top: 2rem !important;
+}
+
+/* --- RELATED EVENTS HEADING --- */
+body.product_cat-events .related.products h2 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 28px !important; font-weight: 300 !important; color: #0E1B30 !important;
+  text-align: center !important; margin-bottom: 32px !important;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .stillness-warm-band {
+    grid-template-columns: 1fr !important;
+    padding: 32px 1.5rem !important;
+  }
+  .stillness-warm-item {
+    padding: 0 !important; border-right: none !important;
+    border-bottom: 0.5px solid rgba(196,149,90,0.15) !important;
+    padding-bottom: 20px !important; margin-bottom: 20px !important;
+  }
+  .stillness-warm-item:last-child {
+    border-bottom: none !important; padding-bottom: 0 !important; margin-bottom: 0 !important;
+  }
+  body.product_cat-events .product_title.entry-title { font-size: 30px !important; }
+  body.product_cat-events .woocommerce-product-gallery__wrapper img { max-height: 300px !important; }
+}

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stillness Events - Admin Handoff Guide</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500;600&display=swap');
+
+    :root {
+      --stone: #0E1B30;
+      --midnight: #1D3152;
+      --seafoam: #688F9D;
+      --breeze: #D9E8EB;
+      --wave: #A4B2BA;
+      --sand: #C4BBB4;
+      --cream: #F7F0EC;
+      --warm: #E8DDD6;
+      --ink: #25313A;
+      --muted: #68747B;
+      --line: rgba(14, 27, 48, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #EEF2F3;
+      color: var(--ink);
+      font-family: 'Jost', Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .page {
+      width: min(920px, calc(100% - 32px));
+      margin: 32px auto;
+      background: #FFFFFF;
+      box-shadow: 0 20px 60px rgba(14, 27, 48, 0.12);
+    }
+
+    .cover {
+      background: var(--stone);
+      color: var(--cream);
+      padding: 76px 72px 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -130px;
+      width: 320px;
+      height: 320px;
+      border: 1px solid rgba(217, 232, 235, 0.18);
+      border-radius: 50%;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--seafoam);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      letter-spacing: 0;
+      line-height: 1.12;
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 620px;
+      font-size: 58px;
+    }
+
+    .cover-copy {
+      max-width: 600px;
+      margin: 24px 0 0;
+      color: var(--wave);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(217, 232, 235, 0.16);
+      margin-top: 54px;
+      padding-top: 26px;
+      gap: 24px;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--seafoam);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    .meta-value {
+      color: var(--cream);
+      font-size: 13px;
+    }
+
+    .content {
+      padding: 58px 72px 72px;
+    }
+
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      padding: 24px;
+      background: rgba(217, 232, 235, 0.28);
+      border: 1px solid rgba(104, 143, 157, 0.22);
+      margin-bottom: 48px;
+    }
+
+    .toc a {
+      color: var(--midnight);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    section {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    section:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    h2 {
+      color: var(--stone);
+      font-size: 34px;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      color: var(--midnight);
+      font-size: 24px;
+      margin: 26px 0 10px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul,
+    ol {
+      margin: 10px 0 0 22px;
+      padding: 0;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    strong {
+      color: var(--stone);
+      font-weight: 500;
+    }
+
+    code {
+      background: rgba(217, 232, 235, 0.42);
+      color: var(--stone);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    .callout {
+      padding: 20px 22px;
+      background: var(--cream);
+      border-left: 3px solid var(--seafoam);
+      margin: 22px 0;
+    }
+
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .summary-card {
+      border: 1px solid var(--line);
+      padding: 20px;
+      min-height: 142px;
+    }
+
+    .summary-card span {
+      display: block;
+      color: var(--seafoam);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .summary-card p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      padding-left: 42px;
+      margin: 14px 0;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--stone);
+      color: var(--cream);
+      font-size: 12px;
+      line-height: 26px;
+      text-align: center;
+    }
+
+    .field-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0 8px;
+      font-size: 13px;
+    }
+
+    .field-table th,
+    .field-table td {
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .field-table th {
+      background: rgba(217, 232, 235, 0.34);
+      color: var(--stone);
+      font-weight: 500;
+    }
+
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .checklist li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 14px;
+      height: 14px;
+      border: 1px solid var(--seafoam);
+      background: #FFFFFF;
+    }
+
+    .footer {
+      padding: 28px 72px;
+      background: var(--stone);
+      color: var(--wave);
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .footer strong {
+      color: var(--cream);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: 100%;
+        margin: 0;
+      }
+
+      .cover,
+      .content,
+      .footer {
+        padding-left: 28px;
+        padding-right: 28px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .meta-row,
+      .toc,
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer {
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 14mm;
+      }
+
+      body {
+        background: #FFFFFF;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+      }
+
+      .cover,
+      .footer {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+
+      .page-break {
+        break-before: page;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="cover">
+      <p class="eyebrow">Stillness Curated Retreats</p>
+      <h1>Events Admin Handoff Guide</h1>
+      <p class="cover-copy">
+        A simple operating guide for managing Stillness events, ticket bookings, waitlist submissions, and sold-out states inside WordPress and WooCommerce.
+      </p>
+      <div class="meta-row">
+        <div>
+          <span class="meta-label">System</span>
+          <span class="meta-value">WordPress, Elementor, WooCommerce</span>
+        </div>
+        <div>
+          <span class="meta-label">Event Category</span>
+          <span class="meta-value">Events</span>
+        </div>
+        <div>
+          <span class="meta-label">Updated</span>
+          <span class="meta-value">11 June 2026</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <nav class="toc" aria-label="Guide contents">
+        <a href="#overview">01. What Has Been Set Up</a>
+        <a href="#bookings">02. What Happens After Booking</a>
+        <a href="#add-event">03. Add A New Event</a>
+        <a href="#content">04. Event Content Rules</a>
+        <a href="#stock">05. Stock, Quantity, Sold Out</a>
+        <a href="#waitlist">06. Waitlist Form</a>
+        <a href="#orders">07. Check Bookings</a>
+        <a href="#final-checklist">08. Final Checklist</a>
+      </nav>
+
+      <section id="overview">
+        <p class="eyebrow">Overview</p>
+        <h2>What has been set up</h2>
+        <p>
+          The Events system has been built using WooCommerce products. Each event is created as a WooCommerce product under the <code>Events</code> category.
+        </p>
+        <div class="summary-grid">
+          <div class="summary-card">
+            <span>Events Page</span>
+            <p>Shows upcoming or past events using the event product details, image, price, date, duration, and venue.</p>
+          </div>
+          <div class="summary-card">
+            <span>Single Event Page</span>
+            <p>Shows the full booking page for one event with image, description, ticket quantity, and booking button.</p>
+          </div>
+          <div class="summary-card">
+            <span>Waitlist Form</span>
+            <p>One shared Events waitlist form is used on both the Events page and individual event pages.</p>
+          </div>
+          <div class="summary-card">
+            <span>Booking Flow</span>
+            <p>Paid event bookings are handled by normal WooCommerce checkout and appear inside WooCommerce Orders.</p>
+          </div>
+        </div>
+        <div class="callout">
+          <p><strong>Important:</strong> Do not edit the page layout directly unless needed. For normal event updates, only update the WooCommerce product content, stock, price, and image.</p>
+        </div>
+      </section>
+
+      <section id="bookings">
+        <p class="eyebrow">Booking Flow</p>
+        <h2>What happens after someone books</h2>
+        <p>
+          When someone purchases an event ticket, WooCommerce handles it like a normal product order.
+        </p>
+        <table class="field-table">
+          <thead>
+            <tr>
+              <th>Person</th>
+              <th>What they receive or see</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Customer</td>
+              <td>Receives the normal WooCommerce order confirmation email with their order and product details.</td>
+            </tr>
+            <tr>
+              <td>Admin team</td>
+              <td>Can see the booking inside <code>WooCommerce → Orders</code>, including customer name, email, event product, ticket quantity, payment status, and order status.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout">
+          <p><strong>Email decision:</strong> No custom WooCommerce email design is required for now. The default WooCommerce email is enough because the current requirement is to collect the buyer name and email so the team can contact them.</p>
+        </div>
+        <p>
+          If one person books multiple tickets, WooCommerce will show the purchased quantity. It will not collect separate names for each attendee unless a custom attendee form is added later.
+        </p>
+      </section>
+
+      <section id="add-event" class="page-break">
+        <p class="eyebrow">Event Products</p>
+        <h2>Add a new event</h2>
+        <ol class="steps">
+          <li>Go to <code>Products</code> inside WordPress.</li>
+          <li>Duplicate a previous event product, or click <code>Add New</code>.</li>
+          <li>Enter the event title.</li>
+          <li>Set the product type to <code>Simple product</code>.</li>
+          <li>Check <code>Virtual</code>.</li>
+          <li>Leave <code>Downloadable</code> unchecked.</li>
+          <li>Add the ticket price.</li>
+          <li>Open <code>Inventory</code> and enable stock management.</li>
+          <li>Set stock quantity to the number of available seats.</li>
+          <li>Set backorders to <code>Do not allow</code>.</li>
+          <li>Upload the main event image as the product image.</li>
+          <li>Assign the product category <code>Events</code>.</li>
+          <li>Add the short description.</li>
+          <li>Add the long description.</li>
+          <li>Add the required event attributes.</li>
+          <li>Publish the product only after all details are ready.</li>
+        </ol>
+      </section>
+
+      <section id="content">
+        <p class="eyebrow">Content Rules</p>
+        <h2>Event content rules</h2>
+        <h3>Required attributes</h3>
+        <p>Every event must include these three custom attributes. Use the exact names.</p>
+        <table class="field-table">
+          <thead>
+            <tr>
+              <th>Attribute name</th>
+              <th>Example value</th>
+              <th>Where it appears</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>Event Dates</code></td>
+              <td>15 June 2026</td>
+              <td>Event cards and single event details</td>
+            </tr>
+            <tr>
+              <td><code>Duration</code></td>
+              <td>2 Hours</td>
+              <td>Event cards and single event details</td>
+            </tr>
+            <tr>
+              <td><code>Sanctuary</code></td>
+              <td>The Stillness Studio, Toronto</td>
+              <td>Event cards and single event details</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Short description</h3>
+        <p>
+          Use the short description for a calm 1-2 line teaser. Do not add date, duration, location, or emoji-style logistics here.
+        </p>
+        <div class="callout">
+          <p>Example: Step into the new season with clarity, energy, and renewed purpose.</p>
+          <p>A gentle immersion of movement, meditation, and guided reflection designed to release the weight of winter.</p>
+        </div>
+        <h3>Long description</h3>
+        <p>
+          Use the long description for the full event story, sections, and details. This appears on the individual event page.
+        </p>
+      </section>
+
+      <section id="stock">
+        <p class="eyebrow">Availability</p>
+        <h2>Stock, ticket quantity, and sold-out state</h2>
+        <h3>Ticket quantity</h3>
+        <p>
+          Visitors can choose more than one ticket before checkout. The selected quantity is limited by the available WooCommerce stock.
+        </p>
+        <h3>Mark an event sold out</h3>
+        <ol class="steps">
+          <li>Open the event product.</li>
+          <li>Go to <code>Product Data → Inventory</code>.</li>
+          <li>Set stock quantity to <code>0</code>.</li>
+          <li>Click <code>Update</code>.</li>
+        </ol>
+        <p>The event page will automatically show the sold-out state and guide people toward the waitlist.</p>
+        <h3>Increase capacity</h3>
+        <ol class="steps">
+          <li>Open the event product.</li>
+          <li>Go to <code>Product Data → Inventory</code>.</li>
+          <li>Increase the stock quantity.</li>
+          <li>Click <code>Update</code>.</li>
+        </ol>
+      </section>
+
+      <section id="waitlist" class="page-break">
+        <p class="eyebrow">Waitlist</p>
+        <h2>Waitlist form</h2>
+        <p>
+          The Events waitlist form is separate from paid WooCommerce bookings. It is used when someone wants updates or when an event is sold out.
+        </p>
+        <table class="field-table">
+          <thead>
+            <tr>
+              <th>Area</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Form tool</td>
+              <td>MetForm</td>
+            </tr>
+            <tr>
+              <td>Form name</td>
+              <td>Events</td>
+            </tr>
+            <tr>
+              <td>Shortcode</td>
+              <td><code>[metform form_id="6697"]</code></td>
+            </tr>
+            <tr>
+              <td>Used on</td>
+              <td>Events catalog page and individual event pages</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          To check waitlist submissions, go to <code>MetForm</code> and open the Entries or Submissions area for the Events form.
+        </p>
+      </section>
+
+      <section id="orders">
+        <p class="eyebrow">Orders</p>
+        <h2>Check bookings and guest details</h2>
+        <ol class="steps">
+          <li>Go to <code>WooCommerce → Orders</code>.</li>
+          <li>Search by customer name, email, or event product name.</li>
+          <li>Open the paid order.</li>
+          <li>Check the customer name and email.</li>
+          <li>Check the event product name and purchased quantity.</li>
+          <li>Use only paid or processing orders for confirmed attendance.</li>
+        </ol>
+        <div class="callout">
+          <p><strong>Current workflow:</strong> For event bookings, the team only needs buyer name and email. If they later need every attendee name for multi-ticket orders, that should be added as a separate custom booking requirement.</p>
+        </div>
+      </section>
+
+      <section>
+        <p class="eyebrow">No Upcoming Event</p>
+        <h2>When no event is open</h2>
+        <p>
+          Do not create a fake placeholder product.
+        </p>
+        <p>
+          If no event product has stock available, the website automatically shows a <strong>New Retreat Dates Coming Soon</strong> state and keeps the waitlist available.
+        </p>
+        <p>
+          Past events can remain published if they should appear in the Events grid. Make sure past events are not bookable by setting stock to <code>0</code>.
+        </p>
+      </section>
+
+      <section id="final-checklist">
+        <p class="eyebrow">Before Publishing</p>
+        <h2>Final checklist for each event</h2>
+        <ul class="checklist">
+          <li>Product title is correct.</li>
+          <li>Product type is Simple product.</li>
+          <li>Virtual is checked.</li>
+          <li>Downloadable is unchecked.</li>
+          <li>Price is correct.</li>
+          <li>Stock quantity matches available seats.</li>
+          <li>Backorders are disabled.</li>
+          <li>Product image is uploaded.</li>
+          <li>Category is set to Events.</li>
+          <li>Short description is clean and does not include logistics.</li>
+          <li>Long description contains the full event story.</li>
+          <li>Attributes are exactly named Event Dates, Duration, and Sanctuary.</li>
+          <li>Test the event page on mobile.</li>
+          <li>Test one booking before publicly announcing the event.</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <span><strong>Stillness Events</strong> admin handoff guide</span>
+      <span>Prepared by Solicate</span>
+    </footer>
+  </main>
+</body>
+</html>

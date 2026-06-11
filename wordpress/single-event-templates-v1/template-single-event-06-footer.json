@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "se_footer",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "se_footer_html",
+          "elType": "widget",
+          "settings": {
+            "html": "<footer class=\"se-footer\">\n  <div class=\"se-footer-logo\">Stillness Co.</div>\n  <div class=\"se-footer-links\"><a href=\"/events/\">Retreats</a><a href=\"/shop/\">Shop</a><a href=\"/journal/\">Journal</a><a href=\"/policies/\">Policies</a><a href=\"/contact/\">Contact</a></div>\n  <div class=\"se-footer-copy\">&copy; 2026 Stillness Curated Retreats. All rights reserved.</div>\n</footer>\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap');\n\n:root {\n  --se-stone: #0E1B30;\n  --se-midnight: #1D3152;\n  --se-seafoam: #688F9D;\n  --se-wave: #A4B2BA;\n  --se-breeze: #D9E8EB;\n  --se-sand: #C4BBB4;\n  --se-cream: #F7F0EC;\n  --se-white: #FFFFFF;\n  --se-amber: #C4935A;\n  --se-amber-light: #F0E4D0;\n  --se-text-body: #3D4F57;\n  --se-text-light: #7A8F96;\n}\n.se-footer { background: var(--se-stone) !important; border-top: 0.5px solid rgba(255,255,255,0.05) !important; padding: 60px 4rem !important; text-align: center !important; }\n.se-footer-logo { font-family: 'Cormorant Garamond', serif !important; font-size: 14px !important; font-weight: 400 !important; letter-spacing: 0.35em !important; text-transform: uppercase !important; color: var(--se-cream) !important; margin-bottom: 24px !important; }\n.se-footer-links { display: flex !important; justify-content: center !important; gap: 2rem !important; margin-bottom: 32px !important; }\n.se-footer-links a { font-family: 'Jost', sans-serif !important; text-decoration: none !important; font-size: 9px !important; letter-spacing: 0.15em !important; text-transform: uppercase !important; color: var(--se-wave) !important; transition: color 0.3s ease !important; }\n.se-footer-links a:hover { color: var(--se-cream) !important; }\n.se-footer-copy { font-family: 'Jost', sans-serif !important; font-size: 10px !important; color: rgba(164,178,186,0.3) !important; letter-spacing: 0.05em !important; }\n@media(max-width: 768px) { .se-footer { padding: 40px 1.5rem !important; } .se-footer-links { flex-direction: column !important; gap: 1rem !important; } }\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Single Event - 06 Footer",
+  "type": "section"
+}

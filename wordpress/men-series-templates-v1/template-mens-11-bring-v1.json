@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "ms_bring",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "ms_html_bring",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"ms-bring-section\">\n  <div class=\"ms-section-inner\">\n    <div class=\"ms-bring-grid\">\n      <div class=\"ms-bring-col\">\n        <div class=\"ms-section-eyebrow\">What to bring</div>\n        <ul class=\"ms-bring-list\">\n          <li>A journal (optional)</li>\n          <li>A blanket or warm layer</li>\n          <li>Comfortable clothes you can lie down in</li>\n        </ul>\n      </div>\n      <div class=\"ms-bring-col\">\n        <div class=\"ms-section-eyebrow\">We provide everything else</div>\n        <ul class=\"ms-bring-list\">\n          <li>Yoga mats and cushions</li>\n          <li>Extra blankets and eye masks</li>\n          <li>Journaling supplies and prompts</li>\n          <li>Water and post-session snacks</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</section>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap');\n\n*,*::before,*::after{box-sizing:border-box !important; margin:0 !important; padding:0 !important;}\n\n:root{\n  --ms-warm:#E8DDD6;\n  --ms-seafoam:#688F9D;\n  --ms-amber:#C4935A;\n  --ms-text-body:#3D4F57;\n}\n\n.ms-bring-section {\n  padding: 80px 0 !important;\n  background: var(--ms-warm) !important;\n  border-top: 0.5px solid rgba(196,187,180,0.5) !important;\n}\n\n.ms-section-inner {\n  max-width: 1080px !important;\n  margin: 0 auto !important;\n  padding: 0 52px !important;\n}\n\n.ms-bring-grid {\n  display: grid !important;\n  grid-template-columns: 1fr 1fr !important;\n  gap: 60px !important;\n}\n\n.ms-bring-col {\n  display: flex !important;\n  flex-direction: column !important;\n  gap: 16px !important;\n}\n\n.ms-section-eyebrow {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 9px !important;\n  letter-spacing: 0.3em !important;\n  text-transform: uppercase !important;\n  color: var(--ms-amber) !important;\n  margin-bottom: 0 !important;\n}\n\n.ms-bring-list {\n  list-style: none !important;\n  display: flex !important;\n  flex-direction: column !important;\n  gap: 10px !important;\n}\n\n.ms-bring-list li {\n  display: flex !important;\n  align-items: center !important;\n  gap: 12px !important;\n  font-family: 'Jost', sans-serif !important;\n  font-size: 13px !important;\n  color: var(--ms-text-body) !important;\n}\n\n.ms-bring-list li::before {\n  content: '' !important;\n  width: 4px !important;\n  height: 4px !important;\n  border-radius: 50% !important;\n  background: var(--ms-seafoam) !important;\n  flex-shrink: 0 !important;\n}\n\n@media(max-width:768px){\n  .ms-section-inner{padding:0 24px !important}\n  .ms-bring-grid{grid-template-columns:1fr !important; gap:40px !important}\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Men's Series — 11 Bring",
+  "type": "section"
+}

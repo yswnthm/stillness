@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "ms_foryou",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "ms_html_foryou",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"ms-foryou-section\">\n  <div class=\"ms-section-inner\">\n    <div class=\"ms-section-eyebrow\">This is For You If</div>\n    <h2 class=\"ms-section-title\">You recognise yourself<br>in <em>at least one</em> of these</h2>\n    <div class=\"ms-foryou-grid\">\n      <div class=\"ms-foryou-card\">\n        <div class=\"ms-foryou-num\">01</div>\n        <div class=\"ms-foryou-title\">You're always fine</div>\n        <div class=\"ms-foryou-body\">On the outside you've got it together. But there's a version of you that's exhausted — and he hasn't had space to speak in a while.</div>\n      </div>\n      <div class=\"ms-foryou-card\">\n        <div class=\"ms-foryou-num\">02</div>\n        <div class=\"ms-foryou-title\">Rest feels unearned</div>\n        <div class=\"ms-foryou-body\">Slowing down triggers guilt. You rest when you collapse, not because you choose to. You're ready for that to change.</div>\n      </div>\n      <div class=\"ms-foryou-card\">\n        <div class=\"ms-foryou-num\">03</div>\n        <div class=\"ms-foryou-title\">You want something real</div>\n        <div class=\"ms-foryou-body\">You've tried the gym, the meditation app, the night out. You want something that actually lands — that you feel in your body, not just your head.</div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap');\n\n*,*::before,*::after{box-sizing:border-box !important}\n\n:root{\n  --ms-stone:#0E1B30;\n  --ms-cream:#F7F0EC;\n  --ms-seafoam:#688F9D;\n  --ms-amber:#C4935A;\n  --ms-warm:#E8DDD6;\n  --ms-text-body:#3D4F57;\n}\n\n.ms-foryou-section {\n  padding: 110px 0 !important;\n  background: var(--ms-warm) !important;\n  border-top: 0.5px solid rgba(196,187,180,0.5) !important;\n  border-bottom: 0.5px solid rgba(196,187,180,0.5) !important;\n}\n\n.ms-section-inner {\n  max-width: 1080px !important;\n  margin: 0 auto !important;\n  padding: 0 52px !important;\n}\n\n.ms-section-eyebrow {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 9px !important;\n  letter-spacing: 0.3em !important;\n  text-transform: uppercase !important;\n  color: var(--ms-amber) !important;\n  margin-bottom: 16px !important;\n}\n\n.ms-section-title {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: clamp(32px, 4vw, 48px) !important;\n  font-weight: 300 !important;\n  line-height: 1.15 !important;\n  color: var(--ms-stone) !important;\n  margin-bottom: 22px !important;\n}\n\n.ms-section-title em {\n  font-style: italic !important;\n  color: var(--ms-seafoam) !important;\n}\n\n.ms-foryou-grid {\n  display: grid !important;\n  grid-template-columns: repeat(3, 1fr) !important;\n  gap: 24px !important;\n  margin-top: 44px !important;\n}\n\n.ms-foryou-card {\n  background: var(--ms-cream) !important;\n  border-radius: 3px !important;\n  padding: 36px 30px !important;\n  display: flex !important;\n  flex-direction: column !important;\n  gap: 12px !important;\n  transition: transform 0.3s ease, box-shadow 0.3s ease !important;\n}\n\n.ms-foryou-card:hover {\n  transform: translateY(-4px) !important;\n  box-shadow: 0 16px 40px rgba(14,27,48,0.08) !important;\n}\n\n.ms-foryou-num {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 11px !important;\n  color: var(--ms-amber) !important;\n  letter-spacing: 0.2em !important;\n}\n\n.ms-foryou-title {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 20px !important;\n  font-weight: 300 !important;\n  color: var(--ms-stone) !important;\n  line-height: 1.3 !important;\n}\n\n.ms-foryou-body {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 12px !important;\n  line-height: 1.8 !important;\n  color: var(--ms-text-body) !important;\n}\n\n@media (max-width: 768px) {\n  .ms-section-inner { padding: 0 24px !important; }\n  .ms-foryou-grid { grid-template-columns: 1fr !important; }\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Men's Series — 05 For You If",
+  "type": "section"
+}

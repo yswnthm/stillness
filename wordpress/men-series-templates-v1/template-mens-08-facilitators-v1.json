@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "ms_facilitators",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "ms_html_facilitators",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"ms-fac-section\">\n  <div class=\"ms-section-inner\">\n    <div class=\"ms-section-eyebrow\">Your Guides</div>\n    <h2 class=\"ms-section-title\">Led by people who <em>practise</em><br>what they hold space for</h2>\n    <div class=\"ms-fac-grid\">\n      <div class=\"ms-fac-card\">\n        <div class=\"ms-fac-img-wrap\">\n          <img src=\"\" alt=\"Facilitator 1\" loading=\"lazy\">\n        </div>\n        <div class=\"ms-fac-content\">\n          <div class=\"ms-fac-role\">Sound Healer &amp; Facilitator</div>\n          <div class=\"ms-fac-name\">Sakshi Sinha</div>\n          <div class=\"ms-fac-line\"></div>\n          <div class=\"ms-fac-bio\">Sakshi creates soundscapes with crystal singing bowls, chimes, and the human voice — woven into a live journey that moves through the body rather than the mind. She has facilitated sound healing in Vancouver, Bali, and across India.</div>\n        </div>\n      </div>\n      <div class=\"ms-fac-card\">\n        <div class=\"ms-fac-img-wrap\">\n          <img src=\"\" alt=\"Facilitator 2\" loading=\"lazy\">\n        </div>\n        <div class=\"ms-fac-content\">\n          <div class=\"ms-fac-role\">Breathwork Guide</div>\n          <div class=\"ms-fac-name\">Space Holder</div>\n          <div class=\"ms-fac-line\"></div>\n          <div class=\"ms-fac-bio\">Our breathwork guide brings somatic movement and intentional breath to the container — creating the conditions for the sound journey to land as deeply as possible.</div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap');\n\n*,*::before,*::after{box-sizing:border-box !important}\n\n:root{\n  --ms-stone:#0E1B30;\n  --ms-cream:#F7F0EC;\n  --ms-seafoam:#688F9D;\n  --ms-amber:#C4935A;\n  --ms-amber-light:#F0E4D0;\n  --ms-text-body:#3D4F57;\n}\n\n.ms-fac-section {\n  padding: 110px 0 !important;\n  background: var(--ms-amber-light) !important;\n  border-top: 0.5px solid rgba(196,187,180,0.5) !important;\n}\n\n.ms-section-inner {\n  max-width: 1080px !important;\n  margin: 0 auto !important;\n  padding: 0 52px !important;\n}\n\n.ms-section-eyebrow {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 9px !important;\n  letter-spacing: 0.3em !important;\n  text-transform: uppercase !important;\n  color: var(--ms-amber) !important;\n  margin-bottom: 16px !important;\n}\n\n.ms-section-title {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: clamp(32px, 4vw, 48px) !important;\n  font-weight: 300 !important;\n  line-height: 1.15 !important;\n  color: var(--ms-stone) !important;\n  margin-bottom: 48px !important;\n}\n\n.ms-section-title em {\n  font-style: italic !important;\n  color: var(--ms-seafoam) !important;\n}\n\n.ms-fac-grid {\n  display: grid !important;\n  grid-template-columns: 1fr 1fr !important;\n  gap: 24px !important;\n}\n\n.ms-fac-card {\n  background: var(--ms-cream) !important;\n  border-radius: 3px !important;\n  overflow: hidden !important;\n  display: flex !important;\n  flex-direction: column !important;\n  transition: transform 0.3s ease, box-shadow 0.3s ease !important;\n}\n\n.ms-fac-card:hover {\n  transform: translateY(-4px) !important;\n  box-shadow: 0 20px 50px rgba(14,27,48,0.1) !important;\n}\n\n.ms-fac-img-wrap {\n  height: 320px !important;\n  overflow: hidden !important;\n  position: relative !important;\n}\n\n.ms-fac-img-wrap img {\n  width: 100% !important;\n  height: 100% !important;\n  object-fit: cover !important;\n  transition: transform 0.7s ease !important;\n}\n\n.ms-fac-card:hover .ms-fac-img-wrap img {\n  transform: scale(1.04) !important;\n}\n\n.ms-fac-content {\n  padding: 30px 32px !important;\n}\n\n.ms-fac-role {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 8.5px !important;\n  letter-spacing: 0.25em !important;\n  text-transform: uppercase !important;\n  color: var(--ms-amber) !important;\n  margin-bottom: 7px !important;\n}\n\n.ms-fac-name {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 30px !important;\n  font-weight: 300 !important;\n  color: var(--ms-stone) !important;\n  margin-bottom: 8px !important;\n  line-height: 1.1 !important;\n}\n\n.ms-fac-line {\n  width: 24px !important;\n  height: 0.5px !important;\n  background: var(--ms-seafoam) !important;\n  margin-bottom: 12px !important;\n}\n\n.ms-fac-bio {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 12.5px !important;\n  line-height: 1.75 !important;\n  color: var(--ms-text-body) !important;\n}\n\n@media (max-width: 768px) {\n  .ms-section-inner { padding: 0 24px !important; }\n  .ms-fac-grid { grid-template-columns: 1fr !important; }\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Men's Series — 08 Facilitators",
+  "type": "section"
+}

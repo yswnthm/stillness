@@ -1,0 +1,697 @@
+<style>
+:root {
+  --stone: #0E1B30;
+  --cream: #F7F0EC;
+  --breeze: #D9E8EB;
+  --seafoam: #688F9D;
+  --wave: #A4B2BA;
+  --sand: #C4BBB4;
+  --midnight: #1D3152;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--cream);
+  color: var(--midnight);
+  line-height: 1.8;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--stone) 0%, #1a2f45 100%);
+  color: var(--cream);
+  padding: 100px 40px;
+  text-align: center;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-meta {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--breeze);
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--cream);
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.hero-sub {
+  font-size: 18px;
+  color: var(--breeze);
+  max-width: 750px;
+  margin: 0 auto 24px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.hero-byline {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--wave);
+  margin-bottom: 32px;
+}
+
+.btn-primary {
+  background: var(--wave);
+  color: var(--stone);
+  padding: 14px 36px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  border-radius: 2px;
+}
+
+.btn-primary:hover {
+  background: var(--sand);
+  transform: translateY(-2px);
+}
+
+.divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* Sections */
+.section {
+  padding: 80px 40px;
+}
+
+.section-white {
+  background: #FFF;
+}
+
+.section-cream {
+  background: var(--cream);
+}
+
+.section-dark {
+  background: var(--stone);
+  color: var(--cream);
+}
+
+.section-heading {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--stone);
+  margin-bottom: 48px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-heading em {
+  font-style: italic;
+  display: block;
+}
+
+.section-dark .section-heading {
+  color: var(--cream);
+}
+
+/* Quiet Crisis */
+.crisis-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.crisis-content p {
+  font-size: 17px;
+  color: var(--midnight);
+  margin-bottom: 24px;
+  line-height: 1.9;
+}
+
+/* Science Grid */
+.science-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 48px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.science-item {
+  text-align: center;
+}
+
+.science-icon {
+  font-size: 28px;
+  color: var(--seafoam);
+  margin-bottom: 16px;
+}
+
+.science-item h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--stone);
+  margin-bottom: 12px;
+}
+
+.science-item p {
+  font-size: 15px;
+  color: var(--seafoam);
+  line-height: 1.7;
+}
+
+/* Itinerary */
+.itinerary-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px;
+  font-size: 17px;
+  color: var(--midnight);
+}
+
+.day-section {
+  max-width: 750px;
+  margin: 0 auto 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.day-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--midnight);
+  margin-bottom: 20px;
+}
+
+.day-item {
+  font-size: 15px;
+  color: var(--seafoam);
+  margin-bottom: 12px;
+  line-height: 1.7;
+  padding-left: 0;
+}
+
+.day-time {
+  font-weight: 600;
+  color: var(--stone);
+}
+
+/* Data Loop */
+.data-intro {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 48px;
+  font-size: 17px;
+  color: var(--midnight);
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.data-phase h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--midnight);
+  margin-bottom: 12px;
+}
+
+.data-phase p {
+  font-size: 14px;
+  color: var(--seafoam);
+  line-height: 1.7;
+}
+
+/* Inclusions */
+.exclusivity {
+  background: rgba(212, 227, 235, 0.2);
+  border-left: 4px solid var(--seafoam);
+  padding: 24px 32px;
+  margin-bottom: 48px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--stone);
+}
+
+.inclusions-list {
+  max-width: 750px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.inclusions-list li {
+  font-size: 16px;
+  color: var(--midnight);
+  margin-bottom: 16px;
+  padding-left: 24px;
+  position: relative;
+  line-height: 1.7;
+}
+
+.inclusions-list li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  background: var(--wave);
+  border-radius: 50%;
+}
+
+.investment-section {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.investment-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--stone);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.investment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.investment-option {
+  text-align: center;
+  padding: 24px;
+  background: var(--cream);
+  border-radius: 4px;
+}
+
+.investment-option h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--midnight);
+  margin-bottom: 12px;
+}
+
+.investment-amount {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--stone);
+  margin-bottom: 12px;
+}
+
+.investment-desc {
+  font-size: 13px;
+  color: var(--seafoam);
+  line-height: 1.6;
+}
+
+.terms {
+  font-size: 13px;
+  color: var(--seafoam);
+  text-align: center;
+  margin-top: 32px;
+}
+
+/* Application */
+.app-section {
+  background: var(--cream);
+  text-align: center;
+}
+
+.app-heading {
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--stone);
+  margin-bottom: 24px;
+}
+
+.app-intro {
+  font-size: 16px;
+  color: var(--seafoam);
+  max-width: 700px;
+  margin: 0 auto 48px;
+}
+
+.form-container {
+  max-width: 450px;
+  margin: 0 auto;
+  background: #FFF;
+  padding: 32px;
+  border-radius: 4px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  color: var(--stone);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 1px solid var(--breeze);
+  background: var(--cream);
+  color: var(--midnight);
+  font-family: 'Jost', sans-serif;
+  transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--seafoam);
+  background: #FFF;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 14px 32px;
+  font-size: 14px;
+  background: var(--midnight);
+  color: var(--cream);
+  border: none;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  margin-top: 12px;
+}
+
+.form-submit:hover {
+  background: var(--stone);
+  transform: translateY(-2px);
+}
+
+.form-note {
+  font-size: 12px;
+  color: var(--seafoam);
+  margin-top: 16px;
+  font-style: italic;
+}
+
+/* Closing */
+.closing-cta {
+  background: var(--stone);
+  color: var(--cream);
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.closing-cta h2 {
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+.closing-cta em {
+  font-style: italic;
+  display: block;
+}
+
+/* Footer */
+.footer {
+  background: var(--stone);
+  color: var(--breeze);
+  padding: 40px;
+  text-align: center;
+  font-size: 13px;
+  border-top: 1px solid rgba(217, 232, 235, 0.1);
+}
+
+.footer-line {
+  margin-bottom: 8px;
+}
+
+.footer-line.contact {
+  color: var(--seafoam);
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 60px 24px; min-height: auto; }
+  .hero h1 { font-size: 36px; }
+  .hero-sub { font-size: 16px; }
+  .section { padding: 60px 24px; }
+  .section-heading { font-size: 32px; }
+  .science-grid { grid-template-columns: 1fr; gap: 24px; }
+  .data-grid { grid-template-columns: 1fr; gap: 24px; }
+  .investment-grid { grid-template-columns: 1fr; }
+  .form-container { padding: 24px; }
+}
+</style>
+
+<div class="container">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-meta">An Exclusive Clinical-Grade Intervention</div>
+    <h1>THE NEURO-SENSORY RESET</h1>
+    <p class="hero-sub">A 4-day biometric intervention on Big Island, Hawaii. Systematically deactivate your stress response, rest your visual cortex, and retrain your vagus nerve to restore your biological baseline.</p>
+    <p class="hero-byline">November 17–22, 2026 · 12 Exclusive Spots · $6,000 Investment</p>
+    <button class="btn-primary">Apply for Private Intake Consultation</button>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Quiet Crisis -->
+  <div class="section section-white">
+    <h2 class="section-heading">The Quiet Crisis of High Performance</h2>
+    <div class="crisis-content">
+      <p>To the outside world, you are operating at the peak of success. But behind closed doors, the relentless pressure of leadership has extracted a massive toll on your physical biology. Chronic stress, sleep fragmentation, and constant cognitive overload have trapped your body in a persistent state of sympathetic dominance: fight-or-flight.</p>
+      <p>When your nervous system is deregulated, your strategic clarity, emotional resilience, and overall health suffer. This is not a vacation. This is a scientific intervention.</p>
+      <p>Over 4 days on the Big Island of Hawaii, we will systematically deactivate your stress response, rest your visual cortex, and physically retrain your vagus nerve to restore your biological baseline. You will leave neurologically different.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Science -->
+  <div class="section section-cream">
+    <h2 class="section-heading">Clinical-Grade Nervous System Regulation</h2>
+    <p style="text-align: center; max-width: 700px; margin: 0 auto 48px; font-size: 17px; color: var(--midnight);">We do not offer generic relaxation. Our protocol combines ancestral acoustic technologies with sensory deprivation to target the vagus nerve—the primary superhighway of your parasympathetic nervous system.</p>
+    
+    <div class="science-grid">
+      <div class="science-item">
+        <div class="science-icon">◆</div>
+        <h3>Neuro-Acoustic Somatic Toning</h3>
+        <p>Through targeted vocal yoga and precision sound frequencies, we use mechanical vibration to stimulate the vagal pathways in the throat. This immediately triggers a physiological slowdown, lowering blood pressure in minutes.</p>
+      </div>
+      <div class="science-item">
+        <div class="science-icon">◇</div>
+        <h3>Hydro-Acoustic Floating</h3>
+        <p>Float weightlessly while underwater acoustic transducers emit low-frequency sound waves. Your bones absorb these vibrations, bypassing the analytical mind to slow your brainwaves to Alpha and Theta states.</p>
+      </div>
+      <div class="science-item">
+        <div class="science-icon">◆</div>
+        <h3>24-Hour Blind Immersion</h3>
+        <p>Removing sight for 24 hours shuts down visual cortex overstimulation. Your auditory, tactile, and somatic senses skyrocket by 10x, allowing our therapies to penetrate at a cellular level.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Itinerary -->
+  <div class="section section-white">
+    <h2 class="section-heading">The Protocol for Deep Transformation</h2>
+    <p class="itinerary-intro">Every hour is intentionally curated to transition your body from high-frequency executive survival to deep, restorative stillness.</p>
+    
+    <div class="day-section">
+      <div class="day-heading">Day 1: The Severance & Unplugging</div>
+      <div class="day-item"><span class="day-time">14:00 –</span> VIP Private Transit Arrival & Luxury Villa Check-in</div>
+      <div class="day-item"><span class="day-time">16:00 –</span> The Digital Severance: Devices securely locked away to break dopamine addiction loops</div>
+      <div class="day-item"><span class="day-time">17:30 –</span> Opening Orientation & Initial Biometric Review</div>
+      <div class="day-item"><span class="day-time">19:00 –</span> Welcome Dinner: Anti-inflammatory, locally sourced organic cuisine</div>
+      <div class="day-item"><span class="day-time">20:30 –</span> Somatic Grounding Sound Bath to eliminate travel anxiety</div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Day 2: Acoustic Re-Awakening & Vagal Toning</div>
+      <div class="day-item"><span class="day-time">07:30 –</span> Morning Hydration & Nervous System Breathwork</div>
+      <div class="day-item"><span class="day-time">09:00 –</span> Vocal Yoga Workshop: Activating vocal cord resonance to stimulate vagal pathways</div>
+      <div class="day-item"><span class="day-time">12:30 –</span> Organic, nutrient-dense lunch</div>
+      <div class="day-item"><span class="day-time">14:30 –</span> Hydro-Acoustic Floating Journey (Session 1: Gravitational Release)</div>
+      <div class="day-item"><span class="day-time">17:00 –</span> Group Integration & Executive Stress-Mapping</div>
+      <div class="day-item"><span class="day-time">19:00 –</span> Ocean-side Dinner</div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Day 3: The 24-Hour Blind Sensory Immersion</div>
+      <div class="day-item"><span class="day-time">08:00 –</span> Total Blackout Mask Fitting (Masks remain on for 24 continuous hours)</div>
+      <div class="day-item"><span class="day-time">09:00 –</span> Sensory Breakfast: Re-engaging olfactory and tactile receptivity</div>
+      <div class="day-item"><span class="day-time">11:00 –</span> Blind Neuro-Acoustic Sound Immersion amplified tenfold by visual deprivation</div>
+      <div class="day-item"><span class="day-time">14:30 –</span> Blind Vocal Yoga & Chanting: Releasing deep stress without self-consciousness</div>
+      <div class="day-item"><span class="day-time">18:30 –</span> Sensory Dinner in complete visual darkness</div>
+      <div class="day-item"><span class="day-time">20:30 –</span> The Sunset Unveiling: Strategic removal of masks, followed by silent meditation</div>
+    </div>
+
+    <div class="day-section" style="border-bottom: none;">
+      <div class="day-heading">Day 4: Strategic Re-Entry & Integration</div>
+      <div class="day-item"><span class="day-time">08:00 –</span> Final Biometric Check-in & Recovery Matrix Analysis</div>
+      <div class="day-item"><span class="day-time">09:30 –</span> Boardroom Integration Workshop: Building nervous system habits for high-stress workspaces</div>
+      <div class="day-item"><span class="day-time">11:30 –</span> Device Return & Closing Circle</div>
+      <div class="day-item"><span class="day-time">13:00 –</span> Private Transit Departures</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Data Loop -->
+  <div class="section section-cream">
+    <h2 class="section-heading">Biometric Tracking & Integration</h2>
+    <p class="data-intro">We do not guess your recovery; we measure it using advanced biosensors. Your transformation is proven through continuous data tracking across three phases.</p>
+    
+    <div class="data-grid">
+      <div class="data-phase">
+        <h3>Phase 1: Pre-Retreat</h3>
+        <p>October 2026. Premium tracking wearable shipped to your home. We track your Heart Rate Variability, sleep, and cortisol in your high-stress environment for 30 days.</p>
+      </div>
+      <div class="data-phase">
+        <h3>Phase 2: On-Site</h3>
+        <p>November 2026. Your biometric trends are analyzed and used to tailor your vocal yoga frequencies and floating sound journeys.</p>
+      </div>
+      <div class="data-phase">
+        <h3>Phase 3: Integration</h3>
+        <p>December 2026. Continued tracking for 30 days. 1-on-1 data review call analyzing your improved HRV and sleep scores.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Inclusions -->
+  <div class="section section-white">
+    <h2 class="section-heading">Ultra-Exclusive Inclusions & Investment</h2>
+    
+    <div class="exclusivity">
+      Due to the highly immersive nature of the 24-hour blind sensory day and personalized biometric tracking, this cohort is strictly limited to 12 curated attendees.
+    </div>
+
+    <h3 style="text-align: center; font-size: 18px; font-weight: 600; color: var(--midnight); margin-bottom: 24px;">What's Included</h3>
+
+    <ul class="inclusions-list">
+      <li>4 Days / 3 Nights in a private, ultra-luxury eco-villa on Big Island</li>
+      <li>All gourmet, organic meals curated by a private chef to optimize cell health</li>
+      <li>Complete access to all private sound therapy pools, floating setups, and vocal yoga sessions</li>
+      <li>All biometric tracking hardware shipped to your home, including pre-and-post data monitoring</li>
+      <li>Two private, 1-on-1 virtual integration and prep consultations</li>
+      <li>All local luxury airport ground transit in Hawaii</li>
+    </ul>
+
+    <div class="investment-section">
+      <div class="investment-heading">Total Investment</div>
+      <div class="investment-grid">
+        <div class="investment-option">
+          <h4>Full Tuition</h4>
+          <div class="investment-amount">$6,000</div>
+          <div class="investment-desc">One-time payment. Due prior to arrival.</div>
+        </div>
+        <div class="investment-option">
+          <h4>Payment Plan</h4>
+          <div class="investment-amount">5 × $1K</div>
+          <div class="investment-desc">$1,000 deposit to secure. Then $1,000 monthly (July–November 2026).</div>
+        </div>
+      </div>
+      <p class="terms">All balances must be settled in full prior to arrival. All payments are non-refundable but fully transferable to a qualified colleague upon approval.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Application -->
+  <div class="section app-section">
+    <h2 class="app-heading">Application for Private Invitation</h2>
+    <p class="app-intro">To ensure a cohesive, intentional cohort, admission is by private application only. All applicants participate in a 30-minute intake call.</p>
+
+    <div class="form-container">
+      <form onsubmit="alert('Application submitted. You will hear from us within 48 hours.'); return false;">
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="First and last name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+        </div>
+        <div class="form-group">
+          <label for="title">Professional title</label>
+          <input type="text" id="title" name="title" placeholder="e.g., CEO, Founder">
+        </div>
+        <div class="form-group">
+          <label for="message">What are you hoping to reset?</label>
+          <textarea id="message" name="message" placeholder="Tell us about your current stress levels and what you're seeking..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Submit Application & Schedule Consultation</button>
+        <div class="form-note">Your information is confidential. We'll reach out within 48 hours.</div>
+      </form>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Closing -->
+  <div class="closing-cta">
+    <h2>Your nervous system is ready. <em>Apply for your private intake call today.</em></h2>
+    <button class="btn-primary">Apply for Intake Consultation</button>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-line">Stillness Curated Retreats</div>
+    <div class="footer-line">Big Island, Hawaii · November 17–22, 2026</div>
+    <div class="footer-line contact">© 2026 Stillness Curated Retreats | hello@stillnesscurated.com</div>
+  </div>
+</div>

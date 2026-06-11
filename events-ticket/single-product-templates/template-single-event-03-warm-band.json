@@ -1,0 +1,26 @@
+{
+  "version": "0.4",
+  "title": "Single Event - 03 Warm Band",
+  "type": "section",
+  "content": [
+    {
+      "id": "se_warm_wrap",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": { "unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": true }
+      },
+      "elements": [
+        {
+          "id": "se_warm_html",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class=\"se-warm-band\">\n  <div class=\"se-warm-item\">\n    <span class=\"se-warm-num\">I</span>\n    <span class=\"se-warm-label\">Dates</span>\n    <span class=\"se-warm-value\">[se_event_attr name=\"Event Dates\"]</span>\n  </div>\n  <div class=\"se-warm-item\">\n    <span class=\"se-warm-num\">II</span>\n    <span class=\"se-warm-label\">Duration</span>\n    <span class=\"se-warm-value\">[se_event_attr name=\"Duration\"]</span>\n  </div>\n  <div class=\"se-warm-item\">\n    <span class=\"se-warm-num\">III</span>\n    <span class=\"se-warm-label\">Sanctuary</span>\n    <span class=\"se-warm-value\">[se_event_attr name=\"Sanctuary\"]</span>\n  </div>\n</div>\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap');\n.se-warm-band {\n  display: grid !important;\n  grid-template-columns: repeat(3, 1fr) !important;\n  background: #F0E4D0 !important;\n  border-top: 0.5px solid rgba(196,187,180,0.5) !important;\n  border-bottom: 0.5px solid rgba(196,187,180,0.5) !important;\n}\n.se-warm-item {\n  padding: 44px !important;\n  border-right: 0.5px solid rgba(196,149,90,0.25) !important;\n  display: flex !important;\n  flex-direction: column !important;\n  gap: 4px !important;\n}\n.se-warm-item:first-child { padding-left: 4rem !important; }\n.se-warm-item:last-child { border-right: none !important; }\n.se-warm-num {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 11px !important;\n  color: #C4935A !important;\n  letter-spacing: 0.2em !important;\n  font-weight: 500 !important;\n}\n.se-warm-label {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 20px !important;\n  font-weight: 300 !important;\n  color: #0E1B30 !important;\n  line-height: 1.3 !important;\n}\n.se-warm-value {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 12px !important;\n  line-height: 1.6 !important;\n  color: #3D4F57 !important;\n  letter-spacing: 0.02em !important;\n}\n@media (max-width: 768px) {\n  .se-warm-band { grid-template-columns: 1fr !important; }\n  .se-warm-item {\n    padding: 24px 1.5rem !important;\n    border-right: none !important;\n    border-bottom: 0.5px solid rgba(196,149,90,0.2) !important;\n  }\n  .se-warm-item:last-child { border-bottom: none !important; }\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": []
+}

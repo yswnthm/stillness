@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "ms_nav",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "ms_html_nav",
+          "elType": "widget",
+          "settings": {
+            "html": "<nav class=\"ms-nav\">\n  <div class=\"ms-nav-logo\">Stillness</div>\n  <a href=\"#join\" class=\"ms-nav-cta\">Join the Community</a>\n</nav>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap');\n\n*,*::before,*::after{box-sizing:border-box !important;margin:0 !important;padding:0 !important}\n\n:root{\n  --ms-stone:#0E1B30;\n  --ms-cream:#F7F0EC;\n  --ms-breeze:#D9E8EB;\n  --ms-seafoam:#688F9D;\n  --ms-wave:#7A8F96;\n  --ms-sand:#C4BBB4;\n  --ms-midnight:#1D3152;\n  --ms-warm:#E8DDD6;\n  --ms-amber:#C4935A;\n  --ms-amber-light:#F0E4D0;\n  --ms-text-body:#3D4F57;\n  --ms-text-light:#7A8F96;\n}\n\n.ms-nav {\n  position: fixed !important;\n  top: 0 !important;\n  left: 0 !important;\n  right: 0 !important;\n  z-index: 100 !important;\n  padding: 20px 52px !important;\n  display: flex !important;\n  justify-content: space-between !important;\n  align-items: center !important;\n  background: rgba(247,240,236,0.92) !important;\n  backdrop-filter: blur(12px) !important;\n  border-bottom: 0.5px solid rgba(196,187,180,0.3) !important;\n}\n\n.ms-nav-logo {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 13px !important;\n  font-weight: 400 !important;\n  letter-spacing: 0.35em !important;\n  text-transform: uppercase !important;\n  color: var(--ms-stone) !important;\n  text-decoration: none !important;\n}\n\n.ms-nav-cta {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 9px !important;\n  letter-spacing: 0.22em !important;\n  text-transform: uppercase !important;\n  color: var(--ms-cream) !important;\n  background: var(--ms-stone) !important;\n  padding: 8px 20px !important;\n  border-radius: 2px !important;\n  text-decoration: none !important;\n  transition: all 0.3s ease !important;\n  font-weight: 400 !important;\n}\n\n.ms-nav-cta:hover {\n  background: var(--ms-midnight) !important;\n}\n\n@media (max-width: 768px) {\n  .ms-nav { padding: 16px 24px !important; }\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Men's Series — 01 Nav",
+  "type": "section"
+}

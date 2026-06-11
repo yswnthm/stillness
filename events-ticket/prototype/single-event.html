@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stillness — Test Retreat June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --stone: #0E1B30; 
+  --midnight: #1D3152; 
+  --seafoam: #688F9D;
+  --wave: #A4B2BA; 
+  --breeze: #D9E8EB; 
+  --sand: #C4BBB4; 
+  --cream: #F7F0EC; 
+  --warm: #F2E8DF; 
+  --white: #FFFFFF;
+  --amber: #C4935A;
+  --amber-light: #F0E4D0;
+  --text-body: #3D4F57;
+  --text-light: #7A8F96;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--stone); font-family: 'Jost', sans-serif; font-weight: 300; overflow-x: hidden; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 52px; display: flex; justify-content: space-between; align-items: center; background: rgba(247,240,236,0.92); backdrop-filter: blur(12px); border-bottom: 0.5px solid rgba(196,187,180,0.3); }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 400; letter-spacing: 0.35em; text-transform: uppercase; color: var(--stone); text-decoration: none; }
+.nav-links { display: flex; gap: 2rem; }
+.nav-links a { text-decoration: none; font-size: 10px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: var(--stone); transition: color 0.3s; }
+.nav-links a:hover { color: var(--seafoam); }
+.nav-cta { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cream); background: var(--stone); padding: 8px 20px; border-radius: 2px; text-decoration: none; transition: all 0.3s ease; font-weight: 400; }
+.nav-cta:hover { background: var(--midnight); }
+
+/* HERO BANNER */
+.hero { position: relative; height: 60vh; min-height: 480px; display: flex; align-items: flex-end; overflow: hidden; background: var(--stone); }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; opacity: 0.85; animation: slowzoom 16s ease forwards; }
+@keyframes slowzoom {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1.0); }
+}
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,27,48,0.95) 0%, rgba(14,27,48,0.4) 60%, rgba(14,27,48,0.15) 100%); }
+.hero-content { position: relative; z-index: 2; padding: 0 4rem 4rem; max-width: 900px; }
+.eyebrow { font-size: 0.65rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--seafoam); margin-bottom: 1rem; display: block; opacity: 0; animation: fadeUp 1s ease 0.4s forwards; }
+.hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 300; line-height: 1.05; color: var(--cream); margin-bottom: 0.5rem; opacity: 0; animation: fadeUp 1s ease 0.7s forwards; }
+.hero-title em { font-style: italic; color: var(--breeze); }
+.hero-sub { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--wave); opacity: 0; animation: fadeUp 1s ease 1s forwards; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* WARM BAND METADATA STRIP */
+.warm-band { padding: 44px 0; background: var(--amber-light); border-top: 0.5px solid rgba(196,187,180,0.5); border-bottom: 0.5px solid rgba(196,187,180,0.5); position: relative; z-index: 10; }
+.warm-grid { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 1200px; margin: 0 auto; padding: 0 4rem; }
+.warm-item { padding: 0 44px; border-right: 0.5px solid rgba(196,149,90,0.25); display: flex; flex-direction: column; gap: 4px; }
+.warm-item:first-child { padding-left: 0; }
+.warm-item:last-child { border-right: none; }
+.warm-num { font-family: 'Cormorant Garamond', serif; font-size: 11px; color: var(--amber); letter-spacing: 0.2em; font-weight: 500; }
+.warm-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; color: var(--stone); line-height: 1.3; }
+.warm-body { font-size: 12px; line-height: 1.6; color: var(--text-body); letter-spacing: 0.02em; }
+
+/* CONTENT LAYOUT CONTAINER */
+.container { max-width: 1200px; margin: 0 auto; padding: 80px 4rem; display: grid; grid-template-columns: 1fr 380px; gap: 80px; position: relative; }
+
+/* LEFT COLUMN — CONTENT */
+.content-left { display: flex; flex-direction: column; gap: 60px; }
+.description-block { display: flex; flex-direction: column; gap: 24px; }
+.description-block h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 300; line-height: 1.15; color: var(--stone); }
+.description-block h2 em { font-style: italic; color: var(--seafoam); }
+.description-block p { font-size: 13.5px; line-height: 1.95; color: var(--text-body); }
+.description-block blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.1rem, 1.8vw, 1.45rem); font-weight: 300; font-style: italic; color: var(--stone); line-height: 1.6; margin: 16px 0; border-left: 1.5px solid var(--seafoam); padding-left: 1.5rem; }
+
+.pillars-list { display: flex; flex-direction: column; gap: 32px; margin-top: 16px; }
+.pillar-row { display: flex; gap: 24px; }
+.pillar-icon { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 300; color: var(--seafoam); width: 32px; text-align: center; }
+.pillar-details h4 { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: var(--stone); margin-bottom: 6px; }
+.pillar-details p { font-size: 12.5px; line-height: 1.8; color: var(--text-body); }
+
+
+
+/* RIGHT COLUMN — BOOKING WIDGET (STICKY) */
+.booking-sidebar { position: relative; }
+.booking-card { position: sticky; top: 120px; background: var(--white); border: 0.5px solid rgba(14,27,48,0.08); border-radius: 3px; padding: 36px; display: flex; flex-direction: column; gap: 28px; box-shadow: 0 16px 40px rgba(14,27,48,0.05); transition: opacity 0.3s, transform 0.3s; }
+
+.booking-header { display: flex; flex-direction: column; gap: 8px; }
+.booking-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 8.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); font-weight: 500; }
+.badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); animation: pulse 2s infinite; }
+@keyframes pulse {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 8px var(--amber); }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.booking-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; color: var(--stone); letter-spacing: 0.01em; }
+.booking-price { font-family: 'Jost', sans-serif; font-size: 26px; font-weight: 400; color: var(--seafoam); margin-top: 4px; }
+
+.booking-details-list { display: flex; flex-direction: column; gap: 12px; border-top: 0.5px solid rgba(14,27,48,0.06); border-bottom: 0.5px solid rgba(14,27,48,0.06); padding: 20px 0; }
+.booking-detail-item { display: flex; align-items: center; gap: 12px; font-size: 11.5px; color: var(--text-body); }
+.booking-detail-item svg { width: 14px; height: 14px; fill: var(--seafoam); flex-shrink: 0; }
+
+.booking-qty-wrapper { display: flex; flex-direction: column; gap: 8px; }
+.qty-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); font-weight: 500; }
+.qty-selectors { display: flex; border: 0.5px solid rgba(14,27,48,0.15); border-radius: 2px; overflow: hidden; width: 120px; height: 40px; }
+.qty-btn { width: 40px; border: none; background: transparent; color: var(--stone); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 14px; transition: background 0.2s; }
+.qty-btn:hover { background: rgba(217,232,235,0.3); }
+.qty-input { width: 40px; border: none; border-left: 0.5px solid rgba(14,27,48,0.15); border-right: 0.5px solid rgba(14,27,48,0.15); text-align: center; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 400; color: var(--stone); outline: none; background: transparent; }
+
+.booking-btn { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cream); background: var(--stone); border: none; padding: 16px 24px; border-radius: 2px; cursor: pointer; text-align: center; transition: all 0.3s ease; text-decoration: none; width: 100%; display: block; }
+.booking-btn:hover { background: var(--midnight); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(14,27,48,0.1); }
+
+.booking-secondary-link { display: none; text-align: center; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--seafoam); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+.booking-secondary-link:hover { color: var(--stone); }
+
+.booking-trust { font-size: 10px; line-height: 1.5; color: var(--text-light); text-align: center; font-style: italic; }
+
+/* WAITLIST SECTION */
+.notify-section { padding: 8px 0; background: var(--stone); border-top: 0.5px solid rgba(104,143,157,0.15); }
+.notify-inner { max-width: 1200px; margin: 0 auto; padding: 110px 4rem; text-align: center; }
+.notify-inner h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; color: var(--cream); margin-bottom: 12px; line-height: 1.1; }
+.notify-inner h2 em { font-style: italic; color: var(--wave); }
+.notify-inner p { font-size: 0.93rem; color: var(--wave); max-width: 460px; margin: 0 auto 3rem; line-height: 1.9; }
+.form-row { display: flex; max-width: 480px; margin: 0 auto 12px; gap: 0; }
+.form-row input { flex: 1; background: rgba(255,255,255,0.04); border: 0.5px solid rgba(104,143,157,0.35); border-right: none; color: var(--cream); font-family: 'Jost', sans-serif; font-size: 0.85rem; padding: 16px 24px; outline: none; transition: border-color 0.3s; border-radius: 2px 0 0 2px; }
+.form-row input::placeholder { color: rgba(164,178,186,0.45); }
+.form-row input:focus { border-color: rgba(104,143,157,0.65); }
+.form-row button { background: var(--seafoam); border: 0.5px solid var(--seafoam); color: var(--stone); font-family: 'Jost', sans-serif; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; padding: 16px 28px; cursor: pointer; transition: all 0.3s; white-space: nowrap; border-radius: 0 2px 2px 0; }
+.form-row button:hover { background: var(--breeze); border-color: var(--breeze); }
+.form-note { font-size: 0.7rem; color: rgba(164,178,186,0.42); letter-spacing: 0.06em; }
+
+/* FOOTER */
+footer { background: var(--stone); border-top: 0.5px solid rgba(255,255,255,0.05); padding: 60px 4rem; text-align: center; }
+.footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 400; letter-spacing: 0.35em; text-transform: uppercase; color: var(--cream); margin-bottom: 24px; }
+.footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 32px; }
+.footer-links a { text-decoration: none; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--wave); transition: color 0.3s; }
+.footer-links a:hover { color: var(--cream); }
+.footer-copy { font-size: 10px; color: rgba(164,178,186,0.3); letter-spacing: 0.05em; }
+
+/* REVEAL ANIMATIONS */
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* --- STATE: SOLD OUT MODIFIER --- */
+.state-sold-out .booking-badge { color: var(--text-light); }
+.state-sold-out .badge-dot { background: var(--text-light); animation: none; }
+.state-sold-out .booking-price { color: var(--text-light); text-decoration: line-through; opacity: 0.7; }
+.state-sold-out .booking-qty-wrapper { display: none; }
+.state-sold-out .booking-btn { background: var(--sand); color: rgba(14,27,48,0.5); cursor: not-allowed; pointer-events: none; }
+.state-sold-out .booking-btn::after { content: ' (SOLD OUT)'; font-size: 8px; }
+.state-sold-out .booking-secondary-link { display: block; margin-top: 8px; }
+.state-sold-out .booking-trust { display: none; }
+
+/* STATE TOGGLER DEMO PANEL */
+.demo-switcher { position: fixed; bottom: 24px; left: 24px; z-index: 1000; background: rgba(14,27,48,0.85); backdrop-filter: blur(8px); border: 0.5px solid rgba(104,143,157,0.35); border-radius: 4px; padding: 16px; width: 220px; box-shadow: 0 10px 30px rgba(0,0,0,0.35); font-family: 'Jost', sans-serif; color: var(--cream); transition: opacity 0.3s; }
+.demo-title { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--seafoam); margin-bottom: 10px; font-weight: 500; }
+.demo-desc { font-size: 10px; line-height: 1.5; color: var(--wave); margin-bottom: 12px; }
+.demo-btn-group { display: flex; gap: 8px; }
+.demo-toggle-btn { flex: 1; padding: 8px; font-size: 9px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border: 0.5px solid rgba(255,255,255,0.15); background: transparent; color: var(--cream); cursor: pointer; border-radius: 2px; transition: all 0.2s; }
+.demo-toggle-btn:hover { background: rgba(255,255,255,0.05); }
+.demo-toggle-btn.active { background: var(--seafoam); border-color: var(--seafoam); color: var(--stone); }
+
+/* RESPONSIVE */
+@media(max-width: 1024px) {
+  .container { grid-template-columns: 1fr; gap: 60px; padding: 60px 2.5rem; }
+  .booking-card { position: static; width: 100%; max-width: 500px; margin: 0 auto; }
+}
+
+@media(max-width: 768px) {
+  nav { padding: 15px 24px; }
+  .nav-links { display: none; }
+  .hero-content { padding: 0 1.5rem 3rem; }
+  .warm-grid { grid-template-columns: 1fr; gap: 24px; padding: 0 1.5rem; }
+  .warm-item { padding: 0; border-right: none; border-bottom: 0.5px solid rgba(196,149,90,0.15); padding-bottom: 16px; }
+  .warm-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .container { padding: 40px 1.5rem; }
+  .notify-inner { padding: 60px 1.5rem; }
+  .form-row { flex-direction: column; }
+  .form-row input { border-right: 0.5px solid rgba(104,143,157,0.35); border-bottom: none; border-radius: 2px 2px 0 0; }
+  .form-row button { border-radius: 0 0 2px 2px; }
+  footer { padding: 40px 1.5rem; }
+  .footer-links { flex-direction: column; gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- DEMO SWITCHER PANEL -->
+<div class="demo-switcher">
+  <div class="demo-title">Demo Controls</div>
+  <div class="demo-desc">Toggle states to test single product template layouts:</div>
+  <div class="demo-btn-group">
+    <button class="demo-toggle-btn active" id="btn-available" onclick="setProductState(true)">In Stock</button>
+    <button class="demo-toggle-btn" id="btn-soldout" onclick="setProductState(false)">Sold Out</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="events-catalog.html" class="nav-logo">Stillness Co.</a>
+  <div class="nav-links">
+    <a href="events-catalog.html">Retreats</a>
+    <a href="#">Shop</a>
+    <a href="#">Journal</a>
+  </div>
+  <a href="#booking-section" class="nav-cta" id="nav-cta-btn">Book Ticket</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?auto=format&fit=crop&q=80&w=1600" alt="Sound Healing Session">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="eyebrow">Summer Immersion</span>
+    <h1 class="hero-title" id="hero-title-text">Test Retreat — <em>June 2026</em></h1>
+    <div class="hero-sub">The Wellness Sanctuary, South Goa</div>
+  </div>
+</section>
+
+<!-- WARM METADATA STRIP -->
+<section class="warm-band">
+  <div class="warm-grid">
+    <div class="warm-item">
+      <span class="warm-num">I</span>
+      <h3 class="warm-title">Dates</h3>
+      <p class="warm-body">15 June 2026 – 18 June 2026<br>Thursday to Sunday</p>
+    </div>
+    <div class="warm-item">
+      <span class="warm-num">II</span>
+      <h3 class="warm-title">Duration</h3>
+      <p class="warm-body">3 Days, 3 Nights<br>Fully Immersive Program</p>
+    </div>
+    <div class="warm-item">
+      <span class="warm-num">III</span>
+      <h3 class="warm-title">Sanctuary</h3>
+      <p class="warm-body">The Wellness Sanctuary<br>South Goa, India</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTAINER -->
+<div class="container">
+  
+  <!-- LEFT COLUMN -->
+  <div class="content-left">
+    
+    <!-- DESC BLOCK -->
+    <div class="description-block reveal">
+      <h2>A return to <em>your center</em>.</h2>
+      <blockquote>"A profound stillness that lingers long after you return to the rhythm of daily life."</blockquote>
+      <p>Join us for our signature summer immersion. Three days of guided meditation, somatic breathwork, and sound therapy in an intimate group setting of just 12 participants.</p>
+      <p>Set on the untouched beachfront of South Goa, The Wellness Sanctuary offers an architecturally stunning environment designed to ease the nervous system. We will explore deep restorative practices, offline silent segments, and daily integration circles designed to bring alignment and space back to your life.</p>
+    </div>
+
+    <!-- CORE PILLARS -->
+    <div class="description-block reveal">
+      <h2>The <em>Experience</em> Pillars</h2>
+      <div class="pillars-list">
+        
+        <div class="pillar-row">
+          <div class="pillar-icon">I</div>
+          <div class="pillar-details">
+            <h4>Intimate Group Dynamics</h4>
+            <p>Strictly limited to 12 participants. A small group size preserves the integrity and depth of the space, allowing for individualized support and genuine integration.</p>
+          </div>
+        </div>
+
+        <div class="pillar-row">
+          <div class="pillar-icon">II</div>
+          <div class="pillar-details">
+            <h4>Somatic Breathwork & Sound</h4>
+            <p>Utilize ancient breath patterns and deep acoustic resonance from Himalayan singing bowls to release trapped stressors and bypass the overactive analytical mind.</p>
+          </div>
+        </div>
+
+        <div class="pillar-row">
+          <div class="pillar-icon">III</div>
+          <div class="pillar-details">
+            <h4>Sanctuary Integration</h4>
+            <p>Equip yourself with practical, grounded integration frameworks. The retreat is not an escape from reality; it is a laboratory for learning how to construct your daily life with clarity.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <!-- RIGHT COLUMN (STICKY) -->
+  <div class="booking-sidebar" id="booking-section">
+    <div class="booking-card">
+      <div class="booking-header">
+        <span class="booking-badge" id="spots-badge">
+          <span class="badge-dot"></span>
+          <span id="spots-badge-text">Only 3 spots remaining</span>
+        </span>
+        <h3 class="booking-title" id="booking-title-text">Test Retreat — June 2026</h3>
+        <div class="booking-price" id="booking-price-text">₹55,000</div>
+      </div>
+
+      <div class="booking-details-list">
+        <div class="booking-detail-item">
+          <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+          <span>15 – 18 June 2026 (3 Nights)</span>
+        </div>
+        <div class="booking-detail-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>South Goa Beachfront Sanctuary</span>
+        </div>
+        <div class="booking-detail-item">
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 8 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          <span>Intimate gathering (Max 12)</span>
+        </div>
+      </div>
+
+      <div class="booking-qty-wrapper" id="qty-wrapper">
+        <span class="qty-label">Quantity</span>
+        <div class="qty-selectors">
+          <button class="qty-btn" onclick="updateQty(-1)">-</button>
+          <input type="text" class="qty-input" id="ticket-qty" value="1" readonly>
+          <button class="qty-btn" onclick="updateQty(1)">+</button>
+        </div>
+      </div>
+
+      <a href="/checkout/" class="booking-btn" id="booking-main-btn">Book Ticket</a>
+      <a href="#notify" class="booking-secondary-link" id="booking-waitlist-link">Join Waitlist Instead &rarr;</a>
+
+      <div class="booking-trust">
+        Price includes luxury boutique lodging, organic vegetarian meals, all daily practices, and integration materials.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- WAITLIST SECTION -->
+<section class="notify-section" id="notify">
+  <div class="notify-inner reveal">
+    <h2 id="waitlist-title">Join the <em>Waitlist</em></h2>
+    <p id="waitlist-desc">Our retreats often sell out before public release. Enter your details to receive advance notice of new dates or immediate updates on cancellations for the June 2026 session.</p>
+    <div class="form-row">
+      <input type="email" placeholder="Your best email address" required>
+      <button>Notify Me</button>
+    </div>
+    <span class="form-note">We respect your privacy. Opt-out at any time.</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Stillness Co.</div>
+  <div class="footer-links">
+    <a href="events-catalog.html">Retreats</a>
+    <a href="#">Shop</a>
+    <a href="#">Journal</a>
+    <a href="#">Policies</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="footer-copy">
+    &copy; 2026 Stillness Curated Retreats. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  // Quantity Selector logic
+  const qtyInput = document.getElementById('ticket-qty');
+  const maxStock = 3; // urgent test state
+
+  function updateQty(change) {
+    let currentVal = parseInt(qtyInput.value);
+    let newVal = currentVal + change;
+    if (newVal >= 1 && newVal <= maxStock) {
+      qtyInput.value = newVal;
+    }
+  }
+
+  // State Switching Logic for Demo Purposes
+  function setProductState(isAvailable) {
+    const body = document.body;
+    const btnAvailable = document.getElementById('btn-available');
+    const btnSoldout = document.getElementById('btn-soldout');
+    const mainBtn = document.getElementById('booking-main-btn');
+    const spotsBadgeText = document.getElementById('spots-badge-text');
+    const navCtaBtn = document.getElementById('nav-cta-btn');
+    const waitlistTitle = document.getElementById('waitlist-title');
+    const waitlistDesc = document.getElementById('waitlist-desc');
+
+    if (isAvailable) {
+      body.classList.remove('state-sold-out');
+      btnAvailable.classList.add('active');
+      btnSoldout.classList.remove('active');
+      mainBtn.innerText = 'Book Ticket';
+      mainBtn.href = '/checkout/';
+      spotsBadgeText.innerText = 'Only 3 spots remaining';
+      navCtaBtn.innerText = 'Book Ticket';
+      navCtaBtn.href = '#booking-section';
+      waitlistTitle.innerHTML = 'Join the <em>Waitlist</em>';
+      waitlistDesc.innerText = "Our retreats often sell out before public release. Enter your details to receive advance notice of new dates or immediate updates on cancellations for the June 2026 session.";
+    } else {
+      body.classList.add('state-sold-out');
+      btnAvailable.classList.remove('active');
+      btnSoldout.classList.add('active');
+      mainBtn.innerText = 'Sold Out';
+      mainBtn.href = '#notify';
+      spotsBadgeText.innerText = 'SOLD OUT';
+      navCtaBtn.innerText = 'Sold Out — Waitlist';
+      navCtaBtn.href = '#notify';
+      waitlistTitle.innerHTML = 'June Retreat is <em>Sold Out</em>';
+      waitlistDesc.innerText = "All spots for our June 2026 Retreat are fully booked. Join the priority waitlist below to be the first in line if a spot opens up, or to receive early booking access for the next immersion.";
+    }
+  }
+
+  // Reveal Animations on Scroll
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal').forEach(element => {
+    observer.observe(element);
+  });
+</script>
+
+</body>
+</html>

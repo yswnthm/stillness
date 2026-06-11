@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "se_hero",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "se_hero_html",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"se-hero\">\n  <img class=\"se-hero-img\" src=\"https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?auto=format&fit=crop&q=80&w=1600\" alt=\"Sound healing session\">\n  <div class=\"se-hero-overlay\"></div>\n  <div class=\"se-hero-content\">\n    <span class=\"se-eyebrow\">Summer Immersion</span>\n    <h1 class=\"se-hero-title\">Test Retreat — <em>June 2026</em></h1>\n    <div class=\"se-hero-sub\">The Wellness Sanctuary, South Goa</div>\n  </div>\n</section>\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap');\n\n:root {\n  --se-stone: #0E1B30;\n  --se-midnight: #1D3152;\n  --se-seafoam: #688F9D;\n  --se-wave: #A4B2BA;\n  --se-breeze: #D9E8EB;\n  --se-sand: #C4BBB4;\n  --se-cream: #F7F0EC;\n  --se-white: #FFFFFF;\n  --se-amber: #C4935A;\n  --se-amber-light: #F0E4D0;\n  --se-text-body: #3D4F57;\n  --se-text-light: #7A8F96;\n}\n.se-hero { position: relative !important; height: 60vh !important; min-height: 480px !important; display: flex !important; align-items: flex-end !important; overflow: hidden !important; background: var(--se-stone) !important; }\n.se-hero-img { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; object-position: center 35% !important; opacity: 0.85 !important; animation: se-slowzoom 16s ease forwards !important; }\n.se-hero-overlay { position: absolute !important; inset: 0 !important; background: linear-gradient(to top, rgba(14,27,48,0.95) 0%, rgba(14,27,48,0.4) 60%, rgba(14,27,48,0.15) 100%) !important; }\n.se-hero-content { position: relative !important; z-index: 2 !important; padding: 0 4rem 4rem !important; max-width: 900px !important; }\n.se-eyebrow { font-family: 'Jost', sans-serif !important; font-size: 0.65rem !important; letter-spacing: 0.42em !important; text-transform: uppercase !important; color: var(--se-seafoam) !important; margin-bottom: 1rem !important; display: block !important; opacity: 0 !important; animation: se-fadeUp 1s ease 0.4s forwards !important; }\n.se-hero-title { font-family: 'Cormorant Garamond', serif !important; font-size: clamp(2.5rem, 5vw, 4.5rem) !important; font-weight: 300 !important; line-height: 1.05 !important; color: var(--se-cream) !important; margin: 0 0 0.5rem !important; opacity: 0 !important; animation: se-fadeUp 1s ease 0.7s forwards !important; }\n.se-hero-title em { font-style: italic !important; color: var(--se-breeze) !important; }\n.se-hero-sub { font-family: 'Jost', sans-serif !important; font-size: 11px !important; letter-spacing: 0.25em !important; text-transform: uppercase !important; color: var(--se-wave) !important; opacity: 0 !important; animation: se-fadeUp 1s ease 1s forwards !important; }\n@keyframes se-slowzoom { from { transform: scale(1.06); } to { transform: scale(1); } }\n@keyframes se-fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }\n@media(max-width: 768px) { .se-hero-content { padding: 0 1.5rem 3rem !important; } .se-hero { min-height: 440px !important; } }\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Single Event - 02 Hero",
+  "type": "section"
+}

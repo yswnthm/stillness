@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "ec_grid",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "ec_html_grid",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"ec-events-catalog\">\n  <div class=\"ec-events-grid-wrapper\">\n    [stillness_event_grid limit=\"3\"]\n  </div>\n</section>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap');\n\n.ec-events-catalog {\n  padding: 7rem 4rem !important;\n  background: #F2E8DF !important;\n}\n.ec-events-grid-wrapper {\n  max-width: 1280px !important;\n  margin: 0 auto !important;\n}\n.stillness-event-grid {\n  display: grid !important;\n  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;\n  gap: 2rem !important;\n}\n.stillness-event-card {\n  text-decoration: none !important;\n  background: #F7F0EC !important;\n  border: 0.5px solid rgba(14,27,48,0.06) !important;\n  overflow: hidden !important;\n  display: flex !important;\n  flex-direction: column !important;\n  min-height: 100% !important;\n  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease !important;\n  position: relative !important;\n}\n.stillness-event-card:hover {\n  transform: translateY(-6px) !important;\n  box-shadow: 0 16px 40px rgba(14, 27, 48, 0.09) !important;\n  border-color: rgba(14,27,48,0.12) !important;\n}\n.stillness-card-img-wrap {\n  width: 100% !important;\n  aspect-ratio: 4 / 3 !important;\n  overflow: hidden !important;\n  position: relative !important;\n  background: #D9E8EB !important;\n}\n.stillness-card-img {\n  width: 100% !important;\n  height: 100% !important;\n  object-fit: cover !important;\n  display: block !important;\n  transition: transform 1.2s ease !important;\n}\n.stillness-event-card:hover .stillness-card-img { transform: scale(1.05) !important; }\n.stillness-event-card.is-sold-out .stillness-card-img { opacity: 0.58 !important; filter: grayscale(0.2) !important; }\n.stillness-card-sold-badge {\n  position: absolute !important;\n  left: 24px !important;\n  right: 24px !important;\n  bottom: 24px !important;\n  background: rgba(247,240,236,0.86) !important;\n  color: #1D3152 !important;\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.72rem !important;\n  font-weight: 500 !important;\n  letter-spacing: 0.18em !important;\n  text-transform: uppercase !important;\n  text-align: center !important;\n  padding: 0.65rem 1rem !important;\n}\n.stillness-card-content {\n  padding: 2.2rem 1.7rem !important;\n  display: flex !important;\n  flex-direction: column !important;\n  flex: 1 !important;\n}\n.stillness-card-meta {\n  display: grid !important;\n  gap: 0.55rem !important;\n  margin-bottom: 1.25rem !important;\n}\n.stillness-card-meta span {\n  display: grid !important;\n  grid-template-columns: 74px 1fr !important;\n  gap: 0.75rem !important;\n  align-items: baseline !important;\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.76rem !important;\n  line-height: 1.45 !important;\n  color: rgba(14,27,48,0.64) !important;\n}\n.stillness-card-meta em {\n  font-style: normal !important;\n  font-size: 0.55rem !important;\n  letter-spacing: 0.2em !important;\n  text-transform: uppercase !important;\n  color: #688F9D !important;\n}\n.stillness-card-title {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 1.8rem !important;\n  font-weight: 300 !important;\n  color: #0E1B30 !important;\n  line-height: 1.18 !important;\n  margin: 0 0 0.8rem !important;\n}\n.stillness-card-desc {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.85rem !important;\n  line-height: 1.75 !important;\n  color: rgba(14,27,48,0.62) !important;\n  margin: 0 0 2rem !important;\n}\n.stillness-card-footer {\n  margin-top: auto !important;\n  padding-top: 1.4rem !important;\n  border-top: 0.5px solid rgba(14,27,48,0.08) !important;\n  display: flex !important;\n  align-items: center !important;\n  justify-content: space-between !important;\n  gap: 1rem !important;\n}\n.stillness-card-price {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 1rem !important;\n  font-weight: 400 !important;\n  color: #0E1B30 !important;\n}\n.stillness-card-price del { opacity: 0.45 !important; margin-right: 0.35rem !important; }\n.stillness-card-price ins { text-decoration: none !important; }\n.stillness-card-cta {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.6rem !important;\n  font-weight: 500 !important;\n  letter-spacing: 0.18em !important;\n  text-transform: uppercase !important;\n  color: #688F9D !important;\n  white-space: nowrap !important;\n}\n.stillness-event-card:hover .stillness-card-cta { color: #0E1B30 !important; }\n.stillness-event-card.is-sold-out { opacity: 0.82 !important; }\n.stillness-event-card.is-sold-out .stillness-card-cta { color: #A4B2BA !important; }\n.stillness-events-empty {\n  text-align: center !important;\n  padding: 6rem 2rem !important;\n  background: rgba(247,240,236,0.58) !important;\n}\n.stillness-events-empty h3 {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: clamp(1.7rem, 3vw, 2.6rem) !important;\n  font-weight: 300 !important;\n  font-style: italic !important;\n  color: #0E1B30 !important;\n  margin: 0 0 1rem !important;\n}\n.stillness-events-empty p {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.88rem !important;\n  color: rgba(14,27,48,0.55) !important;\n  line-height: 1.9 !important;\n  margin: 0 !important;\n}\n\n@media (max-width: 1100px) {\n  .stillness-event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }\n}\n@media (max-width: 768px) {\n  .ec-events-catalog { padding: 5rem 1.5rem !important; }\n  .stillness-event-grid { grid-template-columns: 1fr !important; }\n  .stillness-card-content { padding: 2rem 1.4rem !important; }\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Events Catalog — 04 Grid (Dynamic)",
+  "type": "section"
+}

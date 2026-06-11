@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "ec_philosophy",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "ec_html_philosophy",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"ec-window-strip ec-reveal\">\n  <h2>A return to <em>what matters</em></h2>\n  <p>Our retreats are not vacations; they are deep resets. We partner with the world's most serene sanctuaries to create environments where true inner work can naturally unfold.</p>\n</section>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap');\n\n*, *::before, *::after { margin: 0 !important; padding: 0 !important; box-sizing: border-box !important; }\n\n:root {\n  --ec-stone: #0E1B30;\n  --ec-midnight: #1D3152;\n  --ec-seafoam: #688F9D;\n  --ec-wave: #A4B2BA;\n  --ec-breeze: #D9E8EB;\n  --ec-sand: #C4BBB4;\n  --ec-cream: #F7F0EC;\n  --ec-warm: #F2E8DF;\n  --ec-white: #FFFFFF;\n}\n\n.ec-window-strip {\n  background: var(--ec-stone) !important;\n  padding: 5rem 4rem !important;\n  text-align: center !important;\n}\n\n.ec-window-strip h2 {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: clamp(1.6rem, 3vw, 2.8rem) !important;\n  font-weight: 300 !important;\n  color: var(--ec-cream) !important;\n  line-height: 1.2 !important;\n  margin-bottom: 1rem !important;\n}\n\n.ec-window-strip h2 em {\n  font-style: italic !important;\n  color: var(--ec-wave) !important;\n}\n\n.ec-window-strip p {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.88rem !important;\n  color: var(--ec-wave) !important;\n  max-width: 560px !important;\n  margin: 0 auto !important;\n  line-height: 1.9 !important;\n  opacity: 0.8 !important;\n}\n\n.ec-reveal {\n  opacity: 0 !important;\n  transform: translateY(24px) !important;\n  transition: opacity 0.8s ease, transform 0.8s ease !important;\n}\n\n.ec-reveal.ec-visible {\n  opacity: 1 !important;\n  transform: translateY(0) !important;\n}\n\n@media(max-width: 768px) {\n  .ec-window-strip {\n    padding: 5rem 1.5rem !important;\n  }\n}\n</style>\n\n<script>\n  setTimeout(() => {\n    const observerOptions = {\n      root: null,\n      rootMargin: '0px',\n      threshold: 0.15\n    };\n    const observer = new IntersectionObserver((entries, obs) => {\n      entries.forEach(entry => {\n        if (entry.isIntersecting) {\n          entry.target.classList.add('ec-visible');\n          obs.unobserve(entry.target);\n        }\n      });\n    }, observerOptions);\n    document.querySelectorAll('.ec-reveal').forEach(element => {\n      observer.observe(element);\n    });\n  }, 500);\n</script>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Events Catalog — 02 Philosophy",
+  "type": "section"
+}

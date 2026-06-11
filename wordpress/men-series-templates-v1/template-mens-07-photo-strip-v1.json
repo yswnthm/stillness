@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "ms_photo_strip",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "ms_html_photo_strip",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class=\"ms-photo-strip\">\n  <img src=\"\" alt=\"Men's Series atmosphere 1\" loading=\"lazy\">\n  <img src=\"\" alt=\"Men's Series atmosphere 2\" loading=\"lazy\">\n  <img src=\"\" alt=\"Men's Series atmosphere 3\" loading=\"lazy\">\n</div>\n\n<style>\n*,*::before,*::after{box-sizing:border-box !important}\n\n.ms-photo-strip {\n  display: grid !important;\n  grid-template-columns: 1fr 1fr 1fr !important;\n  height: 360px !important;\n  overflow: hidden !important;\n}\n\n.ms-photo-strip img {\n  width: 100% !important;\n  height: 100% !important;\n  object-fit: cover !important;\n  filter: saturate(0.9) !important;\n  transition: filter 0.5s ease !important;\n}\n\n.ms-photo-strip img:hover {\n  filter: saturate(1.1) !important;\n}\n\n@media (max-width: 768px) {\n  .ms-photo-strip { grid-template-columns: 1fr 1fr !important; height: 260px !important; }\n  .ms-photo-strip img:last-child { display: none !important; }\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Men's Series — 07 Photo Strip",
+  "type": "section"
+}

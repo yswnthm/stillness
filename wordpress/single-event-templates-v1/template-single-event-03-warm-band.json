@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "se_warm",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "se_warm_html",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"se-warm-band\">\n  <div class=\"se-warm-grid\">\n    <div class=\"se-warm-item\"><span class=\"se-warm-num\">I</span><h3 class=\"se-warm-title\">Dates</h3><p class=\"se-warm-body\">15 June 2026 - 18 June 2026<br>Thursday to Sunday</p></div>\n    <div class=\"se-warm-item\"><span class=\"se-warm-num\">II</span><h3 class=\"se-warm-title\">Duration</h3><p class=\"se-warm-body\">3 Days, 3 Nights<br>Fully Immersive Program</p></div>\n    <div class=\"se-warm-item\"><span class=\"se-warm-num\">III</span><h3 class=\"se-warm-title\">Sanctuary</h3><p class=\"se-warm-body\">The Wellness Sanctuary<br>South Goa, India</p></div>\n  </div>\n</section>\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap');\n\n:root {\n  --se-stone: #0E1B30;\n  --se-midnight: #1D3152;\n  --se-seafoam: #688F9D;\n  --se-wave: #A4B2BA;\n  --se-breeze: #D9E8EB;\n  --se-sand: #C4BBB4;\n  --se-cream: #F7F0EC;\n  --se-white: #FFFFFF;\n  --se-amber: #C4935A;\n  --se-amber-light: #F0E4D0;\n  --se-text-body: #3D4F57;\n  --se-text-light: #7A8F96;\n}\n.se-warm-band { padding: 44px 0 !important; background: var(--se-amber-light) !important; border-top: 0.5px solid rgba(196,187,180,0.5) !important; border-bottom: 0.5px solid rgba(196,187,180,0.5) !important; position: relative !important; z-index: 10 !important; }\n.se-warm-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; max-width: 1200px !important; margin: 0 auto !important; padding: 0 4rem !important; }\n.se-warm-item { padding: 0 44px !important; border-right: 0.5px solid rgba(196,149,90,0.25) !important; display: flex !important; flex-direction: column !important; gap: 4px !important; }\n.se-warm-item:first-child { padding-left: 0 !important; }\n.se-warm-item:last-child { border-right: none !important; }\n.se-warm-num { font-family: 'Cormorant Garamond', serif !important; font-size: 11px !important; color: var(--se-amber) !important; letter-spacing: 0.2em !important; font-weight: 500 !important; }\n.se-warm-title { font-family: 'Cormorant Garamond', serif !important; font-size: 20px !important; font-weight: 300 !important; color: var(--se-stone) !important; line-height: 1.3 !important; margin: 0 !important; }\n.se-warm-body { font-family: 'Jost', sans-serif !important; font-size: 12px !important; line-height: 1.6 !important; color: var(--se-text-body) !important; letter-spacing: 0.02em !important; margin: 0 !important; }\n@media(max-width: 768px) { .se-warm-grid { grid-template-columns: 1fr !important; gap: 24px !important; padding: 0 1.5rem !important; } .se-warm-item { padding: 0 0 16px !important; border-right: none !important; border-bottom: 0.5px solid rgba(196,149,90,0.15) !important; } .se-warm-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; } }\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Single Event - 03 Warm Band",
+  "type": "section"
+}

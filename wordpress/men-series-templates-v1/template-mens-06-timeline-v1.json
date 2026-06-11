@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "ms_timeline",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "ms_html_timeline",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"ms-happens-section\">\n  <div class=\"ms-section-inner\">\n    <div class=\"ms-happens-header\">\n      <div class=\"ms-section-eyebrow\">The Evening</div>\n      <h2 class=\"ms-section-title\">What actually <em>happens</em></h2>\n      <div class=\"ms-ornament\">A sequence that works</div>\n    </div>\n    <div class=\"ms-timeline\">\n      <div class=\"ms-tl-item\">\n        <div class=\"ms-tl-dot\"><div class=\"ms-tl-dot-inner\"></div></div>\n        <div class=\"ms-tl-duration\">7:00 pm</div>\n        <div class=\"ms-tl-title\">Arrival &amp; Grounding</div>\n        <div class=\"ms-tl-body\">Arrive, settle, and be welcomed into a space free from performance. Tea, candlelight, quiet conversation.</div>\n      </div>\n      <div class=\"ms-tl-item\">\n        <div class=\"ms-tl-dot\"><div class=\"ms-tl-dot-inner\"></div></div>\n        <div class=\"ms-tl-duration\">7:30 pm</div>\n        <div class=\"ms-tl-title\">Breathwork</div>\n        <div class=\"ms-tl-body\">A guided breath practice to release the day, open the nervous system, and land in the body.</div>\n      </div>\n      <div class=\"ms-tl-item\">\n        <div class=\"ms-tl-dot\"><div class=\"ms-tl-dot-inner\"></div></div>\n        <div class=\"ms-tl-duration\">8:00 pm</div>\n        <div class=\"ms-tl-title\">Sound Journey</div>\n        <div class=\"ms-tl-body\">Lie down and receive a 45-minute live sound healing. No effort required. Just presence.</div>\n      </div>\n      <div class=\"ms-tl-item\">\n        <div class=\"ms-tl-dot\"><div class=\"ms-tl-dot-inner\"></div></div>\n        <div class=\"ms-tl-duration\">9:00 pm</div>\n        <div class=\"ms-tl-title\">Reflection &amp; Close</div>\n        <div class=\"ms-tl-body\">Journaling prompts, optional sharing, and a gentle close. Leave clear.</div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap');\n\n*,*::before,*::after{box-sizing:border-box !important}\n\n:root{\n  --ms-stone:#0E1B30;\n  --ms-cream:#F7F0EC;\n  --ms-seafoam:#688F9D;\n  --ms-amber:#C4935A;\n  --ms-sand:#C4BBB4;\n  --ms-text-body:#3D4F57;\n}\n\n.ms-happens-section {\n  padding: 110px 0 !important;\n  background: var(--ms-cream) !important;\n}\n\n.ms-section-inner {\n  max-width: 1080px !important;\n  margin: 0 auto !important;\n  padding: 0 52px !important;\n}\n\n.ms-happens-header {\n  display: flex !important;\n  flex-direction: column !important;\n  align-items: center !important;\n  text-align: center !important;\n  gap: 14px !important;\n  margin-bottom: 68px !important;\n}\n\n.ms-section-eyebrow {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 9px !important;\n  letter-spacing: 0.3em !important;\n  text-transform: uppercase !important;\n  color: var(--ms-amber) !important;\n}\n\n.ms-section-title {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: clamp(32px, 4vw, 48px) !important;\n  font-weight: 300 !important;\n  line-height: 1.15 !important;\n  color: var(--ms-stone) !important;\n}\n\n.ms-section-title em {\n  font-style: italic !important;\n  color: var(--ms-seafoam) !important;\n}\n\n.ms-ornament {\n  display: flex !important;\n  align-items: center !important;\n  gap: 14px !important;\n  color: var(--ms-sand) !important;\n  font-family: 'Jost', sans-serif !important;\n  font-size: 14px !important;\n}\n\n.ms-ornament::before, .ms-ornament::after {\n  content: '' !important;\n  width: 44px !important;\n  height: 0.5px !important;\n  background: var(--ms-sand) !important;\n}\n\n.ms-timeline {\n  display: grid !important;\n  grid-template-columns: repeat(4, 1fr) !important;\n  position: relative !important;\n}\n\n.ms-timeline::before {\n  content: '' !important;\n  position: absolute !important;\n  top: 27px !important;\n  left: 12.5% !important;\n  right: 12.5% !important;\n  height: 0.5px !important;\n  background: linear-gradient(to right, transparent, var(--ms-sand), var(--ms-sand), transparent) !important;\n}\n\n.ms-tl-item {\n  padding: 0 18px !important;\n  display: flex !important;\n  flex-direction: column !important;\n  align-items: center !important;\n  text-align: center !important;\n  gap: 14px !important;\n}\n\n.ms-tl-dot {\n  width: 54px !important;\n  height: 54px !important;\n  border: 0.5px solid var(--ms-sand) !important;\n  border-radius: 50% !important;\n  display: flex !important;\n  align-items: center !important;\n  justify-content: center !important;\n  background: var(--ms-cream) !important;\n  position: relative !important;\n  z-index: 1 !important;\n  box-shadow: 0 2px 12px rgba(14,27,48,0.07) !important;\n}\n\n.ms-tl-dot-inner {\n  width: 8px !important;\n  height: 8px !important;\n  border-radius: 50% !important;\n  background: var(--ms-seafoam) !important;\n}\n\n.ms-tl-duration {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 11px !important;\n  color: var(--ms-amber) !important;\n  letter-spacing: 0.12em !important;\n}\n\n.ms-tl-title {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 18px !important;\n  font-weight: 400 !important;\n  color: var(--ms-stone) !important;\n  line-height: 1.3 !important;\n}\n\n.ms-tl-body {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 11px !important;\n  line-height: 1.75 !important;\n  color: var(--ms-text-body) !important;\n}\n\n@media (max-width: 768px) {\n  .ms-section-inner { padding: 0 24px !important; }\n  .ms-timeline { grid-template-columns: 1fr 1fr !important; gap: 36px !important; }\n  .ms-timeline::before { display: none !important; }\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Men's Series — 06 Timeline",
+  "type": "section"
+}

@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "ec_counter",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "ec_html_counter",
+          "elType": "widget",
+          "settings": {
+            "html": "[stillness_past_events_counter]\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap');\n\n:root {\n  --ec-seafoam: #688F9D;\n  --ec-stone: #0E1B30;\n  --ec-warm: #F2E8DF;\n}\n\n.ec-counter-ribbon {\n  background: var(--ec-warm) !important;\n  padding: 1.25rem 4rem 0 !important;\n  text-align: center !important;\n  border-bottom: 0.5px solid rgba(14,27,48,0.06) !important;\n}\n\n.ec-counter-content {\n  display: inline-flex !important;\n  align-items: center !important;\n  gap: 1.2rem !important;\n}\n\n.ec-counter-num {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 2.5rem !important;\n  font-weight: 300 !important;\n  color: var(--ec-seafoam) !important;\n  line-height: 1 !important;\n}\n\n.ec-counter-text {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.75rem !important;\n  letter-spacing: 0.25em !important;\n  text-transform: uppercase !important;\n  color: var(--ec-stone) !important;\n  font-weight: 500 !important;\n  padding-top: 0.25rem !important;\n}\n\n.ec-reveal {\n  opacity: 0 !important;\n  transform: translateY(24px) !important;\n  transition: opacity 0.8s ease, transform 0.8s ease !important;\n}\n\n.ec-reveal.ec-visible {\n  opacity: 1 !important;\n  transform: translateY(0) !important;\n}\n\n@media(max-width: 768px) {\n  .ec-counter-ribbon {\n    padding: 0.75rem 1.5rem 0 !important;\n  }\n  .ec-counter-num {\n    font-size: 2rem !important;\n  }\n}\n</style>\n\n<script>\n  setTimeout(() => {\n    const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };\n    const observer = new IntersectionObserver((entries, obs) => {\n      entries.forEach(entry => {\n        if (entry.isIntersecting) {\n          entry.target.classList.add('ec-visible');\n          obs.unobserve(entry.target);\n        }\n      });\n    }, observerOptions);\n    document.querySelectorAll('.ec-counter-ribbon').forEach(element => {\n      observer.observe(element);\n    });\n  }, 500);\n</script>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Events Catalog — 08 Counter Ribbon",
+  "type": "section"
+}

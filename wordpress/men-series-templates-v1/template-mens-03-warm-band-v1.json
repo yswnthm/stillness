@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "ms_warm_band",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "ms_html_warm_band",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"ms-warm-band\">\n  <div class=\"ms-section-inner\">\n    <div class=\"ms-warm-grid\">\n      <div class=\"ms-warm-item\">\n        <div class=\"ms-warm-num\">01</div>\n        <div class=\"ms-warm-title\">Sound Healing</div>\n        <div class=\"ms-warm-body\">Experience deep vibrational resonance through live crystal bowls and sacred instruments — letting sound dissolve tension from the inside out.</div>\n      </div>\n      <div class=\"ms-warm-item\">\n        <div class=\"ms-warm-num\">02</div>\n        <div class=\"ms-warm-title\">Breathwork</div>\n        <div class=\"ms-warm-body\">Guided breathwork sequences designed to release stored stress, open the chest, and return men to the clarity of the present moment.</div>\n      </div>\n      <div class=\"ms-warm-item\">\n        <div class=\"ms-warm-num\">03</div>\n        <div class=\"ms-warm-title\">Journaling</div>\n        <div class=\"ms-warm-body\">Prompted reflection time to process what surfaces — so the insights from sound and breath translate into your everyday life.</div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap');\n\n*,*::before,*::after{box-sizing:border-box !important}\n\n:root{\n  --ms-stone:#0E1B30;\n  --ms-cream:#F7F0EC;\n  --ms-amber:#C4935A;\n  --ms-amber-light:#F0E4D0;\n  --ms-text-body:#3D4F57;\n}\n\n.ms-warm-band {\n  padding: 72px 0 !important;\n  background: var(--ms-amber-light) !important;\n  border-top: 0.5px solid rgba(196,187,180,0.5) !important;\n  border-bottom: 0.5px solid rgba(196,187,180,0.5) !important;\n}\n\n.ms-section-inner {\n  max-width: 1080px !important;\n  margin: 0 auto !important;\n  padding: 0 52px !important;\n}\n\n.ms-warm-grid {\n  display: grid !important;\n  grid-template-columns: repeat(3, 1fr) !important;\n  gap: 0 !important;\n}\n\n.ms-warm-item {\n  padding: 0 44px !important;\n  border-right: 0.5px solid rgba(196,149,90,0.2) !important;\n  display: flex !important;\n  flex-direction: column !important;\n  gap: 10px !important;\n}\n\n.ms-warm-item:first-child {\n  padding-left: 0 !important;\n}\n\n.ms-warm-item:last-child {\n  border-right: none !important;\n}\n\n.ms-warm-num {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 11px !important;\n  color: var(--ms-amber) !important;\n  letter-spacing: 0.2em !important;\n}\n\n.ms-warm-title {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 21px !important;\n  font-weight: 300 !important;\n  color: var(--ms-stone) !important;\n  line-height: 1.35 !important;\n}\n\n.ms-warm-body {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 12px !important;\n  line-height: 1.8 !important;\n  color: var(--ms-text-body) !important;\n}\n\n@media (max-width: 768px) {\n  .ms-section-inner { padding: 0 24px !important; }\n  .ms-warm-grid { grid-template-columns: 1fr !important; gap: 36px !important; }\n  .ms-warm-item { padding: 0 !important; border-right: none !important; border-bottom: 0.5px solid rgba(196,149,90,0.2) !important; padding-bottom: 32px !important; }\n  .ms-warm-item:last-child { border-bottom: none !important; }\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Men's Series — 03 Warm Band",
+  "type": "section"
+}
