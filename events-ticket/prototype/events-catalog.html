@@ -90,6 +90,23 @@ body { background: var(--cream); color: var(--stone); font-family: 'Jost', sans-
 .pillar h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; color: var(--stone); margin-bottom: 1rem; }
 .pillar p { font-size: 0.88rem; line-height: 1.9; color: rgba(14,27,48,0.65); }
 
+/* PREMIUM FAQ SECTION */
+.faq-section { padding: 160px 0; background: var(--stone); }
+.faq-container { max-width: 900px; margin: 0 auto; padding: 0 4rem; }
+.faq-header { margin-bottom: 80px; }
+.faq-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 56px); font-weight: 300; color: var(--cream); line-height: 1.1; }
+.faq-header h2 em { font-style: italic; color: var(--seafoam); }
+
+.faq-list { display: flex; flex-direction: column; }
+.faq-item { border-bottom: 0.5px solid var(--midnight); padding: 48px 0; display: grid; grid-template-columns: 60px 1fr; gap: 24px; transition: all 0.5s ease; }
+.faq-item:first-child { border-top: 0.5px solid var(--midnight); }
+.faq-item:hover { border-bottom-color: var(--seafoam); }
+
+.faq-num { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 400; color: var(--seafoam); letter-spacing: 0.15em; margin-top: 8px; }
+.faq-content h4 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--cream); margin-bottom: 16px; transition: color 0.4s ease; line-height: 1.3; }
+.faq-item:hover .faq-content h4 { color: var(--seafoam); }
+.faq-content p { font-size: 16px; line-height: 1.9; color: var(--wave); font-weight: 300; max-width: 700px; }
+
 /* NOTIFY CTA */
 .notify-section { padding: 8rem 4rem; background: var(--stone); border-top: 0.5px solid rgba(104,143,157,0.15); text-align: center; }
 .notify-section h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; color: var(--cream); margin-bottom: 1rem; line-height: 1.1; }
@@ -113,6 +130,11 @@ body { background: var(--cream); color: var(--stone); font-family: 'Jost', sans-
   .hero-content { padding: 0 1.5rem 5rem; }
   .scroll-hint { display: none; }
   .window-strip, .events-catalog, .pillars-section, .notify-section { padding: 5rem 1.5rem; }
+  .faq-section { padding: 80px 24px; }
+  .faq-container { padding: 0; }
+  .faq-item { grid-template-columns: 1fr; gap: 16px; padding: 40px 0; }
+  .faq-num { margin-top: 0; }
+  .faq-content h4 { font-size: 24px; }
   .counter-ribbon { padding: 0.75rem 1.5rem 0; }
   .counter-num { font-size: 2rem; }
   .featured { grid-template-columns: 1fr; }
@@ -251,6 +273,59 @@ body { background: var(--cream); color: var(--stone); font-family: 'Jost', sans-
       <span class="pillar-num">III</span>
       <h3>Environment</h3>
       <p>We source venues where nature does half the healing. Every location is vetted for its architectural harmony and energetic resonance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="faq-section">
+  <div class="faq-container reveal">
+    <div class="faq-header">
+      <h2>Frequently Asked <em>Questions</em></h2>
+    </div>
+    
+    <div class="faq-list">
+      
+      <div class="faq-item">
+        <div class="faq-num">01</div>
+        <div class="faq-content">
+          <h4>What is the typical group size for your retreats?</h4>
+          <p>Our immersions are strictly limited to an intimate group size, typically around 12 participants. This preserves the sanctity of the space and ensures everyone receives individualized support.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-num">02</div>
+        <div class="faq-content">
+          <h4>Do I need prior experience with meditation or breathwork?</h4>
+          <p>No prior experience is necessary. Our guided sessions are fully accessible to all levels, from beginners to experienced practitioners. We meet you exactly where you are.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-num">03</div>
+        <div class="faq-content">
+          <h4>Are the accommodations and meals included?</h4>
+          <p>Yes. The booking cost covers luxury boutique lodging, organic vegetarian meals, all daily practices, and integration materials during your stay.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-num">04</div>
+        <div class="faq-content">
+          <h4>Can I attend if I have specific dietary requirements?</h4>
+          <p>Absolutely. Our culinary team accommodates most dietary restrictions, including vegan, gluten-free, and specific allergies, provided we have advance notice.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-num">05</div>
+        <div class="faq-content">
+          <h4>What should I pack for the retreat?</h4>
+          <p>Comfortable, breathable clothing for practices, walking shoes for nature immersions, and a journal. A detailed preparation and packing guide will be sent upon booking.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

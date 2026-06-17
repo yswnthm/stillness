@@ -1,0 +1,46 @@
+{
+  "content": [
+    {
+      "id": "stillness_faq_section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "stillness_faq_inner",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1140
+            }
+          },
+          "elements": [
+            {
+              "id": "stillness_faq_html",
+              "elType": "widget",
+              "settings": {
+                "html": "<section class=\"stillness-event-faq\">\n  <div class=\"stillness-event-faq__container\">\n    <div class=\"stillness-event-faq__header\">\n      <h2>Frequently Asked <em>Questions</em></h2>\n    </div>\n    \n    <div class=\"stillness-event-faq__list\">\n      \n      <div class=\"stillness-event-faq__item\">\n        <div class=\"stillness-event-faq__num\">01</div>\n        <div class=\"stillness-event-faq__content\">\n          <h4>What is the typical group size for your retreats?</h4>\n          <p>Our immersions are strictly limited to an intimate group size, typically around 12 participants. This preserves the sanctity of the space and ensures everyone receives individualized support.</p>\n        </div>\n      </div>\n\n      <div class=\"stillness-event-faq__item\">\n        <div class=\"stillness-event-faq__num\">02</div>\n        <div class=\"stillness-event-faq__content\">\n          <h4>Do I need prior experience with meditation or breathwork?</h4>\n          <p>No prior experience is necessary. Our guided sessions are fully accessible to all levels, from beginners to experienced practitioners. We meet you exactly where you are.</p>\n        </div>\n      </div>\n\n      <div class=\"stillness-event-faq__item\">\n        <div class=\"stillness-event-faq__num\">03</div>\n        <div class=\"stillness-event-faq__content\">\n          <h4>Are the accommodations and meals included?</h4>\n          <p>Yes. The booking cost covers luxury boutique lodging, organic vegetarian meals, all daily practices, and integration materials during your stay.</p>\n        </div>\n      </div>\n\n      <div class=\"stillness-event-faq__item\">\n        <div class=\"stillness-event-faq__num\">04</div>\n        <div class=\"stillness-event-faq__content\">\n          <h4>Can I attend if I have specific dietary requirements?</h4>\n          <p>Absolutely. Our culinary team accommodates most dietary restrictions, including vegan, gluten-free, and specific allergies, provided we have advance notice.</p>\n        </div>\n      </div>\n\n      <div class=\"stillness-event-faq__item\">\n        <div class=\"stillness-event-faq__num\">05</div>\n        <div class=\"stillness-event-faq__content\">\n          <h4>What should I pack for the retreat?</h4>\n          <p>Comfortable, breathable clothing for practices, walking shoes for nature immersions, and a journal. A detailed preparation and packing guide will be sent upon booking.</p>\n        </div>\n      </div>\n\n    </div>\n  </div>\n</section>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap');\n\n:root {\n  --event-stone: #0E1B30;\n  --event-seafoam: #688F9D;\n  --event-wave: #A4B2BA;\n  --event-breeze: #D9E8EB;\n  --event-cream: #F7F0EC;\n  --event-midnight: #1D3152;\n}\n\n.stillness-event-faq {\n  padding: 160px 0 !important;\n  background: var(--event-stone) !important;\n}\n\n.stillness-event-faq,\n.stillness-event-faq * {\n  box-sizing: border-box !important;\n}\n\n.stillness-event-faq__container {\n  max-width: 900px !important;\n  margin: 0 auto !important;\n  padding: 0 4rem !important;\n}\n\n.stillness-event-faq__header {\n  margin-bottom: 80px !important;\n}\n\n.stillness-event-faq__header h2 {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: clamp(36px, 5vw, 56px) !important;\n  font-weight: 300 !important;\n  color: var(--event-cream) !important;\n  line-height: 1.1 !important;\n  margin: 0 !important;\n}\n\n.stillness-event-faq__header h2 em {\n  font-style: italic !important;\n  color: var(--event-seafoam) !important;\n}\n\n.stillness-event-faq__list {\n  display: flex !important;\n  flex-direction: column !important;\n}\n\n.stillness-event-faq__item {\n  border-bottom: 0.5px solid var(--event-midnight) !important;\n  padding: 48px 0 !important;\n  display: grid !important;\n  grid-template-columns: 60px 1fr !important;\n  gap: 24px !important;\n  transition: all 0.5s ease !important;\n}\n\n.stillness-event-faq__item:first-child {\n  border-top: 0.5px solid var(--event-midnight) !important;\n}\n\n.stillness-event-faq__item:hover {\n  border-bottom-color: var(--event-seafoam) !important;\n}\n\n.stillness-event-faq__num {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 13px !important;\n  font-weight: 400 !important;\n  color: var(--event-seafoam) !important;\n  letter-spacing: 0.15em !important;\n  margin-top: 8px !important;\n}\n\n.stillness-event-faq__content h4 {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 28px !important;\n  font-weight: 300 !important;\n  color: var(--event-cream) !important;\n  margin: 0 0 16px 0 !important;\n  transition: color 0.4s ease !important;\n  line-height: 1.3 !important;\n}\n\n.stillness-event-faq__item:hover .stillness-event-faq__content h4 {\n  color: var(--event-seafoam) !important;\n}\n\n.stillness-event-faq__content p {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 16px !important;\n  line-height: 1.9 !important;\n  color: var(--event-wave) !important;\n  font-weight: 300 !important;\n  max-width: 700px !important;\n  margin: 0 !important;\n}\n\n@media(max-width: 768px) {\n  .stillness-event-faq {\n    padding: 80px 24px !important;\n  }\n  .stillness-event-faq__container {\n    padding: 0 !important;\n  }\n  .stillness-event-faq__item {\n    grid-template-columns: 1fr !important;\n    gap: 16px !important;\n    padding: 40px 0 !important;\n  }\n  .stillness-event-faq__num {\n    margin-top: 0 !important;\n  }\n  .stillness-event-faq__content h4 {\n    font-size: 24px !important;\n  }\n}\n</style>"
+              },
+              "widgetType": "html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Events Catalog — 08 FAQ Section",
+  "type": "section"
+}
