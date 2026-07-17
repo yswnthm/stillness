@@ -9,7 +9,7 @@
 
 > **Active Issue Tracker:** [SINGLE-EVENT-ISSUES.md](./SINGLE-EVENT-ISSUES.md)
 
-> **Current Build State:** Updated 11 June 2026. Catalog templates, single-event templates, ticket quantity selector, past-events counter ribbon, and unified MetForm waitlist template are implemented. Client confirmed only basic buyer name/email details are needed after booking, so the default WooCommerce email is enough for now. Remaining work is final live QA and PDF handoff.
+> **Current Build State:** Updated 15 June 2026. Catalog templates, single-event templates, ticket quantity selector, past-events counter ribbon, and unified MetForm waitlist template are implemented. Client has now shared a branded order email reference, so the remaining implementation item is the custom WooCommerce booking confirmation email.
 
 ---
 
@@ -48,7 +48,7 @@ A complete WooCommerce-native event ticketing system with:
 1. An **Events Catalog page** — a clean grid of all upcoming retreats.
 2. A **Single Event page** — a premium, adaptive template for each event booking page.
 3. **Checkout Optimization** — stripped-down, frictionless checkout for virtual (event) products.
-4. **Default Confirmation Email** — no custom design required for now; normal WooCommerce email is acceptable.
+4. **Custom Confirmation Email** — branded Stillness WooCommerce order email based on the shared reference template.
 5. **Ticket Quantity Selection** — users can book more than one ticket, bounded by available stock.
 6. **Past Events Counter Ribbon** — dynamic credibility section using `59` as the fixed base count plus published event count.
 7. **Unified MetForm Waitlist** — one shared `Events` form used on both the catalog page and individual event page.
@@ -164,7 +164,7 @@ events-ticket/
 ├── snippets/
 │   ├── functions-snippets.php    ← All PHP hooks/filters (shortcodes, warm band, checkout fields, button label)
 │   ├── single-event.css          ← WC-native element overrides ONLY for single event page — loaded via Code Snippets
-│   └── email-template.html       ← Custom WooCommerce order confirmation email header block
+│   └── email-template.html       ← Branded WooCommerce order email visual reference
 │
 ├── single-product-templates/     ← Elementor JSON sections for the single event product template
 │   ├── template-single-event-01-nav.json
@@ -914,28 +914,45 @@ function stillness_simplify_virtual_checkout( $fields ) {
 
 ---
 
-### PHASE 5 — Email Confirmation ✅ DEFAULT WOO EMAIL ACCEPTED
+### PHASE 5 — Email Confirmation ⬅️ CURRENT
 
-**Goal:** Confirm what the client needs after a booking.
+**Goal:** Make the WooCommerce customer order email feel like a Stillness booking confirmation.
 
-**Decision on 11 June 2026:**
-- The store has not been heavily used yet.
-- The client confirmed that, for event bookings, they mainly need basic buyer details: name and email.
-- WooCommerce checkout already collects those details.
-- WooCommerce Orders will show the customer, product/event name, quantity, payment status, and order status.
-- No custom WooCommerce email design is required right now.
+**Decision update on 15 June 2026:**
+- The client shared a branded Stillness order email reference.
+- A simple custom WooCommerce booking email is now in scope.
+- No QR code, PDF ticket, scanner, or attendee-level ticket system is required.
 
-#### 5.1 Current Email Approach
+#### 5.1 Email Template Reference
 
-Use the default WooCommerce order confirmation email.
+Reference file:
 
-Do not override the WooCommerce email template unless the client later asks for a branded digital ticket email.
+```text
+events-ticket/snippets/email-template.html
+```
 
-- [ ] **5.2** Send a test event order.
-- [ ] **5.3** Confirm customer receives the normal WooCommerce confirmation email.
-- [ ] **5.4** Confirm admin can see buyer name, email, event product, ticket quantity, payment status, and order status in WooCommerce Orders.
+This is a static HTML visual reference using placeholder tokens like:
 
-**Commit:** `docs(events): confirm default woo email for event booking flow`
+```text
+{{first_name}}
+{{order_item_name}}
+{{event_date}}
+{{event_time}}
+{{event_location}}
+{{order_number}}
+{{order_total}}
+{{order_url}}
+```
+
+Implementation needs to convert those placeholders into WooCommerce/PHP values.
+
+- [ ] **5.2** Convert the reference HTML into a WooCommerce email implementation.
+- [ ] **5.3** Keep standard WooCommerce order details available in the email.
+- [ ] **5.4** Send a free test event order.
+- [ ] **5.5** Confirm the customer receives the branded Stillness confirmation email.
+- [ ] **5.6** Confirm admin can still see buyer name, email, event product, ticket quantity, payment status, and order status in WooCommerce Orders.
+
+**Commit:** `feat(email): add branded stillness booking confirmation`
 
 ---
 
@@ -958,7 +975,7 @@ Do not override the WooCommerce email template unless the client later asks for 
   1. Browse `/events/` → see event card with "View Details" button
   2. Click into the event → see full premium booking page
   3. Click "Book Ticket" → go to checkout with only Name + Email
-  4. Complete payment → receive normal WooCommerce confirmation email
+  4. Complete payment → receive branded Stillness confirmation email
 - [ ] **6.5** Test sold-out state: Reduce stock to 0. Verify "Sold Out" appears automatically. Restore stock.
 - [ ] **6.6** Verify the retail shop (`/shop/`) is completely unaffected.
 
@@ -1076,7 +1093,7 @@ Save as `qa-checklist.md` and tick off each item before marking the project comp
 - [ ] Payment gateway processes correctly
 
 ### Confirmation Email
-- [ ] Default WooCommerce customer email sends automatically on payment completion
+- [ ] Branded Stillness customer email sends automatically on payment completion
 - [ ] Admin can see the event booking in WooCommerce Orders
 - [ ] Order includes buyer name, email, event product, quantity, payment status, and order status
 
@@ -1131,4 +1148,4 @@ After each commit, record the short commit SHA in `plan.md` against the complete
 ---
 
 *Created: 03 June 2026 | Yeswanth / Solicate*
-*Last updated: 11 June 2026 — Client confirmed only basic buyer name and email are needed after event booking. Default WooCommerce confirmation email is accepted for now; no custom email design is required. Handoff HTML guide prepared at `events-ticket/stillness-events-handoff-guide.html`.*
+*Last updated: 15 June 2026 — Client shared a branded Stillness order email reference. Added `events-ticket/snippets/email-template.html` as the visual source for the custom WooCommerce booking confirmation email.*

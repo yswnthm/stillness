@@ -1,0 +1,46 @@
+{
+  "content": [
+    {
+      "id": "stillness_faq_section",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "stillness_faq_inner",
+          "elType": "container",
+          "settings": {
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1140
+            }
+          },
+          "elements": [
+            {
+              "id": "stillness_faq_html",
+              "elType": "widget",
+              "settings": {
+                "html": "[stillness_event_faq]"
+              },
+              "widgetType": "html"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Single Event - FAQ Section",
+  "type": "section"
+}

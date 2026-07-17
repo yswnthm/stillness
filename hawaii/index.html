@@ -17,23 +17,21 @@
   --amber: #C4935A;
   --midnight: #1D3152;
   --breeze: #D9E8EB;
-  --amber-light: #F0E4D0;
   --text-body: #3D4F57;
-  --text-light: #7A8F96;
 }
 html{scroll-behavior:smooth}
 body{background:var(--cream);color:var(--stone);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden}
 
 /* ─── NAV ─── */
 nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 4rem;position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(14,27,48,0.0);transition:background 0.4s}
-nav.scrolled{background:rgba(247,240,236,0.97);backdrop-filter:blur(8px);border-bottom:0.5px solid rgba(14,27,48,0.08)}
-nav.scrolled .nav-logo{color:var(--stone)}
-nav.scrolled .nav-cta{color:var(--cream);background:var(--stone)}
+nav.scrolled{background:rgba(14,27,48,0.95);backdrop-filter:blur(12px);border-bottom:0.5px solid rgba(255,255,255,0.05)}
+nav.scrolled .nav-logo{color:var(--cream)}
+nav.scrolled .nav-cta{color:var(--stone);background:var(--cream)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;letter-spacing:0.18em;color:var(--cream);text-transform:uppercase;text-decoration:none;transition:color 0.4s}
 .nav-cta{font-family:'Jost',sans-serif;font-size:0.7rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--stone);background:var(--cream);border:none;padding:0.7rem 1.5rem;cursor:pointer;transition:all 0.3s;text-decoration:none}
-.nav-cta:hover{opacity:0.85}
+.nav-cta:hover{background:var(--amber);color:#fff}
 
-/* ─── HERO (Unchanged) ─── */
+/* ─── HERO (Untouched) ─── */
 .hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:center;justify-content:center;overflow:hidden;text-align:center}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;animation:slowzoom 16s ease forwards}
 @keyframes slowzoom{from{transform:scale(1.06)}to{transform:scale(1.0)}}
@@ -47,115 +45,310 @@ nav.scrolled .nav-cta{color:var(--cream);background:var(--stone)}
 .btn-p{font-family:'Jost',sans-serif;font-size:0.72rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--stone);background:var(--wave);border:none;padding:1rem 2.5rem;cursor:pointer;transition:all 0.3s ease;text-decoration:none;display:inline-block}
 .btn-p:hover{background:var(--sand);transform:translateY(-2px)}
 
-/* ─── QUIET CRISIS (Redesigned as Dark Quote Section) ─── */
-.crisis-section{padding:120px 0;background:var(--stone);position:relative;overflow:hidden;text-align:center}
-.crisis-wrap{max-width:850px;margin:0 auto;padding:0 52px;position:relative;z-index:2}
-.crisis-mark{font-family:'Cormorant Garamond',serif;font-size:6rem;color:rgba(104,143,157,0.18);line-height:0.5;display:block;margin-bottom:1.5rem}
-.crisis-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,40px);font-weight:300;line-height:1.3;color:var(--cream);margin-bottom:32px}
-.crisis-title em{font-style:italic;color:var(--seafoam)}
-.crisis-body{font-size:15px;line-height:1.9;color:var(--breeze);margin-bottom:24px}
-.crisis-body:last-child{margin-bottom:0;color:var(--wave);font-style:italic}
+/* ─── QUIET CRISIS (Cinematic Split Screen) ─── */
+.crisis-section{display:flex;background:var(--stone);position:relative}
+.crisis-visual{flex:1;position:sticky;top:0;height:100vh;overflow:hidden}
+.crisis-visual img{width:100%;height:100%;object-fit:cover;opacity:0.5}
+.crisis-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent,var(--stone))}
+.crisis-content{flex:1;padding:150px 80px 150px 40px;display:flex;flex-direction:column;justify-content:center;min-height:100vh}
+.crisis-content .section-eyebrow{color:var(--amber);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:24px;display:block}
+.crisis-content h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-weight:300;line-height:1.1;color:var(--cream);margin-bottom:48px}
+.crisis-content h2 em{font-style:italic;color:var(--seafoam)}
+.crisis-text-block{margin-bottom:120px}
+.crisis-text-block:last-child{margin-bottom:0}
+.crisis-text-block p{font-size:18px;line-height:1.9;color:var(--breeze);font-weight:300}
+.crisis-text-block.highlight p{color:var(--cream);font-size:22px;font-family:'Cormorant Garamond',serif;font-style:italic;line-height:1.6}
 
-/* ─── PROTOCOL PILLARS (Redesigned with Foryou Cards) ─── */
-.pillars-section{padding:110px 0;background:var(--warm)}
-.section-header{text-align:center;max-width:700px;margin:0 auto 60px}
-.section-eyebrow{font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--amber);margin-bottom:16px;display:block}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,48px);font-weight:300;line-height:1.15;color:var(--stone);margin-bottom:22px}
-.section-title em{font-style:italic;color:var(--seafoam)}
-.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1100px;margin:0 auto;padding:0 52px}
-.pillar-card{background:var(--cream);border-radius:3px;padding:48px 36px;display:flex;flex-direction:column;gap:16px;transition:transform 0.3s ease,box-shadow 0.3s ease;border:0.5px solid rgba(196,187,180,0.5)}
-.pillar-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(14,27,48,0.08)}
-.pillar-num{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--amber);letter-spacing:0.2em;display:block;margin-bottom:8px}
-.pillar-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:var(--stone);line-height:1.3}
-.pillar-body{font-size:14px;line-height:1.8;color:var(--text-body)}
+/* ─── PROTOCOL PILLARS (Floating Glass Panels) ─── */
+.pillars-section{padding:160px 0;background:var(--stone);position:relative;overflow:hidden}
+.pillars-header{text-align:center;max-width:700px;margin:0 auto 100px;position:relative;z-index:2}
+.pillars-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--cream);line-height:1.1}
+.pillars-header h2 em{color:var(--seafoam);font-style:italic}
+.pillars-header p{color:var(--wave);margin-top:24px;font-size:17px;line-height:1.8}
+.glass-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;max-width:1200px;margin:0 auto;padding:0 52px;position:relative;z-index:2}
+.glass-panel{background:rgba(255,255,255,0.02);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.06);padding:60px 40px;position:relative;transition:all 0.5s cubic-bezier(0.2,0.8,0.2,1);overflow:hidden}
+.glass-panel:hover{background:rgba(255,255,255,0.04);border-color:rgba(196,147,90,0.3);transform:translateY(-10px);box-shadow:0 30px 60px rgba(0,0,0,0.4)}
+.massive-num{position:absolute;top:-20px;right:-10px;font-family:'Cormorant Garamond',serif;font-size:160px;font-weight:300;color:var(--amber);opacity:0.1;line-height:1;transition:opacity 0.5s, transform 0.5s}
+.glass-panel:hover .massive-num{opacity:0.2;transform:scale(1.05)}
+.glass-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--cream);line-height:1.2;margin-bottom:20px;position:relative;z-index:2}
+.glass-body{font-size:15px;line-height:1.8;color:var(--breeze);position:relative;z-index:2}
 
-/* ─── VISUAL STRIP (Unchanged) ─── */
+/* ─── VISUAL STRIP (Untouched) ─── */
 .img-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin:0;background:var(--stone)}
 .strip-img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:filter 0.4s ease}
 .strip-img:hover{filter:brightness(1.05)}
 
-/* ─── ITINERARY (Redesigned as Timeline) ─── */
-.itinerary-section{padding:120px 0;background:var(--cream)}
-.timeline{display:grid;grid-template-columns:repeat(4,1fr);position:relative;max-width:1100px;margin:0 auto;padding:0 52px;gap:24px}
-.timeline::before{content:'';position:absolute;top:27px;left:12.5%;right:12.5%;height:0.5px;background:linear-gradient(to right,transparent,var(--sand),var(--sand),transparent)}
-.tl-item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px}
-.tl-dot{width:54px;height:54px;border:0.5px solid var(--sand);border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--cream);position:relative;z-index:1;box-shadow:0 4px 16px rgba(14,27,48,0.05);transition:transform 0.3s ease}
-.tl-item:hover .tl-dot{transform:scale(1.1)}
-.tl-dot-inner{width:8px;height:8px;border-radius:50%;background:var(--seafoam)}
-.tl-duration{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--amber);letter-spacing:0.12em;font-weight:500}
-.tl-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--stone);line-height:1.3}
-.tl-events{display:flex;flex-direction:column;gap:8px;text-align:left;width:100%}
-.tl-event{font-size:13px;line-height:1.6;color:var(--text-body);display:flex;gap:8px}
-.tl-event .time{color:var(--seafoam);font-weight:400;min-width:45px}
+/* ─── ITINERARY (Elaborated Vertical Timeline) ─── */
+.itinerary-section{padding:160px 0;background:var(--cream);position:relative}
+.itin-header{text-align:center;max-width:700px;margin:0 auto 100px}
+.itin-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--stone);line-height:1.1}
+.itin-header h2 em{color:var(--seafoam);font-style:italic}
+.itin-header p{color:var(--text-body);margin-top:24px;font-size:17px;line-height:1.8}
 
-/* ─── BIOMETRIC TRACKING (Redesigned as Glassmorphism) ─── */
-.data-section{padding:120px 0;background:var(--midnight);color:var(--cream)}
-.data-section .section-title{color:var(--cream)}
-.data-section .section-eyebrow{color:var(--wave)}
-.data-intro{text-align:center;max-width:700px;margin:0 auto 60px;font-size:16px;color:var(--breeze);line-height:1.8}
-.data-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1100px;margin:0 auto;padding:0 52px}
-.data-phase{background:rgba(255,255,255,0.04);padding:40px 32px;border:0.5px solid rgba(164,178,186,0.15);border-radius:3px;backdrop-filter:blur(10px);transition:background 0.3s}
-.data-phase:hover{background:rgba(255,255,255,0.07)}
-.data-phase h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:var(--cream);margin-bottom:16px}
-.data-phase p{font-size:14px;color:rgba(217,232,235,0.8);line-height:1.8}
+.v-timeline{max-width:900px;margin:0 auto;position:relative;padding-left:120px;padding-right:52px}
+.v-spine{position:absolute;left:60px;top:20px;bottom:20px;width:1px;background:linear-gradient(to bottom,var(--amber),var(--seafoam),var(--amber))}
+.v-node-wrapper{position:relative;margin-bottom:100px}
+.v-node-wrapper:last-child{margin-bottom:0}
+.v-circle{position:absolute;left:-120px;top:0;width:120px;display:flex;align-items:flex-start;justify-content:center}
+.v-circle-inner{width:70px;height:70px;border-radius:50%;background:var(--stone);border:1px solid var(--amber);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;z-index:2;box-shadow:0 0 0 6px var(--cream);transition:all 0.4s ease}
+.v-circle-inner span:first-child{font-size:9px;letter-spacing:0.2em;color:var(--seafoam);text-transform:uppercase}
+.v-circle-inner span:last-child{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--cream);line-height:1}
+.v-node-wrapper:hover .v-circle-inner{transform:scale(1.1);background:var(--midnight);box-shadow:0 0 20px rgba(196,147,90,0.3),0 0 0 6px var(--cream)}
 
-/* ─── INCLUSIONS & INVESTMENT (Premium Pricing Section) ─── */
-.investment-section{padding:120px 0;background:var(--cream)}
-.inv-wrap{max-width:1100px;margin:0 auto;padding:0 52px;display:grid;grid-template-columns:1fr 450px;gap:80px;align-items:center}
-.inv-col h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--stone);margin-bottom:24px}
-.inv-intro{font-size:15px;color:var(--text-body);margin-bottom:32px;line-height:1.8}
-.inclusions-list{list-style:none;display:flex;flex-direction:column;gap:16px}
-.inclusions-list li{font-size:15px;color:var(--stone);padding-left:32px;position:relative;line-height:1.7}
-.inclusions-list li:before{content:"";position:absolute;left:0;top:11px;width:16px;height:1px;background:var(--amber)}
+.v-data-card{background:#FFF;padding:50px;border:1px solid rgba(196,187,180,0.5);position:relative;transition:all 0.4s ease}
+.v-node-wrapper:hover .v-data-card{border-color:var(--amber);box-shadow:0 20px 40px rgba(14,27,48,0.04)}
+.v-data-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--stone);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--warm)}
+.v-event-row{display:flex;gap:32px;margin-bottom:24px}
+.v-event-row:last-child{margin-bottom:0}
+.v-time{font-family:'Jost',sans-serif;font-weight:400;color:var(--amber);font-size:14px;min-width:60px;letter-spacing:0.05em;padding-top:4px}
+.v-desc{font-size:15px;line-height:1.7;color:var(--text-body);font-weight:300}
 
-.pricing-box{background:var(--warm);padding:48px 40px;border:1px solid rgba(196,147,90,0.3);border-radius:3px;box-shadow:0 24px 48px rgba(14,27,48,0.05);text-align:center}
-.pricing-box h4{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:var(--stone);margin-bottom:12px}
-.price-amount{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:300;color:var(--stone);margin-bottom:24px;line-height:1}
-.pricing-options{display:flex;flex-direction:column;gap:16px;margin-bottom:32px;text-align:left}
-.p-option{background:#FFF;padding:16px 20px;border-radius:2px;border:0.5px solid rgba(196,187,180,0.5)}
-.p-option strong{font-size:14px;color:var(--stone);font-weight:500;display:block;margin-bottom:4px}
-.p-option span{font-size:13px;color:var(--seafoam)}
-.terms{font-size:12px;color:var(--wave);line-height:1.6;font-style:italic}
+/* ─── BIOMETRIC TRACKING (Dashboard Interface) ─── */
+.dash-section{padding:160px 0;background:radial-gradient(circle at top center,#1a2b42 0%,var(--stone) 100%);position:relative;overflow:hidden}
+.dash-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(104,143,157,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(104,143,157,0.06) 1px,transparent 1px);background-size:40px 40px;z-index:0;opacity:0.6}
+.dash-header{text-align:center;max-width:700px;margin:0 auto 80px;position:relative;z-index:2}
+.dash-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--cream);line-height:1.1}
+.dash-header h2 em{color:var(--seafoam);font-style:italic}
+.dash-header p{color:var(--breeze);margin-top:24px;font-size:17px;line-height:1.8}
 
-/* ─── APPLICATION FORM (Dark Theme) ─── */
-.app-section{padding:120px 0;background:var(--stone);text-align:center}
-.app-section .section-title{color:var(--cream)}
-.app-intro{font-size:16px;color:var(--wave);max-width:700px;margin:0 auto 48px;line-height:1.8}
-.form-container{max-width:550px;margin:0 auto;background:rgba(255,255,255,0.03);padding:48px;border-radius:3px;border:0.5px solid rgba(164,178,186,0.15);text-align:left}
-.form-group{margin-bottom:24px}
-.form-group label{display:block;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--breeze);margin-bottom:10px}
-.form-group input, .form-group textarea{width:100%;padding:16px;font-size:15px;border:0.5px solid rgba(164,178,186,0.3);background:transparent;color:var(--cream);font-family:'Jost',sans-serif;transition:all 0.3s;border-radius:2px}
-.form-group input:focus, .form-group textarea:focus{outline:none;border-color:var(--seafoam);background:rgba(255,255,255,0.05)}
-.form-group textarea{resize:vertical;min-height:120px}
-.form-submit{width:100%;padding:18px 32px;font-size:11px;background:var(--seafoam);color:var(--cream);border:none;cursor:pointer;font-family:'Jost',sans-serif;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;transition:all 0.3s;margin-top:8px;border-radius:2px}
-.form-submit:hover{background:var(--breeze);color:var(--stone);transform:translateY(-2px)}
-.form-note{font-size:12px;color:rgba(164,178,186,0.6);margin-top:20px;font-style:italic;text-align:center}
+.dash-panels{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1200px;margin:0 auto;padding:0 52px;position:relative;z-index:2}
+.dash-panel{background:rgba(14,27,48,0.4);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(104,143,157,0.2);padding:50px 40px;border-radius:4px;position:relative;transition:all 0.4s ease}
+.dash-panel:hover{border-color:var(--seafoam);background:rgba(14,27,48,0.7);box-shadow:0 0 30px rgba(104,143,157,0.1)}
+.dash-panel::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--seafoam),transparent);opacity:0;transition:opacity 0.4s}
+.dash-panel:hover::before{opacity:1}
+.dash-phase{font-family:'Jost',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;color:var(--amber);margin-bottom:16px;display:block}
+.dash-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--cream);margin-bottom:24px}
+.dash-body{font-size:14px;line-height:1.8;color:var(--wave);font-weight:300}
+.dash-viz{width:100%;height:40px;margin-top:30px;border-bottom:1px solid rgba(104,143,157,0.2);position:relative}
+.dash-viz::after{content:'';position:absolute;bottom:-1px;left:0;height:1px;background:var(--seafoam);box-shadow:0 -2px 10px var(--seafoam);transition:width 1s ease}
+.dash-panel:nth-child(1) .dash-viz::after{width:40%}
+.dash-panel:nth-child(2) .dash-viz::after{width:70%}
+.dash-panel:nth-child(3) .dash-viz::after{width:100%}
+
+/* ─── INCLUSIONS & INVESTMENT (Black Card) ─── */
+.inv-section{padding:160px 0;background:var(--cream);position:relative}
+.inv-header{text-align:center;max-width:800px;margin:0 auto 80px}
+.inv-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--stone);line-height:1.1}
+.inv-header h2 em{color:var(--seafoam);font-style:italic}
+.inv-header .exclusivity{background:transparent;border:none;border-bottom:1px solid var(--amber);padding-bottom:24px;font-size:16px;font-weight:400;color:var(--stone);line-height:1.6;margin-top:24px}
+
+.black-card{background:var(--stone);max-width:1100px;margin:0 auto;border-radius:2px;position:relative;overflow:hidden;box-shadow:0 40px 80px rgba(14,27,48,0.15);display:grid;grid-template-columns:1.2fr 1fr;border:1px solid rgba(196,147,90,0.3)}
+.bc-left{padding:80px;position:relative;z-index:2;border-right:1px solid rgba(196,147,90,0.15)}
+.bc-right{padding:80px;position:relative;z-index:2;background:rgba(255,255,255,0.02)}
+.bc-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--cream);margin-bottom:40px}
+.bc-list{list-style:none;display:flex;flex-direction:column;gap:20px}
+.bc-list li{font-size:15px;color:var(--breeze);padding-left:36px;position:relative;line-height:1.7}
+.bc-list li::before{content:'';position:absolute;left:0;top:8px;width:16px;height:1px;background:var(--amber)}
+.bc-price{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;color:var(--amber);margin-bottom:40px;line-height:1}
+.bc-tiers{display:flex;flex-direction:column;gap:20px;margin-bottom:40px}
+.bc-tier{border:1px solid rgba(104,143,157,0.3);padding:24px;border-radius:2px;transition:all 0.3s ease}
+.bc-tier:hover{border-color:var(--amber);background:rgba(196,147,90,0.05)}
+.bc-tier strong{display:block;font-size:14px;color:var(--cream);letter-spacing:0.05em;margin-bottom:6px;font-weight:400}
+.bc-tier span{font-size:13px;color:var(--wave);line-height:1.6;display:block}
+.bc-terms{font-size:11px;color:rgba(164,178,186,0.5);line-height:1.6;font-style:italic}
+
+/* ─── APPLICATION FORM (Hovering Portal) ─── */
+.app-section{padding:160px 0;background:var(--stone);position:relative;overflow:hidden;text-align:center}
+.app-section::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 50% 50%,rgba(104,143,157,0.05) 0%,transparent 60%);z-index:0;pointer-events:none}
+.app-header{position:relative;z-index:2;margin-bottom:60px}
+.app-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--cream);line-height:1.1}
+.app-header p{color:var(--wave);margin-top:20px;font-size:16px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.8}
+
+.portal-box{max-width:600px;margin:0 auto;background:rgba(247,240,236,0.98);padding:70px 60px;border-radius:2px;box-shadow:0 30px 60px rgba(0,0,0,0.5);position:relative;z-index:2;text-align:left}
+.portal-group{margin-bottom:32px;position:relative}
+.portal-label{font-size:10px;text-transform:uppercase;letter-spacing:0.2em;color:var(--seafoam);display:block;margin-bottom:8px;font-weight:500}
+.portal-input{width:100%;background:transparent;border:none;border-bottom:1px solid var(--sand);padding:12px 0;font-size:16px;font-family:'Jost',sans-serif;color:var(--stone);transition:border-color 0.4s}
+.portal-input:focus{outline:none;border-bottom-color:var(--amber)}
+.portal-input::placeholder{color:rgba(122,143,150,0.5);font-weight:300}
+textarea.portal-input{resize:vertical;min-height:100px}
+.portal-submit{width:100%;padding:20px;background:var(--stone);color:var(--cream);border:none;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;cursor:pointer;transition:all 0.4s;margin-top:16px}
+.portal-submit:hover{background:var(--amber);color:var(--stone)}
+.portal-note{font-size:11px;color:var(--text-light);font-style:italic;text-align:center;margin-top:24px}
+
+/* MetForm Overrides for Hawaii Application */
+.stillness-hawaii-form-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+.stillness-hawaii-form-wrap form,
+.stillness-hawaii-form-wrap [class~="mf-form"] {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.stillness-hawaii-form-wrap [class~="mf-input-label"],
+.stillness-hawaii-form-wrap label {
+  display: block !important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2em !important;
+  color: var(--seafoam) !important;
+  margin: 0 0 8px 0 !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+}
+
+.stillness-hawaii-form-wrap [class~="mf-input-wrapper"],
+.stillness-hawaii-form-wrap form > div:not([class~="mf-btn-wraper"]):not([class~="mf-btn-wrapper"]),
+.stillness-hawaii-form-wrap [class~="mf-form"] > div:not([class~="mf-btn-wraper"]):not([class~="mf-btn-wrapper"]) {
+  width: 100% !important;
+  margin: 0 0 32px 0 !important;
+}
+
+.stillness-hawaii-form-wrap [class~="mf-input"],
+.stillness-hawaii-form-wrap input[type='text'],
+.stillness-hawaii-form-wrap input[type='email'],
+.stillness-hawaii-form-wrap input[type='tel'],
+.stillness-hawaii-form-wrap textarea {
+  width: 100% !important;
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid var(--sand) !important;
+  padding: 12px 0 !important;
+  font-size: 16px !important;
+  font-family: 'Jost', sans-serif !important;
+  color: var(--stone) !important;
+  transition: border-color 0.4s !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+.stillness-hawaii-form-wrap [class~="mf-input"]:focus,
+.stillness-hawaii-form-wrap input[type='text']:focus,
+.stillness-hawaii-form-wrap input[type='email']:focus,
+.stillness-hawaii-form-wrap input[type='tel']:focus,
+.stillness-hawaii-form-wrap textarea:focus {
+  border-bottom-color: var(--amber) !important;
+  background: transparent !important;
+}
+
+.stillness-hawaii-form-wrap [class~="mf-input"]::placeholder,
+.stillness-hawaii-form-wrap input[type='text']::placeholder,
+.stillness-hawaii-form-wrap input[type='email']::placeholder,
+.stillness-hawaii-form-wrap input[type='tel']::placeholder,
+.stillness-hawaii-form-wrap textarea::placeholder {
+  color: rgba(122, 143, 150, 0.5) !important;
+  font-weight: 300 !important;
+}
+
+.stillness-hawaii-form-wrap textarea {
+  resize: vertical !important;
+  min-height: 100px !important;
+}
+
+.stillness-hawaii-form-wrap [class~="mf-btn-wraper"],
+.stillness-hawaii-form-wrap [class~="mf-btn-wrapper"],
+.stillness-hawaii-form-wrap [class~="mf-button-wrapper"],
+.stillness-hawaii-form-wrap [class~="mf-submit"],
+.stillness-hawaii-form-wrap button {
+  display: block !important;
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.stillness-hawaii-form-wrap button[type='submit'],
+.stillness-hawaii-form-wrap input[type='submit'],
+.stillness-hawaii-form-wrap [class~="metform-btn"],
+.stillness-hawaii-form-wrap [class~="metform-btn-submit"],
+.stillness-hawaii-form-wrap [class~="mf-btn"],
+.stillness-hawaii-form-wrap [class~="mf-btn-wraper"] button,
+.stillness-hawaii-form-wrap [class~="mf-btn-wrapper"] button,
+.stillness-hawaii-form-wrap [class~="mf-button-wrapper"] button,
+.stillness-hawaii-form-wrap [class~="stillness-hawaii-submit-fallback"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 54px !important;
+  padding: 20px !important;
+  background: var(--stone) !important;
+  color: var(--cream) !important;
+  border: none !important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: 11px !important;
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  transition: all 0.4s !important;
+  margin-top: 16px !important;
+  border-radius: 2px !important;
+  line-height: normal !important;
+  box-shadow: none !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+.stillness-hawaii-form-wrap button[type='submit']:hover,
+.stillness-hawaii-form-wrap input[type='submit']:hover,
+.stillness-hawaii-form-wrap [class~="metform-btn"]:hover,
+.stillness-hawaii-form-wrap [class~="metform-btn-submit"]:hover,
+.stillness-hawaii-form-wrap [class~="mf-btn"]:hover,
+.stillness-hawaii-form-wrap [class~="mf-btn-wraper"] button:hover,
+.stillness-hawaii-form-wrap [class~="mf-btn-wrapper"] button:hover,
+.stillness-hawaii-form-wrap [class~="mf-button-wrapper"] button:hover,
+.stillness-hawaii-form-wrap [class~="stillness-hawaii-submit-fallback"]:hover {
+  background: var(--amber) !important;
+  color: var(--stone) !important;
+}
+
+/* ─── CLOSING CTA ─── */
+.closing-cta{background:var(--breeze);padding:120px 40px;text-align:center;color:var(--stone)}
+.closing-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,48px);font-weight:300;line-height:1.2;margin-bottom:40px}
+.closing-cta em{font-style:italic;display:block}
+.btn-stone{font-family:'Jost',sans-serif;font-size:11px;font-weight:400;letter-spacing:0.25em;text-transform:uppercase;color:var(--cream);background:var(--stone);border:none;padding:18px 40px;cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-block}
+.btn-stone:hover{background:var(--midnight);transform:translateY(-2px)}
 
 /* ─── FOOTER ─── */
-.footer{background:var(--stone);color:var(--wave);padding:60px 52px;text-align:center;font-size:13px;border-top:1px solid rgba(217,232,235,0.05)}
+.footer{background:var(--stone);color:rgba(164,178,186,0.6);padding:80px 52px;text-align:center;font-size:13px;border-top:1px solid rgba(255,255,255,0.05)}
 .footer-line{margin-bottom:8px}
-.footer-line.contact{color:var(--seafoam);margin-top:16px}
+.footer-line.contact{color:var(--amber);margin-top:24px}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 
+@media (max-width: 1024px) {
+  .crisis-section{flex-direction:column}
+  .crisis-visual{height:60vh;position:relative}
+  .crisis-visual::after{background:linear-gradient(to top,var(--stone),transparent)}
+  .crisis-content{padding:80px 40px;min-height:auto}
+  .black-card{grid-template-columns:1fr}
+  .bc-left{border-right:none;border-bottom:1px solid rgba(196,147,90,0.15)}
+}
+
 @media (max-width: 900px) {
-  .timeline::before{display:none}
-  .timeline{grid-template-columns:1fr;gap:40px}
-  .tl-item{flex-direction:row;text-align:left;align-items:flex-start}
-  .tl-dot{width:40px;height:40px;flex-shrink:0}
-  .tl-dot-inner{width:6px;height:6px}
-  .tl-content{flex:1}
-  .inv-wrap{grid-template-columns:1fr;gap:60px}
+  .glass-grid, .dash-panels{grid-template-columns:1fr;gap:30px}
+  .v-timeline{padding-left:0;padding-right:0}
+  .v-spine{left:30px}
+  .v-node-wrapper{padding-left:80px}
+  .v-circle{left:0;width:60px;justify-content:center}
+  .v-circle-inner{width:50px;height:50px;box-shadow:0 0 0 4px var(--cream)}
+  .v-circle-inner span:last-child{font-size:16px}
+  .v-circle-inner span:first-child{font-size:7px}
+  .v-event-row{flex-direction:column;gap:8px}
+  .img-strip{grid-template-columns:1fr}
 }
 
 @media (max-width: 768px) {
   nav{padding:1.25rem 1.5rem}
   .hero-content{padding:0 1.5rem}
-  .pillars-grid, .data-grid{grid-template-columns:1fr;gap:24px;padding:0 24px}
-  .crisis-wrap, .timeline, .inv-wrap{padding:0 24px}
-  .img-strip{grid-template-columns:1fr}
-  .form-container{padding:32px 24px;margin:0 24px}
-  .hero-title{font-size:clamp(3rem,8vw,4rem)}
+  .pillars-section, .itinerary-section, .dash-section, .inv-section, .app-section{padding:80px 24px}
+  .v-data-card{padding:30px 24px}
+  .portal-box{padding:40px 30px}
+  .bc-left, .bc-right{padding:40px 30px}
 }
 </style>
 </head>
@@ -167,9 +360,8 @@ nav.scrolled .nav-cta{color:var(--cream);background:var(--stone)}
   <a href="#application" class="nav-cta">Apply / Private Intake</a>
 </nav>
 
-<!-- Hero -->
+<!-- Hero (Untouched) -->
 <section class="hero">
-  <!-- Note: Replace src with final client image -->
   <img class="hero-img" src="https://images.unsplash.com/photo-1542259009477-d625272157b7?q=80&w=2069&auto=format&fit=crop" alt="Hawaii Luxury Retreat">
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -183,157 +375,249 @@ nav.scrolled .nav-cta{color:var(--cream);background:var(--stone)}
   </div>
 </section>
 
-<!-- Opening Problem / Quiet Crisis (Dark Quote Section) -->
+<!-- Opening Problem / Quiet Crisis (Cinematic Split Screen) -->
 <section class="crisis-section">
-  <div class="crisis-wrap">
-    <span class="crisis-mark">“</span>
-    <h2 class="crisis-title">The Quiet Crisis of <em>High Performance</em></h2>
-    <p class="crisis-body">To the outside world, you are operating at the peak of success. But behind closed doors, the relentless pressure of leadership has extracted a massive toll on your physical biology. Chronic stress, sleep fragmentation, and constant cognitive overload have trapped your body in a persistent state of sympathetic dominance: fight-or-flight.</p>
-    <p class="crisis-body">When your nervous system is deregulated, your strategic clarity, emotional resilience, and overall health suffer. This is not a vacation. This is a scientific intervention.</p>
-    <p class="crisis-body">Over 4 days on the Big Island of Hawaii, we will systematically deactivate your stress response, rest your visual cortex, and physically retrain your vagus nerve to restore your biological baseline. You will leave neurologically different.</p>
+  <div class="crisis-visual">
+    <img src="https://images.unsplash.com/photo-1499728603263-13726abce5fd?q=80&w=2070&auto=format&fit=crop" alt="High performance rest">
+  </div>
+  <div class="crisis-content">
+    <span class="section-eyebrow">The Baseline</span>
+    <h2>The Quiet Crisis of <em>High Performance</em></h2>
+    
+    <div class="crisis-text-block">
+      <p>To the outside world, you are operating at the peak of success. But behind closed doors, the relentless pressure of leadership has extracted a massive toll on your physical biology. Chronic stress, sleep fragmentation, and constant cognitive overload have trapped your body in a persistent state of sympathetic dominance: fight-or-flight.</p>
+    </div>
+    
+    <div class="crisis-text-block">
+      <p>When your nervous system is deregulated, your strategic clarity, emotional resilience, and overall health suffer. This is not a vacation. This is a scientific intervention.</p>
+    </div>
+    
+    <div class="crisis-text-block highlight">
+      <p>Over 4 days on the Big Island of Hawaii, we will systematically deactivate your stress response, rest your visual cortex, and physically retrain your vagus nerve to restore your biological baseline. You will leave neurologically different.</p>
+    </div>
   </div>
 </section>
 
-<!-- Protocol Pillars (Foryou Cards) -->
+<!-- Protocol Pillars (Floating Glass Panels) -->
 <section class="pillars-section">
-  <div class="section-header">
-    <span class="section-eyebrow">The Science</span>
+  <div class="pillars-header">
     <h2 class="section-title">Clinical-Grade <em>Nervous System Regulation</em></h2>
-    <p style="font-size:16px; color:var(--text-body); line-height:1.8; margin-top:20px;">We do not offer generic relaxation. Our protocol combines ancestral acoustic technologies with sensory deprivation to target the vagus nerve—the primary superhighway of your parasympathetic nervous system.</p>
+    <p>We do not offer generic relaxation. Our protocol combines ancestral acoustic technologies with sensory deprivation to target the vagus nerve—the primary superhighway of your parasympathetic nervous system.</p>
   </div>
   
-  <div class="pillars-grid">
-    <div class="pillar-card">
-      <span class="pillar-num">01</span>
-      <h3 class="pillar-title">Neuro-Acoustic Somatic Toning</h3>
-      <p class="pillar-body">Through targeted vocal yoga and precision sound frequencies, we use mechanical vibration to stimulate the vagal pathways in the throat. This immediately triggers a physiological slowdown, lowering blood pressure in minutes.</p>
+  <div class="glass-grid">
+    <div class="glass-panel">
+      <div class="massive-num">01</div>
+      <h3 class="glass-title">Neuro-Acoustic Somatic Toning</h3>
+      <p class="glass-body">Through targeted vocal yoga and precision sound frequencies, we use mechanical vibration to stimulate the vagal pathways in the throat. This immediately triggers a physiological slowdown, lowering blood pressure in minutes.</p>
     </div>
-    <div class="pillar-card">
-      <span class="pillar-num">02</span>
-      <h3 class="pillar-title">Hydro-Acoustic Floating</h3>
-      <p class="pillar-body">Float weightlessly while underwater acoustic transducers emit low-frequency sound waves. Your bones absorb these vibrations, bypassing the analytical mind to slow your brainwaves to Alpha and Theta states.</p>
+    <div class="glass-panel">
+      <div class="massive-num">02</div>
+      <h3 class="glass-title">Hydro-Acoustic Floating</h3>
+      <p class="glass-body">Float weightlessly while underwater acoustic transducers emit low-frequency sound waves. Your bones absorb these vibrations, bypassing the analytical mind to slow your brainwaves to Alpha and Theta states.</p>
     </div>
-    <div class="pillar-card">
-      <span class="pillar-num">03</span>
-      <h3 class="pillar-title">24-Hour Blind Immersion</h3>
-      <p class="pillar-body">Removing sight for 24 hours shuts down visual cortex overstimulation. Your auditory, tactile, and somatic senses skyrocket by 10x, allowing our therapies to penetrate at a cellular level.</p>
+    <div class="glass-panel">
+      <div class="massive-num">03</div>
+      <h3 class="glass-title">24-Hour Blind Immersion</h3>
+      <p class="glass-body">Removing sight for 24 hours shuts down visual cortex overstimulation. Your auditory, tactile, and somatic senses skyrocket by 10x, allowing our therapies to penetrate at a cellular level.</p>
     </div>
   </div>
 </section>
 
 <!-- Hawaii Visual Strip -->
 <div class="img-strip">
-  <!-- Note: Replace src with final client images -->
   <img class="strip-img" src="https://images.unsplash.com/photo-1598135753163-6167c1a1ad65?q=80&w=2069&auto=format&fit=crop" alt="Hawaii Ocean">
   <img class="strip-img" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2080&auto=format&fit=crop" alt="Luxury Villa Retreat">
   <img class="strip-img" src="https://images.unsplash.com/photo-1583416750470-965b2707b355?q=80&w=2070&auto=format&fit=crop" alt="Sound Healing">
 </div>
 
-<!-- Itinerary (Timeline Pattern) -->
+<!-- Itinerary (Elaborated Vertical Timeline) -->
 <section class="itinerary-section">
-  <div class="section-header">
-    <span class="section-eyebrow">The Journey</span>
+  <div class="itin-header">
     <h2 class="section-title">The Protocol for <em>Deep Transformation</em></h2>
-    <p style="font-size:16px; color:var(--text-body); line-height:1.8; margin-top:20px;">Every hour is intentionally curated to transition your body from high-frequency executive survival to deep, restorative stillness.</p>
+    <p>Every hour is intentionally curated to transition your body from high-frequency executive survival to deep, restorative stillness.</p>
   </div>
   
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-dot"><div class="tl-dot-inner"></div></div>
-      <div class="tl-content">
-        <div class="tl-duration">DAY 1</div>
-        <h3 class="tl-title" style="margin-bottom:16px;">The Severance & Unplugging</h3>
-        <div class="tl-events">
-          <div class="tl-event"><span class="time">14:00</span> <span>VIP Private Transit Arrival & Luxury Villa Check-in</span></div>
-          <div class="tl-event"><span class="time">16:00</span> <span>The Digital Severance: Devices securely locked away to break dopamine addiction loops</span></div>
-          <div class="tl-event"><span class="time">17:30</span> <span>Opening Orientation & Initial Biometric Review</span></div>
-          <div class="tl-event"><span class="time">19:00</span> <span>Welcome Dinner: Anti-inflammatory, locally sourced organic cuisine</span></div>
-          <div class="tl-event"><span class="time">20:30</span> <span>Somatic Grounding Sound Bath to eliminate travel anxiety</span></div>
+  <div class="v-timeline">
+    <div class="v-spine"></div>
+    
+    <div class="v-node-wrapper">
+      <div class="v-circle">
+        <div class="v-circle-inner">
+          <span>Day</span>
+          <span>01</span>
+        </div>
+      </div>
+      <div class="v-data-card">
+        <h3 class="v-data-title">The Severance & Unplugging</h3>
+        <div class="v-event-row">
+          <div class="v-time">14:00</div>
+          <div class="v-desc">VIP Private Transit Arrival & Luxury Villa Check-in</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">16:00</div>
+          <div class="v-desc">The Digital Severance: Devices securely locked away to break dopamine addiction loops</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">17:30</div>
+          <div class="v-desc">Opening Orientation & Initial Biometric Review</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">19:00</div>
+          <div class="v-desc">Welcome Dinner: Anti-inflammatory, locally sourced organic cuisine</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">20:30</div>
+          <div class="v-desc">Somatic Grounding Sound Bath to eliminate travel anxiety</div>
         </div>
       </div>
     </div>
 
-    <div class="tl-item">
-      <div class="tl-dot"><div class="tl-dot-inner"></div></div>
-      <div class="tl-content">
-        <div class="tl-duration">DAY 2</div>
-        <h3 class="tl-title" style="margin-bottom:16px;">Acoustic Re-Awakening & Vagal Toning</h3>
-        <div class="tl-events">
-          <div class="tl-event"><span class="time">07:30</span> <span>Morning Hydration & Nervous System Breathwork</span></div>
-          <div class="tl-event"><span class="time">09:00</span> <span>Vocal Yoga Workshop: Activating vocal cord resonance to stimulate vagal pathways</span></div>
-          <div class="tl-event"><span class="time">12:30</span> <span>Organic, nutrient-dense lunch</span></div>
-          <div class="tl-event"><span class="time">14:30</span> <span>Hydro-Acoustic Floating Journey (Session 1: Gravitational Release)</span></div>
-          <div class="tl-event"><span class="time">17:00</span> <span>Group Integration & Executive Stress-Mapping</span></div>
-          <div class="tl-event"><span class="time">19:00</span> <span>Ocean-side Dinner</span></div>
+    <div class="v-node-wrapper">
+      <div class="v-circle">
+        <div class="v-circle-inner">
+          <span>Day</span>
+          <span>02</span>
+        </div>
+      </div>
+      <div class="v-data-card">
+        <h3 class="v-data-title">Acoustic Re-Awakening & Vagal Toning</h3>
+        <div class="v-event-row">
+          <div class="v-time">07:30</div>
+          <div class="v-desc">Morning Hydration & Nervous System Breathwork</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">09:00</div>
+          <div class="v-desc">Vocal Yoga Workshop: Activating vocal cord resonance to stimulate vagal pathways</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">12:30</div>
+          <div class="v-desc">Organic, nutrient-dense lunch</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">14:30</div>
+          <div class="v-desc">Hydro-Acoustic Floating Journey (Session 1: Gravitational Release)</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">17:00</div>
+          <div class="v-desc">Group Integration & Executive Stress-Mapping</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">19:00</div>
+          <div class="v-desc">Ocean-side Dinner</div>
         </div>
       </div>
     </div>
 
-    <div class="tl-item">
-      <div class="tl-dot"><div class="tl-dot-inner"></div></div>
-      <div class="tl-content">
-        <div class="tl-duration">DAY 3</div>
-        <h3 class="tl-title" style="margin-bottom:16px;">The 24-Hour Blind Sensory Immersion</h3>
-        <div class="tl-events">
-          <div class="tl-event"><span class="time">08:00</span> <span>Total Blackout Mask Fitting (Masks remain on for 24 continuous hours)</span></div>
-          <div class="tl-event"><span class="time">09:00</span> <span>Sensory Breakfast: Re-engaging olfactory and tactile receptivity</span></div>
-          <div class="tl-event"><span class="time">11:00</span> <span>Blind Neuro-Acoustic Sound Immersion amplified tenfold by visual deprivation</span></div>
-          <div class="tl-event"><span class="time">14:30</span> <span>Blind Vocal Yoga & Chanting: Releasing deep stress without self-consciousness</span></div>
-          <div class="tl-event"><span class="time">18:30</span> <span>Sensory Dinner in complete visual darkness</span></div>
-          <div class="tl-event"><span class="time">20:30</span> <span>The Sunset Unveiling: Strategic removal of masks, followed by silent meditation</span></div>
+    <div class="v-node-wrapper">
+      <div class="v-circle">
+        <div class="v-circle-inner">
+          <span>Day</span>
+          <span>03</span>
+        </div>
+      </div>
+      <div class="v-data-card">
+        <h3 class="v-data-title">The 24-Hour Blind Sensory Immersion</h3>
+        <div class="v-event-row">
+          <div class="v-time">08:00</div>
+          <div class="v-desc">Total Blackout Mask Fitting (Masks remain on for 24 continuous hours)</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">09:00</div>
+          <div class="v-desc">Sensory Breakfast: Re-engaging olfactory and tactile receptivity</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">11:00</div>
+          <div class="v-desc">Blind Neuro-Acoustic Sound Immersion amplified tenfold by visual deprivation</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">14:30</div>
+          <div class="v-desc">Blind Vocal Yoga & Chanting: Releasing deep stress without self-consciousness</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">18:30</div>
+          <div class="v-desc">Sensory Dinner in complete visual darkness</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">20:30</div>
+          <div class="v-desc">The Sunset Unveiling: Strategic removal of masks, followed by silent meditation</div>
         </div>
       </div>
     </div>
 
-    <div class="tl-item">
-      <div class="tl-dot"><div class="tl-dot-inner"></div></div>
-      <div class="tl-content">
-        <div class="tl-duration">DAY 4</div>
-        <h3 class="tl-title" style="margin-bottom:16px;">Strategic Re-Entry & Integration</h3>
-        <div class="tl-events">
-          <div class="tl-event"><span class="time">08:00</span> <span>Final Biometric Check-in & Recovery Matrix Analysis</span></div>
-          <div class="tl-event"><span class="time">09:30</span> <span>Boardroom Integration Workshop: Building nervous system habits for high-stress workspaces</span></div>
-          <div class="tl-event"><span class="time">11:30</span> <span>Device Return & Closing Circle</span></div>
-          <div class="tl-event"><span class="time">13:00</span> <span>Private Transit Departures</span></div>
+    <div class="v-node-wrapper">
+      <div class="v-circle">
+        <div class="v-circle-inner">
+          <span>Day</span>
+          <span>04</span>
+        </div>
+      </div>
+      <div class="v-data-card">
+        <h3 class="v-data-title">Strategic Re-Entry & Integration</h3>
+        <div class="v-event-row">
+          <div class="v-time">08:00</div>
+          <div class="v-desc">Final Biometric Check-in & Recovery Matrix Analysis</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">09:30</div>
+          <div class="v-desc">Boardroom Integration Workshop: Building nervous system habits for high-stress workspaces</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">11:30</div>
+          <div class="v-desc">Device Return & Closing Circle</div>
+        </div>
+        <div class="v-event-row">
+          <div class="v-time">13:00</div>
+          <div class="v-desc">Private Transit Departures</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Biometric Tracking (Dark Glassmorphism) -->
-<section class="data-section">
-  <div class="section-header">
-    <span class="section-eyebrow">The Data</span>
+<!-- Biometric Tracking (Dashboard Interface) -->
+<section class="dash-section">
+  <div class="dash-bg-grid"></div>
+  <div class="dash-header">
     <h2 class="section-title">Biometric Tracking & <em>Integration</em></h2>
-    <p class="data-intro">We do not guess your recovery; we measure it using advanced biosensors. Your transformation is proven through continuous data tracking across three phases.</p>
+    <p>We do not guess your recovery; we measure it using advanced biosensors. Your transformation is proven through continuous data tracking across three phases.</p>
   </div>
   
-  <div class="data-grid">
-    <div class="data-phase">
-      <h3>Phase 1: Pre-Retreat</h3>
-      <p>October 2026. Premium tracking wearable shipped to your home. We track your Heart Rate Variability, sleep, and cortisol in your high-stress environment for 30 days.</p>
+  <div class="dash-panels">
+    <div class="dash-panel">
+      <span class="dash-phase">Phase 1: Pre-Retreat</span>
+      <h3 class="dash-title">October 2026</h3>
+      <p class="dash-body">Premium tracking wearable shipped to your home. We track your Heart Rate Variability, sleep, and cortisol in your high-stress environment for 30 days.</p>
+      <div class="dash-viz"></div>
     </div>
-    <div class="data-phase">
-      <h3>Phase 2: On-Site</h3>
-      <p>November 2026. Your biometric trends are analyzed and used to tailor your vocal yoga frequencies and floating sound journeys.</p>
+    <div class="dash-panel">
+      <span class="dash-phase">Phase 2: On-Site</span>
+      <h3 class="dash-title">November 2026</h3>
+      <p class="dash-body">Your biometric trends are analyzed and used to tailor your vocal yoga frequencies and floating sound journeys.</p>
+      <div class="dash-viz"></div>
     </div>
-    <div class="data-phase">
-      <h3>Phase 3: Integration</h3>
-      <p>December 2026. Continued tracking for 30 days. 1-on-1 data review call analyzing your improved HRV and sleep scores.</p>
+    <div class="dash-panel">
+      <span class="dash-phase">Phase 3: Integration</span>
+      <h3 class="dash-title">December 2026</h3>
+      <p class="dash-body">Continued tracking for 30 days. 1-on-1 data review call analyzing your improved HRV and sleep scores.</p>
+      <div class="dash-viz"></div>
     </div>
   </div>
 </section>
 
-<!-- Inclusions & Investment -->
-<section class="investment-section">
-  <div class="inv-wrap">
-    <div class="inv-col">
-      <span class="section-eyebrow">The Details</span>
-      <h3>Ultra-Exclusive Inclusions</h3>
-      <p class="inv-intro">Due to the highly immersive nature of the 24-hour blind sensory day and personalized biometric tracking, this cohort is strictly limited to 12 curated attendees.</p>
-      
-      <ul class="inclusions-list">
+<!-- Inclusions & Investment (Black Card) -->
+<section class="inv-section">
+  <div class="inv-header">
+    <h2 class="section-title">Ultra-Exclusive <em>Inclusions & Investment</em></h2>
+    <div class="exclusivity">
+      Due to the highly immersive nature of the 24-hour blind sensory day and personalized biometric tracking, this cohort is strictly limited to 12 curated attendees.
+    </div>
+  </div>
+
+  <div class="black-card">
+    <div class="bc-left">
+      <h3 class="bc-title">What's Included</h3>
+      <ul class="bc-list">
         <li>4 Days / 3 Nights in a private, ultra-luxury eco-villa on Big Island</li>
         <li>All gourmet, organic meals curated by a private chef to optimize cell health</li>
         <li>Complete access to all private sound therapy pools, floating setups, and vocal yoga sessions</li>
@@ -343,61 +627,46 @@ nav.scrolled .nav-cta{color:var(--cream);background:var(--stone)}
       </ul>
     </div>
     
-    <div class="pricing-box">
-      <h4>Total Investment</h4>
-      <div class="price-amount">$6,000</div>
+    <div class="bc-right">
+      <h3 class="bc-title">Total Investment</h3>
+      <div class="bc-price">$6,000</div>
       
-      <div class="pricing-options">
-        <div class="p-option">
+      <div class="bc-tiers">
+        <div class="bc-tier">
           <strong>Full Tuition</strong>
           <span>One-time payment. Due prior to arrival.</span>
         </div>
-        <div class="p-option">
+        <div class="bc-tier">
           <strong>Payment Plan (5 × $1K)</strong>
           <span>$1,000 deposit to secure. Then $1,000 monthly (July–November 2026).</span>
         </div>
       </div>
       
-      <p class="terms">All balances must be settled in full prior to arrival. All payments are non-refundable but fully transferable to a qualified colleague upon approval.</p>
+      <p class="bc-terms">All balances must be settled in full prior to arrival. All payments are non-refundable but fully transferable to a qualified colleague upon approval.</p>
     </div>
   </div>
 </section>
 
-<!-- Application Form (Dark Theme) -->
+<!-- Application Form (Hovering Portal) -->
 <section class="app-section" id="application">
-  <div class="section-header" style="margin-bottom:48px;">
-    <span class="section-eyebrow">The Next Step</span>
+  <div class="app-header">
     <h2 class="section-title">Application for <em>Private Invitation</em></h2>
-    <p class="app-intro">To ensure a cohesive, intentional cohort, admission is by private application only. All applicants participate in a 30-minute intake call.</p>
+    <p>To ensure a cohesive, intentional cohort, admission is by private application only. All applicants participate in a 30-minute intake call.</p>
   </div>
 
-  <div class="form-container">
-    <form onsubmit="alert('Application submitted. You will hear from us within 48 hours.'); return false;">
-      <div class="form-group">
-        <label for="name">Full name</label>
-        <input type="text" id="name" name="name" placeholder="First and last name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone number</label>
-        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
-      </div>
-      <div class="form-group">
-        <label for="title">Professional title</label>
-        <input type="text" id="title" name="title" placeholder="e.g., CEO, Founder">
-      </div>
-      <div class="form-group">
-        <label for="message">What are you hoping to reset?</label>
-        <textarea id="message" name="message" placeholder="Tell us about your current stress levels and what you're seeking..."></textarea>
-      </div>
-      <button type="submit" class="form-submit">Submit Application & Schedule Consultation</button>
-      <div class="form-note">Your information is confidential. We'll reach out within 48 hours.</div>
-    </form>
+  <div class="portal-box">
+    <div class="stillness-hawaii-form-wrap">
+      [metform form_id="6698"]
+    </div>
+    <div class="portal-note">Your information is confidential. We'll reach out within 48 hours.</div>
   </div>
 </section>
+
+<!-- Closing CTA -->
+<div class="closing-cta">
+  <h2>Your nervous system is ready.<br><em>Apply for your private intake call today.</em></h2>
+  <a href="#application" class="btn-stone">Apply for Intake Consultation</a>
+</div>
 
 <!-- Footer -->
 <div class="footer">
@@ -416,6 +685,35 @@ window.addEventListener('scroll', () => {
     nav.classList.remove('scrolled');
   }
 });
+
+// Dynamic fallback submit button insertion for MetForm
+(function() {
+  function stillnessEnsureHawaiiSubmit() {
+    document.querySelectorAll('.stillness-hawaii-form-wrap form').forEach(function(form) {
+      var submit = form.querySelector('button[type="submit"], input[type="submit"], [class*="metform-btn"], [class*="mf-btn"]');
+      if (submit) {
+        submit.style.setProperty('display', 'flex', 'important');
+        submit.style.setProperty('opacity', '1', 'important');
+        submit.style.setProperty('visibility', 'visible', 'important');
+        return;
+      }
+
+      var fallback = document.createElement('button');
+      fallback.type = 'submit';
+      fallback.className = 'stillness-hawaii-submit-fallback';
+      fallback.textContent = 'Submit Application & Schedule Consultation';
+      form.appendChild(fallback);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', stillnessEnsureHawaiiSubmit);
+  } else {
+    stillnessEnsureHawaiiSubmit();
+  }
+  setTimeout(stillnessEnsureHawaiiSubmit, 800);
+  setTimeout(stillnessEnsureHawaiiSubmit, 1800);
+})();
 </script>
 
 </body>

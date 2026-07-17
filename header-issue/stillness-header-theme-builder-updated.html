@@ -1,0 +1,307 @@
+<header id="stillness-header" class="header-root header-on-dark">
+    <div class="header-inner">
+        <a href="/" class="header-logo">Stillness.</a>
+
+        <nav class="desktop-nav">
+            <a href="/corporate" class="nav-link">Corporate</a>
+            <a href="/sacred-offerings" class="nav-link">Sacred Offerings</a>
+            <a href="/shop" class="nav-link">Shop</a>
+            <a href="/blogs" class="nav-link">Blog</a>
+            <a href="/about" class="nav-link">About</a>
+            <a href="/events" class="book-btn">Events</a>
+        </nav>
+
+        <button id="mobile-toggle" class="mobile-toggle" type="button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+        <a href="/corporate" class="mobile-nav-link">Corporate</a>
+        <a href="/sacred-offerings" class="mobile-nav-link">Sacred Offerings</a>
+        <a href="/shop" class="mobile-nav-link">Shop</a>
+        <a href="/blogs" class="mobile-nav-link">Blog</a>
+        <a href="/about" class="mobile-nav-link">About</a>
+        <a href="/events" class="mobile-book-btn">Events</a>
+    </div>
+</header>
+
+<style>
+/* Stillness Header - Theme Builder Version */
+
+:root {
+    --stone: #0E1B30;
+    --seafoam: #688F9D;
+    --cream: #FFFFFF;
+    --wave: #A4B2BA;
+    --mobile-menu-bg: #F7F0EC;
+    --header-height: 90px;
+}
+
+.elementor-location-header,
+.elementor-location-header .elementor-section-wrap,
+.elementor-location-header > .elementor-container {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#stillness-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    background: transparent;
+    transition: background 0.5s ease, height 0.5s ease, box-shadow 0.5s ease;
+}
+
+.admin-bar #stillness-header { top: 32px; }
+@media (max-width: 782px) { .admin-bar #stillness-header { top: 46px; } }
+
+#stillness-header.is-scrolled {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    height: 72px;
+    box-shadow: 0 1px 0 rgba(14, 27, 48, 0.06);
+}
+
+#stillness-header.mobile-menu-open {
+    background: transparent;
+    box-shadow: none;
+}
+
+.header-inner {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo,
+.header-logo:visited,
+.header-logo:active,
+.header-logo:focus {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    color: var(--cream) !important;
+    transition: color 0.4s ease;
+    z-index: 10001;
+    outline: none;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.nav-link,
+.nav-link:visited,
+.nav-link:active,
+.nav-link:focus {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    text-decoration: none;
+    color: var(--cream) !important;
+    transition: color 0.3s ease;
+    outline: none;
+}
+
+.nav-link:hover { color: var(--seafoam) !important; }
+
+.book-btn,
+.book-btn:visited,
+.book-btn:active,
+.book-btn:focus {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    padding: 11px 30px;
+    border: 1px solid var(--cream);
+    border-radius: 100px;
+    color: var(--cream) !important;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    outline: none;
+}
+
+.book-btn:hover {
+    background: var(--cream);
+    color: var(--stone) !important;
+}
+
+#stillness-header.header-on-dark:not(.is-scrolled):not(.mobile-menu-open) .header-logo,
+#stillness-header.header-on-dark:not(.is-scrolled):not(.mobile-menu-open) .header-logo:visited,
+#stillness-header.header-on-dark:not(.is-scrolled):not(.mobile-menu-open) .nav-link,
+#stillness-header.header-on-dark:not(.is-scrolled):not(.mobile-menu-open) .nav-link:visited {
+    color: var(--cream) !important;
+}
+
+#stillness-header.header-on-dark:not(.is-scrolled):not(.mobile-menu-open) .book-btn,
+#stillness-header.header-on-dark:not(.is-scrolled):not(.mobile-menu-open) .book-btn:visited {
+    border-color: var(--cream);
+    color: var(--cream) !important;
+}
+
+#stillness-header.header-on-light:not(.is-scrolled) .header-logo,
+#stillness-header.header-on-light:not(.is-scrolled) .header-logo:visited,
+#stillness-header.header-on-light:not(.is-scrolled) .nav-link,
+#stillness-header.header-on-light:not(.is-scrolled) .nav-link:visited,
+#stillness-header.is-scrolled .header-logo,
+#stillness-header.is-scrolled .header-logo:visited,
+#stillness-header.is-scrolled .nav-link,
+#stillness-header.is-scrolled .nav-link:visited,
+#stillness-header.mobile-menu-open .header-logo,
+#stillness-header.mobile-menu-open .header-logo:visited {
+    color: var(--stone) !important;
+}
+
+#stillness-header.header-on-light:not(.is-scrolled) .book-btn,
+#stillness-header.header-on-light:not(.is-scrolled) .book-btn:visited,
+#stillness-header.is-scrolled .book-btn,
+#stillness-header.is-scrolled .book-btn:visited {
+    border-color: var(--stone);
+    color: var(--stone) !important;
+}
+
+#stillness-header.header-on-light:not(.is-scrolled) .book-btn:hover,
+#stillness-header.is-scrolled .book-btn:hover {
+    background: var(--stone);
+    color: var(--cream) !important;
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10001;
+}
+
+.mobile-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--cream);
+    transform-origin: center;
+    transition: background 0.4s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+#stillness-header.header-on-light:not(.is-scrolled) .mobile-toggle .bar,
+#stillness-header.is-scrolled .mobile-toggle .bar,
+#stillness-header.mobile-menu-open .mobile-toggle .bar {
+    background: var(--stone);
+}
+
+.mobile-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(11.5px) rotate(45deg);
+}
+
+.mobile-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-11.5px) rotate(-45deg);
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    min-height: 100vh;
+    padding: calc(var(--header-height) + 28px) 24px 48px;
+    background: var(--mobile-menu-bg);
+    z-index: 9998;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.admin-bar .mobile-menu {
+    padding-top: calc(var(--header-height) + 74px);
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-nav-link,
+.mobile-nav-link:visited,
+.mobile-nav-link:active,
+.mobile-nav-link:focus {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    line-height: 1.1;
+    color: var(--stone) !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    outline: none;
+}
+
+.mobile-nav-link:hover { color: var(--seafoam) !important; }
+
+.mobile-book-btn,
+.mobile-book-btn:visited,
+.mobile-book-btn:active,
+.mobile-book-btn:focus {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    padding: 14px 36px;
+    border: 1px solid var(--stone);
+    border-radius: 100px;
+    color: var(--stone) !important;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: all 0.4s ease;
+    outline: none;
+}
+
+.mobile-book-btn:hover {
+    background: var(--stone);
+    color: var(--cream) !important;
+}
+
+body.mobile-menu-open {
+    overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+    :root { --header-height: 82px; }
+    .header-inner { padding: 0 24px; }
+    .desktop-nav { display: none; }
+    .mobile-toggle { display: flex; }
+    .header-logo { font-size: 26px; }
+    .mobile-menu { display: flex; }
+}
+</style>

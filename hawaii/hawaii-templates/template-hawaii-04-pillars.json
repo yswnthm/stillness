@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "hawaii_04",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "hawaii_html_04",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class=\"hw-wrapper\">\n<section class=\"hw-pillars-section\">\n  <div class=\"hw-pillars-header\">\n    <h2 class=\"hw-section-title\">Clinical-Grade <em>Nervous System Regulation</em></h2>\n    <p>We do not offer generic relaxation. Our protocol combines ancestral acoustic technologies with sensory deprivation to target the vagus nerve—the primary superhighway of your parasympathetic nervous system.</p>\n  </div>\n  \n  <div class=\"hw-glass-grid\">\n    <div class=\"hw-glass-panel\">\n      <div class=\"hw-massive-num\">01</div>\n      <h3 class=\"hw-glass-title\">Neuro-Acoustic Somatic Toning</h3>\n      <p class=\"hw-glass-body\">Through targeted vocal yoga and precision sound frequencies, we use mechanical vibration to stimulate the vagal pathways in the throat. This immediately triggers a physiological slowdown, lowering blood pressure in minutes.</p>\n    </div>\n    <div class=\"hw-glass-panel\">\n      <div class=\"hw-massive-num\">02</div>\n      <h3 class=\"hw-glass-title\">Hydro-Acoustic Floating</h3>\n      <p class=\"hw-glass-body\">Float weightlessly while underwater acoustic transducers emit low-frequency sound waves. Your bones absorb these vibrations, bypassing the analytical mind to slow your brainwaves to Alpha and Theta states.</p>\n    </div>\n    <div class=\"hw-glass-panel\">\n      <div class=\"hw-massive-num\">03</div>\n      <h3 class=\"hw-glass-title\">24-Hour Blind Immersion</h3>\n      <p class=\"hw-glass-body\">Removing sight for 24 hours shuts down visual cortex overstimulation. Your auditory, tactile, and somatic senses skyrocket by 10x, allowing our therapies to penetrate at a cellular level.</p>\n    </div>\n  </div>\n</section>\n</div>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap');\n\n*,*::before,*::after{box-sizing:border-box !important}\n:root{\n  --stone: #0E1B30;\n  --cream: #F7F0EC;\n  --warm: #F2E8DF;\n  --seafoam: #688F9D;\n  --wave: #A4B2BA;\n  --sand: #C4BBB4;\n  --amber: #C4935A;\n  --midnight: #1D3152;\n  --breeze: #D9E8EB;\n  --text-body: #3D4F57;\n}\n.hw-wrapper{\n  background:var(--cream);\n  color:var(--stone);\n  font-family:'Jost',sans-serif !important;\n  font-weight:300;\n}\n\n/* ─── PROTOCOL PILLARS (Floating Glass Panels) ─── */\n.hw-pillars-section{padding:160px 0;background:var(--stone);position:relative;overflow:hidden}\n.hw-pillars-header{text-align:center;max-width:700px;margin:0 auto 100px;position:relative;z-index:2}\n.hw-pillars-header h2{font-family:'Cormorant Garamond',serif !important;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--cream);line-height:1.1}\n.hw-pillars-header h2 em{color:var(--seafoam);font-style:italic}\n.hw-pillars-header p{color:var(--wave);margin-top:24px;font-size:17px;line-height:1.8}\n.hw-glass-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;max-width:1200px;margin:0 auto;padding:0 52px;position:relative;z-index:2}\n.hw-glass-panel{background:rgba(255,255,255,0.02);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,0.06);padding:60px 40px;position:relative;transition:all 0.5s cubic-bezier(0.2,0.8,0.2,1);overflow:hidden}\n.hw-glass-panel:hover{background:rgba(255,255,255,0.04);border-color:rgba(196,147,90,0.3);transform:translateY(-10px);box-shadow:0 30px 60px rgba(0,0,0,0.4)}\n.hw-massive-num{position:absolute;top:-20px;right:-10px;font-family:'Cormorant Garamond',serif !important;font-size:160px;font-weight:300;color:var(--amber);opacity:0.1;line-height:1;transition:opacity 0.5s, transform 0.5s}\n.hw-glass-panel:hover .hw-massive-num{opacity:0.2;transform:scale(1.05)}\n.hw-glass-title{font-family:'Cormorant Garamond',serif !important;font-size:28px;font-weight:400;color:var(--cream);line-height:1.2;margin-bottom:20px;position:relative;z-index:2}\n.hw-glass-body{font-size:15px;line-height:1.8;color:var(--breeze);position:relative;z-index:2}\n@media (max-width: 1024px) {\n  .hw-crisis-section{flex-direction:column}\n  .hw-crisis-visual{height:60vh;position:relative}\n  .hw-crisis-visual::after{background:linear-gradient(to top,var(--stone),transparent)}\n  .hw-crisis-content{padding:80px 40px;min-height:auto}\n  .hw-black-card{grid-template-columns:1fr}\n  .hw-bc-left{border-right:none;border-bottom:1px solid rgba(196,147,90,0.15)}\n}\n\n@media (max-width: 900px) {\n  .hw-glass-grid, .hw-dash-panels{grid-template-columns:1fr;gap:30px}\n  .hw-v-timeline{padding-left:0;padding-right:0}\n  .hw-v-spine{left:30px}\n  .hw-v-node-wrapper{padding-left:80px}\n  .hw-v-circle{left:0;width:60px;justify-content:center}\n  .hw-v-circle-inner{width:50px;height:50px;box-shadow:0 0 0 4px var(--cream)}\n  .hw-v-circle-inner span:last-child{font-size:16px}\n  .hw-v-circle-inner span:first-child{font-size:7px}\n  .hw-v-event-row{flex-direction:column;gap:8px}\n  .hw-img-strip{grid-template-columns:1fr}\n}\n\n@media (max-width: 768px) {\n  nav{padding:1.25rem 1.5rem}\n  .hw-hero-content{padding:0 1.5rem}\n  .hw-pillars-section, .hw-itinerary-section, .hw-dash-section, .hw-inv-section, .hw-app-section{padding:80px 24px}\n  .hw-v-data-card{padding:30px 24px}\n  .hw-portal-box{padding:40px 30px}\n  .hw-bc-left, .hw-bc-right{padding:40px 30px}\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Hawaii — Protocol Pillars (Floating Glass Panels)",
+  "type": "section"
+}

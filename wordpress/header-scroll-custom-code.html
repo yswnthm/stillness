@@ -1,9 +1,8 @@
 <script>
 /**
- * Stillness Header — Scroll & Mobile Behaviour
+ * Stillness Header - Scroll, Dynamic Contrast & Mobile Behaviour
  *
- * HOW TO ADD THIS TO WORDPRESS:
- *   Elementor (Pro) → Custom Code → Add New
+ * Elementor Custom Code:
  *   Location: Body End
  *   Condition: Entire Website
  *   Title: Stillness Header Script
@@ -15,33 +14,170 @@
 
     if (!header) return;
 
-    /* ── Scroll Detection ── */
-    function onScroll() {
-        header.classList.toggle('is-scrolled', window.scrollY > 50);
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); // run immediately on load
+    const DARK_CLASS = 'header-on-dark';
+    const LIGHT_CLASS = 'header-on-light';
+    const SCROLLED_CLASS = 'is-scrolled';
+    const MENU_OPEN_CLASS = 'mobile-menu-open';
 
-    /* ── Home Page Detection ── */
-    if (
-        window.location.pathname === '/' ||
-        window.location.pathname === '/home' ||
-        document.body.classList.contains('home')
-    ) {
+    function setTone(tone) {
+        header.classList.toggle(DARK_CLASS, tone === 'dark');
+        header.classList.toggle(LIGHT_CLASS, tone === 'light');
+    }
+
+    function parseRgb(color) {
+        if (!color || color === 'transparent') return null;
+        const match = color.match(/rgba?\(([^)]+)\)/i);
+        if (!match) return null;
+        const parts = match[1].split(',').map(function (part) {
+            return parseFloat(part.trim());
+        });
+        if (parts.length < 3) return null;
+        return {
+            r: parts[0],
+            g: parts[1],
+            b: parts[2],
+            a: parts.length >= 4 ? parts[3] : 1
+        };
+    }
+
+    function isDarkColor(color) {
+        const rgba = parseRgb(color);
+        if (!rgba || rgba.a < 0.35) return null;
+        const luminance = (0.2126 * rgba.r + 0.7152 * rgba.g + 0.0722 * rgba.b) / 255;
+        return luminance < 0.58;
+    }
+
+    function elementTone(element) {
+        let node = element;
+
+        while (node && node !== document.documentElement) {
+            if (node === header || header.contains(node) || node === mobileMenu || (mobileMenu && mobileMenu.contains(node))) {
+                node = node.parentElement;
+                continue;
+            }
+
+            const tagName = node.tagName ? node.tagName.toLowerCase() : '';
+            const style = window.getComputedStyle(node);
+
+            if (tagName === 'img' || tagName === 'video' || tagName === 'picture') {
+                return 'dark';
+            }
+
+            if (style.backgroundImage && style.backgroundImage !== 'none') {
+                return 'dark';
+            }
+
+            const dark = isDarkColor(style.backgroundColor);
+            if (dark !== null) {
+                return dark ? 'dark' : 'light';
+            }
+
+            node = node.parentElement;
+        }
+
+        const bodyDark = isDarkColor(window.getComputedStyle(document.body).backgroundColor);
+        if (bodyDark !== null) return bodyDark ? 'dark' : 'light';
+
+        return 'light';
+    }
+
+    function detectToneBehindHeader() {
+        const rect = header.getBoundingClientRect();
+        const y = Math.max(1, Math.min(window.innerHeight - 1, rect.top + Math.min(rect.height * 0.65, 64)));
+        const xs = [
+            Math.max(1, window.innerWidth * 0.16),
+            Math.max(1, window.innerWidth * 0.5),
+            Math.max(1, window.innerWidth * 0.84)
+        ];
+        const tones = [];
+
+        xs.forEach(function (x) {
+            const stack = document.elementsFromPoint(x, y);
+            for (let i = 0; i < stack.length; i += 1) {
+                const node = stack[i];
+                if (!node || node === header || header.contains(node) || node === mobileMenu || (mobileMenu && mobileMenu.contains(node))) {
+                    continue;
+                }
+                tones.push(elementTone(node));
+                break;
+            }
+        });
+
+        return tones.indexOf('dark') !== -1 ? 'dark' : 'light';
+    }
+
+    function applyHeaderState() {
+        const isScrolled = window.scrollY > 50;
+        const menuOpen = mobileMenu && mobileMenu.classList.contains('is-open');
+
+        header.classList.toggle(SCROLLED_CLASS, isScrolled);
+        header.classList.toggle(MENU_OPEN_CLASS, !!menuOpen);
+        document.body.classList.toggle(MENU_OPEN_CLASS, !!menuOpen);
+
+        if (menuOpen || isScrolled) {
+            setTone('light');
+            return;
+        }
+
+        setTone(detectToneBehindHeader());
+    }
+
+    function closeMobileMenu() {
+        if (!mobileMenu || !toggle) return;
+        mobileMenu.classList.remove('is-open');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
+        applyHeaderState();
+    }
+
+    function openMobileMenu() {
+        if (!mobileMenu || !toggle) return;
+        mobileMenu.classList.add('is-open');
+        mobileMenu.setAttribute('aria-hidden', 'false');
+        toggle.classList.add('is-active');
+        toggle.setAttribute('aria-expanded', 'true');
+        applyHeaderState();
+    }
+
+    function toggleMobileMenu() {
+        if (!mobileMenu || !toggle) return;
+        if (mobileMenu.classList.contains('is-open')) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    }
+
+    function scheduleHeaderState() {
+        window.requestAnimationFrame(applyHeaderState);
+    }
+
+    if (window.location.pathname === '/' || window.location.pathname === '/home' || document.body.classList.contains('home')) {
         document.body.classList.add('home');
     }
 
-    /* ── Mobile Menu Toggle ── */
+    window.addEventListener('scroll', scheduleHeaderState, { passive: true });
+    window.addEventListener('resize', scheduleHeaderState, { passive: true });
+    window.addEventListener('load', scheduleHeaderState);
+
     if (toggle && mobileMenu) {
-        toggle.addEventListener('click', function () {
-            mobileMenu.classList.toggle('is-open');
+        toggle.addEventListener('click', function (event) {
+            event.preventDefault();
+            toggleMobileMenu();
         });
-        // Close on any nav link click
+
         mobileMenu.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () {
-                mobileMenu.classList.remove('is-open');
-            });
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') closeMobileMenu();
         });
     }
+
+    applyHeaderState();
+    setTimeout(applyHeaderState, 300);
+    setTimeout(applyHeaderState, 1200);
 })();
 </script>

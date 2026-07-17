@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "hawaii_03",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "hawaii_html_03",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class=\"hw-wrapper\">\n<section class=\"hw-crisis-section\">\n  <div class=\"hw-crisis-visual\">\n    <img src=\"https://images.unsplash.com/photo-1499728603263-13726abce5fd?q=80&w=2070&auto=format&fit=crop\" alt=\"High performance rest\">\n  </div>\n  <div class=\"hw-crisis-content\">\n    <span class=\"hw-section-eyebrow\">The Baseline</span>\n    <h2>The Quiet Crisis of <em>High Performance</em></h2>\n    \n    <div class=\"hw-crisis-text-block\">\n      <p>To the outside world, you are operating at the peak of success. But behind closed doors, the relentless pressure of leadership has extracted a massive toll on your physical biology. Chronic stress, sleep fragmentation, and constant cognitive overload have trapped your body in a persistent state of sympathetic dominance: fight-or-flight.</p>\n    </div>\n    \n    <div class=\"hw-crisis-text-block\">\n      <p>When your nervous system is deregulated, your strategic clarity, emotional resilience, and overall health suffer. This is not a vacation. This is a scientific intervention.</p>\n    </div>\n    \n    <div class=\"hw-crisis-text-block hw-highlight\">\n      <p>Over 4 days on the Big Island of Hawaii, we will systematically deactivate your stress response, rest your visual cortex, and physically retrain your vagus nerve to restore your biological baseline. You will leave neurologically different.</p>\n    </div>\n  </div>\n</section>\n</div>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap');\n\n*,*::before,*::after{box-sizing:border-box !important}\n:root{\n  --stone: #0E1B30;\n  --cream: #F7F0EC;\n  --warm: #F2E8DF;\n  --seafoam: #688F9D;\n  --wave: #A4B2BA;\n  --sand: #C4BBB4;\n  --amber: #C4935A;\n  --midnight: #1D3152;\n  --breeze: #D9E8EB;\n  --text-body: #3D4F57;\n}\n.hw-wrapper{\n  background:var(--cream);\n  color:var(--stone);\n  font-family:'Jost',sans-serif !important;\n  font-weight:300;\n}\n\n/* ─── QUIET CRISIS (Cinematic Split Screen) ─── */\n.hw-crisis-section{display:flex;background:var(--stone);position:relative}\n.hw-crisis-visual{flex:1;position:sticky;top:0;height:100vh;overflow:hidden}\n.hw-crisis-visual img{width:100%;height:100%;object-fit:cover;opacity:0.5}\n.hw-crisis-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent,var(--stone))}\n.hw-crisis-content{flex:1;padding:150px 80px 150px 40px;display:flex;flex-direction:column;justify-content:center;min-height:100vh}\n.hw-crisis-content .hw-section-eyebrow{color:var(--amber);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:24px;display:block}\n.hw-crisis-content h2{font-family:'Cormorant Garamond',serif !important;font-size:clamp(36px,5vw,56px);font-weight:300;line-height:1.1;color:var(--cream);margin-bottom:48px}\n.hw-crisis-content h2 em{font-style:italic;color:var(--seafoam)}\n.hw-crisis-text-block{margin-bottom:120px}\n.hw-crisis-text-block:last-child{margin-bottom:0}\n.hw-crisis-text-block p{font-size:18px;line-height:1.9;color:var(--breeze);font-weight:300}\n.hw-crisis-text-block.hw-highlight p{color:var(--cream);font-size:22px;font-family:'Cormorant Garamond',serif !important;font-style:italic;line-height:1.6}\n@media (max-width: 1024px) {\n  .hw-crisis-section{flex-direction:column}\n  .hw-crisis-visual{height:60vh;position:relative}\n  .hw-crisis-visual::after{background:linear-gradient(to top,var(--stone),transparent)}\n  .hw-crisis-content{padding:80px 40px;min-height:auto}\n  .hw-black-card{grid-template-columns:1fr}\n  .hw-bc-left{border-right:none;border-bottom:1px solid rgba(196,147,90,0.15)}\n}\n\n@media (max-width: 900px) {\n  .hw-glass-grid, .hw-dash-panels{grid-template-columns:1fr;gap:30px}\n  .hw-v-timeline{padding-left:0;padding-right:0}\n  .hw-v-spine{left:30px}\n  .hw-v-node-wrapper{padding-left:80px}\n  .hw-v-circle{left:0;width:60px;justify-content:center}\n  .hw-v-circle-inner{width:50px;height:50px;box-shadow:0 0 0 4px var(--cream)}\n  .hw-v-circle-inner span:last-child{font-size:16px}\n  .hw-v-circle-inner span:first-child{font-size:7px}\n  .hw-v-event-row{flex-direction:column;gap:8px}\n  .hw-img-strip{grid-template-columns:1fr}\n}\n\n@media (max-width: 768px) {\n  nav{padding:1.25rem 1.5rem}\n  .hw-hero-content{padding:0 1.5rem}\n  .hw-pillars-section, .hw-itinerary-section, .hw-dash-section, .hw-inv-section, .hw-app-section{padding:80px 24px}\n  .hw-v-data-card{padding:30px 24px}\n  .hw-portal-box{padding:40px 30px}\n  .hw-bc-left, .hw-bc-right{padding:40px 30px}\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Hawaii — Opening Problem / Quiet Crisis (Cinematic Split Screen)",
+  "type": "section"
+}

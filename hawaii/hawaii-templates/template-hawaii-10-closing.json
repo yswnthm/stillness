@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "hawaii_10",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "hawaii_html_10",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class=\"hw-wrapper\">\n<div class=\"hw-closing-cta\">\n  <h2>Your nervous system is ready.<br><em>Apply for your private intake call today.</em></h2>\n  <a href=\"#application\" class=\"hw-btn-stone\">Apply for Intake Consultation</a>\n</div>\n</div>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap');\n\n*,*::before,*::after{box-sizing:border-box !important}\n:root{\n  --stone: #0E1B30;\n  --cream: #F7F0EC;\n  --warm: #F2E8DF;\n  --seafoam: #688F9D;\n  --wave: #A4B2BA;\n  --sand: #C4BBB4;\n  --amber: #C4935A;\n  --midnight: #1D3152;\n  --breeze: #D9E8EB;\n  --text-body: #3D4F57;\n}\n.hw-wrapper{\n  background:var(--cream);\n  color:var(--stone);\n  font-family:'Jost',sans-serif !important;\n  font-weight:300;\n}\n\n/* ─── CLOSING CTA ─── */\n.hw-closing-cta{background:var(--breeze);padding:120px 40px;text-align:center;color:var(--stone)}\n.hw-closing-cta h2{font-family:'Cormorant Garamond',serif !important;font-size:clamp(32px,4vw,48px);font-weight:300;line-height:1.2;margin-bottom:40px}\n.hw-closing-cta em{font-style:italic;display:block}\n.hw-btn-stone{font-family:'Jost',sans-serif !important;font-size:11px;font-weight:400;letter-spacing:0.25em;text-transform:uppercase;color:var(--cream);background:var(--stone);border:none;padding:18px 40px;cursor:pointer;transition:all 0.3s;text-decoration:none;display:inline-block}\n.hw-btn-stone:hover{background:var(--midnight);transform:translateY(-2px)}\n@media (max-width: 1024px) {\n  .hw-crisis-section{flex-direction:column}\n  .hw-crisis-visual{height:60vh;position:relative}\n  .hw-crisis-visual::after{background:linear-gradient(to top,var(--stone),transparent)}\n  .hw-crisis-content{padding:80px 40px;min-height:auto}\n  .hw-black-card{grid-template-columns:1fr}\n  .hw-bc-left{border-right:none;border-bottom:1px solid rgba(196,147,90,0.15)}\n}\n\n@media (max-width: 900px) {\n  .hw-glass-grid, .hw-dash-panels{grid-template-columns:1fr;gap:30px}\n  .hw-v-timeline{padding-left:0;padding-right:0}\n  .hw-v-spine{left:30px}\n  .hw-v-node-wrapper{padding-left:80px}\n  .hw-v-circle{left:0;width:60px;justify-content:center}\n  .hw-v-circle-inner{width:50px;height:50px;box-shadow:0 0 0 4px var(--cream)}\n  .hw-v-circle-inner span:last-child{font-size:16px}\n  .hw-v-circle-inner span:first-child{font-size:7px}\n  .hw-v-event-row{flex-direction:column;gap:8px}\n  .hw-img-strip{grid-template-columns:1fr}\n}\n\n@media (max-width: 768px) {\n  nav{padding:1.25rem 1.5rem}\n  .hw-hero-content{padding:0 1.5rem}\n  .hw-pillars-section, .hw-itinerary-section, .hw-dash-section, .hw-inv-section, .hw-app-section{padding:80px 24px}\n  .hw-v-data-card{padding:30px 24px}\n  .hw-portal-box{padding:40px 30px}\n  .hw-bc-left, .hw-bc-right{padding:40px 30px}\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Hawaii — Closing CTA",
+  "type": "section"
+}

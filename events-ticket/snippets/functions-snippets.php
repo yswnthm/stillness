@@ -828,6 +828,365 @@ function stillness_single_event_styles()
 }
 
 // =========================================================
+// PHASE 5: Custom Event Email Confirmation
+// Replaces WooCommerce customer order emails with a branded
+// Stillness email for orders containing Events products.
+// Works entirely via Code Snippets — no template file needed.
+// =========================================================
+
+/**
+ * Check if an order contains an 'Events' product.
+ */
+function stillness_order_has_event( $order ) {
+	if ( ! $order ) {
+		return false;
+	}
+	foreach ( $order->get_items() as $item ) {
+		$product = $item->get_product();
+		if ( $product && has_term( 'events', 'product_cat', $product->get_id() ) ) {
+			return true;
+		}
+	}
+	return false;
+}
+
+/**
+ * Get the first event product from an order.
+ */
+function stillness_get_first_event_from_order( $order ) {
+	if ( ! $order ) {
+		return null;
+	}
+	foreach ( $order->get_items() as $item ) {
+		$product = $item->get_product();
+		if ( $product && has_term( 'events', 'product_cat', $product->get_id() ) ) {
+			return array(
+				'product' => $product,
+				'item'    => $item,
+			);
+		}
+	}
+	return null;
+}
+
+/**
+ * Build the full branded Stillness event email HTML.
+ * Uses the design from events-ticket/snippets/email-template.html.
+ */
+function stillness_build_event_email_html( $order ) {
+	// 1. Get first name with safe fallbacks.
+	$first_name = $order->get_billing_first_name();
+	if ( empty( $first_name ) ) {
+		$first_name = $order->get_formatted_billing_full_name();
+	}
+	if ( empty( $first_name ) ) {
+		$first_name = 'there';
+	}
+
+	// 2. Get event details from the first event product.
+	$event_data      = stillness_get_first_event_from_order( $order );
+	$order_item_name = '';
+	$event_date      = '';
+	$event_time      = '';
+	$event_location  = '';
+
+	if ( $event_data ) {
+		$item    = $event_data['item'];
+		$product = $event_data['product'];
+
+		$order_item_name = $item->get_name();
+
+		if ( function_exists( 'stillness_get_event_attribute' ) && $product ) {
+			$event_date     = stillness_get_event_attribute( $product, 'Event Dates' );
+			$event_time     = stillness_get_event_attribute( $product, 'Event Time' );
+			$event_location = stillness_get_event_attribute( $product, 'Sanctuary' );
+		}
+	}
+
+	// Fallback: if product was deleted, item name is still stored on the order item.
+	if ( empty( $order_item_name ) ) {
+		foreach ( $order->get_items() as $fallback_item ) {
+			$order_item_name = $fallback_item->get_name();
+			if ( ! empty( $order_item_name ) ) {
+				break;
+			}
+		}
+	}
+
+	// Format Date & Time safely — no dangling comma.
+	$date_time_display = '';
+	if ( $event_date && $event_time ) {
+		$date_time_display = esc_html( $event_date ) . ', ' . esc_html( $event_time );
+	} elseif ( $event_date ) {
+		$date_time_display = esc_html( $event_date );
+	} elseif ( $event_time ) {
+		$date_time_display = esc_html( $event_time );
+	}
+
+	// 3. Order details.
+	$order_number = $order->get_order_number();
+	$order_total  = $order->get_formatted_order_total();
+
+	// 4. Build the email HTML using output buffering.
+	ob_start();
+	?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stillness — Booking Confirmation</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
+
+  body, table, td, p, a {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #C4BBB4;
+    font-family: 'Jost', Helvetica, Arial, sans-serif;
+  }
+  .heading-font {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  }
+  a { text-decoration: none; }
+
+  @media only screen and (max-width: 600px) {
+    .container { width: 100% !important; }
+    .px { padding-left: 24px !important; padding-right: 24px !important; }
+    .hero-line { font-size: 28px !important; line-height: 36px !important; }
+  }
+</style>
+</head>
+<body style="margin:0; padding:0; background-color:#C4BBB4;">
+
+  <!-- Outer wrapper -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#C4BBB4;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+
+        <!-- Email container -->
+        <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#FFFFFF;">
+
+          <!-- Header -->
+          <tr>
+            <td align="center" style="padding: 40px 40px 28px 40px;">
+              <div class="heading-font" style="font-size: 30px; line-height: 1; letter-spacing: 0.06em; color:#1D3152; font-weight:500;">
+                Stillness<span style="color:#688F9D;">.</span>
+              </div>
+              <div style="margin-top: 10px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color:#688F9D; font-weight:400;">
+                A Sanctuary for the Modern Mind
+              </div>
+            </td>
+          </tr>
+
+          <!-- Ripple divider -->
+          <tr>
+            <td style="line-height:0; font-size:0;">
+              <svg viewBox="0 0 600 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block; width:100%; height:48px;">
+                <path d="M0,22 C100,40 200,4 300,20 C400,36 500,6 600,24 L600,48 L0,48 Z" fill="#D9E8EB"/>
+                <path d="M0,30 C120,12 240,42 360,26 C460,12 540,34 600,22 L600,48 L0,48 Z" fill="#A4B2BA" opacity="0.55"/>
+              </svg>
+            </td>
+          </tr>
+
+          <!-- Hero message -->
+          <tr>
+            <td align="center" class="px" style="padding: 36px 48px 12px 48px; background-color:#FFFFFF;">
+              <div class="heading-font hero-line" style="font-size: 34px; line-height: 42px; font-style: italic; font-weight: 500; color:#1D3152;">
+                Your space has been held.
+              </div>
+              <p style="margin: 16px 0 0 0; font-size: 15px; line-height: 26px; color:#1D3152;">
+                Thank you, <?php echo esc_html( $first_name ); ?>, for choosing to return to your center.
+                Below are the details of your reservation.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Order details card -->
+          <tr>
+            <td class="px" style="padding: 24px 48px 8px 48px; background-color:#FFFFFF;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#D9E8EB; border:1px solid #C4BBB4; border-radius:6px;">
+                <tr>
+                  <td style="padding: 24px 28px;">
+
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="padding-bottom: 14px;">
+                          <div style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#688F9D; font-weight:500;">Session</div>
+                          <div class="heading-font" style="font-size:20px; color:#1D3152; font-weight:500; margin-top:2px;"><?php echo esc_html( $order_item_name ); ?></div>
+                        </td>
+                      </tr>
+                      <?php if ( $date_time_display ) : ?>
+                      <tr>
+                        <td style="padding-bottom: 14px;">
+                          <div style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#688F9D; font-weight:500;">Date &amp; Time</div>
+                          <div style="font-size:15px; color:#1D3152; margin-top:2px;"><?php echo wp_kses_post( $date_time_display ); ?></div>
+                        </td>
+                      </tr>
+                      <?php endif; ?>
+                      <?php if ( $event_location ) : ?>
+                      <tr>
+                        <td style="padding-bottom: 14px;">
+                          <div style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#688F9D; font-weight:500;">Sanctuary</div>
+                          <div style="font-size:15px; color:#1D3152; margin-top:2px;"><?php echo esc_html( $event_location ); ?></div>
+                        </td>
+                      </tr>
+                      <?php endif; ?>
+                      <tr>
+                        <td style="border-top:1px solid #C4BBB4; padding-top:14px;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td style="font-size:13px; color:#1D3152;">Order #<?php echo esc_html( $order_number ); ?></td>
+                              <td align="right" style="font-size:15px; color:#1D3152; font-weight:500;"><?php echo wp_kses_post( $order_total ); ?></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Gentle notes -->
+          <tr>
+            <td class="px" style="padding: 28px 48px 40px 48px; background-color:#FFFFFF;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-top:1px solid #D9E8EB;">
+                <tr>
+                  <td style="padding-top:24px;">
+                    <div style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#688F9D; font-weight:500; margin-bottom:10px;">
+                      A Few Things to Hold
+                    </div>
+                    <p style="margin:0 0 8px 0; font-size:14px; line-height:24px; color:#1D3152;">
+                      Arrive ten minutes early to settle in. Wear something soft and comfortable. Bring water, and an open mind.
+                    </p>
+                    <p style="margin:0; font-size:14px; line-height:24px; color:#1D3152;">
+                      If anything changes, simply reply to this email. We will take care of it.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Closing line -->
+          <tr>
+            <td align="center" style="padding: 0 48px 40px 48px; background-color:#FFFFFF;">
+              <div class="heading-font" style="font-size:18px; font-style:italic; color:#688F9D; line-height:28px;">
+                Stillness is not a luxury.<br>It is where you begin again.
+              </div>
+            </td>
+          </tr>
+
+          <!-- Ripple divider, inverted -->
+          <tr>
+            <td style="line-height:0; font-size:0;">
+              <svg viewBox="0 0 600 36" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block; width:100%; height:36px;">
+                <path d="M0,10 C150,28 300,2 450,16 C500,21 550,12 600,14 L600,0 L0,0 Z" fill="#0E1B30"/>
+                <path d="M0,18 C140,4 320,30 480,12 C520,8 560,16 600,10 L600,0 L0,0 Z" fill="#1D3152" opacity="0.5"/>
+              </svg>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding: 28px 40px 36px 40px; background-color:#0E1B30;">
+              <div class="heading-font" style="font-size:18px; color:#FFFFFF; letter-spacing:0.05em; margin-bottom:10px;">
+                Stillness Curated Retreats
+              </div>
+              <div style="font-size:12px; line-height:22px; color:#A4B2BA;">
+                Vancouver, BC &nbsp;&middot;&nbsp; info@wearestillness.com
+              </div>
+              <div style="margin-top:14px; font-size:11px; letter-spacing:0.1em; text-transform:uppercase;">
+                <a href="https://www.instagram.com/stillnessco/" style="color:#688F9D;">Instagram</a>
+                <span style="color:#1D3152;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="https://wearestillness.substack.com/" style="color:#688F9D;">Journal</a>
+              </div>
+              <div style="margin-top:18px; font-size:11px; line-height:18px; color:#1D3152;">
+                You're receiving this email because of a recent booking with Stillness.
+              </div>
+            </td>
+          </tr>
+
+        </table>
+        <!-- End email container -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
+	<?php
+	return ob_get_clean();
+}
+
+/**
+ * Track whether the current email being sent is for an event order.
+ * WooCommerce calls trigger() → get_content() → send() in sequence.
+ * We hook into the email trigger to capture context before send() runs.
+ */
+add_action( 'woocommerce_email_before_order_table', 'stillness_capture_event_email_context', 10, 4 );
+function stillness_capture_event_email_context( $order, $sent_to_admin, $plain_text, $email ) {
+	// Only capture for customer-facing processing/completed emails.
+	if ( $sent_to_admin ) {
+		return;
+	}
+	if ( ! in_array( $email->id, array( 'customer_processing_order', 'customer_completed_order', 'customer_on_hold_order', 'customer_invoice' ), true ) ) {
+		return;
+	}
+	if ( stillness_order_has_event( $order ) ) {
+		// Store the order for the mail_content filter to pick up.
+		$GLOBALS['stillness_event_email_order'] = $order;
+	}
+}
+
+/**
+ * Replace the entire email HTML right before WooCommerce sends it.
+ * woocommerce_mail_content fires in WC_Email::send() after style_inline().
+ * It receives the full rendered HTML as its only argument.
+ */
+add_filter( 'woocommerce_mail_content', 'stillness_replace_event_email_content' );
+function stillness_replace_event_email_content( $message ) {
+	if ( ! isset( $GLOBALS['stillness_event_email_order'] ) ) {
+		return $message;
+	}
+
+	$order = $GLOBALS['stillness_event_email_order'];
+
+	// Clear immediately to prevent leaking into subsequent emails.
+	unset( $GLOBALS['stillness_event_email_order'] );
+
+	// Safety: verify the order is valid.
+	if ( ! $order || ! is_a( $order, 'WC_Order' ) ) {
+		return $message;
+	}
+
+	return stillness_build_event_email_html( $order );
+}
+
+/**
+ * Override the email subject line for event orders.
+ * Makes the subject say "Your space has been held" instead of the
+ * default WooCommerce "Your {site_title} order has been received!".
+ */
+add_filter( 'woocommerce_email_subject_customer_processing_order', 'stillness_event_email_subject', 10, 2 );
+add_filter( 'woocommerce_email_subject_customer_completed_order', 'stillness_event_email_subject', 10, 2 );
+add_filter( 'woocommerce_email_subject_customer_on_hold_order', 'stillness_event_email_subject', 10, 2 );
+function stillness_event_email_subject( $subject, $order ) {
+	if ( stillness_order_has_event( $order ) ) {
+		return 'Your space has been held — Stillness';
+	}
+	return $subject;
+}
+
+// =========================================================
 // PHASE 5: Elementor Single Event Template — PHP Shortcodes
 // Used inside HTML widgets in the Elementor Theme Builder
 // Single Product template sections. Elementor processes
@@ -965,3 +1324,187 @@ function stillness_add_category_body_class($classes)
   }
   return $classes;
 }
+
+// =========================================================
+// PHASE 5: Single Event FAQ Shortcode
+// Dynamically generates FAQ from WooCommerce product attributes (Q1/A1, Q2/A2...)
+// =========================================================
+add_shortcode('stillness_event_faq', function() {
+    global $product;
+    if (!$product) {
+        $product = wc_get_product(get_the_ID());
+    }
+    if (!$product) {
+        return '';
+    }
+
+    $faqs = [];
+    for ($i = 1; $i <= 30; $i++) {
+        $q = stillness_get_event_attribute($product, 'Q' . $i);
+        $a = stillness_get_event_attribute($product, 'A' . $i);
+        
+        if (!empty(trim($q)) && !empty(trim($a))) {
+            $faqs[] = [
+                'q' => trim($q),
+                'a' => trim($a),
+                'num' => str_pad($i, 2, '0', STR_PAD_LEFT)
+            ];
+        }
+    }
+
+    if (empty($faqs)) {
+        return '';
+    }
+
+    ob_start();
+    ?>
+    <section class="stillness-event-faq">
+      <div class="stillness-event-faq__container">
+        <div class="stillness-event-faq__header">
+          <h2>Frequently Asked <em>Questions</em></h2>
+        </div>
+        
+        <div class="stillness-event-faq__list">
+          <?php foreach ($faqs as $faq): ?>
+          <div class="stillness-event-faq__item">
+            <div class="stillness-event-faq__num"><?php echo esc_html($faq['num']); ?></div>
+            <div class="stillness-event-faq__content">
+              <h4><?php echo esc_html($faq['q']); ?></h4>
+              <p><?php echo wp_kses_post($faq['a']); ?></p>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap');
+
+    :root {
+      --event-stone: #0E1B30;
+      --event-seafoam: #688F9D;
+      --event-wave: #A4B2BA;
+      --event-breeze: #D9E8EB;
+      --event-cream: #F7F0EC;
+      --event-midnight: #1D3152;
+    }
+
+    .stillness-event-faq {
+      padding: 160px 0 !important;
+      background: var(--event-stone) !important;
+      width: 100vw !important;
+      position: relative !important;
+      left: 50% !important;
+      right: 50% !important;
+      margin-left: -50vw !important;
+      margin-right: -50vw !important;
+    }
+
+    .stillness-event-faq,
+    .stillness-event-faq * {
+      box-sizing: border-box !important;
+    }
+
+    .stillness-event-faq__container {
+      max-width: 900px !important;
+      margin: 0 auto !important;
+      padding: 0 4rem !important;
+    }
+
+    .stillness-event-faq__header {
+      margin-bottom: 80px !important;
+    }
+
+    .stillness-event-faq__header h2 {
+      font-family: 'Cormorant Garamond', serif !important;
+      font-size: clamp(36px, 5vw, 56px) !important;
+      font-weight: 300 !important;
+      color: var(--event-cream) !important;
+      line-height: 1.1 !important;
+      margin: 0 !important;
+    }
+
+    .stillness-event-faq__header h2 em {
+      font-style: italic !important;
+      color: var(--event-seafoam) !important;
+    }
+
+    .stillness-event-faq__list {
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    .stillness-event-faq__item {
+      border-bottom: 0.5px solid var(--event-midnight) !important;
+      padding: 48px 0 !important;
+      display: grid !important;
+      grid-template-columns: 60px 1fr !important;
+      gap: 24px !important;
+      transition: all 0.5s ease !important;
+    }
+
+    .stillness-event-faq__item:first-child {
+      border-top: 0.5px solid var(--event-midnight) !important;
+    }
+
+    .stillness-event-faq__item:hover {
+      border-bottom-color: var(--event-seafoam) !important;
+    }
+
+    .stillness-event-faq__num {
+      font-family: 'Jost', sans-serif !important;
+      font-size: 13px !important;
+      font-weight: 400 !important;
+      color: var(--event-seafoam) !important;
+      letter-spacing: 0.15em !important;
+      margin-top: 8px !important;
+    }
+
+    .stillness-event-faq__content h4 {
+      font-family: 'Cormorant Garamond', serif !important;
+      font-size: 28px !important;
+      font-weight: 300 !important;
+      color: var(--event-cream) !important;
+      margin: 0 0 16px 0 !important;
+      transition: color 0.4s ease !important;
+      line-height: 1.3 !important;
+    }
+
+    .stillness-event-faq__item:hover .stillness-event-faq__content h4 {
+      color: var(--event-seafoam) !important;
+    }
+
+    .stillness-event-faq__content p {
+      font-family: 'Jost', sans-serif !important;
+      font-size: 16px !important;
+      line-height: 1.9 !important;
+      color: var(--event-wave) !important;
+      font-weight: 300 !important;
+      max-width: 700px !important;
+      margin: 0 !important;
+    }
+
+    @media(max-width: 768px) {
+      .stillness-event-faq {
+        padding: 80px 24px !important;
+      }
+      .stillness-event-faq__container {
+        padding: 0 !important;
+      }
+      .stillness-event-faq__item {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        padding: 40px 0 !important;
+      }
+      .stillness-event-faq__num {
+        margin-top: 0 !important;
+      }
+      .stillness-event-faq__content h4 {
+        font-size: 24px !important;
+      }
+    }
+    </style>
+    <?php
+    return ob_get_clean();
+});

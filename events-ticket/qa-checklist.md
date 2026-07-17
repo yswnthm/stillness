@@ -65,8 +65,10 @@
 
 ## Confirmation Email
 
-- [ ] Default WooCommerce customer confirmation email sends successfully.
-- [ ] No custom WooCommerce email template is required for this phase.
+- [ ] Branded Stillness customer confirmation email sends successfully.
+- [ ] Email design follows `events-ticket/snippets/email-template.html`.
+- [ ] Placeholder content is replaced with real WooCommerce order details.
+- [ ] Email includes event/session name, buyer name, order number, and order total.
 - [ ] Admin can identify the booking from WooCommerce Orders.
 
 ## Handoff

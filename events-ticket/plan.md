@@ -1,7 +1,7 @@
 # Stillness Events Ticketing - Live Plan
 
-> Updated: 11 June 2026
-> Current phase: Final QA and client handoff.
+> Updated: 15 June 2026
+> Current phase: Custom WooCommerce email add-on proposal and implementation.
 
 ## Current Status
 
@@ -17,9 +17,11 @@
 - [x] Validate live catalog after content cleanup.
 - [x] Import `template-events-07-single-waitlist.json` if the single event page needs an Elementor waitlist block.
 - [x] Validate single event page long description output.
-- [x] Confirm default WooCommerce confirmation email is enough for event bookings.
+- [x] Confirm normal WooCommerce checkout/order data is enough for event bookings.
 - [ ] Run final checkout/order QA (Phase 4).
 - [x] Prepare admin handoff HTML guide.
+- [ ] Implement branded WooCommerce confirmation email from `snippets/email-template.html`.
+- [x] Prepare custom email add-on proposal draft.
 - [ ] Export handoff guide to PDF and send to client.
 
 ## Catalog Data Rules
@@ -199,8 +201,11 @@ An intimate four-day retreat with personal guidance, quiet integration time, and
 
 - [ ] Export `events-ticket/stillness-events-handoff-guide.html` to PDF.
 - [ ] Send PDF handoff guide to client.
+- [ ] Convert `events-ticket/snippets/email-template.html` into the active WooCommerce order email.
+- [ ] Send or confirm approval for `events-ticket/custom-email-proposal-draft.md`.
+- [ ] Run a free test event order and confirm the branded email arrives.
 - [ ] Run one final event test order.
 - [ ] Confirm WooCommerce Orders show buyer name, email, event product, quantity, payment status, and order status.
-- [ ] Confirm customer receives the normal WooCommerce confirmation email.
+- [ ] Confirm customer receives the branded Stillness confirmation email.
 - [ ] Test event-only checkout removes unnecessary address/shipping fields.
 - [ ] Test normal shop checkout remains unaffected.

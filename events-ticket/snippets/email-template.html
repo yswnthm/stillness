@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stillness — Booking Confirmation</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
+
+  body, table, td, p, a {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #C4BBB4;
+    font-family: 'Jost', Helvetica, Arial, sans-serif;
+  }
+  .heading-font {
+    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  }
+  a { text-decoration: none; }
+
+  @media only screen and (max-width: 600px) {
+    .container { width: 100% !important; }
+    .px { padding-left: 24px !important; padding-right: 24px !important; }
+    .hero-line { font-size: 28px !important; line-height: 36px !important; }
+  }
+</style>
+</head>
+<body style="margin:0; padding:0; background-color:#C4BBB4;">
+
+  <!-- Outer wrapper -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#C4BBB4;">
+    <tr>
+      <td align="center" style="padding: 32px 16px;">
+
+        <!-- Email container -->
+        <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#FFFFFF;">
+
+          <!-- Header -->
+          <tr>
+            <td align="center" style="padding: 40px 40px 28px 40px;">
+              <div class="heading-font" style="font-size: 30px; line-height: 1; letter-spacing: 0.06em; color:#1D3152; font-weight:500;">
+                Stillness<span style="color:#688F9D;">.</span>
+              </div>
+              <div style="margin-top: 10px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color:#688F9D; font-weight:400;">
+                A Sanctuary for the Modern Mind
+              </div>
+            </td>
+          </tr>
+
+          <!-- Ripple divider -->
+          <tr>
+            <td style="line-height:0; font-size:0;">
+              <svg viewBox="0 0 600 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block; width:100%; height:48px;">
+                <path d="M0,22 C100,40 200,4 300,20 C400,36 500,6 600,24 L600,48 L0,48 Z" fill="#D9E8EB"/>
+                <path d="M0,30 C120,12 240,42 360,26 C460,12 540,34 600,22 L600,48 L0,48 Z" fill="#A4B2BA" opacity="0.55"/>
+              </svg>
+            </td>
+          </tr>
+
+          <!-- Hero message -->
+          <tr>
+            <td align="center" class="px" style="padding: 36px 48px 12px 48px; background-color:#FFFFFF;">
+              <div class="heading-font hero-line" style="font-size: 34px; line-height: 42px; font-style: italic; font-weight: 500; color:#1D3152;">
+                Your space has been held.
+              </div>
+              <p style="margin: 16px 0 0 0; font-size: 15px; line-height: 26px; color:#1D3152;">
+                Thank you, {{first_name}}, for choosing to return to your center.
+                Below are the details of your reservation.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Order details card -->
+          <tr>
+            <td class="px" style="padding: 24px 48px 8px 48px; background-color:#FFFFFF;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#D9E8EB; border:1px solid #C4BBB4; border-radius:6px;">
+                <tr>
+                  <td style="padding: 24px 28px;">
+
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="padding-bottom: 14px;">
+                          <div style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#688F9D; font-weight:500;">Session</div>
+                          <div class="heading-font" style="font-size:20px; color:#1D3152; font-weight:500; margin-top:2px;">{{order_item_name}}</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding-bottom: 14px;">
+                          <div style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#688F9D; font-weight:500;">Date &amp; Time</div>
+                          <div style="font-size:15px; color:#1D3152; margin-top:2px;">{{event_date}}, {{event_time}}</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding-bottom: 14px;">
+                          <div style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#688F9D; font-weight:500;">Sanctuary</div>
+                          <div style="font-size:15px; color:#1D3152; margin-top:2px;">{{event_location}}</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="border-top:1px solid #C4BBB4; padding-top:14px;">
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                              <td style="font-size:13px; color:#1D3152;">Order #{{order_number}}</td>
+                              <td align="right" style="font-size:15px; color:#1D3152; font-weight:500;">{{order_total}}</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Gentle notes -->
+          <tr>
+            <td class="px" style="padding: 28px 48px 40px 48px; background-color:#FFFFFF;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-top:1px solid #D9E8EB;">
+                <tr>
+                  <td style="padding-top:24px;">
+                    <div style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#688F9D; font-weight:500; margin-bottom:10px;">
+                      A Few Things to Hold
+                    </div>
+                    <p style="margin:0 0 8px 0; font-size:14px; line-height:24px; color:#1D3152;">
+                      Arrive ten minutes early to settle in. Wear something soft and comfortable. Bring water, and an open mind.
+                    </p>
+                    <p style="margin:0; font-size:14px; line-height:24px; color:#1D3152;">
+                      If anything changes, simply reply to this email. We will take care of it.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Closing line -->
+          <tr>
+            <td align="center" style="padding: 0 48px 40px 48px; background-color:#FFFFFF;">
+              <div class="heading-font" style="font-size:18px; font-style:italic; color:#688F9D; line-height:28px;">
+                Stillness is not a luxury.<br>It is where you begin again.
+              </div>
+            </td>
+          </tr>
+
+          <!-- Ripple divider, inverted -->
+          <tr>
+            <td style="line-height:0; font-size:0;">
+              <svg viewBox="0 0 600 36" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="display:block; width:100%; height:36px;">
+                <path d="M0,10 C150,28 300,2 450,16 C500,21 550,12 600,14 L600,0 L0,0 Z" fill="#0E1B30"/>
+                <path d="M0,18 C140,4 320,30 480,12 C520,8 560,16 600,10 L600,0 L0,0 Z" fill="#1D3152" opacity="0.5"/>
+              </svg>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding: 28px 40px 36px 40px; background-color:#0E1B30;">
+              <div class="heading-font" style="font-size:18px; color:#FFFFFF; letter-spacing:0.05em; margin-bottom:10px;">
+                Stillness Curated Retreats
+              </div>
+              <div style="font-size:12px; line-height:22px; color:#A4B2BA;">
+                Vancouver, BC &nbsp;·&nbsp; info@wearestillness.com
+              </div>
+              <div style="margin-top:14px; font-size:11px; letter-spacing:0.1em; text-transform:uppercase;">
+                <a href="https://www.instagram.com/stillnessco/" style="color:#688F9D;">Instagram</a>
+                <span style="color:#1D3152;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="https://wearestillness.substack.com/" style="color:#688F9D;">Journal</a>
+              </div>
+              <div style="margin-top:18px; font-size:11px; line-height:18px; color:#1D3152;">
+                You're receiving this email because of a recent booking with Stillness.
+              </div>
+            </td>
+          </tr>
+
+        </table>
+        <!-- End email container -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

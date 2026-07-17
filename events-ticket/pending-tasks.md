@@ -1,9 +1,33 @@
 # Stillness Events Ticketing - Pending Tasks
 
-> Updated: 11 June 2026
+> Updated: 15 June 2026
 > Scope: Events catalog, single event booking page, WooCommerce event order flow, and client handoff.
 
+## Immediate Client Feedback Pass - 12 June 2026
+
+Reference file: [`client-feedback-2026-06-12.md`](./client-feedback-2026-06-12.md)
+
+- [ ] Events catalog: change event section background to white.
+- [ ] Events catalog: change event cards to a different brand-aligned color.
+- [ ] Events catalog: reduce the large header image height, or remove it if the event grid becomes cleaner.
+- [ ] Single event page: improve header/nav visibility over the image.
+- [ ] Single event page: avoid the current cream color treatment.
+- [ ] Single event page: remove the `62+ events hosted` counter.
+- [ ] Global header: change the `Book` text/button link from the old Reserve page to the Events page.
+- [ ] Hawaii retreat CTA: link the button to the Hawaii retreat landing page.
+- [ ] Hawaii retreat fallback copy: use `Big Island, Hawaii retreat` instead of generic `New Dates` language.
+- [ ] Reply to refund question: WooCommerce can handle refunds, but automatic refunds depend on the payment gateway.
+- [ ] Reply to photo question: current setup is one main image per event; galleries/multiple photos are a separate enhancement unless intentionally added.
+- [ ] After fixes: send screenshots to Sakshi, then export the handoff PDF.
+
 ## Build Tasks
+
+- [ ] Hawaii retreat landing page: import ticket-related sections into the new landing page.
+  - This is a pending implementation task, not a client-reported events page issue.
+  - Identify the existing ticket-related section templates and confirm the source page they belong to.
+  - Import only the sections that fit the Hawaii retreat landing page flow.
+  - Keep implementation work inside `hawaii/index.html` unless a separate template/source file is confirmed.
+  - Track page-specific notes in `hawaii/hawaii-retreat-landing-plan.md`.
 
 - [x] Add ticket quantity selection.
   - Buyers should be able to book more than one ticket.
@@ -45,9 +69,16 @@
 - [x] Confirm the post-booking flow after a WooCommerce event purchase.
   - Buyer name, email, event name, quantity, and payment status appear through the normal WooCommerce order flow.
   - Client confirmed they only need basic buyer details so they can contact the person.
-  - Default WooCommerce confirmation email is enough for now.
-  - No custom WooCommerce email design is required at this stage.
+  - Client later shared a branded Stillness email reference and wants the order email to look like that.
+  - Custom email reference added at `events-ticket/snippets/email-template.html`.
   - No attendee-level custom fields are required unless they later need every attendee name for multi-ticket orders.
+
+- [ ] Implement custom WooCommerce booking confirmation email.
+  - Use `events-ticket/snippets/email-template.html` as the visual reference.
+  - Convert placeholder tokens like `{{first_name}}`, `{{order_item_name}}`, and `{{order_number}}` to WooCommerce/PHP values.
+  - Keep normal WooCommerce order details available below or inside the custom layout.
+  - Test with one free event order.
+  - Confirm customer receives the branded email.
 
 - [x] Prepare the admin guide and handoff HTML.
   - Explain how to add a new event.
@@ -67,8 +98,14 @@ Client clarification result:
 - WooCommerce store is not heavily used yet.
 - Eventbrite currently sends both sides email details.
 - For this WooCommerce event flow, the client only needs basic buyer name and email so the team can contact them.
-- Default WooCommerce customer/admin emails are acceptable for now.
-- No custom email template is required right now.
+- Default WooCommerce customer/admin emails were initially acceptable.
+- Client later shared a branded email reference, so a custom email template is now requested.
+
+Updated email decision:
+
+- Client shared a branded email reference on 15 June 2026.
+- Custom email design is now back in scope as a simple branded WooCommerce order email.
+- Reference file is stored at `events-ticket/snippets/email-template.html`.
 
 Older clarification checklist:
 
@@ -133,8 +170,9 @@ Please send the current WooCommerce order details when possible.
 
 ## Priority Order
 
-1. Export `events-ticket/stillness-events-handoff-guide.html` to PDF.
-2. Send the PDF handoff guide to the client.
-3. Run one final test booking to confirm name, email, product, quantity, and payment status appear correctly.
+1. Convert `events-ticket/snippets/email-template.html` into the WooCommerce order email implementation.
+2. Run one free test event order and confirm the branded email arrives.
+3. Confirm WooCommerce Orders show name, email, product, quantity, and payment status correctly.
 4. Test event-only checkout and confirm physical product checkout is unaffected.
-5. Agree on managed event updates separately if needed.
+5. Send the PDF handoff guide and invoice/payment request.
+6. Agree on managed event updates separately if needed.

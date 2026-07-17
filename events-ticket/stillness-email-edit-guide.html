@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stillness Events - Email Content Guide</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500;600&display=swap');
+
+    :root {
+      --stone: #0E1B30;
+      --midnight: #1D3152;
+      --seafoam: #688F9D;
+      --breeze: #D9E8EB;
+      --wave: #A4B2BA;
+      --sand: #C4BBB4;
+      --cream: #F7F0EC;
+      --warm: #E8DDD6;
+      --ink: #25313A;
+      --muted: #68747B;
+      --line: rgba(14, 27, 48, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #EEF2F3;
+      color: var(--ink);
+      font-family: 'Jost', Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .page {
+      width: min(920px, calc(100% - 32px));
+      margin: 32px auto;
+      background: #FFFFFF;
+      box-shadow: 0 20px 60px rgba(14, 27, 48, 0.12);
+    }
+
+    .cover {
+      background: var(--stone);
+      color: var(--cream);
+      padding: 76px 72px 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -130px;
+      width: 320px;
+      height: 320px;
+      border: 1px solid rgba(217, 232, 235, 0.18);
+      border-radius: 50%;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--seafoam);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 300;
+      letter-spacing: 0;
+      line-height: 1.12;
+      margin: 0;
+    }
+
+    h1 {
+      max-width: 620px;
+      font-size: 58px;
+    }
+
+    .cover-copy {
+      max-width: 600px;
+      margin: 24px 0 0;
+      color: var(--wave);
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .meta-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid rgba(217, 232, 235, 0.16);
+      margin-top: 54px;
+      padding-top: 26px;
+      gap: 24px;
+    }
+
+    .meta-label {
+      display: block;
+      color: var(--seafoam);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    .meta-value {
+      color: var(--cream);
+      font-size: 13px;
+    }
+
+    .content {
+      padding: 58px 72px 72px;
+    }
+
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      padding: 24px;
+      background: rgba(217, 232, 235, 0.28);
+      border: 1px solid rgba(104, 143, 157, 0.22);
+      margin-bottom: 48px;
+    }
+
+    .toc a {
+      color: var(--midnight);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    section {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    section:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    h2 {
+      color: var(--stone);
+      font-size: 34px;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      color: var(--midnight);
+      font-size: 24px;
+      margin: 26px 0 10px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul,
+    ol {
+      margin: 10px 0 0 22px;
+      padding: 0;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    strong {
+      color: var(--stone);
+      font-weight: 500;
+    }
+
+    code {
+      background: rgba(217, 232, 235, 0.42);
+      color: var(--stone);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    .callout {
+      padding: 20px 22px;
+      background: var(--cream);
+      border-left: 3px solid var(--seafoam);
+      margin: 22px 0;
+    }
+
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .summary-card {
+      border: 1px solid var(--line);
+      padding: 20px;
+      min-height: 142px;
+    }
+
+    .summary-card span {
+      display: block;
+      color: var(--seafoam);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .summary-card p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .steps li {
+      counter-increment: step;
+      position: relative;
+      padding-left: 42px;
+      margin: 14px 0;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 1px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--stone);
+      color: var(--cream);
+      font-size: 12px;
+      line-height: 26px;
+      text-align: center;
+    }
+
+    .field-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0 8px;
+      font-size: 13px;
+    }
+
+    .field-table th,
+    .field-table td {
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .field-table th {
+      background: rgba(217, 232, 235, 0.34);
+      color: var(--stone);
+      font-weight: 500;
+    }
+
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .checklist li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 14px;
+      height: 14px;
+      border: 1px solid var(--seafoam);
+      background: #FFFFFF;
+    }
+
+    .footer {
+      padding: 28px 72px;
+      background: var(--stone);
+      color: var(--wave);
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .footer strong {
+      color: var(--cream);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: 100%;
+        margin: 0;
+      }
+
+      .cover,
+      .content,
+      .footer {
+        padding-left: 28px;
+        padding-right: 28px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .meta-row,
+      .toc,
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer {
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 14mm;
+      }
+
+      body {
+        background: #FFFFFF;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+      }
+
+      .cover,
+      .footer {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      section {
+        break-inside: avoid;
+      }
+
+      .page-break {
+        break-before: page;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="cover">
+      <p class="eyebrow">Stillness Curated Retreats</p>
+      <h1>Email Content Guide</h1>
+      <p class="cover-copy">
+        A quick guide on how to safely edit the text content of the custom booking confirmation emails.
+      </p>
+      <div class="meta-row">
+        <div>
+          <span class="meta-label">System</span>
+          <span class="meta-value">WordPress, Snippets</span>
+        </div>
+        <div>
+          <span class="meta-label">Event Category</span>
+          <span class="meta-value">Events Emails</span>
+        </div>
+        <div>
+          <span class="meta-label">Updated</span>
+          <span class="meta-value">17 June 2026</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <nav class="toc" aria-label="Guide contents">
+        <a href="#overview">01. Where to Find the Email Code</a>
+        <a href="#how-to-edit">02. How to Edit the Text</a>
+        <a href="#safeguards">03. Safeguards & Checklist</a>
+      </nav>
+
+      <section id="overview">
+        <p class="eyebrow">Locating The Snippet</p>
+        <h2>Where to find the email code</h2>
+        <p>
+          Unlike regular pages that are built visually in Elementor, the booking confirmation email is deeply integrated into the checkout process. Its layout and text are generated using a dedicated WordPress code snippet.
+        </p>
+        <ol class="steps">
+          <li>Log into your WordPress admin dashboard.</li>
+          <li>In the left-hand menu, locate and click on <strong>Snippets</strong>.</li>
+          <li>Look for the snippet named <code>stillness_render_featured_event</code> and click <strong>Edit</strong>.</li>
+          <li>Scroll down towards the bottom half of the code file to find the HTML markup for the email.</li>
+        </ol>
+      </section>
+
+      <section id="how-to-edit">
+        <p class="eyebrow">Making Changes</p>
+        <h2>How to edit the text</h2>
+        <p>
+          Once you are inside the snippet, you will see a mix of HTML tags (like <code>&lt;div&gt;</code>) and the actual readable English text of your email. You can safely change the English words as long as you do not touch the surrounding code tags.
+        </p>
+        <div class="summary-grid">
+          <div class="summary-card">
+            <span>Hero Message</span>
+            <p>Look for: <em>"Your space has been held."</em> You can change this to any phrase you prefer.</p>
+          </div>
+          <div class="summary-card">
+            <span>Notes Section</span>
+            <p>Look for: <em>"A Few Things to Hold"</em> and the paragraph detailing arrival times and what to wear.</p>
+          </div>
+          <div class="summary-card">
+            <span>Sign-Off Phrase</span>
+            <p>Look for: <em>"Stillness is not a luxury. It is where you begin again."</em> near the very bottom.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="safeguards">
+        <p class="eyebrow">Important Warning</p>
+        <h2>Safeguards & Checklist</h2>
+        <div class="callout">
+          <p><strong>Warning:</strong> Code snippets are fragile. Removing a single quotation mark or angle bracket can cause the site or email to break. Proceed with care!</p>
+        </div>
+        <ul class="checklist">
+          <li><strong>Never</strong> delete or modify any tags wrapped in angle brackets, like <code>&lt;td&gt;</code> or <code>&lt;/div&gt;</code>.</li>
+          <li><strong>Never</strong> delete PHP tags, which look like <code>&lt;?php echo esc_html( $first_name ); ?&gt;</code>. These insert dynamic data (like the customer's name or event details).</li>
+          <li><strong>Never</strong> remove quotation marks around styles.</li>
+          <li><strong>Only</strong> modify the plain white text (or colored text, depending on your code editor theme) that represents the human-readable English copy.</li>
+          <li>When finished, click <strong>Update</strong> to save the snippet, and perform a test checkout to verify the email looks correct.</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <span><strong>Stillness Events</strong> email editing guide</span>
+      <span>Prepared by Solicate</span>
+    </footer>
+  </main>
+</body>
+</html>

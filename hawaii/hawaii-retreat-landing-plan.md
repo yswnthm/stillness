@@ -293,6 +293,16 @@ It should not feel:
 - overdesigned beyond scope
 - visually disconnected from the kids mindfulness deck page
 
+## Ticket-Related Section Task
+
+Pending task from the events workflow:
+
+- Identify existing ticket-related section templates from the Stillness/events work.
+- Confirm which source page those sections belong to before importing.
+- Bring only the sections that support the Hawaii retreat landing page flow.
+- Adapt copy and layout for the retreat application/ticket context.
+- Keep this as static landing page work unless payment or booking integration is separately approved.
+
 ## Next Build Step
 
 Start from `stillness_cards_v3.html` as the base style.

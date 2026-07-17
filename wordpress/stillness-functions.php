@@ -70,4 +70,7 @@ function stillness_suppress_theme_header() {
     remove_action( 'storefront_header', 'storefront_site_branding',          20 );
     remove_action( 'storefront_header', 'storefront_primary_navigation',     30 );
     remove_action( 'storefront_header', 'storefront_header_container_close', 41 );
+    // Astra theme — disable the native header entirely so it doesn't
+    // conflict with our Elementor custom header template.
+    add_filter( 'astra_header_enabled', '__return_false' );
 }

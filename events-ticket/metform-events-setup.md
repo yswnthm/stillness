@@ -87,3 +87,91 @@ Thank you. We will let you know when new dates open.
 - Confirm the admin email notification arrives, if enabled.
 - Confirm the form looks correct on mobile.
 - Confirm the submit button says `Notify Me`.
+
+---
+
+# Stillness Hawaii Retreat Application MetForm Setup
+
+> Purpose: Cohort selection/application form for the Hawaii Retreat landing page.
+
+## Shortcode Expected By Templates
+
+The Hawaii Retreat Application section template uses this shortcode by default:
+
+```text
+[metform form_id="6698"]
+```
+
+If the generated form ID is different on the live WordPress site, update the ID in:
+- `hawaii-templates/template-hawaii-09-application.json`
+- `wordpress/hawaii-retreat-templates/` (or whichever folder the templates are exported to)
+
+## Create The Form
+
+1. Open WordPress Admin.
+2. Go to `MetForm`.
+3. Create a new form named `Hawaii Retreat Application`.
+4. Copy the generated MetForm shortcode and update the ID in the templates.
+5. Add the five fields listed in the field setup below.
+6. Set the required fields accordingly.
+7. Use the exact placeholders and names/keys to match the database mappings.
+
+## Recommended Field Setup
+
+### 1. Full name
+- **Label**: Full name
+- **Name / key**: name
+- **Type**: Text
+- **Required**: Yes
+- **Placeholder**: First and last name
+
+### 2. Email address
+- **Label**: Email address
+- **Name / key**: email
+- **Type**: Email
+- **Required**: Yes
+- **Placeholder**: your@email.com
+
+### 3. Phone number
+- **Label**: Phone number
+- **Name / key**: phone
+- **Type**: Telephone
+- **Required**: No
+- **Placeholder**: (555) 123-4567
+
+### 4. Professional title
+- **Label**: Professional title
+- **Name / key**: title
+- **Type**: Text
+- **Required**: No
+- **Placeholder**: e.g., CEO, Founder
+
+### 5. What are you hoping to reset?
+- **Label**: What are you hoping to reset?
+- **Name / key**: message
+- **Type**: Textarea
+- **Required**: No
+- **Placeholder**: Tell us about your current stress levels and what you're seeking...
+
+## Submission Settings
+
+- Enable entry storage inside MetForm.
+- Enable admin email notifications.
+- Send notification to the correct Stillness admin email.
+- Suggested admin email subject:
+  ```text
+  New Hawaii Retreat Application
+  ```
+- Suggested success message:
+  ```text
+  Application submitted. We will reach out to you within 48 hours to schedule your consultation.
+  ```
+
+## Test Checklist
+
+- Submit the application form with all fields filled out.
+- Submit the form with only required fields (Name and Email) filled out.
+- Confirm the entry appears inside MetForm entries with all fields mapped correctly.
+- Confirm the admin email notification is received.
+- Confirm the fields look correct on mobile.
+

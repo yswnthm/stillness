@@ -1,0 +1,33 @@
+{
+  "content": [
+    {
+      "id": "hawaii_07",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "hawaii_html_07",
+          "elType": "widget",
+          "settings": {
+            "html": "<div class=\"hw-wrapper\">\n<section class=\"hw-dash-section\">\n  <div class=\"hw-dash-bg-grid\"></div>\n  <div class=\"hw-dash-header\">\n    <h2 class=\"hw-section-title\">Biometric Tracking & <em>Integration</em></h2>\n    <p>We do not guess your recovery; we measure it using advanced biosensors. Your transformation is proven through continuous data tracking across three phases.</p>\n  </div>\n  \n  <div class=\"hw-dash-panels\">\n    <div class=\"hw-dash-panel\">\n      <span class=\"hw-dash-phase\">Phase 1: Pre-Retreat</span>\n      <h3 class=\"hw-dash-title\">October 2026</h3>\n      <p class=\"hw-dash-body\">Premium tracking wearable shipped to your home. We track your Heart Rate Variability, sleep, and cortisol in your high-stress environment for 30 days.</p>\n      <div class=\"hw-dash-viz\"></div>\n    </div>\n    <div class=\"hw-dash-panel\">\n      <span class=\"hw-dash-phase\">Phase 2: On-Site</span>\n      <h3 class=\"hw-dash-title\">November 2026</h3>\n      <p class=\"hw-dash-body\">Your biometric trends are analyzed and used to tailor your vocal yoga frequencies and floating sound journeys.</p>\n      <div class=\"hw-dash-viz\"></div>\n    </div>\n    <div class=\"hw-dash-panel\">\n      <span class=\"hw-dash-phase\">Phase 3: Integration</span>\n      <h3 class=\"hw-dash-title\">December 2026</h3>\n      <p class=\"hw-dash-body\">Continued tracking for 30 days. 1-on-1 data review call analyzing your improved HRV and sleep scores.</p>\n      <div class=\"hw-dash-viz\"></div>\n    </div>\n  </div>\n</section>\n</div>\n\n<style>\n@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap');\n\n*,*::before,*::after{box-sizing:border-box !important}\n:root{\n  --stone: #0E1B30;\n  --cream: #F7F0EC;\n  --warm: #F2E8DF;\n  --seafoam: #688F9D;\n  --wave: #A4B2BA;\n  --sand: #C4BBB4;\n  --amber: #C4935A;\n  --midnight: #1D3152;\n  --breeze: #D9E8EB;\n  --text-body: #3D4F57;\n}\n.hw-wrapper{\n  background:var(--cream);\n  color:var(--stone);\n  font-family:'Jost',sans-serif !important;\n  font-weight:300;\n}\n\n/* ─── BIOMETRIC TRACKING (Dashboard Interface) ─── */\n.hw-dash-section{padding:160px 0;background:radial-gradient(circle at top center,#1a2b42 0%,var(--stone) 100%);position:relative;overflow:hidden}\n.hw-dash-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(104,143,157,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(104,143,157,0.06) 1px,transparent 1px);background-size:40px 40px;z-index:0;opacity:0.6}\n.hw-dash-header{text-align:center;max-width:700px;margin:0 auto 80px;position:relative;z-index:2}\n.hw-dash-header h2{font-family:'Cormorant Garamond',serif !important;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--cream);line-height:1.1}\n.hw-dash-header h2 em{color:var(--seafoam);font-style:italic}\n.hw-dash-header p{color:var(--breeze);margin-top:24px;font-size:17px;line-height:1.8}\n\n.hw-dash-panels{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1200px;margin:0 auto;padding:0 52px;position:relative;z-index:2}\n.hw-dash-panel{background:rgba(14,27,48,0.4);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(104,143,157,0.2);padding:50px 40px;border-radius:4px;position:relative;transition:all 0.4s ease}\n.hw-dash-panel:hover{border-color:var(--seafoam);background:rgba(14,27,48,0.7);box-shadow:0 0 30px rgba(104,143,157,0.1)}\n.hw-dash-panel::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--seafoam),transparent);opacity:0;transition:opacity 0.4s}\n.hw-dash-panel:hover::before{opacity:1}\n.hw-dash-phase{font-family:'Jost',sans-serif !important;font-size:10px;text-transform:uppercase;letter-spacing:0.2em;color:var(--amber);margin-bottom:16px;display:block}\n.hw-dash-title{font-family:'Cormorant Garamond',serif !important;font-size:26px;font-weight:400;color:var(--cream);margin-bottom:24px}\n.hw-dash-body{font-size:14px;line-height:1.8;color:var(--wave);font-weight:300}\n.hw-dash-viz{width:100%;height:40px;margin-top:30px;border-bottom:1px solid rgba(104,143,157,0.2);position:relative}\n.hw-dash-viz::after{content:'';position:absolute;bottom:-1px;left:0;height:1px;background:var(--seafoam);box-shadow:0 -2px 10px var(--seafoam);transition:width 1s ease}\n.hw-dash-panel:nth-child(1) .hw-dash-viz::after{width:40%}\n.hw-dash-panel:nth-child(2) .hw-dash-viz::after{width:70%}\n.hw-dash-panel:nth-child(3) .hw-dash-viz::after{width:100%}\n@media (max-width: 1024px) {\n  .hw-crisis-section{flex-direction:column}\n  .hw-crisis-visual{height:60vh;position:relative}\n  .hw-crisis-visual::after{background:linear-gradient(to top,var(--stone),transparent)}\n  .hw-crisis-content{padding:80px 40px;min-height:auto}\n  .hw-black-card{grid-template-columns:1fr}\n  .hw-bc-left{border-right:none;border-bottom:1px solid rgba(196,147,90,0.15)}\n}\n\n@media (max-width: 900px) {\n  .hw-glass-grid, .hw-dash-panels{grid-template-columns:1fr;gap:30px}\n  .hw-v-timeline{padding-left:0;padding-right:0}\n  .hw-v-spine{left:30px}\n  .hw-v-node-wrapper{padding-left:80px}\n  .hw-v-circle{left:0;width:60px;justify-content:center}\n  .hw-v-circle-inner{width:50px;height:50px;box-shadow:0 0 0 4px var(--cream)}\n  .hw-v-circle-inner span:last-child{font-size:16px}\n  .hw-v-circle-inner span:first-child{font-size:7px}\n  .hw-v-event-row{flex-direction:column;gap:8px}\n  .hw-img-strip{grid-template-columns:1fr}\n}\n\n@media (max-width: 768px) {\n  nav{padding:1.25rem 1.5rem}\n  .hw-hero-content{padding:0 1.5rem}\n  .hw-pillars-section, .hw-itinerary-section, .hw-dash-section, .hw-inv-section, .hw-app-section{padding:80px 24px}\n  .hw-v-data-card{padding:30px 24px}\n  .hw-portal-box{padding:40px 30px}\n  .hw-bc-left, .hw-bc-right{padding:40px 30px}\n}\n</style>"
+          },
+          "widgetType": "html"
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Hawaii — Biometric Tracking (Dashboard Interface)",
+  "type": "section"
+}

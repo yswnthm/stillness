@@ -389,7 +389,7 @@
         </div>
         <div>
           <span class="meta-label">Updated</span>
-          <span class="meta-value">11 June 2026</span>
+          <span class="meta-value">20 June 2026</span>
         </div>
       </div>
     </header>
@@ -399,11 +399,12 @@
         <a href="#overview">01. What Has Been Set Up</a>
         <a href="#bookings">02. What Happens After Booking</a>
         <a href="#add-event">03. Add A New Event</a>
-        <a href="#content">04. Event Content Rules</a>
-        <a href="#stock">05. Stock, Quantity, Sold Out</a>
-        <a href="#waitlist">06. Waitlist Form</a>
-        <a href="#orders">07. Check Bookings</a>
-        <a href="#final-checklist">08. Final Checklist</a>
+        <a href="#catalog-order">04. Change Event Catalog Order</a>
+        <a href="#content">05. Event Content Rules</a>
+        <a href="#stock">06. Stock, Quantity, Sold Out</a>
+        <a href="#waitlist">07. Waitlist Form</a>
+        <a href="#orders">08. Check Bookings</a>
+        <a href="#final-checklist">09. Final Checklist</a>
       </nav>
 
       <section id="overview">
@@ -490,6 +491,59 @@
         </ol>
       </section>
 
+      <section id="catalog-order">
+        <p class="eyebrow">Catalog Order</p>
+        <h2>Change the order of events on the Events page</h2>
+        <p>
+          The order of the event cards is controlled by each event product's <strong>published date and time</strong>.
+        </p>
+        <div class="callout">
+          <p><strong>Simple rule:</strong> the event with the newest published date/time appears first.</p>
+        </div>
+        <table class="field-table">
+          <thead>
+            <tr>
+              <th>Page area</th>
+              <th>How the order is chosen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Featured event panel</td>
+              <td>Shows the newest published event that still has stock available.</td>
+            </tr>
+            <tr>
+              <td>Three event cards below</td>
+              <td>Shows the three newest published event products from the <code>Events</code> category.</td>
+            </tr>
+            <tr>
+              <td>Sold-out event cards</td>
+              <td>Sold-out events can still appear in the three cards, but they will automatically show the sold-out state.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Steps to swap the order</h3>
+        <ol class="steps">
+          <li>Go to <code>Products</code> inside WordPress.</li>
+          <li>Open the event product that should move.</li>
+          <li>In the right sidebar, find the <code>Publish</code> box.</li>
+          <li>Look for the line that says something like <code>Published on: Jun 15, 2026 at 10:30</code>.</li>
+          <li>Click <code>Edit</code> beside that <code>Published on</code> line.</li>
+          <li>Set a newer date/time if the event should move earlier on the Events page.</li>
+          <li>Set an older date/time if the event should move later on the Events page.</li>
+          <li>Click <code>OK</code>.</li>
+          <li>Click <code>Update</code>.</li>
+          <li>Refresh the Events page and check the order.</li>
+        </ol>
+        <div class="callout">
+          <p><strong>Example:</strong> If the third event card should become the first card, open that event product, adjust its published time so it is newer than the other events, click <strong>OK</strong>, then click <strong>Update</strong>.</p>
+          <p>Use small time changes when possible, such as changing only the minutes. This keeps the product history tidy while still changing the visible catalog order.</p>
+        </div>
+        <p>
+          If the featured event changes unexpectedly, check which in-stock event has the newest published date/time. The featured panel always follows the newest in-stock event.
+        </p>
+      </section>
+
       <section id="content">
         <p class="eyebrow">Content Rules</p>
         <h2>Event content rules</h2>
@@ -521,6 +575,32 @@
             </tr>
           </tbody>
         </table>
+        <h3>FAQ Attributes (Optional)</h3>
+        <p>If you want to display an FAQ section for a specific event, add matching Question and Answer attributes. You can add up to 30 pairs.</p>
+        <table class="field-table">
+          <thead>
+            <tr>
+              <th>Attribute name</th>
+              <th>Example value</th>
+              <th>Where it appears</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>Q1</code>, <code>Q2</code>, etc.</td>
+              <td>What should I pack?</td>
+              <td>FAQ section (Question title)</td>
+            </tr>
+            <tr>
+              <td><code>A1</code>, <code>A2</code>, etc.</td>
+              <td>Comfortable, breathable clothing...</td>
+              <td>FAQ section (Answer text)</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout">
+          <p><strong>Note:</strong> Both the question (e.g. <code>Q1</code>) and the answer (e.g. <code>A1</code>) must be present for the FAQ item to appear. If no Q/A attributes are found, the FAQ section will be hidden entirely.</p>
+        </div>
         <h3>Short description</h3>
         <p>
           Use the short description for a calm 1-2 line teaser. Do not add date, duration, location, or emoji-style logistics here.
