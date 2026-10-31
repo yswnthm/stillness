@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stillness — Men's Series 2027 · Landing Page + Package System</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --stone: #0E1B30;
+    --midnight: #1D3152;
+    --seafoam: #688F9D;
+    --breeze: #D9E8EB;
+    --wave: #A4B2BA;
+    --sand: #C4BBB4;
+    --cream: #F7F0EC;
+    --ink: #25313A;
+    --muted: #68747B;
+    --line: rgba(14, 27, 48, 0.12);
+    --gold: #C5A880;
+    --alert: #A8553A;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: #EEF2F3;
+    color: var(--ink);
+    font-family: 'Jost', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: min(920px, calc(100% - 32px));
+    margin: 36px auto;
+    background: #FFFFFF;
+    box-shadow: 0 24px 70px rgba(14, 27, 48, 0.14);
+  }
+
+  .cover {
+    background: var(--stone);
+    color: var(--cream);
+    padding: 76px 72px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::after {
+    content: "";
+    position: absolute;
+    right: -100px;
+    bottom: -120px;
+    width: 360px;
+    height: 360px;
+    border: 1px solid rgba(217, 232, 235, 0.14);
+    border-radius: 50%;
+  }
+
+  .eyebrow {
+    margin: 0 0 16px;
+    color: var(--seafoam);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  h1 {
+    max-width: 680px;
+    font-size: 52px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+  }
+
+  .cover-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    color: var(--seafoam);
+    margin-top: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .cover-copy {
+    max-width: 620px;
+    margin: 22px 0 0;
+    color: var(--wave);
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(217, 232, 235, 0.16);
+    margin-top: 40px;
+  }
+
+  .meta div {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 16px 18px;
+  }
+
+  .meta span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--wave);
+    margin-bottom: 4px;
+  }
+
+  .meta strong {
+    font-weight: 500;
+    color: #FFFFFF;
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 56px 72px 72px;
+  }
+
+  section {
+    margin: 0 0 42px;
+    page-break-inside: avoid;
+  }
+
+  .section-num {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--seafoam);
+    margin-bottom: 10px;
+  }
+
+  .section-num::before {
+    content: "";
+    width: 22px;
+    height: 1px;
+    background: var(--seafoam);
+  }
+
+  h2 {
+    font-size: 32px;
+    color: var(--stone);
+    margin-bottom: 14px;
+  }
+
+  h3 {
+    font-size: 21px;
+    color: var(--midnight);
+    margin: 26px 0 8px;
+  }
+
+  p {
+    margin: 0 0 14px;
+    color: var(--ink);
+  }
+
+  .lede {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--midnight);
+    margin-bottom: 20px;
+  }
+
+  strong { font-weight: 600; color: var(--stone); }
+  em { color: var(--seafoam); font-style: italic; }
+
+  ul, ol { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+
+  a { color: var(--seafoam); }
+
+  .callout {
+    border-left: 3px solid var(--seafoam);
+    background: #F2F7F8;
+    padding: 18px 22px;
+    margin: 20px 0;
+    page-break-inside: avoid;
+  }
+
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout.alert {
+    border-left-color: var(--alert);
+    background: #FBF3F0;
+  }
+
+  .callout strong { color: var(--stone); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 22px;
+    font-size: 13.5px;
+    page-break-inside: avoid;
+  }
+
+  thead th {
+    text-align: left;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--stone);
+  }
+
+  tbody td {
+    padding: 11px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  td.num, th.num { text-align: right; white-space: nowrap; }
+
+  code {
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    font-size: 12.5px;
+    background: #F2F5F6;
+    padding: 2px 6px;
+    color: var(--midnight);
+  }
+
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+  }
+
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 46px;
+    margin-bottom: 14px;
+    page-break-inside: avoid;
+  }
+
+  .steps li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    color: var(--gold);
+  }
+
+  .questions {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+    counter-reset: q;
+  }
+
+  .questions li {
+    counter-increment: q;
+    position: relative;
+    padding: 16px 18px 16px 54px;
+    border: 1px solid var(--line);
+    margin-bottom: 10px;
+    background: #FCFDFD;
+    page-break-inside: avoid;
+  }
+
+  .questions li::before {
+    content: counter(q);
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--stone);
+    color: #fff;
+    font-size: 11px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .questions strong { display: block; margin-bottom: 3px; }
+
+  .endnote {
+    font-size: 12.5px;
+    color: var(--muted);
+    font-style: italic;
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+    margin-top: 36px;
+  }
+
+  @page {
+    margin: 16mm;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { width: 100%; margin: 0; box-shadow: none; }
+    .cover { padding: 48px 40px 40px; }
+    h1 { font-size: 42px; }
+    .content { padding: 36px 40px 48px; }
+    section, .callout, table, .questions li, .steps li { page-break-inside: avoid; }
+    h2, h3 { page-break-after: avoid; }
+  }
+
+  @media (max-width: 760px) {
+    .cover { padding: 48px 28px 40px; }
+    h1 { font-size: 38px; }
+    .content { padding: 36px 28px 48px; }
+    .meta { grid-template-columns: 1fr; }
+    h2 { font-size: 27px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="cover">
+    <p class="eyebrow">Stillness Co. · Internal Build Plan</p>
+    <h1>One evening a month, held for a year.</h1>
+    <div class="cover-subtitle">Landing Page + Package System · 2027</div>
+    <p class="cover-copy">
+      The landing page is done. The package system is a small WooCommerce plugin behind it.
+      WooCommerce takes the money; the plugin remembers who bought what, how many sessions they hold,
+      and whether they are coming each month.
+    </p>
+
+    <div class="meta">
+      <div><span>Revised</span><strong>23 October 2026</strong></div>
+      <div><span>Target</span><strong>Built and handed over today</strong></div>
+      <div><span>Shape</span><strong>Attendances, not dates</strong></div>
+    </div>
+  </header>
+
+  <main class="content">
+    <div style="margin:0 0 28px;padding:18px 20px;border:1px solid #b08a5a;background:#fbf3e6;color:#5a4630;font-size:14px;line-height:1.6;">
+      <strong>Superseded — 24 October 2026.</strong> The one-tap reply system described below was removed in plugin v1.1.0. Usage is now marked manually from the order screen. See <code>README.html</code> and <code>guide.html</code> for current behaviour.
+    </div>
+
+    <section>
+      <div class="section-num">01 · What this is</div>
+      <h2>A small plugin, quietly holding the year.</h2>
+      <p class="lede">WooCommerce takes the payment. The plugin remembers the attendances.</p>
+      <p>
+        It creates no pages, logins, accounts or groups. There is one session a month and everyone attends
+        the same one.
+      </p>
+      <p>
+        There is no custom cron. Komal triggers each month's reminder with one button; the plugin then sends
+        it in batches using WooCommerce's own background queue, with a retry button for anything that fails.
+      </p>
+      <p>It is not a ticketing system (FooEvents stays out).</p>
+    </section>
+
+    <section>
+      <div class="section-num">02 · End to end</div>
+      <h2>How it works.</h2>
+
+      <h3>The schedule</h3>
+      <p>
+        Komal gives us the session dates (one per month), the time and the venue. They go on one settings
+        page. Everything else reads from it.
+      </p>
+
+      <h3>The three packages</h3>
+      <p>
+        Nobody picks a month or a date at checkout. Every package is a number of attendances, usable at any
+        session in the year.
+      </p>
+      <table>
+        <thead>
+          <tr><th>Package</th><th>Attendances</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Annual (12 months)</td><td>12 sessions — every date</td></tr>
+          <tr><td>Six-month</td><td>6 sessions — any six dates</td></tr>
+          <tr><td>Single evening</td><td>1 session — any one date</td></tr>
+        </tbody>
+      </table>
+      <p>
+        A six-month buyer is not tied to six consecutive months. They hold six attendances and choose which
+        evenings to use them on.
+      </p>
+
+      <h3>What happens at purchase</h3>
+      <ol class="steps">
+        <li>The buyer pays. There is nothing to choose at checkout for standard packages.</li>
+        <li>On gift products, the buyer also enters the recipient's name and email.</li>
+        <li>Payment completes. The plugin creates the membership on the order item, with its attendance count.</li>
+        <li>Emails go out immediately.</li>
+      </ol>
+
+      <h3>The monthly reminder (one button)</h3>
+      <p>Nothing runs automatically. Each month, Komal opens the dashboard and presses <strong>Send Reminder</strong>.</p>
+      <ol class="steps">
+        <li>The button defaults to the next upcoming session. A dropdown lets her pick a different one.</li>
+        <li>A confirmation shows the session date and how many members will be emailed.</li>
+        <li>She confirms. The plugin queues the email for every active member with at least one attendance left.</li>
+        <li>The result line updates as the queue works through the list: "Queued 42 · sent 41 · failed 1", with a <strong>Retry failed</strong> button.</li>
+      </ol>
+
+      <p>
+        <strong>Batching.</strong> Sends are spread across a window so a large list never times out. Default
+        30 minutes, selectable as 2 hours, 6 hours or 10 hours. Ten hours is the hard cap; nothing runs past
+        a single day.
+      </p>
+      <p>
+        <strong>Retry.</strong> Pressing <strong>Retry failed</strong> requeues only the failures. Pressing
+        Send Reminder again never double-sends, because each member is marked sent per session. Anyone who
+        bought after the first press is picked up by the next press.
+      </p>
+      <p>
+        The dashboard also shows the next session date and how many members have not yet been reminded, so
+        it is clear whether this month's button has been pressed.
+      </p>
+
+      <h3>What a reply means</h3>
+      <p>
+        The reminder has two buttons: <strong>I'll be there</strong> and <strong>Can't make it</strong>.
+        Both open a one-tap confirmation screen, because Outlook and Gmail pre-open links and would
+        otherwise record replies nobody made.
+      </p>
+      <ul>
+        <li><strong>I'll be there</strong> reserves that session and uses one attendance. The confirmation shows how many remain.</li>
+        <li><strong>Can't make it</strong> does not use an attendance. The month is simply skipped.</li>
+        <li>A member with no attendances left is politely told so, and pointed back to Komal.</li>
+        <li>No reply means no follow-up email. The reminder is the only message for that month.</li>
+      </ul>
+      <p>Replies show in the order box and the dashboard.</p>
+
+      <h3>Calendar</h3>
+      <p>
+        One public Google Calendar, created from a Google account, with the session dates. Members add it
+        from a link on the landing page and in their emails. When Komal edits a date in the calendar,
+        subscribers see the change. The plugin does no calendar work.
+      </p>
+
+      <h3>Emails</h3>
+      <table>
+        <thead>
+          <tr><th>#</th><th>Email</th><th>To</th><th>When</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Welcome</td><td>The member (buyer of a package, or the gift recipient)</td><td>Immediately after payment. Lists every date, venue, calendar link. Also used for resend.</td></tr>
+          <tr><td>2</td><td>Gift thank-you</td><td>The gift buyer</td><td>Immediately after payment. Personal note thanking them, inviting them to the website and social media for more events.</td></tr>
+          <tr><td>3</td><td>Monthly reminder</td><td>Members holding that session</td><td>When Komal presses Send Reminder. Two reply buttons.</td></tr>
+        </tbody>
+      </table>
+
+      <p>
+        For a gift, the buyer receives email 2 and the recipient receives email 1. They are separate and in
+        separate contexts. The buyer also gets the normal WooCommerce order email. Annual and single gifts
+        work the same way.
+      </p>
+
+      <div class="callout">
+        <p>
+          <strong>Example.</strong> A gift annual membership is bought on 20 December 2026. The recipient
+          immediately gets the welcome email with all dates. The buyer immediately gets the thank-you email.
+          Each month, when Komal presses Send Reminder, the recipient gets that month's reminder and replies
+          with one click. After twelve confirmed evenings, their attendances are used up.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-num">03 · Risks</div>
+      <h2>What could still go wrong.</h2>
+
+      <table>
+        <thead>
+          <tr><th>Risk</th><th>What would go wrong</th><th>How it is handled</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Button pressed twice</td><td>Duplicate emails</td><td>Sent marker per member per session. A repeat press skips anyone already sent</td></tr>
+          <tr><td>Mail send fails</td><td>Member misses the reminder</td><td>Result line lists failures. <strong>Retry failed</strong> requeues only those</td></tr>
+          <tr><td>Cancelled or refunded member</td><td>Reminder goes to someone who left</td><td>Membership is removed immediately on refund or cancellation, and status is checked again at send time</td></tr>
+          <tr><td>Many members at once</td><td>Server timeout partway</td><td>Sends are queued and spread across a 30-minute to 10-hour window</td></tr>
+          <tr><td>Email scanners open links</td><td>Outlook and Gmail pre-open links, recording replies nobody made</td><td>Link opens a one-tap confirm screen. The reply is recorded only on that tap</td></tr>
+          <tr><td>Reply after the session</td><td>Odd records</td><td>Replies for past sessions are politely refused</td></tr>
+          <tr><td>No attendances left</td><td>Member confirms a session they cannot use</td><td>Confirm screen refuses and points them back to Komal</td></tr>
+          <tr><td>Komal forgets to press it</td><td>No reminders go out</td><td>Dashboard shows next session and how many are not yet reminded</td></tr>
+          <tr><td>Queue stalls</td><td>Batch never finishes</td><td>Queue is visible in the result line, and <strong>Retry failed</strong> picks up anything stuck</td></tr>
+          <tr><td>Date changed after sending</td><td>Replies stay for the old date</td><td>Known limit. Komal tells members, and the calendar updates itself</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <div class="section-num">04 · Products</div>
+      <h2>Five ways in.</h2>
+      <p>
+        Prices are in Canadian dollars. All are virtual, sold individually and hidden from the shop. The
+        landing page links directly to each add-to-cart.
+      </p>
+
+      <table>
+        <thead>
+          <tr><th>Product</th><th>SKU</th><th class="num">Price</th><th>Attendances</th><th>Extra checkout fields</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Founding Member · 12 months</td><td><code>mens-annual</code></td><td class="num">CA$480</td><td>12</td><td>None</td></tr>
+          <tr><td>6-Month Package</td><td><code>mens-six-month</code></td><td class="num">CA$270</td><td>6</td><td>None</td></tr>
+          <tr><td>Single Evening</td><td><code>mens-single</code></td><td class="num">CA$55</td><td>1</td><td>None</td></tr>
+          <tr><td>Gift · 12 months</td><td><code>mens-gift-annual</code></td><td class="num">CA$480</td><td>12</td><td>Recipient name and email</td></tr>
+          <tr><td>Gift · Single Evening</td><td><code>mens-gift-single</code></td><td class="num">CA$55</td><td>1</td><td>Recipient name and email</td></tr>
+        </tbody>
+      </table>
+
+      <p>
+        <strong>Data:</strong> stored as order item meta. No custom tables. Creation is keyed on order ID
+        plus line item so a repeated hook never makes a duplicate. It triggers on payment or processing,
+        not only "completed", since virtual orders often never reach completed.
+      </p>
+      <p>
+        <strong>Refunds and cancellations:</strong> a refunded or cancelled order removes the membership
+        immediately. It disappears from the dashboard and is skipped by any queued batch.
+      </p>
+    </section>
+
+    <section>
+      <div class="section-num">05 · Admin</div>
+      <h2>Enough to run it. Nothing more.</h2>
+
+      <h3>Dashboard (under WooCommerce)</h3>
+      <ul>
+        <li><strong>Send Reminder</strong> button, with session dropdown, confirmation, live result line and <strong>Retry failed</strong></li>
+        <li>batch window setting: 30 minutes, 2 hours, 6 hours or 10 hours</li>
+        <li>next session date and members not yet reminded</li>
+        <li>totals: memberships, active members, gifts</li>
+        <li>one table: member, plan, attendances used, status, link to the order</li>
+        <li>filter by plan and status</li>
+        <li>CSV export</li>
+      </ul>
+
+      <h3>Order box (main actions only)</h3>
+      <ul>
+        <li>summary: plan, member, attendances used and remaining, status</li>
+        <li>replies per session</li>
+        <li>resend welcome email</li>
+        <li>cancel membership (removes it)</li>
+      </ul>
+      <p>Anything beyond this, Komal asks us.</p>
+
+      <h3>Settings</h3>
+      <p>The session dates, time, venue, the Google Calendar link, and the reminder batch window.</p>
+    </section>
+
+    <section>
+      <div class="section-num">06 · Build flow</div>
+      <h2>The order of work.</h2>
+      <ol class="steps">
+        <li>Products and gift checkout fields.</li>
+        <li>Settings page: dates, time, venue, calendar link, batch window.</li>
+        <li>Membership creation on payment, with refund removal and duplicate handling.</li>
+        <li>Welcome and gift thank-you emails.</li>
+        <li>Send Reminder button: queue, batching, sent markers, live result line, retry.</li>
+        <li>One-tap confirm screen for replies.</li>
+        <li>Order box and dashboard with CSV export.</li>
+        <li>Test: annual, six-month, single, both gifts, refund, duplicate order, pressing Send Reminder twice, a failed send, a retry, a late buyer, no attendances left.</li>
+        <li>Deploy: import products, wire landing page links, hand over the guide.</li>
+      </ol>
+    </section>
+
+    <section>
+      <div class="section-num">07 · For Komal</div>
+      <h2>Two answers.</h2>
+      <ol class="questions">
+        <li>
+          <strong>The session dates, the time and the venue.</strong>
+          Her message says 6:30–8:00 PM and the landing page lists other times. Which is correct?
+        </li>
+        <li>
+          <strong>Gift thank-you email.</strong>
+          Any offer or wording she wants in it, or should it simply thank them and point to the website and
+          social links?
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <div class="section-num">08 · Out of scope</div>
+      <h2>What this will not do.</h2>
+      <ul>
+        <li>Individual event tickets (FooEvents)</li>
+        <li>Recurring payments</li>
+        <li>Groups and seat limits</li>
+        <li>Automatic monthly sending (Komal triggers it; the queue only spaces the send)</li>
+        <li>Member accounts, logins or a member page</li>
+        <li>Extra designed pages</li>
+        <li>A built-in calendar feed (replaced by a Google Calendar)</li>
+        <li>Make-up sessions, transfers or rollover of unused attendances</li>
+        <li>Marketing emails beyond the three above</li>
+        <li>Bulk actions and reporting beyond the dashboard</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-num">09 · Commercial reference</div>
+      <h2>Where this scope lands.</h2>
+
+      <table>
+        <thead>
+          <tr><th>Item</th><th class="num">Amount</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Landing page (agreed, built)</td><td class="num">₹4,000</td></tr>
+          <tr><td>Package system</td><td class="num">₹9,000</td></tr>
+          <tr><td>Calendar</td><td class="num">₹2,500 as quoted</td></tr>
+          <tr><td><strong>Total</strong></td><td class="num"><strong>₹15,500</strong></td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout alert">
+        <p>
+          The calendar line was quoted for a built-in feed. With a Google Calendar there is no feed to
+          build, so confirm whether that line still applies. Products are priced in CA$ and the commercials
+          are in ₹. They are separate.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-num">10 · Deliverables</div>
+      <h2>What gets handed over.</h2>
+      <ul>
+        <li><code>stillness-package-system.php</code> — the plugin</li>
+        <li><code>products.csv</code> — the five WooCommerce products</li>
+        <li><code>README.md</code> / <code>README.html</code> — deployment steps for us</li>
+        <li><code>guide.md</code> / <code>guide.html</code> — plain-English guide for Komal</li>
+        <li>Landing-page link map: which button goes to which add-to-cart link, and the Google Calendar link</li>
+      </ul>
+    </section>
+
+    <p class="endnote">Prepared by Solicate. Internal build plan.</p>
+
+  </main>
+</div>
+
+</body>
+</html>
