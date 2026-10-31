@@ -1,0 +1,440 @@
+<!--
+  ============================================================================
+  SINGLE EVENT — Detail + Booking Section (Elementor HTML widget)
+  ============================================================================
+  Live source for the shared event detail section used on single event pages.
+  Paste this whole file into an Elementor "HTML" widget (single event template).
+
+  Depends on the PH snippet "functions-snippets.php" (Code Snippets):
+    - [se_event_*] shortcodes      — event title, price, stock, attrs, add-to-cart
+    - [stillness_donation_tiers]   — renders every product in the "donations"
+                                     category as a .se-donate-tier price chip
+    - body class "has-donation"    — added when event carries attribute
+                                     Donation = Yes; shows the .se-donate-card
+
+  Donation card rules:
+    - Hidden by default (.se-donate-card), shown only under body.has-donation.
+    - Buttons are the donation tier products (C$5 … C$50, five tiers), imported from
+      work/workspace/stillness/donation-products.csv. Add/delete a tier in
+      WP admin → the chips update automatically. No product IDs in this file.
+  ============================================================================
+-->
+
+<section class="se-detail-section">
+  <div class="se-detail-grid">
+
+    <div class="se-content-col">
+      <div class="se-intro-block">
+        <h2 class="se-section-h2">A return to <em>your center</em>.</h2>
+        <blockquote class="se-pull-quote">[se_event_short_desc]</blockquote>
+      </div>
+      <div class="se-desc-block">[se_event_desc]</div>
+    </div>
+
+    <div class="se-booking-sidebar" id="booking-section">
+      <div class="se-booking-card">
+        <div class="se-card-top">
+          [se_event_stock]
+          <h3 class="se-card-title">[se_event_title]</h3>
+          <div class="se-card-price">[se_event_price]</div>
+        </div>
+        <div class="se-card-details">
+          <div class="se-card-detail">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+            <span>[se_event_attr name="Event Dates"]</span>
+          </div>
+          <div class="se-card-detail">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            <span>[se_event_attr name="Duration"]</span>
+          </div>
+          <div class="se-card-detail">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>[se_event_attr name="Sanctuary"]</span>
+          </div>
+        </div>
+        <div class="se-card-form" id="se-wc-form-inject">
+          [se_event_add_to_cart_form]
+        </div>
+        <p class="se-card-trust"> Please wear comfortable, loose-fitting clothing for the session and feel free to bring any personal items for extra comfort.</p>
+        <a href="#notify" class="se-card-waitlist-link">Join Waitlist Instead &rarr;</a>
+      </div>
+
+      <div class="se-donate-card">
+        <h4 class="se-donate-title">Support the experience</h4>
+        <p class="se-donate-note">Attending on a sponsored seat? Give what feels right.</p>
+        <div class="se-donate-form">[stillness_donation_tiers]</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap');
+
+.se-detail-section { background: #FFFFFF !important; }
+
+.se-detail-grid {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 80px 4rem !important;
+  display: grid !important;
+  grid-template-columns: 1fr 360px !important;
+  gap: 80px !important;
+  align-items: start !important;
+}
+
+.se-content-col { display: flex !important; flex-direction: column !important; gap: 52px !important; }
+.se-intro-block, .se-desc-block { display: flex !important; flex-direction: column !important; gap: 20px !important; }
+
+.se-section-h2 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: clamp(1.8rem, 3vw, 2.8rem) !important;
+  font-weight: 300 !important;
+  line-height: 1.15 !important;
+  color: #0E1B30 !important;
+  margin: 0 !important;
+}
+
+.se-section-h2 em { font-style: italic !important; color: #688F9D !important; }
+
+.se-pull-quote {
+  font-family: 'Cormorant Garamond', serif !important;
+  margin: 0 !important;
+  padding-left: 1.25rem !important;
+  border-left: 1.5px solid #688F9D !important;
+}
+
+.se-pull-quote p {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem) !important;
+  font-weight: 300 !important;
+  font-style: italic !important;
+  color: #0E1B30 !important;
+  line-height: 1.6 !important;
+  margin: 0 0 1rem !important;
+}
+
+.se-pull-quote p:last-child { margin-bottom: 0 !important; }
+
+.se-desc-block {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 15.5px !important;
+  line-height: 1.95 !important;
+  color: #3D4F57 !important;
+  padding-top: 16px !important;
+  border-top: 0.5px solid rgba(14,27,48,0.1) !important;
+}
+
+.se-desc-block p {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 15.5px !important;
+  line-height: 1.95 !important;
+  color: #3D4F57 !important;
+  margin: 0 0 1.2rem !important;
+}
+
+.se-desc-block p:last-child { margin-bottom: 0 !important; }
+
+.se-desc-block h1,
+.se-desc-block h2,
+.se-desc-block h3,
+.se-desc-block h4 {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-weight: 300 !important;
+  color: #0E1B30 !important;
+  margin-top: 1.8rem !important;
+  margin-bottom: 0.8rem !important;
+  line-height: 1.25 !important;
+}
+
+.se-desc-block h1 { font-size: clamp(1.8rem, 2.5vw, 2.4rem) !important; }
+.se-desc-block h2 { font-size: clamp(1.5rem, 2vw, 2rem) !important; }
+.se-desc-block h3 { font-size: clamp(1.2rem, 1.8vw, 1.6rem) !important; }
+.se-desc-block h4 { font-size: clamp(1rem, 1.5vw, 1.3rem) !important; }
+
+.se-desc-block ul,
+.se-desc-block ol {
+  margin-top: 0.5rem !important;
+  margin-bottom: 1.2rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.se-desc-block li {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 15.5px !important;
+  line-height: 1.8 !important;
+  color: #3D4F57 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.se-desc-block strong { font-weight: 500 !important; color: #0E1B30 !important; }
+.se-desc-block em { font-style: italic !important; }
+
+.se-desc-block a {
+  color: #688F9D !important;
+  text-decoration: underline !important;
+  transition: color 0.3s ease !important;
+}
+
+.se-desc-block a:hover { color: #1D3152 !important; }
+
+.se-booking-sidebar { position: sticky !important; top: 100px !important; }
+
+.se-booking-card {
+  background: #D9E8EB !important;
+  border: 0.5px solid rgba(14,27,48,0.12) !important;
+  border-radius: 3px !important;
+  padding: 32px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 24px !important;
+  box-shadow: 0 16px 40px rgba(14,27,48,0.08) !important;
+}
+
+.se-card-top { display: flex !important; flex-direction: column !important; gap: 8px !important; }
+
+.se-card-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 21px !important;
+  font-weight: 300 !important;
+  color: #0E1B30 !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.se-card-price {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  color: #1D3152 !important;
+}
+
+.se-card-price .amount { font-size: inherit !important; color: inherit !important; font-family: inherit !important; }
+
+.se-card-details {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  padding: 16px 0 !important;
+  border-top: 0.5px solid rgba(14,27,48,0.12) !important;
+  border-bottom: 0.5px solid rgba(14,27,48,0.12) !important;
+}
+
+.se-card-detail {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: 11.5px !important;
+  color: #3D4F57 !important;
+}
+
+.se-card-detail svg {
+  width: 14px !important;
+  height: 14px !important;
+  color: #688F9D !important;
+  flex-shrink: 0 !important;
+}
+
+.se-stock-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: 8px !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+  font-weight: 500 !important;
+}
+
+.se-stock-limited, .se-stock-avail { color: #688F9D !important; }
+.se-stock-sold-out { color: #A4B2BA !important; }
+
+.se-badge-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: currentColor !important;
+  animation: se-pulse 2s infinite !important;
+  display: inline-block !important;
+}
+
+@keyframes se-pulse {
+  0%,100% { opacity: 0.7; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+.se-card-form form.cart {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  margin: 0 !important;
+}
+
+.se-card-form .quantity input.qty { display: none !important; }
+.se-card-form form.cart .quantity::before { content: none !important; }
+
+.se-card-form button.single_add_to_cart_button {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.25em !important;
+  text-transform: uppercase !important;
+  color: #FFFFFF !important;
+  background: #0E1B30 !important;
+  border: none !important;
+  padding: 18px 24px !important;
+  border-radius: 2px !important;
+  cursor: pointer !important;
+  width: 100% !important;
+  transition: background 0.3s ease, transform 0.2s ease !important;
+}
+
+.se-card-form button.single_add_to_cart_button:hover {
+  background: #1D3152 !important;
+  transform: translateY(-2px) !important;
+}
+
+.se-card-trust {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 10px !important;
+  line-height: 1.6 !important;
+  color: #3D4F57 !important;
+  text-align: center !important;
+  font-style: italic !important;
+  margin: 0 !important;
+}
+
+.se-card-waitlist-link {
+  display: none;
+  text-align: center !important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: 10px !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: #0E1B30 !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  padding: 14px 20px !important;
+  border: 1px solid #688F9D !important;
+  border-radius: 2px !important;
+  transition: all 0.3s ease !important;
+  margin-top: 10px !important;
+}
+
+.se-card-waitlist-link:hover {
+  background: #688F9D !important;
+  color: #FFFFFF !important;
+}
+
+.se-booking-card:has(.se-stock-sold-out) .se-card-waitlist-link,
+.se-booking-card.is-sold-out .se-card-waitlist-link {
+  display: block !important;
+}
+
+/* Donate card — hidden by default, shown only for sponsored events (body.has-donation) */
+.se-donate-card {
+  display: none !important;
+  margin-top: 16px !important;
+  padding: 24px !important;
+  background: #FFFFFF !important;
+  border: 0.5px solid rgba(14,27,48,0.12) !important;
+  border-radius: 3px !important;
+  box-shadow: 0 12px 28px rgba(14,27,48,0.05) !important;
+}
+
+body.has-donation .se-donate-card {
+  display: block !important;
+}
+
+.se-donate-title {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+  color: #0E1B30 !important;
+  margin: 0 0 6px !important;
+  line-height: 1.2 !important;
+}
+
+.se-donate-note {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 11px !important;
+  line-height: 1.6 !important;
+  color: #3D4F57 !important;
+  margin: 0 0 14px !important;
+}
+
+/* Donation tiers — compact price chips (3×3 grid), only C$ amounts shown */
+.se-donate-form {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 8px !important;
+}
+
+.se-donate-tier {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: 'Jost', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: #0E1B30 !important;
+  background: #D9E8EB !important;
+  border: 0.5px solid rgba(14,27,48,0.12) !important;
+  border-radius: 2px !important;
+  padding: 8px 12px !important;
+  text-decoration: none !important;
+  transition: background 0.3s ease, color 0.3s ease !important;
+}
+
+.se-donate-tier span { display: none !important; }
+
+.se-donate-tier strong {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: inherit !important;
+}
+
+.se-donate-tier:hover {
+  background: #688F9D !important;
+  color: #FFFFFF !important;
+}
+
+@media (max-width: 1024px) {
+  .se-detail-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+    padding: 60px 2.5rem !important;
+  }
+
+  .se-booking-sidebar { position: static !important; }
+}
+
+@media (max-width: 768px) {
+  .se-detail-grid { padding: 40px 1.5rem !important; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var formInject = document.getElementById('se-wc-form-inject');
+  var nativeForm = document.querySelector('.se-booking-card form.cart');
+  if (formInject && nativeForm && !formInject.contains(nativeForm)) {
+    formInject.classList.add('se-card-form');
+    formInject.appendChild(nativeForm);
+  }
+
+  var stockEl = document.querySelector('.se-stock-sold-out');
+  var waitlistLink = document.querySelector('.se-card-waitlist-link');
+  if (stockEl) {
+    var card = document.querySelector('.se-booking-card');
+    if (card) {
+      card.classList.add('is-sold-out');
+    }
+    if (waitlistLink) {
+      waitlistLink.style.display = 'block';
+    }
+  }
+});
+</script>

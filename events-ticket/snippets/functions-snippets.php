@@ -1,30 +1,41 @@
-<?php
 add_shortcode('stillness_featured_event', 'stillness_render_featured_event');
 add_shortcode('stillness_event_grid', 'stillness_render_event_grid');
 
 function stillness_get_events_query($limit = 1, $in_stock_only = false)
 {
+  $today = date('Ymd');
+
+  // Sort by the event_date meta field (Ymd format) ascending — soonest first.
+  // Only show events whose date is today or in the future (auto-hide past events).
   $args = array(
-    'post_type' => 'product',
-    'post_status' => 'publish',
+    'post_type'      => 'product',
+    'post_status'    => 'publish',
     'posts_per_page' => absint($limit),
-    'orderby' => 'date',
-    'order' => 'DESC',
-    'tax_query' => array(
+    'orderby'        => 'meta_value',
+    'meta_key'       => 'event_date',
+    'order'          => 'ASC',
+    'tax_query'      => array(
       array(
         'taxonomy' => 'product_cat',
-        'field' => 'slug',
-        'terms' => 'events',
+        'field'    => 'slug',
+        'terms'    => 'events',
+      ),
+    ),
+    'meta_query'     => array(
+      'relation' => 'AND',
+      array(
+        'key'     => 'event_date',
+        'value'   => $today,
+        'compare' => '>=',
+        'type'    => 'NUMERIC',
       ),
     ),
   );
 
   if ($in_stock_only) {
-    $args['meta_query'] = array(
-      array(
-        'key' => '_stock_status',
-        'value' => 'instock',
-      ),
+    $args['meta_query'][] = array(
+      'key'   => '_stock_status',
+      'value' => 'instock',
     );
   }
 
@@ -56,6 +67,62 @@ function stillness_get_event_attribute($product, $label)
   }
 
   return '';
+}
+
+// =========================================================
+// EVENT DATE META BOX
+// Adds a date picker to the Product edit screen for the
+// event_date meta key (Ymd format). This powers the sorting
+// and auto-hide logic in stillness_get_events_query().
+// Separate from the display-only "Event Dates" WC attribute.
+// =========================================================
+add_action('add_meta_boxes', 'stillness_register_event_date_meta_box');
+
+function stillness_register_event_date_meta_box()
+{
+  add_meta_box(
+    'stillness_event_date',
+    'Event Date (for sorting)',
+    'stillness_render_event_date_meta_box',
+    'product',
+    'side',
+    'default'
+  );
+}
+
+function stillness_render_event_date_meta_box($post)
+{
+  // Stored as Ymd (20260825) — convert back to YYYY-MM-DD for the date input
+  $raw = get_post_meta($post->ID, 'event_date', true);
+  $display = ($raw && strlen($raw) === 8)
+    ? substr($raw, 0, 4) . '-' . substr($raw, 4, 2) . '-' . substr($raw, 6, 2)
+    : '';
+
+  wp_nonce_field('stillness_save_event_date', 'stillness_event_date_nonce');
+  echo '<p style="margin-bottom:6px;font-size:12px;">Pick the real event date. Used for sorting (soonest first) and auto-hiding past events on the site.</p>';
+  echo '<input type="date" id="event_date" name="event_date" value="' . esc_attr($display) . '" style="width:100%">';
+  echo '<p style="margin-top:6px;color:#888;font-size:11px;">The display "Event Dates" attribute on the product is separate — keep filling that in as normal for the card text.</p>';
+}
+
+add_action('save_post_product', 'stillness_save_event_date_meta');
+
+function stillness_save_event_date_meta($post_id)
+{
+  if (!isset($_POST['stillness_event_date_nonce'])) return;
+  if (!wp_verify_nonce($_POST['stillness_event_date_nonce'], 'stillness_save_event_date')) return;
+  if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+  if (!current_user_can('edit_post', $post_id)) return;
+
+  if (isset($_POST['event_date']) && !empty($_POST['event_date'])) {
+    // Input is YYYY-MM-DD from the date picker; convert to Ymd for sorting
+    $raw = sanitize_text_field($_POST['event_date']);
+    $ts  = strtotime($raw);
+    if ($ts !== false) {
+      update_post_meta($post_id, 'event_date', date('Ymd', $ts));
+    }
+  } else {
+    delete_post_meta($post_id, 'event_date');
+  }
 }
 
 function stillness_get_event_meta_items($product)
@@ -1307,6 +1374,8 @@ add_shortcode('stillness_past_events_counter', function () {
 
 // =========================================================
 // Ensure category class is added to body on single product pages
+// Donation gate: adds has-donation when the event product
+// carries the Donation attribute = Yes (sponsored events only)
 // =========================================================
 add_filter('body_class', 'stillness_add_category_body_class');
 function stillness_add_category_body_class($classes)
@@ -1319,6 +1388,12 @@ function stillness_add_category_body_class($classes)
         foreach ($terms as $term) {
           $classes[] = 'product_cat-' . $term->slug;
         }
+      }
+
+      // Donation gate: show donate card only when Donation = Yes on the event product
+      $donation_product = wc_get_product($post->ID);
+      if ($donation_product && 'yes' === strtolower(stillness_get_event_attribute($donation_product, 'Donation'))) {
+        $classes[] = 'has-donation';
       }
     }
   }
@@ -1342,7 +1417,7 @@ add_shortcode('stillness_event_faq', function() {
     for ($i = 1; $i <= 30; $i++) {
         $q = stillness_get_event_attribute($product, 'Q' . $i);
         $a = stillness_get_event_attribute($product, 'A' . $i);
-        
+
         if (!empty(trim($q)) && !empty(trim($a))) {
             $faqs[] = [
                 'q' => trim($q),
@@ -1363,7 +1438,7 @@ add_shortcode('stillness_event_faq', function() {
         <div class="stillness-event-faq__header">
           <h2>Frequently Asked <em>Questions</em></h2>
         </div>
-        
+
         <div class="stillness-event-faq__list">
           <?php foreach ($faqs as $faq): ?>
           <div class="stillness-event-faq__item">
@@ -1507,4 +1582,48 @@ add_shortcode('stillness_event_faq', function() {
     </style>
     <?php
     return ob_get_clean();
+});
+
+// =========================================================
+// PHASE 5: Donation Tiers (sponsored events, 07 Oct 2026)
+// Renders every product in the "donations" category as a
+// `.se-donate-tier` button (direct add-to-cart link, price
+// always visible). Place inside `.se-donate-form` within the
+// gated `.se-donate-card`. Add/delete a tier product in WP
+// admin → the card updates itself. No product IDs in markup.
+// =========================================================
+add_shortcode('stillness_donation_tiers', function () {
+  $query = new WP_Query(array(
+    'post_type'      => 'product',
+    'post_status'    => 'publish',
+    'posts_per_page' => -1,
+    'orderby'        => 'meta_value_num',
+    'meta_key'       => '_price',
+    'order'          => 'ASC',
+    'tax_query'      => array(array(
+      'taxonomy' => 'product_cat',
+      'field'    => 'slug',
+      'terms'    => 'donations',
+    )),
+  ));
+
+  if (!$query->have_posts()) {
+    return '';
+  }
+
+  ob_start();
+  while ($query->have_posts()) {
+    $query->the_post();
+    $product = wc_get_product(get_the_ID());
+    if (!$product) {
+      continue;
+    }
+    printf(
+      '<a class="se-donate-tier" href="%s"><span>Donate</span><strong>C$%s</strong></a>',
+      esc_url(add_query_arg('quantity', 1, $product->add_to_cart_url())),
+      esc_html(number_format((float) $product->get_price(), 0))
+    );
+  }
+  wp_reset_postdata();
+  return ob_get_clean();
 });

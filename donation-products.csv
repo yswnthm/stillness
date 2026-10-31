@@ -1,0 +1,6 @@
+Type,SKU,Name,Published,Virtual,Visibility in catalog,In stock?,Tax status,Regular price,Categories,Description
+simple,donation-5,Stillness Donation — C$5,1,1,hidden,1,none,5,donations,Thank you for supporting Stillness.
+simple,donation-10,Stillness Donation — C$10,1,1,hidden,1,none,10,donations,Thank you for supporting Stillness.
+simple,donation-20,Stillness Donation — C$20,1,1,hidden,1,none,20,donations,Thank you for supporting Stillness.
+simple,donation-25,Stillness Donation — C$25,1,1,hidden,1,none,25,donations,Thank you for supporting Stillness.
+simple,donation-50,Stillness Donation — C$50,1,1,hidden,1,none,50,donations,Thank you for supporting Stillness.

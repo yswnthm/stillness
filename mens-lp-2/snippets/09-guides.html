@@ -1,0 +1,252 @@
+<!-- Elementor HTML Widget: Men's Series LP — Section 09: Your Guides -->
+<section class="ms-guides-section">
+  <div class="ms-wrap">
+    <div class="ms-guides-header">
+      <div class="ms-eyebrow">Your guides</div>
+      <h2 class="ms-h2">Led by men who practise <em class="ms-accent">what they hold space for.</em></h2>
+    </div>
+
+    <div class="ms-guides-grid">
+      <!-- Guide 1: Sunny -->
+      <div class="ms-guide-card">
+        <div class="ms-visual-frame ms-guide-photo">
+          <svg class="ms-visual-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="12" cy="8" r="5"/>
+            <path d="M20 21a8 8 0 10-16 0"/>
+          </svg>
+          <span class="ms-visual-caption">Sunny</span>
+        </div>
+        <div class="ms-guide-info">
+          <h3 class="ms-guide-name">Sunny</h3>
+          <div class="ms-guide-role">MEN'S MENTAL HEALTH · [CREDENTIAL]</div>
+          <p class="ms-guide-bio">[One sentence on why Sunny does this work — his own story.] Guides conversations that support men's emotional resilience and honest connection. [X years / training].</p>
+        </div>
+      </div>
+
+      <!-- Guide 2: Navin -->
+      <div class="ms-guide-card">
+        <div class="ms-visual-frame ms-guide-photo">
+          <svg class="ms-visual-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="12" cy="8" r="5"/>
+            <path d="M20 21a8 8 0 10-16 0"/>
+          </svg>
+          <span class="ms-visual-caption">Navin</span>
+        </div>
+        <div class="ms-guide-info">
+          <h3 class="ms-guide-name">Navin</h3>
+          <div class="ms-guide-role">SOUND &amp; BREATHWORK · [CREDENTIAL]</div>
+          <p class="ms-guide-bio">[One sentence on Navin's path into this work.] Facilitates restorative experiences for nervous-system regulation and self-inquiry. [X years / training].</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ==========================================================================
+   Section 09: Your Guides Scoped CSS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Jost:wght@300;400;500&display=swap');
+
+
+/* Break out of Elementor boxed containers & theme gutters to 100% viewport width */
+.elementor-section:has(.ms-guides-section),
+.e-con:has(.ms-guides-section),
+.e-con-boxed:has(.ms-guides-section),
+.e-con-full:has(.ms-guides-section),
+.elementor-container:has(.ms-guides-section),
+.elementor-column:has(.ms-guides-section),
+.elementor-widget-wrap:has(.ms-guides-section),
+.elementor-widget:has(.ms-guides-section),
+.elementor-widget-container:has(.ms-guides-section),
+.elementor-widget-html:has(.ms-guides-section) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.elementor-section:has(.ms-guides-section) > .elementor-container,
+.e-con:has(.ms-guides-section) > .e-con-inner,
+.elementor-widget:has(.ms-guides-section) > .elementor-widget-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.ms-guides-section {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  background: #FFFFFF;
+  padding: clamp(44px, 5vw, 64px) 0;
+  
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0E1B30;
+  box-sizing: border-box;
+}
+
+.ms-guides-section * {
+  box-sizing: border-box;
+}
+
+.ms-guides-section .ms-wrap {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+.ms-guides-header {
+  margin-bottom: clamp(24px, 3.5vw, 36px);
+}
+
+.ms-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C4935A;
+  margin-bottom: 0.5rem;
+}
+
+.ms-eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: #C4935A;
+}
+
+.ms-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #0E1B30 !important;
+  margin: 0;
+  font-weight: 300;
+}
+
+.ms-accent {
+  font-style: italic;
+  color: #688F9D;
+}
+
+.ms-guides-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 56px);
+}
+
+.ms-guide-card {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.ms-visual-frame {
+  background: linear-gradient(135deg, rgba(14, 27, 48, 0.02) 0%, rgba(196, 147, 90, 0.06) 100%);
+  border: 1px solid rgba(196, 187, 180, 0.45);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 16px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.ms-visual-frame::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px dashed rgba(196, 187, 180, 0.5);
+  pointer-events: none;
+}
+
+.ms-guide-photo {
+  aspect-ratio: 1;
+  width: 100%;
+  box-shadow: 0 10px 24px rgba(14, 27, 48, 0.06);
+}
+
+.ms-visual-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 8px;
+  color: #688F9D;
+  opacity: 0.85;
+}
+
+.ms-visual-caption {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C4935A;
+}
+
+.ms-guide-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ms-guide-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #0E1B30 !important;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.ms-guide-role {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #C4935A;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.ms-guide-bio {
+  font-size: 0.98rem;
+  color: #3D4F57 !important;
+  line-height: 1.75;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .ms-guides-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ms-guide-card {
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
+  }
+}
+</style>

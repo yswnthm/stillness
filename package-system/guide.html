@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stillness Packages · A guide for Komal</title>
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --stone: #0E1B30;
+    --midnight: #1D3152;
+    --seafoam: #688F9D;
+    --breeze: #D9E8EB;
+    --wave: #A4B2BA;
+    --sand: #C4BBB4;
+    --cream: #F7F0EC;
+    --ink: #25313A;
+    --muted: #68747B;
+    --line: rgba(14, 27, 48, 0.12);
+    --gold: #C5A880;
+    --alert: #A8553A;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: #EEF2F3;
+    color: var(--ink);
+    font-family: 'Jost', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: min(920px, calc(100% - 32px));
+    margin: 36px auto;
+    background: #FFFFFF;
+    box-shadow: 0 24px 70px rgba(14, 27, 48, 0.14);
+  }
+
+  .cover {
+    background: var(--stone);
+    color: var(--cream);
+    padding: 76px 72px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::after {
+    content: "";
+    position: absolute;
+    right: -100px;
+    bottom: -120px;
+    width: 360px;
+    height: 360px;
+    border: 1px solid rgba(217, 232, 235, 0.14);
+    border-radius: 50%;
+  }
+
+  .eyebrow {
+    margin: 0 0 16px;
+    color: var(--seafoam);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  h1 {
+    max-width: 680px;
+    font-size: 52px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+  }
+
+  .cover-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    color: var(--seafoam);
+    margin-top: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .cover-copy {
+    max-width: 620px;
+    margin: 22px 0 0;
+    color: var(--wave);
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(217, 232, 235, 0.16);
+    margin-top: 40px;
+  }
+
+  .meta div {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 16px 18px;
+  }
+
+  .meta span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--wave);
+    margin-bottom: 4px;
+  }
+
+  .meta strong {
+    font-weight: 500;
+    color: #FFFFFF;
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 56px 72px 72px;
+  }
+
+  section {
+    margin: 0 0 42px;
+    page-break-inside: avoid;
+  }
+
+  .section-num {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--seafoam);
+    margin-bottom: 10px;
+  }
+
+  .section-num::before {
+    content: "";
+    width: 22px;
+    height: 1px;
+    background: var(--seafoam);
+  }
+
+  h2 {
+    font-size: 32px;
+    color: var(--stone);
+    margin-bottom: 14px;
+  }
+
+  h3 {
+    font-size: 21px;
+    color: var(--midnight);
+    margin: 26px 0 8px;
+  }
+
+  p {
+    margin: 0 0 14px;
+    color: var(--ink);
+  }
+
+  .lede {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--midnight);
+    margin-bottom: 20px;
+  }
+
+  strong { font-weight: 600; color: var(--stone); }
+  em { color: var(--seafoam); font-style: italic; }
+
+  ul, ol { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+
+  a { color: var(--seafoam); }
+
+  .callout {
+    border-left: 3px solid var(--seafoam);
+    background: #F2F7F8;
+    padding: 18px 22px;
+    margin: 20px 0;
+    page-break-inside: avoid;
+  }
+
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout.alert {
+    border-left-color: var(--alert);
+    background: #FBF3F0;
+  }
+
+  .callout strong { color: var(--stone); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 22px;
+    font-size: 13.5px;
+    page-break-inside: avoid;
+  }
+
+  thead th {
+    text-align: left;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--stone);
+  }
+
+  tbody td {
+    padding: 11px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  td.num, th.num { text-align: right; white-space: nowrap; }
+
+  code {
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    font-size: 12.5px;
+    background: #F2F5F6;
+    padding: 2px 6px;
+    color: var(--midnight);
+  }
+
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+  }
+
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 46px;
+    margin-bottom: 14px;
+    page-break-inside: avoid;
+  }
+
+  .steps li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    color: var(--gold);
+  }
+
+  .questions {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+    counter-reset: q;
+  }
+
+  .questions li {
+    counter-increment: q;
+    position: relative;
+    padding: 16px 18px 16px 54px;
+    border: 1px solid var(--line);
+    margin-bottom: 10px;
+    background: #FCFDFD;
+    page-break-inside: avoid;
+  }
+
+  .questions li::before {
+    content: counter(q);
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--stone);
+    color: #fff;
+    font-size: 11px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .questions strong { display: block; margin-bottom: 3px; }
+
+  .endnote {
+    font-size: 12.5px;
+    color: var(--muted);
+    font-style: italic;
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+    margin-top: 36px;
+  }
+
+  @page {
+    margin: 16mm;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { width: 100%; margin: 0; box-shadow: none; }
+    .cover { padding: 48px 40px 40px; }
+    h1 { font-size: 42px; }
+    .content { padding: 36px 40px 48px; }
+    section, .callout, table, .questions li, .steps li { page-break-inside: avoid; }
+    h2, h3 { page-break-after: avoid; }
+  }
+
+  @media (max-width: 760px) {
+    .cover { padding: 48px 28px 40px; }
+    h1 { font-size: 38px; }
+    .content { padding: 36px 28px 48px; }
+    .meta { grid-template-columns: 1fr; }
+    h2 { font-size: 27px; }
+  }
+
+
+  .content > p:first-of-type {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--midnight);
+    margin-bottom: 20px;
+  }
+  .table-wrap { width: 100%; overflow-x: auto; }
+  .content table { min-width: 520px; }
+  .content h2 { margin-top: 42px; }
+  .content h2:first-of-type { margin-top: 0; }
+  .content h3 { margin-top: 28px; }
+  .content blockquote {
+    margin: 20px 0;
+    padding: 18px 22px;
+    border-left: 3px solid var(--gold);
+    background: #FBF8F3;
+    color: var(--midnight);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .content blockquote p:last-child { margin-bottom: 0; }
+  .content hr { border: none; border-top: 1px solid var(--line); margin: 32px 0; }
+  .content td code, .content th code { white-space: nowrap; }
+  @media print {
+    .table-wrap { overflow: visible; }
+    .content table { min-width: 0; }
+    a { color: inherit; text-decoration: none; }
+  }
+
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="cover">
+    <p class="eyebrow">Stillness Co. · Package system</p>
+    <h1>Stillness Packages</h1>
+    <p class="cover-subtitle">A guide for Komal</p>
+    <p class="cover-copy">The monthly routine, the reminder, what members see, and what to do when something looks wrong.</p>
+    <div class="meta">
+      <div><span>Prepared for</span><strong>Komal</strong></div>
+      <div><span>Prepared by</span><strong>Solicate</strong></div>
+      <div><span>Version</span><strong>1.1 · 24 October 2026</strong></div>
+    </div>
+  </header>
+  <div class="content">
+<p>This is the day-to-day guide for the men's series. It covers everything you need to do, from the first setup to the monthly routine.</p>
+<blockquote>
+<p><strong>Your three jobs:</strong> keep the dates current, send the reminder before each evening, and mark the evening used afterwards. The plugin does the rest.</p>
+</blockquote>
+<h2>Sign in</h2>
+<ol>
+<li>Go to <code>https://wearestillness.com/wp-admin</code>.</li>
+<li>Sign in with your WordPress account.</li>
+<li>Open <strong>WooCommerce → Stillness Packages</strong>.</li>
+</ol>
+<p>You will land on <strong>Members</strong>. <strong>Settings</strong> is the tab beside it.</p>
+<p>If you cannot see <strong>Stillness Packages</strong>, ask Solicate to add access to your account.</p>
+<h2>Set up the dates once</h2>
+<p>Do this before the first evening.</p>
+<ol>
+<li>Open <strong>Stillness Packages → Settings</strong>.</li>
+<li>Check the timezone shown above the table. All dates and times use it.</li>
+<li>For each confirmed evening, add the date, start time, end time and venue.</li>
+<li>Leave an evening blank until it is confirmed. A blank date is safer than a guessed one.</li>
+<li>Add the Google Calendar link if you have one. It appears in the welcome email only.</li>
+<li>Leave the reminder window at 30 minutes unless Solicate tells you otherwise.</li>
+<li>Press <strong>Save settings</strong>.</li>
+</ol>
+<p>You can change a date later without losing reminder history.</p>
+<h2>The monthly rhythm</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>When</th>
+<th>What you do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Two weeks before</td>
+<td>Confirm the date, time and venue in Settings.</td>
+</tr>
+<tr>
+<td>One week before</td>
+<td>Send the reminder.</td>
+</tr>
+<tr>
+<td>The day after sending</td>
+<td>Check for failed emails and retry if needed.</td>
+</tr>
+<tr>
+<td>After the evening</td>
+<td>Mark one evening used for each member who came.</td>
+</tr>
+</tbody>
+</table></div>
+<p>That is the whole month.</p>
+<h2>Send the reminder</h2>
+<ol>
+<li>Open <strong>Stillness Packages → Members</strong>.</li>
+<li>Check the <strong>Next evening</strong> card. It should show the right date and time.</li>
+<li>If it is wrong, fix it in <strong>Settings</strong> first.</li>
+<li>In the <strong>Send reminder</strong> card, check how many members are waiting.</li>
+<li>Press <strong>Send reminder</strong> and confirm.</li>
+<li>The card shows progress: sent, failed and skipped.</li>
+<li>You can close the page. The emails continue in the background.</li>
+<li>Come back later to check the final count.</li>
+</ol>
+<p>The emails go out in small groups. With forty members, the full send takes about half an hour. That is normal.</p>
+<p>If some emails fail, wait until the send stops, then press <strong>Retry failed emails</strong>. It retries only the failed ones.</p>
+<h3>Who gets the reminder</h3>
+<p>A member gets the reminder when:</p>
+<ul>
+<li>their membership is active,</li>
+<li>they still have evenings left,</li>
+<li>they have not already been reminded for that date.</li>
+</ul>
+<p>The plugin does not read replies. The count is whatever you have marked in <strong>Members</strong>.</p>
+<h3>If the reminder card says something else</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Message</th>
+<th>What it means</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No upcoming evening</td>
+<td>There is no dated evening ahead.</td>
+<td>Add the next date in Settings.</td>
+</tr>
+<tr>
+<td>Everyone active has already been reminded</td>
+<td>This evening's list is done.</td>
+<td>Nothing.</td>
+</tr>
+<tr>
+<td>Add a date to that evening</td>
+<td>The next evening has no date.</td>
+<td>Add the date in Settings.</td>
+</tr>
+<tr>
+<td>A reminder batch is already running</td>
+<td>Emails are still going out.</td>
+<td>Wait. If it has been quiet for ten minutes, it will stop and you can start again.</td>
+</tr>
+<tr>
+<td>That evening has already passed</td>
+<td>The date is in the past.</td>
+<td>Add the next date.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>After the evening: mark who came</h2>
+<p>Do this the day after the evening, or at the start of the next month.</p>
+<ol>
+<li>Open <strong>Stillness Packages → Members</strong>.</li>
+<li>Find the member. Use the search box if needed.</li>
+<li>Look at the <strong>Evenings</strong> column: used, left and status.</li>
+<li>In the <strong>Actions</strong> column, press <strong>Mark used</strong>.</li>
+<li>The count goes up by one.</li>
+</ol>
+<p>Repeat for each member who came.</p>
+<p>If you make a mistake, press <strong>Reset</strong> in the same row and mark the correct number again. Reset asks you to confirm.</p>
+<p>When a member has used every evening, their status becomes <strong>Completed</strong>. They will not receive more reminders.</p>
+<p>If a member could not come, do not mark them used. Their evening stays in the package.</p>
+<p>You can also mark usage from the order screen. Open the order, find the <strong>Stillness package</strong> box, and press <strong>Mark one evening used</strong>. The members table is faster for the monthly routine.</p>
+<h2>What members receive</h2>
+<p><strong>Welcome.</strong> Sent when the membership is created. It includes the package, the dates, how the evenings work, and a reply-to that reaches a person.</p>
+<p><strong>Reminder.</strong> Sent before each evening. It includes the date, time and venue, and one line: if you cannot make it, reply to this email.</p>
+<p>Members do not need an account or a password. They reply to the email if something changes.</p>
+<h2>Gifts</h2>
+<p>The gift products ask for the recipient's name and email at checkout.</p>
+<ul>
+<li>The recipient gets the welcome email with the dates.</li>
+<li>The buyer gets a gift thank-you and the normal receipt.</li>
+<li>If the recipient email was missing, the welcome goes to the buyer and an order note explains it.</li>
+</ul>
+<p>If the recipient details are wrong, ask Solicate to correct the order before the first reminder.</p>
+<h2>If something changes</h2>
+<h3>A member cannot come</h3>
+<p>Reply to their email. Leave their usage count alone. The evening stays in their package.</p>
+<h3>A member did not get the welcome</h3>
+<ol>
+<li>Check their email address in the order.</li>
+<li>Open the order.</li>
+<li>In the <strong>Stillness package</strong> box, press <strong>Resend welcome email</strong>.</li>
+</ol>
+<p>The box also shows the error if the last send failed.</p>
+<h3>A paid order has no membership</h3>
+<ol>
+<li>Open the order.</li>
+<li>In the <strong>Stillness package</strong> box, press <strong>Create membership</strong>.</li>
+<li>The membership is created and the welcome email is sent.</li>
+</ol>
+<h3>You need to cancel a membership</h3>
+<ol>
+<li>Open the order.</li>
+<li>In the <strong>Stillness package</strong> box, press <strong>Cancel membership</strong>.</li>
+<li>Confirm.</li>
+</ol>
+<p>This stops reminders and marks the membership cancelled. It does not refund the order. Refund separately in WooCommerce if needed.</p>
+<p>If you cancel or fully refund the order in WooCommerce, the membership cancels automatically.</p>
+<h2>The members table</h2>
+<p>The top of <strong>Members</strong> shows:</p>
+<ul>
+<li><strong>Memberships</strong> — all memberships.</li>
+<li><strong>Active</strong> — members with evenings left and a dated evening ahead.</li>
+<li><strong>Gifts</strong> — gift memberships.</li>
+<li><strong>Next evening</strong> — the date the reminder card will use.</li>
+</ul>
+<p>The table shows 25 members per page. You can filter by package or status, or search by name, email or order number. The <strong>Actions</strong> column has <strong>Mark used</strong> and <strong>Reset</strong>.</p>
+<h3>Statuses</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active</td>
+<td>Paid, created, evenings left, and a dated evening ahead.</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>Every evening used.</td>
+</tr>
+<tr>
+<td>Expired</td>
+<td>Evenings left, but every date is in the past.</td>
+</tr>
+<tr>
+<td>Cancelled</td>
+<td>Cancelled by hand, or the order was cancelled or refunded.</td>
+</tr>
+<tr>
+<td>Not paid</td>
+<td>The order is not processing or completed.</td>
+</tr>
+<tr>
+<td>Incomplete</td>
+<td>Paid, but the membership was not created. Use <strong>Create membership</strong> in the order.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Export the member list</h2>
+<ol>
+<li>Open <strong>Stillness Packages → Members</strong>.</li>
+<li>Press <strong>Export members</strong>.</li>
+<li>Open the CSV in Excel, Numbers or Google Sheets.</li>
+</ol>
+<p>The export is the full list, not the filtered view. It includes member, package, gift flag, usage, status, buyer, order number, order date and join date.</p>
+<h2>If something looks wrong</h2>
+<p><strong>A member says they did not get the reminder.</strong>
+Check the email address in the order. Open the order and look for an error in the <strong>Stillness package</strong> box. Ask them to check spam. If the address is wrong, ask Solicate to correct it.</p>
+<p><strong>A member got a reminder after using every evening.</strong>
+Open <strong>Members</strong> and check their count. If it is below the total, mark the missing evenings. If it is wrong, reset and mark the correct number.</p>
+<p><strong>The count looks wrong.</strong>
+Open the order and check the order notes. Every mark and reset is recorded with the old and new count. Reset to zero and mark the correct number from <strong>Members</strong>.</p>
+<p><strong>The members table does not show someone.</strong>
+Clear the search and status filters. If the order is paid and they are still missing, open the order and check the <strong>Stillness package</strong> box.</p>
+<p><strong>The reminder is stuck.</strong>
+Wait ten minutes. The batch will stop itself. Then start again or retry the failed emails. If it keeps happening, ask Solicate to check the site.</p>
+<p><strong>The CSV looks wrong in Excel.</strong>
+Save the file, then open it from Excel instead of double-clicking it in the browser.</p>
+<h2>What to tell members</h2>
+<blockquote>
+<p>Before each evening you will get a short reminder with the date, time and venue. There is nothing you need to do. If you cannot make it, reply to the email and we will help.</p>
+</blockquote>
+<h2>When to ask Solicate</h2>
+<p>Ask Solicate when:</p>
+<ul>
+<li>the plugin screen will not open or shows an error,</li>
+<li>a paid order will not create a membership,</li>
+<li>gift recipient details need correcting,</li>
+<li>you need a date beyond the twelve rows,</li>
+<li>the email wording needs to change,</li>
+<li>the export needs a different shape,</li>
+<li>the reminder is still stuck after ten minutes,</li>
+<li>anything about payment, refunds or order status looks wrong.</li>
+</ul>
+<p>For the technical description, see <code>README.html</code>. For landing-page links and open copy decisions, see <code>link-map.html</code>.</p>
+  </div>
+</main>
+</body>
+</html>

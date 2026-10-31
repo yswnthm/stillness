@@ -1,0 +1,224 @@
+<!-- Elementor HTML Block 4: Frequently Asked Questions (.dq-faq) -->
+<section class="dq-faq">
+  <div class="dq-container">
+    <span class="dq-kicker">Questions &amp; Clarity</span>
+    <h2>Frequently asked <em>questions.</em></h2>
+    
+    <div class="dq-faq__list">
+      <div class="dq-faq-item">
+        <button class="dq-faq-item__trigger">
+          <span>How long does the diagnostic take?</span>
+          <span class="dq-faq-item__icon">+</span>
+        </button>
+        <div class="dq-faq-item__content">
+          <p>It takes about four minutes. Fifteen questions designed to capture your immediate body response rather than an overthought answer.</p>
+        </div>
+      </div>
+
+      <div class="dq-faq-item">
+        <button class="dq-faq-item__trigger">
+          <span>Is there any cost or sign-up required to see my type?</span>
+          <span class="dq-faq-item__icon">+</span>
+        </button>
+        <div class="dq-faq-item__content">
+          <p>Taking the diagnostic is 100% free and requires no account. Enter your name and email after Q15 to reveal your pattern and practice sequence immediately.</p>
+        </div>
+      </div>
+
+      <div class="dq-faq-item">
+        <button class="dq-faq-item__trigger">
+          <span>What is included in the full prescription?</span>
+          <span class="dq-faq-item__icon">+</span>
+        </button>
+        <div class="dq-faq-item__content">
+          <p>The ₹1,999 full prescription gives you downloadable audio practices, a workbook, and structured somatic protocols specifically created for your nervous system profile.</p>
+        </div>
+      </div>
+
+      <div class="dq-faq-item">
+        <button class="dq-faq-item__trigger">
+          <span>How does the tie-breaker scoring work?</span>
+          <span class="dq-faq-item__icon">+</span>
+        </button>
+        <div class="dq-faq-item__content">
+          <p>Scoring tracks the frequency of your answers. If two or more types tie for the lead, Question 15 (your reported intention of how you want to feel) breaks the tie with precision.</p>
+        </div>
+      </div>
+
+      <div class="dq-faq-item">
+        <button class="dq-faq-item__trigger">
+          <span>Can my regulation type change over time?</span>
+          <span class="dq-faq-item__icon">+</span>
+        </button>
+        <div class="dq-faq-item__content">
+          <p>Yes. Your nervous system is dynamic and responds to life conditions, environment, and practice. You can return and retake the diagnostic whenever your pattern shifts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section 4: FAQ Block Scoped CSS */
+.dq-faq {
+  background: #FFFFFF;
+  padding: clamp(3rem, 5vw, 4.5rem) 1.5rem;
+  color: #0E1B30;
+  border-top: 1px solid rgba(14, 27, 48, 0.08);
+}
+
+.dq-faq .dq-container {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.dq-faq .dq-kicker {
+  display: block;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  color: #688F9D;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.dq-faq h2 {
+  margin: 0 0 2rem;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: #0E1B30;
+}
+
+.dq-faq h2 em {
+  color: #688F9D;
+  font-style: italic;
+}
+
+.dq-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Card */
+.dq-faq-item {
+  background: #FFFFFF;
+  border-radius: 14px;
+  border: 1px solid rgba(14, 27, 48, 0.12);
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 20px rgba(14, 27, 48, 0.02);
+}
+
+/* Card hover — highlight the full card, not just the button */
+.dq-faq-item:hover {
+  border-color: rgba(44, 122, 123, 0.4);
+  background: rgba(44, 122, 123, 0.03);
+  box-shadow: 0 10px 30px rgba(44, 122, 123, 0.08);
+}
+
+/* Trigger button — full reset to prevent theme from adding pill shape */
+.dq-faq-item__trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1.5rem;
+
+  /* Hard reset — theme button styles must not bleed in */
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+
+  text-align: left;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #0E1B30;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* Only change text color on trigger hover — no shape change */
+.dq-faq-item__trigger:hover,
+.dq-faq-item__trigger:focus {
+  background: transparent;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #2C7A7B;
+  outline: none;
+}
+
+.dq-faq-item__icon {
+  flex-shrink: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #688F9D;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+  margin-left: 1rem;
+}
+
+.dq-faq-item:hover .dq-faq-item__icon {
+  color: #2C7A7B;
+}
+
+.dq-faq-item.is-open .dq-faq-item__icon {
+  transform: rotate(45deg);
+  color: #2C7A7B;
+}
+
+.dq-faq-item__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+  padding: 0 1.75rem;
+}
+
+.dq-faq-item.is-open .dq-faq-item__content {
+  max-height: 300px;
+  padding: 0 1.75rem 1.75rem;
+}
+
+.dq-faq-item__content p {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(14, 27, 48, 0.75);
+}
+</style>
+
+<script>
+// FAQ Accordion Interaction Setup
+document.addEventListener('DOMContentLoaded', function() {
+  const faqTriggers = document.querySelectorAll('.dq-faq-item__trigger');
+  faqTriggers.forEach(function(trigger) {
+    trigger.addEventListener('click', function() {
+      const item = this.closest('.dq-faq-item');
+      const isOpen = item.classList.contains('is-open');
+      document.querySelectorAll('.dq-faq-item').forEach(function(el) {
+        el.classList.remove('is-open');
+      });
+      if (!isOpen) {
+        item.classList.add('is-open');
+      }
+    });
+  });
+});
+</script>

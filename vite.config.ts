@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
+import { configDefaults } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
@@ -24,6 +25,9 @@ export default defineConfig(({ mode }) => {
         globals: true,
         environment: 'jsdom',
         setupFiles: './test/setup.ts',
+        // diagnostic-quiz is driven by node:test, not vitest. Left in the
+        // default glob vitest reports them as zero-test failures.
+        exclude: [...configDefaults.exclude, 'diagnostic-quiz/**'],
       }
     };
 });

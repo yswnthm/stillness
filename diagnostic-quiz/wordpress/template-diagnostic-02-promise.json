@@ -1,0 +1,34 @@
+{
+  "content": [
+    {
+      "id": "d_promise_c",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "d_promise_h",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"dq-promise\">\n  <div class=\"dq-wrap\">\n    <span class=\"dq-eyebrow-dark\">What you walk away with</span>\n    <h2 class=\"dq-h2\">Not a score. A <em>starting point.</em></h2>\n\n    <div class=\"dq-grid\">\n      <article class=\"dq-card\">\n        <span class=\"dq-num\">01</span>\n        <h3>Your regulation type</h3>\n        <p>One of four patterns describing how your body responds to stress. Named, so you can recognise it in yourself.</p>\n      </article>\n      <article class=\"dq-card\">\n        <span class=\"dq-num\">02</span>\n        <h3>A practice sequence</h3>\n        <p>Three starting practices, in order, matched to your pattern. Breathwork, somatic work and a daily ritual.</p>\n      </article>\n      <article class=\"dq-card\">\n        <span class=\"dq-num\">03</span>\n        <h3>The full prescription</h3>\n        <p>Audio sessions, a workbook and reference material. Yours to keep and return to.</p>\n      </article>\n    </div>\n  </div>\n</section>\n\n<style>\n.dq-promise {\n  background: #F7F0EC !important;\n  padding: clamp(5rem, 10vw, 8rem) 1.5rem !important;\n}\n\n.dq-wrap { max-width: 1080px !important; margin: 0 auto !important; }\n\n.dq-eyebrow-dark {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.62rem !important;\n  letter-spacing: 0.34em !important;\n  text-transform: uppercase !important;\n  color: #688F9D !important;\n  display: block !important;\n  margin-bottom: 1.75rem !important;\n  text-align: center !important;\n}\n\n.dq-h2 {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: clamp(2rem, 5vw, 3.25rem) !important;\n  font-weight: 300 !important;\n  line-height: 1.12 !important;\n  color: #0E1B30 !important;\n  text-align: center !important;\n  margin: 0 0 4.5rem !important;\n}\n\n.dq-h2 em { font-style: italic !important; color: #688F9D !important; }\n\n.dq-grid {\n  display: grid !important;\n  grid-template-columns: repeat(3, 1fr) !important;\n  gap: 2.5rem !important;\n}\n\n.dq-card {\n  border-top: 1px solid rgba(14, 27, 48, 0.14) !important;\n  padding-top: 2rem !important;\n}\n\n.dq-num {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.6rem !important;\n  letter-spacing: 0.2em !important;\n  color: #A4B2BA !important;\n  display: block !important;\n  margin-bottom: 1.5rem !important;\n}\n\n.dq-card h3 {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: 1.5rem !important;\n  font-weight: 300 !important;\n  color: #0E1B30 !important;\n  margin: 0 0 0.875rem !important;\n}\n\n.dq-card p {\n  font-family: 'Lato', sans-serif !important;\n  font-size: 0.95rem !important;\n  font-weight: 300 !important;\n  line-height: 1.7 !important;\n  color: rgba(14, 27, 48, 0.6) !important;\n  margin: 0 !important;\n}\n\n@media(max-width: 900px) {\n  .dq-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }\n}\n</style>"
+          },
+          "widgetType": "html",
+          "elements": []
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Diagnostic Quiz — 02 What You Get",
+  "type": "section"
+}

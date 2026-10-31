@@ -1,0 +1,190 @@
+<!-- Elementor HTML Widget: Men's Series LP — Section 04: This Is For You If -->
+<section class="ms-foryou-section">
+  <div class="ms-wrap">
+    <div class="ms-foryou-header">
+      <div class="ms-eyebrow">This is for you if</div>
+      <h2 class="ms-h2">You recognise yourself <em class="ms-accent">in at least one of these.</em></h2>
+    </div>
+
+    <div class="ms-foryou-grid">
+      <div class="ms-foryou-card">
+        <div class="ms-foryou-num">01</div>
+        <h3 class="ms-foryou-title">You're always "fine"</h3>
+        <p class="ms-foryou-body">On the outside you've got it together. But there's a version of you that's exhausted — and he hasn't had space to speak in a while.</p>
+      </div>
+
+      <div class="ms-foryou-card">
+        <div class="ms-foryou-num">02</div>
+        <h3 class="ms-foryou-title">Rest feels unearned</h3>
+        <p class="ms-foryou-body">Slowing down triggers guilt. You rest when you collapse, not because you choose to. You're ready for that to change.</p>
+      </div>
+
+      <div class="ms-foryou-card">
+        <div class="ms-foryou-num">03</div>
+        <h3 class="ms-foryou-title">You want something real</h3>
+        <p class="ms-foryou-body">You've tried the gym, the app, the night out. You want something you feel in your body, not just your head.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ==========================================================================
+   Section 04: "This Is For You If" Scoped CSS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Jost:wght@300;400;500&display=swap');
+
+
+/* Break out of Elementor boxed containers & theme gutters to 100% viewport width */
+.elementor-section:has(.ms-foryou-section),
+.e-con:has(.ms-foryou-section),
+.e-con-boxed:has(.ms-foryou-section),
+.e-con-full:has(.ms-foryou-section),
+.elementor-container:has(.ms-foryou-section),
+.elementor-column:has(.ms-foryou-section),
+.elementor-widget-wrap:has(.ms-foryou-section),
+.elementor-widget:has(.ms-foryou-section),
+.elementor-widget-container:has(.ms-foryou-section),
+.elementor-widget-html:has(.ms-foryou-section) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.elementor-section:has(.ms-foryou-section) > .elementor-container,
+.e-con:has(.ms-foryou-section) > .e-con-inner,
+.elementor-widget:has(.ms-foryou-section) > .elementor-widget-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.ms-foryou-section {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  background: #FFFFFF;
+  padding: clamp(44px, 5vw, 64px) 0;
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0E1B30;
+  box-sizing: border-box;
+}
+
+.ms-foryou-section * {
+  box-sizing: border-box;
+}
+
+.ms-foryou-section .ms-wrap {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+.ms-foryou-header {
+  margin-bottom: clamp(24px, 3.5vw, 36px);
+  width: 100%;
+}
+
+.ms-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C4935A;
+  margin-bottom: 0.5rem;
+}
+
+.ms-eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: #C4935A;
+}
+
+.ms-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #0E1B30 !important;
+  margin: 0;
+  font-weight: 300;
+}
+
+.ms-accent {
+  font-style: italic;
+  color: #688F9D;
+}
+
+.ms-foryou-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.ms-foryou-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(196, 187, 180, 0.45);
+  padding: clamp(44px, 5vw, 64px) 0;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.ms-foryou-card:hover {
+  border-color: #C4935A;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(14, 27, 48, 0.05);
+}
+
+.ms-foryou-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.4rem;
+  color: #C4935A;
+  font-style: italic;
+  line-height: 1;
+}
+
+.ms-foryou-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #0E1B30 !important;
+  line-height: 1.22;
+  margin: 0;
+}
+
+.ms-foryou-body {
+  font-size: 1rem;
+  color: #3D4F57 !important;
+  line-height: 1.75;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .ms-foryou-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+</style>

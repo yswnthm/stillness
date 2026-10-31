@@ -1,0 +1,78 @@
+<!-- Elementor HTML Block 3: Interactive Quiz Container Section
+     Requires the WordPress PHP + JavaScript + CSS snippets to be active. -->
+<section class="dq-quiz" id="stillness-quiz-start">
+  <div class="dq-wrap">
+    <span class="dq-kicker">The diagnostic</span>
+    <h2 class="dq-section-title">Fifteen questions. <em>Go with your first instinct.</em></h2>
+    
+    <!-- Dynamic Quiz Root Container (Renders [stillness_quiz] shortcode in WordPress) -->
+    <div id="stillness-quiz" class="stillness-quiz">
+      [stillness_quiz]
+    </div>
+
+    <p class="dq-hint">Prefer to sit with it? <a href="mailto:hello@stillness.co">Talk to us instead.</a></p>
+  </div>
+</section>
+
+<style>
+/* Section 3: Quiz Block Scoped CSS */
+.dq-quiz {
+  background: #FFFFFF;
+  padding: 0 1.5rem;
+  color: #0E1B30;
+  border-top: 1px solid rgba(14, 27, 48, 0.06);
+}
+
+.dq-quiz .dq-wrap {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.dq-quiz .dq-kicker {
+  display: block;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #688F9D;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.dq-quiz h2.dq-section-title {
+  margin: 0 0 2rem;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 300;
+  line-height: 1.12;
+}
+
+.dq-quiz h2.dq-section-title em {
+  color: #688F9D;
+  font-style: italic;
+}
+
+.dq-hint {
+  margin: 3.5rem 0 0;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(14, 27, 48, 0.08);
+  text-align: center;
+  color: rgba(14, 27, 48, 0.5);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.dq-hint a {
+  color: #2C7A7B;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(44, 122, 123, 0.3);
+  transition: border-color 0.2s ease;
+}
+
+.dq-hint a:hover {
+  border-bottom-color: #2C7A7B;
+}
+</style>

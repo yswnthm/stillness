@@ -1,0 +1,313 @@
+<!-- Elementor HTML Widget: Men's Series LP — Section 02: Hero Section -->
+<section class="ms-hero-section">
+  <div class="ms-wrap">
+    <div class="ms-hero-grid">
+      <div class="ms-hero-copy">
+        <div class="ms-eyebrow">Men's Series · 2027 · Vancouver</div>
+        <h1 class="ms-hero-h1">One evening a month to put it all down — <em class="ms-accent">for a whole year.</em></h1>
+        <p class="ms-hero-sub">Twelve evenings for men who carry everything. Breathwork, live sound and a room of men who get it — on the last weekend of every month, starting January 29, 2027.</p>
+        
+        <div class="ms-hero-actions">
+          <a href="#pricing" class="ms-btn ms-btn-solid">Reserve a founding seat · $480</a>
+          <a href="#pricing" class="ms-btn ms-btn-line">Try one session first</a>
+        </div>
+
+        <div class="ms-hero-metrics">
+          <div class="ms-metric-item">
+            <div class="ms-metric-num">12</div>
+            <div class="ms-metric-label">evenings in 2027</div>
+          </div>
+          <div class="ms-metric-item">
+            <div class="ms-metric-num">40</div>
+            <div class="ms-metric-label">founding seats for 2027</div>
+          </div>
+          <div class="ms-metric-item">
+            <div class="ms-metric-num">$40</div>
+            <div class="ms-metric-label">per evening, all year</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ms-visual-frame ms-hero-visual">
+        <svg class="ms-visual-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 3v18M3 12h18M8 8l8 8M8 16l8-8"/>
+        </svg>
+        <span class="ms-visual-caption">Visual Preview · Session 01</span>
+        <span class="ms-visual-desc">Men lying down during the sound journey, candlelight, The Shop Theatre</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ==========================================================================
+   Section 02: Hero Section Scoped CSS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Jost:wght@300;400;500&display=swap');
+
+
+/* Break out of Elementor boxed containers & theme gutters to 100% viewport width */
+.elementor-section:has(.ms-hero-section),
+.e-con:has(.ms-hero-section),
+.e-con-boxed:has(.ms-hero-section),
+.e-con-full:has(.ms-hero-section),
+.elementor-container:has(.ms-hero-section),
+.elementor-column:has(.ms-hero-section),
+.elementor-widget-wrap:has(.ms-hero-section),
+.elementor-widget:has(.ms-hero-section),
+.elementor-widget-container:has(.ms-hero-section),
+.elementor-widget-html:has(.ms-hero-section) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.elementor-section:has(.ms-hero-section) > .elementor-container,
+.e-con:has(.ms-hero-section) > .e-con-inner,
+.elementor-widget:has(.ms-hero-section) > .elementor-widget-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.ms-hero-section {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  background: #FFFFFF;
+  padding-top: clamp(84px, 8vw, 108px);
+  padding-bottom: clamp(36px, 4vw, 52px);
+  position: relative;
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0E1B30;
+  box-sizing: border-box;
+}
+
+.ms-hero-section * {
+  box-sizing: border-box;
+}
+
+.ms-hero-section .ms-wrap {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+.ms-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+
+.ms-hero-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.ms-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C4935A;
+  margin-bottom: 0.5rem;
+}
+
+.ms-eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: #C4935A;
+}
+
+.ms-hero-h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.8rem, 5.8vw, 4.6rem);
+  line-height: 1.04;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  color: #0E1B30 !important;
+  margin: 0;
+}
+
+.ms-accent {
+  font-style: italic;
+  color: #688F9D;
+}
+
+.ms-hero-sub {
+  font-size: 1.15rem;
+  color: #3D4F57 !important;
+  max-width: 540px;
+  line-height: 1.8;
+  font-weight: 300;
+  margin: 0;
+}
+
+.ms-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.ms-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 32px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  border-radius: 2px;
+}
+
+.ms-btn-solid {
+  background: #0E1B30;
+  color: #FFFFFF !important;
+  border: 1px solid #0E1B30;
+}
+
+.ms-btn-solid:hover {
+  background: #1D3152;
+  border-color: #1D3152;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(14, 27, 48, 0.15);
+}
+
+.ms-btn-line {
+  background: transparent;
+  border: 1px solid #0E1B30;
+  color: #0E1B30 !important;
+}
+
+.ms-btn-line:hover {
+  background: #0E1B30;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+.ms-hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  border-top: 1px solid rgba(196, 187, 180, 0.45);
+  padding-top: 28px;
+  margin-top: 16px;
+}
+
+.ms-metric-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.4rem, 3.5vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1;
+  color: #0E1B30;
+  margin-bottom: 4px;
+}
+
+.ms-metric-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7A8F96;
+}
+
+/* Visual Placeholder Frame */
+.ms-visual-frame {
+  background: linear-gradient(135deg, rgba(14, 27, 48, 0.02) 0%, rgba(196, 147, 90, 0.06) 100%);
+  border: 1px solid rgba(196, 187, 180, 0.45);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 36px 24px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.ms-visual-frame::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(196, 187, 180, 0.5);
+  pointer-events: none;
+}
+
+.ms-hero-visual {
+  aspect-ratio: 4 / 5;
+  min-height: 460px;
+  box-shadow: 0 30px 60px rgba(14, 27, 48, 0.06);
+}
+
+.ms-visual-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 16px;
+  color: #688F9D;
+  opacity: 0.85;
+}
+
+.ms-visual-caption {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C4935A;
+  margin-bottom: 8px;
+}
+
+.ms-visual-desc {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.15rem;
+  color: #0E1B30;
+  max-width: 320px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .ms-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .ms-hero-visual {
+    max-height: 480px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ms-hero-metrics {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+</style>

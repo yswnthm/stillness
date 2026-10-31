@@ -61,8 +61,18 @@ Visual styling only on WooCommerce checkout:
 - privacy text
 - `Place order` button
 - responsive spacing
+- narrow-screen payment gateway containment and touch-friendly checkbox/radio rows
+- visible keyboard focus and reduced-motion support
 
 ## Revision Notes
+
+30 October 2026:
+
+- Added mobile layout rules for viewports as narrow as 320px, with smaller panel gutters, tighter order-table cells, and constrained payment gateway wrappers/iframes.
+- Kept the order summary non-sticky once the layout stacks.
+- Increased mobile checkbox/radio tap targets and the place-order button height.
+- Added visible keyboard focus and reduced-motion handling.
+- Made the PHP fallback skip the order-received endpoint and removed its order-confirmation styling so its scope matches the CSS-only version.
 
 16 June 2026:
 

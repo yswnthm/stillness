@@ -1,0 +1,150 @@
+<!-- Elementor HTML Widget: Men's Series LP — Section 03: Outcomes Band -->
+<section class="ms-outcomes-section">
+  <div class="ms-wrap">
+    <div class="ms-outcomes-grid">
+      <div class="ms-outcome-card">
+        <div class="ms-outcome-kicker">WHAT YOU LEAVE WITH</div>
+        <h3 class="ms-outcome-title">A quieter head</h3>
+        <p class="ms-outcome-desc">A full evening off — no phone, no output, nothing to fix. Most men say they sleep better that night.</p>
+      </div>
+
+      <div class="ms-outcome-card">
+        <div class="ms-outcome-kicker">WHAT YOU BUILD</div>
+        <h3 class="ms-outcome-title">Tools that last</h3>
+        <p class="ms-outcome-desc">Breathwork and journaling you can use on a hard Tuesday, not just on the night.</p>
+      </div>
+
+      <div class="ms-outcome-card">
+        <div class="ms-outcome-kicker">WHO YOU FIND</div>
+        <h3 class="ms-outcome-title">Men who get it</h3>
+        <p class="ms-outcome-desc">Your group of about 13 men stays the same all year. By spring, it's not a class — it's your crew.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ==========================================================================
+   Section 03: Outcomes Band Scoped CSS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400;500&display=swap');
+
+
+/* Break out of Elementor boxed containers & theme gutters to 100% viewport width */
+.elementor-section:has(.ms-outcomes-section),
+.e-con:has(.ms-outcomes-section),
+.e-con-boxed:has(.ms-outcomes-section),
+.e-con-full:has(.ms-outcomes-section),
+.elementor-container:has(.ms-outcomes-section),
+.elementor-column:has(.ms-outcomes-section),
+.elementor-widget-wrap:has(.ms-outcomes-section),
+.elementor-widget:has(.ms-outcomes-section),
+.elementor-widget-container:has(.ms-outcomes-section),
+.elementor-widget-html:has(.ms-outcomes-section) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.elementor-section:has(.ms-outcomes-section) > .elementor-container,
+.e-con:has(.ms-outcomes-section) > .e-con-inner,
+.elementor-widget:has(.ms-outcomes-section) > .elementor-widget-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.ms-outcomes-section {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  background: #0E1B30;
+  color: #D9E8EB;
+  padding: clamp(44px, 5vw, 64px) 0;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+  box-sizing: border-box;
+}
+
+.ms-outcomes-section * {
+  box-sizing: border-box;
+}
+
+
+
+.ms-outcomes-section .ms-wrap {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+.ms-outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(28px, 4vw, 48px);
+}
+
+.ms-outcome-card {
+  padding: clamp(44px, 5vw, 64px) 0;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ms-outcome-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(196, 147, 90, 0.3);
+  transform: translateY(-4px);
+}
+
+.ms-outcome-kicker {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #688F9D;
+  font-weight: 500;
+}
+
+.ms-outcome-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+  font-weight: 300;
+  color: #FFFFFF !important;
+  line-height: 1.18;
+  margin: 0;
+}
+
+.ms-outcome-desc {
+  color: #D9E8EB !important;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  font-weight: 300;
+  opacity: 0.9;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .ms-outcomes-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+</style>

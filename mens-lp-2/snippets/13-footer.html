@@ -1,0 +1,115 @@
+<!-- Elementor HTML Widget: Men's Series LP — Section 13: Site Footer -->
+<footer class="ms-site-footer">
+  <div class="ms-wrap ms-footer-inner">
+    <div class="ms-footer-logo">STILLNESS</div>
+    <a href="mailto:info@wearestillness.com" class="ms-footer-link">info@wearestillness.com</a>
+    <div class="ms-footer-copy">© 2026 Stillness Wellness Co.</div>
+  </div>
+</footer>
+
+<style>
+/* ==========================================================================
+   Section 13: Site Footer Scoped CSS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400&display=swap');
+
+
+/* Break out of Elementor boxed containers & theme gutters to 100% viewport width */
+.elementor-section:has(.ms-site-footer),
+.e-con:has(.ms-site-footer),
+.e-con-boxed:has(.ms-site-footer),
+.e-con-full:has(.ms-site-footer),
+.elementor-container:has(.ms-site-footer),
+.elementor-column:has(.ms-site-footer),
+.elementor-widget-wrap:has(.ms-site-footer),
+.elementor-widget:has(.ms-site-footer),
+.elementor-widget-container:has(.ms-site-footer),
+.elementor-widget-html:has(.ms-site-footer) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.elementor-section:has(.ms-site-footer) > .elementor-container,
+.e-con:has(.ms-site-footer) > .e-con-inner,
+.elementor-widget:has(.ms-site-footer) > .elementor-widget-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+footer.ms-site-footer {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  background: #0E1B30;
+  padding: 30px 0;
+  color: #A4B2BA;
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  box-sizing: border-box;
+}
+
+footer.ms-site-footer * {
+  box-sizing: border-box;
+}
+
+footer.ms-site-footer .ms-wrap {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+.ms-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.ms-footer-logo {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.35em;
+  color: #FFFFFF !important;
+  text-transform: uppercase;
+}
+
+.ms-footer-link {
+  color: #D9E8EB !important;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.ms-footer-link:hover {
+  color: #C4935A !important;
+  border-bottom-color: #C4935A;
+}
+
+.ms-footer-copy {
+  color: #A4B2BA !important;
+}
+
+@media (max-width: 768px) {
+  .ms-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}
+</style>

@@ -1,0 +1,120 @@
+<!-- Elementor HTML widget: Diagnostic landing page, Section 2 (Promise) -->
+<section class="dq-promise" id="dq-promise">
+  <div class="dq-container">
+    <span class="dq-kicker">What you walk away with</span>
+    <h2>Not a score. A <em>starting point.</em></h2>
+    <div class="dq-grid">
+      <article>
+        <span>01</span>
+        <h3>Your regulation type</h3>
+        <p>One of four patterns describing how your body responds to stress. Named, so you can recognise it in yourself.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>A practice sequence</h3>
+        <p>Three starting practices, in order, matched to your pattern. Breathwork, somatic work and a daily ritual.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>The full prescription</h3>
+        <p>Audio sessions, a workbook and reference material. Yours to keep and return to.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section 2: Promise Block Scoped CSS */
+.dq-promise {
+  background: #FFFFFF;
+  padding: clamp(3rem, 6vw, 5rem) 1.5rem;
+  color: #0E1B30;
+  border-bottom: 1px solid rgba(14, 27, 48, 0.06);
+}
+
+.dq-promise .dq-container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.dq-promise .dq-kicker {
+  display: block;
+  margin-bottom: 1.75rem;
+  text-align: center;
+  color: #688F9D;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.dq-promise h2 {
+  margin: 0 0 2.5rem;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 300;
+  line-height: 1.12;
+}
+
+.dq-promise h2 em {
+  color: #688F9D;
+  font-style: italic;
+}
+
+.dq-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.dq-grid article {
+  background: #FFFFFF;
+  border: 1px solid rgba(14, 27, 48, 0.08);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(14, 27, 48, 0.03);
+}
+
+.dq-grid article:hover {
+  transform: translateY(-4px);
+  border-color: rgba(104, 143, 157, 0.3);
+  box-shadow: 0 20px 40px rgba(14, 27, 48, 0.08);
+}
+
+.dq-grid span {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: #688F9D;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+}
+
+.dq-grid h3 {
+  margin: 0 0 0.875rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.dq-grid p {
+  margin: 0;
+  color: rgba(14, 27, 48, 0.7);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .dq-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+</style>

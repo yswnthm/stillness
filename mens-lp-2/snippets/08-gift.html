@@ -1,0 +1,265 @@
+<!-- Elementor HTML Widget: Men's Series LP — Section 08: Gift of Stillness -->
+<section class="ms-gift-section" id="gift">
+  <div class="ms-wrap">
+    <div class="ms-gift-card">
+      <div class="ms-gift-content">
+        <div class="ms-eyebrow">The gift for the man who "doesn't need anything"</div>
+        <h2 class="ms-h2">Give him a year <em class="ms-accent">of stillness.</em></h2>
+        <p class="ms-gift-p">For a partner, father, brother or friend who looks after everyone but himself. You get a printable gift card in time for the holidays; he picks his start month.</p>
+        
+        <div class="ms-gift-actions">
+          <a href="#pricing" class="ms-btn ms-btn-solid">Gift the year · $480</a>
+          <a href="#pricing" class="ms-btn ms-btn-line">Gift one evening · $55</a>
+        </div>
+      </div>
+
+      <div class="ms-visual-frame ms-gift-visual">
+        <svg class="ms-visual-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="3" y="4" width="18" height="16" rx="2"/>
+          <path d="M3 10h18M8 15h2M14 15h2"/>
+        </svg>
+        <span class="ms-visual-caption">Gift Voucher Artifact</span>
+        <span class="ms-visual-desc">Gift card mockup — "A Year of Stillness, 2027"</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ==========================================================================
+   Section 08: Gift of Stillness Scoped CSS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Jost:wght@300;400;500&display=swap');
+
+
+/* Break out of Elementor boxed containers & theme gutters to 100% viewport width */
+.elementor-section:has(.ms-gift-section),
+.e-con:has(.ms-gift-section),
+.e-con-boxed:has(.ms-gift-section),
+.e-con-full:has(.ms-gift-section),
+.elementor-container:has(.ms-gift-section),
+.elementor-column:has(.ms-gift-section),
+.elementor-widget-wrap:has(.ms-gift-section),
+.elementor-widget:has(.ms-gift-section),
+.elementor-widget-container:has(.ms-gift-section),
+.elementor-widget-html:has(.ms-gift-section) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.elementor-section:has(.ms-gift-section) > .elementor-container,
+.e-con:has(.ms-gift-section) > .e-con-inner,
+.elementor-widget:has(.ms-gift-section) > .elementor-widget-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.ms-gift-section {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  background: #FFFFFF;
+  padding: clamp(36px, 4vw, 54px) 0;
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0E1B30;
+  box-sizing: border-box;
+}
+
+.ms-gift-section * {
+  box-sizing: border-box;
+}
+
+.ms-gift-section .ms-wrap {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+.ms-gift-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(196, 187, 180, 0.45);
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(14, 27, 48, 0.03);
+}
+
+.ms-gift-content {
+  padding: clamp(40px, 6vw, 72px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.ms-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C4935A;
+  margin-bottom: 0.5rem;
+}
+
+.ms-eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: #C4935A;
+}
+
+.ms-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #0E1B30 !important;
+  margin: 0;
+  font-weight: 300;
+}
+
+.ms-accent {
+  font-style: italic;
+  color: #688F9D;
+}
+
+.ms-gift-p {
+  font-size: 1.05rem;
+  color: #3D4F57 !important;
+  line-height: 1.75;
+  font-weight: 300;
+  margin: 0;
+}
+
+.ms-gift-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.ms-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 0 32px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  border-radius: 2px;
+}
+
+.ms-btn-solid {
+  background: #0E1B30;
+  color: #FFFFFF !important;
+  border: 1px solid #0E1B30;
+}
+
+.ms-btn-solid:hover {
+  background: #1D3152;
+  border-color: #1D3152;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(14, 27, 48, 0.15);
+}
+
+.ms-btn-line {
+  background: transparent;
+  border: 1px solid #0E1B30;
+  color: #0E1B30 !important;
+}
+
+.ms-btn-line:hover {
+  background: #0E1B30;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+/* Visual Placeholder Frame */
+.ms-visual-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 36px 24px;
+  overflow: hidden;
+}
+
+.ms-visual-frame::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(196, 187, 180, 0.5);
+  pointer-events: none;
+}
+
+.ms-gift-visual {
+  background: linear-gradient(135deg, #F8F9FA 0%, #EBECEF 100%);
+  border-left: 1px solid rgba(196, 187, 180, 0.45);
+  min-height: 360px;
+}
+
+.ms-visual-icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 16px;
+  color: #688F9D;
+  opacity: 0.85;
+}
+
+.ms-visual-caption {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C4935A;
+  margin-bottom: 8px;
+}
+
+.ms-visual-desc {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.15rem;
+  color: #0E1B30;
+  max-width: 320px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .ms-gift-card {
+    grid-template-columns: 1fr;
+  }
+  .ms-gift-visual {
+    min-height: 240px;
+    border-left: none;
+    border-top: 1px solid rgba(196, 187, 180, 0.45);
+  }
+}
+</style>

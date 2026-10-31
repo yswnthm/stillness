@@ -38,8 +38,10 @@ This checklist will be finalized after scope is confirmed.
 - [ ] Desktop checkout layout is clean and aligned.
 - [ ] Tablet layout is clean and aligned.
 - [ ] Mobile layout is clean and aligned.
+- [ ] Check mobile widths at 320px, 375px, and 430px, plus the 768px tablet breakpoint.
 - [ ] Checkout is two-column on desktop.
 - [ ] Checkout stacks into one column on tablet/mobile.
+- [ ] No horizontal scrolling appears, including inside the order summary and payment area.
 - [ ] Billing, shipping, and order review panels have consistent spacing.
 - [ ] Inputs use the approved border, focus, and error styling.
 - [ ] Select/dropdown fields align visually with text inputs.
@@ -47,6 +49,9 @@ This checklist will be finalized after scope is confirmed.
 - [ ] Payment wrapper is styled without breaking the payment iframe.
 - [ ] Place order button is full-width inside the payment/order area.
 - [ ] Payment fields do not overflow on mobile.
+- [ ] Secure payment iframe and its outer gateway fields fit the available mobile width.
+- [ ] Checkbox and radio labels have a comfortable tap area.
+- [ ] Keyboard focus remains visible on checkout controls.
 - [ ] Button text does not wrap awkwardly.
 - [ ] Validation errors are readable.
 - [ ] Loading states do not break the layout.

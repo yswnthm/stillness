@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Men's Series 2027 — Stillness Vancouver</title>
+  <meta name="description" content="Twelve evenings for men who carry everything. Breathwork, live sound and a small group of men who get it — the last weekend of every month in Vancouver, starting January 29, 2027.">
+
+  <!-- Google Fonts: Cormorant Garamond & Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       Stillness Co. — Design System Tokens & Global Reset
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      /* Brand Color Tokens */
+      --stone: #0E1B30;
+      --midnight: #1D3152;
+      --cream: #FFFFFF;
+      --warm: #FFFFFF;
+      --warm-card: #FFFFFF;
+      --seafoam: #688F9D;
+      --wave: #A4B2BA;
+      --sand: #C4BBB4;
+      --amber: #C4935A;
+      --amber-light: #F0E4D0;
+      --amber-glow: rgba(196, 147, 90, 0.15);
+      --breeze: #D9E8EB;
+      --text-body: #3D4F57;
+      --text-light: #7A8F96;
+      --line: rgba(196, 187, 180, 0.45);
+      --line-dark: rgba(255, 255, 255, 0.08);
+      --paper: #FFFFFF;
+
+      /* Typography */
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+      /* Layout */
+      --wrap: 1200px;
+      --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--stone);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* Break out of boxed containers to guarantee full bleed */
+    .hero-section,
+    .outcomes-section,
+    .foryou-section,
+    .evening-section,
+    .dates-section,
+    .pricing-section,
+    .gift-section,
+    .guides-section,
+    .proof-section,
+    .faq-section,
+    .final-cta-section,
+    .site-footer {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      box-sizing: border-box;
+    }
+
+    /* Base Typography */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 300;
+      letter-spacing: -0.015em;
+      color: var(--stone);
+      line-height: 1.12;
+    }
+
+    em.accent, em {
+      font-style: italic;
+      color: var(--seafoam);
+    }
+
+    p {
+      color: var(--text-body);
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .wrap {
+      max-width: var(--wrap);
+      margin: 0 auto;
+      padding-left: 24px;
+      padding-right: 24px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1rem;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 22px;
+      height: 1px;
+      background: var(--amber);
+    }
+    .eyebrow-dark {
+      color: var(--amber);
+    }
+
+    .h2 {
+      font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 52px;
+      padding: 0 32px;
+      font-family: var(--sans);
+      font-size: 0.76rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition);
+      border-radius: 2px;
+    }
+
+    .btn-solid {
+      background: var(--stone);
+      color: var(--cream);
+      border: 1px solid var(--stone);
+    }
+    .btn-solid:hover {
+      background: var(--midnight);
+      border-color: var(--midnight);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(14, 27, 48, 0.15);
+    }
+
+    .btn-line {
+      background: transparent;
+      border: 1px solid var(--stone);
+      color: var(--stone);
+    }
+    .btn-line:hover {
+      background: var(--stone);
+      color: var(--cream);
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: var(--amber);
+      color: #FFFFFF;
+      border: 1px solid var(--amber);
+      font-weight: 500;
+    }
+    .btn-light:hover {
+      background: #b1834e;
+      border-color: #b1834e;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(196, 147, 90, 0.25);
+    }
+
+    .btn-line-light {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: var(--breeze);
+    }
+    .btn-line-light:hover {
+      border-color: var(--cream);
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    /* Visual Placeholder Component */
+    .visual-frame {
+      background: linear-gradient(135deg, rgba(14, 27, 48, 0.03) 0%, rgba(196, 147, 90, 0.08) 100%);
+      border: 1px solid var(--line);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 36px 24px;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    .visual-frame::before {
+      content: '';
+      position: absolute;
+      inset: 12px;
+      border: 1px dashed rgba(196, 187, 180, 0.5);
+      pointer-events: none;
+    }
+    .visual-icon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 16px;
+      color: var(--seafoam);
+      opacity: 0.85;
+    }
+    .visual-caption {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 8px;
+    }
+    .visual-desc {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      color: var(--stone);
+      max-width: 320px;
+      line-height: 1.4;
+      font-style: italic;
+    }
+
+    /* ==========================================================================
+       1. Fixed Navigation
+       ========================================================================== */
+    header.site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: none;
+      transition: var(--transition);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+    .brand-logo {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--stone);
+      font-weight: 400;
+      display: inline-flex;
+      align-items: center;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-item {
+      font-family: var(--sans);
+      font-size: 0.76rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-body);
+      position: relative;
+      padding: 6px 0;
+    }
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--amber);
+      transition: width 0.3s ease;
+    }
+    .nav-item:hover {
+      color: var(--stone);
+    }
+    .nav-item:hover::after {
+      width: 100%;
+    }
+    .nav-cta-btn {
+      min-height: 42px;
+      padding: 0 22px;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+    }
+
+    /* Mobile Hamburger */
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .mobile-menu-toggle span {
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--stone);
+      margin: 5px 0;
+      transition: 0.3s ease;
+    }
+
+    /* ==========================================================================
+       2. Hero Section
+       ========================================================================== */
+    .hero-section {
+      padding-top: 108px;
+      padding-bottom: 48px;
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: center;
+    }
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .hero-h1 {
+      font-size: clamp(2.8rem, 5.8vw, 4.6rem);
+      line-height: 1.04;
+      font-weight: 300;
+      letter-spacing: -0.025em;
+    }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-body);
+      max-width: 540px;
+      line-height: 1.8;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      
+      padding-top: 28px;
+      margin-top: 16px;
+    }
+    .metric-num {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 3.5vw, 3.2rem);
+      font-weight: 300;
+      line-height: 1;
+      color: var(--stone);
+      margin-bottom: 4px;
+    }
+    .metric-label {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+    .hero-visual {
+      aspect-ratio: 4 / 5;
+      min-height: 460px;
+      box-shadow: 0 30px 60px rgba(14, 27, 48, 0.08);
+    }
+
+    /* ==========================================================================
+       3. Outcomes Band (Dark Stone Midnight Ground)
+       ========================================================================== */
+    .outcomes-section {
+      background: var(--stone);
+      color: var(--breeze);
+      padding: clamp(44px, 5vw, 64px) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(28px, 4vw, 48px);
+    }
+    .outcome-card {
+      padding: clamp(24px, 3vw, 40px);
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--line-dark);
+      border-radius: 2px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+    }
+    .outcome-card:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(196, 147, 90, 0.3);
+      transform: translateY(-4px);
+    }
+    .outcome-kicker {
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--seafoam);
+      font-weight: 500;
+    }
+    .outcome-title {
+      font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.18;
+    }
+    .outcome-desc {
+      color: var(--breeze);
+      font-size: 0.98rem;
+      line-height: 1.75;
+      opacity: 0.9;
+    }
+
+    /* ==========================================================================
+       4. "This Is For You If"
+       ========================================================================== */
+    .foryou-section {
+      padding: clamp(44px, 5vw, 64px) 0;
+      background: var(--cream);
+    }
+    .foryou-header {
+      margin-bottom: clamp(24px, 3.5vw, 36px);
+      width: 100%;
+    }
+    .foryou-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .foryou-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: clamp(32px, 4vw, 44px) clamp(28px, 3vw, 36px);
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: var(--transition);
+      position: relative;
+    }
+    .foryou-card:hover {
+      border-color: var(--amber);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(14, 27, 48, 0.05);
+    }
+    .foryou-num {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      color: var(--amber);
+      font-style: italic;
+      line-height: 1;
+    }
+    .foryou-title {
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: var(--stone);
+      line-height: 1.22;
+    }
+    .foryou-body {
+      font-size: 1rem;
+      color: var(--text-body);
+      line-height: 1.75;
+    }
+
+    /* ==========================================================================
+       5. "The Evening"
+       ========================================================================== */
+    .evening-section {
+      padding: clamp(44px, 5vw, 64px) 0;
+      background: var(--warm);
+    }
+    .evening-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: clamp(48px, 6vw, 84px);
+      align-items: start;
+    }
+    .evening-meta-box {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 32px;
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border-radius: 2px;
+    }
+    .meta-row {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 16px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      border-bottom: 1px solid rgba(196, 187, 180, 0.3);
+      padding-bottom: 14px;
+    }
+    .meta-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .meta-label {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      padding-top: 2px;
+    }
+    .meta-value {
+      color: var(--stone);
+      font-weight: 400;
+    }
+
+    /* Timeline Sequence */
+    .timeline-list {
+      list-style: none;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+      border-bottom: none;
+      transition: var(--transition);
+    }
+    .timeline-item:hover {
+      padding-left: 8px;
+    }
+    .timeline-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      color: var(--seafoam);
+      border: 1px solid rgba(104, 143, 157, 0.4);
+      padding: 4px 10px;
+      height: 28px;
+      border-radius: 999px;
+      align-self: flex-start;
+    }
+    .timeline-content h3 {
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: var(--stone);
+      margin-bottom: 6px;
+    }
+    .timeline-content p {
+      font-size: 1rem;
+      color: var(--text-body);
+      line-height: 1.7;
+    }
+
+    /* ==========================================================================
+       6. The 2027 Series / Groups & Dates
+       ========================================================================== */
+    .dates-section {
+      padding: clamp(44px, 5vw, 64px) 0;
+      background: var(--paper);
+    }
+    .dates-header-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    .cal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--sans);
+      font-size: 0.76rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--amber);
+      padding: 10px 0;
+      border-bottom: 1px solid var(--amber);
+    }
+    .cal-link:hover {
+      color: var(--stone);
+      border-bottom-color: var(--stone);
+    }
+
+    /* Cohort Groups */
+    .groups-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    .group-card {
+      border: 1px solid var(--line);
+      padding: 28px;
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      border-radius: 2px;
+      transition: var(--transition);
+      position: relative;
+    }
+    .group-card:hover {
+      border-color: var(--stone);
+      background: #FFFFFF;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(14, 27, 48, 0.06);
+    }
+    .group-tag {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--amber);
+      font-weight: 500;
+    }
+    .group-name {
+      font-family: var(--serif);
+      font-size: 1.9rem;
+      font-weight: 400;
+      color: var(--stone);
+      line-height: 1.2;
+    }
+    .group-details {
+      font-size: 0.92rem;
+      color: var(--text-body);
+    }
+
+    /* 12-Month Calendar Schedule */
+    .calendar-container {
+      margin-top: 36px;
+    }
+    .cal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 14px;
+    }
+    .cal-item {
+      background: var(--cream);
+      border: 1px solid var(--line);
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .cal-item:hover {
+      background: #FFFFFF;
+      border-color: var(--amber);
+      transform: translateY(-2px);
+    }
+    .cal-num {
+      font-family: var(--sans);
+      font-size: 0.66rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+    .cal-month {
+      font-family: var(--serif);
+      font-size: 1.65rem;
+      font-weight: 400;
+      color: var(--stone);
+      line-height: 1.15;
+    }
+    .cal-days {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      font-weight: 400;
+    }
+    .cal-note {
+      font-size: 0.74rem;
+      color: var(--seafoam);
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    .dates-flexibility-note {
+      margin-top: 28px;
+      font-size: 0.98rem;
+      color: var(--text-body);
+      font-style: italic;
+      padding: 16px 20px;
+      background: var(--warm);
+      border-left: 2px solid var(--amber);
+      border-radius: 0 2px 2px 0;
+    }
+
+    /* ==========================================================================
+       7. Pricing & Tiers
+       ========================================================================== */
+    .pricing-section {
+      padding: clamp(44px, 5vw, 68px) 0;
+      background: var(--cream);
+    }
+    .pricing-intro {
+      text-align: center;
+      width: 100%;
+      margin: 0 auto clamp(24px, 3.5vw, 36px);
+    }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(20px, 3vw, 32px);
+      align-items: stretch;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .price-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 36px 30px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: var(--transition);
+      position: relative;
+    }
+    .price-card:hover {
+      border-color: var(--stone);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(14, 27, 48, 0.06);
+    }
+    .price-title {
+      font-family: var(--sans);
+      font-size: 0.76rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--stone);
+    }
+    .price-figure {
+      font-family: var(--serif);
+      font-size: 3.2rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--stone);
+    }
+    .price-sub {
+      font-size: 0.95rem;
+      color: var(--text-light);
+    }
+    .price-desc {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      flex-grow: 1;
+      line-height: 1.7;
+    }
+
+    /* Featured Founding Tier (.black-card luxury treatment) */
+    .price-card-featured {
+      background: var(--stone);
+      color: var(--cream);
+      border: 1px solid rgba(196, 147, 90, 0.4);
+      box-shadow: 0 24px 50px rgba(14, 27, 48, 0.25);
+      position: relative;
+    }
+    .price-card-featured:hover {
+      border-color: var(--amber);
+      transform: translateY(-6px);
+      box-shadow: 0 30px 60px rgba(14, 27, 48, 0.35);
+    }
+    .price-badge {
+      position: absolute;
+      top: -12px;
+      left: 28px;
+      background: var(--amber);
+      color: #FFFFFF;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 2px;
+    }
+    .price-card-featured .price-title {
+      color: var(--cream);
+    }
+    .price-card-featured .price-figure {
+      color: var(--amber);
+    }
+    .price-card-featured .price-sub {
+      color: var(--breeze);
+    }
+    .price-features-list {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-grow: 1;
+    }
+    .price-features-list li {
+      font-size: 0.94rem;
+      color: var(--breeze);
+      padding-left: 22px;
+      position: relative;
+      line-height: 1.6;
+    }
+    .price-features-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--amber);
+    }
+
+    /* ==========================================================================
+       8. Gift of Stillness
+       ========================================================================== */
+    .gift-section {
+      padding: clamp(36px, 4vw, 54px) 0;
+    }
+    .gift-card {
+      background: var(--warm);
+      border: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .gift-content {
+      padding: clamp(40px, 6vw, 72px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+    }
+    .gift-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 8px;
+    }
+    .gift-visual {
+      background: linear-gradient(135deg, #F8F9FA 0%, #EBECEF 100%);
+      border-left: 1px solid var(--line);
+      min-height: 360px;
+    }
+
+    /* ==========================================================================
+       9. Your Guides
+       ========================================================================== */
+    .guides-section {
+      padding: clamp(44px, 5vw, 64px) 0;
+      background: var(--paper);
+    }
+    .guides-header {
+      margin-bottom: clamp(24px, 3.5vw, 36px);
+    }
+    .guides-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(32px, 5vw, 56px);
+    }
+    .guide-card {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    .guide-photo {
+      aspect-ratio: 1;
+      width: 100%;
+      box-shadow: 0 10px 24px rgba(14, 27, 48, 0.06);
+    }
+    .guide-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .guide-name {
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--stone);
+      line-height: 1.1;
+    }
+    .guide-role {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--amber);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .guide-bio {
+      font-size: 0.98rem;
+      color: var(--text-body);
+      line-height: 1.75;
+    }
+
+    /* ==========================================================================
+       10. Proof / Attendee Feedback
+       ========================================================================== */
+    .proof-section {
+      padding: clamp(44px, 5vw, 64px) 0;
+      background: var(--cream);
+    }
+    .proof-header {
+      margin-bottom: clamp(24px, 3.5vw, 36px);
+    }
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .proof-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: clamp(32px, 4vw, 44px) 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: space-between;
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .proof-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(14, 27, 48, 0.05);
+    }
+    .proof-quote {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      line-height: 1.4;
+      color: var(--stone);
+      font-style: italic;
+    }
+    .proof-caption {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      font-weight: 500;
+      border-top: 1px solid rgba(196, 187, 180, 0.3);
+      padding-top: 14px;
+    }
+    .proof-placeholder-card {
+      border-style: dashed;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ==========================================================================
+       11. FAQ Accordion
+       ========================================================================== */
+    .faq-section {
+      padding: clamp(44px, 5vw, 64px) 0;
+      background: var(--paper);
+    }
+    .faq-container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .faq-header {
+      margin-bottom: clamp(24px, 3vw, 36px);
+    }
+    .faq-accordion {
+      
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+      padding: 24px 0;
+      transition: var(--transition);
+    }
+    .faq-item summary {
+      cursor: pointer;
+      list-style: none;
+      font-family: var(--serif);
+      font-size: clamp(1.4rem, 2.2vw, 1.75rem);
+      font-weight: 400;
+      color: var(--stone);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-toggle-icon {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(104, 143, 157, 0.3);
+      border-radius: 50%;
+      font-family: var(--sans);
+      font-size: 1.2rem;
+      color: var(--seafoam);
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+    .faq-item[open] .faq-toggle-icon {
+      background: var(--stone);
+      border-color: var(--stone);
+      color: var(--cream);
+      transform: rotate(45deg);
+    }
+    .faq-body {
+      margin-top: 14px;
+      padding-right: 48px;
+    }
+    .faq-body p {
+      font-size: 1.02rem;
+      color: var(--text-body);
+      line-height: 1.75;
+    }
+
+    /* ==========================================================================
+       12. Final Urgency CTA & Footer
+       ========================================================================== */
+    .final-cta-section {
+      background: var(--stone);
+      color: var(--cream);
+      padding: clamp(54px, 6vw, 78px) 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .final-cta-inner {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    .final-cta-h2 {
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      color: var(--cream);
+      line-height: 1.08;
+    }
+    .final-cta-sub {
+      color: var(--breeze);
+      max-width: 540px;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      opacity: 0.9;
+    }
+    .final-cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 12px;
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: var(--stone);
+      padding: 30px 0;
+      color: var(--wave);
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+    .footer-logo {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      letter-spacing: 0.35em;
+      color: #FFFFFF;
+    }
+    .footer-link {
+      color: var(--breeze);
+      border-bottom: 1px solid transparent;
+    }
+    .footer-link:hover {
+      color: var(--amber);
+      border-bottom-color: var(--amber);
+    }
+
+    /* ==========================================================================
+       Responsive Breakpoints
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .hero-visual {
+        max-height: 480px;
+      }
+      .outcomes-grid, .foryou-grid, .proof-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .evening-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .groups-grid {
+        grid-template-columns: 1fr;
+      }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+        margin: 0 auto;
+      }
+      .gift-card {
+        grid-template-columns: 1fr;
+      }
+      .gift-visual {
+        min-height: 240px;
+        border-left: none;
+        
+      }
+      .guides-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .mobile-menu-toggle {
+        display: block;
+      }
+      .hero-section {
+        padding-top: 110px;
+      }
+      .hero-metrics {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+      .guide-card {
+        grid-template-columns: 120px 1fr;
+        gap: 20px;
+      }
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. FIXED NAVIGATION
+       ========================================================================== -->
+  <header class="site-nav" id="top">
+    <div class="wrap nav-inner">
+      <a href="#top" class="brand-logo">Stillness</a>
+      <nav class="nav-links">
+        <a href="#evening" class="nav-item">The evening</a>
+        <a href="#dates" class="nav-item">2027 dates</a>
+        <a href="#pricing" class="nav-item">Pricing</a>
+        <a href="#faq" class="nav-item">FAQ</a>
+        <a href="#pricing" class="btn btn-solid nav-cta-btn">Reserve a seat</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu" onclick="toggleMobileNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==========================================================================
+         2. HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Men's Series · 2027 · Vancouver</div>
+          <h1 class="hero-h1">One evening a month to put it all down — <em class="accent">for a whole year.</em></h1>
+          <p class="hero-sub">Twelve evenings for men who carry everything. Breathwork, live sound and a room of men who get it — on the last weekend of every month, starting January 29, 2027.</p>
+          
+          <div class="hero-actions">
+            <a href="#pricing" class="btn btn-solid">Reserve a founding seat · $480</a>
+            <a href="#pricing" class="btn btn-line">Try one session first</a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <div class="metric-num">12</div>
+              <div class="metric-label">evenings in 2027</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-num">40</div>
+              <div class="metric-label">founding seats for 2027</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-num">$40</div>
+              <div class="metric-label">per evening, all year</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="visual-frame hero-visual">
+          <svg class="visual-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 3v18M3 12h18M8 8l8 8M8 16l8-8"/>
+          </svg>
+          <span class="visual-caption">Visual Preview · Session 01</span>
+          <span class="visual-desc">Men lying down during the sound journey, candlelight, The Shop Theatre</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. OUTCOMES BAND (Dark Stone Midnight Ground)
+         ========================================================================== -->
+    <section class="outcomes-section">
+      <div class="wrap outcomes-grid">
+        <div class="outcome-card">
+          <div class="outcome-kicker">WHAT YOU LEAVE WITH</div>
+          <h3 class="outcome-title">A quieter head</h3>
+          <p class="outcome-desc">A full evening off — no phone, no output, nothing to fix. Most men say they sleep better that night.</p>
+        </div>
+
+        <div class="outcome-card">
+          <div class="outcome-kicker">WHAT YOU BUILD</div>
+          <h3 class="outcome-title">Tools that last</h3>
+          <p class="outcome-desc">Breathwork and journaling you can use on a hard Tuesday, not just on the night.</p>
+        </div>
+
+        <div class="outcome-card">
+          <div class="outcome-kicker">WHO YOU FIND</div>
+          <h3 class="outcome-title">Men who get it</h3>
+          <p class="outcome-desc">Your group of about 13 men stays the same all year. By spring, it's not a class — it's your crew.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. "THIS IS FOR YOU IF"
+         ========================================================================== -->
+    <section class="foryou-section wrap">
+      <div class="foryou-header">
+        <div class="eyebrow">This is for you if</div>
+        <h2 class="h2">You recognise yourself <em class="accent">in at least one of these.</em></h2>
+      </div>
+
+      <div class="foryou-grid">
+        <div class="foryou-card">
+          <div class="foryou-num">01</div>
+          <h3 class="foryou-title">You're always "fine"</h3>
+          <p class="foryou-body">On the outside you've got it together. But there's a version of you that's exhausted — and he hasn't had space to speak in a while.</p>
+        </div>
+
+        <div class="foryou-card">
+          <div class="foryou-num">02</div>
+          <h3 class="foryou-title">Rest feels unearned</h3>
+          <p class="foryou-body">Slowing down triggers guilt. You rest when you collapse, not because you choose to. You're ready for that to change.</p>
+        </div>
+
+        <div class="foryou-card">
+          <div class="foryou-num">03</div>
+          <h3 class="foryou-title">You want something real</h3>
+          <p class="foryou-body">You've tried the gym, the app, the night out. You want something you feel in your body, not just your head.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. "THE EVENING" (Run of Show & Logistics)
+         ========================================================================== -->
+    <section class="evening-section" id="evening">
+      <div class="wrap evening-grid">
+        <div>
+          <div class="eyebrow">The evening</div>
+          <h2 class="h2" style="margin-bottom: 20px;">What actually happens <em class="accent">in the room.</em></h2>
+          <p style="margin-bottom: 28px;">No experience needed. No one is asked to share. Wear something comfortable — mats, blankets and journals are provided.</p>
+          
+          <div class="evening-meta-box">
+            <div class="meta-row">
+              <span class="meta-label">When</span>
+              <span class="meta-value">Last weekend of every month · choose one of 3 groups</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Where</span>
+              <span class="meta-value">The Shop Theatre · [street address], Vancouver</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Group</span>
+              <span class="meta-value">About 13 men per group · same group all year · 40 seats total</span>
+            </div>
+          </div>
+        </div>
+
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <span class="timeline-badge">[20 MIN]</span>
+            <div class="timeline-content">
+              <h3>Arrive &amp; ground</h3>
+              <p>Tea, quiet conversation, phones away. Nothing to perform.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-badge">[25 MIN]</span>
+            <div class="timeline-content">
+              <h3>Story &amp; breath</h3>
+              <p>A short, honest talk on pressure and rest, then guided breathwork to drop out of your head.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-badge">45 MIN</span>
+            <div class="timeline-content">
+              <h3>Live sound journey</h3>
+              <p>Lie down. Crystal bowls and live instruments do the work. No effort required.</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-badge">[30 MIN]</span>
+            <div class="timeline-content">
+              <h3>Reflect &amp; close</h3>
+              <p>Journaling prompts, optional sharing, and a clear head for the drive home.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. THE 2027 SERIES / GROUPS & DATES
+         ========================================================================== -->
+    <section class="dates-section" id="dates">
+      <div class="wrap">
+        <div class="dates-header-row">
+          <div>
+            <div class="eyebrow">The 2027 series</div>
+            <h2 class="h2">Pick your group. <em class="accent">Keep it all year.</em></h2>
+          </div>
+          <a href="#pricing" class="cal-link">ADD MY 12 DATES TO CALENDAR →</a>
+        </div>
+
+        <div class="groups-grid">
+          <div class="group-card">
+            <span class="group-tag">GROUP 1</span>
+            <span class="group-name">Friday evening</span>
+            <span class="group-details">[7:00 – 9:30 PM] · Last Friday · [X] of 13 seats left</span>
+          </div>
+          <div class="group-card">
+            <span class="group-tag">GROUP 2</span>
+            <span class="group-name">Saturday afternoon</span>
+            <span class="group-details">[2:00 – 4:30 PM] · Last Saturday · [X] of 13 seats left</span>
+          </div>
+          <div class="group-card">
+            <span class="group-tag">GROUP 3</span>
+            <span class="group-name">Saturday evening</span>
+            <span class="group-details">[7:00 – 9:30 PM] · Last Saturday · [X] of 14 seats left</span>
+          </div>
+        </div>
+
+        <div class="calendar-container">
+          <div class="eyebrow" style="margin-bottom: 20px;">2027 weekends</div>
+          <div class="cal-grid">
+            <div class="cal-item">
+              <span class="cal-num">SESSION 01</span>
+              <span class="cal-month">January</span>
+              <span class="cal-days">Fri 29 · Sat 30</span>
+            </div>
+            <div class="cal-item">
+              <span class="cal-num">SESSION 02</span>
+              <span class="cal-month">February</span>
+              <span class="cal-days">Fri 26 · Sat 27</span>
+            </div>
+            <div class="cal-item">
+              <span class="cal-num">SESSION 03</span>
+              <span class="cal-month">March</span>
+              <span class="cal-days">Fri 26 · Sat 27</span>
+            </div>
+            <div class="cal-item">
+              <span class="cal-num">SESSION 04</span>
+              <span class="cal-month">April</span>
+              <span class="cal-days">Fri 23 · Sat 24</span>
+            </div>
+            <div class="cal-item">
+              <span class="cal-num">SESSION 05</span>
+              <span class="cal-month">May</span>
+              <span class="cal-days">Fri 28 · Sat 29</span>
+            </div>
+            <div class="cal-item">
+              <span class="cal-num">SESSION 06</span>
+              <span class="cal-month">June</span>
+              <span class="cal-days">Fri 25 · Sat 26</span>
+            </div>
+            <div class="cal-item">
+              <span class="cal-num">SESSION 07</span>
+              <span class="cal-month">July</span>
+              <span class="cal-days">Fri 30 · Sat 31</span>
+            </div>
+            <div class="cal-item">
+              <span class="cal-num">SESSION 08</span>
+              <span class="cal-month">August</span>
+              <span class="cal-days">Fri 27 · Sat 28</span>
+            </div>
+            <div class="cal-item">
+              <span class="cal-num">SESSION 09</span>
+              <span class="cal-month">September</span>
+              <span class="cal-days">Fri 24 · Sat 25</span>
+            </div>
+            <div class="cal-item">
+              <span class="cal-num">SESSION 10</span>
+              <span class="cal-month">October</span>
+              <span class="cal-days">Fri 29 · Sat 30</span>
+            </div>
+            <div class="cal-item">
+              <span class="cal-num">SESSION 11</span>
+              <span class="cal-month">November</span>
+              <span class="cal-days">Fri 26 · Sat 27</span>
+            </div>
+            <div class="cal-item">
+              <span class="cal-num">SESSION 12</span>
+              <span class="cal-month">December</span>
+              <span class="cal-days">Fri 17 · Sat 18</span>
+              <span class="cal-note">Moved for the holidays</span>
+            </div>
+          </div>
+
+          <div class="dates-flexibility-note">
+            Can't make your night? Swap into another group that weekend if there's room, or send a friend in your place. Your seat is never wasted.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. PRICING & TIERS
+         ========================================================================== -->
+    <section class="pricing-section wrap" id="pricing">
+      <div class="pricing-intro">
+        <div class="eyebrow">Choose your way in</div>
+        <h2 class="h2" style="margin-bottom: 16px;">Commit to the year, <em class="accent">or start with one night.</em></h2>
+        <p>All prices in CAD. Founding pricing closes January 20, 2027 or when all 40 seats are gone.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Tier 1: Drop-In -->
+        <div class="price-card">
+          <h3 class="price-title">DROP-IN</h3>
+          <div>
+            <span class="price-figure">$55</span>
+            <span class="price-sub"> / evening</span>
+          </div>
+          <p class="price-desc">One session, any month there's space. The easiest first step.</p>
+          <a href="#" class="btn btn-line">Book one evening</a>
+        </div>
+
+        <!-- Tier 2: 6-Month Package -->
+        <div class="price-card">
+          <h3 class="price-title">6-MONTH PACKAGE</h3>
+          <div>
+            <span class="price-figure">$270</span>
+            <span class="price-sub"> · $45 each</span>
+          </div>
+          <p class="price-desc">January to June. Upgrade to the full year anytime and we credit what you paid.</p>
+          <a href="#" class="btn btn-line">Start with 6</a>
+        </div>
+
+        <!-- Tier 3: Founding Member 12-Months (FEATURED LUXURY BLACK CARD) -->
+        <div class="price-card price-card-featured">
+          <div class="price-badge">[X] OF 40 SEATS LEFT</div>
+          <h3 class="price-title">FOUNDING MEMBER · 12 MONTHS</h3>
+          <div>
+            <span class="price-figure">$480</span>
+            <span class="price-sub"> · $40 each</span>
+          </div>
+          <ul class="price-features-list">
+            <li>All 12 evenings, your group guaranteed</li>
+            <li>Save $180 vs drop-in</li>
+            <li>Swap groups if you miss your night</li>
+            <li>Founding price locked for 2028</li>
+          </ul>
+          <a href="#" class="btn btn-light">Reserve my seat</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. GIFT OF STILLNESS
+         ========================================================================== -->
+    <section class="gift-section wrap" id="gift">
+      <div class="gift-card">
+        <div class="gift-content">
+          <div class="eyebrow">The gift for the man who "doesn't need anything"</div>
+          <h2 class="h2">Give him a year <em class="accent">of stillness.</em></h2>
+          <p>For a partner, father, brother or friend who looks after everyone but himself. You get a printable gift card in time for the holidays; he picks his start month.</p>
+          
+          <div class="gift-actions">
+            <a href="#pricing" class="btn btn-solid">Gift the year · $480</a>
+            <a href="#pricing" class="btn btn-line">Gift one evening · $55</a>
+          </div>
+        </div>
+
+        <div class="visual-frame gift-visual">
+          <svg class="visual-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="3" y="4" width="18" height="16" rx="2"/>
+            <path d="M3 10h18M8 15h2M14 15h2"/>
+          </svg>
+          <span class="visual-caption">Gift Voucher Artifact</span>
+          <span class="visual-desc">Gift card mockup — "A Year of Stillness, 2027"</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. YOUR GUIDES
+         ========================================================================== -->
+    <section class="guides-section">
+      <div class="wrap">
+        <div class="guides-header">
+          <div class="eyebrow">Your guides</div>
+          <h2 class="h2">Led by men who practise <em class="accent">what they hold space for.</em></h2>
+        </div>
+
+        <div class="guides-grid">
+          <!-- Guide 1: Sunny -->
+          <div class="guide-card">
+            <div class="visual-frame guide-photo">
+              <svg class="visual-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <circle cx="12" cy="8" r="5"/>
+                <path d="M20 21a8 8 0 10-16 0"/>
+              </svg>
+              <span class="visual-caption">Sunny</span>
+            </div>
+            <div class="guide-info">
+              <h3 class="guide-name">Sunny</h3>
+              <div class="guide-role">MEN'S MENTAL HEALTH · [CREDENTIAL]</div>
+              <p class="guide-bio">[One sentence on why Sunny does this work — his own story.] Guides conversations that support men's emotional resilience and honest connection. [X years / training].</p>
+            </div>
+          </div>
+
+          <!-- Guide 2: Navin -->
+          <div class="guide-card">
+            <div class="visual-frame guide-photo">
+              <svg class="visual-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                <circle cx="12" cy="8" r="5"/>
+                <path d="M20 21a8 8 0 10-16 0"/>
+              </svg>
+              <span class="visual-caption">Navin</span>
+            </div>
+            <div class="guide-info">
+              <h3 class="guide-name">Navin</h3>
+              <div class="guide-role">SOUND &amp; BREATHWORK · [CREDENTIAL]</div>
+              <p class="guide-bio">[One sentence on Navin's path into this work.] Facilitates restorative experiences for nervous-system regulation and self-inquiry. [X years / training].</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. PROOF / ATTENDEE FEEDBACK
+         ========================================================================== -->
+    <section class="proof-section wrap">
+      <div class="proof-header">
+        <div class="eyebrow">From Session 01 · March 27, 2026</div>
+        <h2 class="h2">12 men came. <em class="accent">[X] came back.</em></h2>
+      </div>
+
+      <div class="proof-grid">
+        <figure class="proof-card">
+          <blockquote class="proof-quote">
+            "I didn't know I needed this until I walked out of it. The sound hit something I didn't have words for. I'm coming back."
+          </blockquote>
+          <figcaption class="proof-caption">— ANURAG, ATTENDEE</figcaption>
+        </figure>
+
+        <figure class="proof-card proof-placeholder-card">
+          <blockquote class="proof-quote" style="color: var(--text-light); font-size: 1.25rem;">
+            [Second attendee quote — ideally about being sceptical before coming.]
+          </blockquote>
+          <figcaption class="proof-caption">— [NAME, AGE / JOB]</figcaption>
+        </figure>
+
+        <figure class="proof-card proof-placeholder-card">
+          <blockquote class="proof-quote" style="color: var(--text-light); font-size: 1.25rem;">
+            [Third quote — ideally about what changed in the days after.]
+          </blockquote>
+          <figcaption class="proof-caption">— [NAME, AGE / JOB]</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         11. FREQUENTLY ASKED QUESTIONS
+         ========================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="wrap faq-container">
+        <div class="faq-header">
+          <div class="eyebrow">Questions</div>
+          <h2 class="h2">Before you <em class="accent">walk in.</em></h2>
+        </div>
+
+        <div class="faq-accordion">
+          <details class="faq-item" open>
+            <summary>
+              <span>I've never done anything like this. Will it be weird?</span>
+              <span class="faq-toggle-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Most men in Session 01 hadn't either. You mostly lie down and listen. Nothing is asked of you that you don't choose.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Do I have to talk or share?</span>
+              <span class="faq-toggle-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>No. Sharing is always optional. Plenty of men stay quiet all evening.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>What if I miss a month?</span>
+              <span class="faq-toggle-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Swap into one of the other two groups that weekend if there's room, or send a friend in your place.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>What should I wear or bring?</span>
+              <span class="faq-toggle-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>Comfortable clothes and warm socks. Mats, blankets, journals and tea are provided.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Is this therapy?</span>
+              <span class="faq-toggle-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>No. It's a guided group wellness evening, not a replacement for professional mental-health care.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>What's your refund policy?</span>
+              <span class="faq-toggle-icon">+</span>
+            </summary>
+            <div class="faq-body">
+              <p>[Full refund up to January 13, 2027. After that, seats are transferable.]</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         12. FINAL URGENCY CTA
+         ========================================================================== -->
+    <section class="final-cta-section">
+      <div class="wrap final-cta-inner">
+        <h2 class="final-cta-h2">The series begins <em class="accent">January 29.</em></h2>
+        <p class="final-cta-sub">Only 40 founding seats for 2027. Once they're gone, the series is closed until 2028.</p>
+        
+        <div class="final-cta-actions">
+          <a href="#pricing" class="btn btn-light">Reserve my seat · $480</a>
+          <a href="#" class="btn btn-line-light">Not yet? Join the WhatsApp group</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-logo">STILLNESS</div>
+      <a href="mailto:info@wearestillness.com" class="footer-link">info@wearestillness.com</a>
+      <div>© 2026 Stillness Wellness Co.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation Background Scroll Effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('header.site-nav');
+      if (window.scrollY > 40) {
+        nav.style.boxShadow = '0 10px 30px rgba(14, 27, 48, 0.05)';
+      } else {
+        nav.style.boxShadow = 'none';
+      }
+    });
+
+    // Mobile Navigation Toggle
+    function toggleMobileNav() {
+      const navLinks = document.querySelector('.nav-links');
+      if (navLinks.style.display === 'flex') {
+        navLinks.style.display = 'none';
+      } else {
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '76px';
+        navLinks.style.left = '0';
+        navLinks.style.right = '0';
+        navLinks.style.background = 'rgba(255, 255, 255, 0.98)';
+        navLinks.style.padding = '24px';
+        navLinks.style.borderBottom = '1px solid var(--line)';
+        navLinks.style.gap = '20px';
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!-- Elementor HTML Widget: Men's Series LP — Section 10: Proof / Attendee Feedback -->
+<section class="ms-proof-section">
+  <div class="ms-wrap">
+    <div class="ms-proof-header">
+      <div class="ms-eyebrow">From Session 01 · March 27, 2026</div>
+      <h2 class="ms-h2">12 men came. <em class="ms-accent">[X] came back.</em></h2>
+    </div>
+
+    <div class="ms-proof-grid">
+      <figure class="ms-proof-card">
+        <blockquote class="ms-proof-quote">
+          "I didn't know I needed this until I walked out of it. The sound hit something I didn't have words for. I'm coming back."
+        </blockquote>
+        <figcaption class="ms-proof-caption">— ANURAG, ATTENDEE</figcaption>
+      </figure>
+
+      <figure class="ms-proof-card ms-proof-placeholder-card">
+        <blockquote class="ms-proof-quote" style="color: #7A8F96; font-size: 1.25rem;">
+          [Second attendee quote — ideally about being sceptical before coming.]
+        </blockquote>
+        <figcaption class="ms-proof-caption">— [NAME, AGE / JOB]</figcaption>
+      </figure>
+
+      <figure class="ms-proof-card ms-proof-placeholder-card">
+        <blockquote class="ms-proof-quote" style="color: #7A8F96; font-size: 1.25rem;">
+          [Third quote — ideally about what changed in the days after.]
+        </blockquote>
+        <figcaption class="ms-proof-caption">— [NAME, AGE / JOB]</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ==========================================================================
+   Section 10: Proof / Feedback Scoped CSS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Jost:wght@300;400;500&display=swap');
+
+
+/* Break out of Elementor boxed containers & theme gutters to 100% viewport width */
+.elementor-section:has(.ms-proof-section),
+.e-con:has(.ms-proof-section),
+.e-con-boxed:has(.ms-proof-section),
+.e-con-full:has(.ms-proof-section),
+.elementor-container:has(.ms-proof-section),
+.elementor-column:has(.ms-proof-section),
+.elementor-widget-wrap:has(.ms-proof-section),
+.elementor-widget:has(.ms-proof-section),
+.elementor-widget-container:has(.ms-proof-section),
+.elementor-widget-html:has(.ms-proof-section) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.elementor-section:has(.ms-proof-section) > .elementor-container,
+.e-con:has(.ms-proof-section) > .e-con-inner,
+.elementor-widget:has(.ms-proof-section) > .elementor-widget-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.ms-proof-section {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  background: #FFFFFF;
+  padding: clamp(44px, 5vw, 64px) 0;
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0E1B30;
+  box-sizing: border-box;
+}
+
+.ms-proof-section * {
+  box-sizing: border-box;
+}
+
+.ms-proof-section .ms-wrap {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+.ms-proof-header {
+  margin-bottom: clamp(24px, 3.5vw, 36px);
+}
+
+.ms-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C4935A;
+  margin-bottom: 0.5rem;
+}
+
+.ms-eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: #C4935A;
+}
+
+.ms-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #0E1B30 !important;
+  margin: 0;
+  font-weight: 300;
+}
+
+.ms-accent {
+  font-style: italic;
+  color: #688F9D;
+}
+
+.ms-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.ms-proof-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(196, 187, 180, 0.45);
+  padding: clamp(44px, 5vw, 64px) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+  margin: 0;
+}
+
+.ms-proof-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(14, 27, 48, 0.05);
+}
+
+.ms-proof-quote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.45rem;
+  line-height: 1.4;
+  color: #0E1B30 !important;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+
+.ms-proof-caption {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #7A8F96;
+  font-weight: 500;
+  border-top: 1px solid rgba(196, 187, 180, 0.3);
+  padding-top: 14px;
+  margin: 0;
+}
+
+.ms-proof-placeholder-card {
+  border-style: dashed;
+  background: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .ms-proof-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+</style>

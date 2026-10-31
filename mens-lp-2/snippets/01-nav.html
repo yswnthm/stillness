@@ -1,0 +1,232 @@
+<!-- Elementor HTML Widget: Men's Series LP — Section 01: Fixed Navigation -->
+<header class="ms-site-nav" id="top">
+  <div class="ms-wrap ms-nav-inner">
+    <a href="#top" class="ms-brand-logo">Stillness</a>
+    <nav class="ms-nav-links">
+      <a href="#evening" class="ms-nav-item">The evening</a>
+      <a href="#dates" class="ms-nav-item">2027 dates</a>
+      <a href="#pricing" class="ms-nav-item">Pricing</a>
+      <a href="#faq" class="ms-nav-item">FAQ</a>
+      <a href="#pricing" class="ms-btn ms-btn-solid ms-nav-cta-btn">Reserve a seat</a>
+    </nav>
+    <button class="ms-mobile-menu-toggle" aria-label="Toggle Navigation Menu" onclick="toggleMsNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<style>
+/* ==========================================================================
+   Section 01: Fixed Navigation Scoped CSS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500;600&display=swap');
+
+
+/* Break out of Elementor boxed containers & theme gutters to 100% viewport width */
+.elementor-section:has(.ms-site-nav),
+.e-con:has(.ms-site-nav),
+.e-con-boxed:has(.ms-site-nav),
+.e-con-full:has(.ms-site-nav),
+.elementor-container:has(.ms-site-nav),
+.elementor-column:has(.ms-site-nav),
+.elementor-widget-wrap:has(.ms-site-nav),
+.elementor-widget:has(.ms-site-nav),
+.elementor-widget-container:has(.ms-site-nav),
+.elementor-widget-html:has(.ms-site-nav) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.elementor-section:has(.ms-site-nav) > .elementor-container,
+.e-con:has(.ms-site-nav) > .e-con-inner,
+.elementor-widget:has(.ms-site-nav) > .elementor-widget-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+header.ms-site-nav {
+  width: 100vw !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.ms-wrap {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+.ms-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.ms-brand-logo {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #0E1B30 !important;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ms-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.ms-nav-item {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #3D4F57 !important;
+  text-decoration: none;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+.ms-nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #C4935A;
+  transition: width 0.3s ease;
+}
+
+.ms-nav-item:hover {
+  color: #0E1B30 !important;
+}
+
+.ms-nav-item:hover::after {
+  width: 100%;
+}
+
+.ms-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.ms-btn-solid {
+  background: #0E1B30;
+  color: #FFFFFF !important;
+  border: 1px solid #0E1B30;
+}
+
+.ms-btn-solid:hover {
+  background: #1D3152;
+  border-color: #1D3152;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(14, 27, 48, 0.15);
+}
+
+.ms-nav-cta-btn {
+  min-height: 42px;
+  padding: 0 22px;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+}
+
+.ms-mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.ms-mobile-menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: #0E1B30;
+  margin: 5px 0;
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .ms-nav-links {
+    display: none;
+  }
+  .ms-mobile-menu-toggle {
+    display: block;
+  }
+}
+</style>
+
+<script>
+window.addEventListener('scroll', function() {
+  var nav = document.querySelector('header.ms-site-nav');
+  if (nav) {
+    if (window.scrollY > 40) {
+      nav.style.boxShadow = '0 10px 30px rgba(14, 27, 48, 0.05)';
+    } else {
+      nav.style.boxShadow = 'none';
+    }
+  }
+});
+
+function toggleMsNav() {
+  var navLinks = document.querySelector('.ms-nav-links');
+  if (!navLinks) return;
+  if (navLinks.style.display === 'flex') {
+    navLinks.style.display = 'none';
+  } else {
+    navLinks.style.display = 'flex';
+    navLinks.style.flexDirection = 'column';
+    navLinks.style.position = 'absolute';
+    navLinks.style.top = '76px';
+    navLinks.style.left = '0';
+    navLinks.style.right = '0';
+    navLinks.style.background = 'rgba(255, 255, 255, 0.98)';
+    navLinks.style.padding = '24px';
+    navLinks.style.borderBottom = '1px solid rgba(196, 187, 180, 0.45)';
+    navLinks.style.gap = '20px';
+  }
+}
+</script>

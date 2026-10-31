@@ -1,0 +1,282 @@
+<!-- Elementor HTML Widget: Men's Series LP — Section 05: The Evening -->
+<section class="ms-evening-section" id="evening">
+  <div class="ms-wrap ms-evening-grid">
+    <div>
+      <div class="ms-eyebrow">The evening</div>
+      <h2 class="ms-h2" style="margin-bottom: 20px;">What actually happens <em class="ms-accent">in the room.</em></h2>
+      <p class="ms-evening-p" style="margin-bottom: 28px;">No experience needed. No one is asked to share. Wear something comfortable — mats, blankets and journals are provided.</p>
+      
+      <div class="ms-evening-meta-box">
+        <div class="ms-meta-row">
+          <span class="ms-meta-label">When</span>
+          <span class="ms-meta-value">Last weekend of every month · choose one of 3 groups</span>
+        </div>
+        <div class="ms-meta-row">
+          <span class="ms-meta-label">Where</span>
+          <span class="ms-meta-value">The Shop Theatre · [street address], Vancouver</span>
+        </div>
+        <div class="ms-meta-row">
+          <span class="ms-meta-label">Group</span>
+          <span class="ms-meta-value">About 13 men per group · same group all year · 40 seats total</span>
+        </div>
+      </div>
+    </div>
+
+    <ol class="ms-timeline-list">
+      <li class="ms-timeline-item">
+        <span class="ms-timeline-badge">[20 MIN]</span>
+        <div class="ms-timeline-content">
+          <h3>Arrive &amp; ground</h3>
+          <p>Tea, quiet conversation, phones away. Nothing to perform.</p>
+        </div>
+      </li>
+      <li class="ms-timeline-item">
+        <span class="ms-timeline-badge">[25 MIN]</span>
+        <div class="ms-timeline-content">
+          <h3>Story &amp; breath</h3>
+          <p>A short, honest talk on pressure and rest, then guided breathwork to drop out of your head.</p>
+        </div>
+      </li>
+      <li class="ms-timeline-item">
+        <span class="ms-timeline-badge">45 MIN</span>
+        <div class="ms-timeline-content">
+          <h3>Live sound journey</h3>
+          <p>Lie down. Crystal bowls and live instruments do the work. No effort required.</p>
+        </div>
+      </li>
+      <li class="ms-timeline-item">
+        <span class="ms-timeline-badge">[30 MIN]</span>
+        <div class="ms-timeline-content">
+          <h3>Reflect &amp; close</h3>
+          <p>Journaling prompts, optional sharing, and a clear head for the drive home.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<style>
+/* ==========================================================================
+   Section 05: The Evening Scoped CSS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Jost:wght@300;400;500&display=swap');
+
+
+/* Break out of Elementor boxed containers & theme gutters to 100% viewport width */
+.elementor-section:has(.ms-evening-section),
+.e-con:has(.ms-evening-section),
+.e-con-boxed:has(.ms-evening-section),
+.e-con-full:has(.ms-evening-section),
+.elementor-container:has(.ms-evening-section),
+.elementor-column:has(.ms-evening-section),
+.elementor-widget-wrap:has(.ms-evening-section),
+.elementor-widget:has(.ms-evening-section),
+.elementor-widget-container:has(.ms-evening-section),
+.elementor-widget-html:has(.ms-evening-section) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.elementor-section:has(.ms-evening-section) > .elementor-container,
+.e-con:has(.ms-evening-section) > .e-con-inner,
+.elementor-widget:has(.ms-evening-section) > .elementor-widget-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.ms-evening-section {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  background: #FFFFFF;
+  padding: clamp(44px, 5vw, 64px) 0;
+  
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0E1B30;
+  box-sizing: border-box;
+}
+
+.ms-evening-section * {
+  box-sizing: border-box;
+}
+
+.ms-evening-section .ms-wrap {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+.ms-evening-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: clamp(48px, 6vw, 84px);
+  align-items: start;
+}
+
+.ms-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C4935A;
+  margin-bottom: 0.5rem;
+}
+
+.ms-eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: #C4935A;
+}
+
+.ms-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #0E1B30 !important;
+  margin: 0;
+  font-weight: 300;
+}
+
+.ms-accent {
+  font-style: italic;
+  color: #688F9D;
+}
+
+.ms-evening-p {
+  font-size: 1.05rem;
+  color: #3D4F57 !important;
+  line-height: 1.75;
+  font-weight: 300;
+  margin: 0;
+}
+
+.ms-evening-meta-box {
+  background: #FFFFFF;
+  border: 1px solid rgba(196, 187, 180, 0.45);
+  padding: 32px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 2px;
+  box-shadow: 0 4px 20px rgba(14, 27, 48, 0.03);
+}
+
+.ms-meta-row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-bottom: 1px solid rgba(196, 187, 180, 0.3);
+  padding-bottom: 14px;
+}
+
+.ms-meta-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ms-meta-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #7A8F96;
+  padding-top: 2px;
+}
+
+.ms-meta-value {
+  color: #0E1B30 !important;
+  font-weight: 400;
+}
+
+.ms-timeline-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(196, 187, 180, 0.45);
+  
+  margin: 0;
+  padding: 0;
+}
+
+.ms-timeline-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 24px;
+  padding: 28px 0;
+  
+  transition: all 0.35s ease;
+}
+
+.ms-timeline-item:hover {
+  padding-left: 8px;
+}
+
+.ms-timeline-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: #688F9D;
+  border: 1px solid rgba(104, 143, 157, 0.4);
+  padding: 4px 10px;
+  height: 28px;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+
+.ms-timeline-content h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #0E1B30 !important;
+  margin: 0 0 6px 0;
+}
+
+.ms-timeline-content p {
+  font-size: 1rem;
+  color: #3D4F57 !important;
+  line-height: 1.7;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .ms-evening-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ms-timeline-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+</style>

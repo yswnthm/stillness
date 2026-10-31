@@ -1,0 +1,34 @@
+{
+  "content": [
+    {
+      "id": "d_quiz_c",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "d_quiz_h",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"dq-quiz\" id=\"start\">\n  <div class=\"dq-wrap\">\n    <span class=\"dq-eyebrow-dark\">The diagnostic</span>\n    <h2 class=\"dq-h2\">Fifteen questions. <em>Go with your first instinct.</em></h2>\n\n    <!-- The whole interface is one shortcode. Copy + questions come from\n         content/quiz-content.php, behaviour from the JS snippet. -->\n    [stillness_quiz]\n\n    <p class=\"dq-hint\">Prefer to sit with it? <a href=\"mailto:hello@stillness.co\">Talk to us instead.</a></p>\n  </div>\n</section>\n\n<style>\n.dq-quiz { background: #FFFFFF !important; padding: clamp(5rem, 10vw, 8rem) 1.5rem !important; }\n.dq-wrap { max-width: 1080px !important; margin: 0 auto !important; }\n.dq-hint {\n  font-family: 'Lato', sans-serif !important;\n  font-size: 0.9rem !important;\n  font-weight: 300 !important;\n  color: rgba(14, 27, 48, 0.5) !important;\n  text-align: center !important;\n  margin: 3.5rem 0 0 !important;\n  border-top: 1px solid rgba(14, 27, 48, 0.1) !important;\n  padding-top: 2.5rem !important;\n}\n.dq-hint a { color: #2C7A7B !important; text-decoration: none !important; border-bottom: 1px solid rgba(44, 122, 123, 0.3) !important; }\n</style>"
+          },
+          "widgetType": "html",
+          "elements": []
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Diagnostic Quiz — 03 Quiz Interface",
+  "type": "section"
+}

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stillness Packages · Landing page link map</title>
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --stone: #0E1B30;
+    --midnight: #1D3152;
+    --seafoam: #688F9D;
+    --breeze: #D9E8EB;
+    --wave: #A4B2BA;
+    --sand: #C4BBB4;
+    --cream: #F7F0EC;
+    --ink: #25313A;
+    --muted: #68747B;
+    --line: rgba(14, 27, 48, 0.12);
+    --gold: #C5A880;
+    --alert: #A8553A;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: #EEF2F3;
+    color: var(--ink);
+    font-family: 'Jost', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: min(920px, calc(100% - 32px));
+    margin: 36px auto;
+    background: #FFFFFF;
+    box-shadow: 0 24px 70px rgba(14, 27, 48, 0.14);
+  }
+
+  .cover {
+    background: var(--stone);
+    color: var(--cream);
+    padding: 76px 72px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::after {
+    content: "";
+    position: absolute;
+    right: -100px;
+    bottom: -120px;
+    width: 360px;
+    height: 360px;
+    border: 1px solid rgba(217, 232, 235, 0.14);
+    border-radius: 50%;
+  }
+
+  .eyebrow {
+    margin: 0 0 16px;
+    color: var(--seafoam);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  h1 {
+    max-width: 680px;
+    font-size: 52px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+  }
+
+  .cover-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    color: var(--seafoam);
+    margin-top: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .cover-copy {
+    max-width: 620px;
+    margin: 22px 0 0;
+    color: var(--wave);
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(217, 232, 235, 0.16);
+    margin-top: 40px;
+  }
+
+  .meta div {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 16px 18px;
+  }
+
+  .meta span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--wave);
+    margin-bottom: 4px;
+  }
+
+  .meta strong {
+    font-weight: 500;
+    color: #FFFFFF;
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 56px 72px 72px;
+  }
+
+  section {
+    margin: 0 0 42px;
+    page-break-inside: avoid;
+  }
+
+  .section-num {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--seafoam);
+    margin-bottom: 10px;
+  }
+
+  .section-num::before {
+    content: "";
+    width: 22px;
+    height: 1px;
+    background: var(--seafoam);
+  }
+
+  h2 {
+    font-size: 32px;
+    color: var(--stone);
+    margin-bottom: 14px;
+  }
+
+  h3 {
+    font-size: 21px;
+    color: var(--midnight);
+    margin: 26px 0 8px;
+  }
+
+  p {
+    margin: 0 0 14px;
+    color: var(--ink);
+  }
+
+  .lede {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--midnight);
+    margin-bottom: 20px;
+  }
+
+  strong { font-weight: 600; color: var(--stone); }
+  em { color: var(--seafoam); font-style: italic; }
+
+  ul, ol { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+
+  a { color: var(--seafoam); }
+
+  .callout {
+    border-left: 3px solid var(--seafoam);
+    background: #F2F7F8;
+    padding: 18px 22px;
+    margin: 20px 0;
+    page-break-inside: avoid;
+  }
+
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout.alert {
+    border-left-color: var(--alert);
+    background: #FBF3F0;
+  }
+
+  .callout strong { color: var(--stone); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 22px;
+    font-size: 13.5px;
+    page-break-inside: avoid;
+  }
+
+  thead th {
+    text-align: left;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--stone);
+  }
+
+  tbody td {
+    padding: 11px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  td.num, th.num { text-align: right; white-space: nowrap; }
+
+  code {
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    font-size: 12.5px;
+    background: #F2F5F6;
+    padding: 2px 6px;
+    color: var(--midnight);
+  }
+
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+  }
+
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 46px;
+    margin-bottom: 14px;
+    page-break-inside: avoid;
+  }
+
+  .steps li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    color: var(--gold);
+  }
+
+  .questions {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+    counter-reset: q;
+  }
+
+  .questions li {
+    counter-increment: q;
+    position: relative;
+    padding: 16px 18px 16px 54px;
+    border: 1px solid var(--line);
+    margin-bottom: 10px;
+    background: #FCFDFD;
+    page-break-inside: avoid;
+  }
+
+  .questions li::before {
+    content: counter(q);
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--stone);
+    color: #fff;
+    font-size: 11px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .questions strong { display: block; margin-bottom: 3px; }
+
+  .endnote {
+    font-size: 12.5px;
+    color: var(--muted);
+    font-style: italic;
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+    margin-top: 36px;
+  }
+
+  @page {
+    margin: 16mm;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { width: 100%; margin: 0; box-shadow: none; }
+    .cover { padding: 48px 40px 40px; }
+    h1 { font-size: 42px; }
+    .content { padding: 36px 40px 48px; }
+    section, .callout, table, .questions li, .steps li { page-break-inside: avoid; }
+    h2, h3 { page-break-after: avoid; }
+  }
+
+  @media (max-width: 760px) {
+    .cover { padding: 48px 28px 40px; }
+    h1 { font-size: 38px; }
+    .content { padding: 36px 28px 48px; }
+    .meta { grid-template-columns: 1fr; }
+    h2 { font-size: 27px; }
+  }
+
+
+  .content > p:first-of-type {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--midnight);
+    margin-bottom: 20px;
+  }
+  .table-wrap { width: 100%; overflow-x: auto; }
+  .content table { min-width: 520px; }
+  .content h2 { margin-top: 42px; }
+  .content h2:first-of-type { margin-top: 0; }
+  .content h3 { margin-top: 28px; }
+  .content blockquote {
+    margin: 20px 0;
+    padding: 18px 22px;
+    border-left: 3px solid var(--gold);
+    background: #FBF8F3;
+    color: var(--midnight);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .content blockquote p:last-child { margin-bottom: 0; }
+  .content hr { border: none; border-top: 1px solid var(--line); margin: 32px 0; }
+  .content td code, .content th code { white-space: nowrap; }
+  @media print {
+    .table-wrap { overflow: visible; }
+    .content table { min-width: 0; }
+    a { color: inherit; text-decoration: none; }
+  }
+
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="cover">
+    <p class="eyebrow">Stillness Co. · Package system</p>
+    <h1>Stillness Packages</h1>
+    <p class="cover-subtitle">Landing page link map</p>
+    <p class="cover-copy">Every button, every SKU, and the copy on the page that still needs a decision before launch.</p>
+    <div class="meta">
+      <div><span>Prepared for</span><strong>Stillness Co.</strong></div>
+      <div><span>Prepared by</span><strong>Solicate</strong></div>
+      <div><span>Version</span><strong>1.1 · 24 October 2026</strong></div>
+    </div>
+  </header>
+  <div class="content">
+<h1>Stillness Packages</h1>
+<h2>Landing page link map</h2>
+<p>This is the bridge between the landing page and the five WooCommerce products. It lists every button that should point at a package, the copy on the page that the plugin does not support yet, and the order to do things in so the page never points at an empty cart.</p>
+<p>The site is <code>https://wearestillness.com</code>. The cart path is <code>/cart/</code>. If the site uses plain permalinks, the cart URL will be different; check <strong>WooCommerce → Settings → Advanced → Page setup</strong>.</p>
+<h2>The five links</h2>
+<p>Use the SKU form so the link survives a product being re-created:</p>
+<p><code>https://wearestillness.com/cart/?add-to-cart=mens-annual</code></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>Product</th>
+<th>Add-to-cart link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mens-annual</code></td>
+<td>Founding Member · 12 months</td>
+<td><code>https://wearestillness.com/cart/?add-to-cart=mens-annual</code></td>
+</tr>
+<tr>
+<td><code>mens-six-month</code></td>
+<td>6-Month Package</td>
+<td><code>https://wearestillness.com/cart/?add-to-cart=mens-six-month</code></td>
+</tr>
+<tr>
+<td><code>mens-single</code></td>
+<td>Single Evening</td>
+<td><code>https://wearestillness.com/cart/?add-to-cart=mens-single</code></td>
+</tr>
+<tr>
+<td><code>mens-gift-annual</code></td>
+<td>Gift · 12 months</td>
+<td><code>https://wearestillness.com/cart/?add-to-cart=mens-gift-annual</code></td>
+</tr>
+<tr>
+<td><code>mens-gift-single</code></td>
+<td>Gift · Single Evening</td>
+<td><code>https://wearestillness.com/cart/?add-to-cart=mens-gift-single</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>The plugin resolves the SKU before WooCommerce handles the request. Numeric product IDs still work, but the SKU form is easier to read and does not change when the product is re-created.</p>
+<h2>Button map</h2>
+<p>These are the buttons in <code>mens-lp-2/index.html</code> and <code>mens-lp-2/snippets/07-pricing.html</code> that currently point at <code>#</code>, <code>#top</code> or <code>#pricing</code>.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Where it is</th>
+<th>Current label</th>
+<th>Current link</th>
+<th>Should go to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>Reserve a seat</td>
+<td><code>#pricing</code></td>
+<td><code>mens-annual</code></td>
+</tr>
+<tr>
+<td>Hero</td>
+<td>Reserve a founding seat · $480</td>
+<td><code>#pricing</code></td>
+<td><code>mens-annual</code></td>
+</tr>
+<tr>
+<td>Hero</td>
+<td>Try one session first</td>
+<td><code>#pricing</code></td>
+<td><code>mens-single</code></td>
+</tr>
+<tr>
+<td>Pricing — Drop-in</td>
+<td>Book one evening</td>
+<td><code>#</code></td>
+<td><code>mens-single</code></td>
+</tr>
+<tr>
+<td>Pricing — 6-month</td>
+<td>Start with 6</td>
+<td><code>#</code></td>
+<td><code>mens-six-month</code></td>
+</tr>
+<tr>
+<td>Pricing — Founding</td>
+<td>Reserve my seat</td>
+<td><code>#</code></td>
+<td><code>mens-annual</code></td>
+</tr>
+<tr>
+<td>Gift</td>
+<td>Gift the year · $480</td>
+<td><code>#pricing</code></td>
+<td><code>mens-gift-annual</code></td>
+</tr>
+<tr>
+<td>Gift</td>
+<td>Gift one evening · $55</td>
+<td><code>#pricing</code></td>
+<td><code>mens-gift-single</code></td>
+</tr>
+<tr>
+<td>Dates</td>
+<td>Add my 12 dates to calendar →</td>
+<td><code>#pricing</code></td>
+<td>The Google Calendar link in Settings, or a public calendar URL</td>
+</tr>
+<tr>
+<td>Closing</td>
+<td>Join the WhatsApp group</td>
+<td><code>#</code></td>
+<td>The real WhatsApp group URL</td>
+</tr>
+<tr>
+<td>Footer</td>
+<td>info@wearestillness.com</td>
+<td><code>mailto:</code></td>
+<td>Leave as is</td>
+</tr>
+</tbody>
+</table></div>
+<p>The pricing snippet and the inline pricing section are duplicates. Update both, or delete one and keep the other.</p>
+<h2>The decisions the page is waiting on</h2>
+<p>The landing page promises more than the first version of the plugin does. These are not bugs in the plugin; they are choices the page makes that the product does not yet support. Each one needs a decision before the page goes live.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Page says</th>
+<th>What the plugin does now</th>
+<th>What to decide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"choose one of 3 groups" and three different times</td>
+<td>One date, one start time and one end time per evening, shared by every member.</td>
+<td>Simplify the page to one evening time, or add group selection to the plugin. Group selection is not built.</td>
+</tr>
+<tr>
+<td>"same group all year"</td>
+<td>There is no group field.</td>
+<td>Remove the promise, or add groups.</td>
+</tr>
+<tr>
+<td>"Swap into another group that weekend"</td>
+<td>There is no group swap. A member writes to the reply-to address, and Komal leaves the evening unused in the package.</td>
+<td>Reword as "if you cannot make your evening, reply to the email and the evening stays in your package."</td>
+</tr>
+<tr>
+<td>"Upgrade to the full year anytime and we credit what you paid"</td>
+<td>No upgrade, credit or proration. The 6-month package is a separate purchase.</td>
+<td>Remove the promise, or handle upgrades by hand with a custom order.</td>
+</tr>
+<tr>
+<td>"40 seats" and "13 per group"</td>
+<td>No seat counter or capacity rule. WooCommerce stock could cap a product, but not a group.</td>
+<td>Remove the numbers, or use WooCommerce stock on a single shared product.</td>
+</tr>
+<tr>
+<td>"January to June"</td>
+<td>The 6-month package is six evenings. It can start at any dated evening.</td>
+<td>Say "six evenings" unless the dates really are January to June.</td>
+</tr>
+<tr>
+<td>"Founding price locked for 2028"</td>
+<td>The package is a one-time purchase. There is no renewal or price lock.</td>
+<td>Remove the promise, or add a renewal product later.</td>
+</tr>
+<tr>
+<td>"printable gift card"</td>
+<td>The gift is an email and a membership. There is no printable card.</td>
+<td>Remove the card visual, or make a separate printable PDF.</td>
+</tr>
+<tr>
+<td>"Add my 12 dates to calendar"</td>
+<td>One Google Calendar link, shown in the welcome email only. There is no per-date download and no calendar button in reminders.</td>
+<td>Point the link at a public calendar or a single calendar invite, or remove the button from the page.</td>
+</tr>
+<tr>
+<td>"Founding pricing closes January 20, 2027"</td>
+<td>No automatic expiry. The price stays until someone changes it.</td>
+<td>Change the price by hand on that date, or remove the deadline.</td>
+</tr>
+<tr>
+<td>"Gift card mockup"</td>
+<td>No mockup asset is included.</td>
+<td>Replace the placeholder with real art or remove it.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The page also contains placeholders that must be replaced before launch: <code>[street address]</code>, <code>[X] of 13 seats left</code>, <code>[X] of 40 seats left</code>, <code>[7:00 – 9:30 PM]</code>, <code>[2:00 – 4:30 PM]</code>, <code>[20 MIN]</code>, <code>[25 MIN]</code>, <code>[30 MIN]</code>.</p>
+<h2>The calendar link</h2>
+<p>The plugin has one calendar link, set in <strong>Stillness Packages → Settings</strong>. It is shown as a button in the welcome email only. Reminder emails never include it. When it is blank, the button is hidden.</p>
+<p>A Google Calendar link can be:</p>
+<ul>
+<li>a public calendar's sharing URL,</li>
+<li>a single event that contains the year's dates in the description,</li>
+<li>a Google Calendar appointment page, if that is how the series is run.</li>
+</ul>
+<p>The plugin does not create the calendar. It only inserts the URL. The landing page's "Add my 12 dates to calendar" link should use the same URL so the page and the emails agree.</p>
+<h2>Checkout assumptions</h2>
+<ul>
+<li>The store currency is CAD.</li>
+<li>Checkout is the classic WooCommerce checkout, not the block checkout. The gift recipient fields render on the classic checkout. On the block checkout they do not, and the plugin falls back to the buyer email.</li>
+<li>The cart and checkout pages are the standard WooCommerce pages.</li>
+<li>Payment is a live gateway. Test with the gateway's test mode before switching to live.</li>
+<li>The products are hidden from the catalog. The landing page is the only shop window for them.</li>
+</ul>
+<h2>Go-live order</h2>
+<p>Do these in order. The page should not point at a package until the package exists and the email path has been tested.</p>
+<ol>
+<li>Import <code>products.csv</code>. Confirm five products and five SKUs.</li>
+<li>Confirm the store currency, tax settings and checkout page.</li>
+<li>Open <strong>Stillness Packages → Settings</strong> and enter the dates, times and venue. Leave unconfirmed dates blank.</li>
+<li>Add the Google Calendar link and choose the reminder window.</li>
+<li>Place a test order for each of the five SKUs. Use a test payment method.</li>
+<li>Confirm the welcome email, the gift thank-you, the members table and the order box.</li>
+<li>Send a reminder for the next test evening. Confirm the plain reminder arrives and contains no reply buttons, calendar button or usage count.</li>
+<li>Mark one evening used from the members table, then reset it. Confirm both actions work and the count updates in the order box.</li>
+<li>Refund or cancel one test order. Confirm the membership cancels.</li>
+<li>Export the CSV. Confirm the columns.</li>
+<li>Replace the landing page buttons using the table above.</li>
+<li>Replace the visible placeholders and decide each item in the decisions table.</li>
+<li>Run the full test once more on a phone, because most members will open the reminder on a phone.</li>
+</ol>
+<h2>Link test</h2>
+<p>After the buttons are changed, check each one in a private browser window:</p>
+<ul>
+<li><code>mens-annual</code> adds the 12-month package and shows the cart.</li>
+<li><code>mens-six-month</code> adds the 6-month package.</li>
+<li><code>mens-single</code> adds the single evening.</li>
+<li><code>mens-gift-annual</code> adds the gift year and shows the recipient fields.</li>
+<li><code>mens-gift-single</code> adds the gift evening and shows the recipient fields.</li>
+<li>A missing SKU shows the notice and returns to the cart instead of a blank page.</li>
+<li>A quantity above one for the same package is blocked with the one-package notice.</li>
+<li>The cart and checkout still work on a phone.</li>
+</ul>
+<h2>What is intentionally not on the page</h2>
+<p>The plugin does not add a shop archive, a member portal, a login, a group picker, a seat counter, an upgrade flow, a printable gift card or a WhatsApp integration. If the page needs any of those, it is a new piece of work, not a link change.</p>
+  </div>
+</main>
+</body>
+</html>

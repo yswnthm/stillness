@@ -1,0 +1,341 @@
+<!-- Elementor HTML Widget: Men's Series LP — Section 07: Pricing & Tiers -->
+<section class="ms-pricing-section" id="pricing">
+  <div class="ms-wrap">
+    <div class="ms-pricing-intro">
+      <div class="ms-eyebrow">Choose your way in</div>
+      <h2 class="ms-h2" style="margin-bottom: 16px;">Commit to the year, <em class="ms-accent">or start with one night.</em></h2>
+      <p class="ms-pricing-sub">All prices in CAD. Founding pricing closes January 20, 2027 or when all 40 seats are gone.</p>
+    </div>
+
+    <div class="ms-pricing-grid">
+      <!-- Tier 1: Drop-In -->
+      <div class="ms-price-card">
+        <h3 class="ms-price-title">DROP-IN</h3>
+        <div>
+          <span class="ms-price-figure">$55</span>
+          <span class="ms-price-sub-unit"> / evening</span>
+        </div>
+        <p class="ms-price-desc">One session, any month there's space. The easiest first step.</p>
+        <a href="#top" class="ms-btn ms-btn-line">Book one evening</a>
+      </div>
+
+      <!-- Tier 2: 6-Month Package -->
+      <div class="ms-price-card">
+        <h3 class="ms-price-title">6-MONTH PACKAGE</h3>
+        <div>
+          <span class="ms-price-figure">$270</span>
+          <span class="ms-price-sub-unit"> · $45 each</span>
+        </div>
+        <p class="ms-price-desc">January to June. Upgrade to the full year anytime and we credit what you paid.</p>
+        <a href="#top" class="ms-btn ms-btn-line">Start with 6</a>
+      </div>
+
+      <!-- Tier 3: Founding Member 12-Months (FEATURED LUXURY BLACK CARD) -->
+      <div class="ms-price-card ms-price-card-featured">
+        <div class="ms-price-badge">[X] OF 40 SEATS LEFT</div>
+        <h3 class="ms-price-title">FOUNDING MEMBER · 12 MONTHS</h3>
+        <div>
+          <span class="ms-price-figure">$480</span>
+          <span class="ms-price-sub-unit"> · $40 each</span>
+        </div>
+        <ul class="ms-price-features-list">
+          <li>All 12 evenings, your group guaranteed</li>
+          <li>Save $180 vs drop-in</li>
+          <li>Swap groups if you miss your night</li>
+          <li>Founding price locked for 2028</li>
+        </ul>
+        <a href="#top" class="ms-btn ms-btn-gold">Reserve my seat</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ==========================================================================
+   Section 07: Pricing & Tiers Scoped CSS
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+
+/* Break out of Elementor boxed containers & theme gutters to 100% viewport width */
+.elementor-section:has(.ms-pricing-section),
+.e-con:has(.ms-pricing-section),
+.e-con-boxed:has(.ms-pricing-section),
+.e-con-full:has(.ms-pricing-section),
+.elementor-container:has(.ms-pricing-section),
+.elementor-column:has(.ms-pricing-section),
+.elementor-widget-wrap:has(.ms-pricing-section),
+.elementor-widget:has(.ms-pricing-section),
+.elementor-widget-container:has(.ms-pricing-section),
+.elementor-widget-html:has(.ms-pricing-section) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.elementor-section:has(.ms-pricing-section) > .elementor-container,
+.e-con:has(.ms-pricing-section) > .e-con-inner,
+.elementor-widget:has(.ms-pricing-section) > .elementor-widget-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.ms-pricing-section {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  background: #FFFFFF;
+  padding: clamp(44px, 5vw, 68px) 0;
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #0E1B30;
+  box-sizing: border-box;
+}
+
+.ms-pricing-section * {
+  box-sizing: border-box;
+}
+
+.ms-pricing-section .ms-wrap {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box !important;
+}
+
+.ms-pricing-intro {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto clamp(24px, 3.5vw, 36px);
+}
+
+.ms-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C4935A;
+  margin-bottom: 0.5rem;
+}
+
+.ms-eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: #C4935A;
+}
+
+.ms-h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: #0E1B30 !important;
+  margin: 0;
+  font-weight: 300;
+}
+
+.ms-accent {
+  font-style: italic;
+  color: #688F9D;
+}
+
+.ms-pricing-sub {
+  font-size: 1.05rem;
+  color: #3D4F57 !important;
+  line-height: 1.7;
+  font-weight: 300;
+  margin: 0;
+}
+
+.ms-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 32px);
+  align-items: stretch;
+  width: 100%;
+}
+
+.ms-price-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(196, 187, 180, 0.45);
+  padding: 36px 30px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.ms-price-card:hover {
+  border-color: #0E1B30;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(14, 27, 48, 0.06);
+}
+
+.ms-price-title {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #0E1B30;
+  margin: 0;
+}
+
+.ms-price-figure {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 3.2rem;
+  font-weight: 300;
+  line-height: 1;
+  color: #0E1B30;
+}
+
+.ms-price-sub-unit {
+  font-size: 0.95rem;
+  color: #7A8F96;
+}
+
+.ms-price-desc {
+  font-size: 0.95rem;
+  color: #3D4F57 !important;
+  flex-grow: 1;
+  line-height: 1.7;
+  font-weight: 300;
+  margin: 0;
+}
+
+.ms-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 50px;
+  padding: 0 28px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  border-radius: 2px;
+}
+
+.ms-btn-line {
+  background: transparent;
+  border: 1px solid #0E1B30;
+  color: #0E1B30 !important;
+}
+
+.ms-btn-line:hover {
+  background: #0E1B30;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+/* Featured Founding Tier (.black-card luxury treatment) */
+.ms-price-card-featured {
+  background: #0E1B30;
+  color: #FFFFFF;
+  border: 1px solid rgba(196, 147, 90, 0.4);
+  box-shadow: 0 24px 50px rgba(14, 27, 48, 0.25);
+}
+
+.ms-price-card-featured:hover {
+  border-color: #C4935A;
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(14, 27, 48, 0.35);
+}
+
+.ms-price-badge {
+  position: absolute;
+  top: -12px;
+  left: 28px;
+  background: #C4935A;
+  color: #FFFFFF;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 2px;
+}
+
+.ms-price-card-featured .ms-price-title {
+  color: #FFFFFF !important;
+}
+
+.ms-price-card-featured .ms-price-figure {
+  color: #C4935A !important;
+}
+
+.ms-price-card-featured .ms-price-sub-unit {
+  color: #D9E8EB !important;
+}
+
+.ms-price-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.ms-price-features-list li {
+  font-size: 0.94rem;
+  color: #D9E8EB !important;
+  padding-left: 22px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.ms-price-features-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #C4935A;
+}
+
+.ms-btn-gold {
+  background: #C4935A;
+  color: #FFFFFF !important;
+  border: 1px solid #C4935A;
+  font-weight: 500;
+}
+
+.ms-btn-gold:hover {
+  background: #b1834e;
+  border-color: #b1834e;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(196, 147, 90, 0.25);
+}
+
+@media (max-width: 1024px) {
+  .ms-pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+}
+</style>

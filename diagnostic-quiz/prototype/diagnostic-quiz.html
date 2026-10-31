@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stillness — Diagnostic Quiz</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --stone: #0E1B30; --midnight: #1D3152; --seafoam: #688F9D;
+  --wave: #A4B2BA; --breeze: #D9E8EB; --sand: #C4BBB4;
+  --cream: #F7F0EC; --warm: #F2E8DF; --white: #FFFFFF;
+  --accent: #2C7A7B;
+}
+
+body {
+  background: var(--cream);
+  color: var(--stone);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, .serif { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
+
+.screen { max-width: 660px; margin: 0 auto; padding: 96px 24px 120px; }
+
+/* LANDING */
+.eyebrow { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--wave); margin-bottom: 28px; }
+h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 24px; }
+.sub { font-size: 17px; color: rgba(14,27,48,0.6); margin-bottom: 44px; }
+
+.cta {
+  display: inline-block; background: var(--stone); color: var(--cream);
+  padding: 18px 44px; border-radius: 99px; border: none; cursor: pointer;
+  font-family: 'Lato', sans-serif; font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.14em; text-decoration: none;
+  transition: background 0.3s ease;
+}
+.cta:hover { background: var(--accent); }
+.cta:disabled { opacity: 0.3; cursor: default; }
+
+.proof, .legal { font-size: 13px; color: rgba(14,27,48,0.5); margin-top: 24px; }
+
+/* QUIZ */
+.progress { height: 2px; background: rgba(14,27,48,0.12); border-radius: 99px; overflow: hidden; margin-bottom: 18px; }
+.progress-bar { height: 100%; background: var(--accent); transition: width 0.45s cubic-bezier(0.4,0,0.2,1); }
+.counter { font-size: 11px; letter-spacing: 0.18em; color: rgba(14,27,48,0.5); margin-bottom: 40px; }
+.counter span { opacity: 0.55; }
+h2 { font-size: clamp(1.5rem, 4.5vw, 2rem); line-height: 1.25; margin-bottom: 32px; }
+
+.options { display: flex; flex-direction: column; gap: 12px; }
+.option {
+  display: flex; align-items: flex-start; gap: 18px; width: 100%; text-align: left;
+  background: transparent; border: 1px solid rgba(14,27,48,0.12); border-radius: 14px;
+  padding: 20px 22px; cursor: pointer; font-family: 'Lato', sans-serif;
+  font-size: 15px; line-height: 1.5; color: var(--stone); transition: all 0.25s ease;
+}
+.option:hover { border-color: rgba(14,27,48,0.32); }
+.option.is-selected { border-color: var(--accent); background: rgba(44,122,123,0.06); }
+.option-key {
+  flex: 0 0 auto; width: 26px; height: 26px; border: 1px solid rgba(14,27,48,0.16);
+  border-radius: 50%; display: grid; place-items: center; font-size: 11px;
+  color: rgba(14,27,48,0.5); transition: all 0.25s ease;
+}
+.option.is-selected .option-key { border-color: var(--accent); background: var(--accent); color: var(--cream); }
+
+.nav { display: flex; gap: 12px; margin-top: 40px; }
+.btn-back, .btn-next {
+  padding: 16px 32px; border-radius: 99px; border: 1px solid rgba(14,27,48,0.14);
+  background: transparent; cursor: pointer; font-family: 'Lato', sans-serif;
+  font-size: 13px; color: var(--stone); transition: opacity 0.2s ease;
+}
+.btn-next { background: var(--stone); color: var(--cream); border-color: var(--stone); margin-left: auto; }
+.btn-back:disabled, .btn-next:disabled { opacity: 0.3; cursor: default; }
+
+/* GATE */
+.gate-form { display: flex; flex-direction: column; }
+.gate-form label { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(14,27,48,0.5); margin-top: 20px; }
+.gate-form input {
+  font-family: 'Lato', sans-serif; font-size: 16px; font-weight: 300; padding: 14px 0;
+  border: none; border-bottom: 1px solid rgba(14,27,48,0.14);
+  background: transparent; color: var(--stone);
+}
+.gate-form input:focus { outline: none; border-bottom-color: var(--accent); }
+.gate-form .cta { margin-top: 36px; }
+.error { color: #A6472F; font-size: 13px; margin-top: 14px; }
+
+/* RESULT */
+.result { border-top: 2px solid var(--accent); }
+.tagline { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; }
+.short { font-size: 19px; line-height: 1.6; margin-bottom: 64px; }
+
+.prescription { margin-bottom: 64px; }
+.prescription > p { color: rgba(14,27,48,0.6); margin-bottom: 28px; }
+.prescription ol { list-style: none; }
+.prescription li { padding: 24px 0; border-top: 1px solid rgba(14,27,48,0.12); display: grid; grid-template-columns: 32px 1fr; gap: 0 18px; }
+.prescription li::before { content: counter(p); counter-increment: p; font-size: 11px; color: rgba(14,27,48,0.5); padding-top: 6px; }
+.prescription ol { counter-reset: p; }
+.prescription strong { display: block; font-weight: 700; }
+.prescription li span { color: rgba(14,27,48,0.6); font-size: 15px; }
+
+.unlock { background: rgba(14,27,48,0.035); border-radius: 20px; padding: 40px; }
+.unlock h2 { font-size: 1.6rem; margin-bottom: 16px; }
+.unlock > p { color: rgba(14,27,48,0.6); margin-bottom: 28px; }
+.unlock-note { font-size: 12px; margin: 18px 0 0; color: rgba(14,27,48,0.45); }
+
+/* DEV — remove before sending to client */
+.dev { margin-top: 64px; padding-top: 20px; border-top: 1px dashed rgba(14,27,48,0.14); font-size: 11px; letter-spacing: 0.06em; color: rgba(14,27,48,0.45); }
+.dev a { color: rgba(14,27,48,0.45); }
+
+@media (max-width: 480px) {
+  .screen { padding: 64px 20px 80px; }
+  .nav { flex-direction: column-reverse; }
+  .btn-next { margin-left: 0; }
+  .unlock { padding: 28px 24px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+/* ==========================================================================
+   Stillness — Diagnostic Quiz (single-file prototype)
+   Scoring spec: ../content/scoring.js — tests in ../test/scoring.test.js
+   Production PHP: ../snippets/ — this file is for design review only.
+   ========================================================================== */
+
+/* ---- Content (mirrors ../content/quiz-content.php — revise copy here first) ---- */
+const TYPES = {
+  A: { name: 'The Lit Engine', tagline: 'Sympathetic Overdrive', accent: '#C4713D',
+       short: 'Your system is running hot. Fuel is high, landing gear is retracted.',
+       intro: 'Your prescription focuses on discharge — giving the excess energy somewhere to go that is not your nervous system.',
+       practices: [
+         { t: 'Long exhale breath', d: '4 in, 8 out. Ten rounds before anything else.' },
+         { t: 'Fast movement, cold water', d: 'Your system needs intensity, not stillness. Run, swim, shower cold.' },
+         { t: 'Sound immersion', d: 'Loud, layered, full-body. Let it move through you rather than asking you to sit still.' } ] },
+  B: { name: 'The Quiet Below', tagline: 'Dorsal Shutdown', accent: '#4A6B8A',
+       short: 'Your system has gone quiet to stay safe. It is not emptiness — it is protection.',
+       intro: 'Your prescription focuses on gentle return. Nothing here asks you to feel everything at once.',
+       practices: [
+         { t: 'Orienting, not meditating', d: 'Look slowly around the room and name five things. Safe proximity first.' },
+         { t: 'Rhythmic movement', d: 'Sway, rock, shake. Small and unremarkable. The goal is rhythm, not performance.' },
+         { t: 'Warmth and contact', d: 'Warm bath, weighted blanket, another person. Safety first, insight second.' } ] },
+  C: { name: 'The Open Field', tagline: 'Ventral Rest', accent: '#2C7A7B',
+       short: 'You are regulated but unoccupied. Nothing is wrong — nothing is moving either.',
+       intro: 'Your prescription focuses on engagement. You do not need to calm down. You need somewhere to put your attention.',
+       practices: [
+         { t: 'Somatic inquiry', d: 'Ask the body directly: where do you feel this? Track one sensation for two minutes.' },
+         { t: 'Breath as structure', d: 'Box breathing to deepen what you already have. You are building, not repairing.' },
+         { t: 'Sound to open', d: 'Resonant, harmonic, sustained. Build the field you are standing in.' } ] },
+  D: { name: 'The Pendulum', tagline: 'Mixed Regulation', accent: '#7A5C8A',
+       short: 'You swing between states — wired at night, flat by noon. Neither end is home.',
+       intro: 'Your prescription focuses on rhythm. Stability first. The goal is less oscillation, not one permanent state.',
+       practices: [
+         { t: 'Anchor the exhale', d: 'Whatever the state, lengthen the out-breath. It is the only lever that works both directions.' },
+         { t: 'Cycle work', d: 'Movement then rest, sound then silence. Alternation trains the switch, not the destination.' },
+         { t: 'Consistent time outdoors', d: 'Same window daily. Your system learns from repetition more than from intensity.' } ] }
+};
+
+const QUESTIONS = [
+  { q: 'How would you describe your energy on waking?', o: {
+      A: 'Already running — mind racing before my feet touch the floor',
+      B: 'Flat. Functional, but nothing has weight',
+      C: 'Clear. Present and available',
+      D: 'It depends on the night I had' } },
+  { q: 'Where do you feel it first?', o: {
+      A: 'Chest, jaw, shoulders', B: 'Heavy limbs, fog', C: 'Whole body, evenly', D: 'It moves around' } },
+  { q: 'Your body is asked to perform and something in you resists. What resists?', o: {
+      A: 'Heat, urgency — I want it over with',
+      B: 'Nothing. I comply, slowly, from far away',
+      C: 'A genuine objection on integrity grounds',
+      D: 'It depends what is being asked' } },
+  { q: 'How long can you hold a difficult feeling without acting on it?', o: {
+      A: 'Barely. It converts to urgency fast',
+      B: 'Forever. I never react — I also never move',
+      C: 'I can hold it and stay present',
+      D: 'In bursts, then I am gone' } },
+  { q: 'How do you sleep?', o: {
+      A: 'Light, or I fall asleep exhausted and wake wired',
+      B: 'Heavy or numb. Hard to say',
+      C: 'Consistently well',
+      D: 'Good some nights, wrecked others' } },
+  { q: 'What happens when someone criticises you?', o: {
+      A: 'Heat, defensiveness, immediate rebuttal',
+      B: 'Agreement — whatever they say — to end the contact',
+      C: 'I take it in, weigh it, respond when ready',
+      D: 'Depends who it is' } },
+  { q: 'Choose a time of day.', o: {
+      A: 'Late night, mind racing, replaying conversations',
+      B: 'Mid-afternoon, low, hard to focus',
+      C: 'Morning, first hour, clearest',
+      D: 'No consistent answer' } },
+  { q: 'How hungry are you, generally?', o: {
+      A: 'Very. I skip meals then crash', B: 'I forget to eat',
+      C: 'Steady — meals arrive without much thought', D: 'Up and down' } },
+  { q: 'When you rest, what is actually happening?', o: {
+      A: 'I cannot truly rest', B: 'Rest is where I disappear',
+      C: 'Genuinely restful', D: 'Rest, then restlessness' } },
+  { q: 'How much do you feel the people around you?', o: {
+      A: 'Intensely — too much, often', B: 'Faintly. Present but not close',
+      C: 'Warmly and specifically', D: 'Inconsistently' } },
+  { q: 'Your breath right now, checked for a moment:', o: {
+      A: 'High in the chest, shallow', B: 'Low, maybe barely moving',
+      C: 'Easy, somewhere in the middle', D: 'It shifts when I pay attention to it' } },
+  { q: 'What is your relationship with silence?', o: {
+      A: 'I turn it on, then can only stand a few seconds',
+      B: 'Comfortable. Silence is where I live',
+      C: 'I like it, and I choose it',
+      D: 'Depends on the nervous system that day' } },
+  { q: 'Finish this: "The thing I would most like to change is…"', o: {
+      A: 'That I cannot switch off',
+      B: 'That I cannot feel much of anything',
+      C: 'That I feel fine, but nothing is quite moving',
+      D: 'That I do not know what I want' } },
+  { q: 'How long has this been the pattern?', o: {
+      A: 'As long as I can remember',
+      B: 'So long I stopped marking it',
+      C: 'It has shifted and improved this year',
+      D: 'It comes and goes' } },
+  { q: 'If you could only change one thing about how you feel, you would want to feel…', o: {
+      A: 'Capable of finally slowing down',
+      B: 'Present, and able to feel it',
+      C: 'Alive and engaged in my own life',
+      D: 'Steady — whichever way the day goes' } }
+];
+
+const GATE = {
+  heading: 'Your result is ready.',
+  body: 'Enter your name and email to see it. We will hold onto it if you want the practice afterward.',
+  button: 'Show me my result',
+  legal: 'No noise. One email if you ask for it.'
+};
+
+/* ---- Scoring (1:1 with ../content/scoring.js) ---- */
+const KEYS = ['A','B','C','D'];
+const REQUIRED_COUNT = QUESTIONS.length;
+const TIE_BREAK_INDEX = QUESTIONS.length - 1;
+
+function score(answers) {
+  if (!answers || Object.keys(answers).length < REQUIRED_COUNT) return null;
+  const tally = { A:0, B:0, C:0, D:0 };
+  for (let i = 0; i < REQUIRED_COUNT; i++) {
+    const v = answers[i];
+    if (!KEYS.includes(v)) return null;
+    tally[v] += 1;
+  }
+  const max = Math.max(...Object.values(tally));
+  const leaders = KEYS.filter(k => tally[k] === max);
+  if (leaders.length === 1) return leaders[0];
+  const finalAnswer = answers[TIE_BREAK_INDEX];
+  return KEYS.includes(finalAnswer) ? finalAnswer : leaders[0];
+}
+
+/* ---- App ---- */
+const app = document.getElementById('app');
+const params = new URLSearchParams(location.search);
+const state = { answers: {}, current: 0, name: '', email: '' };
+
+const devLinks = `
+  <p class="dev">DEV ONLY — remove before sending to client.<br>
+  Jump to result: ${KEYS.map(k => `<a href="?type=${k}">${k}</a>`).join(' · ')} ·
+  <a href="?">Restart</a><br>
+  Force score: <a href="?answers=${'A,'.repeat(13)}A,A">A</a> ·
+  <a href="?answers=${'B,'.repeat(13)}B,B">B</a> ·
+  <a href="?answers=${'C,'.repeat(13)}C,C">C</a> ·
+  <a href="?answers=${'D,'.repeat(13)}D,D">D</a> ·
+  <a href="?answers=A,B,C,D,A,B,C,D,A,B,C,D,A,B,D">tie</a>
+  </p>`;
+
+function renderLanding() {
+  app.innerHTML = `
+    <main class="screen">
+      <p class="eyebrow">Two minutes</p>
+      <h1>What is your nervous system doing right now?</h1>
+      <p class="sub">Fifteen questions. No account, no payment to find out. Your result tells you which state you are living in — and what actually moves it.</p>
+      <button class="cta" id="start">Take the 2-minute diagnostic</button>
+      <p class="proof">Built from Stillness sessions and the patterns we see in the room.</p>
+      ${devLinks}
+    </main>`;
+  document.getElementById('start').addEventListener('click', renderQuestion);
+}
+
+function renderQuestion() {
+  const i = state.current;
+  const q = QUESTIONS[i];
+  const chosen = state.answers[i];
+  const total = QUESTIONS.length;
+
+  app.innerHTML = `
+    <main class="screen">
+      <div class="progress"><div class="progress-bar" style="width:${((i+1)/total)*100}%"></div></div>
+      <p class="counter">${i+1} <span>of ${total}</span></p>
+      <h2>${q.q}</h2>
+      <div class="options" role="radiogroup">
+        ${KEYS.map(k => `
+          <button class="option${chosen === k ? ' is-selected' : ''}" role="radio" aria-checked="${chosen === k}" data-key="${k}">
+            <span class="option-key">${k}</span><span>${q.o[k]}</span>
+          </button>`).join('')}
+      </div>
+      <div class="nav">
+        <button class="btn-back" ${i === 0 ? 'disabled' : ''} data-back>Back</button>
+        <button class="btn-next" data-next ${chosen ? '' : 'disabled'}>${i === total-1 ? 'See my result' : 'Next'}</button>
+      </div>
+      ${devLinks}
+    </main>`;
+
+  app.querySelectorAll('.option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.answers[state.current] = btn.dataset.key;
+      renderQuestion();
+    });
+  });
+  document.querySelector('[data-back]').addEventListener('click', () => {
+    if (state.current > 0) { state.current -= 1; renderQuestion(); }
+  });
+  document.querySelector('[data-next]').addEventListener('click', () => {
+    if (!state.answers[state.current]) return;
+    if (state.current < QUESTIONS.length - 1) { state.current += 1; renderQuestion(); }
+    else renderGate();
+  });
+}
+
+function renderGate() {
+  app.innerHTML = `
+    <main class="screen">
+      <h1>${GATE.heading}</h1>
+      <p class="sub">${GATE.body}</p>
+      <form class="gate-form" id="gate-form" novalidate>
+        <label for="g-name">Name</label>
+        <input id="g-name" type="text" autocomplete="given-name">
+        <label for="g-email">Email</label>
+        <input id="g-email" type="email" autocomplete="email">
+        <p class="error" id="g-error" hidden></p>
+        <button class="cta" type="submit">${GATE.button}</button>
+      </form>
+      <p class="legal">${GATE.legal}</p>
+      ${devLinks}
+    </main>`;
+
+  document.getElementById('gate-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const name = document.getElementById('g-name').value.trim();
+    const email = document.getElementById('g-email').value.trim();
+    const err = document.getElementById('g-error');
+    if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      err.textContent = 'Please enter your name and a valid email.';
+      err.hidden = false;
+      return;
+    }
+    state.name = name;
+    state.email = email;
+    const result = score(state.answers);
+    if (!result) { err.textContent = 'Something went wrong. Please retake.'; err.hidden = false; return; }
+    renderResult(result);
+  });
+}
+
+function renderResult(key) {
+  const t = TYPES[key];
+  app.style.setProperty('--accent', t.accent);
+  app.innerHTML = `
+    <main class="screen result">
+      <p class="eyebrow">Your result</p>
+      <h1>${t.name}</h1>
+      <p class="tagline">${t.tagline}</p>
+      <p class="short">${t.short}</p>
+
+      <section class="prescription">
+        <h2>Where to begin</h2>
+        <p>${t.intro}</p>
+        <ol>${t.practices.map(p => `<li><div><strong>${p.t}</strong><span>${p.d}</span></div></li>`).join('')}</ol>
+      </section>
+
+      <section class="unlock">
+        <h2>Take this with you</h2>
+        <p>Audio practices, workbooks and links for ${t.name}, built for ${t.tagline.toLowerCase()}.</p>
+        <button class="cta" id="unlock">Unlock the full prescription</button>
+        <p class="unlock-note">Prototype — checkout not wired.</p>
+      </section>
+      ${devLinks}
+    </main>`;
+
+  document.getElementById('unlock').addEventListener('click', () => {
+    alert('Production: redirect to add-to-cart with variation_id for type ' + key);
+  });
+}
+
+/* ---- Boot ---- */
+function boot() {
+  const forced = params.get('type');
+  const forcedAnswers = params.get('answers');
+
+  if (forcedAnswers) {
+    forcedAnswers.split(',').forEach((v, i) => { state.answers[i] = v.trim().toUpperCase(); });
+  }
+
+  if (forced) { renderResult(forced); return; }
+  if (forcedAnswers && score(state.answers)) { renderGate(); return; }
+  renderLanding();
+}
+
+document.addEventListener('DOMContentLoaded', boot);
+</script>
+</body>
+</html>

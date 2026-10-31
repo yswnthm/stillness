@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stillness Packages · README</title>
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --stone: #0E1B30;
+    --midnight: #1D3152;
+    --seafoam: #688F9D;
+    --breeze: #D9E8EB;
+    --wave: #A4B2BA;
+    --sand: #C4BBB4;
+    --cream: #F7F0EC;
+    --ink: #25313A;
+    --muted: #68747B;
+    --line: rgba(14, 27, 48, 0.12);
+    --gold: #C5A880;
+    --alert: #A8553A;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: #EEF2F3;
+    color: var(--ink);
+    font-family: 'Jost', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: min(920px, calc(100% - 32px));
+    margin: 36px auto;
+    background: #FFFFFF;
+    box-shadow: 0 24px 70px rgba(14, 27, 48, 0.14);
+  }
+
+  .cover {
+    background: var(--stone);
+    color: var(--cream);
+    padding: 76px 72px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::after {
+    content: "";
+    position: absolute;
+    right: -100px;
+    bottom: -120px;
+    width: 360px;
+    height: 360px;
+    border: 1px solid rgba(217, 232, 235, 0.14);
+    border-radius: 50%;
+  }
+
+  .eyebrow {
+    margin: 0 0 16px;
+    color: var(--seafoam);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  h1 {
+    max-width: 680px;
+    font-size: 52px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+  }
+
+  .cover-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    color: var(--seafoam);
+    margin-top: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .cover-copy {
+    max-width: 620px;
+    margin: 22px 0 0;
+    color: var(--wave);
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(217, 232, 235, 0.16);
+    margin-top: 40px;
+  }
+
+  .meta div {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 16px 18px;
+  }
+
+  .meta span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--wave);
+    margin-bottom: 4px;
+  }
+
+  .meta strong {
+    font-weight: 500;
+    color: #FFFFFF;
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 56px 72px 72px;
+  }
+
+  section {
+    margin: 0 0 42px;
+    page-break-inside: avoid;
+  }
+
+  .section-num {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--seafoam);
+    margin-bottom: 10px;
+  }
+
+  .section-num::before {
+    content: "";
+    width: 22px;
+    height: 1px;
+    background: var(--seafoam);
+  }
+
+  h2 {
+    font-size: 32px;
+    color: var(--stone);
+    margin-bottom: 14px;
+  }
+
+  h3 {
+    font-size: 21px;
+    color: var(--midnight);
+    margin: 26px 0 8px;
+  }
+
+  p {
+    margin: 0 0 14px;
+    color: var(--ink);
+  }
+
+  .lede {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--midnight);
+    margin-bottom: 20px;
+  }
+
+  strong { font-weight: 600; color: var(--stone); }
+  em { color: var(--seafoam); font-style: italic; }
+
+  ul, ol { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+
+  a { color: var(--seafoam); }
+
+  .callout {
+    border-left: 3px solid var(--seafoam);
+    background: #F2F7F8;
+    padding: 18px 22px;
+    margin: 20px 0;
+    page-break-inside: avoid;
+  }
+
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout.alert {
+    border-left-color: var(--alert);
+    background: #FBF3F0;
+  }
+
+  .callout strong { color: var(--stone); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0 22px;
+    font-size: 13.5px;
+    page-break-inside: avoid;
+  }
+
+  thead th {
+    text-align: left;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--stone);
+  }
+
+  tbody td {
+    padding: 11px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  td.num, th.num { text-align: right; white-space: nowrap; }
+
+  code {
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    font-size: 12.5px;
+    background: #F2F5F6;
+    padding: 2px 6px;
+    color: var(--midnight);
+  }
+
+  pre {
+    background: #F2F5F6;
+    border-left: 3px solid var(--sand);
+    padding: 18px 20px;
+    margin: 18px 0 22px;
+    overflow-x: auto;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: var(--midnight);
+    page-break-inside: avoid;
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre;
+  }
+
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+  }
+
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 46px;
+    margin-bottom: 14px;
+    page-break-inside: avoid;
+  }
+
+  .steps li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    color: var(--gold);
+  }
+
+  .questions {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+    counter-reset: q;
+  }
+
+  .questions li {
+    counter-increment: q;
+    position: relative;
+    padding: 16px 18px 16px 54px;
+    border: 1px solid var(--line);
+    margin-bottom: 10px;
+    background: #FCFDFD;
+    page-break-inside: avoid;
+  }
+
+  .questions li::before {
+    content: counter(q);
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--stone);
+    color: #fff;
+    font-size: 11px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  .questions strong { display: block; margin-bottom: 3px; }
+
+  .endnote {
+    font-size: 12.5px;
+    color: var(--muted);
+    font-style: italic;
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+    margin-top: 36px;
+  }
+
+  @page {
+    margin: 16mm;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { width: 100%; margin: 0; box-shadow: none; }
+    .cover { padding: 48px 40px 40px; }
+    h1 { font-size: 42px; }
+    .content { padding: 36px 40px 48px; }
+    section, .callout, table, .questions li, .steps li { page-break-inside: avoid; }
+    h2, h3 { page-break-after: avoid; }
+  }
+
+  @media (max-width: 760px) {
+    .cover { padding: 48px 28px 40px; }
+    h1 { font-size: 38px; }
+    .content { padding: 36px 28px 48px; }
+    .meta { grid-template-columns: 1fr; }
+    h2 { font-size: 27px; }
+  }
+
+
+  .content > p:first-of-type {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--midnight);
+    margin-bottom: 20px;
+  }
+  .table-wrap { width: 100%; overflow-x: auto; }
+  .content table { min-width: 520px; }
+  .content h2 { margin-top: 42px; }
+  .content h2:first-of-type { margin-top: 0; }
+  .content h3 { margin-top: 28px; }
+  .content blockquote {
+    margin: 20px 0;
+    padding: 18px 22px;
+    border-left: 3px solid var(--gold);
+    background: #FBF8F3;
+    color: var(--midnight);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  .content blockquote p:last-child { margin-bottom: 0; }
+  .content hr { border: none; border-top: 1px solid var(--line); margin: 32px 0; }
+  .content td code, .content th code { white-space: nowrap; }
+  @media print {
+    .table-wrap { overflow: visible; }
+    .content table { min-width: 0; }
+    a { color: inherit; text-decoration: none; }
+  }
+
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="cover">
+    <p class="eyebrow">Stillness Co. · Package system</p>
+    <h1>Stillness Packages</h1>
+    <p class="cover-subtitle">README</p>
+    <p class="cover-copy">A single WooCommerce plugin for the men's series: memberships, welcome and gift emails, plain monthly reminders, manual usage tracking and a dashboard for the people running it.</p>
+    <div class="meta">
+      <div><span>Prepared for</span><strong>Stillness Co.</strong></div>
+      <div><span>Prepared by</span><strong>Solicate</strong></div>
+      <div><span>Version</span><strong>1.1 · 24 October 2026</strong></div>
+    </div>
+  </header>
+  <div class="content">
+<h1>Stillness Packages</h1>
+<p>A single WordPress plugin that turns five WooCommerce products into the men's series memberships. It creates the membership when an order is paid, sends the welcome and gift emails, sends a plain monthly reminder, tracks usage manually, and gives Komal a dashboard for members, dates, exports and the reminder batch.</p>
+<p>The plugin is deliberately small. It uses WooCommerce orders and order item meta instead of custom tables, so the data stays with the order and survives normal backups.</p>
+<h2>What is in this folder</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>File</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stillness-package-system.php</code></td>
+<td>The plugin. One file, no build step.</td>
+</tr>
+<tr>
+<td><code>products.csv</code></td>
+<td>The five WooCommerce products, ready to import.</td>
+</tr>
+<tr>
+<td><code>README.md</code> / <code>README.html</code></td>
+<td>This document.</td>
+</tr>
+<tr>
+<td><code>guide.md</code> / <code>guide.html</code></td>
+<td>The day-to-day runbook for Komal.</td>
+</tr>
+<tr>
+<td><code>link-map.md</code> / <code>link-map.html</code></td>
+<td>Landing page links, SKUs and copy that needs a decision.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>What the plugin does</h2>
+<ol>
+<li>Sells five packages: a 12-month founding membership, a 6-month package, a single evening, and two gift versions.</li>
+<li>Creates a membership on the order item when the order reaches processing or completed.</li>
+<li>Sends a welcome email with the dates and a plain-English explanation of how the evenings work.</li>
+<li>Sends the gift buyer a separate thank-you, and sends the recipient their own welcome.</li>
+<li>Sends a plain reminder before each evening with the date, time and venue. There are no reply buttons.</li>
+<li>Tracks usage manually from the members table or the order screen. One click marks one evening used, and a member who has used every evening drops out of future reminders.</li>
+<li>Sends reminders in small batches through Action Scheduler, so a shared host does not have to send a hundred emails in one request.</li>
+<li>Provides a WooCommerce screen for members, settings, CSV export, reminder progress and manual membership actions.</li>
+</ol>
+<h2>Requirements</h2>
+<ul>
+<li>WordPress 6.5 or newer.</li>
+<li>WooCommerce 8.0 or newer.</li>
+<li>PHP 7.4 or newer.</li>
+<li>Action Scheduler, which ships with WooCommerce.</li>
+<li>A working <code>wp_mail</code> setup. On a live site, use an SMTP plugin or a transactional email service. The plugin does not include an email log.</li>
+</ul>
+<h2>Install</h2>
+<ol>
+<li>Create a folder named <code>stillness-packages</code> in <code>wp-content/plugins/</code>.</li>
+<li>Put <code>stillness-package-system.php</code> inside it.</li>
+<li>In WordPress, go to <strong>Plugins → Installed Plugins</strong> and activate <strong>Stillness Packages</strong>.</li>
+<li>If WooCommerce is not active, the plugin will show a notice and do nothing else.</li>
+<li>Go to <strong>WooCommerce → Stillness Packages</strong>. The screen should open with an empty members table.</li>
+</ol>
+<h2>Import the products</h2>
+<ol>
+<li>Go to <strong>Products → All Products → Import</strong>.</li>
+<li>Choose <code>products.csv</code>.</li>
+<li>Let WooCommerce map the columns. The file uses the standard WooCommerce headers plus two meta columns.</li>
+<li>Run the import.</li>
+<li>Confirm that five products exist with these SKUs.</li>
+</ol>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>SKU</th>
+<th>Product</th>
+<th style="text-align: right;">Price</th>
+<th style="text-align: right;">Evenings</th>
+<th>Gift</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mens-annual</code></td>
+<td>Founding Member · 12 months</td>
+<td style="text-align: right;">CA$480</td>
+<td style="text-align: right;">12</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>mens-six-month</code></td>
+<td>6-Month Package</td>
+<td style="text-align: right;">CA$270</td>
+<td style="text-align: right;">6</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>mens-single</code></td>
+<td>Single Evening</td>
+<td style="text-align: right;">CA$55</td>
+<td style="text-align: right;">1</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>mens-gift-annual</code></td>
+<td>Gift · 12 months</td>
+<td style="text-align: right;">CA$480</td>
+<td style="text-align: right;">12</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>mens-gift-single</code></td>
+<td>Gift · Single Evening</td>
+<td style="text-align: right;">CA$55</td>
+<td style="text-align: right;">1</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table></div>
+<p>The products are published but hidden from the catalog. They are sold from the landing page buttons, not from the shop. Hiding them keeps the shop focused on the existing offers while the direct add-to-cart links still work.</p>
+<p>The two meta columns are read by the plugin:</p>
+<ul>
+<li><code>Meta: _stillness_plan</code> — the internal plan key. It must match the SKU.</li>
+<li><code>Meta: _stillness_attendances</code> — how many evenings the package includes.</li>
+</ul>
+<p>If a product is re-created by hand, set those two meta fields, or keep the SKU exact. The plugin falls back to the SKU when the meta field is missing.</p>
+<h2>Set the dates</h2>
+<p>Go to <strong>WooCommerce → Stillness Packages → Settings</strong>.</p>
+<p>There are twelve rows, one for each evening in the year. Each row has a date, a start time, an end time and a venue. The session numbers are fixed (<code>s01</code> to <code>s12</code>). Reminder history is stored against the session number, so changing a date later does not break an existing record.</p>
+<ul>
+<li>Leave a date blank until it is confirmed. A blank date blocks reminders for that evening with a clear message.</li>
+<li>The site timezone is shown above the table. Dates and times are interpreted in that timezone.</li>
+<li>The <strong>Google Calendar link</strong> is optional. When set, it appears as a button in the welcome email only. Reminder emails never include it.</li>
+<li>The <strong>Reminder window</strong> controls how long a reminder batch takes. The default is 30 minutes. The other choices are 2 hours, 6 hours and 10 hours.</li>
+</ul>
+<p>Save the settings before importing products or sending a test.</p>
+<h2>How a membership is created</h2>
+<p>The membership is created when the order reaches <strong>Processing</strong> or <strong>Completed</strong>. The plugin listens to the payment complete event and to both order status changes. A short lock on the order prevents two requests from creating the same membership twice.</p>
+<p>For each package item on the order:</p>
+<ul>
+<li>The plan and number of evenings are stored on the order item.</li>
+<li>The member name and email are stored on the order item. For a normal package, these come from the billing details. For a gift, they come from the recipient fields.</li>
+<li>The welcome email is sent to the member.</li>
+<li>For a gift, the thank-you email is sent to the buyer.</li>
+<li>An order note records what was created.</li>
+</ul>
+<p>If the welcome email fails, the error is stored on the item and shown in the Stillness box on the order screen. The membership is still created. Email failure does not block the order.</p>
+<p>If an order was marked paid while the plugin was inactive, open the order and use <strong>Create membership</strong> in the Stillness box. That runs the same creation path and sends the welcome email.</p>
+<h2>The emails</h2>
+<p>There are three emails.</p>
+<p><strong>Welcome.</strong> Sent to the member when the membership is created. It includes the plan, the dated evenings, a short explanation of how the evenings work, the calendar button if a link is set, and a reply-to that reaches a person.</p>
+<p><strong>Gift thank-you.</strong> Sent to the buyer when a gift membership is created. It confirms the gift, says where the welcome went, and gives the buyer a way to correct the recipient address by replying.</p>
+<p><strong>Reminder.</strong> Sent before an evening to every active member who still has evenings left. It includes the date, time and venue, and one line: if you cannot make it, reply to this email. It does not include a calendar button, reply buttons, or a usage count.</p>
+<p>The From name and address default to the site name and the WooCommerce from address, then the admin email. A site can override the address with the standard <code>woocommerce_email_from_address</code> filter.</p>
+<p>The plugin does not log every email. Delivery failures are visible in the order note, the Stillness order box and the reminder batch counts. For a full email log, use the site's SMTP or transactional email plugin.</p>
+<h3>Changing the email copy (team only)</h3>
+<p>The site does not include an email editor. The dates, member details and session copy are generated by the plugin, so editing a saved email would break the next send. For a one-off wording change, a developer can add a snippet in <strong>Code Snippets</strong>. The plugin stays installed; no zip rebuild is needed.</p>
+<p>Every email passes through five filters before it is sent. Each filter receives the current value, the email type (<code>welcome</code>, <code>gift_thankyou</code> or <code>reminder</code>), the order, the order item and the session. The session is <code>null</code> for the welcome and gift thank-you emails.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>What it changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stillness_packages_email_subject</code></td>
+<td>Subject line</td>
+</tr>
+<tr>
+<td><code>stillness_packages_email_body</code></td>
+<td>Body content, before the shared HTML wrapper</td>
+</tr>
+<tr>
+<td><code>stillness_packages_email_preheader</code></td>
+<td>Hidden preview line</td>
+</tr>
+<tr>
+<td><code>stillness_packages_email_html</code></td>
+<td>Complete HTML, after the wrapper</td>
+</tr>
+<tr>
+<td><code>stillness_packages_email_headers</code></td>
+<td><code>wp_mail()</code> headers, including From</td>
+</tr>
+</tbody>
+</table></div>
+<p>Example: change the welcome subject and replace one reminder sentence.</p>
+<pre><code class="language-php">add_filter('stillness_packages_email_subject', function ($subject, $type) {
+    return $type === 'welcome' ? 'Your Stillness year begins here' : $subject;
+}, 10, 2);
+
+add_filter('stillness_packages_email_body', function ($body, $type) {
+    if ($type === 'reminder') {
+        $body = str_replace('This is a reminder for', 'A gentle reminder for', $body);
+    }
+    return $body;
+}, 10, 2);
+</code></pre>
+<p>Keep the session details intact. If a snippet changes the HTML, test a welcome, a gift thank-you and a reminder before leaving it active.</p>
+<h2>Usage tracking</h2>
+<p>There is no member reply system. Usage is recorded by Komal from <strong>WooCommerce → Stillness Packages → Members</strong>, or from the order screen.</p>
+<p>Each membership starts at zero evenings used. In the members table, the <strong>Actions</strong> column has <strong>Mark used</strong> and <strong>Reset</strong>. The order screen's <strong>Stillness package</strong> box has the same controls, with the current count, the number left and the status.</p>
+<ul>
+<li><strong>Mark used</strong> / <strong>Mark one evening used</strong> adds one evening to the count.</li>
+<li><strong>Reset</strong> / <strong>Reset usage</strong> sets the count back to zero. It asks for confirmation.</li>
+<li>Every change adds an order note with the old count, the new count and the member email.</li>
+<li>The count is clamped between zero and the package total.</li>
+<li>When the count reaches the total, the status becomes <strong>Completed</strong> and the member drops out of future reminder queues.</li>
+<li>If an evening is not marked, the member can receive the next reminder. That is expected; mark it before sending the next batch.</li>
+</ul>
+<p>The count is visible in the members table and the order box. It is never shown in a member email.</p>
+<h2>Reminders</h2>
+<p>Open <strong>WooCommerce → Stillness Packages → Members</strong> and find the <strong>Send reminder</strong> card. It uses the next dated evening. The card shows how many members are waiting.</p>
+<p>When you press <strong>Send reminder</strong>:</p>
+<ul>
+<li>The plugin builds a queue of active members who have evenings left and have not already been reminded for that date.</li>
+<li>It sends five emails per Action Scheduler run.</li>
+<li>It spreads the runs across the chosen window. With 40 members and a 30-minute window, the batch runs in eight groups of five, roughly four minutes apart.</li>
+<li>The card shows sent, failed and skipped counts, a progress bar and the latest error.</li>
+<li>You can close the page. Sending continues in the background.</li>
+<li>If a group fails, use <strong>Retry failed emails</strong> after the batch stops. Retry only resets failed rows; it does not resend successful ones.</li>
+<li>A batch that stops updating for ten minutes is marked stale, so a new batch can be started.</li>
+</ul>
+<p>Action Scheduler needs a working cron. On a normal host, WP-Cron is enough. On a host with WP-Cron disabled, set a server cron to <code>wp cron event run --due-now</code> or use the Action Scheduler runner.</p>
+<p>The reminder is sent only for an evening with a date. A blank date produces a warning, not a broken email.</p>
+<h2>The dashboard</h2>
+<p><strong>Members</strong> shows every membership that has been created, including cancelled ones, with filters for package, status and a search box for name, email or order number. It is paginated at 25 rows.</p>
+<p><strong>Export members</strong> downloads a CSV with member name, email, package, gift flag, evenings used, total, remaining, status, buyer, buyer email, order number, order date and join date. The export respects no filters; it is the full list.</p>
+<p><strong>Settings</strong> holds the twelve dates, the calendar link and the reminder window.</p>
+<p>The <strong>Stillness package</strong> box on the order screen shows the plan, member, evenings used, evenings left, status and any welcome error. It provides:</p>
+<ul>
+<li><strong>Create membership</strong> when a paid order has no membership yet.</li>
+<li><strong>Mark one evening used</strong>.</li>
+<li><strong>Reset usage</strong>.</li>
+<li><strong>Resend welcome email</strong>.</li>
+<li><strong>Cancel membership</strong>. This marks the membership cancelled and stops reminders. It does not refund the order or change the order status.</li>
+<li>A link back to the members table filtered by the member email or order number.</li>
+</ul>
+<h2>Status meanings</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Active</td>
+<td>Paid, created, evenings remaining, and at least one dated evening is still ahead.</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td>Every evening in the package has been used.</td>
+</tr>
+<tr>
+<td>Expired</td>
+<td>Evenings remain, but every dated evening is in the past.</td>
+</tr>
+<tr>
+<td>Cancelled</td>
+<td>The membership was cancelled manually or the order was cancelled or refunded.</td>
+</tr>
+<tr>
+<td>Not paid</td>
+<td>The order is not in processing or completed.</td>
+</tr>
+<tr>
+<td>Incomplete</td>
+<td>The order is paid, but the membership item has not been created. Use the order box to create it.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>Gifts</h2>
+<p>The two gift products ask for the recipient's name and email in the cart and again at checkout. The fields are required at checkout. The details are saved on the order item.</p>
+<ul>
+<li>The recipient receives the welcome email with the dates and details.</li>
+<li>The buyer receives the gift thank-you and the normal WooCommerce receipt.</li>
+<li>If the recipient email is missing, the plugin falls back to the buyer and adds an order note. The welcome then goes to the buyer, who can forward it.</li>
+<li>A gift does not renew. There is nothing for the recipient to cancel.</li>
+</ul>
+<h2>Links and add to cart</h2>
+<p>The landing page buttons should use the cart add-to-cart URL with the SKU:</p>
+<p><code>https://wearestillness.com/cart/?add-to-cart=mens-annual</code></p>
+<p>The plugin resolves the SKU to the product ID on <code>wp_loaded</code> before WooCommerce handles the add-to-cart request. Numeric product IDs still work. If a SKU is missing, the visitor sees a notice and is sent to the cart.</p>
+<p>Each package is limited to one per order. A quantity above one for the same package is blocked with a notice. If a member wants two of the same package, use two orders. Different packages can sit in one cart if that is useful for a gift plus a membership.</p>
+<h2>Data and privacy</h2>
+<p>All membership data lives in WooCommerce order item meta. The plugin does not create custom tables. The meta keys are prefixed <code>_stillness_</code>.</p>
+<ul>
+<li>Evenings used are stored as an integer, <code>_stillness_evenings_used</code>.</li>
+<li>The reminder batch is a single option, <code>stillness_packages_batch</code>.</li>
+<li>Settings are a single option, <code>stillness_packages_settings</code>.</li>
+</ul>
+<p>Deactivating the plugin stops cron and clears the batch, but leaves settings and order data in place. Deleting the plugin does not delete order data. If the site is decommissioned, remove the options and the order item meta through the normal data retention process.</p>
+<p>Usage changes are made by an administrator with the <code>manage_woocommerce</code> capability. There is no public usage link and no member-facing count.</p>
+<h2>Testing checklist</h2>
+<p>Before go-live, run this on a staging site with Stripe test mode or a manual payment method.</p>
+<ol>
+<li>Import <code>products.csv</code> and confirm five products with the right SKUs, prices, evening counts and hidden visibility.</li>
+<li>Set at least two future dates in Settings and save.</li>
+<li>Place a normal order for <code>mens-annual</code>. Confirm the membership is created, the welcome email arrives and the order note is present.</li>
+<li>Open the welcome email. Confirm the dates and reply address.</li>
+<li>Place a gift order for <code>mens-gift-single</code>. Confirm the recipient fields are required, the recipient gets the welcome and the buyer gets the thank-you.</li>
+<li>Send a reminder for the next evening. Confirm the batch card progresses, the email arrives, and the email contains the date, time, venue and reply-to line only.</li>
+<li>Mark one evening used from the members table. Confirm the order note, the count and the order box.</li>
+<li>Reset usage. Confirm the count returns to zero.</li>
+<li>Mark a single-evening membership used. Confirm it shows <strong>Completed</strong> and drops out of the reminder queue.</li>
+<li>Refund or cancel a test order. Confirm the membership shows cancelled and the reminder queue skips it.</li>
+<li>Export the CSV and open it in a spreadsheet. Confirm the columns and line endings.</li>
+<li>Check the order screen box for a paid order with no membership, then use <strong>Create membership</strong>.</li>
+<li>Check the site's cron and Action Scheduler. Confirm a scheduled reminder run completes.</li>
+</ol>
+<h2>Limitations</h2>
+<ul>
+<li>Classic checkout is required for the gift recipient fields. On the block checkout, the fields do not render; the plugin falls back to the buyer email and an order note.</li>
+<li>One of each package per order. A quantity above one for the same package is blocked; different packages can share an order.</li>
+<li>One evening per month. There are no groups, group swaps or multiple sessions in a month.</li>
+<li>No upgrades, credits or proration between packages.</li>
+<li>No printable gift card. The gift is an email and a membership.</li>
+<li>No attendance check-in screen. Manual usage is the record.</li>
+<li>No member self-serve reply. Members write to the reply-to address, and Komal updates usage.</li>
+<li>No SMS or WhatsApp reminders.</li>
+<li>Dates are global. Every member sees the same twelve evenings.</li>
+<li>The plugin does not send a receipt. WooCommerce does that.</li>
+</ul>
+<h2>Support</h2>
+<p>For changes to the plugin, the emails or the landing page links, contact Solicate. For day-to-day operation, use <code>guide.html</code>.</p>
+  </div>
+</main>
+</body>
+</html>

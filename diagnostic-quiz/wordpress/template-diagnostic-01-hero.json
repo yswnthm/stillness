@@ -1,0 +1,34 @@
+{
+  "content": [
+    {
+      "id": "d_hero_c",
+      "elType": "container",
+      "settings": {
+        "content_width": "full",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        }
+      },
+      "elements": [
+        {
+          "id": "d_hero_h",
+          "elType": "widget",
+          "settings": {
+            "html": "<section class=\"dq-hero\">\n  <div class=\"dq-hero-inner\">\n    <span class=\"dq-eyebrow\">The Stillness Diagnostic</span>\n    <h1 class=\"dq-title\">Your body has been <em>telling you</em> something.</h1>\n    <p class=\"dq-sub\">Fifteen questions. One honest answer. A prescription built for the specific way your nervous system holds stress.</p>\n    <a href=\"#start\" class=\"dq-cta\">Begin the diagnostic</a>\n    <p class=\"dq-meta\">Takes about four minutes &middot; No sign-up to start</p>\n  </div>\n</section>\n\n<style>\n.dq-hero {\n  min-height: 88vh !important;\n  display: flex !important;\n  align-items: center !important;\n  justify-content: center !important;\n  background: #0E1B30 !important;\n  padding: 8rem 1.5rem !important;\n  text-align: center !important;\n  position: relative !important;\n  overflow: hidden !important;\n}\n\n.dq-hero::after {\n  content: '' !important;\n  position: absolute !important;\n  inset: 0 !important;\n  background: radial-gradient(ellipse at 50% 40%, rgba(104, 143, 157, 0.16) 0%, transparent 62%) !important;\n  pointer-events: none !important;\n}\n\n.dq-hero-inner { position: relative !important; z-index: 2 !important; max-width: 820px !important; }\n\n.dq-eyebrow {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.65rem !important;\n  letter-spacing: 0.42em !important;\n  text-transform: uppercase !important;\n  color: #D9E8EB !important;\n  display: block !important;\n  margin-bottom: 2.5rem !important;\n  opacity: 0 !important;\n  animation: dq-fadeUp 1s ease 0.3s forwards !important;\n}\n\n.dq-title {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: clamp(2.75rem, 7vw, 5.5rem) !important;\n  font-weight: 300 !important;\n  line-height: 1.02 !important;\n  color: #F7F0EC !important;\n  margin: 0 0 2rem !important;\n  opacity: 0 !important;\n  animation: dq-fadeUp 1s ease 0.55s forwards !important;\n}\n\n.dq-title em { font-style: italic !important; color: #A4B2BA !important; }\n\n.dq-sub {\n  font-family: 'Cormorant Garamond', serif !important;\n  font-size: clamp(1.05rem, 2.2vw, 1.4rem) !important;\n  font-style: italic !important;\n  line-height: 1.6 !important;\n  color: #A4B2BA !important;\n  max-width: 560px !important;\n  margin: 0 auto 3rem !important;\n  opacity: 0 !important;\n  animation: dq-fadeUp 1s ease 0.8s forwards !important;\n}\n\n.dq-cta {\n  display: inline-block !important;\n  background: #F7F0EC !important;\n  color: #0E1B30 !important;\n  padding: 1.15rem 3rem !important;\n  border-radius: 99px !important;\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.7rem !important;\n  font-weight: 500 !important;\n  letter-spacing: 0.2em !important;\n  text-transform: uppercase !important;\n  text-decoration: none !important;\n  opacity: 0 !important;\n  animation: dq-fadeUp 1s ease 1.05s forwards !important;\n  transition: background 0.3s ease, transform 0.3s ease !important;\n}\n\n.dq-cta:hover { background: #D9E8EB !important; transform: translateY(-2px) !important; }\n\n.dq-meta {\n  font-family: 'Jost', sans-serif !important;\n  font-size: 0.6rem !important;\n  letter-spacing: 0.24em !important;\n  text-transform: uppercase !important;\n  color: #688F9D !important;\n  margin: 2.25rem 0 0 !important;\n  opacity: 0 !important;\n  animation: dq-fadeUp 1s ease 1.3s forwards !important;\n}\n\n@keyframes dq-fadeUp {\n  from { opacity: 0; transform: translateY(26px); }\n  to { opacity: 1; transform: translateY(0); }\n}\n\n@media(max-width: 768px) {\n  .dq-hero { min-height: 74vh !important; padding: 5rem 1.25rem !important; }\n}\n\n@media(prefers-reduced-motion: reduce) {\n  .dq-hero * { animation: none !important; opacity: 1 !important; }\n}\n</style>"
+          },
+          "widgetType": "html",
+          "elements": []
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Diagnostic Quiz — 01 Hero",
+  "type": "section"
+}
